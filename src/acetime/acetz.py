@@ -2,7 +2,10 @@
 #
 # MIT License
 
-from typing import cast, Optional
+from typing import Optional
+from typing import Dict
+from typing import cast
+from typing import Any
 from datetime import datetime, tzinfo, timedelta, timezone
 
 from .common import SECONDS_SINCE_UNIX_EPOCH
@@ -92,8 +95,9 @@ class acetz(tzinfo):
         return self.zs
 
 
-# def gettz(zone_name: str) -> acetz:
-#     zone_info = cast(ZoneInfo, zone_infos.ZONE_INFO_MAP.get(zone_name))
-#     if not zone_info:
-#         raise Exception(f"Zone '{zone_name}' not found")
-#     return acetz(zone_info)
+def gettz(zone_info_map: Dict[Any, Any], zone_name: str) -> acetz:
+    zone_info = zone_info_map.get(zone_name)
+    if not zone_info:
+        raise Exception(f"Zone '{zone_name}' not found")
+    zone_info = cast(ZoneInfo, zone_info)
+    return acetz(zone_info)

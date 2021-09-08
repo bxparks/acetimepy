@@ -4,7 +4,8 @@ import logging
 from datetime import datetime, timedelta, timezone
 
 from acetime.common import SECONDS_SINCE_UNIX_EPOCH
-from acetime.acetz import gettz as agettz, acetz
+from acetime.acetz import acetz, gettz
+from acetime.zonedbpy.zone_infos import ZONE_INFO_MAP
 
 
 # Enable logging during unittests.
@@ -36,6 +37,10 @@ def print_zp_at_dt(tz: acetz, dt: datetime) -> None:
             f"print_zp_at_dt(): epoch_seconds={epoch_seconds} "
             " transition not found"
         )
+
+
+def agettz(zone_name: str) -> acetz:
+    return gettz(ZONE_INFO_MAP, zone_name)
 
 
 # @unittest.skip
