@@ -2,16 +2,12 @@
 #
 # MIT License
 
-# import sys, traceback
 from typing import cast, Optional
 from datetime import datetime, tzinfo, timedelta, timezone
 
-from ..zonedbpy import zone_infos
 from .common import SECONDS_SINCE_UNIX_EPOCH
 from .zone_processor import ZoneProcessor
 from .zone_info_types import ZoneInfo
-
-__version__ = '0.1'
 
 
 class acetz(tzinfo):
@@ -96,8 +92,8 @@ class acetz(tzinfo):
         return self.zs
 
 
-def gettz(zone_name: str) -> acetz:
-    zone_info = cast(ZoneInfo, zone_infos.ZONE_INFO_MAP.get(zone_name))
-    if not zone_info:
-        raise Exception(f"Zone '{zone_name}' not found")
-    return acetz(zone_info)
+# def gettz(zone_name: str) -> acetz:
+#     zone_info = cast(ZoneInfo, zone_infos.ZONE_INFO_MAP.get(zone_name))
+#     if not zone_info:
+#         raise Exception(f"Zone '{zone_name}' not found")
+#     return acetz(zone_info)
