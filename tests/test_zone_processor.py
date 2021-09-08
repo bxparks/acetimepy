@@ -6,18 +6,18 @@ from typing import cast
 import unittest
 from datetime import datetime
 
-from acetimetools.zonedbpy import zone_infos
-from acetimetools.zone_processor.zone_processor import DateTuple
-from acetimetools.zone_processor.zone_processor import Transition
-from acetimetools.zone_processor.zone_processor import MatchingEra
-from acetimetools.zone_processor.zone_processor import ZoneProcessor
-from acetimetools.zone_processor.zone_processor import _get_interior_years
-from acetimetools.zone_processor.zone_processor import _compare_transition_to_match  # noqa
-from acetimetools.zone_processor.zone_processor import _compare_transition_to_match_fuzzy  # noqa
-from acetimetools.zone_processor.zone_processor import _subtract_date_tuple
-from acetimetools.zone_processor.zone_processor import _normalize_date_tuple
-from acetimetools.zone_processor.zone_info_types import ZoneInfo
-from acetimetools.zone_processor.zone_info_types import ZonePolicy
+from acetime.zonedbpy import zone_infos
+from acetime.zone_processor import DateTuple
+from acetime.zone_processor import Transition
+from acetime.zone_processor import MatchingEra
+from acetime.zone_processor import ZoneProcessor
+from acetime.zone_processor import _get_interior_years
+from acetime.zone_processor import _compare_transition_to_match  # noqa
+from acetime.zone_processor import _compare_transition_to_match_fuzzy  # noqa
+from acetime.zone_processor import _subtract_date_tuple
+from acetime.zone_processor import _normalize_date_tuple
+from acetime.zone_info_types import ZoneInfo
+from acetime.zone_info_types import ZonePolicy
 
 
 class TestZoneProcessorHelperMethods(unittest.TestCase):
