@@ -108,12 +108,6 @@ class MatchingEra:
             for s in MatchingEra.__slots__:
                 setattr(self, s, getattr(arg, s))
 
-    def copy(self) -> 'MatchingEra':
-        result = cast(MatchingEra, self.__class__.__new__(self.__class__))
-        for s in self.__slots__:
-            setattr(result, s, getattr(self, s))
-        return result
-
     def __repr__(self) -> str:
         return (
             'MatchingEra('
@@ -141,18 +135,23 @@ class Transition:
         # * 'until_date_time' is the UNTIL time of the current ZoneEra.
         #
         # Then the transition times are generated. Then these fields are updated
-        # in-situ by _generate_start_until_times() using those transition times:
+        # in-situ by _generate_start_until_times() using those transition times
+        # in the following way:
         #
-        # * 'start_date_time' is set to the current transition_time converted
-        #   into the UTC offset of the current Transition.
-        # * 'until_date_time' is set to the transition_time of the *next*
-        #   Transition.
-        # * 'start_epoch_seconds' is set to the 'start_date_time' converted
-        #   to epoch seconds using the UTC offset of the *prev* transition
+        # * start_date_time
+        #       * set to the current transition_time converted using the UTC
+        #         offset of the current Transition.
+        # * until_date_time
+        #       * set to the transition_time of the *next* Transition.
+        # * start_epoch_seconds
+        #       * set to the 'start_date_time' converted to epoch seconds using
+        #         the UTC offset of the *prev* transition
         'start_date_time',  # replaced with actual start time
         'until_date_time',  # replaced with actual until time
-        'zone_era',  # (ZoneEra)
-        'start_epoch_second',  # the starting time in epoch seconds
+        'start_epoch_second',
+
+        # The MatchingEra that generated this Transition.
+        'zone_era',
 
         # These transition times (in 'w', 's' and 'u' variants) are added for
         # both simple Match and named Match.
@@ -177,11 +176,13 @@ class Transition:
 
         'abbrev',  # abbreviation
 
-        # Added for named Match.
-        'zone_rule',  # Defined for named Match.
+        # If this Transition was created from MatchingEra with a named
+        # ZonePolicy, this points to the ZoneRule that generated this. For a
+        # simple MatchingEra, this will be None.
+        'zone_rule',
 
-        # Flag to indicate if Transition is active or not
-        'is_active',  # Transition is inside MatchingEra and is active
+        # Flag to indicate that Transition is fully inside the MatchingEra.
+        'is_active',
     ]
 
     # Hack because '__slots__' is unsupported by mypy. See
@@ -1162,14 +1163,13 @@ class ZoneProcessor:
             logging.info('_find_candidate_transitions()')
 
         # If MatchEra.until_date_time is exactly Jan 1 00:00, set the end_year
-        # to the prior year.
+        # to the prior year to avoid pulling Transitions in the next year which
+        # do not need to be examined.
         start_y = match.start_date_time.y
         end_y = match.until_date_time.y
         until = match.until_date_time
         if until.M == 1 and until.d == 1 and until.ss == 0:
-            end_y = until.y - 1
-        else:
-            end_y = until.y
+            end_y -= 1
 
         # Reserve prior Transition.
         prior_transition: Optional[Transition] = None
@@ -1362,6 +1362,7 @@ def _datetime_to_datetuple(dt: datetime, format: str) -> DateTuple:
 def _normalize_date_tuple(tt: DateTuple) -> DateTuple:
     """Return the normalized DateTuple where the dt.ss could be negative or
     greater than 24h. Throws exception if the normalization fails.
+    TODO: Reimplement logic of ExtendedZoneProcessor::normalizeDateTuple().
     """
     if tt.y == MIN_YEAR:
         return DateTuple(y=MIN_YEAR, M=1, d=1, ss=0, f=tt.f)
