@@ -238,26 +238,23 @@ class Transition:
         policy_name = policy_name_of(self.zone_era)
         offset_seconds = self.offset_seconds
         delta_seconds = self.delta_seconds
-        format = self.format
         abbrev = self.abbrev if self.abbrev else ''
 
         # yapf: disable
         if policy_name in ['-', ':']:
             return (
                 'T('
-                f"{to_utc_string(offset_seconds, delta_seconds)};"
-                f"act={'y' if self.is_active else '-'};"
-                f"tt={date_tuple_to_string(self.transition_time)};"
-                f"st={date_tuple_to_string(self.start_date_time)};"
-                f"ut={date_tuple_to_string(self.until_date_time)};"
-                f"ep={sepoch};"
-                f"pol={policy_name};"
-                f"fmt={format};"
-                f"ab={abbrev})"
+                f"start={sepoch}"
+                f"; act={'y' if self.is_active else '-'}"
+                f"; tt={date_tuple_to_string(self.transition_time)}"
+                f"; st={date_tuple_to_string(self.start_date_time)}"
+                f"; ut={date_tuple_to_string(self.until_date_time)}"
+                f"; {to_utc_string(offset_seconds, delta_seconds)}"
+                f"; rule={policy_name}"
+                f"; ab={abbrev})"
             )
         else:
             delta_seconds = self.delta_seconds
-            letter = self.letter
             zone_rule = self.zone_rule
             zone_rule_from = cast(ZoneRule, zone_rule)['from_year']
             zone_rule_to = cast(ZoneRule, zone_rule)['to_year']
@@ -269,16 +266,15 @@ class Transition:
 
             return (
                 'T('
-                f"{to_utc_string(offset_seconds, delta_seconds)};"
-                f"act={'y' if self.is_active else '-'};"
-                f"tt={date_tuple_to_string(self.transition_time)};"
-                f"st={date_tuple_to_string(self.start_date_time)};"
-                f"ut={date_tuple_to_string(self.until_date_time)};"
-                f"ot={original_transition};"
-                f"ep={sepoch};"
-                f"pol={policy_name}[{zone_rule_from},{zone_rule_to}];"
-                f"fmt={format}({letter});"
-                f"ab={abbrev})"
+                f"start={sepoch}"
+                f"; act={'y' if self.is_active else '-'}"
+                f"; tt={date_tuple_to_string(self.transition_time)}"
+                f"; st={date_tuple_to_string(self.start_date_time)}"
+                f"; ut={date_tuple_to_string(self.until_date_time)}"
+                f"; {to_utc_string(offset_seconds, delta_seconds)}"
+                f"; rule={policy_name}[{zone_rule_from},{zone_rule_to}]"
+                f"; ab={abbrev})"
+                f"; ot={original_transition}"
             )
         # yapf: enable
 
@@ -507,7 +503,7 @@ class ZoneProcessor:
             logging.info('==== Step 2: Creating (raw) transitions')
         self._create_transitions(self.matches)
         if self.debug:
-            print_transitions(self.transitions)
+            print_transitions('All Transitions', self.transitions)
 
         # Some transitions from simple match may be in 's' or 'u', so
         # convert to 'w'.
@@ -515,19 +511,19 @@ class ZoneProcessor:
             logging.info('==== Step 3: Fixing transitions times')
         self._fix_transition_times(self.transitions)
         if self.debug:
-            print_transitions(self.transitions)
+            print_transitions('All Transitions', self.transitions)
 
         if self.debug:
             logging.info('==== Step 4: Generating start and until times')
         self._generate_start_until_times(self.transitions)
         if self.debug:
-            print_transitions(self.transitions)
+            print_transitions('All Transitions', self.transitions)
 
         if self.debug:
             logging.info('==== Step 5: Calculating abbreviations')
         self._calc_abbrev(self.transitions)
         if self.debug:
-            print_transitions(self.transitions)
+            print_transitions('All Transitions', self.transitions)
 
     def get_buffer_sizes(self) -> BufferSizeInfo:
         """Return the number of active transitions and the transition buffer
@@ -799,7 +795,7 @@ class ZoneProcessor:
         rules = zone_policy['rules']
         candidate_transitions = self._find_candidate_transitions(match, rules)
         if self.debug:
-            print_transitions(candidate_transitions)
+            print_transitions('Candidate Transitions', candidate_transitions)
         self._check_transitions_sorted(candidate_transitions)
         self.transition_storage.pop_transitions(len(candidate_transitions))
 
@@ -809,7 +805,7 @@ class ZoneProcessor:
             logging.info('---- Pass 2: Fix transition times')
         self._fix_transition_times(candidate_transitions)
         if self.debug:
-            print_transitions(candidate_transitions)
+            print_transitions('Candidate Transitions', candidate_transitions)
         self._check_transitions_sorted(candidate_transitions)
 
         # Pass 3: Select only those Transitions which overlap with the actual
@@ -826,14 +822,14 @@ class ZoneProcessor:
                 self.year)
             raise
         if self.debug:
-            print_transitions(transitions)
+            print_transitions('Active Transitions', transitions)
 
         # Verify that the "most recent prior" Transition is properly sorted.
         if self.debug:
             logging.info('---- Final check for sorted transitions')
         self._check_transitions_sorted(transitions)
         if self.debug:
-            print_transitions(transitions)
+            print_transitions('Active Sorted Transition', transitions)
 
         self.transitions.extend(transitions)
         self.transition_storage.push_transitions(len(transitions))
@@ -859,7 +855,7 @@ class ZoneProcessor:
                 prev = transition
                 continue
             if prev.transition_time > transition.transition_time:
-                print_transitions(transitions)
+                print_transitions('Unsorted Transitions', transitions)
                 raise Exception('Transitions not sorted')
 
     @staticmethod
@@ -1310,8 +1306,8 @@ class ZoneProcessor:
         return prior
 
 
-def print_transitions(transitions: List[Transition]) -> None:
-    logging.info('print_transitions(): num transitions: %d', len(transitions))
+def print_transitions(header: str, transitions: List[Transition]) -> None:
+    logging.info('%s: count: %d', header, len(transitions))
     for t in transitions:
         logging.info(t)
 
