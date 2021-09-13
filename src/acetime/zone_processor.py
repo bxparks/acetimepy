@@ -104,16 +104,15 @@ class MatchingEra:
         if isinstance(arg, dict):
             for key, value in arg.items():
                 setattr(self, key, value)
-        elif isinstance(arg, MatchingEra):
-            for s in MatchingEra.__slots__:
-                setattr(self, s, getattr(arg, s))
+        else:
+            raise Exception('Unsupported type')
 
     def __repr__(self) -> str:
         return (
             'MatchingEra('
             f'start: {date_tuple_to_string(self.start_date_time)}'
             f'; until: {date_tuple_to_string(self.until_date_time)}'
-            f'; policy_name: {policy_name_of(self.zone_era)}'
+            f'; policy: {policy_name_of(self.zone_era)}'
             ')'
         )
 
