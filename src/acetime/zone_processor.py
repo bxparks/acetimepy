@@ -20,7 +20,6 @@ from typing import NamedTuple
 from typing import Optional
 from typing import Tuple
 from typing import TYPE_CHECKING
-from typing import Union
 from typing import cast
 
 from .common import MIN_YEAR
@@ -199,15 +198,14 @@ class Transition:
         zone_rule: Optional[ZoneRule]
         is_active: bool
 
-    def __init__(self, arg: Union[MatchingEra, Dict[str, Any]]):
+    def __init__(self, arg: Dict[str, Any]):
         for s in self.__slots__:
             setattr(self, s, None)
         if isinstance(arg, dict):
             for key, value in arg.items():
                 setattr(self, key, value)
-        elif isinstance(arg, MatchingEra):
-            for s in MatchingEra.__slots__:
-                setattr(self, s, getattr(arg, s))
+        else:
+            raise Exception('Unsupported type')
 
     @property
     def format(self) -> str:
@@ -714,7 +712,7 @@ class ZoneProcessor:
         matches: List[MatchingEra] = []
         for zone_era in zone_eras:
             if self._era_overlaps_interval(
-                    prev_era, zone_era, start_ym, until_ym
+                prev_era, zone_era, start_ym, until_ym
             ):
                 match = self._create_match(
                     prev_era, zone_era, start_ym, until_ym)
@@ -755,7 +753,11 @@ class ZoneProcessor:
         """
         if self.debug:
             logging.info('_create_transitions_from_simple_match(): %s', match)
-        transition = Transition(match)
+        transition = Transition({
+            'start_date_time': match.start_date_time,
+            'until_date_time': match.start_date_time,
+            'zone_era': match.zone_era,
+        })
         transition.transition_time = match.start_date_time
         self.transitions.append(transition)
         self.transition_storage.push_transitions(1)
@@ -894,10 +896,9 @@ class ZoneProcessor:
                 d=prev_era['until_day'],
                 ss=prev_era['until_seconds'],
                 f=prev_era['until_time_suffix'])
-        if start_date_time < DateTuple(
-                y=start_ym.y, M=start_ym.M, d=1, ss=0, f='w'):
-            start_date_time = DateTuple(
-                y=start_ym.y, M=start_ym.M, d=1, ss=0, f='w')
+        left_boundary = DateTuple(y=start_ym.y, M=start_ym.M, d=1, ss=0, f='w')
+        if start_date_time < left_boundary:
+            start_date_time = left_boundary
 
         until_date_time = DateTuple(
             y=zone_era['until_year'],
@@ -905,12 +906,12 @@ class ZoneProcessor:
             d=zone_era['until_day'],
             ss=zone_era['until_seconds'],
             f=zone_era['until_time_suffix'])
-        if until_date_time > DateTuple(
-                y=until_ym.y, M=until_ym.M, d=1, ss=0, f='w'):
-            until_date_time = DateTuple(
-                y=until_ym.y, M=until_ym.M, d=1, ss=0, f='w')
+        right_boundary = DateTuple(y=until_ym.y, M=until_ym.M, d=1, ss=0, f='w')
+        if until_date_time > right_boundary:
+            until_date_time = right_boundary
 
         return MatchingEra({
+            'prev_era': prev_era,
             'start_date_time': start_date_time,
             'until_date_time': until_date_time,
             'zone_era': zone_era
@@ -1382,7 +1383,11 @@ def _create_transition_for_year(
     Transition object is a replica of the underlying Match object, with
     additional bookkeeping info.
     """
-    transition = Transition(match)
+    transition = Transition({
+        'start_date_time': match.start_date_time,
+        'until_date_time': match.start_date_time,
+        'zone_era': match.zone_era,
+    })
     transition.transition_time = _get_transition_time(year, rule)
     transition.zone_rule = rule
     return transition
