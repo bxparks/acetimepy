@@ -198,14 +198,30 @@ class Transition:
         zone_rule: Optional[ZoneRule]
         is_active: bool
 
-    def __init__(self, arg: Dict[str, Any]):
+    def __init__(
+        self, *,
+        matching_era: Optional[MatchingEra] = None,
+        transition_time: Optional[DateTuple] = None,
+    ):
+        """Normally only the matching_era is provided. The construction using
+        transition_time is used only for testing.
+        """
         for s in self.__slots__:
             setattr(self, s, None)
-        if isinstance(arg, dict):
-            for key, value in arg.items():
-                setattr(self, key, value)
-        else:
-            raise Exception('Unsupported type')
+
+        has_matching_era = 1 if matching_era else 0
+        has_transition_time = 1 if transition_time else 0
+        if not (has_matching_era ^ has_transition_time):
+            raise Exception(
+                "Only one of 'matching_era' or 'transition_time' expected")
+
+        if matching_era:
+            self.matching_era = matching_era
+            self.start_date_time = matching_era.start_date_time
+            self.until_date_time = matching_era.until_date_time
+
+        if transition_time:
+            self.transition_time = transition_time
 
     @property
     def format(self) -> str:
@@ -753,11 +769,7 @@ class ZoneProcessor:
         """
         if self.debug:
             logging.info('_create_transitions_from_simple_match(): %s', match)
-        transition = Transition({
-            'start_date_time': match.start_date_time,
-            'until_date_time': match.start_date_time,
-            'matching_era': match,
-        })
+        transition = Transition(matching_era=match)
         transition.transition_time = match.start_date_time
         self.transitions.append(transition)
         self.transition_storage.push_transitions(1)
@@ -1382,11 +1394,7 @@ def _create_transition_for_year(
     Transition object is a replica of the underlying Match object, with
     additional bookkeeping info.
     """
-    transition = Transition({
-        'start_date_time': match.start_date_time,
-        'until_date_time': match.start_date_time,
-        'matching_era': match,
-    })
+    transition = Transition(matching_era=match)
     transition.transition_time = _get_transition_time(year, rule)
     transition.zone_rule = rule
     return transition
