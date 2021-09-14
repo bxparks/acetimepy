@@ -13,8 +13,6 @@ import logging
 from datetime import datetime
 from datetime import timedelta
 from datetime import date
-from typing import Any
-from typing import Dict
 from typing import List
 from typing import NamedTuple
 from typing import Optional
@@ -97,14 +95,18 @@ class MatchingEra:
         until_date_time: DateTuple
         zone_era: ZoneEra
 
-    def __init__(self, arg: Dict[str, Any]):
+    def __init__(
+        self, *,
+        start_date_time: DateTuple,
+        until_date_time: DateTuple,
+        zone_era: ZoneEra,
+    ):
         for s in self.__slots__:
             setattr(self, s, None)
-        if isinstance(arg, dict):
-            for key, value in arg.items():
-                setattr(self, key, value)
-        else:
-            raise Exception('Unsupported type')
+
+        self.start_date_time = start_date_time
+        self.until_date_time = until_date_time
+        self.zone_era = zone_era
 
     def __repr__(self) -> str:
         return (
@@ -922,11 +924,11 @@ class ZoneProcessor:
         if until_date_time > right_boundary:
             until_date_time = right_boundary
 
-        return MatchingEra({
-            'start_date_time': start_date_time,
-            'until_date_time': until_date_time,
-            'zone_era': zone_era
-        })
+        return MatchingEra(
+            start_date_time=start_date_time,
+            until_date_time=until_date_time,
+            zone_era=zone_era,
+        )
 
     @staticmethod
     def _generate_start_until_times(transitions: List[Transition]) -> None:

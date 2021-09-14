@@ -18,6 +18,20 @@ from acetime.zone_processor import _subtract_date_tuple
 from acetime.zone_processor import _normalize_date_tuple
 from acetime.zone_info_types import ZoneInfo
 from acetime.zone_info_types import ZonePolicy
+from acetime.zone_info_types import ZoneEra
+
+
+ZONE_ERA: ZoneEra = {
+    'offset_seconds': 0,
+    'zone_policy': '-',
+    'rules_delta_seconds': 0,
+    'format': 'EST',
+    'until_year': 2000,
+    'until_month': 3,
+    'until_day': 1,
+    'until_seconds': 0,
+    'until_time_suffix': '',
+}
 
 
 class TestZoneProcessorHelperMethods(unittest.TestCase):
@@ -103,10 +117,11 @@ class TestZoneProcessorHelperMethods(unittest.TestCase):
 
 class TestCompareTransitionToMatch(unittest.TestCase):
     def test_compare_exact(self) -> None:
-        match = MatchingEra({
-            'start_date_time': DateTuple(2000, 1, 1, 0, 'w'),
-            'until_date_time': DateTuple(2001, 1, 1, 0, 'w')
-        })
+        match = MatchingEra(
+            start_date_time=DateTuple(2000, 1, 1, 0, 'w'),
+            until_date_time=DateTuple(2001, 1, 1, 0, 'w'),
+            zone_era=ZONE_ERA,
+        )
 
         transition = Transition(
             transition_time=DateTuple(1999, 12, 31, 0, 'w')
@@ -129,10 +144,11 @@ class TestCompareTransitionToMatch(unittest.TestCase):
         self.assertEqual(2, _compare_transition_to_match(transition, match))
 
     def test_compare_fuzzy(self) -> None:
-        match = MatchingEra({
-            'start_date_time': DateTuple(2000, 1, 1, 0, 'w'),
-            'until_date_time': DateTuple(2001, 1, 1, 0, 'w')
-        })
+        match = MatchingEra(
+            start_date_time=DateTuple(2000, 1, 1, 0, 'w'),
+            until_date_time=DateTuple(2001, 1, 1, 0, 'w'),
+            zone_era=ZONE_ERA,
+        )
 
         transition = Transition(
             transition_time=DateTuple(1999, 11, 1, 0, 'w')
@@ -177,7 +193,11 @@ class TestTransition(unittest.TestCase):
             Transition()
 
     def test_transition_contructor_raises_with_two_arguments(self) -> None:
-        matching_era = MatchingEra({})
+        matching_era = MatchingEra(
+            start_date_time=DateTuple(2000, 1, 1, 0, 'w'),
+            until_date_time=DateTuple(2001, 1, 1, 0, 'w'),
+            zone_era=ZONE_ERA,
+        )
         with self.assertRaises(Exception):
             Transition(
                 matching_era=matching_era,
