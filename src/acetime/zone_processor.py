@@ -149,7 +149,7 @@ class Transition:
         'start_epoch_second',
 
         # The MatchingEra that generated this Transition.
-        'zone_era',
+        'matching_era',
 
         # These transition times (in 'w', 's' and 'u' variants) are added for
         # both simple Match and named Match.
@@ -188,7 +188,7 @@ class Transition:
     if TYPE_CHECKING:
         start_date_time: DateTuple
         until_date_time: DateTuple
-        zone_era: ZoneEra
+        matching_era: MatchingEra
         original_transition_time: DateTuple
         transition_time: DateTuple
         transition_time_s: DateTuple
@@ -209,11 +209,11 @@ class Transition:
 
     @property
     def format(self) -> str:
-        return self.zone_era['format']
+        return self.matching_era.zone_era['format']
 
     @property
     def offset_seconds(self) -> int:
-        return self.zone_era['offset_seconds']
+        return self.matching_era.zone_era['offset_seconds']
 
     @property
     def letter(self) -> str:
@@ -222,7 +222,7 @@ class Transition:
     @property
     def delta_seconds(self) -> int:
         return self.zone_rule['delta_seconds'] if self.zone_rule \
-            else self.zone_era['rules_delta_seconds']
+            else self.matching_era.zone_era['rules_delta_seconds']
 
     def copy(self) -> 'Transition':
         result = cast('Transition', self.__class__.__new__(self.__class__))
@@ -232,7 +232,7 @@ class Transition:
 
     def __repr__(self) -> str:
         sepoch = self.start_epoch_second if self.start_epoch_second else '-'
-        policy_name = policy_name_of(self.zone_era)
+        policy_name = policy_name_of(self.matching_era.zone_era)
         offset_seconds = self.offset_seconds
         delta_seconds = self.delta_seconds
         abbrev = self.abbrev if self.abbrev else ''
@@ -756,7 +756,7 @@ class ZoneProcessor:
         transition = Transition({
             'start_date_time': match.start_date_time,
             'until_date_time': match.start_date_time,
-            'zone_era': match.zone_era,
+            'matching_era': match,
         })
         transition.transition_time = match.start_date_time
         self.transitions.append(transition)
@@ -911,7 +911,6 @@ class ZoneProcessor:
             until_date_time = right_boundary
 
         return MatchingEra({
-            'prev_era': prev_era,
             'start_date_time': start_date_time,
             'until_date_time': until_date_time,
             'zone_era': zone_era
@@ -1386,7 +1385,7 @@ def _create_transition_for_year(
     transition = Transition({
         'start_date_time': match.start_date_time,
         'until_date_time': match.start_date_time,
-        'zone_era': match.zone_era,
+        'matching_era': match,
     })
     transition.transition_time = _get_transition_time(year, rule)
     transition.zone_rule = rule
