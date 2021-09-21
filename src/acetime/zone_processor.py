@@ -174,7 +174,8 @@ class Transition:
         # the UTC offset of the *previous* transition. The TZ file will
         # sometimes specify these as 's' or 'u', so the _fix_transition_times()
         # will normalize and generate all 3 versions.
-        'transition_time',  # transition time from TZDB, then converted to 'w'
+        'transition_time',  # transition time from TZDB
+        'transition_time_w',  # converted 'w' time
         'transition_time_s',  # converted 's' time
         'transition_time_u',  # converted 'u' time
 
@@ -203,6 +204,7 @@ class Transition:
         matching_era: MatchingEra
         original_transition_time: DateTuple
         transition_time: DateTuple
+        transition_time_w: DateTuple
         transition_time_s: DateTuple
         transition_time_u: DateTuple
         abbrev: str
@@ -272,6 +274,7 @@ class Transition:
                 f"start={sepoch}"
                 f"; act={'y' if self.is_active else '-'}"
                 f"; tt={date_tuple_to_string(self.transition_time)}"
+                f"; ttw={date_tuple_to_string(self.transition_time_w)}"
                 f"; st={date_tuple_to_string(self.start_date_time)}"
                 f"; ut={date_tuple_to_string(self.until_date_time)}"
                 f"; {to_utc_string(offset_seconds, delta_seconds)}"
@@ -294,6 +297,7 @@ class Transition:
                 f"start={sepoch}"
                 f"; act={'y' if self.is_active else '-'}"
                 f"; tt={date_tuple_to_string(self.transition_time)}"
+                f"; ttw={date_tuple_to_string(self.transition_time_w)}"
                 f"; st={date_tuple_to_string(self.start_date_time)}"
                 f"; ut={date_tuple_to_string(self.until_date_time)}"
                 f"; {to_utc_string(offset_seconds, delta_seconds)}"
@@ -971,7 +975,7 @@ class ZoneProcessor:
         is_after_first = False
         for transition in transitions:
             # Transition time using the wall time of the previous Transition.
-            tt = transition.transition_time
+            tt = transition.transition_time_w
 
             # 1) Update the 'until_date_time' of the previous Transition.
             if is_after_first:
@@ -1041,7 +1045,7 @@ class ZoneProcessor:
         prev = transitions[0].copy()
         for transition in transitions:
             (
-                transition.transition_time,
+                transition.transition_time_w,
                 transition.transition_time_s,
                 transition.transition_time_u,
             ) = ZoneProcessor._expand_date_tuple(
@@ -1462,7 +1466,7 @@ def _compare_transition_to_match(
     """
     match_start = match.start_date_time
     if match_start.f == 'w':
-        transition_time = transition.transition_time
+        transition_time = transition.transition_time_w
     elif match_start.f == 's':
         transition_time = transition.transition_time_s
     elif match_start.f == 'u':
@@ -1476,7 +1480,7 @@ def _compare_transition_to_match(
 
     match_until = match.until_date_time
     if match_until.f == 'w':
-        transition_time = transition.transition_time
+        transition_time = transition.transition_time_w
     elif match_until.f == 's':
         transition_time = transition.transition_time_s
     elif match_until.f == 'u':
