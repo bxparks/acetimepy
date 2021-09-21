@@ -1157,20 +1157,13 @@ class ZoneProcessor:
         month is implicitly 1. Ignore the until_time_suffix suffix. Maybe it's
         not needed in this context?
         """
-        if era['until_year'] < year:
-            return -1
-        if era['until_year'] > year:
-            return 1
-        if era['until_month'] < month:
-            return -1
-        if era['until_month'] > month:
-            return 1
-        if era['until_day'] > 1:
-            return 1
-        if era['until_seconds'] < 0:
-            return -1
-        if era['until_seconds'] > 0:
-            return 1
+        if era['until_year'] < year: return -1  # noqa: E701
+        if era['until_year'] > year: return 1  # noqa: E701
+        if era['until_month'] < month: return -1  # noqa: E701
+        if era['until_month'] > month: return 1  # noqa: E701
+        if era['until_day'] > 1: return 1  # noqa: E701
+        if era['until_seconds'] < 0: return -1  # noqa: E701
+        if era['until_seconds'] > 0: return 1  # noqa: E701
         return 0
 
     def _find_candidate_transitions(
@@ -1366,12 +1359,12 @@ def _add_transition_sorted(
 
 
 def _compare_date_tuple(a: DateTuple, b: DateTuple) -> int:
-    if a.y < b.y: return -1  # noqa: #701
-    if a.y > b.y: return 1  # noqa: #701
-    if a.M < b.M: return -1  # noqa: #701
-    if a.M > b.M: return 1  # noqa: #701
-    if a.d < b.d: return -1  # noqa: #701
-    if a.d > b.d: return 1  # noqa: #701
+    if a.y < b.y: return -1  # noqa: E701
+    if a.y > b.y: return 1  # noqa: E701
+    if a.M < b.M: return -1  # noqa: E701
+    if a.M > b.M: return 1  # noqa: E701
+    if a.d < b.d: return -1  # noqa: E701
+    if a.d > b.d: return 1  # noqa: E701
     return 0
 
 
@@ -1551,7 +1544,7 @@ def _get_transition_time(year: int, rule: ZoneRule) -> DateTuple:
 
 
 def date_tuple_to_string(dt: DateTuple) -> str:
-    if not dt: return 'None'
+    if not dt: return 'None'  # noqa: E701
     (h, m, s) = seconds_to_hms(dt.ss)
     return f'{dt.y:04}-{dt.M:02}-{dt.d:02}T{h:02}:{m:02}{dt.f}'
 
