@@ -83,9 +83,14 @@ class MatchingEra:
     before the year of interest, and extends a month after the year of interest.
     """
     __slots__ = [
-        'start_date_time',  # the until_time of the previous ZoneEra
-        'until_date_time',  # the until_time of the current ZoneEra
-        'zone_era',  # the ZoneEra corresponding to this match
+        # until_date_time of the previous ZoneEra, bounded by viewing window
+        'start_date_time',
+
+        # until_date_time of the current ZoneEra, bounded by viewing window
+        'until_date_time',
+
+        # the ZoneEra corresponding to this match
+        'zone_era',
     ]
 
     # Hack because '__slots__' is unsupported by mypy. See
@@ -129,25 +134,28 @@ class Transition:
     3) A ZoneRule that has been shifted to the boundary of a ZoneEra.
     """
     __slots__ = [
-        # The start and until times are initially copied from MatchingEra, where
-        #
-        # * 'start_date_time' is the UNTIL time of the previous ZoneEra, and
-        # * 'until_date_time' is the UNTIL time of the current ZoneEra.
-        #
-        # Then the transition times are generated. Then these fields are updated
-        # in-situ by _generate_start_until_times() using those transition times
-        # in the following way:
+        # The start and until times are initially copied from MatchingEra:
         #
         # * start_date_time
-        #       * set to the current transition_time converted using the UTC
-        #         offset of the current Transition.
+        #       * UNTIL time of the previous ZoneEra
         # * until_date_time
-        #       * set to the transition_time of the *next* Transition.
-        # * start_epoch_seconds
-        #       * set to the 'start_date_time' converted to epoch seconds using
-        #         the UTC offset of the *prev* transition
-        'start_date_time',  # replaced with actual start time
-        'until_date_time',  # replaced with actual until time
+        #       * UNTIL time of the current ZoneEra
+        #
+        # Then the transition time fields are generated. Then these fields are
+        # updated in-situ by _generate_start_until_times() using those
+        # transition times in the following way:
+        #
+        # * start_date_time
+        #       * set to the current wall transition_time converted using the
+        #         UTC offset of the current Transition.
+        # * until_date_time
+        #       * set to the wall transition_time of the *next* Transition using
+        #       * the UTC offset of the *current* Transition
+        # * start_epoch_second
+        #       * the epoch second of start_date_time, which should be
+        #         the same as the epoch second of transition_time
+        'start_date_time',
+        'until_date_time',
         'start_epoch_second',
 
         # The MatchingEra that generated this Transition.
@@ -157,16 +165,18 @@ class Transition:
         # both simple Match and named Match.
         #
         # For a simple Transition, the transition_time is the startTime of the
-        # ZoneEra. For a named Transition, the transition_time is the AT field
+        # ZoneEra.
+        #
+        # For a named Transition, the transition_time is the AT field
         # of the corresponding ZoneRule (see _create_transition_for_year()).
         #
         # The 'transition_time' is the wall date-time of the transition, using
         # the UTC offset of the *previous* transition. The TZ file will
         # sometimes specify these as 's' or 'u', so the _fix_transition_times()
         # will normalize and generate all 3 versions.
-        'transition_time',  # 'w' time
-        'transition_time_s',  # 's' time
-        'transition_time_u',  # 'u' time
+        'transition_time',  # transition time from TZDB, then converted to 'w'
+        'transition_time_s',  # converted 's' time
+        'transition_time_u',  # converted 'u' time
 
         # For the latest prior transition, the actual transition time is shifted
         # to be the start time of the MatchingEra. This field preserves the
@@ -770,9 +780,12 @@ class ZoneProcessor:
         the Active pool of TransitionStorage immediately.
         """
         if self.debug:
-            logging.info('_create_transitions_from_simple_match(): %s', match)
+            logging.info(
+                '== _create_transitions_from_simple_match(): %s', match)
         transition = Transition(matching_era=match)
         transition.transition_time = match.start_date_time
+        if self.debug:
+            print_transitions('Simple Transition', [transition])
         self.transitions.append(transition)
         self.transition_storage.push_transitions(1)
 
@@ -798,7 +811,7 @@ class ZoneProcessor:
               MatchingEra (including month, day and time) fields.
         """
         if self.debug:
-            logging.info('_create_transitions_from_named_match(): %s', match)
+            logging.info('== _create_transitions_from_named_match(): %s', match)
 
         # Pass 1: Find candidate transitions using whole years.
         if self.debug:
@@ -958,6 +971,7 @@ class ZoneProcessor:
         prev = transitions[0]
         is_after_first = False
         for transition in transitions:
+            # Transition time using the wall time of the previous Transition.
             tt = transition.transition_time
 
             # 1) Update the 'until_date_time' of the previous Transition.
@@ -1272,7 +1286,8 @@ class ZoneProcessor:
 
         prior: Optional[Transition] = None
         for transition in transitions:
-            prior = self._process_transition(match, transition, prior)
+            prior = self._process_transition_active_status(
+                match, transition, prior)
 
         if prior and prior.transition_time < match.start_date_time:
             prior.original_transition_time = prior.transition_time
@@ -1285,7 +1300,7 @@ class ZoneProcessor:
         return active_transitions
 
     @staticmethod
-    def _process_transition(
+    def _process_transition_active_status(
         match: MatchingEra,
         transition: Transition,
         prior: Optional[Transition],
@@ -1536,8 +1551,9 @@ def _get_transition_time(year: int, rule: ZoneRule) -> DateTuple:
 
 
 def date_tuple_to_string(dt: DateTuple) -> str:
+    if not dt: return 'None'
     (h, m, s) = seconds_to_hms(dt.ss)
-    return f'{dt.y:04}-{dt.M:02}-{dt.d:02} {h:02}:{m:02}{dt.f}'
+    return f'{dt.y:04}-{dt.M:02}-{dt.d:02}T{h:02}:{m:02}{dt.f}'
 
 
 def to_utc_string(utcoffset: int, dstoffset: int) -> str:
