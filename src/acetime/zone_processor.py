@@ -841,8 +841,7 @@ class ZoneProcessor:
         if self.debug:
             logging.info('---- Pass 3: Select active transitions')
         try:
-            transitions = self._select_active_transitions(
-                candidate_transitions, match)
+            transitions = self._select_active_transitions(candidate_transitions)
         except:  # noqa: E722
             logging.exception(
                 "Zone '%s'; year '%04d'",
@@ -1267,7 +1266,6 @@ class ZoneProcessor:
     def _select_active_transitions(
         self,
         transitions: List[Transition],
-        match: MatchingEra,
     ) -> List[Transition]:
         """Determine the active Transisitions using an inlined is_active flag.
         The final result is returned in a new 'active_transitions' list, but in
@@ -1279,12 +1277,11 @@ class ZoneProcessor:
 
         prior: Optional[Transition] = None
         for transition in transitions:
-            prior = self._process_transition_active_status(
-                match, transition, prior)
+            prior = self._process_transition_active_status(transition, prior)
 
-        if prior and prior.transition_time < match.start_date_time:
+        if prior and prior.transition_time < prior.matching_era.start_date_time:
             prior.original_transition_time = prior.transition_time
-            prior.transition_time = match.start_date_time
+            prior.transition_time = prior.matching_era.start_date_time
 
         active_transitions = []
         for transition in transitions:
@@ -1294,7 +1291,6 @@ class ZoneProcessor:
 
     @staticmethod
     def _process_transition_active_status(
-        match: MatchingEra,
         transition: Transition,
         prior: Optional[Transition],
     ) -> Optional[Transition]:
@@ -1303,7 +1299,7 @@ class ZoneProcessor:
         _fix_transition_times().
         """
         transition_compared_to_match = _compare_transition_to_match(
-            transition, match)
+            transition, transition.matching_era)
         if transition_compared_to_match == 2:
             transition.is_active = False
         elif transition_compared_to_match == 1:
