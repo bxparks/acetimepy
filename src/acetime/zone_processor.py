@@ -852,9 +852,10 @@ class ZoneProcessor:
         if self.debug:
             print_transitions('Active Transitions', transitions)
 
-        # Verify that the "most recent prior" Transition is properly sorted.
+        # Pass 4: Verify that the "most recent prior" Transition is properly
+        # sorted.
         if self.debug:
-            logging.info('---- Final check for sorted transitions')
+            logging.info('---- Pass 4: Final check for sorted transitions')
         self._check_transitions_sorted(transitions)
         if self.debug:
             print_transitions('Active Sorted Transition', transitions)
@@ -871,7 +872,6 @@ class ZoneProcessor:
         logging.info('---- Transitions')
         for t in self.transitions:
             logging.info(t)
-        logging.info('---- Candidate Transitions')
 
     @staticmethod
     def _check_transitions_sorted(transitions: List[Transition]) -> None:
