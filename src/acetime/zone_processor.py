@@ -91,6 +91,14 @@ class MatchingEra:
 
         # the ZoneEra corresponding to this match
         'zone_era',
+
+        # the previous MatchingEra whose last_transition will be used to
+        # normalize the start_date_time of the current MatchingEra
+        'prev_match',
+
+        # the last Transition of this Matching Era, which will be used to
+        # normalize the start_date_time of the next MatchingEra
+        'last_transition',
     ]
 
     # Hack because '__slots__' is unsupported by mypy. See
@@ -99,12 +107,15 @@ class MatchingEra:
         start_date_time: DateTuple
         until_date_time: DateTuple
         zone_era: ZoneEra
+        prev_match: Optional['MatchingEra']
+        last_transition: 'Transition'
 
     def __init__(
         self, *,
         start_date_time: DateTuple,
         until_date_time: DateTuple,
         zone_era: ZoneEra,
+        prev_match: Optional['MatchingEra'] = None,
     ):
         for s in self.__slots__:
             setattr(self, s, None)
@@ -112,6 +123,7 @@ class MatchingEra:
         self.start_date_time = start_date_time
         self.until_date_time = until_date_time
         self.zone_era = zone_era
+        self.prev_match = prev_match
 
     def __repr__(self) -> str:
         return (
@@ -740,18 +752,21 @@ class ZoneProcessor:
         years for the 'most recent prior year'.
         """
         zone_eras = self.zone_info['eras']
-        prev_era: Optional[ZoneEra] = None  # the earliest possible
+        prev_match: Optional[MatchingEra] = None
         matches: List[MatchingEra] = []
         for zone_era in zone_eras:
             if self._era_overlaps_interval(
-                prev_era, zone_era, start_ym, until_ym
+                prev_match.zone_era if prev_match else None,
+                zone_era,
+                start_ym,
+                until_ym,
             ):
                 match = self._create_match(
-                    prev_era, zone_era, start_ym, until_ym)
+                    prev_match, zone_era, start_ym, until_ym)
                 if self.debug:
                     logging.info('_find_matches(): %s', match)
                 matches.append(match)
-            prev_era = zone_era
+                prev_match = match
         return matches
 
     def _create_transitions(self, matches: List[MatchingEra]) -> None:
@@ -790,6 +805,7 @@ class ZoneProcessor:
         transition.transition_time = match.start_date_time
         if self.debug:
             print_transitions('Simple Transition', [transition])
+        match.last_transition = transition
         self.transitions.append(transition)
         self.transition_storage.push_transitions(1)
 
@@ -863,6 +879,9 @@ class ZoneProcessor:
         if self.debug:
             print_transitions('Active Sorted Transition', transitions)
 
+        # Save the last transition of the current MatchingEra.
+        match.last_transition = transitions[-1]
+
         self.transitions.extend(transitions)
         self.transition_storage.push_transitions(len(transitions))
 
@@ -891,7 +910,7 @@ class ZoneProcessor:
 
     @staticmethod
     def _create_match(
-        prev_era: Optional[ZoneEra],
+        prev_match: Optional[MatchingEra],
         zone_era: ZoneEra,
         start_ym: YearMonthTuple,
         until_ym: YearMonthTuple,
@@ -916,10 +935,11 @@ class ZoneProcessor:
 
         A value of `prev_era==None` means the earliest possible ZoneEra.
         """
-        if prev_era is None:
+        if prev_match is None:
             start_date_time = DateTuple(
                 y=MIN_YEAR, M=1, d=1, ss=0, f='w')
         else:
+            prev_era = prev_match.zone_era
             start_date_time = DateTuple(
                 y=prev_era['until_year'],
                 M=prev_era['until_month'],
@@ -944,6 +964,7 @@ class ZoneProcessor:
             start_date_time=start_date_time,
             until_date_time=until_date_time,
             zone_era=zone_era,
+            prev_match=prev_match,
         )
 
     @staticmethod
