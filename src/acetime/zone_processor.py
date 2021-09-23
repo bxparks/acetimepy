@@ -82,34 +82,6 @@ class MatchingEra:
     interest. The interval is usually a 14-month interval that begins a month
     before the year of interest, and extends a month after the year of interest.
     """
-    __slots__ = [
-        # until_date_time of the previous ZoneEra, bounded by viewing window
-        'start_date_time',
-
-        # until_date_time of the current ZoneEra, bounded by viewing window
-        'until_date_time',
-
-        # the ZoneEra corresponding to this match
-        'zone_era',
-
-        # the previous MatchingEra whose last_transition will be used to
-        # normalize the start_date_time of the current MatchingEra
-        'prev_match',
-
-        # the last Transition of this Matching Era, which will be used to
-        # normalize the start_date_time of the next MatchingEra
-        'last_transition',
-    ]
-
-    # Hack because '__slots__' is unsupported by mypy. See
-    # https://github.com/python/mypy/issues/5941.
-    if TYPE_CHECKING:
-        start_date_time: DateTuple
-        until_date_time: DateTuple
-        zone_era: ZoneEra
-        prev_match: Optional['MatchingEra']
-        last_transition: 'Transition'
-
     def __init__(
         self, *,
         start_date_time: DateTuple,
@@ -117,13 +89,22 @@ class MatchingEra:
         zone_era: ZoneEra,
         prev_match: Optional['MatchingEra'] = None,
     ):
-        for s in self.__slots__:
-            setattr(self, s, None)
-
+        # until_date_time of the previous ZoneEra, bounded by viewing window
         self.start_date_time = start_date_time
+
+        # until_date_time of the current ZoneEra, bounded by viewing window
         self.until_date_time = until_date_time
+
+        # the ZoneEra corresponding to this match
         self.zone_era = zone_era
+
+        # the previous MatchingEra whose last_transition will be used to
+        # normalize the start_date_time of the current MatchingEra
         self.prev_match = prev_match
+
+        # the last Transition of this Matching Era, which will be used to
+        # normalize the start_date_time of the next MatchingEra
+        self.last_transition: Optional['Transition'] = None
 
     def __repr__(self) -> str:
         return (
@@ -1522,6 +1503,7 @@ def _compare_transition_to_match(
     # previous MatchingEra.
     if match.prev_match:
         prev_match = match.prev_match
+        assert prev_match.last_transition is not None
         offset_seconds = prev_match.last_transition.offset_seconds
         delta_seconds = prev_match.last_transition.delta_seconds
     else:
