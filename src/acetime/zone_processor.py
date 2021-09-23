@@ -773,7 +773,7 @@ class ZoneProcessor:
         prev_match: Optional[MatchingEra] = None
         matches: List[MatchingEra] = []
         for zone_era in zone_eras:
-            if self._era_overlaps_interval(
+            if _era_overlaps_interval(
                 prev_match.zone_era if prev_match else None,
                 zone_era,
                 start_ym,
@@ -1167,47 +1167,6 @@ class ZoneProcessor:
 
             transition.abbrev = abbrev
 
-    @staticmethod
-    def _era_overlaps_interval(
-        prev_era: Optional[ZoneEra],
-        era: ZoneEra,
-        start_ym: YearMonthTuple,
-        until_ym: YearMonthTuple,
-    ) -> bool:
-        """Determines if era overlaps the interval [start_ym, until_ym),
-        ignoring the day, time and timeSuffix. The start date of the current
-        era is represented by the prev_era.UNTIL, so the interval of the current
-        era is [start_era, until_era) = [prev_era.UNTIL, era.UNTIL). Overlap
-        happens if (start_era < until_ym) and (until_era > start_ym). A
-        'prev_era==None' means the earliest possible ZoneEra.
-        """
-        return (
-            (prev_era is None
-                or ZoneProcessor._compare_era_to_year_month(
-                    prev_era, until_ym.y, until_ym.M) < 0)
-            and ZoneProcessor._compare_era_to_year_month(
-                era, start_ym.y, start_ym.M) > 0
-        )
-
-    @staticmethod
-    def _compare_era_to_year_month(
-        era: ZoneEra,
-        year: int,
-        month: int,
-    ) -> int:
-        """Compare the zone_era with year, returning -1, 0 or 1. The day of
-        month is implicitly 1. Ignore the until_time_suffix suffix. Maybe it's
-        not needed in this context?
-        """
-        if era['until_year'] < year: return -1  # noqa: E701
-        if era['until_year'] > year: return 1  # noqa: E701
-        if era['until_month'] < month: return -1  # noqa: E701
-        if era['until_month'] > month: return 1  # noqa: E701
-        if era['until_day'] > 1: return 1  # noqa: E701
-        if era['until_seconds'] < 0: return -1  # noqa: E701
-        if era['until_seconds'] > 0: return 1  # noqa: E701
-        return 0
-
     def _find_candidate_transitions(
         self,
         match: MatchingEra,
@@ -1367,6 +1326,47 @@ class ZoneProcessor:
             else:
                 prior = transition
         return prior
+
+
+def _era_overlaps_interval(
+    prev_era: Optional[ZoneEra],
+    era: ZoneEra,
+    start_ym: YearMonthTuple,
+    until_ym: YearMonthTuple,
+) -> bool:
+    """Determines if era overlaps the interval [start_ym, until_ym),
+    ignoring the day, time and timeSuffix. The start date of the current
+    era is represented by the prev_era.UNTIL, so the interval of the current
+    era is [start_era, until_era) = [prev_era.UNTIL, era.UNTIL). Overlap
+    happens if (start_era < until_ym) and (until_era > start_ym). A
+    'prev_era==None' means the earliest possible ZoneEra.
+    """
+    return (
+        (
+            prev_era is None
+            or _compare_era_to_year_month(prev_era, until_ym.y, until_ym.M) < 0
+        )
+        and _compare_era_to_year_month(era, start_ym.y, start_ym.M) > 0
+    )
+
+
+def _compare_era_to_year_month(
+    era: ZoneEra,
+    year: int,
+    month: int,
+) -> int:
+    """Compare the zone_era with year, returning -1, 0 or 1. The day of
+    month is implicitly 1. Ignore the until_time_suffix suffix. Maybe it's
+    not needed in this context?
+    """
+    if era['until_year'] < year: return -1  # noqa: E701
+    if era['until_year'] > year: return 1  # noqa: E701
+    if era['until_month'] < month: return -1  # noqa: E701
+    if era['until_month'] > month: return 1  # noqa: E701
+    if era['until_day'] > 1: return 1  # noqa: E701
+    if era['until_seconds'] < 0: return -1  # noqa: E701
+    if era['until_seconds'] > 0: return 1  # noqa: E701
+    return 0
 
 
 def print_transitions(header: str, transitions: List[Transition]) -> None:

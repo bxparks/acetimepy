@@ -7,13 +7,16 @@ import unittest
 from datetime import datetime
 
 from acetime.zonedbpy import zone_infos
+from acetime.zone_processor import YearMonthTuple
 from acetime.zone_processor import DateTuple
 from acetime.zone_processor import Transition
 from acetime.zone_processor import MatchingEra
 from acetime.zone_processor import ZoneProcessor
 from acetime.zone_processor import _get_interior_years
-from acetime.zone_processor import _compare_transition_to_match  # noqa
-from acetime.zone_processor import _compare_transition_to_match_fuzzy  # noqa
+# from acetime.zone_processor import _compare_transition_to_match
+from acetime.zone_processor import _compare_transition_to_match_fuzzy
+from acetime.zone_processor import _compare_era_to_year_month
+from acetime.zone_processor import _era_overlaps_interval
 from acetime.zone_processor import _subtract_date_tuple
 from acetime.zone_processor import _normalize_date_tuple
 from acetime.zone_info_types import ZoneInfo
@@ -30,7 +33,7 @@ ZONE_ERA: ZoneEra = {
     'until_month': 3,
     'until_day': 1,
     'until_seconds': 0,
-    'until_time_suffix': '',
+    'until_time_suffix': 'w',
 }
 
 
@@ -114,34 +117,102 @@ class TestZoneProcessorHelperMethods(unittest.TestCase):
             )
         )
 
+    def test_compare_era_to_year_month(self) -> None:
+        era = ZoneEra({
+            'offset_seconds': 0,
+            'zone_policy': '-',
+            'rules_delta_seconds': 0,
+            'format': 'EST',
+            'until_year': 2000,
+            'until_month': 3,
+            'until_day': 1,
+            'until_seconds': 0,
+            'until_time_suffix': 'w',
+        })
+        self.assertEqual(-1, _compare_era_to_year_month(era, 2000, 4))
+        self.assertEqual(0, _compare_era_to_year_month(era, 2000, 3))
+        self.assertEqual(1, _compare_era_to_year_month(era, 2000, 2))
+
+    def test_era_overlaps_interval(self) -> None:
+        # until = 2000-01-01T00:00w
+        prev_era = ZoneEra({
+            'offset_seconds': 0,
+            'zone_policy': '-',
+            'rules_delta_seconds': 0,
+            'format': 'EST',
+            'until_year': 2000,
+            'until_month': 1,
+            'until_day': 1,
+            'until_seconds': 0,
+            'until_time_suffix': 'w',
+        })
+
+        # until = 2000-03-01T00:00w
+        era = ZoneEra({
+            'offset_seconds': 0,
+            'zone_policy': '-',
+            'rules_delta_seconds': 0,
+            'format': 'EST',
+            'until_year': 2000,
+            'until_month': 3,
+            'until_day': 1,
+            'until_seconds': 0,
+            'until_time_suffix': 'w',
+        })
+
+        self.assertFalse((_era_overlaps_interval(
+            prev_era=prev_era,
+            era=era,
+            start_ym=YearMonthTuple(1999, 1),
+            until_ym=YearMonthTuple(2000, 1),
+        )))
+        self.assertFalse((_era_overlaps_interval(
+            prev_era=prev_era,
+            era=era,
+            start_ym=YearMonthTuple(2000, 3),
+            until_ym=YearMonthTuple(2000, 12),
+        )))
+        self.assertTrue((_era_overlaps_interval(
+            prev_era=prev_era,
+            era=era,
+            start_ym=YearMonthTuple(2000, 1),
+            until_ym=YearMonthTuple(2000, 3),
+        )))
+        self.assertTrue((_era_overlaps_interval(
+            prev_era=prev_era,
+            era=era,
+            start_ym=YearMonthTuple(1999, 12),
+            until_ym=YearMonthTuple(2000, 2),
+        )))
+
 
 class TestCompareTransitionToMatch(unittest.TestCase):
-    def test_compare_exact(self) -> None:
-        match = MatchingEra(
-            start_date_time=DateTuple(2000, 1, 1, 0, 'w'),
-            until_date_time=DateTuple(2001, 1, 1, 0, 'w'),
-            zone_era=ZONE_ERA,
-        )
+    # def test_compare_exact(self) -> None:
+    #     match = MatchingEra(
+    #         start_date_time=DateTuple(2000, 1, 1, 0, 'w'),
+    #         until_date_time=DateTuple(2001, 1, 1, 0, 'w'),
+    #         zone_era=ZONE_ERA,
+    #     )
 
-        transition = Transition(
-            transition_time=DateTuple(1999, 12, 31, 0, 'w')
-        )
-        self.assertEqual(-1, _compare_transition_to_match(transition, match))
+    #     transition = Transition(
+    #         transition_time=DateTuple(1999, 12, 31, 0, 'w')
+    #     )
+    #     self.assertEqual(-1, _compare_transition_to_match(transition, match))
 
-        transition = Transition(
-            transition_time=DateTuple(2000, 1, 1, 0, 'w')
-        )
-        self.assertEqual(0, _compare_transition_to_match(transition, match))
+    #     transition = Transition(
+    #         transition_time=DateTuple(2000, 1, 1, 0, 'w')
+    #     )
+    #     self.assertEqual(0, _compare_transition_to_match(transition, match))
 
-        transition = Transition(
-            transition_time=DateTuple(2000, 1, 2, 0, 'w')
-        )
-        self.assertEqual(1, _compare_transition_to_match(transition, match))
+    #     transition = Transition(
+    #         transition_time=DateTuple(2000, 1, 2, 0, 'w')
+    #     )
+    #     self.assertEqual(1, _compare_transition_to_match(transition, match))
 
-        transition = Transition(
-            transition_time=DateTuple(2001, 1, 2, 0, 'w')
-        )
-        self.assertEqual(2, _compare_transition_to_match(transition, match))
+    #     transition = Transition(
+    #         transition_time=DateTuple(2001, 1, 2, 0, 'w')
+    #     )
+    #     self.assertEqual(2, _compare_transition_to_match(transition, match))
 
     def test_compare_fuzzy(self) -> None:
         match = MatchingEra(
