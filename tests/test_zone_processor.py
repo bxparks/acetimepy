@@ -196,21 +196,25 @@ class TestCompareTransitionToMatch(unittest.TestCase):
     #     )
 
     #     transition = Transition(
+    #         matching_era=match,
     #         transition_time=DateTuple(1999, 12, 31, 0, 'w')
     #     )
     #     self.assertEqual(-1, _compare_transition_to_match(transition, match))
 
     #     transition = Transition(
+    #         matching_era=match,
     #         transition_time=DateTuple(2000, 1, 1, 0, 'w')
     #     )
     #     self.assertEqual(0, _compare_transition_to_match(transition, match))
 
     #     transition = Transition(
+    #         matching_era=match,
     #         transition_time=DateTuple(2000, 1, 2, 0, 'w')
     #     )
     #     self.assertEqual(1, _compare_transition_to_match(transition, match))
 
     #     transition = Transition(
+    #         matching_era=match,
     #         transition_time=DateTuple(2001, 1, 2, 0, 'w')
     #     )
     #     self.assertEqual(2, _compare_transition_to_match(transition, match))
@@ -223,58 +227,46 @@ class TestCompareTransitionToMatch(unittest.TestCase):
         )
 
         transition = Transition(
+            matching_era=match,
             transition_time=DateTuple(1999, 11, 1, 0, 'w')
         )
         self.assertEqual(-1,
                          _compare_transition_to_match_fuzzy(transition, match))
 
         transition = Transition(
+            matching_era=match,
             transition_time=DateTuple(1999, 12, 1, 0, 'w')
         )
         self.assertEqual(1,
                          _compare_transition_to_match_fuzzy(transition, match))
 
         transition = Transition(
+            matching_era=match,
             transition_time=DateTuple(2000, 1, 1, 0, 'w')
         )
         self.assertEqual(1,
                          _compare_transition_to_match_fuzzy(transition, match))
 
         transition = Transition(
+            matching_era=match,
             transition_time=DateTuple(2001, 1, 1, 0, 'w')
         )
         self.assertEqual(1,
                          _compare_transition_to_match_fuzzy(transition, match))
 
         transition = Transition(
+            matching_era=match,
             transition_time=DateTuple(2001, 2, 1, 0, 'w')
         )
         self.assertEqual(1,
                          _compare_transition_to_match_fuzzy(transition, match))
 
         transition = Transition(
+            matching_era=match,
             transition_time=DateTuple(2001, 3, 1, 0, 'w')
         )
         self.assertEqual(2,
                          _compare_transition_to_match_fuzzy(transition, match))
-
-
-class TestTransition(unittest.TestCase):
-    def test_transition_contructor_raises_with_zero_arguments(self) -> None:
-        with self.assertRaises(Exception):
-            Transition()
-
-    def test_transition_contructor_raises_with_two_arguments(self) -> None:
-        matching_era = MatchingEra(
-            start_date_time=DateTuple(2000, 1, 1, 0, 'w'),
-            until_date_time=DateTuple(2001, 1, 1, 0, 'w'),
-            zone_era=ZONE_ERA,
-        )
-        with self.assertRaises(Exception):
-            Transition(
-                matching_era=matching_era,
-                transition_time=DateTuple(2001, 3, 1, 0, 'w'),
-            )
 
 
 class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
