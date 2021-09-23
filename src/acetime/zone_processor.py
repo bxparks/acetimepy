@@ -1225,7 +1225,7 @@ class ZoneProcessor:
 
         prior: Optional[Transition] = None
         for transition in transitions:
-            prior = self._process_transition_match_status(transition, prior)
+            prior = _process_transition_match_status(transition, prior)
 
         if prior:
             # Replace the transition_time with the MatchingEra's start_date_time
@@ -1241,37 +1241,37 @@ class ZoneProcessor:
                 active_transitions.append(transition)
         return active_transitions
 
-    @staticmethod
-    def _process_transition_match_status(
-        transition: Transition,
-        prior: Optional[Transition],
-    ) -> Optional[Transition]:
-        """Determine if a transition is active with respect to the given match.
-        This assumes that all Transitions have been fixed using
-        _fix_transition_times().
-        """
-        match_status = _compare_transition_to_match(
-            transition, transition.matching_era)
-        transition.match_status = match_status
 
-        if match_status == MATCH_STATUS_EXACT_MATCH:
-            # This transition falls exactly on the match.start boundary. We
-            # invalidate any previous prior transition candidate. And we set the
-            # current prior to this exactly matching Transition to prevent any
-            # other Transition from becoming the prior.
-            if prior:
+def _process_transition_match_status(
+    transition: Transition,
+    prior: Optional[Transition],
+) -> Optional[Transition]:
+    """Determine if a transition is active with respect to the given match.
+    This assumes that all Transitions have been fixed using
+    _fix_transition_times().
+    """
+    match_status = _compare_transition_to_match(
+        transition, transition.matching_era)
+    transition.match_status = match_status
+
+    if match_status == MATCH_STATUS_EXACT_MATCH:
+        # This transition falls exactly on the match.start boundary. We
+        # invalidate any previous prior transition candidate. And we set the
+        # current prior to this exactly matching Transition to prevent any
+        # other Transition from becoming the prior.
+        if prior:
+            prior.match_status = MATCH_STATUS_FAR_PAST
+        prior = transition
+    elif match_status == MATCH_STATUS_PRIOR:
+        if prior:
+            if transition.transition_time_u >= prior.transition_time_u:
                 prior.match_status = MATCH_STATUS_FAR_PAST
-            prior = transition
-        elif match_status == MATCH_STATUS_PRIOR:
-            if prior:
-                if transition.transition_time_u >= prior.transition_time_u:
-                    prior.match_status = MATCH_STATUS_FAR_PAST
-                    prior = transition
-                else:
-                    transition.match_status = MATCH_STATUS_FAR_PAST
-            else:
                 prior = transition
-        return prior
+            else:
+                transition.match_status = MATCH_STATUS_FAR_PAST
+        else:
+            prior = transition
+    return prior
 
 
 def _era_overlaps_interval(
