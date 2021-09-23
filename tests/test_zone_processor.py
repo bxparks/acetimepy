@@ -19,6 +19,7 @@ from acetime.zone_processor import _compare_era_to_year_month
 from acetime.zone_processor import _era_overlaps_interval
 from acetime.zone_processor import _subtract_date_tuple
 from acetime.zone_processor import _normalize_date_tuple
+from acetime.zone_processor import _expand_date_tuple
 from acetime.zone_info_types import ZoneInfo
 from acetime.zone_info_types import ZonePolicy
 from acetime.zone_info_types import ZoneEra
@@ -58,7 +59,7 @@ class TestZoneProcessorHelperMethods(unittest.TestCase):
         self.assertEqual((DateTuple(2000, 1, 30, 10800, 'w'),
                           DateTuple(2000, 1, 30, 7200, 's'),
                           DateTuple(2000, 1, 30, 0, 'u')),
-                         ZoneProcessor._expand_date_tuple(
+                         _expand_date_tuple(
                              DateTuple(2000, 1, 30, 10800, 'w'),
                              offset_seconds=7200,
                              delta_seconds=3600))
@@ -66,7 +67,7 @@ class TestZoneProcessorHelperMethods(unittest.TestCase):
         self.assertEqual((DateTuple(2000, 1, 30, 10800, 'w'),
                           DateTuple(2000, 1, 30, 7200, 's'),
                           DateTuple(2000, 1, 30, 0, 'u')),
-                         ZoneProcessor._expand_date_tuple(
+                         _expand_date_tuple(
                              DateTuple(2000, 1, 30, 7200, 's'),
                              offset_seconds=7200,
                              delta_seconds=3600))
@@ -74,7 +75,7 @@ class TestZoneProcessorHelperMethods(unittest.TestCase):
         self.assertEqual((DateTuple(2000, 1, 30, 10800, 'w'),
                           DateTuple(2000, 1, 30, 7200, 's'),
                           DateTuple(2000, 1, 30, 0, 'u')),
-                         ZoneProcessor._expand_date_tuple(
+                         _expand_date_tuple(
                              DateTuple(2000, 1, 30, 0, 'u'),
                              offset_seconds=7200,
                              delta_seconds=3600))

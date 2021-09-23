@@ -1055,9 +1055,11 @@ class ZoneProcessor:
             is_after_first = True
 
         # Finally, fix the last transition's until time
-        (udt, udts, udtu) = ZoneProcessor._expand_date_tuple(
-            transition.until_date_time, transition.offset_seconds,
-            transition.delta_seconds)
+        (udt, udts, udtu) = _expand_date_tuple(
+            transition.until_date_time,
+            transition.offset_seconds,
+            transition.delta_seconds,
+        )
         transition.until_date_time = udt
 
     @staticmethod
@@ -1087,55 +1089,12 @@ class ZoneProcessor:
                 transition.transition_time_w,
                 transition.transition_time_s,
                 transition.transition_time_u,
-            ) = ZoneProcessor._expand_date_tuple(
+            ) = _expand_date_tuple(
                 transition.transition_time,
                 prev.offset_seconds,
                 prev.delta_seconds,
             )
             prev = transition
-
-    @staticmethod
-    def _expand_date_tuple(
-        dt: DateTuple,
-        offset_seconds: int,
-        delta_seconds: int,
-    ) -> Tuple[DateTuple, DateTuple, DateTuple]:
-        """Convert 's', 'u', or 'w' time into the other 2 versions using the
-        given base UTC offset and the delta DST offset. Return a tuple of
-        *normalized* (wall, standard, utc) date tuples. The dates are normalized
-        so that transitions occurring at 24:00:00 is moved to the next day.
-        """
-        delta_seconds = delta_seconds if delta_seconds else 0
-        offset_seconds = offset_seconds if offset_seconds else 0
-
-        if dt.f == 'w':
-            dtw = dt
-            dts = DateTuple(
-                y=dt.y, M=dt.M, d=dt.d, ss=dtw.ss - delta_seconds, f='s')
-            ss = dtw.ss - delta_seconds - offset_seconds
-            dtu = DateTuple(y=dt.y, M=dt.M, d=dt.d, ss=ss, f='u')
-        elif dt.f == 's':
-            dts = dt
-            dtw = DateTuple(
-                y=dt.y, M=dt.M, d=dt.d, ss=dts.ss + delta_seconds, f='w')
-            dtu = DateTuple(
-                y=dt.y, M=dt.M, d=dt.d, ss=dts.ss - offset_seconds, f='u')
-        elif dt.f == 'u':
-            dtu = dt
-            ss = dtu.ss + delta_seconds + offset_seconds
-            dtw = DateTuple(y=dtu.y, M=dtu.M, d=dtu.d, ss=ss, f='w')
-            dts = DateTuple(
-                y=dtu.y, M=dtu.M, d=dtu.d, ss=dtu.ss + offset_seconds, f='s')
-        else:
-            logging.error("Unrecognized Rule.AT suffix '%s'; date=%s", dt.f,
-                          dt)
-            sys.exit(1)
-
-        dtw = _normalize_date_tuple(dtw)
-        dts = _normalize_date_tuple(dts)
-        dtu = _normalize_date_tuple(dtu)
-
-        return (dtw, dts, dtu)
 
     @staticmethod
     def _calc_abbrev(transitions: List[Transition]) -> None:
@@ -1410,6 +1369,48 @@ def _compare_date_tuple(a: DateTuple, b: DateTuple) -> int:
     return 0
 
 
+def _expand_date_tuple(
+    dt: DateTuple,
+    offset_seconds: int,
+    delta_seconds: int,
+) -> Tuple[DateTuple, DateTuple, DateTuple]:
+    """Convert 's', 'u', or 'w' time into the other 2 versions using the
+    given base UTC offset and the delta DST offset. Return a tuple of
+    *normalized* (wall, standard, utc) date tuples. The dates are normalized
+    so that transitions occurring at 24:00:00 is moved to the next day.
+    """
+    delta_seconds = delta_seconds if delta_seconds else 0
+    offset_seconds = offset_seconds if offset_seconds else 0
+
+    if dt.f == 'w':
+        dtw = dt
+        dts = DateTuple(
+            y=dt.y, M=dt.M, d=dt.d, ss=dtw.ss - delta_seconds, f='s')
+        ss = dtw.ss - delta_seconds - offset_seconds
+        dtu = DateTuple(y=dt.y, M=dt.M, d=dt.d, ss=ss, f='u')
+    elif dt.f == 's':
+        dts = dt
+        dtw = DateTuple(
+            y=dt.y, M=dt.M, d=dt.d, ss=dts.ss + delta_seconds, f='w')
+        dtu = DateTuple(
+            y=dt.y, M=dt.M, d=dt.d, ss=dts.ss - offset_seconds, f='u')
+    elif dt.f == 'u':
+        dtu = dt
+        ss = dtu.ss + delta_seconds + offset_seconds
+        dtw = DateTuple(y=dtu.y, M=dtu.M, d=dtu.d, ss=ss, f='w')
+        dts = DateTuple(
+            y=dtu.y, M=dtu.M, d=dtu.d, ss=dtu.ss + offset_seconds, f='s')
+    else:
+        logging.error("Unrecognized Rule.AT suffix '%s'; date=%s", dt.f, dt)
+        sys.exit(1)
+
+    dtw = _normalize_date_tuple(dtw)
+    dts = _normalize_date_tuple(dts)
+    dtu = _normalize_date_tuple(dtu)
+
+    return (dtw, dts, dtu)
+
+
 def _datetime_to_datetuple(dt: datetime, format: str) -> DateTuple:
     """Create a DateTuple from the given 'datetime' along with the 'format'
     modifer ('s', 'u', 'w').
@@ -1533,7 +1534,7 @@ def _compare_transition_to_match(
     # Determine if the Transition happens at exactly the same time as the
     # start of the MatchingEra.
     match_start = match.start_date_time
-    (stw, sts, stu) = ZoneProcessor._expand_date_tuple(
+    (stw, sts, stu) = _expand_date_tuple(
         match_start,
         offset_seconds,
         delta_seconds,
