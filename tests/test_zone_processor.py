@@ -13,29 +13,21 @@ from acetime.zone_processor import Transition
 from acetime.zone_processor import MatchingEra
 from acetime.zone_processor import ZoneProcessor
 from acetime.zone_processor import _get_interior_years
-# from acetime.zone_processor import _compare_transition_to_match
-from acetime.zone_processor import _compare_transition_to_match_fuzzy
 from acetime.zone_processor import _compare_era_to_year_month
 from acetime.zone_processor import _era_overlaps_interval
 from acetime.zone_processor import _subtract_date_tuple
 from acetime.zone_processor import _normalize_date_tuple
 from acetime.zone_processor import _expand_date_tuple
+from acetime.zone_processor import _compare_transition_to_match_fuzzy
+from acetime.zone_processor import _compare_transition_to_match
+from acetime.zone_processor import _fix_transition_times
+from acetime.zone_processor import MATCH_STATUS_PRIOR
+from acetime.zone_processor import MATCH_STATUS_EXACT_MATCH
+from acetime.zone_processor import MATCH_STATUS_WITHIN_MATCH
+from acetime.zone_processor import MATCH_STATUS_FAR_FUTURE
 from acetime.zone_info_types import ZoneInfo
 from acetime.zone_info_types import ZonePolicy
 from acetime.zone_info_types import ZoneEra
-
-
-ZONE_ERA: ZoneEra = {
-    'offset_seconds': 0,
-    'zone_policy': '-',
-    'rules_delta_seconds': 0,
-    'format': 'EST',
-    'until_year': 2000,
-    'until_month': 3,
-    'until_day': 1,
-    'until_seconds': 0,
-    'until_time_suffix': 'w',
-}
 
 
 class TestZoneProcessorHelperMethods(unittest.TestCase):
@@ -188,42 +180,111 @@ class TestZoneProcessorHelperMethods(unittest.TestCase):
 
 
 class TestCompareTransitionToMatch(unittest.TestCase):
-    # def test_compare_exact(self) -> None:
-    #     match = MatchingEra(
-    #         start_date_time=DateTuple(2000, 1, 1, 0, 'w'),
-    #         until_date_time=DateTuple(2001, 1, 1, 0, 'w'),
-    #         zone_era=ZONE_ERA,
-    #     )
+    # until 2001-03-01T00:00
+    ZONE_ERA1: ZoneEra = {
+        'offset_seconds': 0,
+        'zone_policy': '-',
+        'rules_delta_seconds': 0,
+        'format': 'EST',
+        'until_year': 2001,
+        'until_month': 3,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    }
 
-    #     transition = Transition(
-    #         matching_era=match,
-    #         transition_time=DateTuple(1999, 12, 31, 0, 'w')
-    #     )
-    #     self.assertEqual(-1, _compare_transition_to_match(transition, match))
+    # until 2002-03-01T00:00
+    ZONE_ERA2: ZoneEra = {
+        'offset_seconds': 0,
+        'zone_policy': '-',
+        'rules_delta_seconds': 0,
+        'format': 'EST',
+        'until_year': 2002,
+        'until_month': 3,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    }
 
-    #     transition = Transition(
-    #         matching_era=match,
-    #         transition_time=DateTuple(2000, 1, 1, 0, 'w')
-    #     )
-    #     self.assertEqual(0, _compare_transition_to_match(transition, match))
+    def test_compare_exact(self) -> None:
+        prev_match = MatchingEra(
+            start_date_time=DateTuple(2000, 12, 1, 0, 'w'),
+            until_date_time=DateTuple(2001, 3, 1, 0, 'w'),
+            zone_era=self.ZONE_ERA1,
+        )
+        prev_match.last_transition = Transition(
+            matching_era=prev_match,
+            transition_time=DateTuple(2001, 2, 1, 0, 'w')
+        )
 
-    #     transition = Transition(
-    #         matching_era=match,
-    #         transition_time=DateTuple(2000, 1, 2, 0, 'w')
-    #     )
-    #     self.assertEqual(1, _compare_transition_to_match(transition, match))
+        match = MatchingEra(
+            start_date_time=DateTuple(2001, 3, 1, 0, 'w'),
+            until_date_time=DateTuple(2001, 9, 1, 0, 'w'),
+            zone_era=self.ZONE_ERA2,
+        )
+        match.prev_match = prev_match
 
-    #     transition = Transition(
-    #         matching_era=match,
-    #         transition_time=DateTuple(2001, 1, 2, 0, 'w')
-    #     )
-    #     self.assertEqual(2, _compare_transition_to_match(transition, match))
+        # prior to MatchingEra
+        transition = Transition(
+            matching_era=match,
+            transition_time=DateTuple(2000, 1, 2, 0, 'w')
+        )
+        _fix_transition_times([transition])
+        self.assertEqual(
+            MATCH_STATUS_PRIOR,
+            _compare_transition_to_match(transition, match),
+        )
+
+        # exactly at start_date_time of MatchingEra
+        transition = Transition(
+            matching_era=match,
+            transition_time=DateTuple(2001, 3, 1, 0, 'w')
+        )
+        _fix_transition_times([transition])
+        self.assertEqual(
+            MATCH_STATUS_EXACT_MATCH,
+            _compare_transition_to_match(transition, match),
+        )
+
+        # inside current MatchingEra
+        transition = Transition(
+            matching_era=match,
+            transition_time=DateTuple(2001, 4, 1, 0, 'w')
+        )
+        _fix_transition_times([transition])
+        self.assertEqual(
+            MATCH_STATUS_WITHIN_MATCH,
+            _compare_transition_to_match(transition, match),
+        )
+
+        # after MatchingEra
+        transition = Transition(
+            matching_era=match,
+            transition_time=DateTuple(2001, 10, 1, 0, 'w')
+        )
+        _fix_transition_times([transition])
+        self.assertEqual(
+            MATCH_STATUS_FAR_FUTURE,
+            _compare_transition_to_match(transition, match),
+        )
+
+    ZONE_ERA: ZoneEra = {
+        'offset_seconds': 0,
+        'zone_policy': '-',
+        'rules_delta_seconds': 0,
+        'format': 'EST',
+        'until_year': 2000,
+        'until_month': 3,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    }
 
     def test_compare_fuzzy(self) -> None:
         match = MatchingEra(
             start_date_time=DateTuple(2000, 1, 1, 0, 'w'),
             until_date_time=DateTuple(2001, 1, 1, 0, 'w'),
-            zone_era=ZONE_ERA,
+            zone_era=self.ZONE_ERA,
         )
 
         transition = Transition(

@@ -518,7 +518,7 @@ class ZoneProcessor:
         # convert to 'w'.
         if self.debug:
             logging.info('==== Step 3: Fixing transitions times')
-        self._fix_transition_times(self.transitions)
+        _fix_transition_times(self.transitions)
         if self.debug:
             print_transitions('All Transitions', self.transitions)
 
@@ -821,7 +821,7 @@ class ZoneProcessor:
         # uniformly.
         if self.debug:
             logging.info('---- Pass 2: Fix transition times')
-        self._fix_transition_times(candidate_transitions)
+        _fix_transition_times(candidate_transitions)
         if self.debug:
             print_transitions('Candidate Transitions', candidate_transitions)
         _check_transitions_sorted(candidate_transitions)
@@ -1000,40 +1000,6 @@ class ZoneProcessor:
             transition.delta_seconds,
         )
         transition.until_date_time = udt
-
-    @staticmethod
-    def _fix_transition_times(transitions: List[Transition]) -> None:
-        """Convert the transtion['transition_time'] to the wall time ('w') of
-        the previous rule's time offset. The Transition time comes from either:
-
-        1) The UNTIL field of the previous Zone Era entry, or
-        2) The (in_month, on_day, at_seconds) fields of the Zone Rule.
-
-        In most cases these times are specified as the wall clock 'w' by
-        default, but a few cases use 's' (standard) or 'u' (utc). We don't need
-        to support 'g' and 'z' because they mean exactly the same as 'u' and
-        they don't appear anywhere in the current TZ files. The transformer.py
-        will detect and filter those out.
-
-        To convert these into the more common 'wall' time, we need to
-        use the UTC offset of the *previous* Transition.
-        """
-        # Bootstrap the transition with the first transition, effectively
-        # extending the first transition backwards to -infinity. This won't be
-        # 100% correct with respect to the TZ Database but it will be good
-        # enough for the first transition that we care about.
-        prev = transitions[0].copy()
-        for transition in transitions:
-            (
-                transition.transition_time_w,
-                transition.transition_time_s,
-                transition.transition_time_u,
-            ) = _expand_date_tuple(
-                transition.transition_time,
-                prev.offset_seconds,
-                prev.delta_seconds,
-            )
-            prev = transition
 
     @staticmethod
     def _calc_abbrev(transitions: List[Transition]) -> None:
@@ -1348,6 +1314,40 @@ def _expand_date_tuple(
     dtu = _normalize_date_tuple(dtu)
 
     return (dtw, dts, dtu)
+
+
+def _fix_transition_times(transitions: List[Transition]) -> None:
+    """Convert the transtion['transition_time'] to the wall time ('w') of
+    the previous rule's time offset. The Transition time comes from either:
+
+    1) The UNTIL field of the previous Zone Era entry, or
+    2) The (in_month, on_day, at_seconds) fields of the Zone Rule.
+
+    In most cases these times are specified as the wall clock 'w' by
+    default, but a few cases use 's' (standard) or 'u' (utc). We don't need
+    to support 'g' and 'z' because they mean exactly the same as 'u' and
+    they don't appear anywhere in the current TZ files. The transformer.py
+    will detect and filter those out.
+
+    To convert these into the more common 'wall' time, we need to
+    use the UTC offset of the *previous* Transition.
+    """
+    # Bootstrap the transition with the first transition, effectively
+    # extending the first transition backwards to -infinity. This won't be
+    # 100% correct with respect to the TZ Database but it will be good
+    # enough for the first transition that we care about.
+    prev = transitions[0].copy()
+    for transition in transitions:
+        (
+            transition.transition_time_w,
+            transition.transition_time_s,
+            transition.transition_time_u,
+        ) = _expand_date_tuple(
+            transition.transition_time,
+            prev.offset_seconds,
+            prev.delta_seconds,
+        )
+        prev = transition
 
 
 def _datetime_to_datetuple(dt: datetime, format: str) -> DateTuple:
