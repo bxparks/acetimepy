@@ -91,6 +91,14 @@ class MatchingEra:
 
         # the ZoneEra corresponding to this match
         'zone_era',
+
+        # the previous MatchingEra whose last_transition will be used to
+        # normalize the start_date_time of the current MatchingEra
+        'prev_match',
+
+        # the last Transition of this Matching Era, which will be used to
+        # normalize the start_date_time of the next MatchingEra
+        'last_transition',
     ]
 
     # Hack because '__slots__' is unsupported by mypy. See
@@ -99,12 +107,15 @@ class MatchingEra:
         start_date_time: DateTuple
         until_date_time: DateTuple
         zone_era: ZoneEra
+        prev_match: Optional['MatchingEra']
+        last_transition: 'Transition'
 
     def __init__(
         self, *,
         start_date_time: DateTuple,
         until_date_time: DateTuple,
         zone_era: ZoneEra,
+        prev_match: Optional['MatchingEra'] = None,
     ):
         for s in self.__slots__:
             setattr(self, s, None)
@@ -112,6 +123,7 @@ class MatchingEra:
         self.start_date_time = start_date_time
         self.until_date_time = until_date_time
         self.zone_era = zone_era
+        self.prev_match = prev_match
 
     def __repr__(self) -> str:
         return (
@@ -174,7 +186,8 @@ class Transition:
         # the UTC offset of the *previous* transition. The TZ file will
         # sometimes specify these as 's' or 'u', so the _fix_transition_times()
         # will normalize and generate all 3 versions.
-        'transition_time',  # transition time from TZDB, then converted to 'w'
+        'transition_time',  # transition time from TZDB
+        'transition_time_w',  # converted 'w' time
         'transition_time_s',  # converted 's' time
         'transition_time_u',  # converted 'u' time
 
@@ -191,8 +204,9 @@ class Transition:
         # simple MatchingEra, this will be None.
         'zone_rule',
 
-        # Flag to indicate that Transition is fully inside the MatchingEra.
-        'is_active',
+        # Transition compared to its enclosing MatchingEra. See MATCH_STATUS_*
+        # parameters and _process_transition_match_status().
+        'match_status',
     ]
 
     # Hack because '__slots__' is unsupported by mypy. See
@@ -203,12 +217,13 @@ class Transition:
         matching_era: MatchingEra
         original_transition_time: DateTuple
         transition_time: DateTuple
+        transition_time_w: DateTuple
         transition_time_s: DateTuple
         transition_time_u: DateTuple
         abbrev: str
         start_epoch_second: int
         zone_rule: Optional[ZoneRule]
-        is_active: bool
+        match_status: int
 
     def __init__(
         self, *,
@@ -270,8 +285,9 @@ class Transition:
             return (
                 'T('
                 f"start={sepoch}"
-                f"; act={'y' if self.is_active else '-'}"
+                f"; ms={self.match_status}"
                 f"; tt={date_tuple_to_string(self.transition_time)}"
+                f"; ttw={date_tuple_to_string(self.transition_time_w)}"
                 f"; st={date_tuple_to_string(self.start_date_time)}"
                 f"; ut={date_tuple_to_string(self.until_date_time)}"
                 f"; {to_utc_string(offset_seconds, delta_seconds)}"
@@ -292,8 +308,9 @@ class Transition:
             return (
                 'T('
                 f"start={sepoch}"
-                f"; act={'y' if self.is_active else '-'}"
+                f"; ms={self.match_status}"
                 f"; tt={date_tuple_to_string(self.transition_time)}"
+                f"; ttw={date_tuple_to_string(self.transition_time_w)}"
                 f"; st={date_tuple_to_string(self.start_date_time)}"
                 f"; ut={date_tuple_to_string(self.until_date_time)}"
                 f"; {to_utc_string(offset_seconds, delta_seconds)}"
@@ -358,6 +375,23 @@ def _to_offset_info(transition: Transition, fold: int) -> OffsetInfo:
         transition.delta_seconds,
         transition.abbrev,
         fold,
+    )
+
+
+# Various comparison states when comparing the Transition transition_time
+# to the enclosing MatchingEra start_date_time and until_date_time.
+MATCH_STATUS_FAR_PAST = -2
+MATCH_STATUS_PRIOR = -1
+MATCH_STATUS_EXACT_MATCH = 0
+MATCH_STATUS_WITHIN_MATCH = 1
+MATCH_STATUS_FAR_FUTURE = 2
+
+
+def _match_status_is_active(match_status: int) -> bool:
+    return (
+        match_status == MATCH_STATUS_EXACT_MATCH
+        or match_status == MATCH_STATUS_WITHIN_MATCH
+        or match_status == MATCH_STATUS_PRIOR
     )
 
 
@@ -736,18 +770,21 @@ class ZoneProcessor:
         years for the 'most recent prior year'.
         """
         zone_eras = self.zone_info['eras']
-        prev_era: Optional[ZoneEra] = None  # the earliest possible
+        prev_match: Optional[MatchingEra] = None
         matches: List[MatchingEra] = []
         for zone_era in zone_eras:
             if self._era_overlaps_interval(
-                prev_era, zone_era, start_ym, until_ym
+                prev_match.zone_era if prev_match else None,
+                zone_era,
+                start_ym,
+                until_ym,
             ):
                 match = self._create_match(
-                    prev_era, zone_era, start_ym, until_ym)
+                    prev_match, zone_era, start_ym, until_ym)
                 if self.debug:
                     logging.info('_find_matches(): %s', match)
                 matches.append(match)
-            prev_era = zone_era
+                prev_match = match
         return matches
 
     def _create_transitions(self, matches: List[MatchingEra]) -> None:
@@ -786,6 +823,7 @@ class ZoneProcessor:
         transition.transition_time = match.start_date_time
         if self.debug:
             print_transitions('Simple Transition', [transition])
+        match.last_transition = transition
         self.transitions.append(transition)
         self.transition_storage.push_transitions(1)
 
@@ -841,8 +879,7 @@ class ZoneProcessor:
         if self.debug:
             logging.info('---- Pass 3: Select active transitions')
         try:
-            transitions = self._select_active_transitions(
-                candidate_transitions, match)
+            transitions = self._select_active_transitions(candidate_transitions)
         except:  # noqa: E722
             logging.exception(
                 "Zone '%s'; year '%04d'",
@@ -859,6 +896,9 @@ class ZoneProcessor:
         self._check_transitions_sorted(transitions)
         if self.debug:
             print_transitions('Active Sorted Transition', transitions)
+
+        # Save the last transition of the current MatchingEra.
+        match.last_transition = transitions[-1]
 
         self.transitions.extend(transitions)
         self.transition_storage.push_transitions(len(transitions))
@@ -888,7 +928,7 @@ class ZoneProcessor:
 
     @staticmethod
     def _create_match(
-        prev_era: Optional[ZoneEra],
+        prev_match: Optional[MatchingEra],
         zone_era: ZoneEra,
         start_ym: YearMonthTuple,
         until_ym: YearMonthTuple,
@@ -913,10 +953,11 @@ class ZoneProcessor:
 
         A value of `prev_era==None` means the earliest possible ZoneEra.
         """
-        if prev_era is None:
+        if prev_match is None:
             start_date_time = DateTuple(
                 y=MIN_YEAR, M=1, d=1, ss=0, f='w')
         else:
+            prev_era = prev_match.zone_era
             start_date_time = DateTuple(
                 y=prev_era['until_year'],
                 M=prev_era['until_month'],
@@ -941,6 +982,7 @@ class ZoneProcessor:
             start_date_time=start_date_time,
             until_date_time=until_date_time,
             zone_era=zone_era,
+            prev_match=prev_match,
         )
 
     @staticmethod
@@ -972,7 +1014,7 @@ class ZoneProcessor:
         is_after_first = False
         for transition in transitions:
             # Transition time using the wall time of the previous Transition.
-            tt = transition.transition_time
+            tt = transition.transition_time_w
 
             # 1) Update the 'until_date_time' of the previous Transition.
             if is_after_first:
@@ -1042,7 +1084,7 @@ class ZoneProcessor:
         prev = transitions[0].copy()
         for transition in transitions:
             (
-                transition.transition_time,
+                transition.transition_time_w,
                 transition.transition_time_s,
                 transition.transition_time_u,
             ) = ZoneProcessor._expand_date_tuple(
@@ -1267,34 +1309,35 @@ class ZoneProcessor:
     def _select_active_transitions(
         self,
         transitions: List[Transition],
-        match: MatchingEra,
     ) -> List[Transition]:
-        """Determine the active Transisitions using an inlined is_active flag.
+        """Determine the active Transisitions using the match_status field.
         The final result is returned in a new 'active_transitions' list, but in
         the C++ version, we can avoid allocating an extra array by filter on the
-        'is_active' flag and resizing the transitions array.
+        'match_status' flag and resizing the transitions array.
         """
         if self.debug:
             logging.info('_select_active_transitions()')
 
         prior: Optional[Transition] = None
         for transition in transitions:
-            prior = self._process_transition_active_status(
-                match, transition, prior)
+            prior = self._process_transition_match_status(transition, prior)
 
-        if prior and prior.transition_time < match.start_date_time:
+        if prior:
+            # Replace the transition_time with the MatchingEra's start_date_time
+            # because start_date_time uses the UTC offset of the previous
+            # MatchingEra, which is how we want to interpret the transition time
+            # of the prior transition.
             prior.original_transition_time = prior.transition_time
-            prior.transition_time = match.start_date_time
+            prior.transition_time = prior.matching_era.start_date_time
 
         active_transitions = []
         for transition in transitions:
-            if transition.is_active:
+            if _match_status_is_active(transition.match_status):
                 active_transitions.append(transition)
         return active_transitions
 
     @staticmethod
-    def _process_transition_active_status(
-        match: MatchingEra,
+    def _process_transition_match_status(
         transition: Transition,
         prior: Optional[Transition],
     ) -> Optional[Transition]:
@@ -1302,27 +1345,26 @@ class ZoneProcessor:
         This assumes that all Transitions have been fixed using
         _fix_transition_times().
         """
-        transition_compared_to_match = _compare_transition_to_match(
-            transition, match)
-        if transition_compared_to_match == 2:
-            transition.is_active = False
-        elif transition_compared_to_match == 1:
-            transition.is_active = True
-        elif transition_compared_to_match == 0:
-            transition.is_active = True
-            # This transition falls exactly on the match.start boundary.
-            # So we need to invalidate any previous prior transition candidate.
+        match_status = _compare_transition_to_match(
+            transition, transition.matching_era)
+        transition.match_status = match_status
+
+        if match_status == MATCH_STATUS_EXACT_MATCH:
+            # This transition falls exactly on the match.start boundary. We
+            # invalidate any previous prior transition candidate. And we set the
+            # current prior to this exactly matching Transition to prevent any
+            # other Transition from becoming the prior.
             if prior:
-                prior.is_active = False
+                prior.match_status = MATCH_STATUS_FAR_PAST
             prior = transition
-        else:  # transition_compared_to_match < 0:
+        elif match_status == MATCH_STATUS_PRIOR:
             if prior:
-                if transition.transition_time > prior.transition_time:
-                    prior.is_active = False
-                    transition.is_active = True
+                if transition.transition_time_u >= prior.transition_time_u:
+                    prior.match_status = MATCH_STATUS_FAR_PAST
                     prior = transition
+                else:
+                    transition.match_status = MATCH_STATUS_FAR_PAST
             else:
-                transition.is_active = True
                 prior = transition
         return prior
 
@@ -1448,39 +1490,71 @@ def _compare_transition_to_match(
     transition: Transition,
     match: MatchingEra,
 ) -> int:
-    """Determine if transition_time applies to given range of the match.
+    """Determine how the given 'transition' compares to the given 'match' in the
+    timeline. The return type is one of the MATCH_STATUS_* constant. There are 4
+    cases:
 
-    To allow the Transition time to be compared correctly to the MatchingEra
-    time, which may be specified in the TZ database in ('w', 's', or 'u')
-    formats, the Transition.transition_time is assumed to have already
-    been expanded (through _fix_transition_times()) to include all 3 versions.
-    The MatchingEra.start_date_time and MatchingEra.until_date_time are compared
-    to the appropriate version of 'transition_time' as determined by the
-    modifier suffix of 'start_date_time' and 'until_date_time'.
+    * MATCH_STATUS_FAR_PAST
+        * (not used in this method)
+    * MATCH_STATUS_PRIOR
+        * The transition occurs before the given 'match'.
+    * MATCH_STATUS_EXACT_MATCH
+        * The transition occurs exactly at the same time as the start time
+          of the given match.
+        * The meaning of "exact" seems to be a bit fuzzy and not explained
+          very well in the TBDB files. As far as I can tell, an exact match
+          occurs when any of the 'w', 's' or 'u' times of the transition occurs
+          at the same time as the corresponding 'w', 's' or 'u' times of the
+          given 'match'.
+    * MATCH_STATUS_WITHIN_MATCH
+        * The transition falls within the [start, until) time interval of
+          the given 'match'.
+    * MATCH_STATUS_FAR_FUTURE
+        * The transition falls after the given 'match'.
 
-    Return:
-        * -1 if less than match
-        * 0 if equal to match_start
-        * 1 if within match,
-        * 2 if greater than match
+    Before this method is called, the Transition.transition_time must have been
+    expanded into the 'w', 's', and 'u' versions through
+    _fix_transition_times().
     """
-    match_start = match.start_date_time
-    if match_start.f == 'w':
-        transition_time = transition.transition_time
-    elif match_start.f == 's':
-        transition_time = transition.transition_time_s
-    elif match_start.f == 'u':
-        transition_time = transition.transition_time_u
-    else:
-        raise Exception(f"Unknown suffix: {match_start.f}")
-    if transition_time < match_start:
-        return -1
-    if transition_time == match_start:
-        return 0
 
+    # Extract the start time of the current MatchingEra in 'u' units, using the
+    # previous MatchingEra.
+    if match.prev_match:
+        prev_match = match.prev_match
+        offset_seconds = prev_match.last_transition.offset_seconds
+        delta_seconds = prev_match.last_transition.delta_seconds
+    else:
+        # The first MatchingEra, so there is no previous Transition. Let's just
+        # take the current offset_seconds, and assume a DST offset of 0.
+        prev_match = match
+        offset_seconds = match.zone_era['offset_seconds']
+        delta_seconds = 0
+
+    # Determine if the Transition happens at exactly the same time as the
+    # start of the MatchingEra.
+    match_start = match.start_date_time
+    (stw, sts, stu) = ZoneProcessor._expand_date_tuple(
+        match_start,
+        offset_seconds,
+        delta_seconds,
+    )
+    if (
+        transition.transition_time_u == stu
+        or transition.transition_time_w == stw
+        or transition.transition_time_s == sts
+    ):
+        return MATCH_STATUS_EXACT_MATCH
+
+    if transition.transition_time_u < stu:
+        return MATCH_STATUS_PRIOR
+
+    # Check if the transition occurs after the given 'match'. The
+    # 'until_date_time' of the current match uses the same UTC offsets as the
+    # transition_time of the given 'transition', so we don't have to make any
+    # complicated adjustments.
     match_until = match.until_date_time
     if match_until.f == 'w':
-        transition_time = transition.transition_time
+        transition_time = transition.transition_time_w
     elif match_until.f == 's':
         transition_time = transition.transition_time_s
     elif match_until.f == 'u':
@@ -1488,9 +1562,9 @@ def _compare_transition_to_match(
     else:
         raise Exception(f"Unknown suffix: {match_until.f}")
     if match_until <= transition_time:
-        return 2
+        return MATCH_STATUS_FAR_FUTURE
 
-    return 1
+    return MATCH_STATUS_WITHIN_MATCH
 
 
 def _compare_transition_to_match_fuzzy(
