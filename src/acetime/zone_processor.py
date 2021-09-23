@@ -862,7 +862,7 @@ class ZoneProcessor:
         candidate_transitions = self._find_candidate_transitions(match, rules)
         if self.debug:
             print_transitions('Candidate Transitions', candidate_transitions)
-        self._check_transitions_sorted(candidate_transitions)
+        _check_transitions_sorted(candidate_transitions)
         self.transition_storage.pop_transitions(len(candidate_transitions))
 
         # Pass 2: Fix the transitions times, converting 's' and 'u' into 'w'
@@ -872,7 +872,7 @@ class ZoneProcessor:
         self._fix_transition_times(candidate_transitions)
         if self.debug:
             print_transitions('Candidate Transitions', candidate_transitions)
-        self._check_transitions_sorted(candidate_transitions)
+        _check_transitions_sorted(candidate_transitions)
 
         # Pass 3: Select only those Transitions which overlap with the actual
         # start and until times of the MatchingEra.
@@ -893,7 +893,7 @@ class ZoneProcessor:
         # sorted.
         if self.debug:
             logging.info('---- Pass 4: Final check for sorted transitions')
-        self._check_transitions_sorted(transitions)
+        _check_transitions_sorted(transitions)
         if self.debug:
             print_transitions('Active Sorted Transition', transitions)
 
@@ -912,19 +912,6 @@ class ZoneProcessor:
         logging.info('---- Transitions')
         for t in self.transitions:
             logging.info(t)
-
-    @staticmethod
-    def _check_transitions_sorted(transitions: List[Transition]) -> None:
-        """Check transitions are sorted.
-        """
-        prev = None
-        for transition in transitions:
-            if not prev:
-                prev = transition
-                continue
-            if prev.transition_time > transition.transition_time:
-                print_transitions('Unsorted Transitions', transitions)
-                raise Exception('Transitions not sorted')
 
     @staticmethod
     def _create_match(
@@ -1485,6 +1472,19 @@ def _get_most_recent_prior_year(
             return start_year - 1
     else:
         return -1
+
+
+def _check_transitions_sorted(transitions: List[Transition]) -> None:
+    """Check transitions are sorted.
+    """
+    prev = None
+    for transition in transitions:
+        if not prev:
+            prev = transition
+            continue
+        if prev.transition_time > transition.transition_time:
+            print_transitions('Unsorted Transitions', transitions)
+            raise Exception('Transitions not sorted')
 
 
 def _compare_transition_to_match(
