@@ -773,6 +773,7 @@ class ZoneProcessor:
             matching_era=match,
             transition_time=match.start_date_time,
         )
+        transition.match_status = MATCH_STATUS_EXACT_MATCH
         if self.debug:
             print_transitions('Simple Transition', [transition])
         match.last_transition = transition
@@ -1472,8 +1473,7 @@ def _compare_transition_to_match(
     _fix_transition_times().
     """
 
-    # Extract the start time of the current MatchingEra in 'u' units, using the
-    # previous MatchingEra.
+    # Determine the UTC offset of the previous MatchingEra.
     if match.prev_match:
         prev_match = match.prev_match
         assert prev_match.last_transition is not None
@@ -1486,14 +1486,16 @@ def _compare_transition_to_match(
         offset_seconds = match.zone_era['offset_seconds']
         delta_seconds = 0
 
-    # Determine if the Transition happens at exactly the same time as the
-    # start of the MatchingEra.
-    match_start = match.start_date_time
+    # Expand the MatchingEra.start_date_time into 'w', 's' and 'u' units.
     (stw, sts, stu) = _expand_date_tuple(
-        match_start,
+        match.start_date_time,
         offset_seconds,
         delta_seconds,
     )
+
+    # Determine if the Transition happens at exactly the same time as the
+    # start of the MatchingEra. An exact match is considered to happen if
+    # *any* of the 'w', 's' or 'u' times match up.
     if (
         transition.transition_time_u == stu
         or transition.transition_time_w == stw
