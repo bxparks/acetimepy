@@ -5,7 +5,7 @@ from datetime import datetime, timedelta, timezone
 
 from acetime.common import SECONDS_SINCE_UNIX_EPOCH
 from acetime.acetz import acetz, gettz
-from acetime.zonedbpy.zone_infos import ZONE_INFO_MAP
+from acetime.zonedbpy.zone_registry import ZONE_INFO_MAP
 
 
 # Enable logging during unittests.
