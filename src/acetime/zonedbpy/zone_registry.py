@@ -29,392 +29,392 @@
 from .zone_infos import *
 
 # Supported Zones: 386
-ZONE_INFO_MAP = {
-    'Africa/Abidjan': ZONE_INFO_Africa_Abidjan, # Africa/Abidjan
-    'Africa/Accra': ZONE_INFO_Africa_Accra, # Africa/Accra
-    'Africa/Algiers': ZONE_INFO_Africa_Algiers, # Africa/Algiers
-    'Africa/Bissau': ZONE_INFO_Africa_Bissau, # Africa/Bissau
-    'Africa/Cairo': ZONE_INFO_Africa_Cairo, # Africa/Cairo
-    'Africa/Casablanca': ZONE_INFO_Africa_Casablanca, # Africa/Casablanca
-    'Africa/Ceuta': ZONE_INFO_Africa_Ceuta, # Africa/Ceuta
-    'Africa/El_Aaiun': ZONE_INFO_Africa_El_Aaiun, # Africa/El_Aaiun
-    'Africa/Johannesburg': ZONE_INFO_Africa_Johannesburg, # Africa/Johannesburg
-    'Africa/Juba': ZONE_INFO_Africa_Juba, # Africa/Juba
-    'Africa/Khartoum': ZONE_INFO_Africa_Khartoum, # Africa/Khartoum
-    'Africa/Lagos': ZONE_INFO_Africa_Lagos, # Africa/Lagos
-    'Africa/Maputo': ZONE_INFO_Africa_Maputo, # Africa/Maputo
-    'Africa/Monrovia': ZONE_INFO_Africa_Monrovia, # Africa/Monrovia
-    'Africa/Nairobi': ZONE_INFO_Africa_Nairobi, # Africa/Nairobi
-    'Africa/Ndjamena': ZONE_INFO_Africa_Ndjamena, # Africa/Ndjamena
-    'Africa/Sao_Tome': ZONE_INFO_Africa_Sao_Tome, # Africa/Sao_Tome
-    'Africa/Tripoli': ZONE_INFO_Africa_Tripoli, # Africa/Tripoli
-    'Africa/Tunis': ZONE_INFO_Africa_Tunis, # Africa/Tunis
-    'Africa/Windhoek': ZONE_INFO_Africa_Windhoek, # Africa/Windhoek
-    'America/Adak': ZONE_INFO_America_Adak, # America/Adak
-    'America/Anchorage': ZONE_INFO_America_Anchorage, # America/Anchorage
-    'America/Araguaina': ZONE_INFO_America_Araguaina, # America/Araguaina
-    'America/Argentina/Buenos_Aires': ZONE_INFO_America_Argentina_Buenos_Aires, # America/Argentina/Buenos_Aires
-    'America/Argentina/Catamarca': ZONE_INFO_America_Argentina_Catamarca, # America/Argentina/Catamarca
-    'America/Argentina/Cordoba': ZONE_INFO_America_Argentina_Cordoba, # America/Argentina/Cordoba
-    'America/Argentina/Jujuy': ZONE_INFO_America_Argentina_Jujuy, # America/Argentina/Jujuy
-    'America/Argentina/La_Rioja': ZONE_INFO_America_Argentina_La_Rioja, # America/Argentina/La_Rioja
-    'America/Argentina/Mendoza': ZONE_INFO_America_Argentina_Mendoza, # America/Argentina/Mendoza
-    'America/Argentina/Rio_Gallegos': ZONE_INFO_America_Argentina_Rio_Gallegos, # America/Argentina/Rio_Gallegos
-    'America/Argentina/Salta': ZONE_INFO_America_Argentina_Salta, # America/Argentina/Salta
-    'America/Argentina/San_Juan': ZONE_INFO_America_Argentina_San_Juan, # America/Argentina/San_Juan
-    'America/Argentina/San_Luis': ZONE_INFO_America_Argentina_San_Luis, # America/Argentina/San_Luis
-    'America/Argentina/Tucuman': ZONE_INFO_America_Argentina_Tucuman, # America/Argentina/Tucuman
-    'America/Argentina/Ushuaia': ZONE_INFO_America_Argentina_Ushuaia, # America/Argentina/Ushuaia
-    'America/Asuncion': ZONE_INFO_America_Asuncion, # America/Asuncion
-    'America/Atikokan': ZONE_INFO_America_Atikokan, # America/Atikokan
-    'America/Bahia': ZONE_INFO_America_Bahia, # America/Bahia
-    'America/Bahia_Banderas': ZONE_INFO_America_Bahia_Banderas, # America/Bahia_Banderas
-    'America/Barbados': ZONE_INFO_America_Barbados, # America/Barbados
-    'America/Belem': ZONE_INFO_America_Belem, # America/Belem
-    'America/Belize': ZONE_INFO_America_Belize, # America/Belize
-    'America/Blanc-Sablon': ZONE_INFO_America_Blanc_Sablon, # America/Blanc-Sablon
-    'America/Boa_Vista': ZONE_INFO_America_Boa_Vista, # America/Boa_Vista
-    'America/Bogota': ZONE_INFO_America_Bogota, # America/Bogota
-    'America/Boise': ZONE_INFO_America_Boise, # America/Boise
-    'America/Cambridge_Bay': ZONE_INFO_America_Cambridge_Bay, # America/Cambridge_Bay
-    'America/Campo_Grande': ZONE_INFO_America_Campo_Grande, # America/Campo_Grande
-    'America/Cancun': ZONE_INFO_America_Cancun, # America/Cancun
-    'America/Caracas': ZONE_INFO_America_Caracas, # America/Caracas
-    'America/Cayenne': ZONE_INFO_America_Cayenne, # America/Cayenne
-    'America/Chicago': ZONE_INFO_America_Chicago, # America/Chicago
-    'America/Chihuahua': ZONE_INFO_America_Chihuahua, # America/Chihuahua
-    'America/Costa_Rica': ZONE_INFO_America_Costa_Rica, # America/Costa_Rica
-    'America/Creston': ZONE_INFO_America_Creston, # America/Creston
-    'America/Cuiaba': ZONE_INFO_America_Cuiaba, # America/Cuiaba
-    'America/Curacao': ZONE_INFO_America_Curacao, # America/Curacao
-    'America/Danmarkshavn': ZONE_INFO_America_Danmarkshavn, # America/Danmarkshavn
-    'America/Dawson': ZONE_INFO_America_Dawson, # America/Dawson
-    'America/Dawson_Creek': ZONE_INFO_America_Dawson_Creek, # America/Dawson_Creek
-    'America/Denver': ZONE_INFO_America_Denver, # America/Denver
-    'America/Detroit': ZONE_INFO_America_Detroit, # America/Detroit
-    'America/Edmonton': ZONE_INFO_America_Edmonton, # America/Edmonton
-    'America/Eirunepe': ZONE_INFO_America_Eirunepe, # America/Eirunepe
-    'America/El_Salvador': ZONE_INFO_America_El_Salvador, # America/El_Salvador
-    'America/Fort_Nelson': ZONE_INFO_America_Fort_Nelson, # America/Fort_Nelson
-    'America/Fortaleza': ZONE_INFO_America_Fortaleza, # America/Fortaleza
-    'America/Glace_Bay': ZONE_INFO_America_Glace_Bay, # America/Glace_Bay
-    'America/Goose_Bay': ZONE_INFO_America_Goose_Bay, # America/Goose_Bay
-    'America/Grand_Turk': ZONE_INFO_America_Grand_Turk, # America/Grand_Turk
-    'America/Guatemala': ZONE_INFO_America_Guatemala, # America/Guatemala
-    'America/Guayaquil': ZONE_INFO_America_Guayaquil, # America/Guayaquil
-    'America/Guyana': ZONE_INFO_America_Guyana, # America/Guyana
-    'America/Halifax': ZONE_INFO_America_Halifax, # America/Halifax
-    'America/Havana': ZONE_INFO_America_Havana, # America/Havana
-    'America/Hermosillo': ZONE_INFO_America_Hermosillo, # America/Hermosillo
-    'America/Indiana/Indianapolis': ZONE_INFO_America_Indiana_Indianapolis, # America/Indiana/Indianapolis
-    'America/Indiana/Knox': ZONE_INFO_America_Indiana_Knox, # America/Indiana/Knox
-    'America/Indiana/Marengo': ZONE_INFO_America_Indiana_Marengo, # America/Indiana/Marengo
-    'America/Indiana/Petersburg': ZONE_INFO_America_Indiana_Petersburg, # America/Indiana/Petersburg
-    'America/Indiana/Tell_City': ZONE_INFO_America_Indiana_Tell_City, # America/Indiana/Tell_City
-    'America/Indiana/Vevay': ZONE_INFO_America_Indiana_Vevay, # America/Indiana/Vevay
-    'America/Indiana/Vincennes': ZONE_INFO_America_Indiana_Vincennes, # America/Indiana/Vincennes
-    'America/Indiana/Winamac': ZONE_INFO_America_Indiana_Winamac, # America/Indiana/Winamac
-    'America/Inuvik': ZONE_INFO_America_Inuvik, # America/Inuvik
-    'America/Iqaluit': ZONE_INFO_America_Iqaluit, # America/Iqaluit
-    'America/Jamaica': ZONE_INFO_America_Jamaica, # America/Jamaica
-    'America/Juneau': ZONE_INFO_America_Juneau, # America/Juneau
-    'America/Kentucky/Louisville': ZONE_INFO_America_Kentucky_Louisville, # America/Kentucky/Louisville
-    'America/Kentucky/Monticello': ZONE_INFO_America_Kentucky_Monticello, # America/Kentucky/Monticello
-    'America/La_Paz': ZONE_INFO_America_La_Paz, # America/La_Paz
-    'America/Lima': ZONE_INFO_America_Lima, # America/Lima
-    'America/Los_Angeles': ZONE_INFO_America_Los_Angeles, # America/Los_Angeles
-    'America/Maceio': ZONE_INFO_America_Maceio, # America/Maceio
-    'America/Managua': ZONE_INFO_America_Managua, # America/Managua
-    'America/Manaus': ZONE_INFO_America_Manaus, # America/Manaus
-    'America/Martinique': ZONE_INFO_America_Martinique, # America/Martinique
-    'America/Matamoros': ZONE_INFO_America_Matamoros, # America/Matamoros
-    'America/Mazatlan': ZONE_INFO_America_Mazatlan, # America/Mazatlan
-    'America/Menominee': ZONE_INFO_America_Menominee, # America/Menominee
-    'America/Merida': ZONE_INFO_America_Merida, # America/Merida
-    'America/Metlakatla': ZONE_INFO_America_Metlakatla, # America/Metlakatla
-    'America/Mexico_City': ZONE_INFO_America_Mexico_City, # America/Mexico_City
-    'America/Miquelon': ZONE_INFO_America_Miquelon, # America/Miquelon
-    'America/Moncton': ZONE_INFO_America_Moncton, # America/Moncton
-    'America/Monterrey': ZONE_INFO_America_Monterrey, # America/Monterrey
-    'America/Montevideo': ZONE_INFO_America_Montevideo, # America/Montevideo
-    'America/Nassau': ZONE_INFO_America_Nassau, # America/Nassau
-    'America/New_York': ZONE_INFO_America_New_York, # America/New_York
-    'America/Nipigon': ZONE_INFO_America_Nipigon, # America/Nipigon
-    'America/Nome': ZONE_INFO_America_Nome, # America/Nome
-    'America/Noronha': ZONE_INFO_America_Noronha, # America/Noronha
-    'America/North_Dakota/Beulah': ZONE_INFO_America_North_Dakota_Beulah, # America/North_Dakota/Beulah
-    'America/North_Dakota/Center': ZONE_INFO_America_North_Dakota_Center, # America/North_Dakota/Center
-    'America/North_Dakota/New_Salem': ZONE_INFO_America_North_Dakota_New_Salem, # America/North_Dakota/New_Salem
-    'America/Nuuk': ZONE_INFO_America_Nuuk, # America/Nuuk
-    'America/Ojinaga': ZONE_INFO_America_Ojinaga, # America/Ojinaga
-    'America/Panama': ZONE_INFO_America_Panama, # America/Panama
-    'America/Pangnirtung': ZONE_INFO_America_Pangnirtung, # America/Pangnirtung
-    'America/Paramaribo': ZONE_INFO_America_Paramaribo, # America/Paramaribo
-    'America/Phoenix': ZONE_INFO_America_Phoenix, # America/Phoenix
-    'America/Port-au-Prince': ZONE_INFO_America_Port_au_Prince, # America/Port-au-Prince
-    'America/Port_of_Spain': ZONE_INFO_America_Port_of_Spain, # America/Port_of_Spain
-    'America/Porto_Velho': ZONE_INFO_America_Porto_Velho, # America/Porto_Velho
-    'America/Puerto_Rico': ZONE_INFO_America_Puerto_Rico, # America/Puerto_Rico
-    'America/Punta_Arenas': ZONE_INFO_America_Punta_Arenas, # America/Punta_Arenas
-    'America/Rainy_River': ZONE_INFO_America_Rainy_River, # America/Rainy_River
-    'America/Rankin_Inlet': ZONE_INFO_America_Rankin_Inlet, # America/Rankin_Inlet
-    'America/Recife': ZONE_INFO_America_Recife, # America/Recife
-    'America/Regina': ZONE_INFO_America_Regina, # America/Regina
-    'America/Resolute': ZONE_INFO_America_Resolute, # America/Resolute
-    'America/Rio_Branco': ZONE_INFO_America_Rio_Branco, # America/Rio_Branco
-    'America/Santarem': ZONE_INFO_America_Santarem, # America/Santarem
-    'America/Santiago': ZONE_INFO_America_Santiago, # America/Santiago
-    'America/Santo_Domingo': ZONE_INFO_America_Santo_Domingo, # America/Santo_Domingo
-    'America/Sao_Paulo': ZONE_INFO_America_Sao_Paulo, # America/Sao_Paulo
-    'America/Scoresbysund': ZONE_INFO_America_Scoresbysund, # America/Scoresbysund
-    'America/Sitka': ZONE_INFO_America_Sitka, # America/Sitka
-    'America/St_Johns': ZONE_INFO_America_St_Johns, # America/St_Johns
-    'America/Swift_Current': ZONE_INFO_America_Swift_Current, # America/Swift_Current
-    'America/Tegucigalpa': ZONE_INFO_America_Tegucigalpa, # America/Tegucigalpa
-    'America/Thule': ZONE_INFO_America_Thule, # America/Thule
-    'America/Thunder_Bay': ZONE_INFO_America_Thunder_Bay, # America/Thunder_Bay
-    'America/Tijuana': ZONE_INFO_America_Tijuana, # America/Tijuana
-    'America/Toronto': ZONE_INFO_America_Toronto, # America/Toronto
-    'America/Vancouver': ZONE_INFO_America_Vancouver, # America/Vancouver
-    'America/Whitehorse': ZONE_INFO_America_Whitehorse, # America/Whitehorse
-    'America/Winnipeg': ZONE_INFO_America_Winnipeg, # America/Winnipeg
-    'America/Yakutat': ZONE_INFO_America_Yakutat, # America/Yakutat
-    'America/Yellowknife': ZONE_INFO_America_Yellowknife, # America/Yellowknife
-    'Antarctica/Casey': ZONE_INFO_Antarctica_Casey, # Antarctica/Casey
-    'Antarctica/Davis': ZONE_INFO_Antarctica_Davis, # Antarctica/Davis
-    'Antarctica/DumontDUrville': ZONE_INFO_Antarctica_DumontDUrville, # Antarctica/DumontDUrville
-    'Antarctica/Macquarie': ZONE_INFO_Antarctica_Macquarie, # Antarctica/Macquarie
-    'Antarctica/Mawson': ZONE_INFO_Antarctica_Mawson, # Antarctica/Mawson
-    'Antarctica/Palmer': ZONE_INFO_Antarctica_Palmer, # Antarctica/Palmer
-    'Antarctica/Rothera': ZONE_INFO_Antarctica_Rothera, # Antarctica/Rothera
-    'Antarctica/Syowa': ZONE_INFO_Antarctica_Syowa, # Antarctica/Syowa
-    'Antarctica/Troll': ZONE_INFO_Antarctica_Troll, # Antarctica/Troll
-    'Antarctica/Vostok': ZONE_INFO_Antarctica_Vostok, # Antarctica/Vostok
-    'Asia/Almaty': ZONE_INFO_Asia_Almaty, # Asia/Almaty
-    'Asia/Amman': ZONE_INFO_Asia_Amman, # Asia/Amman
-    'Asia/Anadyr': ZONE_INFO_Asia_Anadyr, # Asia/Anadyr
-    'Asia/Aqtau': ZONE_INFO_Asia_Aqtau, # Asia/Aqtau
-    'Asia/Aqtobe': ZONE_INFO_Asia_Aqtobe, # Asia/Aqtobe
-    'Asia/Ashgabat': ZONE_INFO_Asia_Ashgabat, # Asia/Ashgabat
-    'Asia/Atyrau': ZONE_INFO_Asia_Atyrau, # Asia/Atyrau
-    'Asia/Baghdad': ZONE_INFO_Asia_Baghdad, # Asia/Baghdad
-    'Asia/Baku': ZONE_INFO_Asia_Baku, # Asia/Baku
-    'Asia/Bangkok': ZONE_INFO_Asia_Bangkok, # Asia/Bangkok
-    'Asia/Barnaul': ZONE_INFO_Asia_Barnaul, # Asia/Barnaul
-    'Asia/Beirut': ZONE_INFO_Asia_Beirut, # Asia/Beirut
-    'Asia/Bishkek': ZONE_INFO_Asia_Bishkek, # Asia/Bishkek
-    'Asia/Brunei': ZONE_INFO_Asia_Brunei, # Asia/Brunei
-    'Asia/Chita': ZONE_INFO_Asia_Chita, # Asia/Chita
-    'Asia/Choibalsan': ZONE_INFO_Asia_Choibalsan, # Asia/Choibalsan
-    'Asia/Colombo': ZONE_INFO_Asia_Colombo, # Asia/Colombo
-    'Asia/Damascus': ZONE_INFO_Asia_Damascus, # Asia/Damascus
-    'Asia/Dhaka': ZONE_INFO_Asia_Dhaka, # Asia/Dhaka
-    'Asia/Dili': ZONE_INFO_Asia_Dili, # Asia/Dili
-    'Asia/Dubai': ZONE_INFO_Asia_Dubai, # Asia/Dubai
-    'Asia/Dushanbe': ZONE_INFO_Asia_Dushanbe, # Asia/Dushanbe
-    'Asia/Famagusta': ZONE_INFO_Asia_Famagusta, # Asia/Famagusta
-    'Asia/Gaza': ZONE_INFO_Asia_Gaza, # Asia/Gaza
-    'Asia/Hebron': ZONE_INFO_Asia_Hebron, # Asia/Hebron
-    'Asia/Ho_Chi_Minh': ZONE_INFO_Asia_Ho_Chi_Minh, # Asia/Ho_Chi_Minh
-    'Asia/Hong_Kong': ZONE_INFO_Asia_Hong_Kong, # Asia/Hong_Kong
-    'Asia/Hovd': ZONE_INFO_Asia_Hovd, # Asia/Hovd
-    'Asia/Irkutsk': ZONE_INFO_Asia_Irkutsk, # Asia/Irkutsk
-    'Asia/Jakarta': ZONE_INFO_Asia_Jakarta, # Asia/Jakarta
-    'Asia/Jayapura': ZONE_INFO_Asia_Jayapura, # Asia/Jayapura
-    'Asia/Jerusalem': ZONE_INFO_Asia_Jerusalem, # Asia/Jerusalem
-    'Asia/Kabul': ZONE_INFO_Asia_Kabul, # Asia/Kabul
-    'Asia/Kamchatka': ZONE_INFO_Asia_Kamchatka, # Asia/Kamchatka
-    'Asia/Karachi': ZONE_INFO_Asia_Karachi, # Asia/Karachi
-    'Asia/Kathmandu': ZONE_INFO_Asia_Kathmandu, # Asia/Kathmandu
-    'Asia/Khandyga': ZONE_INFO_Asia_Khandyga, # Asia/Khandyga
-    'Asia/Kolkata': ZONE_INFO_Asia_Kolkata, # Asia/Kolkata
-    'Asia/Krasnoyarsk': ZONE_INFO_Asia_Krasnoyarsk, # Asia/Krasnoyarsk
-    'Asia/Kuala_Lumpur': ZONE_INFO_Asia_Kuala_Lumpur, # Asia/Kuala_Lumpur
-    'Asia/Kuching': ZONE_INFO_Asia_Kuching, # Asia/Kuching
-    'Asia/Macau': ZONE_INFO_Asia_Macau, # Asia/Macau
-    'Asia/Magadan': ZONE_INFO_Asia_Magadan, # Asia/Magadan
-    'Asia/Makassar': ZONE_INFO_Asia_Makassar, # Asia/Makassar
-    'Asia/Manila': ZONE_INFO_Asia_Manila, # Asia/Manila
-    'Asia/Nicosia': ZONE_INFO_Asia_Nicosia, # Asia/Nicosia
-    'Asia/Novokuznetsk': ZONE_INFO_Asia_Novokuznetsk, # Asia/Novokuznetsk
-    'Asia/Novosibirsk': ZONE_INFO_Asia_Novosibirsk, # Asia/Novosibirsk
-    'Asia/Omsk': ZONE_INFO_Asia_Omsk, # Asia/Omsk
-    'Asia/Oral': ZONE_INFO_Asia_Oral, # Asia/Oral
-    'Asia/Pontianak': ZONE_INFO_Asia_Pontianak, # Asia/Pontianak
-    'Asia/Pyongyang': ZONE_INFO_Asia_Pyongyang, # Asia/Pyongyang
-    'Asia/Qatar': ZONE_INFO_Asia_Qatar, # Asia/Qatar
-    'Asia/Qostanay': ZONE_INFO_Asia_Qostanay, # Asia/Qostanay
-    'Asia/Qyzylorda': ZONE_INFO_Asia_Qyzylorda, # Asia/Qyzylorda
-    'Asia/Riyadh': ZONE_INFO_Asia_Riyadh, # Asia/Riyadh
-    'Asia/Sakhalin': ZONE_INFO_Asia_Sakhalin, # Asia/Sakhalin
-    'Asia/Samarkand': ZONE_INFO_Asia_Samarkand, # Asia/Samarkand
-    'Asia/Seoul': ZONE_INFO_Asia_Seoul, # Asia/Seoul
-    'Asia/Shanghai': ZONE_INFO_Asia_Shanghai, # Asia/Shanghai
-    'Asia/Singapore': ZONE_INFO_Asia_Singapore, # Asia/Singapore
-    'Asia/Srednekolymsk': ZONE_INFO_Asia_Srednekolymsk, # Asia/Srednekolymsk
-    'Asia/Taipei': ZONE_INFO_Asia_Taipei, # Asia/Taipei
-    'Asia/Tashkent': ZONE_INFO_Asia_Tashkent, # Asia/Tashkent
-    'Asia/Tbilisi': ZONE_INFO_Asia_Tbilisi, # Asia/Tbilisi
-    'Asia/Tehran': ZONE_INFO_Asia_Tehran, # Asia/Tehran
-    'Asia/Thimphu': ZONE_INFO_Asia_Thimphu, # Asia/Thimphu
-    'Asia/Tokyo': ZONE_INFO_Asia_Tokyo, # Asia/Tokyo
-    'Asia/Tomsk': ZONE_INFO_Asia_Tomsk, # Asia/Tomsk
-    'Asia/Ulaanbaatar': ZONE_INFO_Asia_Ulaanbaatar, # Asia/Ulaanbaatar
-    'Asia/Urumqi': ZONE_INFO_Asia_Urumqi, # Asia/Urumqi
-    'Asia/Ust-Nera': ZONE_INFO_Asia_Ust_Nera, # Asia/Ust-Nera
-    'Asia/Vladivostok': ZONE_INFO_Asia_Vladivostok, # Asia/Vladivostok
-    'Asia/Yakutsk': ZONE_INFO_Asia_Yakutsk, # Asia/Yakutsk
-    'Asia/Yangon': ZONE_INFO_Asia_Yangon, # Asia/Yangon
-    'Asia/Yekaterinburg': ZONE_INFO_Asia_Yekaterinburg, # Asia/Yekaterinburg
-    'Asia/Yerevan': ZONE_INFO_Asia_Yerevan, # Asia/Yerevan
-    'Atlantic/Azores': ZONE_INFO_Atlantic_Azores, # Atlantic/Azores
-    'Atlantic/Bermuda': ZONE_INFO_Atlantic_Bermuda, # Atlantic/Bermuda
-    'Atlantic/Canary': ZONE_INFO_Atlantic_Canary, # Atlantic/Canary
-    'Atlantic/Cape_Verde': ZONE_INFO_Atlantic_Cape_Verde, # Atlantic/Cape_Verde
-    'Atlantic/Faroe': ZONE_INFO_Atlantic_Faroe, # Atlantic/Faroe
-    'Atlantic/Madeira': ZONE_INFO_Atlantic_Madeira, # Atlantic/Madeira
-    'Atlantic/Reykjavik': ZONE_INFO_Atlantic_Reykjavik, # Atlantic/Reykjavik
-    'Atlantic/South_Georgia': ZONE_INFO_Atlantic_South_Georgia, # Atlantic/South_Georgia
-    'Atlantic/Stanley': ZONE_INFO_Atlantic_Stanley, # Atlantic/Stanley
-    'Australia/Adelaide': ZONE_INFO_Australia_Adelaide, # Australia/Adelaide
-    'Australia/Brisbane': ZONE_INFO_Australia_Brisbane, # Australia/Brisbane
-    'Australia/Broken_Hill': ZONE_INFO_Australia_Broken_Hill, # Australia/Broken_Hill
-    'Australia/Darwin': ZONE_INFO_Australia_Darwin, # Australia/Darwin
-    'Australia/Eucla': ZONE_INFO_Australia_Eucla, # Australia/Eucla
-    'Australia/Hobart': ZONE_INFO_Australia_Hobart, # Australia/Hobart
-    'Australia/Lindeman': ZONE_INFO_Australia_Lindeman, # Australia/Lindeman
-    'Australia/Lord_Howe': ZONE_INFO_Australia_Lord_Howe, # Australia/Lord_Howe
-    'Australia/Melbourne': ZONE_INFO_Australia_Melbourne, # Australia/Melbourne
-    'Australia/Perth': ZONE_INFO_Australia_Perth, # Australia/Perth
-    'Australia/Sydney': ZONE_INFO_Australia_Sydney, # Australia/Sydney
-    'CET': ZONE_INFO_CET, # CET
-    'CST6CDT': ZONE_INFO_CST6CDT, # CST6CDT
-    'EET': ZONE_INFO_EET, # EET
-    'EST': ZONE_INFO_EST, # EST
-    'EST5EDT': ZONE_INFO_EST5EDT, # EST5EDT
-    'Etc/GMT': ZONE_INFO_Etc_GMT, # Etc/GMT
-    'Etc/GMT-1': ZONE_INFO_Etc_GMT_1, # Etc/GMT-1
-    'Etc/GMT-10': ZONE_INFO_Etc_GMT_10, # Etc/GMT-10
-    'Etc/GMT-11': ZONE_INFO_Etc_GMT_11, # Etc/GMT-11
-    'Etc/GMT-12': ZONE_INFO_Etc_GMT_12, # Etc/GMT-12
-    'Etc/GMT-13': ZONE_INFO_Etc_GMT_13, # Etc/GMT-13
-    'Etc/GMT-14': ZONE_INFO_Etc_GMT_14, # Etc/GMT-14
-    'Etc/GMT-2': ZONE_INFO_Etc_GMT_2, # Etc/GMT-2
-    'Etc/GMT-3': ZONE_INFO_Etc_GMT_3, # Etc/GMT-3
-    'Etc/GMT-4': ZONE_INFO_Etc_GMT_4, # Etc/GMT-4
-    'Etc/GMT-5': ZONE_INFO_Etc_GMT_5, # Etc/GMT-5
-    'Etc/GMT-6': ZONE_INFO_Etc_GMT_6, # Etc/GMT-6
-    'Etc/GMT-7': ZONE_INFO_Etc_GMT_7, # Etc/GMT-7
-    'Etc/GMT-8': ZONE_INFO_Etc_GMT_8, # Etc/GMT-8
-    'Etc/GMT-9': ZONE_INFO_Etc_GMT_9, # Etc/GMT-9
-    'Etc/GMT+1': ZONE_INFO_Etc_GMT_PLUS_1, # Etc/GMT+1
-    'Etc/GMT+10': ZONE_INFO_Etc_GMT_PLUS_10, # Etc/GMT+10
-    'Etc/GMT+11': ZONE_INFO_Etc_GMT_PLUS_11, # Etc/GMT+11
-    'Etc/GMT+12': ZONE_INFO_Etc_GMT_PLUS_12, # Etc/GMT+12
-    'Etc/GMT+2': ZONE_INFO_Etc_GMT_PLUS_2, # Etc/GMT+2
-    'Etc/GMT+3': ZONE_INFO_Etc_GMT_PLUS_3, # Etc/GMT+3
-    'Etc/GMT+4': ZONE_INFO_Etc_GMT_PLUS_4, # Etc/GMT+4
-    'Etc/GMT+5': ZONE_INFO_Etc_GMT_PLUS_5, # Etc/GMT+5
-    'Etc/GMT+6': ZONE_INFO_Etc_GMT_PLUS_6, # Etc/GMT+6
-    'Etc/GMT+7': ZONE_INFO_Etc_GMT_PLUS_7, # Etc/GMT+7
-    'Etc/GMT+8': ZONE_INFO_Etc_GMT_PLUS_8, # Etc/GMT+8
-    'Etc/GMT+9': ZONE_INFO_Etc_GMT_PLUS_9, # Etc/GMT+9
-    'Etc/UTC': ZONE_INFO_Etc_UTC, # Etc/UTC
-    'Europe/Amsterdam': ZONE_INFO_Europe_Amsterdam, # Europe/Amsterdam
-    'Europe/Andorra': ZONE_INFO_Europe_Andorra, # Europe/Andorra
-    'Europe/Astrakhan': ZONE_INFO_Europe_Astrakhan, # Europe/Astrakhan
-    'Europe/Athens': ZONE_INFO_Europe_Athens, # Europe/Athens
-    'Europe/Belgrade': ZONE_INFO_Europe_Belgrade, # Europe/Belgrade
-    'Europe/Berlin': ZONE_INFO_Europe_Berlin, # Europe/Berlin
-    'Europe/Brussels': ZONE_INFO_Europe_Brussels, # Europe/Brussels
-    'Europe/Bucharest': ZONE_INFO_Europe_Bucharest, # Europe/Bucharest
-    'Europe/Budapest': ZONE_INFO_Europe_Budapest, # Europe/Budapest
-    'Europe/Chisinau': ZONE_INFO_Europe_Chisinau, # Europe/Chisinau
-    'Europe/Copenhagen': ZONE_INFO_Europe_Copenhagen, # Europe/Copenhagen
-    'Europe/Dublin': ZONE_INFO_Europe_Dublin, # Europe/Dublin
-    'Europe/Gibraltar': ZONE_INFO_Europe_Gibraltar, # Europe/Gibraltar
-    'Europe/Helsinki': ZONE_INFO_Europe_Helsinki, # Europe/Helsinki
-    'Europe/Istanbul': ZONE_INFO_Europe_Istanbul, # Europe/Istanbul
-    'Europe/Kaliningrad': ZONE_INFO_Europe_Kaliningrad, # Europe/Kaliningrad
-    'Europe/Kiev': ZONE_INFO_Europe_Kiev, # Europe/Kiev
-    'Europe/Kirov': ZONE_INFO_Europe_Kirov, # Europe/Kirov
-    'Europe/Lisbon': ZONE_INFO_Europe_Lisbon, # Europe/Lisbon
-    'Europe/London': ZONE_INFO_Europe_London, # Europe/London
-    'Europe/Luxembourg': ZONE_INFO_Europe_Luxembourg, # Europe/Luxembourg
-    'Europe/Madrid': ZONE_INFO_Europe_Madrid, # Europe/Madrid
-    'Europe/Malta': ZONE_INFO_Europe_Malta, # Europe/Malta
-    'Europe/Minsk': ZONE_INFO_Europe_Minsk, # Europe/Minsk
-    'Europe/Monaco': ZONE_INFO_Europe_Monaco, # Europe/Monaco
-    'Europe/Moscow': ZONE_INFO_Europe_Moscow, # Europe/Moscow
-    'Europe/Oslo': ZONE_INFO_Europe_Oslo, # Europe/Oslo
-    'Europe/Paris': ZONE_INFO_Europe_Paris, # Europe/Paris
-    'Europe/Prague': ZONE_INFO_Europe_Prague, # Europe/Prague
-    'Europe/Riga': ZONE_INFO_Europe_Riga, # Europe/Riga
-    'Europe/Rome': ZONE_INFO_Europe_Rome, # Europe/Rome
-    'Europe/Samara': ZONE_INFO_Europe_Samara, # Europe/Samara
-    'Europe/Saratov': ZONE_INFO_Europe_Saratov, # Europe/Saratov
-    'Europe/Simferopol': ZONE_INFO_Europe_Simferopol, # Europe/Simferopol
-    'Europe/Sofia': ZONE_INFO_Europe_Sofia, # Europe/Sofia
-    'Europe/Stockholm': ZONE_INFO_Europe_Stockholm, # Europe/Stockholm
-    'Europe/Tallinn': ZONE_INFO_Europe_Tallinn, # Europe/Tallinn
-    'Europe/Tirane': ZONE_INFO_Europe_Tirane, # Europe/Tirane
-    'Europe/Ulyanovsk': ZONE_INFO_Europe_Ulyanovsk, # Europe/Ulyanovsk
-    'Europe/Uzhgorod': ZONE_INFO_Europe_Uzhgorod, # Europe/Uzhgorod
-    'Europe/Vienna': ZONE_INFO_Europe_Vienna, # Europe/Vienna
-    'Europe/Vilnius': ZONE_INFO_Europe_Vilnius, # Europe/Vilnius
-    'Europe/Volgograd': ZONE_INFO_Europe_Volgograd, # Europe/Volgograd
-    'Europe/Warsaw': ZONE_INFO_Europe_Warsaw, # Europe/Warsaw
-    'Europe/Zaporozhye': ZONE_INFO_Europe_Zaporozhye, # Europe/Zaporozhye
-    'Europe/Zurich': ZONE_INFO_Europe_Zurich, # Europe/Zurich
-    'HST': ZONE_INFO_HST, # HST
-    'Indian/Chagos': ZONE_INFO_Indian_Chagos, # Indian/Chagos
-    'Indian/Christmas': ZONE_INFO_Indian_Christmas, # Indian/Christmas
-    'Indian/Cocos': ZONE_INFO_Indian_Cocos, # Indian/Cocos
-    'Indian/Kerguelen': ZONE_INFO_Indian_Kerguelen, # Indian/Kerguelen
-    'Indian/Mahe': ZONE_INFO_Indian_Mahe, # Indian/Mahe
-    'Indian/Maldives': ZONE_INFO_Indian_Maldives, # Indian/Maldives
-    'Indian/Mauritius': ZONE_INFO_Indian_Mauritius, # Indian/Mauritius
-    'Indian/Reunion': ZONE_INFO_Indian_Reunion, # Indian/Reunion
-    'MET': ZONE_INFO_MET, # MET
-    'MST': ZONE_INFO_MST, # MST
-    'MST7MDT': ZONE_INFO_MST7MDT, # MST7MDT
-    'PST8PDT': ZONE_INFO_PST8PDT, # PST8PDT
-    'Pacific/Apia': ZONE_INFO_Pacific_Apia, # Pacific/Apia
-    'Pacific/Auckland': ZONE_INFO_Pacific_Auckland, # Pacific/Auckland
-    'Pacific/Bougainville': ZONE_INFO_Pacific_Bougainville, # Pacific/Bougainville
-    'Pacific/Chatham': ZONE_INFO_Pacific_Chatham, # Pacific/Chatham
-    'Pacific/Chuuk': ZONE_INFO_Pacific_Chuuk, # Pacific/Chuuk
-    'Pacific/Easter': ZONE_INFO_Pacific_Easter, # Pacific/Easter
-    'Pacific/Efate': ZONE_INFO_Pacific_Efate, # Pacific/Efate
-    'Pacific/Enderbury': ZONE_INFO_Pacific_Enderbury, # Pacific/Enderbury
-    'Pacific/Fakaofo': ZONE_INFO_Pacific_Fakaofo, # Pacific/Fakaofo
-    'Pacific/Fiji': ZONE_INFO_Pacific_Fiji, # Pacific/Fiji
-    'Pacific/Funafuti': ZONE_INFO_Pacific_Funafuti, # Pacific/Funafuti
-    'Pacific/Galapagos': ZONE_INFO_Pacific_Galapagos, # Pacific/Galapagos
-    'Pacific/Gambier': ZONE_INFO_Pacific_Gambier, # Pacific/Gambier
-    'Pacific/Guadalcanal': ZONE_INFO_Pacific_Guadalcanal, # Pacific/Guadalcanal
-    'Pacific/Guam': ZONE_INFO_Pacific_Guam, # Pacific/Guam
-    'Pacific/Honolulu': ZONE_INFO_Pacific_Honolulu, # Pacific/Honolulu
-    'Pacific/Kiritimati': ZONE_INFO_Pacific_Kiritimati, # Pacific/Kiritimati
-    'Pacific/Kosrae': ZONE_INFO_Pacific_Kosrae, # Pacific/Kosrae
-    'Pacific/Kwajalein': ZONE_INFO_Pacific_Kwajalein, # Pacific/Kwajalein
-    'Pacific/Majuro': ZONE_INFO_Pacific_Majuro, # Pacific/Majuro
-    'Pacific/Marquesas': ZONE_INFO_Pacific_Marquesas, # Pacific/Marquesas
-    'Pacific/Nauru': ZONE_INFO_Pacific_Nauru, # Pacific/Nauru
-    'Pacific/Niue': ZONE_INFO_Pacific_Niue, # Pacific/Niue
-    'Pacific/Norfolk': ZONE_INFO_Pacific_Norfolk, # Pacific/Norfolk
-    'Pacific/Noumea': ZONE_INFO_Pacific_Noumea, # Pacific/Noumea
-    'Pacific/Pago_Pago': ZONE_INFO_Pacific_Pago_Pago, # Pacific/Pago_Pago
-    'Pacific/Palau': ZONE_INFO_Pacific_Palau, # Pacific/Palau
-    'Pacific/Pitcairn': ZONE_INFO_Pacific_Pitcairn, # Pacific/Pitcairn
-    'Pacific/Pohnpei': ZONE_INFO_Pacific_Pohnpei, # Pacific/Pohnpei
-    'Pacific/Port_Moresby': ZONE_INFO_Pacific_Port_Moresby, # Pacific/Port_Moresby
-    'Pacific/Rarotonga': ZONE_INFO_Pacific_Rarotonga, # Pacific/Rarotonga
-    'Pacific/Tahiti': ZONE_INFO_Pacific_Tahiti, # Pacific/Tahiti
-    'Pacific/Tarawa': ZONE_INFO_Pacific_Tarawa, # Pacific/Tarawa
-    'Pacific/Tongatapu': ZONE_INFO_Pacific_Tongatapu, # Pacific/Tongatapu
-    'Pacific/Wake': ZONE_INFO_Pacific_Wake, # Pacific/Wake
-    'Pacific/Wallis': ZONE_INFO_Pacific_Wallis, # Pacific/Wallis
-    'WET': ZONE_INFO_WET, # WET
+ZONE_REGISTRY = {
+    'Africa/Abidjan': ZONE_INFO_Africa_Abidjan,
+    'Africa/Accra': ZONE_INFO_Africa_Accra,
+    'Africa/Algiers': ZONE_INFO_Africa_Algiers,
+    'Africa/Bissau': ZONE_INFO_Africa_Bissau,
+    'Africa/Cairo': ZONE_INFO_Africa_Cairo,
+    'Africa/Casablanca': ZONE_INFO_Africa_Casablanca,
+    'Africa/Ceuta': ZONE_INFO_Africa_Ceuta,
+    'Africa/El_Aaiun': ZONE_INFO_Africa_El_Aaiun,
+    'Africa/Johannesburg': ZONE_INFO_Africa_Johannesburg,
+    'Africa/Juba': ZONE_INFO_Africa_Juba,
+    'Africa/Khartoum': ZONE_INFO_Africa_Khartoum,
+    'Africa/Lagos': ZONE_INFO_Africa_Lagos,
+    'Africa/Maputo': ZONE_INFO_Africa_Maputo,
+    'Africa/Monrovia': ZONE_INFO_Africa_Monrovia,
+    'Africa/Nairobi': ZONE_INFO_Africa_Nairobi,
+    'Africa/Ndjamena': ZONE_INFO_Africa_Ndjamena,
+    'Africa/Sao_Tome': ZONE_INFO_Africa_Sao_Tome,
+    'Africa/Tripoli': ZONE_INFO_Africa_Tripoli,
+    'Africa/Tunis': ZONE_INFO_Africa_Tunis,
+    'Africa/Windhoek': ZONE_INFO_Africa_Windhoek,
+    'America/Adak': ZONE_INFO_America_Adak,
+    'America/Anchorage': ZONE_INFO_America_Anchorage,
+    'America/Araguaina': ZONE_INFO_America_Araguaina,
+    'America/Argentina/Buenos_Aires': ZONE_INFO_America_Argentina_Buenos_Aires,
+    'America/Argentina/Catamarca': ZONE_INFO_America_Argentina_Catamarca,
+    'America/Argentina/Cordoba': ZONE_INFO_America_Argentina_Cordoba,
+    'America/Argentina/Jujuy': ZONE_INFO_America_Argentina_Jujuy,
+    'America/Argentina/La_Rioja': ZONE_INFO_America_Argentina_La_Rioja,
+    'America/Argentina/Mendoza': ZONE_INFO_America_Argentina_Mendoza,
+    'America/Argentina/Rio_Gallegos': ZONE_INFO_America_Argentina_Rio_Gallegos,
+    'America/Argentina/Salta': ZONE_INFO_America_Argentina_Salta,
+    'America/Argentina/San_Juan': ZONE_INFO_America_Argentina_San_Juan,
+    'America/Argentina/San_Luis': ZONE_INFO_America_Argentina_San_Luis,
+    'America/Argentina/Tucuman': ZONE_INFO_America_Argentina_Tucuman,
+    'America/Argentina/Ushuaia': ZONE_INFO_America_Argentina_Ushuaia,
+    'America/Asuncion': ZONE_INFO_America_Asuncion,
+    'America/Atikokan': ZONE_INFO_America_Atikokan,
+    'America/Bahia': ZONE_INFO_America_Bahia,
+    'America/Bahia_Banderas': ZONE_INFO_America_Bahia_Banderas,
+    'America/Barbados': ZONE_INFO_America_Barbados,
+    'America/Belem': ZONE_INFO_America_Belem,
+    'America/Belize': ZONE_INFO_America_Belize,
+    'America/Blanc-Sablon': ZONE_INFO_America_Blanc_Sablon,
+    'America/Boa_Vista': ZONE_INFO_America_Boa_Vista,
+    'America/Bogota': ZONE_INFO_America_Bogota,
+    'America/Boise': ZONE_INFO_America_Boise,
+    'America/Cambridge_Bay': ZONE_INFO_America_Cambridge_Bay,
+    'America/Campo_Grande': ZONE_INFO_America_Campo_Grande,
+    'America/Cancun': ZONE_INFO_America_Cancun,
+    'America/Caracas': ZONE_INFO_America_Caracas,
+    'America/Cayenne': ZONE_INFO_America_Cayenne,
+    'America/Chicago': ZONE_INFO_America_Chicago,
+    'America/Chihuahua': ZONE_INFO_America_Chihuahua,
+    'America/Costa_Rica': ZONE_INFO_America_Costa_Rica,
+    'America/Creston': ZONE_INFO_America_Creston,
+    'America/Cuiaba': ZONE_INFO_America_Cuiaba,
+    'America/Curacao': ZONE_INFO_America_Curacao,
+    'America/Danmarkshavn': ZONE_INFO_America_Danmarkshavn,
+    'America/Dawson': ZONE_INFO_America_Dawson,
+    'America/Dawson_Creek': ZONE_INFO_America_Dawson_Creek,
+    'America/Denver': ZONE_INFO_America_Denver,
+    'America/Detroit': ZONE_INFO_America_Detroit,
+    'America/Edmonton': ZONE_INFO_America_Edmonton,
+    'America/Eirunepe': ZONE_INFO_America_Eirunepe,
+    'America/El_Salvador': ZONE_INFO_America_El_Salvador,
+    'America/Fort_Nelson': ZONE_INFO_America_Fort_Nelson,
+    'America/Fortaleza': ZONE_INFO_America_Fortaleza,
+    'America/Glace_Bay': ZONE_INFO_America_Glace_Bay,
+    'America/Goose_Bay': ZONE_INFO_America_Goose_Bay,
+    'America/Grand_Turk': ZONE_INFO_America_Grand_Turk,
+    'America/Guatemala': ZONE_INFO_America_Guatemala,
+    'America/Guayaquil': ZONE_INFO_America_Guayaquil,
+    'America/Guyana': ZONE_INFO_America_Guyana,
+    'America/Halifax': ZONE_INFO_America_Halifax,
+    'America/Havana': ZONE_INFO_America_Havana,
+    'America/Hermosillo': ZONE_INFO_America_Hermosillo,
+    'America/Indiana/Indianapolis': ZONE_INFO_America_Indiana_Indianapolis,
+    'America/Indiana/Knox': ZONE_INFO_America_Indiana_Knox,
+    'America/Indiana/Marengo': ZONE_INFO_America_Indiana_Marengo,
+    'America/Indiana/Petersburg': ZONE_INFO_America_Indiana_Petersburg,
+    'America/Indiana/Tell_City': ZONE_INFO_America_Indiana_Tell_City,
+    'America/Indiana/Vevay': ZONE_INFO_America_Indiana_Vevay,
+    'America/Indiana/Vincennes': ZONE_INFO_America_Indiana_Vincennes,
+    'America/Indiana/Winamac': ZONE_INFO_America_Indiana_Winamac,
+    'America/Inuvik': ZONE_INFO_America_Inuvik,
+    'America/Iqaluit': ZONE_INFO_America_Iqaluit,
+    'America/Jamaica': ZONE_INFO_America_Jamaica,
+    'America/Juneau': ZONE_INFO_America_Juneau,
+    'America/Kentucky/Louisville': ZONE_INFO_America_Kentucky_Louisville,
+    'America/Kentucky/Monticello': ZONE_INFO_America_Kentucky_Monticello,
+    'America/La_Paz': ZONE_INFO_America_La_Paz,
+    'America/Lima': ZONE_INFO_America_Lima,
+    'America/Los_Angeles': ZONE_INFO_America_Los_Angeles,
+    'America/Maceio': ZONE_INFO_America_Maceio,
+    'America/Managua': ZONE_INFO_America_Managua,
+    'America/Manaus': ZONE_INFO_America_Manaus,
+    'America/Martinique': ZONE_INFO_America_Martinique,
+    'America/Matamoros': ZONE_INFO_America_Matamoros,
+    'America/Mazatlan': ZONE_INFO_America_Mazatlan,
+    'America/Menominee': ZONE_INFO_America_Menominee,
+    'America/Merida': ZONE_INFO_America_Merida,
+    'America/Metlakatla': ZONE_INFO_America_Metlakatla,
+    'America/Mexico_City': ZONE_INFO_America_Mexico_City,
+    'America/Miquelon': ZONE_INFO_America_Miquelon,
+    'America/Moncton': ZONE_INFO_America_Moncton,
+    'America/Monterrey': ZONE_INFO_America_Monterrey,
+    'America/Montevideo': ZONE_INFO_America_Montevideo,
+    'America/Nassau': ZONE_INFO_America_Nassau,
+    'America/New_York': ZONE_INFO_America_New_York,
+    'America/Nipigon': ZONE_INFO_America_Nipigon,
+    'America/Nome': ZONE_INFO_America_Nome,
+    'America/Noronha': ZONE_INFO_America_Noronha,
+    'America/North_Dakota/Beulah': ZONE_INFO_America_North_Dakota_Beulah,
+    'America/North_Dakota/Center': ZONE_INFO_America_North_Dakota_Center,
+    'America/North_Dakota/New_Salem': ZONE_INFO_America_North_Dakota_New_Salem,
+    'America/Nuuk': ZONE_INFO_America_Nuuk,
+    'America/Ojinaga': ZONE_INFO_America_Ojinaga,
+    'America/Panama': ZONE_INFO_America_Panama,
+    'America/Pangnirtung': ZONE_INFO_America_Pangnirtung,
+    'America/Paramaribo': ZONE_INFO_America_Paramaribo,
+    'America/Phoenix': ZONE_INFO_America_Phoenix,
+    'America/Port-au-Prince': ZONE_INFO_America_Port_au_Prince,
+    'America/Port_of_Spain': ZONE_INFO_America_Port_of_Spain,
+    'America/Porto_Velho': ZONE_INFO_America_Porto_Velho,
+    'America/Puerto_Rico': ZONE_INFO_America_Puerto_Rico,
+    'America/Punta_Arenas': ZONE_INFO_America_Punta_Arenas,
+    'America/Rainy_River': ZONE_INFO_America_Rainy_River,
+    'America/Rankin_Inlet': ZONE_INFO_America_Rankin_Inlet,
+    'America/Recife': ZONE_INFO_America_Recife,
+    'America/Regina': ZONE_INFO_America_Regina,
+    'America/Resolute': ZONE_INFO_America_Resolute,
+    'America/Rio_Branco': ZONE_INFO_America_Rio_Branco,
+    'America/Santarem': ZONE_INFO_America_Santarem,
+    'America/Santiago': ZONE_INFO_America_Santiago,
+    'America/Santo_Domingo': ZONE_INFO_America_Santo_Domingo,
+    'America/Sao_Paulo': ZONE_INFO_America_Sao_Paulo,
+    'America/Scoresbysund': ZONE_INFO_America_Scoresbysund,
+    'America/Sitka': ZONE_INFO_America_Sitka,
+    'America/St_Johns': ZONE_INFO_America_St_Johns,
+    'America/Swift_Current': ZONE_INFO_America_Swift_Current,
+    'America/Tegucigalpa': ZONE_INFO_America_Tegucigalpa,
+    'America/Thule': ZONE_INFO_America_Thule,
+    'America/Thunder_Bay': ZONE_INFO_America_Thunder_Bay,
+    'America/Tijuana': ZONE_INFO_America_Tijuana,
+    'America/Toronto': ZONE_INFO_America_Toronto,
+    'America/Vancouver': ZONE_INFO_America_Vancouver,
+    'America/Whitehorse': ZONE_INFO_America_Whitehorse,
+    'America/Winnipeg': ZONE_INFO_America_Winnipeg,
+    'America/Yakutat': ZONE_INFO_America_Yakutat,
+    'America/Yellowknife': ZONE_INFO_America_Yellowknife,
+    'Antarctica/Casey': ZONE_INFO_Antarctica_Casey,
+    'Antarctica/Davis': ZONE_INFO_Antarctica_Davis,
+    'Antarctica/DumontDUrville': ZONE_INFO_Antarctica_DumontDUrville,
+    'Antarctica/Macquarie': ZONE_INFO_Antarctica_Macquarie,
+    'Antarctica/Mawson': ZONE_INFO_Antarctica_Mawson,
+    'Antarctica/Palmer': ZONE_INFO_Antarctica_Palmer,
+    'Antarctica/Rothera': ZONE_INFO_Antarctica_Rothera,
+    'Antarctica/Syowa': ZONE_INFO_Antarctica_Syowa,
+    'Antarctica/Troll': ZONE_INFO_Antarctica_Troll,
+    'Antarctica/Vostok': ZONE_INFO_Antarctica_Vostok,
+    'Asia/Almaty': ZONE_INFO_Asia_Almaty,
+    'Asia/Amman': ZONE_INFO_Asia_Amman,
+    'Asia/Anadyr': ZONE_INFO_Asia_Anadyr,
+    'Asia/Aqtau': ZONE_INFO_Asia_Aqtau,
+    'Asia/Aqtobe': ZONE_INFO_Asia_Aqtobe,
+    'Asia/Ashgabat': ZONE_INFO_Asia_Ashgabat,
+    'Asia/Atyrau': ZONE_INFO_Asia_Atyrau,
+    'Asia/Baghdad': ZONE_INFO_Asia_Baghdad,
+    'Asia/Baku': ZONE_INFO_Asia_Baku,
+    'Asia/Bangkok': ZONE_INFO_Asia_Bangkok,
+    'Asia/Barnaul': ZONE_INFO_Asia_Barnaul,
+    'Asia/Beirut': ZONE_INFO_Asia_Beirut,
+    'Asia/Bishkek': ZONE_INFO_Asia_Bishkek,
+    'Asia/Brunei': ZONE_INFO_Asia_Brunei,
+    'Asia/Chita': ZONE_INFO_Asia_Chita,
+    'Asia/Choibalsan': ZONE_INFO_Asia_Choibalsan,
+    'Asia/Colombo': ZONE_INFO_Asia_Colombo,
+    'Asia/Damascus': ZONE_INFO_Asia_Damascus,
+    'Asia/Dhaka': ZONE_INFO_Asia_Dhaka,
+    'Asia/Dili': ZONE_INFO_Asia_Dili,
+    'Asia/Dubai': ZONE_INFO_Asia_Dubai,
+    'Asia/Dushanbe': ZONE_INFO_Asia_Dushanbe,
+    'Asia/Famagusta': ZONE_INFO_Asia_Famagusta,
+    'Asia/Gaza': ZONE_INFO_Asia_Gaza,
+    'Asia/Hebron': ZONE_INFO_Asia_Hebron,
+    'Asia/Ho_Chi_Minh': ZONE_INFO_Asia_Ho_Chi_Minh,
+    'Asia/Hong_Kong': ZONE_INFO_Asia_Hong_Kong,
+    'Asia/Hovd': ZONE_INFO_Asia_Hovd,
+    'Asia/Irkutsk': ZONE_INFO_Asia_Irkutsk,
+    'Asia/Jakarta': ZONE_INFO_Asia_Jakarta,
+    'Asia/Jayapura': ZONE_INFO_Asia_Jayapura,
+    'Asia/Jerusalem': ZONE_INFO_Asia_Jerusalem,
+    'Asia/Kabul': ZONE_INFO_Asia_Kabul,
+    'Asia/Kamchatka': ZONE_INFO_Asia_Kamchatka,
+    'Asia/Karachi': ZONE_INFO_Asia_Karachi,
+    'Asia/Kathmandu': ZONE_INFO_Asia_Kathmandu,
+    'Asia/Khandyga': ZONE_INFO_Asia_Khandyga,
+    'Asia/Kolkata': ZONE_INFO_Asia_Kolkata,
+    'Asia/Krasnoyarsk': ZONE_INFO_Asia_Krasnoyarsk,
+    'Asia/Kuala_Lumpur': ZONE_INFO_Asia_Kuala_Lumpur,
+    'Asia/Kuching': ZONE_INFO_Asia_Kuching,
+    'Asia/Macau': ZONE_INFO_Asia_Macau,
+    'Asia/Magadan': ZONE_INFO_Asia_Magadan,
+    'Asia/Makassar': ZONE_INFO_Asia_Makassar,
+    'Asia/Manila': ZONE_INFO_Asia_Manila,
+    'Asia/Nicosia': ZONE_INFO_Asia_Nicosia,
+    'Asia/Novokuznetsk': ZONE_INFO_Asia_Novokuznetsk,
+    'Asia/Novosibirsk': ZONE_INFO_Asia_Novosibirsk,
+    'Asia/Omsk': ZONE_INFO_Asia_Omsk,
+    'Asia/Oral': ZONE_INFO_Asia_Oral,
+    'Asia/Pontianak': ZONE_INFO_Asia_Pontianak,
+    'Asia/Pyongyang': ZONE_INFO_Asia_Pyongyang,
+    'Asia/Qatar': ZONE_INFO_Asia_Qatar,
+    'Asia/Qostanay': ZONE_INFO_Asia_Qostanay,
+    'Asia/Qyzylorda': ZONE_INFO_Asia_Qyzylorda,
+    'Asia/Riyadh': ZONE_INFO_Asia_Riyadh,
+    'Asia/Sakhalin': ZONE_INFO_Asia_Sakhalin,
+    'Asia/Samarkand': ZONE_INFO_Asia_Samarkand,
+    'Asia/Seoul': ZONE_INFO_Asia_Seoul,
+    'Asia/Shanghai': ZONE_INFO_Asia_Shanghai,
+    'Asia/Singapore': ZONE_INFO_Asia_Singapore,
+    'Asia/Srednekolymsk': ZONE_INFO_Asia_Srednekolymsk,
+    'Asia/Taipei': ZONE_INFO_Asia_Taipei,
+    'Asia/Tashkent': ZONE_INFO_Asia_Tashkent,
+    'Asia/Tbilisi': ZONE_INFO_Asia_Tbilisi,
+    'Asia/Tehran': ZONE_INFO_Asia_Tehran,
+    'Asia/Thimphu': ZONE_INFO_Asia_Thimphu,
+    'Asia/Tokyo': ZONE_INFO_Asia_Tokyo,
+    'Asia/Tomsk': ZONE_INFO_Asia_Tomsk,
+    'Asia/Ulaanbaatar': ZONE_INFO_Asia_Ulaanbaatar,
+    'Asia/Urumqi': ZONE_INFO_Asia_Urumqi,
+    'Asia/Ust-Nera': ZONE_INFO_Asia_Ust_Nera,
+    'Asia/Vladivostok': ZONE_INFO_Asia_Vladivostok,
+    'Asia/Yakutsk': ZONE_INFO_Asia_Yakutsk,
+    'Asia/Yangon': ZONE_INFO_Asia_Yangon,
+    'Asia/Yekaterinburg': ZONE_INFO_Asia_Yekaterinburg,
+    'Asia/Yerevan': ZONE_INFO_Asia_Yerevan,
+    'Atlantic/Azores': ZONE_INFO_Atlantic_Azores,
+    'Atlantic/Bermuda': ZONE_INFO_Atlantic_Bermuda,
+    'Atlantic/Canary': ZONE_INFO_Atlantic_Canary,
+    'Atlantic/Cape_Verde': ZONE_INFO_Atlantic_Cape_Verde,
+    'Atlantic/Faroe': ZONE_INFO_Atlantic_Faroe,
+    'Atlantic/Madeira': ZONE_INFO_Atlantic_Madeira,
+    'Atlantic/Reykjavik': ZONE_INFO_Atlantic_Reykjavik,
+    'Atlantic/South_Georgia': ZONE_INFO_Atlantic_South_Georgia,
+    'Atlantic/Stanley': ZONE_INFO_Atlantic_Stanley,
+    'Australia/Adelaide': ZONE_INFO_Australia_Adelaide,
+    'Australia/Brisbane': ZONE_INFO_Australia_Brisbane,
+    'Australia/Broken_Hill': ZONE_INFO_Australia_Broken_Hill,
+    'Australia/Darwin': ZONE_INFO_Australia_Darwin,
+    'Australia/Eucla': ZONE_INFO_Australia_Eucla,
+    'Australia/Hobart': ZONE_INFO_Australia_Hobart,
+    'Australia/Lindeman': ZONE_INFO_Australia_Lindeman,
+    'Australia/Lord_Howe': ZONE_INFO_Australia_Lord_Howe,
+    'Australia/Melbourne': ZONE_INFO_Australia_Melbourne,
+    'Australia/Perth': ZONE_INFO_Australia_Perth,
+    'Australia/Sydney': ZONE_INFO_Australia_Sydney,
+    'CET': ZONE_INFO_CET,
+    'CST6CDT': ZONE_INFO_CST6CDT,
+    'EET': ZONE_INFO_EET,
+    'EST': ZONE_INFO_EST,
+    'EST5EDT': ZONE_INFO_EST5EDT,
+    'Etc/GMT': ZONE_INFO_Etc_GMT,
+    'Etc/GMT-1': ZONE_INFO_Etc_GMT_1,
+    'Etc/GMT-10': ZONE_INFO_Etc_GMT_10,
+    'Etc/GMT-11': ZONE_INFO_Etc_GMT_11,
+    'Etc/GMT-12': ZONE_INFO_Etc_GMT_12,
+    'Etc/GMT-13': ZONE_INFO_Etc_GMT_13,
+    'Etc/GMT-14': ZONE_INFO_Etc_GMT_14,
+    'Etc/GMT-2': ZONE_INFO_Etc_GMT_2,
+    'Etc/GMT-3': ZONE_INFO_Etc_GMT_3,
+    'Etc/GMT-4': ZONE_INFO_Etc_GMT_4,
+    'Etc/GMT-5': ZONE_INFO_Etc_GMT_5,
+    'Etc/GMT-6': ZONE_INFO_Etc_GMT_6,
+    'Etc/GMT-7': ZONE_INFO_Etc_GMT_7,
+    'Etc/GMT-8': ZONE_INFO_Etc_GMT_8,
+    'Etc/GMT-9': ZONE_INFO_Etc_GMT_9,
+    'Etc/GMT+1': ZONE_INFO_Etc_GMT_PLUS_1,
+    'Etc/GMT+10': ZONE_INFO_Etc_GMT_PLUS_10,
+    'Etc/GMT+11': ZONE_INFO_Etc_GMT_PLUS_11,
+    'Etc/GMT+12': ZONE_INFO_Etc_GMT_PLUS_12,
+    'Etc/GMT+2': ZONE_INFO_Etc_GMT_PLUS_2,
+    'Etc/GMT+3': ZONE_INFO_Etc_GMT_PLUS_3,
+    'Etc/GMT+4': ZONE_INFO_Etc_GMT_PLUS_4,
+    'Etc/GMT+5': ZONE_INFO_Etc_GMT_PLUS_5,
+    'Etc/GMT+6': ZONE_INFO_Etc_GMT_PLUS_6,
+    'Etc/GMT+7': ZONE_INFO_Etc_GMT_PLUS_7,
+    'Etc/GMT+8': ZONE_INFO_Etc_GMT_PLUS_8,
+    'Etc/GMT+9': ZONE_INFO_Etc_GMT_PLUS_9,
+    'Etc/UTC': ZONE_INFO_Etc_UTC,
+    'Europe/Amsterdam': ZONE_INFO_Europe_Amsterdam,
+    'Europe/Andorra': ZONE_INFO_Europe_Andorra,
+    'Europe/Astrakhan': ZONE_INFO_Europe_Astrakhan,
+    'Europe/Athens': ZONE_INFO_Europe_Athens,
+    'Europe/Belgrade': ZONE_INFO_Europe_Belgrade,
+    'Europe/Berlin': ZONE_INFO_Europe_Berlin,
+    'Europe/Brussels': ZONE_INFO_Europe_Brussels,
+    'Europe/Bucharest': ZONE_INFO_Europe_Bucharest,
+    'Europe/Budapest': ZONE_INFO_Europe_Budapest,
+    'Europe/Chisinau': ZONE_INFO_Europe_Chisinau,
+    'Europe/Copenhagen': ZONE_INFO_Europe_Copenhagen,
+    'Europe/Dublin': ZONE_INFO_Europe_Dublin,
+    'Europe/Gibraltar': ZONE_INFO_Europe_Gibraltar,
+    'Europe/Helsinki': ZONE_INFO_Europe_Helsinki,
+    'Europe/Istanbul': ZONE_INFO_Europe_Istanbul,
+    'Europe/Kaliningrad': ZONE_INFO_Europe_Kaliningrad,
+    'Europe/Kiev': ZONE_INFO_Europe_Kiev,
+    'Europe/Kirov': ZONE_INFO_Europe_Kirov,
+    'Europe/Lisbon': ZONE_INFO_Europe_Lisbon,
+    'Europe/London': ZONE_INFO_Europe_London,
+    'Europe/Luxembourg': ZONE_INFO_Europe_Luxembourg,
+    'Europe/Madrid': ZONE_INFO_Europe_Madrid,
+    'Europe/Malta': ZONE_INFO_Europe_Malta,
+    'Europe/Minsk': ZONE_INFO_Europe_Minsk,
+    'Europe/Monaco': ZONE_INFO_Europe_Monaco,
+    'Europe/Moscow': ZONE_INFO_Europe_Moscow,
+    'Europe/Oslo': ZONE_INFO_Europe_Oslo,
+    'Europe/Paris': ZONE_INFO_Europe_Paris,
+    'Europe/Prague': ZONE_INFO_Europe_Prague,
+    'Europe/Riga': ZONE_INFO_Europe_Riga,
+    'Europe/Rome': ZONE_INFO_Europe_Rome,
+    'Europe/Samara': ZONE_INFO_Europe_Samara,
+    'Europe/Saratov': ZONE_INFO_Europe_Saratov,
+    'Europe/Simferopol': ZONE_INFO_Europe_Simferopol,
+    'Europe/Sofia': ZONE_INFO_Europe_Sofia,
+    'Europe/Stockholm': ZONE_INFO_Europe_Stockholm,
+    'Europe/Tallinn': ZONE_INFO_Europe_Tallinn,
+    'Europe/Tirane': ZONE_INFO_Europe_Tirane,
+    'Europe/Ulyanovsk': ZONE_INFO_Europe_Ulyanovsk,
+    'Europe/Uzhgorod': ZONE_INFO_Europe_Uzhgorod,
+    'Europe/Vienna': ZONE_INFO_Europe_Vienna,
+    'Europe/Vilnius': ZONE_INFO_Europe_Vilnius,
+    'Europe/Volgograd': ZONE_INFO_Europe_Volgograd,
+    'Europe/Warsaw': ZONE_INFO_Europe_Warsaw,
+    'Europe/Zaporozhye': ZONE_INFO_Europe_Zaporozhye,
+    'Europe/Zurich': ZONE_INFO_Europe_Zurich,
+    'HST': ZONE_INFO_HST,
+    'Indian/Chagos': ZONE_INFO_Indian_Chagos,
+    'Indian/Christmas': ZONE_INFO_Indian_Christmas,
+    'Indian/Cocos': ZONE_INFO_Indian_Cocos,
+    'Indian/Kerguelen': ZONE_INFO_Indian_Kerguelen,
+    'Indian/Mahe': ZONE_INFO_Indian_Mahe,
+    'Indian/Maldives': ZONE_INFO_Indian_Maldives,
+    'Indian/Mauritius': ZONE_INFO_Indian_Mauritius,
+    'Indian/Reunion': ZONE_INFO_Indian_Reunion,
+    'MET': ZONE_INFO_MET,
+    'MST': ZONE_INFO_MST,
+    'MST7MDT': ZONE_INFO_MST7MDT,
+    'PST8PDT': ZONE_INFO_PST8PDT,
+    'Pacific/Apia': ZONE_INFO_Pacific_Apia,
+    'Pacific/Auckland': ZONE_INFO_Pacific_Auckland,
+    'Pacific/Bougainville': ZONE_INFO_Pacific_Bougainville,
+    'Pacific/Chatham': ZONE_INFO_Pacific_Chatham,
+    'Pacific/Chuuk': ZONE_INFO_Pacific_Chuuk,
+    'Pacific/Easter': ZONE_INFO_Pacific_Easter,
+    'Pacific/Efate': ZONE_INFO_Pacific_Efate,
+    'Pacific/Enderbury': ZONE_INFO_Pacific_Enderbury,
+    'Pacific/Fakaofo': ZONE_INFO_Pacific_Fakaofo,
+    'Pacific/Fiji': ZONE_INFO_Pacific_Fiji,
+    'Pacific/Funafuti': ZONE_INFO_Pacific_Funafuti,
+    'Pacific/Galapagos': ZONE_INFO_Pacific_Galapagos,
+    'Pacific/Gambier': ZONE_INFO_Pacific_Gambier,
+    'Pacific/Guadalcanal': ZONE_INFO_Pacific_Guadalcanal,
+    'Pacific/Guam': ZONE_INFO_Pacific_Guam,
+    'Pacific/Honolulu': ZONE_INFO_Pacific_Honolulu,
+    'Pacific/Kiritimati': ZONE_INFO_Pacific_Kiritimati,
+    'Pacific/Kosrae': ZONE_INFO_Pacific_Kosrae,
+    'Pacific/Kwajalein': ZONE_INFO_Pacific_Kwajalein,
+    'Pacific/Majuro': ZONE_INFO_Pacific_Majuro,
+    'Pacific/Marquesas': ZONE_INFO_Pacific_Marquesas,
+    'Pacific/Nauru': ZONE_INFO_Pacific_Nauru,
+    'Pacific/Niue': ZONE_INFO_Pacific_Niue,
+    'Pacific/Norfolk': ZONE_INFO_Pacific_Norfolk,
+    'Pacific/Noumea': ZONE_INFO_Pacific_Noumea,
+    'Pacific/Pago_Pago': ZONE_INFO_Pacific_Pago_Pago,
+    'Pacific/Palau': ZONE_INFO_Pacific_Palau,
+    'Pacific/Pitcairn': ZONE_INFO_Pacific_Pitcairn,
+    'Pacific/Pohnpei': ZONE_INFO_Pacific_Pohnpei,
+    'Pacific/Port_Moresby': ZONE_INFO_Pacific_Port_Moresby,
+    'Pacific/Rarotonga': ZONE_INFO_Pacific_Rarotonga,
+    'Pacific/Tahiti': ZONE_INFO_Pacific_Tahiti,
+    'Pacific/Tarawa': ZONE_INFO_Pacific_Tarawa,
+    'Pacific/Tongatapu': ZONE_INFO_Pacific_Tongatapu,
+    'Pacific/Wake': ZONE_INFO_Pacific_Wake,
+    'Pacific/Wallis': ZONE_INFO_Pacific_Wallis,
+    'WET': ZONE_INFO_WET,
 
 }

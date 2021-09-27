@@ -5,7 +5,7 @@ from datetime import datetime, timedelta, timezone
 
 from acetime.common import SECONDS_SINCE_UNIX_EPOCH
 from acetime.acetz import acetz, gettz
-from acetime.zonedbpy.zone_registry import ZONE_INFO_MAP
+from acetime.zonedbpy.zone_registry import ZONE_REGISTRY
 
 
 # Enable logging during unittests.
@@ -40,7 +40,7 @@ def print_zp_at_dt(tz: acetz, dt: datetime) -> None:
 
 
 def agettz(zone_name: str) -> acetz:
-    return gettz(ZONE_INFO_MAP, zone_name)
+    return gettz(ZONE_REGISTRY, zone_name)
 
 
 # @unittest.skip
