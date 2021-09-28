@@ -16,6 +16,10 @@
               `MatchingEra`.
             * Resolves all validation errors between Python `acetime.acetz`
               class and the Hinnant `date` library.
+    * Replace `acetz.getz()` with `ZoneManager.gettz()` whose `ZoneManager`
+      class takes a zone registry.
+        * Two pre-defined registries are: `zone_regsitry.ZONE_REGISTRY` and
+          `zone_regsitry.ZONE_AND_LINK_REGISTRY`.
 * (2021-09-08)
     * Initial split from
       [AceTimeTools](https://github.com/bxparks/AceTimeTools).

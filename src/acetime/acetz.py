@@ -95,9 +95,21 @@ class acetz(tzinfo):
         return self.zs
 
 
-def gettz(zone_info_map: Dict[Any, Any], zone_name: str) -> acetz:
-    zone_info = zone_info_map.get(zone_name)
-    if not zone_info:
-        raise Exception(f"Zone '{zone_name}' not found")
-    zone_info = cast(ZoneInfo, zone_info)
-    return acetz(zone_info)
+class ZoneManager:
+    """Factory of acetz instances using the given zone registry. Usually the
+    zone registry will be either zone_registry.ZONE_REGISTRY or
+    zone_registry.ZONE_AND_LINK_REGISTRY, but applications may define a custom
+    registry instead.
+    """
+    def __init__(self, registry: Dict[Any, Any]):
+        self.registry = registry
+
+    def gettz(self, zone_name: str) -> acetz:
+        """Return the acetz instance for the given zone_name.
+        Throws Exception if zone_name not found.
+        """
+        zone_info = self.registry.get(zone_name)
+        if not zone_info:
+            raise Exception(f"Zone '{zone_name}' not found")
+        zone_info = cast(ZoneInfo, zone_info)
+        return acetz(zone_info)

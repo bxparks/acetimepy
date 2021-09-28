@@ -4,7 +4,7 @@ import logging
 from datetime import datetime, timedelta, timezone
 
 from acetime.common import SECONDS_SINCE_UNIX_EPOCH
-from acetime.acetz import acetz, gettz
+from acetime.acetz import acetz, ZoneManager
 from acetime.zonedbpy.zone_registry import ZONE_REGISTRY
 
 
@@ -39,15 +39,14 @@ def print_zp_at_dt(tz: acetz, dt: datetime) -> None:
         )
 
 
-def agettz(zone_name: str) -> acetz:
-    return gettz(ZONE_REGISTRY, zone_name)
+zone_manager = ZoneManager(ZONE_REGISTRY)
 
 
 # @unittest.skip
 class TestLosAngeles(unittest.TestCase):
 
     def test_constructor(self) -> None:
-        atz = agettz('America/Los_Angeles')
+        atz = zone_manager.gettz('America/Los_Angeles')
         adt = datetime(2000, 1, 2, 3, 4, 5, tzinfo=atz)
 
         self.assertEqual(2000, adt.year)
@@ -68,7 +67,7 @@ class TestLosAngeles(unittest.TestCase):
         self.assertEqual("PST", adt.tzinfo.tzname(adt))
 
     def test_before_spring_forward(self) -> None:
-        tz = agettz('America/Los_Angeles')
+        tz = zone_manager.gettz('America/Los_Angeles')
 
         # One second before DST shift, 01:59:59 UTC-8
         epoch_seconds = 7984799
@@ -109,7 +108,7 @@ class TestLosAngeles(unittest.TestCase):
         self.assertEqual(dtc, dtt)
 
     def test_after_spring_forward(self) -> None:
-        tz = agettz('America/Los_Angeles')
+        tz = zone_manager.gettz('America/Los_Angeles')
 
         # Right after DST forward shift, 03:00:00 UTC-7
         epoch_seconds = 7984800
@@ -145,7 +144,7 @@ class TestLosAngeles(unittest.TestCase):
         self.assertEqual(dtc, dtt)
 
     def test_before_fall_back(self) -> None:
-        tz = agettz('America/Los_Angeles')
+        tz = zone_manager.gettz('America/Los_Angeles')
 
         # One second before DST shift, 01:59:59 UTC-7
         epoch_seconds = 26125199
@@ -195,7 +194,7 @@ class TestLosAngeles(unittest.TestCase):
         self.assertEqual(timedelta(hours=0), dtc.dst())
 
     def test_after_fall_back(self) -> None:
-        tz = agettz('America/Los_Angeles')
+        tz = zone_manager.gettz('America/Los_Angeles')
 
         # Just after DST fall back 01:00:00 UTC-8
         epoch_seconds = 26125200
@@ -234,7 +233,7 @@ class TestLosAngeles(unittest.TestCase):
         self.assertEqual(dtc, dtt)
 
     def test_way_after_fall_back(self) -> None:
-        tz = agettz('America/Los_Angeles')
+        tz = zone_manager.gettz('America/Los_Angeles')
 
         # Just after DST fall back 02:00:00 UTC-8
         epoch_seconds = 26125200 + 3600
@@ -274,7 +273,7 @@ class TestLosAngeles(unittest.TestCase):
 class TestTunis(unittest.TestCase):
 
     def test_2006_01_01(self) -> None:
-        tz = agettz('Africa/Tunis')
+        tz = zone_manager.gettz('Africa/Tunis')
 
         epoch_seconds = 189385200
         unix_seconds = epoch_seconds + SECONDS_SINCE_UNIX_EPOCH
@@ -317,7 +316,7 @@ class TestTunis(unittest.TestCase):
 class TestSydney(unittest.TestCase):
 
     def test_2000_03_26_after_fall_back(self) -> None:
-        tz = agettz('Australia/Sydney')
+        tz = zone_manager.gettz('Australia/Sydney')
 
         epoch_seconds = 7315200
         unix_seconds = epoch_seconds + SECONDS_SINCE_UNIX_EPOCH
