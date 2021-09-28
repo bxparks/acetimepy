@@ -20,11 +20,11 @@ class acetz(tzinfo):
 
     def __init__(self, zone_info: ZoneInfo):
         self.zone_info = zone_info
-        self.zs = ZoneProcessor(zone_info, use_python_transition=True)
+        self.zp = ZoneProcessor(zone_info, use_python_transition=True)
 
     def utcoffset(self, dt: Optional[datetime]) -> timedelta:
         assert dt
-        info = self.zs.get_timezone_info_for_datetime(dt)
+        info = self.zp.get_timezone_info_for_datetime(dt)
         if not info:
             raise Exception(
                 f'Unknown timezone info for '
@@ -36,7 +36,7 @@ class acetz(tzinfo):
 
     def dst(self, dt: Optional[datetime]) -> timedelta:
         assert dt
-        offset_info = self.zs.get_timezone_info_for_datetime(dt)
+        offset_info = self.zp.get_timezone_info_for_datetime(dt)
         if not offset_info:
             raise Exception(
                 f'Unknown timezone info for '
@@ -47,7 +47,7 @@ class acetz(tzinfo):
 
     def tzname(self, dt: Optional[datetime]) -> str:
         assert dt
-        offset_info = self.zs.get_timezone_info_for_datetime(dt)
+        offset_info = self.zp.get_timezone_info_for_datetime(dt)
         if not offset_info:
             raise Exception(
                 f'Unknown timezone info for '
@@ -80,7 +80,7 @@ class acetz(tzinfo):
         epoch_seconds = unix_seconds - SECONDS_SINCE_UNIX_EPOCH
 
         # Search the transitions for the matching Transition
-        offset_info = self.zs.get_timezone_info_for_seconds(epoch_seconds)
+        offset_info = self.zp.get_timezone_info_for_seconds(epoch_seconds)
         if not offset_info:
             raise ValueError(f"transition not found for {epoch_seconds}")
 
@@ -92,7 +92,7 @@ class acetz(tzinfo):
         return newdt
 
     def zone_processor(self) -> ZoneProcessor:
-        return self.zs
+        return self.zp
 
 
 class ZoneManager:
