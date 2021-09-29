@@ -1074,20 +1074,22 @@ class ZoneProcessor:
                 # Use fuzzy check to filter out transitions which cannot be
                 # candidates.
                 comp = _compare_transition_to_match_fuzzy(transition, match)
-                if comp < 0:
+                if comp == MATCH_STATUS_PRIOR:
                     prior_transition = self._select_prior_transition(
                         prior_transition, transition)
                     # Free agent replaces prior transition.
                     self.transition_storage.pop_transitions(1)
-                elif comp == 1:
+                elif comp == MATCH_STATUS_WITHIN_MATCH:
                     # Free agent becomes a candidate transition, so no need
                     # to update the TransitionStorage buffer size.
                     _add_transition_sorted(transitions, transition)
-                else:
+                elif comp == MATCH_STATUS_FAR_FUTURE:
                     # Remove free agent because it's not used. In the C++ code,
                     # this is done implicitly, but in Python code, this must be
                     # done explicitly.
                     self.transition_storage.pop_transitions(1)
+                else:
+                    raise Exception(f"Invalid MATCH_STATUS {comp}")
 
             # Explicitly examine the transition of the prior year and compare
             # it with the other candidate prior transitions from above.
@@ -1536,13 +1538,12 @@ def _compare_transition_to_match_fuzzy(
     _fix_transition_times()) to be able to use this function, so we can use this
     function earlier in the filtering process of finding candidate transitions.
 
-    A value of 0 is never returned since we cannot make a direct comparison
-    to match_start.
-
     Return:
-        * -1 if less than match
-        * 1 if within match,
-        * 2 if greater than match
+        * MATCH_STATUS_PRIOR if less than match
+        * MATCH_STATUS_WITHIN_MATCH if within match,
+        * MATCH_STATUS_FAR_FUTURE if greater than match
+        * MATCH_STATUS_EXACT_MATCH is never returned since we cannot make a
+          direct comparison to match_start.
     """
     tt = transition.transition_time
     transition_time = 12 * tt.y + tt.M
@@ -1550,14 +1551,14 @@ def _compare_transition_to_match_fuzzy(
     ms = match.start_date_time
     match_start = 12 * ms.y + ms.M
     if transition_time < match_start - 1:
-        return -1
+        return MATCH_STATUS_PRIOR
 
     mu = match.until_date_time
     match_until = 12 * mu.y + mu.M
     if match_until + 2 <= transition_time:
-        return 2
+        return MATCH_STATUS_FAR_FUTURE
 
-    return 1
+    return MATCH_STATUS_WITHIN_MATCH
 
 
 def _get_transition_time(year: int, rule: ZoneRule) -> DateTuple:
