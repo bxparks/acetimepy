@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedbpy
-#     --tz_version 2021a
+#     --tz_version 2021c
 #     --action zonedb
 #     --language python
 #     --scope extended
@@ -22,13 +22,13 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2021a
+# from https://github.com/eggert/tz/releases/tag/2021c
 #
 # DO NOT EDIT
 
 #---------------------------------------------------------------------------
-# Supported zone policies: 118
-# numRules: 1142
+# Supported zone policies: 116
+# numRules: 1139
 #---------------------------------------------------------------------------
 
 #---------------------------------------------------------------------------
@@ -1676,67 +1676,19 @@ ZONE_POLICY_Azer = {
 }
 
 #---------------------------------------------------------------------------
-# Policy name: Bahamas
-# Rule count: 3
-#---------------------------------------------------------------------------
-ZONE_RULES_Bahamas = [
-    # Rule    Bahamas    1945    only    -    Oct    17    24:00    0    S
-    {
-        'from_year': 1945,
-        'to_year': 1945,
-        'in_month': 10,
-        'on_day_of_week': 0,
-        'on_day_of_month': 17,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 0,
-        'letter': 'S',
-    },
-    # Rule    Bahamas    1964    1975    -    Oct    lastSun    2:00    0    S
-    {
-        'from_year': 1964,
-        'to_year': 1975,
-        'in_month': 10,
-        'on_day_of_week': 7,
-        'on_day_of_month': 0,
-        'at_seconds': 7200,
-        'at_time_suffix': 'w',
-        'delta_seconds': 0,
-        'letter': 'S',
-    },
-    # Rule    Bahamas    1964    1975    -    Apr    lastSun    2:00    1:00    D
-    {
-        'from_year': 1964,
-        'to_year': 1975,
-        'in_month': 4,
-        'on_day_of_week': 7,
-        'on_day_of_month': 0,
-        'at_seconds': 7200,
-        'at_time_suffix': 'w',
-        'delta_seconds': 3600,
-        'letter': 'D',
-    },
-
-]
-ZONE_POLICY_Bahamas = {
-    'name': 'Bahamas',
-    'rules': ZONE_RULES_Bahamas
-}
-
-#---------------------------------------------------------------------------
 # Policy name: Barb
 # Rule count: 6
 #---------------------------------------------------------------------------
 ZONE_RULES_Barb = [
-    # Anchor: Rule    Barb    1977    1978    -    Oct    Sun>=1    2:00    0    S
+    # Rule    Barb    1944    only    -    Sep    10    6:00u    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
-        'in_month': 1,
+        'from_year': 1944,
+        'to_year': 1944,
+        'in_month': 9,
         'on_day_of_week': 0,
-        'on_day_of_month': 1,
-        'at_seconds': 0,
-        'at_time_suffix': 'w',
+        'on_day_of_month': 10,
+        'at_seconds': 21600,
+        'at_time_suffix': 'u',
         'delta_seconds': 0,
         'letter': 'S',
     },
@@ -5228,30 +5180,6 @@ ZONE_POLICY_Germany = {
 }
 
 #---------------------------------------------------------------------------
-# Policy name: Ghana
-# Rule count: 1
-#---------------------------------------------------------------------------
-ZONE_RULES_Ghana = [
-    # Rule    Ghana    1951    1956    -    Jan     1    2:00    0    GMT
-    {
-        'from_year': 1951,
-        'to_year': 1956,
-        'in_month': 1,
-        'on_day_of_week': 0,
-        'on_day_of_month': 1,
-        'at_seconds': 7200,
-        'at_time_suffix': 'w',
-        'delta_seconds': 0,
-        'letter': 'GMT',
-    },
-
-]
-ZONE_POLICY_Ghana = {
-    'name': 'Ghana',
-    'rules': ZONE_RULES_Ghana
-}
-
-#---------------------------------------------------------------------------
 # Policy name: Greece
 # Rule count: 12
 #---------------------------------------------------------------------------
@@ -7161,7 +7089,7 @@ ZONE_POLICY_Japan = {
 
 #---------------------------------------------------------------------------
 # Policy name: Jordan
-# Rule count: 32
+# Rule count: 33
 #---------------------------------------------------------------------------
 ZONE_RULES_Jordan = [
     # Anchor: Rule    Jordan    1973    1975    -    Oct    1    0:00    0    -
@@ -7524,10 +7452,10 @@ ZONE_RULES_Jordan = [
         'delta_seconds': 0,
         'letter': '-',
     },
-    # Rule    Jordan    2014    max    -    Mar    lastThu    24:00    1:00    S
+    # Rule    Jordan    2014    2021    -    Mar    lastThu    24:00    1:00    S
     {
         'from_year': 2014,
-        'to_year': 9999,
+        'to_year': 2021,
         'in_month': 3,
         'on_day_of_week': 4,
         'on_day_of_month': 0,
@@ -7547,6 +7475,18 @@ ZONE_RULES_Jordan = [
         'at_time_suffix': 's',
         'delta_seconds': 0,
         'letter': '-',
+    },
+    # Rule    Jordan    2022    max    -    Feb    lastThu    24:00    1:00    S
+    {
+        'from_year': 2022,
+        'to_year': 9999,
+        'in_month': 2,
+        'on_day_of_week': 4,
+        'on_day_of_month': 0,
+        'at_seconds': 86400,
+        'at_time_suffix': 'w',
+        'delta_seconds': 3600,
+        'letter': 'S',
     },
 
 ]
@@ -11460,9 +11400,9 @@ ZONE_POLICY_Poland = {
 # Rule count: 9
 #---------------------------------------------------------------------------
 ZONE_RULES_Port = [
-    # Rule    Port    1951    1965    -    Oct    Sun>=1     2:00s    0    -
+    # Rule    Port    1947    1965    -    Oct    Sun>=1     2:00s    0    -
     {
-        'from_year': 1951,
+        'from_year': 1947,
         'to_year': 1965,
         'in_month': 10,
         'on_day_of_week': 7,
@@ -14328,10 +14268,10 @@ ZONE_RULES_WS = [
         'delta_seconds': 3600,
         'letter': '-',
     },
-    # Rule    WS    2012    max    -    Apr    Sun>=1    4:00    0    -
+    # Rule    WS    2012    2021    -    Apr    Sun>=1    4:00    0    -
     {
         'from_year': 2012,
-        'to_year': 9999,
+        'to_year': 2021,
         'in_month': 4,
         'on_day_of_week': 7,
         'on_day_of_month': 1,
@@ -14340,10 +14280,10 @@ ZONE_RULES_WS = [
         'delta_seconds': 0,
         'letter': '-',
     },
-    # Rule    WS    2012    max    -    Sep    lastSun    3:00    1    -
+    # Rule    WS    2012    2020    -    Sep    lastSun    3:00    1    -
     {
         'from_year': 2012,
-        'to_year': 9999,
+        'to_year': 2020,
         'in_month': 9,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -15182,13 +15122,12 @@ ZONE_POLICY_Zion = {
 
 
 #---------------------------------------------------------------------------
-# Notable zone policies: 10
+# Notable zone policies: 9
 #---------------------------------------------------------------------------
 
 # Belize (["LETTER 'CDT' not single character", "LETTER 'CST' not single character"])
 # DR (["LETTER '-0430' not single character", "LETTER 'EST' not single character"])
 # GB_Eire (["LETTER 'BST' not single character", "LETTER 'GMT' not single character"])
-# Ghana (["LETTER 'GMT' not single character"])
 # Guam (["AT '2:01' not on 15-minute boundary"])
 # Moncton (["AT '0:01' not on 15-minute boundary"])
 # Namibia (["LETTER 'CAT' not single character", "LETTER 'WAT' not single character"])

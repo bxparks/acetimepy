@@ -20,6 +20,7 @@
       class takes a zone registry.
         * Two pre-defined registries are: `zone_regsitry.ZONE_REGISTRY` and
           `zone_regsitry.ZONE_AND_LINK_REGISTRY`.
+    * Upgrade to TZDB 2021c.
 * (2021-09-08)
     * Initial split from
       [AceTimeTools](https://github.com/bxparks/AceTimeTools).

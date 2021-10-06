@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedbpy
-#     --tz_version 2021a
+#     --tz_version 2021c
 #     --action zonedb
 #     --language python
 #     --scope extended
@@ -22,15 +22,15 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2021a
+# from https://github.com/eggert/tz/releases/tag/2021c
 #
 # DO NOT EDIT
 
 from .zone_policies import *
 
 #---------------------------------------------------------------------------
-# Supported zones: 386
-# numEras: 1072
+# Supported zones: 377
+# numEras: 1061
 #---------------------------------------------------------------------------
 
 #---------------------------------------------------------------------------
@@ -57,32 +57,6 @@ ZONE_ERAS_Africa_Abidjan = [
 ZONE_INFO_Africa_Abidjan = {
     'name': 'Africa/Abidjan',
     'eras': ZONE_ERAS_Africa_Abidjan
-}
-
-#---------------------------------------------------------------------------
-# Zone name: Africa/Accra
-# Era count: 1
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_Africa_Accra = [
-    #              0:00    Ghana    %s
-    {
-      'offset_seconds': 0,
-      'zone_policy': ZONE_POLICY_Ghana,
-      'rules_delta_seconds': 0,
-      'format': '%s',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Africa_Accra = {
-    'name': 'Africa/Accra',
-    'eras': ZONE_ERAS_Africa_Accra
 }
 
 #---------------------------------------------------------------------------
@@ -2338,32 +2312,6 @@ ZONE_INFO_America_Asuncion = {
 }
 
 #---------------------------------------------------------------------------
-# Zone name: America/Atikokan
-# Era count: 1
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_America_Atikokan = [
-    #             -5:00    -    EST
-    {
-      'offset_seconds': -18000,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': 'EST',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_America_Atikokan = {
-    'name': 'America/Atikokan',
-    'eras': ZONE_ERAS_America_Atikokan
-}
-
-#---------------------------------------------------------------------------
 # Zone name: America/Bahia
 # Era count: 4
 #---------------------------------------------------------------------------
@@ -2551,32 +2499,6 @@ ZONE_ERAS_America_Belize = [
 ZONE_INFO_America_Belize = {
     'name': 'America/Belize',
     'eras': ZONE_ERAS_America_Belize
-}
-
-#---------------------------------------------------------------------------
-# Zone name: America/Blanc-Sablon
-# Era count: 1
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_America_Blanc_Sablon = [
-    #             -4:00    -    AST
-    {
-      'offset_seconds': -14400,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': 'AST',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_America_Blanc_Sablon = {
-    'name': 'America/Blanc-Sablon',
-    'eras': ZONE_ERAS_America_Blanc_Sablon
 }
 
 #---------------------------------------------------------------------------
@@ -3070,32 +2992,6 @@ ZONE_INFO_America_Costa_Rica = {
 }
 
 #---------------------------------------------------------------------------
-# Zone name: America/Creston
-# Era count: 1
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_America_Creston = [
-    #             -7:00    -    MST
-    {
-      'offset_seconds': -25200,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': 'MST',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_America_Creston = {
-    'name': 'America/Creston',
-    'eras': ZONE_ERAS_America_Creston
-}
-
-#---------------------------------------------------------------------------
 # Zone name: America/Cuiaba
 # Era count: 3
 #---------------------------------------------------------------------------
@@ -3143,32 +3039,6 @@ ZONE_ERAS_America_Cuiaba = [
 ZONE_INFO_America_Cuiaba = {
     'name': 'America/Cuiaba',
     'eras': ZONE_ERAS_America_Cuiaba
-}
-
-#---------------------------------------------------------------------------
-# Zone name: America/Curacao
-# Era count: 1
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_America_Curacao = [
-    #             -4:00    -    AST
-    {
-      'offset_seconds': -14400,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': 'AST',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_America_Curacao = {
-    'name': 'America/Curacao',
-    'eras': ZONE_ERAS_America_Curacao
 }
 
 #---------------------------------------------------------------------------
@@ -3879,28 +3749,28 @@ ZONE_INFO_America_Guayaquil = {
 #---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Guyana = [
-    #             -3:45    -    -0345    1975 Jul 31
+    #             -3:45    -    -0345    1975 Aug  1
     {
       'offset_seconds': -13500,
       'zone_policy': '-',
       'rules_delta_seconds': 0,
       'format': '-0345',
       'until_year': 1975,
-      'until_month': 7,
-      'until_day': 31,
+      'until_month': 8,
+      'until_day': 1,
       'until_seconds': 0,
       'until_time_suffix': 'w',
     },
-    #             -3:00    -    -03    1991
+    #             -3:00    -    -03    1992 Mar 29  1:00
     {
       'offset_seconds': -10800,
       'zone_policy': '-',
       'rules_delta_seconds': 0,
       'format': '-03',
-      'until_year': 1991,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
+      'until_year': 1992,
+      'until_month': 3,
+      'until_day': 29,
+      'until_seconds': 3600,
       'until_time_suffix': 'w',
     },
     #             -4:00    -    -04
@@ -5672,44 +5542,6 @@ ZONE_INFO_America_Montevideo = {
 }
 
 #---------------------------------------------------------------------------
-# Zone name: America/Nassau
-# Era count: 2
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_America_Nassau = [
-    #             -5:00    Bahamas    E%sT    1976
-    {
-      'offset_seconds': -18000,
-      'zone_policy': ZONE_POLICY_Bahamas,
-      'rules_delta_seconds': 0,
-      'format': 'E%sT',
-      'until_year': 1976,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-    #             -5:00    US    E%sT
-    {
-      'offset_seconds': -18000,
-      'zone_policy': ZONE_POLICY_US,
-      'rules_delta_seconds': 0,
-      'format': 'E%sT',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_America_Nassau = {
-    'name': 'America/Nassau',
-    'eras': ZONE_ERAS_America_Nassau
-}
-
-#---------------------------------------------------------------------------
 # Zone name: America/New_York
 # Era count: 1
 #---------------------------------------------------------------------------
@@ -6299,32 +6131,6 @@ ZONE_ERAS_America_Port_au_Prince = [
 ZONE_INFO_America_Port_au_Prince = {
     'name': 'America/Port-au-Prince',
     'eras': ZONE_ERAS_America_Port_au_Prince
-}
-
-#---------------------------------------------------------------------------
-# Zone name: America/Port_of_Spain
-# Era count: 1
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_America_Port_of_Spain = [
-    #             -4:00    -    AST
-    {
-      'offset_seconds': -14400,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': 'AST',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_America_Port_of_Spain = {
-    'name': 'America/Port_of_Spain',
-    'eras': ZONE_ERAS_America_Port_of_Spain
 }
 
 #---------------------------------------------------------------------------
@@ -7742,32 +7548,6 @@ ZONE_INFO_Antarctica_Davis = {
 }
 
 #---------------------------------------------------------------------------
-# Zone name: Antarctica/DumontDUrville
-# Era count: 1
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_Antarctica_DumontDUrville = [
-    #             10:00    -    +10
-    {
-      'offset_seconds': 36000,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': '+10',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Antarctica_DumontDUrville = {
-    'name': 'Antarctica/DumontDUrville',
-    'eras': ZONE_ERAS_Antarctica_DumontDUrville
-}
-
-#---------------------------------------------------------------------------
 # Zone name: Antarctica/Macquarie
 # Era count: 3
 #---------------------------------------------------------------------------
@@ -7941,32 +7721,6 @@ ZONE_ERAS_Antarctica_Rothera = [
 ZONE_INFO_Antarctica_Rothera = {
     'name': 'Antarctica/Rothera',
     'eras': ZONE_ERAS_Antarctica_Rothera
-}
-
-#---------------------------------------------------------------------------
-# Zone name: Antarctica/Syowa
-# Era count: 1
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_Antarctica_Syowa = [
-    #             3:00    -    +03
-    {
-      'offset_seconds': 10800,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': '+03',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Antarctica_Syowa = {
-    'name': 'Antarctica/Syowa',
-    'eras': ZONE_ERAS_Antarctica_Syowa
 }
 
 #---------------------------------------------------------------------------
@@ -17306,56 +17060,6 @@ ZONE_INFO_Pacific_Efate = {
 }
 
 #---------------------------------------------------------------------------
-# Zone name: Pacific/Enderbury
-# Era count: 3
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_Pacific_Enderbury = [
-    #             -12:00    -    -12    1979 Oct
-    {
-      'offset_seconds': -43200,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': '-12',
-      'until_year': 1979,
-      'until_month': 10,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-    #             -11:00    -    -11    1994 Dec 31
-    {
-      'offset_seconds': -39600,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': '-11',
-      'until_year': 1994,
-      'until_month': 12,
-      'until_day': 31,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-    #              13:00    -    +13
-    {
-      'offset_seconds': 46800,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': '+13',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Pacific_Enderbury = {
-    'name': 'Pacific/Enderbury',
-    'eras': ZONE_ERAS_Pacific_Enderbury
-}
-
-#---------------------------------------------------------------------------
 # Zone name: Pacific/Fakaofo
 # Era count: 2
 #---------------------------------------------------------------------------
@@ -17600,6 +17304,56 @@ ZONE_INFO_Pacific_Honolulu = {
 }
 
 #---------------------------------------------------------------------------
+# Zone name: Pacific/Kanton
+# Era count: 3
+#---------------------------------------------------------------------------
+
+ZONE_ERAS_Pacific_Kanton = [
+    #             -12:00    -    -12    1979 Oct
+    {
+      'offset_seconds': -43200,
+      'zone_policy': '-',
+      'rules_delta_seconds': 0,
+      'format': '-12',
+      'until_year': 1979,
+      'until_month': 10,
+      'until_day': 1,
+      'until_seconds': 0,
+      'until_time_suffix': 'w',
+    },
+    #             -11:00    -    -11    1994 Dec 31
+    {
+      'offset_seconds': -39600,
+      'zone_policy': '-',
+      'rules_delta_seconds': 0,
+      'format': '-11',
+      'until_year': 1994,
+      'until_month': 12,
+      'until_day': 31,
+      'until_seconds': 0,
+      'until_time_suffix': 'w',
+    },
+    #              13:00    -    +13
+    {
+      'offset_seconds': 46800,
+      'zone_policy': '-',
+      'rules_delta_seconds': 0,
+      'format': '+13',
+      'until_year': 10000,
+      'until_month': 1,
+      'until_day': 1,
+      'until_seconds': 0,
+      'until_time_suffix': 'w',
+    },
+
+]
+
+ZONE_INFO_Pacific_Kanton = {
+    'name': 'Pacific/Kanton',
+    'eras': ZONE_ERAS_Pacific_Kanton
+}
+
+#---------------------------------------------------------------------------
 # Zone name: Pacific/Kiritimati
 # Era count: 3
 #---------------------------------------------------------------------------
@@ -17817,22 +17571,10 @@ ZONE_INFO_Pacific_Nauru = {
 
 #---------------------------------------------------------------------------
 # Zone name: Pacific/Niue
-# Era count: 2
+# Era count: 1
 #---------------------------------------------------------------------------
 
 ZONE_ERAS_Pacific_Niue = [
-    #             -11:30    -    -1130    1978 Oct  1
-    {
-      'offset_seconds': -41400,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': '-1130',
-      'until_year': 1978,
-      'until_month': 10,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
     #             -11:00    -    -11
     {
       'offset_seconds': -39600,
@@ -18304,8 +18046,14 @@ ZONE_INFO_WET = {
 
 
 #---------------------------------------------------------------------------
-# Supported links: 207
+# Supported links: 217
 #---------------------------------------------------------------------------
+
+# Link name: Africa/Accra -> Africa/Abidjan
+ZONE_INFO_Africa_Accra = {
+    'name': 'Africa/Accra',
+    'eras': ZONE_ERAS_Africa_Abidjan
+}
 
 # Link name: Africa/Addis_Ababa -> Africa/Nairobi
 ZONE_INFO_Africa_Addis_Ababa = {
@@ -18511,16 +18259,16 @@ ZONE_INFO_Africa_Timbuktu = {
     'eras': ZONE_ERAS_Africa_Abidjan
 }
 
-# Link name: America/Anguilla -> America/Port_of_Spain
+# Link name: America/Anguilla -> America/Puerto_Rico
 ZONE_INFO_America_Anguilla = {
     'name': 'America/Anguilla',
-    'eras': ZONE_ERAS_America_Port_of_Spain
+    'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
-# Link name: America/Antigua -> America/Port_of_Spain
+# Link name: America/Antigua -> America/Puerto_Rico
 ZONE_INFO_America_Antigua = {
     'name': 'America/Antigua',
-    'eras': ZONE_ERAS_America_Port_of_Spain
+    'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/Argentina/ComodRivadavia -> America/Argentina/Catamarca
@@ -18529,16 +18277,28 @@ ZONE_INFO_America_Argentina_ComodRivadavia = {
     'eras': ZONE_ERAS_America_Argentina_Catamarca
 }
 
-# Link name: America/Aruba -> America/Curacao
+# Link name: America/Aruba -> America/Puerto_Rico
 ZONE_INFO_America_Aruba = {
     'name': 'America/Aruba',
-    'eras': ZONE_ERAS_America_Curacao
+    'eras': ZONE_ERAS_America_Puerto_Rico
+}
+
+# Link name: America/Atikokan -> America/Panama
+ZONE_INFO_America_Atikokan = {
+    'name': 'America/Atikokan',
+    'eras': ZONE_ERAS_America_Panama
 }
 
 # Link name: America/Atka -> America/Adak
 ZONE_INFO_America_Atka = {
     'name': 'America/Atka',
     'eras': ZONE_ERAS_America_Adak
+}
+
+# Link name: America/Blanc-Sablon -> America/Puerto_Rico
+ZONE_INFO_America_Blanc_Sablon = {
+    'name': 'America/Blanc-Sablon',
+    'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/Buenos_Aires -> America/Argentina/Buenos_Aires
@@ -18559,10 +18319,10 @@ ZONE_INFO_America_Cayman = {
     'eras': ZONE_ERAS_America_Panama
 }
 
-# Link name: America/Coral_Harbour -> America/Atikokan
+# Link name: America/Coral_Harbour -> America/Panama
 ZONE_INFO_America_Coral_Harbour = {
     'name': 'America/Coral_Harbour',
-    'eras': ZONE_ERAS_America_Atikokan
+    'eras': ZONE_ERAS_America_Panama
 }
 
 # Link name: America/Cordoba -> America/Argentina/Cordoba
@@ -18571,10 +18331,22 @@ ZONE_INFO_America_Cordoba = {
     'eras': ZONE_ERAS_America_Argentina_Cordoba
 }
 
-# Link name: America/Dominica -> America/Port_of_Spain
+# Link name: America/Creston -> America/Phoenix
+ZONE_INFO_America_Creston = {
+    'name': 'America/Creston',
+    'eras': ZONE_ERAS_America_Phoenix
+}
+
+# Link name: America/Curacao -> America/Puerto_Rico
+ZONE_INFO_America_Curacao = {
+    'name': 'America/Curacao',
+    'eras': ZONE_ERAS_America_Puerto_Rico
+}
+
+# Link name: America/Dominica -> America/Puerto_Rico
 ZONE_INFO_America_Dominica = {
     'name': 'America/Dominica',
-    'eras': ZONE_ERAS_America_Port_of_Spain
+    'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/Ensenada -> America/Tijuana
@@ -18595,16 +18367,16 @@ ZONE_INFO_America_Godthab = {
     'eras': ZONE_ERAS_America_Nuuk
 }
 
-# Link name: America/Grenada -> America/Port_of_Spain
+# Link name: America/Grenada -> America/Puerto_Rico
 ZONE_INFO_America_Grenada = {
     'name': 'America/Grenada',
-    'eras': ZONE_ERAS_America_Port_of_Spain
+    'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
-# Link name: America/Guadeloupe -> America/Port_of_Spain
+# Link name: America/Guadeloupe -> America/Puerto_Rico
 ZONE_INFO_America_Guadeloupe = {
     'name': 'America/Guadeloupe',
-    'eras': ZONE_ERAS_America_Port_of_Spain
+    'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/Indianapolis -> America/Indiana/Indianapolis
@@ -18625,10 +18397,10 @@ ZONE_INFO_America_Knox_IN = {
     'eras': ZONE_ERAS_America_Indiana_Knox
 }
 
-# Link name: America/Kralendijk -> America/Curacao
+# Link name: America/Kralendijk -> America/Puerto_Rico
 ZONE_INFO_America_Kralendijk = {
     'name': 'America/Kralendijk',
-    'eras': ZONE_ERAS_America_Curacao
+    'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/Louisville -> America/Kentucky/Louisville
@@ -18637,16 +18409,16 @@ ZONE_INFO_America_Louisville = {
     'eras': ZONE_ERAS_America_Kentucky_Louisville
 }
 
-# Link name: America/Lower_Princes -> America/Curacao
+# Link name: America/Lower_Princes -> America/Puerto_Rico
 ZONE_INFO_America_Lower_Princes = {
     'name': 'America/Lower_Princes',
-    'eras': ZONE_ERAS_America_Curacao
+    'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
-# Link name: America/Marigot -> America/Port_of_Spain
+# Link name: America/Marigot -> America/Puerto_Rico
 ZONE_INFO_America_Marigot = {
     'name': 'America/Marigot',
-    'eras': ZONE_ERAS_America_Port_of_Spain
+    'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/Mendoza -> America/Argentina/Mendoza
@@ -18661,10 +18433,22 @@ ZONE_INFO_America_Montreal = {
     'eras': ZONE_ERAS_America_Toronto
 }
 
-# Link name: America/Montserrat -> America/Port_of_Spain
+# Link name: America/Montserrat -> America/Puerto_Rico
 ZONE_INFO_America_Montserrat = {
     'name': 'America/Montserrat',
-    'eras': ZONE_ERAS_America_Port_of_Spain
+    'eras': ZONE_ERAS_America_Puerto_Rico
+}
+
+# Link name: America/Nassau -> America/Toronto
+ZONE_INFO_America_Nassau = {
+    'name': 'America/Nassau',
+    'eras': ZONE_ERAS_America_Toronto
+}
+
+# Link name: America/Port_of_Spain -> America/Puerto_Rico
+ZONE_INFO_America_Port_of_Spain = {
+    'name': 'America/Port_of_Spain',
+    'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/Porto_Acre -> America/Rio_Branco
@@ -18691,46 +18475,52 @@ ZONE_INFO_America_Shiprock = {
     'eras': ZONE_ERAS_America_Denver
 }
 
-# Link name: America/St_Barthelemy -> America/Port_of_Spain
+# Link name: America/St_Barthelemy -> America/Puerto_Rico
 ZONE_INFO_America_St_Barthelemy = {
     'name': 'America/St_Barthelemy',
-    'eras': ZONE_ERAS_America_Port_of_Spain
+    'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
-# Link name: America/St_Kitts -> America/Port_of_Spain
+# Link name: America/St_Kitts -> America/Puerto_Rico
 ZONE_INFO_America_St_Kitts = {
     'name': 'America/St_Kitts',
-    'eras': ZONE_ERAS_America_Port_of_Spain
+    'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
-# Link name: America/St_Lucia -> America/Port_of_Spain
+# Link name: America/St_Lucia -> America/Puerto_Rico
 ZONE_INFO_America_St_Lucia = {
     'name': 'America/St_Lucia',
-    'eras': ZONE_ERAS_America_Port_of_Spain
+    'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
-# Link name: America/St_Thomas -> America/Port_of_Spain
+# Link name: America/St_Thomas -> America/Puerto_Rico
 ZONE_INFO_America_St_Thomas = {
     'name': 'America/St_Thomas',
-    'eras': ZONE_ERAS_America_Port_of_Spain
+    'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
-# Link name: America/St_Vincent -> America/Port_of_Spain
+# Link name: America/St_Vincent -> America/Puerto_Rico
 ZONE_INFO_America_St_Vincent = {
     'name': 'America/St_Vincent',
-    'eras': ZONE_ERAS_America_Port_of_Spain
+    'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
-# Link name: America/Tortola -> America/Port_of_Spain
+# Link name: America/Tortola -> America/Puerto_Rico
 ZONE_INFO_America_Tortola = {
     'name': 'America/Tortola',
-    'eras': ZONE_ERAS_America_Port_of_Spain
+    'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
-# Link name: America/Virgin -> America/Port_of_Spain
+# Link name: America/Virgin -> America/Puerto_Rico
 ZONE_INFO_America_Virgin = {
     'name': 'America/Virgin',
-    'eras': ZONE_ERAS_America_Port_of_Spain
+    'eras': ZONE_ERAS_America_Puerto_Rico
+}
+
+# Link name: Antarctica/DumontDUrville -> Pacific/Port_Moresby
+ZONE_INFO_Antarctica_DumontDUrville = {
+    'name': 'Antarctica/DumontDUrville',
+    'eras': ZONE_ERAS_Pacific_Port_Moresby
 }
 
 # Link name: Antarctica/McMurdo -> Pacific/Auckland
@@ -18743,6 +18533,12 @@ ZONE_INFO_Antarctica_McMurdo = {
 ZONE_INFO_Antarctica_South_Pole = {
     'name': 'Antarctica/South_Pole',
     'eras': ZONE_ERAS_Pacific_Auckland
+}
+
+# Link name: Antarctica/Syowa -> Asia/Riyadh
+ZONE_INFO_Antarctica_Syowa = {
+    'name': 'Antarctica/Syowa',
+    'eras': ZONE_ERAS_Asia_Riyadh
 }
 
 # Link name: Arctic/Longyearbyen -> Europe/Oslo
@@ -19367,6 +19163,12 @@ ZONE_INFO_Navajo = {
 ZONE_INFO_PRC = {
     'name': 'PRC',
     'eras': ZONE_ERAS_Asia_Shanghai
+}
+
+# Link name: Pacific/Enderbury -> Pacific/Kanton
+ZONE_INFO_Pacific_Enderbury = {
+    'name': 'Pacific/Enderbury',
+    'eras': ZONE_ERAS_Pacific_Kanton
 }
 
 # Link name: Pacific/Johnston -> Pacific/Honolulu

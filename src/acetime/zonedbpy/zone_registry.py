@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedbpy
-#     --tz_version 2021a
+#     --tz_version 2021c
 #     --action zonedb
 #     --language python
 #     --scope extended
@@ -22,16 +22,15 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2021a
+# from https://github.com/eggert/tz/releases/tag/2021c
 #
 # DO NOT EDIT
 
 from .zone_infos import *
 
-# Supported Zones: 386
+# Supported Zones: 377
 ZONE_REGISTRY = {
     'Africa/Abidjan': ZONE_INFO_Africa_Abidjan,
-    'Africa/Accra': ZONE_INFO_Africa_Accra,
     'Africa/Algiers': ZONE_INFO_Africa_Algiers,
     'Africa/Bissau': ZONE_INFO_Africa_Bissau,
     'Africa/Cairo': ZONE_INFO_Africa_Cairo,
@@ -66,13 +65,11 @@ ZONE_REGISTRY = {
     'America/Argentina/Tucuman': ZONE_INFO_America_Argentina_Tucuman,
     'America/Argentina/Ushuaia': ZONE_INFO_America_Argentina_Ushuaia,
     'America/Asuncion': ZONE_INFO_America_Asuncion,
-    'America/Atikokan': ZONE_INFO_America_Atikokan,
     'America/Bahia': ZONE_INFO_America_Bahia,
     'America/Bahia_Banderas': ZONE_INFO_America_Bahia_Banderas,
     'America/Barbados': ZONE_INFO_America_Barbados,
     'America/Belem': ZONE_INFO_America_Belem,
     'America/Belize': ZONE_INFO_America_Belize,
-    'America/Blanc-Sablon': ZONE_INFO_America_Blanc_Sablon,
     'America/Boa_Vista': ZONE_INFO_America_Boa_Vista,
     'America/Bogota': ZONE_INFO_America_Bogota,
     'America/Boise': ZONE_INFO_America_Boise,
@@ -84,9 +81,7 @@ ZONE_REGISTRY = {
     'America/Chicago': ZONE_INFO_America_Chicago,
     'America/Chihuahua': ZONE_INFO_America_Chihuahua,
     'America/Costa_Rica': ZONE_INFO_America_Costa_Rica,
-    'America/Creston': ZONE_INFO_America_Creston,
     'America/Cuiaba': ZONE_INFO_America_Cuiaba,
-    'America/Curacao': ZONE_INFO_America_Curacao,
     'America/Danmarkshavn': ZONE_INFO_America_Danmarkshavn,
     'America/Dawson': ZONE_INFO_America_Dawson,
     'America/Dawson_Creek': ZONE_INFO_America_Dawson_Creek,
@@ -137,7 +132,6 @@ ZONE_REGISTRY = {
     'America/Moncton': ZONE_INFO_America_Moncton,
     'America/Monterrey': ZONE_INFO_America_Monterrey,
     'America/Montevideo': ZONE_INFO_America_Montevideo,
-    'America/Nassau': ZONE_INFO_America_Nassau,
     'America/New_York': ZONE_INFO_America_New_York,
     'America/Nipigon': ZONE_INFO_America_Nipigon,
     'America/Nome': ZONE_INFO_America_Nome,
@@ -152,7 +146,6 @@ ZONE_REGISTRY = {
     'America/Paramaribo': ZONE_INFO_America_Paramaribo,
     'America/Phoenix': ZONE_INFO_America_Phoenix,
     'America/Port-au-Prince': ZONE_INFO_America_Port_au_Prince,
-    'America/Port_of_Spain': ZONE_INFO_America_Port_of_Spain,
     'America/Porto_Velho': ZONE_INFO_America_Porto_Velho,
     'America/Puerto_Rico': ZONE_INFO_America_Puerto_Rico,
     'America/Punta_Arenas': ZONE_INFO_America_Punta_Arenas,
@@ -182,12 +175,10 @@ ZONE_REGISTRY = {
     'America/Yellowknife': ZONE_INFO_America_Yellowknife,
     'Antarctica/Casey': ZONE_INFO_Antarctica_Casey,
     'Antarctica/Davis': ZONE_INFO_Antarctica_Davis,
-    'Antarctica/DumontDUrville': ZONE_INFO_Antarctica_DumontDUrville,
     'Antarctica/Macquarie': ZONE_INFO_Antarctica_Macquarie,
     'Antarctica/Mawson': ZONE_INFO_Antarctica_Mawson,
     'Antarctica/Palmer': ZONE_INFO_Antarctica_Palmer,
     'Antarctica/Rothera': ZONE_INFO_Antarctica_Rothera,
-    'Antarctica/Syowa': ZONE_INFO_Antarctica_Syowa,
     'Antarctica/Troll': ZONE_INFO_Antarctica_Troll,
     'Antarctica/Vostok': ZONE_INFO_Antarctica_Vostok,
     'Asia/Almaty': ZONE_INFO_Asia_Almaty,
@@ -386,7 +377,6 @@ ZONE_REGISTRY = {
     'Pacific/Chuuk': ZONE_INFO_Pacific_Chuuk,
     'Pacific/Easter': ZONE_INFO_Pacific_Easter,
     'Pacific/Efate': ZONE_INFO_Pacific_Efate,
-    'Pacific/Enderbury': ZONE_INFO_Pacific_Enderbury,
     'Pacific/Fakaofo': ZONE_INFO_Pacific_Fakaofo,
     'Pacific/Fiji': ZONE_INFO_Pacific_Fiji,
     'Pacific/Funafuti': ZONE_INFO_Pacific_Funafuti,
@@ -395,6 +385,7 @@ ZONE_REGISTRY = {
     'Pacific/Guadalcanal': ZONE_INFO_Pacific_Guadalcanal,
     'Pacific/Guam': ZONE_INFO_Pacific_Guam,
     'Pacific/Honolulu': ZONE_INFO_Pacific_Honolulu,
+    'Pacific/Kanton': ZONE_INFO_Pacific_Kanton,
     'Pacific/Kiritimati': ZONE_INFO_Pacific_Kiritimati,
     'Pacific/Kosrae': ZONE_INFO_Pacific_Kosrae,
     'Pacific/Kwajalein': ZONE_INFO_Pacific_Kwajalein,
@@ -419,7 +410,7 @@ ZONE_REGISTRY = {
 
 }
 
-# Supported Zones and Links: 593
+# Supported Zones and Links: 594
 ZONE_AND_LINK_REGISTRY = {
     'Africa/Abidjan': ZONE_INFO_Africa_Abidjan,
     'Africa/Accra': ZONE_INFO_Africa_Accra,
@@ -964,6 +955,7 @@ ZONE_AND_LINK_REGISTRY = {
     'Pacific/Guam': ZONE_INFO_Pacific_Guam,
     'Pacific/Honolulu': ZONE_INFO_Pacific_Honolulu,
     'Pacific/Johnston': ZONE_INFO_Pacific_Johnston,
+    'Pacific/Kanton': ZONE_INFO_Pacific_Kanton,
     'Pacific/Kiritimati': ZONE_INFO_Pacific_Kiritimati,
     'Pacific/Kosrae': ZONE_INFO_Pacific_Kosrae,
     'Pacific/Kwajalein': ZONE_INFO_Pacific_Kwajalein,
