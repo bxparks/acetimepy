@@ -13,7 +13,7 @@ This library provides a subset of the capabilities of:
 * pytz (https://pypi.org/project/pytz/)
 * dateutil (https://pypi.org/project/python-dateutil/)
 
-**Version**: (2021-09-08, Initial split from AceTimeTools)
+**Version**: v0.1 (2021-10-06, TZDB 2021c)
 
 **Changelog**: [CHANGELOG.md](CHANGELOG.md)
 

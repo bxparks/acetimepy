@@ -3,11 +3,10 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedbpy
-#     --tz_version 2021a
+#     --tz_version 2021c
 #     --action zonedb
 #     --language python
 #     --scope extended
-#     --ignore_buf_size_too_large
 #     --start_year 1974
 #     --until_year 2050
 #
@@ -23,15 +22,15 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2021a
+# from https://github.com/eggert/tz/releases/tag/2021c
 #
 # DO NOT EDIT
 
 from .zone_policies import *
 
 #---------------------------------------------------------------------------
-# Supported zones: 386
-# numEras: 1072
+# Supported zones: 377
+# numEras: 1061
 #---------------------------------------------------------------------------
 
 #---------------------------------------------------------------------------
@@ -54,34 +53,10 @@ ZONE_ERAS_Africa_Abidjan = [
     },
 
 ]
+
 ZONE_INFO_Africa_Abidjan = {
     'name': 'Africa/Abidjan',
     'eras': ZONE_ERAS_Africa_Abidjan
-}
-
-#---------------------------------------------------------------------------
-# Zone name: Africa/Accra
-# Era count: 1
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_Africa_Accra = [
-    #              0:00    Ghana    %s
-    {
-      'offset_seconds': 0,
-      'zone_policy': ZONE_POLICY_Ghana,
-      'rules_delta_seconds': 0,
-      'format': '%s',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-ZONE_INFO_Africa_Accra = {
-    'name': 'Africa/Accra',
-    'eras': ZONE_ERAS_Africa_Accra
 }
 
 #---------------------------------------------------------------------------
@@ -140,6 +115,7 @@ ZONE_ERAS_Africa_Algiers = [
     },
 
 ]
+
 ZONE_INFO_Africa_Algiers = {
     'name': 'Africa/Algiers',
     'eras': ZONE_ERAS_Africa_Algiers
@@ -177,6 +153,7 @@ ZONE_ERAS_Africa_Bissau = [
     },
 
 ]
+
 ZONE_INFO_Africa_Bissau = {
     'name': 'Africa/Bissau',
     'eras': ZONE_ERAS_Africa_Bissau
@@ -202,6 +179,7 @@ ZONE_ERAS_Africa_Cairo = [
     },
 
 ]
+
 ZONE_INFO_Africa_Cairo = {
     'name': 'Africa/Cairo',
     'eras': ZONE_ERAS_Africa_Cairo
@@ -263,6 +241,7 @@ ZONE_ERAS_Africa_Casablanca = [
     },
 
 ]
+
 ZONE_INFO_Africa_Casablanca = {
     'name': 'Africa/Casablanca',
     'eras': ZONE_ERAS_Africa_Casablanca
@@ -312,6 +291,7 @@ ZONE_ERAS_Africa_Ceuta = [
     },
 
 ]
+
 ZONE_INFO_Africa_Ceuta = {
     'name': 'Africa/Ceuta',
     'eras': ZONE_ERAS_Africa_Ceuta
@@ -361,6 +341,7 @@ ZONE_ERAS_Africa_El_Aaiun = [
     },
 
 ]
+
 ZONE_INFO_Africa_El_Aaiun = {
     'name': 'Africa/El_Aaiun',
     'eras': ZONE_ERAS_Africa_El_Aaiun
@@ -386,6 +367,7 @@ ZONE_ERAS_Africa_Johannesburg = [
     },
 
 ]
+
 ZONE_INFO_Africa_Johannesburg = {
     'name': 'Africa/Johannesburg',
     'eras': ZONE_ERAS_Africa_Johannesburg
@@ -435,6 +417,7 @@ ZONE_ERAS_Africa_Juba = [
     },
 
 ]
+
 ZONE_INFO_Africa_Juba = {
     'name': 'Africa/Juba',
     'eras': ZONE_ERAS_Africa_Juba
@@ -484,6 +467,7 @@ ZONE_ERAS_Africa_Khartoum = [
     },
 
 ]
+
 ZONE_INFO_Africa_Khartoum = {
     'name': 'Africa/Khartoum',
     'eras': ZONE_ERAS_Africa_Khartoum
@@ -509,6 +493,7 @@ ZONE_ERAS_Africa_Lagos = [
     },
 
 ]
+
 ZONE_INFO_Africa_Lagos = {
     'name': 'Africa/Lagos',
     'eras': ZONE_ERAS_Africa_Lagos
@@ -534,6 +519,7 @@ ZONE_ERAS_Africa_Maputo = [
     },
 
 ]
+
 ZONE_INFO_Africa_Maputo = {
     'name': 'Africa/Maputo',
     'eras': ZONE_ERAS_Africa_Maputo
@@ -559,6 +545,7 @@ ZONE_ERAS_Africa_Monrovia = [
     },
 
 ]
+
 ZONE_INFO_Africa_Monrovia = {
     'name': 'Africa/Monrovia',
     'eras': ZONE_ERAS_Africa_Monrovia
@@ -584,6 +571,7 @@ ZONE_ERAS_Africa_Nairobi = [
     },
 
 ]
+
 ZONE_INFO_Africa_Nairobi = {
     'name': 'Africa/Nairobi',
     'eras': ZONE_ERAS_Africa_Nairobi
@@ -633,6 +621,7 @@ ZONE_ERAS_Africa_Ndjamena = [
     },
 
 ]
+
 ZONE_INFO_Africa_Ndjamena = {
     'name': 'Africa/Ndjamena',
     'eras': ZONE_ERAS_Africa_Ndjamena
@@ -682,6 +671,7 @@ ZONE_ERAS_Africa_Sao_Tome = [
     },
 
 ]
+
 ZONE_INFO_Africa_Sao_Tome = {
     'name': 'Africa/Sao_Tome',
     'eras': ZONE_ERAS_Africa_Sao_Tome
@@ -779,6 +769,7 @@ ZONE_ERAS_Africa_Tripoli = [
     },
 
 ]
+
 ZONE_INFO_Africa_Tripoli = {
     'name': 'Africa/Tripoli',
     'eras': ZONE_ERAS_Africa_Tripoli
@@ -804,6 +795,7 @@ ZONE_ERAS_Africa_Tunis = [
     },
 
 ]
+
 ZONE_INFO_Africa_Tunis = {
     'name': 'Africa/Tunis',
     'eras': ZONE_ERAS_Africa_Tunis
@@ -841,6 +833,7 @@ ZONE_ERAS_Africa_Windhoek = [
     },
 
 ]
+
 ZONE_INFO_Africa_Windhoek = {
     'name': 'Africa/Windhoek',
     'eras': ZONE_ERAS_Africa_Windhoek
@@ -890,6 +883,7 @@ ZONE_ERAS_America_Adak = [
     },
 
 ]
+
 ZONE_INFO_America_Adak = {
     'name': 'America/Adak',
     'eras': ZONE_ERAS_America_Adak
@@ -939,6 +933,7 @@ ZONE_ERAS_America_Anchorage = [
     },
 
 ]
+
 ZONE_INFO_America_Anchorage = {
     'name': 'America/Anchorage',
     'eras': ZONE_ERAS_America_Anchorage
@@ -1024,6 +1019,7 @@ ZONE_ERAS_America_Araguaina = [
     },
 
 ]
+
 ZONE_INFO_America_Araguaina = {
     'name': 'America/Araguaina',
     'eras': ZONE_ERAS_America_Araguaina
@@ -1073,6 +1069,7 @@ ZONE_ERAS_America_Argentina_Buenos_Aires = [
     },
 
 ]
+
 ZONE_INFO_America_Argentina_Buenos_Aires = {
     'name': 'America/Argentina/Buenos_Aires',
     'eras': ZONE_ERAS_America_Argentina_Buenos_Aires
@@ -1182,6 +1179,7 @@ ZONE_ERAS_America_Argentina_Catamarca = [
     },
 
 ]
+
 ZONE_INFO_America_Argentina_Catamarca = {
     'name': 'America/Argentina/Catamarca',
     'eras': ZONE_ERAS_America_Argentina_Catamarca
@@ -1255,6 +1253,7 @@ ZONE_ERAS_America_Argentina_Cordoba = [
     },
 
 ]
+
 ZONE_INFO_America_Argentina_Cordoba = {
     'name': 'America/Argentina/Cordoba',
     'eras': ZONE_ERAS_America_Argentina_Cordoba
@@ -1376,6 +1375,7 @@ ZONE_ERAS_America_Argentina_Jujuy = [
     },
 
 ]
+
 ZONE_INFO_America_Argentina_Jujuy = {
     'name': 'America/Argentina/Jujuy',
     'eras': ZONE_ERAS_America_Argentina_Jujuy
@@ -1485,6 +1485,7 @@ ZONE_ERAS_America_Argentina_La_Rioja = [
     },
 
 ]
+
 ZONE_INFO_America_Argentina_La_Rioja = {
     'name': 'America/Argentina/La_Rioja',
     'eras': ZONE_ERAS_America_Argentina_La_Rioja
@@ -1642,6 +1643,7 @@ ZONE_ERAS_America_Argentina_Mendoza = [
     },
 
 ]
+
 ZONE_INFO_America_Argentina_Mendoza = {
     'name': 'America/Argentina/Mendoza',
     'eras': ZONE_ERAS_America_Argentina_Mendoza
@@ -1727,6 +1729,7 @@ ZONE_ERAS_America_Argentina_Rio_Gallegos = [
     },
 
 ]
+
 ZONE_INFO_America_Argentina_Rio_Gallegos = {
     'name': 'America/Argentina/Rio_Gallegos',
     'eras': ZONE_ERAS_America_Argentina_Rio_Gallegos
@@ -1812,6 +1815,7 @@ ZONE_ERAS_America_Argentina_Salta = [
     },
 
 ]
+
 ZONE_INFO_America_Argentina_Salta = {
     'name': 'America/Argentina/Salta',
     'eras': ZONE_ERAS_America_Argentina_Salta
@@ -1921,6 +1925,7 @@ ZONE_ERAS_America_Argentina_San_Juan = [
     },
 
 ]
+
 ZONE_INFO_America_Argentina_San_Juan = {
     'name': 'America/Argentina/San_Juan',
     'eras': ZONE_ERAS_America_Argentina_San_Juan
@@ -2078,6 +2083,7 @@ ZONE_ERAS_America_Argentina_San_Luis = [
     },
 
 ]
+
 ZONE_INFO_America_Argentina_San_Luis = {
     'name': 'America/Argentina/San_Luis',
     'eras': ZONE_ERAS_America_Argentina_San_Luis
@@ -2175,6 +2181,7 @@ ZONE_ERAS_America_Argentina_Tucuman = [
     },
 
 ]
+
 ZONE_INFO_America_Argentina_Tucuman = {
     'name': 'America/Argentina/Tucuman',
     'eras': ZONE_ERAS_America_Argentina_Tucuman
@@ -2260,6 +2267,7 @@ ZONE_ERAS_America_Argentina_Ushuaia = [
     },
 
 ]
+
 ZONE_INFO_America_Argentina_Ushuaia = {
     'name': 'America/Argentina/Ushuaia',
     'eras': ZONE_ERAS_America_Argentina_Ushuaia
@@ -2297,34 +2305,10 @@ ZONE_ERAS_America_Asuncion = [
     },
 
 ]
+
 ZONE_INFO_America_Asuncion = {
     'name': 'America/Asuncion',
     'eras': ZONE_ERAS_America_Asuncion
-}
-
-#---------------------------------------------------------------------------
-# Zone name: America/Atikokan
-# Era count: 1
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_America_Atikokan = [
-    #             -5:00    -    EST
-    {
-      'offset_seconds': -18000,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': 'EST',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-ZONE_INFO_America_Atikokan = {
-    'name': 'America/Atikokan',
-    'eras': ZONE_ERAS_America_Atikokan
 }
 
 #---------------------------------------------------------------------------
@@ -2383,6 +2367,7 @@ ZONE_ERAS_America_Bahia = [
     },
 
 ]
+
 ZONE_INFO_America_Bahia = {
     'name': 'America/Bahia',
     'eras': ZONE_ERAS_America_Bahia
@@ -2420,6 +2405,7 @@ ZONE_ERAS_America_Bahia_Banderas = [
     },
 
 ]
+
 ZONE_INFO_America_Bahia_Banderas = {
     'name': 'America/Bahia_Banderas',
     'eras': ZONE_ERAS_America_Bahia_Banderas
@@ -2445,6 +2431,7 @@ ZONE_ERAS_America_Barbados = [
     },
 
 ]
+
 ZONE_INFO_America_Barbados = {
     'name': 'America/Barbados',
     'eras': ZONE_ERAS_America_Barbados
@@ -2482,6 +2469,7 @@ ZONE_ERAS_America_Belem = [
     },
 
 ]
+
 ZONE_INFO_America_Belem = {
     'name': 'America/Belem',
     'eras': ZONE_ERAS_America_Belem
@@ -2507,34 +2495,10 @@ ZONE_ERAS_America_Belize = [
     },
 
 ]
+
 ZONE_INFO_America_Belize = {
     'name': 'America/Belize',
     'eras': ZONE_ERAS_America_Belize
-}
-
-#---------------------------------------------------------------------------
-# Zone name: America/Blanc-Sablon
-# Era count: 1
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_America_Blanc_Sablon = [
-    #             -4:00    -    AST
-    {
-      'offset_seconds': -14400,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': 'AST',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-ZONE_INFO_America_Blanc_Sablon = {
-    'name': 'America/Blanc-Sablon',
-    'eras': ZONE_ERAS_America_Blanc_Sablon
 }
 
 #---------------------------------------------------------------------------
@@ -2593,6 +2557,7 @@ ZONE_ERAS_America_Boa_Vista = [
     },
 
 ]
+
 ZONE_INFO_America_Boa_Vista = {
     'name': 'America/Boa_Vista',
     'eras': ZONE_ERAS_America_Boa_Vista
@@ -2618,6 +2583,7 @@ ZONE_ERAS_America_Bogota = [
     },
 
 ]
+
 ZONE_INFO_America_Bogota = {
     'name': 'America/Bogota',
     'eras': ZONE_ERAS_America_Bogota
@@ -2667,6 +2633,7 @@ ZONE_ERAS_America_Boise = [
     },
 
 ]
+
 ZONE_INFO_America_Boise = {
     'name': 'America/Boise',
     'eras': ZONE_ERAS_America_Boise
@@ -2740,6 +2707,7 @@ ZONE_ERAS_America_Cambridge_Bay = [
     },
 
 ]
+
 ZONE_INFO_America_Cambridge_Bay = {
     'name': 'America/Cambridge_Bay',
     'eras': ZONE_ERAS_America_Cambridge_Bay
@@ -2765,6 +2733,7 @@ ZONE_ERAS_America_Campo_Grande = [
     },
 
 ]
+
 ZONE_INFO_America_Campo_Grande = {
     'name': 'America/Campo_Grande',
     'eras': ZONE_ERAS_America_Campo_Grande
@@ -2826,6 +2795,7 @@ ZONE_ERAS_America_Cancun = [
     },
 
 ]
+
 ZONE_INFO_America_Cancun = {
     'name': 'America/Cancun',
     'eras': ZONE_ERAS_America_Cancun
@@ -2875,6 +2845,7 @@ ZONE_ERAS_America_Caracas = [
     },
 
 ]
+
 ZONE_INFO_America_Caracas = {
     'name': 'America/Caracas',
     'eras': ZONE_ERAS_America_Caracas
@@ -2900,6 +2871,7 @@ ZONE_ERAS_America_Cayenne = [
     },
 
 ]
+
 ZONE_INFO_America_Cayenne = {
     'name': 'America/Cayenne',
     'eras': ZONE_ERAS_America_Cayenne
@@ -2925,6 +2897,7 @@ ZONE_ERAS_America_Chicago = [
     },
 
 ]
+
 ZONE_INFO_America_Chicago = {
     'name': 'America/Chicago',
     'eras': ZONE_ERAS_America_Chicago
@@ -2986,6 +2959,7 @@ ZONE_ERAS_America_Chihuahua = [
     },
 
 ]
+
 ZONE_INFO_America_Chihuahua = {
     'name': 'America/Chihuahua',
     'eras': ZONE_ERAS_America_Chihuahua
@@ -3011,34 +2985,10 @@ ZONE_ERAS_America_Costa_Rica = [
     },
 
 ]
+
 ZONE_INFO_America_Costa_Rica = {
     'name': 'America/Costa_Rica',
     'eras': ZONE_ERAS_America_Costa_Rica
-}
-
-#---------------------------------------------------------------------------
-# Zone name: America/Creston
-# Era count: 1
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_America_Creston = [
-    #             -7:00    -    MST
-    {
-      'offset_seconds': -25200,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': 'MST',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-ZONE_INFO_America_Creston = {
-    'name': 'America/Creston',
-    'eras': ZONE_ERAS_America_Creston
 }
 
 #---------------------------------------------------------------------------
@@ -3085,34 +3035,10 @@ ZONE_ERAS_America_Cuiaba = [
     },
 
 ]
+
 ZONE_INFO_America_Cuiaba = {
     'name': 'America/Cuiaba',
     'eras': ZONE_ERAS_America_Cuiaba
-}
-
-#---------------------------------------------------------------------------
-# Zone name: America/Curacao
-# Era count: 1
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_America_Curacao = [
-    #             -4:00    -    AST
-    {
-      'offset_seconds': -14400,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': 'AST',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-ZONE_INFO_America_Curacao = {
-    'name': 'America/Curacao',
-    'eras': ZONE_ERAS_America_Curacao
 }
 
 #---------------------------------------------------------------------------
@@ -3159,6 +3085,7 @@ ZONE_ERAS_America_Danmarkshavn = [
     },
 
 ]
+
 ZONE_INFO_America_Danmarkshavn = {
     'name': 'America/Danmarkshavn',
     'eras': ZONE_ERAS_America_Danmarkshavn
@@ -3220,6 +3147,7 @@ ZONE_ERAS_America_Dawson = [
     },
 
 ]
+
 ZONE_INFO_America_Dawson = {
     'name': 'America/Dawson',
     'eras': ZONE_ERAS_America_Dawson
@@ -3245,6 +3173,7 @@ ZONE_ERAS_America_Dawson_Creek = [
     },
 
 ]
+
 ZONE_INFO_America_Dawson_Creek = {
     'name': 'America/Dawson_Creek',
     'eras': ZONE_ERAS_America_Dawson_Creek
@@ -3270,6 +3199,7 @@ ZONE_ERAS_America_Denver = [
     },
 
 ]
+
 ZONE_INFO_America_Denver = {
     'name': 'America/Denver',
     'eras': ZONE_ERAS_America_Denver
@@ -3331,6 +3261,7 @@ ZONE_ERAS_America_Detroit = [
     },
 
 ]
+
 ZONE_INFO_America_Detroit = {
     'name': 'America/Detroit',
     'eras': ZONE_ERAS_America_Detroit
@@ -3368,6 +3299,7 @@ ZONE_ERAS_America_Edmonton = [
     },
 
 ]
+
 ZONE_INFO_America_Edmonton = {
     'name': 'America/Edmonton',
     'eras': ZONE_ERAS_America_Edmonton
@@ -3453,6 +3385,7 @@ ZONE_ERAS_America_Eirunepe = [
     },
 
 ]
+
 ZONE_INFO_America_Eirunepe = {
     'name': 'America/Eirunepe',
     'eras': ZONE_ERAS_America_Eirunepe
@@ -3478,6 +3411,7 @@ ZONE_ERAS_America_El_Salvador = [
     },
 
 ]
+
 ZONE_INFO_America_El_Salvador = {
     'name': 'America/El_Salvador',
     'eras': ZONE_ERAS_America_El_Salvador
@@ -3527,6 +3461,7 @@ ZONE_ERAS_America_Fort_Nelson = [
     },
 
 ]
+
 ZONE_INFO_America_Fort_Nelson = {
     'name': 'America/Fort_Nelson',
     'eras': ZONE_ERAS_America_Fort_Nelson
@@ -3612,6 +3547,7 @@ ZONE_ERAS_America_Fortaleza = [
     },
 
 ]
+
 ZONE_INFO_America_Fortaleza = {
     'name': 'America/Fortaleza',
     'eras': ZONE_ERAS_America_Fortaleza
@@ -3649,6 +3585,7 @@ ZONE_ERAS_America_Glace_Bay = [
     },
 
 ]
+
 ZONE_INFO_America_Glace_Bay = {
     'name': 'America/Glace_Bay',
     'eras': ZONE_ERAS_America_Glace_Bay
@@ -3686,6 +3623,7 @@ ZONE_ERAS_America_Goose_Bay = [
     },
 
 ]
+
 ZONE_INFO_America_Goose_Bay = {
     'name': 'America/Goose_Bay',
     'eras': ZONE_ERAS_America_Goose_Bay
@@ -3747,6 +3685,7 @@ ZONE_ERAS_America_Grand_Turk = [
     },
 
 ]
+
 ZONE_INFO_America_Grand_Turk = {
     'name': 'America/Grand_Turk',
     'eras': ZONE_ERAS_America_Grand_Turk
@@ -3772,6 +3711,7 @@ ZONE_ERAS_America_Guatemala = [
     },
 
 ]
+
 ZONE_INFO_America_Guatemala = {
     'name': 'America/Guatemala',
     'eras': ZONE_ERAS_America_Guatemala
@@ -3797,6 +3737,7 @@ ZONE_ERAS_America_Guayaquil = [
     },
 
 ]
+
 ZONE_INFO_America_Guayaquil = {
     'name': 'America/Guayaquil',
     'eras': ZONE_ERAS_America_Guayaquil
@@ -3808,28 +3749,28 @@ ZONE_INFO_America_Guayaquil = {
 #---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Guyana = [
-    #             -3:45    -    -0345    1975 Jul 31
+    #             -3:45    -    -0345    1975 Aug  1
     {
       'offset_seconds': -13500,
       'zone_policy': '-',
       'rules_delta_seconds': 0,
       'format': '-0345',
       'until_year': 1975,
-      'until_month': 7,
-      'until_day': 31,
+      'until_month': 8,
+      'until_day': 1,
       'until_seconds': 0,
       'until_time_suffix': 'w',
     },
-    #             -3:00    -    -03    1991
+    #             -3:00    -    -03    1992 Mar 29  1:00
     {
       'offset_seconds': -10800,
       'zone_policy': '-',
       'rules_delta_seconds': 0,
       'format': '-03',
-      'until_year': 1991,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
+      'until_year': 1992,
+      'until_month': 3,
+      'until_day': 29,
+      'until_seconds': 3600,
       'until_time_suffix': 'w',
     },
     #             -4:00    -    -04
@@ -3846,6 +3787,7 @@ ZONE_ERAS_America_Guyana = [
     },
 
 ]
+
 ZONE_INFO_America_Guyana = {
     'name': 'America/Guyana',
     'eras': ZONE_ERAS_America_Guyana
@@ -3883,6 +3825,7 @@ ZONE_ERAS_America_Halifax = [
     },
 
 ]
+
 ZONE_INFO_America_Halifax = {
     'name': 'America/Halifax',
     'eras': ZONE_ERAS_America_Halifax
@@ -3908,6 +3851,7 @@ ZONE_ERAS_America_Havana = [
     },
 
 ]
+
 ZONE_INFO_America_Havana = {
     'name': 'America/Havana',
     'eras': ZONE_ERAS_America_Havana
@@ -3945,6 +3889,7 @@ ZONE_ERAS_America_Hermosillo = [
     },
 
 ]
+
 ZONE_INFO_America_Hermosillo = {
     'name': 'America/Hermosillo',
     'eras': ZONE_ERAS_America_Hermosillo
@@ -3982,6 +3927,7 @@ ZONE_ERAS_America_Indiana_Indianapolis = [
     },
 
 ]
+
 ZONE_INFO_America_Indiana_Indianapolis = {
     'name': 'America/Indiana/Indianapolis',
     'eras': ZONE_ERAS_America_Indiana_Indianapolis
@@ -4031,6 +3977,7 @@ ZONE_ERAS_America_Indiana_Knox = [
     },
 
 ]
+
 ZONE_INFO_America_Indiana_Knox = {
     'name': 'America/Indiana/Knox',
     'eras': ZONE_ERAS_America_Indiana_Knox
@@ -4104,6 +4051,7 @@ ZONE_ERAS_America_Indiana_Marengo = [
     },
 
 ]
+
 ZONE_INFO_America_Indiana_Marengo = {
     'name': 'America/Indiana/Marengo',
     'eras': ZONE_ERAS_America_Indiana_Marengo
@@ -4165,6 +4113,7 @@ ZONE_ERAS_America_Indiana_Petersburg = [
     },
 
 ]
+
 ZONE_INFO_America_Indiana_Petersburg = {
     'name': 'America/Indiana/Petersburg',
     'eras': ZONE_ERAS_America_Indiana_Petersburg
@@ -4202,6 +4151,7 @@ ZONE_ERAS_America_Indiana_Tell_City = [
     },
 
 ]
+
 ZONE_INFO_America_Indiana_Tell_City = {
     'name': 'America/Indiana/Tell_City',
     'eras': ZONE_ERAS_America_Indiana_Tell_City
@@ -4251,6 +4201,7 @@ ZONE_ERAS_America_Indiana_Vevay = [
     },
 
 ]
+
 ZONE_INFO_America_Indiana_Vevay = {
     'name': 'America/Indiana/Vevay',
     'eras': ZONE_ERAS_America_Indiana_Vevay
@@ -4300,6 +4251,7 @@ ZONE_ERAS_America_Indiana_Vincennes = [
     },
 
 ]
+
 ZONE_INFO_America_Indiana_Vincennes = {
     'name': 'America/Indiana/Vincennes',
     'eras': ZONE_ERAS_America_Indiana_Vincennes
@@ -4349,6 +4301,7 @@ ZONE_ERAS_America_Indiana_Winamac = [
     },
 
 ]
+
 ZONE_INFO_America_Indiana_Winamac = {
     'name': 'America/Indiana/Winamac',
     'eras': ZONE_ERAS_America_Indiana_Winamac
@@ -4398,6 +4351,7 @@ ZONE_ERAS_America_Inuvik = [
     },
 
 ]
+
 ZONE_INFO_America_Inuvik = {
     'name': 'America/Inuvik',
     'eras': ZONE_ERAS_America_Inuvik
@@ -4447,6 +4401,7 @@ ZONE_ERAS_America_Iqaluit = [
     },
 
 ]
+
 ZONE_INFO_America_Iqaluit = {
     'name': 'America/Iqaluit',
     'eras': ZONE_ERAS_America_Iqaluit
@@ -4496,6 +4451,7 @@ ZONE_ERAS_America_Jamaica = [
     },
 
 ]
+
 ZONE_INFO_America_Jamaica = {
     'name': 'America/Jamaica',
     'eras': ZONE_ERAS_America_Jamaica
@@ -4569,6 +4525,7 @@ ZONE_ERAS_America_Juneau = [
     },
 
 ]
+
 ZONE_INFO_America_Juneau = {
     'name': 'America/Juneau',
     'eras': ZONE_ERAS_America_Juneau
@@ -4618,6 +4575,7 @@ ZONE_ERAS_America_Kentucky_Louisville = [
     },
 
 ]
+
 ZONE_INFO_America_Kentucky_Louisville = {
     'name': 'America/Kentucky/Louisville',
     'eras': ZONE_ERAS_America_Kentucky_Louisville
@@ -4655,6 +4613,7 @@ ZONE_ERAS_America_Kentucky_Monticello = [
     },
 
 ]
+
 ZONE_INFO_America_Kentucky_Monticello = {
     'name': 'America/Kentucky/Monticello',
     'eras': ZONE_ERAS_America_Kentucky_Monticello
@@ -4680,6 +4639,7 @@ ZONE_ERAS_America_La_Paz = [
     },
 
 ]
+
 ZONE_INFO_America_La_Paz = {
     'name': 'America/La_Paz',
     'eras': ZONE_ERAS_America_La_Paz
@@ -4705,6 +4665,7 @@ ZONE_ERAS_America_Lima = [
     },
 
 ]
+
 ZONE_INFO_America_Lima = {
     'name': 'America/Lima',
     'eras': ZONE_ERAS_America_Lima
@@ -4730,6 +4691,7 @@ ZONE_ERAS_America_Los_Angeles = [
     },
 
 ]
+
 ZONE_INFO_America_Los_Angeles = {
     'name': 'America/Los_Angeles',
     'eras': ZONE_ERAS_America_Los_Angeles
@@ -4839,6 +4801,7 @@ ZONE_ERAS_America_Maceio = [
     },
 
 ]
+
 ZONE_INFO_America_Maceio = {
     'name': 'America/Maceio',
     'eras': ZONE_ERAS_America_Maceio
@@ -4936,6 +4899,7 @@ ZONE_ERAS_America_Managua = [
     },
 
 ]
+
 ZONE_INFO_America_Managua = {
     'name': 'America/Managua',
     'eras': ZONE_ERAS_America_Managua
@@ -4997,6 +4961,7 @@ ZONE_ERAS_America_Manaus = [
     },
 
 ]
+
 ZONE_INFO_America_Manaus = {
     'name': 'America/Manaus',
     'eras': ZONE_ERAS_America_Manaus
@@ -5046,6 +5011,7 @@ ZONE_ERAS_America_Martinique = [
     },
 
 ]
+
 ZONE_INFO_America_Martinique = {
     'name': 'America/Martinique',
     'eras': ZONE_ERAS_America_Martinique
@@ -5107,6 +5073,7 @@ ZONE_ERAS_America_Matamoros = [
     },
 
 ]
+
 ZONE_INFO_America_Matamoros = {
     'name': 'America/Matamoros',
     'eras': ZONE_ERAS_America_Matamoros
@@ -5132,6 +5099,7 @@ ZONE_ERAS_America_Mazatlan = [
     },
 
 ]
+
 ZONE_INFO_America_Mazatlan = {
     'name': 'America/Mazatlan',
     'eras': ZONE_ERAS_America_Mazatlan
@@ -5169,6 +5137,7 @@ ZONE_ERAS_America_Menominee = [
     },
 
 ]
+
 ZONE_INFO_America_Menominee = {
     'name': 'America/Menominee',
     'eras': ZONE_ERAS_America_Menominee
@@ -5218,6 +5187,7 @@ ZONE_ERAS_America_Merida = [
     },
 
 ]
+
 ZONE_INFO_America_Merida = {
     'name': 'America/Merida',
     'eras': ZONE_ERAS_America_Merida
@@ -5291,6 +5261,7 @@ ZONE_ERAS_America_Metlakatla = [
     },
 
 ]
+
 ZONE_INFO_America_Metlakatla = {
     'name': 'America/Metlakatla',
     'eras': ZONE_ERAS_America_Metlakatla
@@ -5340,6 +5311,7 @@ ZONE_ERAS_America_Mexico_City = [
     },
 
 ]
+
 ZONE_INFO_America_Mexico_City = {
     'name': 'America/Mexico_City',
     'eras': ZONE_ERAS_America_Mexico_City
@@ -5389,6 +5361,7 @@ ZONE_ERAS_America_Miquelon = [
     },
 
 ]
+
 ZONE_INFO_America_Miquelon = {
     'name': 'America/Miquelon',
     'eras': ZONE_ERAS_America_Miquelon
@@ -5450,6 +5423,7 @@ ZONE_ERAS_America_Moncton = [
     },
 
 ]
+
 ZONE_INFO_America_Moncton = {
     'name': 'America/Moncton',
     'eras': ZONE_ERAS_America_Moncton
@@ -5499,6 +5473,7 @@ ZONE_ERAS_America_Monterrey = [
     },
 
 ]
+
 ZONE_INFO_America_Monterrey = {
     'name': 'America/Monterrey',
     'eras': ZONE_ERAS_America_Monterrey
@@ -5560,46 +5535,10 @@ ZONE_ERAS_America_Montevideo = [
     },
 
 ]
+
 ZONE_INFO_America_Montevideo = {
     'name': 'America/Montevideo',
     'eras': ZONE_ERAS_America_Montevideo
-}
-
-#---------------------------------------------------------------------------
-# Zone name: America/Nassau
-# Era count: 2
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_America_Nassau = [
-    #             -5:00    Bahamas    E%sT    1976
-    {
-      'offset_seconds': -18000,
-      'zone_policy': ZONE_POLICY_Bahamas,
-      'rules_delta_seconds': 0,
-      'format': 'E%sT',
-      'until_year': 1976,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-    #             -5:00    US    E%sT
-    {
-      'offset_seconds': -18000,
-      'zone_policy': ZONE_POLICY_US,
-      'rules_delta_seconds': 0,
-      'format': 'E%sT',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-ZONE_INFO_America_Nassau = {
-    'name': 'America/Nassau',
-    'eras': ZONE_ERAS_America_Nassau
 }
 
 #---------------------------------------------------------------------------
@@ -5622,6 +5561,7 @@ ZONE_ERAS_America_New_York = [
     },
 
 ]
+
 ZONE_INFO_America_New_York = {
     'name': 'America/New_York',
     'eras': ZONE_ERAS_America_New_York
@@ -5647,6 +5587,7 @@ ZONE_ERAS_America_Nipigon = [
     },
 
 ]
+
 ZONE_INFO_America_Nipigon = {
     'name': 'America/Nipigon',
     'eras': ZONE_ERAS_America_Nipigon
@@ -5696,6 +5637,7 @@ ZONE_ERAS_America_Nome = [
     },
 
 ]
+
 ZONE_INFO_America_Nome = {
     'name': 'America/Nome',
     'eras': ZONE_ERAS_America_Nome
@@ -5781,6 +5723,7 @@ ZONE_ERAS_America_Noronha = [
     },
 
 ]
+
 ZONE_INFO_America_Noronha = {
     'name': 'America/Noronha',
     'eras': ZONE_ERAS_America_Noronha
@@ -5818,6 +5761,7 @@ ZONE_ERAS_America_North_Dakota_Beulah = [
     },
 
 ]
+
 ZONE_INFO_America_North_Dakota_Beulah = {
     'name': 'America/North_Dakota/Beulah',
     'eras': ZONE_ERAS_America_North_Dakota_Beulah
@@ -5855,6 +5799,7 @@ ZONE_ERAS_America_North_Dakota_Center = [
     },
 
 ]
+
 ZONE_INFO_America_North_Dakota_Center = {
     'name': 'America/North_Dakota/Center',
     'eras': ZONE_ERAS_America_North_Dakota_Center
@@ -5892,6 +5837,7 @@ ZONE_ERAS_America_North_Dakota_New_Salem = [
     },
 
 ]
+
 ZONE_INFO_America_North_Dakota_New_Salem = {
     'name': 'America/North_Dakota/New_Salem',
     'eras': ZONE_ERAS_America_North_Dakota_New_Salem
@@ -5929,6 +5875,7 @@ ZONE_ERAS_America_Nuuk = [
     },
 
 ]
+
 ZONE_INFO_America_Nuuk = {
     'name': 'America/Nuuk',
     'eras': ZONE_ERAS_America_Nuuk
@@ -6002,6 +5949,7 @@ ZONE_ERAS_America_Ojinaga = [
     },
 
 ]
+
 ZONE_INFO_America_Ojinaga = {
     'name': 'America/Ojinaga',
     'eras': ZONE_ERAS_America_Ojinaga
@@ -6027,6 +5975,7 @@ ZONE_ERAS_America_Panama = [
     },
 
 ]
+
 ZONE_INFO_America_Panama = {
     'name': 'America/Panama',
     'eras': ZONE_ERAS_America_Panama
@@ -6088,6 +6037,7 @@ ZONE_ERAS_America_Pangnirtung = [
     },
 
 ]
+
 ZONE_INFO_America_Pangnirtung = {
     'name': 'America/Pangnirtung',
     'eras': ZONE_ERAS_America_Pangnirtung
@@ -6125,6 +6075,7 @@ ZONE_ERAS_America_Paramaribo = [
     },
 
 ]
+
 ZONE_INFO_America_Paramaribo = {
     'name': 'America/Paramaribo',
     'eras': ZONE_ERAS_America_Paramaribo
@@ -6150,6 +6101,7 @@ ZONE_ERAS_America_Phoenix = [
     },
 
 ]
+
 ZONE_INFO_America_Phoenix = {
     'name': 'America/Phoenix',
     'eras': ZONE_ERAS_America_Phoenix
@@ -6175,34 +6127,10 @@ ZONE_ERAS_America_Port_au_Prince = [
     },
 
 ]
+
 ZONE_INFO_America_Port_au_Prince = {
     'name': 'America/Port-au-Prince',
     'eras': ZONE_ERAS_America_Port_au_Prince
-}
-
-#---------------------------------------------------------------------------
-# Zone name: America/Port_of_Spain
-# Era count: 1
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_America_Port_of_Spain = [
-    #             -4:00    -    AST
-    {
-      'offset_seconds': -14400,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': 'AST',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-ZONE_INFO_America_Port_of_Spain = {
-    'name': 'America/Port_of_Spain',
-    'eras': ZONE_ERAS_America_Port_of_Spain
 }
 
 #---------------------------------------------------------------------------
@@ -6237,6 +6165,7 @@ ZONE_ERAS_America_Porto_Velho = [
     },
 
 ]
+
 ZONE_INFO_America_Porto_Velho = {
     'name': 'America/Porto_Velho',
     'eras': ZONE_ERAS_America_Porto_Velho
@@ -6262,6 +6191,7 @@ ZONE_ERAS_America_Puerto_Rico = [
     },
 
 ]
+
 ZONE_INFO_America_Puerto_Rico = {
     'name': 'America/Puerto_Rico',
     'eras': ZONE_ERAS_America_Puerto_Rico
@@ -6299,6 +6229,7 @@ ZONE_ERAS_America_Punta_Arenas = [
     },
 
 ]
+
 ZONE_INFO_America_Punta_Arenas = {
     'name': 'America/Punta_Arenas',
     'eras': ZONE_ERAS_America_Punta_Arenas
@@ -6324,6 +6255,7 @@ ZONE_ERAS_America_Rainy_River = [
     },
 
 ]
+
 ZONE_INFO_America_Rainy_River = {
     'name': 'America/Rainy_River',
     'eras': ZONE_ERAS_America_Rainy_River
@@ -6373,6 +6305,7 @@ ZONE_ERAS_America_Rankin_Inlet = [
     },
 
 ]
+
 ZONE_INFO_America_Rankin_Inlet = {
     'name': 'America/Rankin_Inlet',
     'eras': ZONE_ERAS_America_Rankin_Inlet
@@ -6458,6 +6391,7 @@ ZONE_ERAS_America_Recife = [
     },
 
 ]
+
 ZONE_INFO_America_Recife = {
     'name': 'America/Recife',
     'eras': ZONE_ERAS_America_Recife
@@ -6483,6 +6417,7 @@ ZONE_ERAS_America_Regina = [
     },
 
 ]
+
 ZONE_INFO_America_Regina = {
     'name': 'America/Regina',
     'eras': ZONE_ERAS_America_Regina
@@ -6556,6 +6491,7 @@ ZONE_ERAS_America_Resolute = [
     },
 
 ]
+
 ZONE_INFO_America_Resolute = {
     'name': 'America/Resolute',
     'eras': ZONE_ERAS_America_Resolute
@@ -6617,6 +6553,7 @@ ZONE_ERAS_America_Rio_Branco = [
     },
 
 ]
+
 ZONE_INFO_America_Rio_Branco = {
     'name': 'America/Rio_Branco',
     'eras': ZONE_ERAS_America_Rio_Branco
@@ -6666,6 +6603,7 @@ ZONE_ERAS_America_Santarem = [
     },
 
 ]
+
 ZONE_INFO_America_Santarem = {
     'name': 'America/Santarem',
     'eras': ZONE_ERAS_America_Santarem
@@ -6691,6 +6629,7 @@ ZONE_ERAS_America_Santiago = [
     },
 
 ]
+
 ZONE_INFO_America_Santiago = {
     'name': 'America/Santiago',
     'eras': ZONE_ERAS_America_Santiago
@@ -6752,6 +6691,7 @@ ZONE_ERAS_America_Santo_Domingo = [
     },
 
 ]
+
 ZONE_INFO_America_Santo_Domingo = {
     'name': 'America/Santo_Domingo',
     'eras': ZONE_ERAS_America_Santo_Domingo
@@ -6777,6 +6717,7 @@ ZONE_ERAS_America_Sao_Paulo = [
     },
 
 ]
+
 ZONE_INFO_America_Sao_Paulo = {
     'name': 'America/Sao_Paulo',
     'eras': ZONE_ERAS_America_Sao_Paulo
@@ -6826,6 +6767,7 @@ ZONE_ERAS_America_Scoresbysund = [
     },
 
 ]
+
 ZONE_INFO_America_Scoresbysund = {
     'name': 'America/Scoresbysund',
     'eras': ZONE_ERAS_America_Scoresbysund
@@ -6875,6 +6817,7 @@ ZONE_ERAS_America_Sitka = [
     },
 
 ]
+
 ZONE_INFO_America_Sitka = {
     'name': 'America/Sitka',
     'eras': ZONE_ERAS_America_Sitka
@@ -6912,6 +6855,7 @@ ZONE_ERAS_America_St_Johns = [
     },
 
 ]
+
 ZONE_INFO_America_St_Johns = {
     'name': 'America/St_Johns',
     'eras': ZONE_ERAS_America_St_Johns
@@ -6937,6 +6881,7 @@ ZONE_ERAS_America_Swift_Current = [
     },
 
 ]
+
 ZONE_INFO_America_Swift_Current = {
     'name': 'America/Swift_Current',
     'eras': ZONE_ERAS_America_Swift_Current
@@ -6962,6 +6907,7 @@ ZONE_ERAS_America_Tegucigalpa = [
     },
 
 ]
+
 ZONE_INFO_America_Tegucigalpa = {
     'name': 'America/Tegucigalpa',
     'eras': ZONE_ERAS_America_Tegucigalpa
@@ -6987,6 +6933,7 @@ ZONE_ERAS_America_Thule = [
     },
 
 ]
+
 ZONE_INFO_America_Thule = {
     'name': 'America/Thule',
     'eras': ZONE_ERAS_America_Thule
@@ -7036,6 +6983,7 @@ ZONE_ERAS_America_Thunder_Bay = [
     },
 
 ]
+
 ZONE_INFO_America_Thunder_Bay = {
     'name': 'America/Thunder_Bay',
     'eras': ZONE_ERAS_America_Thunder_Bay
@@ -7121,6 +7069,7 @@ ZONE_ERAS_America_Tijuana = [
     },
 
 ]
+
 ZONE_INFO_America_Tijuana = {
     'name': 'America/Tijuana',
     'eras': ZONE_ERAS_America_Tijuana
@@ -7158,6 +7107,7 @@ ZONE_ERAS_America_Toronto = [
     },
 
 ]
+
 ZONE_INFO_America_Toronto = {
     'name': 'America/Toronto',
     'eras': ZONE_ERAS_America_Toronto
@@ -7195,6 +7145,7 @@ ZONE_ERAS_America_Vancouver = [
     },
 
 ]
+
 ZONE_INFO_America_Vancouver = {
     'name': 'America/Vancouver',
     'eras': ZONE_ERAS_America_Vancouver
@@ -7244,6 +7195,7 @@ ZONE_ERAS_America_Whitehorse = [
     },
 
 ]
+
 ZONE_INFO_America_Whitehorse = {
     'name': 'America/Whitehorse',
     'eras': ZONE_ERAS_America_Whitehorse
@@ -7281,6 +7233,7 @@ ZONE_ERAS_America_Winnipeg = [
     },
 
 ]
+
 ZONE_INFO_America_Winnipeg = {
     'name': 'America/Winnipeg',
     'eras': ZONE_ERAS_America_Winnipeg
@@ -7318,6 +7271,7 @@ ZONE_ERAS_America_Yakutat = [
     },
 
 ]
+
 ZONE_INFO_America_Yakutat = {
     'name': 'America/Yakutat',
     'eras': ZONE_ERAS_America_Yakutat
@@ -7355,6 +7309,7 @@ ZONE_ERAS_America_Yellowknife = [
     },
 
 ]
+
 ZONE_INFO_America_Yellowknife = {
     'name': 'America/Yellowknife',
     'eras': ZONE_ERAS_America_Yellowknife
@@ -7512,6 +7467,7 @@ ZONE_ERAS_Antarctica_Casey = [
     },
 
 ]
+
 ZONE_INFO_Antarctica_Casey = {
     'name': 'Antarctica/Casey',
     'eras': ZONE_ERAS_Antarctica_Casey
@@ -7585,34 +7541,10 @@ ZONE_ERAS_Antarctica_Davis = [
     },
 
 ]
+
 ZONE_INFO_Antarctica_Davis = {
     'name': 'Antarctica/Davis',
     'eras': ZONE_ERAS_Antarctica_Davis
-}
-
-#---------------------------------------------------------------------------
-# Zone name: Antarctica/DumontDUrville
-# Era count: 1
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_Antarctica_DumontDUrville = [
-    #             10:00    -    +10
-    {
-      'offset_seconds': 36000,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': '+10',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-ZONE_INFO_Antarctica_DumontDUrville = {
-    'name': 'Antarctica/DumontDUrville',
-    'eras': ZONE_ERAS_Antarctica_DumontDUrville
 }
 
 #---------------------------------------------------------------------------
@@ -7659,6 +7591,7 @@ ZONE_ERAS_Antarctica_Macquarie = [
     },
 
 ]
+
 ZONE_INFO_Antarctica_Macquarie = {
     'name': 'Antarctica/Macquarie',
     'eras': ZONE_ERAS_Antarctica_Macquarie
@@ -7696,6 +7629,7 @@ ZONE_ERAS_Antarctica_Mawson = [
     },
 
 ]
+
 ZONE_INFO_Antarctica_Mawson = {
     'name': 'Antarctica/Mawson',
     'eras': ZONE_ERAS_Antarctica_Mawson
@@ -7745,6 +7679,7 @@ ZONE_ERAS_Antarctica_Palmer = [
     },
 
 ]
+
 ZONE_INFO_Antarctica_Palmer = {
     'name': 'Antarctica/Palmer',
     'eras': ZONE_ERAS_Antarctica_Palmer
@@ -7782,34 +7717,10 @@ ZONE_ERAS_Antarctica_Rothera = [
     },
 
 ]
+
 ZONE_INFO_Antarctica_Rothera = {
     'name': 'Antarctica/Rothera',
     'eras': ZONE_ERAS_Antarctica_Rothera
-}
-
-#---------------------------------------------------------------------------
-# Zone name: Antarctica/Syowa
-# Era count: 1
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_Antarctica_Syowa = [
-    #             3:00    -    +03
-    {
-      'offset_seconds': 10800,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': '+03',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-ZONE_INFO_Antarctica_Syowa = {
-    'name': 'Antarctica/Syowa',
-    'eras': ZONE_ERAS_Antarctica_Syowa
 }
 
 #---------------------------------------------------------------------------
@@ -7844,6 +7755,7 @@ ZONE_ERAS_Antarctica_Troll = [
     },
 
 ]
+
 ZONE_INFO_Antarctica_Troll = {
     'name': 'Antarctica/Troll',
     'eras': ZONE_ERAS_Antarctica_Troll
@@ -7869,6 +7781,7 @@ ZONE_ERAS_Antarctica_Vostok = [
     },
 
 ]
+
 ZONE_INFO_Antarctica_Vostok = {
     'name': 'Antarctica/Vostok',
     'eras': ZONE_ERAS_Antarctica_Vostok
@@ -7930,6 +7843,7 @@ ZONE_ERAS_Asia_Almaty = [
     },
 
 ]
+
 ZONE_INFO_Asia_Almaty = {
     'name': 'Asia/Almaty',
     'eras': ZONE_ERAS_Asia_Almaty
@@ -7955,6 +7869,7 @@ ZONE_ERAS_Asia_Amman = [
     },
 
 ]
+
 ZONE_INFO_Asia_Amman = {
     'name': 'Asia/Amman',
     'eras': ZONE_ERAS_Asia_Amman
@@ -8040,6 +7955,7 @@ ZONE_ERAS_Asia_Anadyr = [
     },
 
 ]
+
 ZONE_INFO_Asia_Anadyr = {
     'name': 'Asia/Anadyr',
     'eras': ZONE_ERAS_Asia_Anadyr
@@ -8137,6 +8053,7 @@ ZONE_ERAS_Asia_Aqtau = [
     },
 
 ]
+
 ZONE_INFO_Asia_Aqtau = {
     'name': 'Asia/Aqtau',
     'eras': ZONE_ERAS_Asia_Aqtau
@@ -8234,6 +8151,7 @@ ZONE_ERAS_Asia_Aqtobe = [
     },
 
 ]
+
 ZONE_INFO_Asia_Aqtobe = {
     'name': 'Asia/Aqtobe',
     'eras': ZONE_ERAS_Asia_Aqtobe
@@ -8283,6 +8201,7 @@ ZONE_ERAS_Asia_Ashgabat = [
     },
 
 ]
+
 ZONE_INFO_Asia_Ashgabat = {
     'name': 'Asia/Ashgabat',
     'eras': ZONE_ERAS_Asia_Ashgabat
@@ -8380,6 +8299,7 @@ ZONE_ERAS_Asia_Atyrau = [
     },
 
 ]
+
 ZONE_INFO_Asia_Atyrau = {
     'name': 'Asia/Atyrau',
     'eras': ZONE_ERAS_Asia_Atyrau
@@ -8417,6 +8337,7 @@ ZONE_ERAS_Asia_Baghdad = [
     },
 
 ]
+
 ZONE_INFO_Asia_Baghdad = {
     'name': 'Asia/Baghdad',
     'eras': ZONE_ERAS_Asia_Baghdad
@@ -8490,6 +8411,7 @@ ZONE_ERAS_Asia_Baku = [
     },
 
 ]
+
 ZONE_INFO_Asia_Baku = {
     'name': 'Asia/Baku',
     'eras': ZONE_ERAS_Asia_Baku
@@ -8515,6 +8437,7 @@ ZONE_ERAS_Asia_Bangkok = [
     },
 
 ]
+
 ZONE_INFO_Asia_Bangkok = {
     'name': 'Asia/Bangkok',
     'eras': ZONE_ERAS_Asia_Bangkok
@@ -8612,6 +8535,7 @@ ZONE_ERAS_Asia_Barnaul = [
     },
 
 ]
+
 ZONE_INFO_Asia_Barnaul = {
     'name': 'Asia/Barnaul',
     'eras': ZONE_ERAS_Asia_Barnaul
@@ -8637,6 +8561,7 @@ ZONE_ERAS_Asia_Beirut = [
     },
 
 ]
+
 ZONE_INFO_Asia_Beirut = {
     'name': 'Asia/Beirut',
     'eras': ZONE_ERAS_Asia_Beirut
@@ -8698,6 +8623,7 @@ ZONE_ERAS_Asia_Bishkek = [
     },
 
 ]
+
 ZONE_INFO_Asia_Bishkek = {
     'name': 'Asia/Bishkek',
     'eras': ZONE_ERAS_Asia_Bishkek
@@ -8723,6 +8649,7 @@ ZONE_ERAS_Asia_Brunei = [
     },
 
 ]
+
 ZONE_INFO_Asia_Brunei = {
     'name': 'Asia/Brunei',
     'eras': ZONE_ERAS_Asia_Brunei
@@ -8808,6 +8735,7 @@ ZONE_ERAS_Asia_Chita = [
     },
 
 ]
+
 ZONE_INFO_Asia_Chita = {
     'name': 'Asia/Chita',
     'eras': ZONE_ERAS_Asia_Chita
@@ -8869,6 +8797,7 @@ ZONE_ERAS_Asia_Choibalsan = [
     },
 
 ]
+
 ZONE_INFO_Asia_Choibalsan = {
     'name': 'Asia/Choibalsan',
     'eras': ZONE_ERAS_Asia_Choibalsan
@@ -8930,6 +8859,7 @@ ZONE_ERAS_Asia_Colombo = [
     },
 
 ]
+
 ZONE_INFO_Asia_Colombo = {
     'name': 'Asia/Colombo',
     'eras': ZONE_ERAS_Asia_Colombo
@@ -8955,6 +8885,7 @@ ZONE_ERAS_Asia_Damascus = [
     },
 
 ]
+
 ZONE_INFO_Asia_Damascus = {
     'name': 'Asia/Damascus',
     'eras': ZONE_ERAS_Asia_Damascus
@@ -8992,6 +8923,7 @@ ZONE_ERAS_Asia_Dhaka = [
     },
 
 ]
+
 ZONE_INFO_Asia_Dhaka = {
     'name': 'Asia/Dhaka',
     'eras': ZONE_ERAS_Asia_Dhaka
@@ -9041,6 +8973,7 @@ ZONE_ERAS_Asia_Dili = [
     },
 
 ]
+
 ZONE_INFO_Asia_Dili = {
     'name': 'Asia/Dili',
     'eras': ZONE_ERAS_Asia_Dili
@@ -9066,6 +8999,7 @@ ZONE_ERAS_Asia_Dubai = [
     },
 
 ]
+
 ZONE_INFO_Asia_Dubai = {
     'name': 'Asia/Dubai',
     'eras': ZONE_ERAS_Asia_Dubai
@@ -9115,6 +9049,7 @@ ZONE_ERAS_Asia_Dushanbe = [
     },
 
 ]
+
 ZONE_INFO_Asia_Dushanbe = {
     'name': 'Asia/Dushanbe',
     'eras': ZONE_ERAS_Asia_Dushanbe
@@ -9176,6 +9111,7 @@ ZONE_ERAS_Asia_Famagusta = [
     },
 
 ]
+
 ZONE_INFO_Asia_Famagusta = {
     'name': 'Asia/Famagusta',
     'eras': ZONE_ERAS_Asia_Famagusta
@@ -9297,6 +9233,7 @@ ZONE_ERAS_Asia_Gaza = [
     },
 
 ]
+
 ZONE_INFO_Asia_Gaza = {
     'name': 'Asia/Gaza',
     'eras': ZONE_ERAS_Asia_Gaza
@@ -9346,6 +9283,7 @@ ZONE_ERAS_Asia_Hebron = [
     },
 
 ]
+
 ZONE_INFO_Asia_Hebron = {
     'name': 'Asia/Hebron',
     'eras': ZONE_ERAS_Asia_Hebron
@@ -9383,6 +9321,7 @@ ZONE_ERAS_Asia_Ho_Chi_Minh = [
     },
 
 ]
+
 ZONE_INFO_Asia_Ho_Chi_Minh = {
     'name': 'Asia/Ho_Chi_Minh',
     'eras': ZONE_ERAS_Asia_Ho_Chi_Minh
@@ -9408,6 +9347,7 @@ ZONE_ERAS_Asia_Hong_Kong = [
     },
 
 ]
+
 ZONE_INFO_Asia_Hong_Kong = {
     'name': 'Asia/Hong_Kong',
     'eras': ZONE_ERAS_Asia_Hong_Kong
@@ -9445,6 +9385,7 @@ ZONE_ERAS_Asia_Hovd = [
     },
 
 ]
+
 ZONE_INFO_Asia_Hovd = {
     'name': 'Asia/Hovd',
     'eras': ZONE_ERAS_Asia_Hovd
@@ -9518,6 +9459,7 @@ ZONE_ERAS_Asia_Irkutsk = [
     },
 
 ]
+
 ZONE_INFO_Asia_Irkutsk = {
     'name': 'Asia/Irkutsk',
     'eras': ZONE_ERAS_Asia_Irkutsk
@@ -9543,6 +9485,7 @@ ZONE_ERAS_Asia_Jakarta = [
     },
 
 ]
+
 ZONE_INFO_Asia_Jakarta = {
     'name': 'Asia/Jakarta',
     'eras': ZONE_ERAS_Asia_Jakarta
@@ -9568,6 +9511,7 @@ ZONE_ERAS_Asia_Jayapura = [
     },
 
 ]
+
 ZONE_INFO_Asia_Jayapura = {
     'name': 'Asia/Jayapura',
     'eras': ZONE_ERAS_Asia_Jayapura
@@ -9593,6 +9537,7 @@ ZONE_ERAS_Asia_Jerusalem = [
     },
 
 ]
+
 ZONE_INFO_Asia_Jerusalem = {
     'name': 'Asia/Jerusalem',
     'eras': ZONE_ERAS_Asia_Jerusalem
@@ -9618,6 +9563,7 @@ ZONE_ERAS_Asia_Kabul = [
     },
 
 ]
+
 ZONE_INFO_Asia_Kabul = {
     'name': 'Asia/Kabul',
     'eras': ZONE_ERAS_Asia_Kabul
@@ -9691,6 +9637,7 @@ ZONE_ERAS_Asia_Kamchatka = [
     },
 
 ]
+
 ZONE_INFO_Asia_Kamchatka = {
     'name': 'Asia/Kamchatka',
     'eras': ZONE_ERAS_Asia_Kamchatka
@@ -9716,6 +9663,7 @@ ZONE_ERAS_Asia_Karachi = [
     },
 
 ]
+
 ZONE_INFO_Asia_Karachi = {
     'name': 'Asia/Karachi',
     'eras': ZONE_ERAS_Asia_Karachi
@@ -9753,6 +9701,7 @@ ZONE_ERAS_Asia_Kathmandu = [
     },
 
 ]
+
 ZONE_INFO_Asia_Kathmandu = {
     'name': 'Asia/Kathmandu',
     'eras': ZONE_ERAS_Asia_Kathmandu
@@ -9850,6 +9799,7 @@ ZONE_ERAS_Asia_Khandyga = [
     },
 
 ]
+
 ZONE_INFO_Asia_Khandyga = {
     'name': 'Asia/Khandyga',
     'eras': ZONE_ERAS_Asia_Khandyga
@@ -9875,6 +9825,7 @@ ZONE_ERAS_Asia_Kolkata = [
     },
 
 ]
+
 ZONE_INFO_Asia_Kolkata = {
     'name': 'Asia/Kolkata',
     'eras': ZONE_ERAS_Asia_Kolkata
@@ -9948,6 +9899,7 @@ ZONE_ERAS_Asia_Krasnoyarsk = [
     },
 
 ]
+
 ZONE_INFO_Asia_Krasnoyarsk = {
     'name': 'Asia/Krasnoyarsk',
     'eras': ZONE_ERAS_Asia_Krasnoyarsk
@@ -9985,6 +9937,7 @@ ZONE_ERAS_Asia_Kuala_Lumpur = [
     },
 
 ]
+
 ZONE_INFO_Asia_Kuala_Lumpur = {
     'name': 'Asia/Kuala_Lumpur',
     'eras': ZONE_ERAS_Asia_Kuala_Lumpur
@@ -10010,6 +9963,7 @@ ZONE_ERAS_Asia_Kuching = [
     },
 
 ]
+
 ZONE_INFO_Asia_Kuching = {
     'name': 'Asia/Kuching',
     'eras': ZONE_ERAS_Asia_Kuching
@@ -10035,6 +9989,7 @@ ZONE_ERAS_Asia_Macau = [
     },
 
 ]
+
 ZONE_INFO_Asia_Macau = {
     'name': 'Asia/Macau',
     'eras': ZONE_ERAS_Asia_Macau
@@ -10120,6 +10075,7 @@ ZONE_ERAS_Asia_Magadan = [
     },
 
 ]
+
 ZONE_INFO_Asia_Magadan = {
     'name': 'Asia/Magadan',
     'eras': ZONE_ERAS_Asia_Magadan
@@ -10145,6 +10101,7 @@ ZONE_ERAS_Asia_Makassar = [
     },
 
 ]
+
 ZONE_INFO_Asia_Makassar = {
     'name': 'Asia/Makassar',
     'eras': ZONE_ERAS_Asia_Makassar
@@ -10170,6 +10127,7 @@ ZONE_ERAS_Asia_Manila = [
     },
 
 ]
+
 ZONE_INFO_Asia_Manila = {
     'name': 'Asia/Manila',
     'eras': ZONE_ERAS_Asia_Manila
@@ -10207,6 +10165,7 @@ ZONE_ERAS_Asia_Nicosia = [
     },
 
 ]
+
 ZONE_INFO_Asia_Nicosia = {
     'name': 'Asia/Nicosia',
     'eras': ZONE_ERAS_Asia_Nicosia
@@ -10280,6 +10239,7 @@ ZONE_ERAS_Asia_Novokuznetsk = [
     },
 
 ]
+
 ZONE_INFO_Asia_Novokuznetsk = {
     'name': 'Asia/Novokuznetsk',
     'eras': ZONE_ERAS_Asia_Novokuznetsk
@@ -10377,6 +10337,7 @@ ZONE_ERAS_Asia_Novosibirsk = [
     },
 
 ]
+
 ZONE_INFO_Asia_Novosibirsk = {
     'name': 'Asia/Novosibirsk',
     'eras': ZONE_ERAS_Asia_Novosibirsk
@@ -10450,6 +10411,7 @@ ZONE_ERAS_Asia_Omsk = [
     },
 
 ]
+
 ZONE_INFO_Asia_Omsk = {
     'name': 'Asia/Omsk',
     'eras': ZONE_ERAS_Asia_Omsk
@@ -10559,6 +10521,7 @@ ZONE_ERAS_Asia_Oral = [
     },
 
 ]
+
 ZONE_INFO_Asia_Oral = {
     'name': 'Asia/Oral',
     'eras': ZONE_ERAS_Asia_Oral
@@ -10596,6 +10559,7 @@ ZONE_ERAS_Asia_Pontianak = [
     },
 
 ]
+
 ZONE_INFO_Asia_Pontianak = {
     'name': 'Asia/Pontianak',
     'eras': ZONE_ERAS_Asia_Pontianak
@@ -10645,6 +10609,7 @@ ZONE_ERAS_Asia_Pyongyang = [
     },
 
 ]
+
 ZONE_INFO_Asia_Pyongyang = {
     'name': 'Asia/Pyongyang',
     'eras': ZONE_ERAS_Asia_Pyongyang
@@ -10670,6 +10635,7 @@ ZONE_ERAS_Asia_Qatar = [
     },
 
 ]
+
 ZONE_INFO_Asia_Qatar = {
     'name': 'Asia/Qatar',
     'eras': ZONE_ERAS_Asia_Qatar
@@ -10767,6 +10733,7 @@ ZONE_ERAS_Asia_Qostanay = [
     },
 
 ]
+
 ZONE_INFO_Asia_Qostanay = {
     'name': 'Asia/Qostanay',
     'eras': ZONE_ERAS_Asia_Qostanay
@@ -10900,6 +10867,7 @@ ZONE_ERAS_Asia_Qyzylorda = [
     },
 
 ]
+
 ZONE_INFO_Asia_Qyzylorda = {
     'name': 'Asia/Qyzylorda',
     'eras': ZONE_ERAS_Asia_Qyzylorda
@@ -10925,6 +10893,7 @@ ZONE_ERAS_Asia_Riyadh = [
     },
 
 ]
+
 ZONE_INFO_Asia_Riyadh = {
     'name': 'Asia/Riyadh',
     'eras': ZONE_ERAS_Asia_Riyadh
@@ -11022,6 +10991,7 @@ ZONE_ERAS_Asia_Sakhalin = [
     },
 
 ]
+
 ZONE_INFO_Asia_Sakhalin = {
     'name': 'Asia/Sakhalin',
     'eras': ZONE_ERAS_Asia_Sakhalin
@@ -11095,6 +11065,7 @@ ZONE_ERAS_Asia_Samarkand = [
     },
 
 ]
+
 ZONE_INFO_Asia_Samarkand = {
     'name': 'Asia/Samarkand',
     'eras': ZONE_ERAS_Asia_Samarkand
@@ -11120,6 +11091,7 @@ ZONE_ERAS_Asia_Seoul = [
     },
 
 ]
+
 ZONE_INFO_Asia_Seoul = {
     'name': 'Asia/Seoul',
     'eras': ZONE_ERAS_Asia_Seoul
@@ -11145,6 +11117,7 @@ ZONE_ERAS_Asia_Shanghai = [
     },
 
 ]
+
 ZONE_INFO_Asia_Shanghai = {
     'name': 'Asia/Shanghai',
     'eras': ZONE_ERAS_Asia_Shanghai
@@ -11182,6 +11155,7 @@ ZONE_ERAS_Asia_Singapore = [
     },
 
 ]
+
 ZONE_INFO_Asia_Singapore = {
     'name': 'Asia/Singapore',
     'eras': ZONE_ERAS_Asia_Singapore
@@ -11255,6 +11229,7 @@ ZONE_ERAS_Asia_Srednekolymsk = [
     },
 
 ]
+
 ZONE_INFO_Asia_Srednekolymsk = {
     'name': 'Asia/Srednekolymsk',
     'eras': ZONE_ERAS_Asia_Srednekolymsk
@@ -11280,6 +11255,7 @@ ZONE_ERAS_Asia_Taipei = [
     },
 
 ]
+
 ZONE_INFO_Asia_Taipei = {
     'name': 'Asia/Taipei',
     'eras': ZONE_ERAS_Asia_Taipei
@@ -11329,6 +11305,7 @@ ZONE_ERAS_Asia_Tashkent = [
     },
 
 ]
+
 ZONE_INFO_Asia_Tashkent = {
     'name': 'Asia/Tashkent',
     'eras': ZONE_ERAS_Asia_Tashkent
@@ -11438,6 +11415,7 @@ ZONE_ERAS_Asia_Tbilisi = [
     },
 
 ]
+
 ZONE_INFO_Asia_Tbilisi = {
     'name': 'Asia/Tbilisi',
     'eras': ZONE_ERAS_Asia_Tbilisi
@@ -11487,6 +11465,7 @@ ZONE_ERAS_Asia_Tehran = [
     },
 
 ]
+
 ZONE_INFO_Asia_Tehran = {
     'name': 'Asia/Tehran',
     'eras': ZONE_ERAS_Asia_Tehran
@@ -11524,6 +11503,7 @@ ZONE_ERAS_Asia_Thimphu = [
     },
 
 ]
+
 ZONE_INFO_Asia_Thimphu = {
     'name': 'Asia/Thimphu',
     'eras': ZONE_ERAS_Asia_Thimphu
@@ -11549,6 +11529,7 @@ ZONE_ERAS_Asia_Tokyo = [
     },
 
 ]
+
 ZONE_INFO_Asia_Tokyo = {
     'name': 'Asia/Tokyo',
     'eras': ZONE_ERAS_Asia_Tokyo
@@ -11646,6 +11627,7 @@ ZONE_ERAS_Asia_Tomsk = [
     },
 
 ]
+
 ZONE_INFO_Asia_Tomsk = {
     'name': 'Asia/Tomsk',
     'eras': ZONE_ERAS_Asia_Tomsk
@@ -11683,6 +11665,7 @@ ZONE_ERAS_Asia_Ulaanbaatar = [
     },
 
 ]
+
 ZONE_INFO_Asia_Ulaanbaatar = {
     'name': 'Asia/Ulaanbaatar',
     'eras': ZONE_ERAS_Asia_Ulaanbaatar
@@ -11708,6 +11691,7 @@ ZONE_ERAS_Asia_Urumqi = [
     },
 
 ]
+
 ZONE_INFO_Asia_Urumqi = {
     'name': 'Asia/Urumqi',
     'eras': ZONE_ERAS_Asia_Urumqi
@@ -11805,6 +11789,7 @@ ZONE_ERAS_Asia_Ust_Nera = [
     },
 
 ]
+
 ZONE_INFO_Asia_Ust_Nera = {
     'name': 'Asia/Ust-Nera',
     'eras': ZONE_ERAS_Asia_Ust_Nera
@@ -11878,6 +11863,7 @@ ZONE_ERAS_Asia_Vladivostok = [
     },
 
 ]
+
 ZONE_INFO_Asia_Vladivostok = {
     'name': 'Asia/Vladivostok',
     'eras': ZONE_ERAS_Asia_Vladivostok
@@ -11951,6 +11937,7 @@ ZONE_ERAS_Asia_Yakutsk = [
     },
 
 ]
+
 ZONE_INFO_Asia_Yakutsk = {
     'name': 'Asia/Yakutsk',
     'eras': ZONE_ERAS_Asia_Yakutsk
@@ -11976,6 +11963,7 @@ ZONE_ERAS_Asia_Yangon = [
     },
 
 ]
+
 ZONE_INFO_Asia_Yangon = {
     'name': 'Asia/Yangon',
     'eras': ZONE_ERAS_Asia_Yangon
@@ -12049,6 +12037,7 @@ ZONE_ERAS_Asia_Yekaterinburg = [
     },
 
 ]
+
 ZONE_INFO_Asia_Yekaterinburg = {
     'name': 'Asia/Yekaterinburg',
     'eras': ZONE_ERAS_Asia_Yekaterinburg
@@ -12122,6 +12111,7 @@ ZONE_ERAS_Asia_Yerevan = [
     },
 
 ]
+
 ZONE_INFO_Asia_Yerevan = {
     'name': 'Asia/Yerevan',
     'eras': ZONE_ERAS_Asia_Yerevan
@@ -12183,6 +12173,7 @@ ZONE_ERAS_Atlantic_Azores = [
     },
 
 ]
+
 ZONE_INFO_Atlantic_Azores = {
     'name': 'Atlantic/Azores',
     'eras': ZONE_ERAS_Atlantic_Azores
@@ -12232,6 +12223,7 @@ ZONE_ERAS_Atlantic_Bermuda = [
     },
 
 ]
+
 ZONE_INFO_Atlantic_Bermuda = {
     'name': 'Atlantic/Bermuda',
     'eras': ZONE_ERAS_Atlantic_Bermuda
@@ -12281,6 +12273,7 @@ ZONE_ERAS_Atlantic_Canary = [
     },
 
 ]
+
 ZONE_INFO_Atlantic_Canary = {
     'name': 'Atlantic/Canary',
     'eras': ZONE_ERAS_Atlantic_Canary
@@ -12318,6 +12311,7 @@ ZONE_ERAS_Atlantic_Cape_Verde = [
     },
 
 ]
+
 ZONE_INFO_Atlantic_Cape_Verde = {
     'name': 'Atlantic/Cape_Verde',
     'eras': ZONE_ERAS_Atlantic_Cape_Verde
@@ -12355,6 +12349,7 @@ ZONE_ERAS_Atlantic_Faroe = [
     },
 
 ]
+
 ZONE_INFO_Atlantic_Faroe = {
     'name': 'Atlantic/Faroe',
     'eras': ZONE_ERAS_Atlantic_Faroe
@@ -12392,6 +12387,7 @@ ZONE_ERAS_Atlantic_Madeira = [
     },
 
 ]
+
 ZONE_INFO_Atlantic_Madeira = {
     'name': 'Atlantic/Madeira',
     'eras': ZONE_ERAS_Atlantic_Madeira
@@ -12417,6 +12413,7 @@ ZONE_ERAS_Atlantic_Reykjavik = [
     },
 
 ]
+
 ZONE_INFO_Atlantic_Reykjavik = {
     'name': 'Atlantic/Reykjavik',
     'eras': ZONE_ERAS_Atlantic_Reykjavik
@@ -12442,6 +12439,7 @@ ZONE_ERAS_Atlantic_South_Georgia = [
     },
 
 ]
+
 ZONE_INFO_Atlantic_South_Georgia = {
     'name': 'Atlantic/South_Georgia',
     'eras': ZONE_ERAS_Atlantic_South_Georgia
@@ -12503,6 +12501,7 @@ ZONE_ERAS_Atlantic_Stanley = [
     },
 
 ]
+
 ZONE_INFO_Atlantic_Stanley = {
     'name': 'Atlantic/Stanley',
     'eras': ZONE_ERAS_Atlantic_Stanley
@@ -12528,6 +12527,7 @@ ZONE_ERAS_Australia_Adelaide = [
     },
 
 ]
+
 ZONE_INFO_Australia_Adelaide = {
     'name': 'Australia/Adelaide',
     'eras': ZONE_ERAS_Australia_Adelaide
@@ -12553,6 +12553,7 @@ ZONE_ERAS_Australia_Brisbane = [
     },
 
 ]
+
 ZONE_INFO_Australia_Brisbane = {
     'name': 'Australia/Brisbane',
     'eras': ZONE_ERAS_Australia_Brisbane
@@ -12590,6 +12591,7 @@ ZONE_ERAS_Australia_Broken_Hill = [
     },
 
 ]
+
 ZONE_INFO_Australia_Broken_Hill = {
     'name': 'Australia/Broken_Hill',
     'eras': ZONE_ERAS_Australia_Broken_Hill
@@ -12615,6 +12617,7 @@ ZONE_ERAS_Australia_Darwin = [
     },
 
 ]
+
 ZONE_INFO_Australia_Darwin = {
     'name': 'Australia/Darwin',
     'eras': ZONE_ERAS_Australia_Darwin
@@ -12640,6 +12643,7 @@ ZONE_ERAS_Australia_Eucla = [
     },
 
 ]
+
 ZONE_INFO_Australia_Eucla = {
     'name': 'Australia/Eucla',
     'eras': ZONE_ERAS_Australia_Eucla
@@ -12665,6 +12669,7 @@ ZONE_ERAS_Australia_Hobart = [
     },
 
 ]
+
 ZONE_INFO_Australia_Hobart = {
     'name': 'Australia/Hobart',
     'eras': ZONE_ERAS_Australia_Hobart
@@ -12702,6 +12707,7 @@ ZONE_ERAS_Australia_Lindeman = [
     },
 
 ]
+
 ZONE_INFO_Australia_Lindeman = {
     'name': 'Australia/Lindeman',
     'eras': ZONE_ERAS_Australia_Lindeman
@@ -12751,6 +12757,7 @@ ZONE_ERAS_Australia_Lord_Howe = [
     },
 
 ]
+
 ZONE_INFO_Australia_Lord_Howe = {
     'name': 'Australia/Lord_Howe',
     'eras': ZONE_ERAS_Australia_Lord_Howe
@@ -12776,6 +12783,7 @@ ZONE_ERAS_Australia_Melbourne = [
     },
 
 ]
+
 ZONE_INFO_Australia_Melbourne = {
     'name': 'Australia/Melbourne',
     'eras': ZONE_ERAS_Australia_Melbourne
@@ -12801,6 +12809,7 @@ ZONE_ERAS_Australia_Perth = [
     },
 
 ]
+
 ZONE_INFO_Australia_Perth = {
     'name': 'Australia/Perth',
     'eras': ZONE_ERAS_Australia_Perth
@@ -12826,6 +12835,7 @@ ZONE_ERAS_Australia_Sydney = [
     },
 
 ]
+
 ZONE_INFO_Australia_Sydney = {
     'name': 'Australia/Sydney',
     'eras': ZONE_ERAS_Australia_Sydney
@@ -12851,6 +12861,7 @@ ZONE_ERAS_CET = [
     },
 
 ]
+
 ZONE_INFO_CET = {
     'name': 'CET',
     'eras': ZONE_ERAS_CET
@@ -12876,6 +12887,7 @@ ZONE_ERAS_CST6CDT = [
     },
 
 ]
+
 ZONE_INFO_CST6CDT = {
     'name': 'CST6CDT',
     'eras': ZONE_ERAS_CST6CDT
@@ -12901,6 +12913,7 @@ ZONE_ERAS_EET = [
     },
 
 ]
+
 ZONE_INFO_EET = {
     'name': 'EET',
     'eras': ZONE_ERAS_EET
@@ -12926,6 +12939,7 @@ ZONE_ERAS_EST = [
     },
 
 ]
+
 ZONE_INFO_EST = {
     'name': 'EST',
     'eras': ZONE_ERAS_EST
@@ -12951,6 +12965,7 @@ ZONE_ERAS_EST5EDT = [
     },
 
 ]
+
 ZONE_INFO_EST5EDT = {
     'name': 'EST5EDT',
     'eras': ZONE_ERAS_EST5EDT
@@ -12976,6 +12991,7 @@ ZONE_ERAS_Etc_GMT = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT = {
     'name': 'Etc/GMT',
     'eras': ZONE_ERAS_Etc_GMT
@@ -13001,6 +13017,7 @@ ZONE_ERAS_Etc_GMT_PLUS_1 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_PLUS_1 = {
     'name': 'Etc/GMT+1',
     'eras': ZONE_ERAS_Etc_GMT_PLUS_1
@@ -13026,6 +13043,7 @@ ZONE_ERAS_Etc_GMT_PLUS_10 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_PLUS_10 = {
     'name': 'Etc/GMT+10',
     'eras': ZONE_ERAS_Etc_GMT_PLUS_10
@@ -13051,6 +13069,7 @@ ZONE_ERAS_Etc_GMT_PLUS_11 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_PLUS_11 = {
     'name': 'Etc/GMT+11',
     'eras': ZONE_ERAS_Etc_GMT_PLUS_11
@@ -13076,6 +13095,7 @@ ZONE_ERAS_Etc_GMT_PLUS_12 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_PLUS_12 = {
     'name': 'Etc/GMT+12',
     'eras': ZONE_ERAS_Etc_GMT_PLUS_12
@@ -13101,6 +13121,7 @@ ZONE_ERAS_Etc_GMT_PLUS_2 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_PLUS_2 = {
     'name': 'Etc/GMT+2',
     'eras': ZONE_ERAS_Etc_GMT_PLUS_2
@@ -13126,6 +13147,7 @@ ZONE_ERAS_Etc_GMT_PLUS_3 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_PLUS_3 = {
     'name': 'Etc/GMT+3',
     'eras': ZONE_ERAS_Etc_GMT_PLUS_3
@@ -13151,6 +13173,7 @@ ZONE_ERAS_Etc_GMT_PLUS_4 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_PLUS_4 = {
     'name': 'Etc/GMT+4',
     'eras': ZONE_ERAS_Etc_GMT_PLUS_4
@@ -13176,6 +13199,7 @@ ZONE_ERAS_Etc_GMT_PLUS_5 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_PLUS_5 = {
     'name': 'Etc/GMT+5',
     'eras': ZONE_ERAS_Etc_GMT_PLUS_5
@@ -13201,6 +13225,7 @@ ZONE_ERAS_Etc_GMT_PLUS_6 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_PLUS_6 = {
     'name': 'Etc/GMT+6',
     'eras': ZONE_ERAS_Etc_GMT_PLUS_6
@@ -13226,6 +13251,7 @@ ZONE_ERAS_Etc_GMT_PLUS_7 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_PLUS_7 = {
     'name': 'Etc/GMT+7',
     'eras': ZONE_ERAS_Etc_GMT_PLUS_7
@@ -13251,6 +13277,7 @@ ZONE_ERAS_Etc_GMT_PLUS_8 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_PLUS_8 = {
     'name': 'Etc/GMT+8',
     'eras': ZONE_ERAS_Etc_GMT_PLUS_8
@@ -13276,6 +13303,7 @@ ZONE_ERAS_Etc_GMT_PLUS_9 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_PLUS_9 = {
     'name': 'Etc/GMT+9',
     'eras': ZONE_ERAS_Etc_GMT_PLUS_9
@@ -13301,6 +13329,7 @@ ZONE_ERAS_Etc_GMT_1 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_1 = {
     'name': 'Etc/GMT-1',
     'eras': ZONE_ERAS_Etc_GMT_1
@@ -13326,6 +13355,7 @@ ZONE_ERAS_Etc_GMT_10 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_10 = {
     'name': 'Etc/GMT-10',
     'eras': ZONE_ERAS_Etc_GMT_10
@@ -13351,6 +13381,7 @@ ZONE_ERAS_Etc_GMT_11 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_11 = {
     'name': 'Etc/GMT-11',
     'eras': ZONE_ERAS_Etc_GMT_11
@@ -13376,6 +13407,7 @@ ZONE_ERAS_Etc_GMT_12 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_12 = {
     'name': 'Etc/GMT-12',
     'eras': ZONE_ERAS_Etc_GMT_12
@@ -13401,6 +13433,7 @@ ZONE_ERAS_Etc_GMT_13 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_13 = {
     'name': 'Etc/GMT-13',
     'eras': ZONE_ERAS_Etc_GMT_13
@@ -13426,6 +13459,7 @@ ZONE_ERAS_Etc_GMT_14 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_14 = {
     'name': 'Etc/GMT-14',
     'eras': ZONE_ERAS_Etc_GMT_14
@@ -13451,6 +13485,7 @@ ZONE_ERAS_Etc_GMT_2 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_2 = {
     'name': 'Etc/GMT-2',
     'eras': ZONE_ERAS_Etc_GMT_2
@@ -13476,6 +13511,7 @@ ZONE_ERAS_Etc_GMT_3 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_3 = {
     'name': 'Etc/GMT-3',
     'eras': ZONE_ERAS_Etc_GMT_3
@@ -13501,6 +13537,7 @@ ZONE_ERAS_Etc_GMT_4 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_4 = {
     'name': 'Etc/GMT-4',
     'eras': ZONE_ERAS_Etc_GMT_4
@@ -13526,6 +13563,7 @@ ZONE_ERAS_Etc_GMT_5 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_5 = {
     'name': 'Etc/GMT-5',
     'eras': ZONE_ERAS_Etc_GMT_5
@@ -13551,6 +13589,7 @@ ZONE_ERAS_Etc_GMT_6 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_6 = {
     'name': 'Etc/GMT-6',
     'eras': ZONE_ERAS_Etc_GMT_6
@@ -13576,6 +13615,7 @@ ZONE_ERAS_Etc_GMT_7 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_7 = {
     'name': 'Etc/GMT-7',
     'eras': ZONE_ERAS_Etc_GMT_7
@@ -13601,6 +13641,7 @@ ZONE_ERAS_Etc_GMT_8 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_8 = {
     'name': 'Etc/GMT-8',
     'eras': ZONE_ERAS_Etc_GMT_8
@@ -13626,6 +13667,7 @@ ZONE_ERAS_Etc_GMT_9 = [
     },
 
 ]
+
 ZONE_INFO_Etc_GMT_9 = {
     'name': 'Etc/GMT-9',
     'eras': ZONE_ERAS_Etc_GMT_9
@@ -13651,6 +13693,7 @@ ZONE_ERAS_Etc_UTC = [
     },
 
 ]
+
 ZONE_INFO_Etc_UTC = {
     'name': 'Etc/UTC',
     'eras': ZONE_ERAS_Etc_UTC
@@ -13688,6 +13731,7 @@ ZONE_ERAS_Europe_Amsterdam = [
     },
 
 ]
+
 ZONE_INFO_Europe_Amsterdam = {
     'name': 'Europe/Amsterdam',
     'eras': ZONE_ERAS_Europe_Amsterdam
@@ -13725,6 +13769,7 @@ ZONE_ERAS_Europe_Andorra = [
     },
 
 ]
+
 ZONE_INFO_Europe_Andorra = {
     'name': 'Europe/Andorra',
     'eras': ZONE_ERAS_Europe_Andorra
@@ -13822,6 +13867,7 @@ ZONE_ERAS_Europe_Astrakhan = [
     },
 
 ]
+
 ZONE_INFO_Europe_Astrakhan = {
     'name': 'Europe/Astrakhan',
     'eras': ZONE_ERAS_Europe_Astrakhan
@@ -13859,6 +13905,7 @@ ZONE_ERAS_Europe_Athens = [
     },
 
 ]
+
 ZONE_INFO_Europe_Athens = {
     'name': 'Europe/Athens',
     'eras': ZONE_ERAS_Europe_Athens
@@ -13896,6 +13943,7 @@ ZONE_ERAS_Europe_Belgrade = [
     },
 
 ]
+
 ZONE_INFO_Europe_Belgrade = {
     'name': 'Europe/Belgrade',
     'eras': ZONE_ERAS_Europe_Belgrade
@@ -13933,6 +13981,7 @@ ZONE_ERAS_Europe_Berlin = [
     },
 
 ]
+
 ZONE_INFO_Europe_Berlin = {
     'name': 'Europe/Berlin',
     'eras': ZONE_ERAS_Europe_Berlin
@@ -13970,6 +14019,7 @@ ZONE_ERAS_Europe_Brussels = [
     },
 
 ]
+
 ZONE_INFO_Europe_Brussels = {
     'name': 'Europe/Brussels',
     'eras': ZONE_ERAS_Europe_Brussels
@@ -14043,6 +14093,7 @@ ZONE_ERAS_Europe_Bucharest = [
     },
 
 ]
+
 ZONE_INFO_Europe_Bucharest = {
     'name': 'Europe/Bucharest',
     'eras': ZONE_ERAS_Europe_Bucharest
@@ -14080,6 +14131,7 @@ ZONE_ERAS_Europe_Budapest = [
     },
 
 ]
+
 ZONE_INFO_Europe_Budapest = {
     'name': 'Europe/Budapest',
     'eras': ZONE_ERAS_Europe_Budapest
@@ -14141,6 +14193,7 @@ ZONE_ERAS_Europe_Chisinau = [
     },
 
 ]
+
 ZONE_INFO_Europe_Chisinau = {
     'name': 'Europe/Chisinau',
     'eras': ZONE_ERAS_Europe_Chisinau
@@ -14178,6 +14231,7 @@ ZONE_ERAS_Europe_Copenhagen = [
     },
 
 ]
+
 ZONE_INFO_Europe_Copenhagen = {
     'name': 'Europe/Copenhagen',
     'eras': ZONE_ERAS_Europe_Copenhagen
@@ -14203,6 +14257,7 @@ ZONE_ERAS_Europe_Dublin = [
     },
 
 ]
+
 ZONE_INFO_Europe_Dublin = {
     'name': 'Europe/Dublin',
     'eras': ZONE_ERAS_Europe_Dublin
@@ -14240,6 +14295,7 @@ ZONE_ERAS_Europe_Gibraltar = [
     },
 
 ]
+
 ZONE_INFO_Europe_Gibraltar = {
     'name': 'Europe/Gibraltar',
     'eras': ZONE_ERAS_Europe_Gibraltar
@@ -14277,6 +14333,7 @@ ZONE_ERAS_Europe_Helsinki = [
     },
 
 ]
+
 ZONE_INFO_Europe_Helsinki = {
     'name': 'Europe/Helsinki',
     'eras': ZONE_ERAS_Europe_Helsinki
@@ -14422,6 +14479,7 @@ ZONE_ERAS_Europe_Istanbul = [
     },
 
 ]
+
 ZONE_INFO_Europe_Istanbul = {
     'name': 'Europe/Istanbul',
     'eras': ZONE_ERAS_Europe_Istanbul
@@ -14483,6 +14541,7 @@ ZONE_ERAS_Europe_Kaliningrad = [
     },
 
 ]
+
 ZONE_INFO_Europe_Kaliningrad = {
     'name': 'Europe/Kaliningrad',
     'eras': ZONE_ERAS_Europe_Kaliningrad
@@ -14544,6 +14603,7 @@ ZONE_ERAS_Europe_Kiev = [
     },
 
 ]
+
 ZONE_INFO_Europe_Kiev = {
     'name': 'Europe/Kiev',
     'eras': ZONE_ERAS_Europe_Kiev
@@ -14629,6 +14689,7 @@ ZONE_ERAS_Europe_Kirov = [
     },
 
 ]
+
 ZONE_INFO_Europe_Kirov = {
     'name': 'Europe/Kirov',
     'eras': ZONE_ERAS_Europe_Kirov
@@ -14702,6 +14763,7 @@ ZONE_ERAS_Europe_Lisbon = [
     },
 
 ]
+
 ZONE_INFO_Europe_Lisbon = {
     'name': 'Europe/Lisbon',
     'eras': ZONE_ERAS_Europe_Lisbon
@@ -14739,6 +14801,7 @@ ZONE_ERAS_Europe_London = [
     },
 
 ]
+
 ZONE_INFO_Europe_London = {
     'name': 'Europe/London',
     'eras': ZONE_ERAS_Europe_London
@@ -14776,6 +14839,7 @@ ZONE_ERAS_Europe_Luxembourg = [
     },
 
 ]
+
 ZONE_INFO_Europe_Luxembourg = {
     'name': 'Europe/Luxembourg',
     'eras': ZONE_ERAS_Europe_Luxembourg
@@ -14813,6 +14877,7 @@ ZONE_ERAS_Europe_Madrid = [
     },
 
 ]
+
 ZONE_INFO_Europe_Madrid = {
     'name': 'Europe/Madrid',
     'eras': ZONE_ERAS_Europe_Madrid
@@ -14862,6 +14927,7 @@ ZONE_ERAS_Europe_Malta = [
     },
 
 ]
+
 ZONE_INFO_Europe_Malta = {
     'name': 'Europe/Malta',
     'eras': ZONE_ERAS_Europe_Malta
@@ -14923,6 +14989,7 @@ ZONE_ERAS_Europe_Minsk = [
     },
 
 ]
+
 ZONE_INFO_Europe_Minsk = {
     'name': 'Europe/Minsk',
     'eras': ZONE_ERAS_Europe_Minsk
@@ -14960,6 +15027,7 @@ ZONE_ERAS_Europe_Monaco = [
     },
 
 ]
+
 ZONE_INFO_Europe_Monaco = {
     'name': 'Europe/Monaco',
     'eras': ZONE_ERAS_Europe_Monaco
@@ -15033,6 +15101,7 @@ ZONE_ERAS_Europe_Moscow = [
     },
 
 ]
+
 ZONE_INFO_Europe_Moscow = {
     'name': 'Europe/Moscow',
     'eras': ZONE_ERAS_Europe_Moscow
@@ -15070,6 +15139,7 @@ ZONE_ERAS_Europe_Oslo = [
     },
 
 ]
+
 ZONE_INFO_Europe_Oslo = {
     'name': 'Europe/Oslo',
     'eras': ZONE_ERAS_Europe_Oslo
@@ -15107,6 +15177,7 @@ ZONE_ERAS_Europe_Paris = [
     },
 
 ]
+
 ZONE_INFO_Europe_Paris = {
     'name': 'Europe/Paris',
     'eras': ZONE_ERAS_Europe_Paris
@@ -15144,6 +15215,7 @@ ZONE_ERAS_Europe_Prague = [
     },
 
 ]
+
 ZONE_INFO_Europe_Prague = {
     'name': 'Europe/Prague',
     'eras': ZONE_ERAS_Europe_Prague
@@ -15229,6 +15301,7 @@ ZONE_ERAS_Europe_Riga = [
     },
 
 ]
+
 ZONE_INFO_Europe_Riga = {
     'name': 'Europe/Riga',
     'eras': ZONE_ERAS_Europe_Riga
@@ -15266,6 +15339,7 @@ ZONE_ERAS_Europe_Rome = [
     },
 
 ]
+
 ZONE_INFO_Europe_Rome = {
     'name': 'Europe/Rome',
     'eras': ZONE_ERAS_Europe_Rome
@@ -15363,6 +15437,7 @@ ZONE_ERAS_Europe_Samara = [
     },
 
 ]
+
 ZONE_INFO_Europe_Samara = {
     'name': 'Europe/Samara',
     'eras': ZONE_ERAS_Europe_Samara
@@ -15460,6 +15535,7 @@ ZONE_ERAS_Europe_Saratov = [
     },
 
 ]
+
 ZONE_INFO_Europe_Saratov = {
     'name': 'Europe/Saratov',
     'eras': ZONE_ERAS_Europe_Saratov
@@ -15605,6 +15681,7 @@ ZONE_ERAS_Europe_Simferopol = [
     },
 
 ]
+
 ZONE_INFO_Europe_Simferopol = {
     'name': 'Europe/Simferopol',
     'eras': ZONE_ERAS_Europe_Simferopol
@@ -15678,6 +15755,7 @@ ZONE_ERAS_Europe_Sofia = [
     },
 
 ]
+
 ZONE_INFO_Europe_Sofia = {
     'name': 'Europe/Sofia',
     'eras': ZONE_ERAS_Europe_Sofia
@@ -15715,6 +15793,7 @@ ZONE_ERAS_Europe_Stockholm = [
     },
 
 ]
+
 ZONE_INFO_Europe_Stockholm = {
     'name': 'Europe/Stockholm',
     'eras': ZONE_ERAS_Europe_Stockholm
@@ -15800,6 +15879,7 @@ ZONE_ERAS_Europe_Tallinn = [
     },
 
 ]
+
 ZONE_INFO_Europe_Tallinn = {
     'name': 'Europe/Tallinn',
     'eras': ZONE_ERAS_Europe_Tallinn
@@ -15837,6 +15917,7 @@ ZONE_ERAS_Europe_Tirane = [
     },
 
 ]
+
 ZONE_INFO_Europe_Tirane = {
     'name': 'Europe/Tirane',
     'eras': ZONE_ERAS_Europe_Tirane
@@ -15934,6 +16015,7 @@ ZONE_ERAS_Europe_Ulyanovsk = [
     },
 
 ]
+
 ZONE_INFO_Europe_Ulyanovsk = {
     'name': 'Europe/Ulyanovsk',
     'eras': ZONE_ERAS_Europe_Ulyanovsk
@@ -16019,6 +16101,7 @@ ZONE_ERAS_Europe_Uzhgorod = [
     },
 
 ]
+
 ZONE_INFO_Europe_Uzhgorod = {
     'name': 'Europe/Uzhgorod',
     'eras': ZONE_ERAS_Europe_Uzhgorod
@@ -16056,6 +16139,7 @@ ZONE_ERAS_Europe_Vienna = [
     },
 
 ]
+
 ZONE_INFO_Europe_Vienna = {
     'name': 'Europe/Vienna',
     'eras': ZONE_ERAS_Europe_Vienna
@@ -16153,6 +16237,7 @@ ZONE_ERAS_Europe_Vilnius = [
     },
 
 ]
+
 ZONE_INFO_Europe_Vilnius = {
     'name': 'Europe/Vilnius',
     'eras': ZONE_ERAS_Europe_Vilnius
@@ -16262,6 +16347,7 @@ ZONE_ERAS_Europe_Volgograd = [
     },
 
 ]
+
 ZONE_INFO_Europe_Volgograd = {
     'name': 'Europe/Volgograd',
     'eras': ZONE_ERAS_Europe_Volgograd
@@ -16311,6 +16397,7 @@ ZONE_ERAS_Europe_Warsaw = [
     },
 
 ]
+
 ZONE_INFO_Europe_Warsaw = {
     'name': 'Europe/Warsaw',
     'eras': ZONE_ERAS_Europe_Warsaw
@@ -16360,6 +16447,7 @@ ZONE_ERAS_Europe_Zaporozhye = [
     },
 
 ]
+
 ZONE_INFO_Europe_Zaporozhye = {
     'name': 'Europe/Zaporozhye',
     'eras': ZONE_ERAS_Europe_Zaporozhye
@@ -16397,6 +16485,7 @@ ZONE_ERAS_Europe_Zurich = [
     },
 
 ]
+
 ZONE_INFO_Europe_Zurich = {
     'name': 'Europe/Zurich',
     'eras': ZONE_ERAS_Europe_Zurich
@@ -16422,6 +16511,7 @@ ZONE_ERAS_HST = [
     },
 
 ]
+
 ZONE_INFO_HST = {
     'name': 'HST',
     'eras': ZONE_ERAS_HST
@@ -16459,6 +16549,7 @@ ZONE_ERAS_Indian_Chagos = [
     },
 
 ]
+
 ZONE_INFO_Indian_Chagos = {
     'name': 'Indian/Chagos',
     'eras': ZONE_ERAS_Indian_Chagos
@@ -16484,6 +16575,7 @@ ZONE_ERAS_Indian_Christmas = [
     },
 
 ]
+
 ZONE_INFO_Indian_Christmas = {
     'name': 'Indian/Christmas',
     'eras': ZONE_ERAS_Indian_Christmas
@@ -16509,6 +16601,7 @@ ZONE_ERAS_Indian_Cocos = [
     },
 
 ]
+
 ZONE_INFO_Indian_Cocos = {
     'name': 'Indian/Cocos',
     'eras': ZONE_ERAS_Indian_Cocos
@@ -16534,6 +16627,7 @@ ZONE_ERAS_Indian_Kerguelen = [
     },
 
 ]
+
 ZONE_INFO_Indian_Kerguelen = {
     'name': 'Indian/Kerguelen',
     'eras': ZONE_ERAS_Indian_Kerguelen
@@ -16559,6 +16653,7 @@ ZONE_ERAS_Indian_Mahe = [
     },
 
 ]
+
 ZONE_INFO_Indian_Mahe = {
     'name': 'Indian/Mahe',
     'eras': ZONE_ERAS_Indian_Mahe
@@ -16584,6 +16679,7 @@ ZONE_ERAS_Indian_Maldives = [
     },
 
 ]
+
 ZONE_INFO_Indian_Maldives = {
     'name': 'Indian/Maldives',
     'eras': ZONE_ERAS_Indian_Maldives
@@ -16609,6 +16705,7 @@ ZONE_ERAS_Indian_Mauritius = [
     },
 
 ]
+
 ZONE_INFO_Indian_Mauritius = {
     'name': 'Indian/Mauritius',
     'eras': ZONE_ERAS_Indian_Mauritius
@@ -16634,6 +16731,7 @@ ZONE_ERAS_Indian_Reunion = [
     },
 
 ]
+
 ZONE_INFO_Indian_Reunion = {
     'name': 'Indian/Reunion',
     'eras': ZONE_ERAS_Indian_Reunion
@@ -16659,6 +16757,7 @@ ZONE_ERAS_MET = [
     },
 
 ]
+
 ZONE_INFO_MET = {
     'name': 'MET',
     'eras': ZONE_ERAS_MET
@@ -16684,6 +16783,7 @@ ZONE_ERAS_MST = [
     },
 
 ]
+
 ZONE_INFO_MST = {
     'name': 'MST',
     'eras': ZONE_ERAS_MST
@@ -16709,6 +16809,7 @@ ZONE_ERAS_MST7MDT = [
     },
 
 ]
+
 ZONE_INFO_MST7MDT = {
     'name': 'MST7MDT',
     'eras': ZONE_ERAS_MST7MDT
@@ -16734,6 +16835,7 @@ ZONE_ERAS_PST8PDT = [
     },
 
 ]
+
 ZONE_INFO_PST8PDT = {
     'name': 'PST8PDT',
     'eras': ZONE_ERAS_PST8PDT
@@ -16771,6 +16873,7 @@ ZONE_ERAS_Pacific_Apia = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Apia = {
     'name': 'Pacific/Apia',
     'eras': ZONE_ERAS_Pacific_Apia
@@ -16796,6 +16899,7 @@ ZONE_ERAS_Pacific_Auckland = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Auckland = {
     'name': 'Pacific/Auckland',
     'eras': ZONE_ERAS_Pacific_Auckland
@@ -16833,6 +16937,7 @@ ZONE_ERAS_Pacific_Bougainville = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Bougainville = {
     'name': 'Pacific/Bougainville',
     'eras': ZONE_ERAS_Pacific_Bougainville
@@ -16858,6 +16963,7 @@ ZONE_ERAS_Pacific_Chatham = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Chatham = {
     'name': 'Pacific/Chatham',
     'eras': ZONE_ERAS_Pacific_Chatham
@@ -16883,6 +16989,7 @@ ZONE_ERAS_Pacific_Chuuk = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Chuuk = {
     'name': 'Pacific/Chuuk',
     'eras': ZONE_ERAS_Pacific_Chuuk
@@ -16920,6 +17027,7 @@ ZONE_ERAS_Pacific_Easter = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Easter = {
     'name': 'Pacific/Easter',
     'eras': ZONE_ERAS_Pacific_Easter
@@ -16945,17 +17053,262 @@ ZONE_ERAS_Pacific_Efate = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Efate = {
     'name': 'Pacific/Efate',
     'eras': ZONE_ERAS_Pacific_Efate
 }
 
 #---------------------------------------------------------------------------
-# Zone name: Pacific/Enderbury
+# Zone name: Pacific/Fakaofo
+# Era count: 2
+#---------------------------------------------------------------------------
+
+ZONE_ERAS_Pacific_Fakaofo = [
+    #             -11:00    -    -11    2011 Dec 30
+    {
+      'offset_seconds': -39600,
+      'zone_policy': '-',
+      'rules_delta_seconds': 0,
+      'format': '-11',
+      'until_year': 2011,
+      'until_month': 12,
+      'until_day': 30,
+      'until_seconds': 0,
+      'until_time_suffix': 'w',
+    },
+    #             13:00    -    +13
+    {
+      'offset_seconds': 46800,
+      'zone_policy': '-',
+      'rules_delta_seconds': 0,
+      'format': '+13',
+      'until_year': 10000,
+      'until_month': 1,
+      'until_day': 1,
+      'until_seconds': 0,
+      'until_time_suffix': 'w',
+    },
+
+]
+
+ZONE_INFO_Pacific_Fakaofo = {
+    'name': 'Pacific/Fakaofo',
+    'eras': ZONE_ERAS_Pacific_Fakaofo
+}
+
+#---------------------------------------------------------------------------
+# Zone name: Pacific/Fiji
+# Era count: 1
+#---------------------------------------------------------------------------
+
+ZONE_ERAS_Pacific_Fiji = [
+    #             12:00    Fiji    +12/+13
+    {
+      'offset_seconds': 43200,
+      'zone_policy': ZONE_POLICY_Fiji,
+      'rules_delta_seconds': 0,
+      'format': '+12/+13',
+      'until_year': 10000,
+      'until_month': 1,
+      'until_day': 1,
+      'until_seconds': 0,
+      'until_time_suffix': 'w',
+    },
+
+]
+
+ZONE_INFO_Pacific_Fiji = {
+    'name': 'Pacific/Fiji',
+    'eras': ZONE_ERAS_Pacific_Fiji
+}
+
+#---------------------------------------------------------------------------
+# Zone name: Pacific/Funafuti
+# Era count: 1
+#---------------------------------------------------------------------------
+
+ZONE_ERAS_Pacific_Funafuti = [
+    #             12:00    -    +12
+    {
+      'offset_seconds': 43200,
+      'zone_policy': '-',
+      'rules_delta_seconds': 0,
+      'format': '+12',
+      'until_year': 10000,
+      'until_month': 1,
+      'until_day': 1,
+      'until_seconds': 0,
+      'until_time_suffix': 'w',
+    },
+
+]
+
+ZONE_INFO_Pacific_Funafuti = {
+    'name': 'Pacific/Funafuti',
+    'eras': ZONE_ERAS_Pacific_Funafuti
+}
+
+#---------------------------------------------------------------------------
+# Zone name: Pacific/Galapagos
+# Era count: 2
+#---------------------------------------------------------------------------
+
+ZONE_ERAS_Pacific_Galapagos = [
+    #             -5:00    -    -05    1986
+    {
+      'offset_seconds': -18000,
+      'zone_policy': '-',
+      'rules_delta_seconds': 0,
+      'format': '-05',
+      'until_year': 1986,
+      'until_month': 1,
+      'until_day': 1,
+      'until_seconds': 0,
+      'until_time_suffix': 'w',
+    },
+    #             -6:00    Ecuador    -06/-05
+    {
+      'offset_seconds': -21600,
+      'zone_policy': ZONE_POLICY_Ecuador,
+      'rules_delta_seconds': 0,
+      'format': '-06/-05',
+      'until_year': 10000,
+      'until_month': 1,
+      'until_day': 1,
+      'until_seconds': 0,
+      'until_time_suffix': 'w',
+    },
+
+]
+
+ZONE_INFO_Pacific_Galapagos = {
+    'name': 'Pacific/Galapagos',
+    'eras': ZONE_ERAS_Pacific_Galapagos
+}
+
+#---------------------------------------------------------------------------
+# Zone name: Pacific/Gambier
+# Era count: 1
+#---------------------------------------------------------------------------
+
+ZONE_ERAS_Pacific_Gambier = [
+    #              -9:00    -    -09
+    {
+      'offset_seconds': -32400,
+      'zone_policy': '-',
+      'rules_delta_seconds': 0,
+      'format': '-09',
+      'until_year': 10000,
+      'until_month': 1,
+      'until_day': 1,
+      'until_seconds': 0,
+      'until_time_suffix': 'w',
+    },
+
+]
+
+ZONE_INFO_Pacific_Gambier = {
+    'name': 'Pacific/Gambier',
+    'eras': ZONE_ERAS_Pacific_Gambier
+}
+
+#---------------------------------------------------------------------------
+# Zone name: Pacific/Guadalcanal
+# Era count: 1
+#---------------------------------------------------------------------------
+
+ZONE_ERAS_Pacific_Guadalcanal = [
+    #             11:00    -    +11
+    {
+      'offset_seconds': 39600,
+      'zone_policy': '-',
+      'rules_delta_seconds': 0,
+      'format': '+11',
+      'until_year': 10000,
+      'until_month': 1,
+      'until_day': 1,
+      'until_seconds': 0,
+      'until_time_suffix': 'w',
+    },
+
+]
+
+ZONE_INFO_Pacific_Guadalcanal = {
+    'name': 'Pacific/Guadalcanal',
+    'eras': ZONE_ERAS_Pacific_Guadalcanal
+}
+
+#---------------------------------------------------------------------------
+# Zone name: Pacific/Guam
+# Era count: 2
+#---------------------------------------------------------------------------
+
+ZONE_ERAS_Pacific_Guam = [
+    #             10:00    Guam    G%sT    2000 Dec 23
+    {
+      'offset_seconds': 36000,
+      'zone_policy': ZONE_POLICY_Guam,
+      'rules_delta_seconds': 0,
+      'format': 'G%sT',
+      'until_year': 2000,
+      'until_month': 12,
+      'until_day': 23,
+      'until_seconds': 0,
+      'until_time_suffix': 'w',
+    },
+    #             10:00    -    ChST
+    {
+      'offset_seconds': 36000,
+      'zone_policy': '-',
+      'rules_delta_seconds': 0,
+      'format': 'ChST',
+      'until_year': 10000,
+      'until_month': 1,
+      'until_day': 1,
+      'until_seconds': 0,
+      'until_time_suffix': 'w',
+    },
+
+]
+
+ZONE_INFO_Pacific_Guam = {
+    'name': 'Pacific/Guam',
+    'eras': ZONE_ERAS_Pacific_Guam
+}
+
+#---------------------------------------------------------------------------
+# Zone name: Pacific/Honolulu
+# Era count: 1
+#---------------------------------------------------------------------------
+
+ZONE_ERAS_Pacific_Honolulu = [
+    #             -10:00    -    HST
+    {
+      'offset_seconds': -36000,
+      'zone_policy': '-',
+      'rules_delta_seconds': 0,
+      'format': 'HST',
+      'until_year': 10000,
+      'until_month': 1,
+      'until_day': 1,
+      'until_seconds': 0,
+      'until_time_suffix': 'w',
+    },
+
+]
+
+ZONE_INFO_Pacific_Honolulu = {
+    'name': 'Pacific/Honolulu',
+    'eras': ZONE_ERAS_Pacific_Honolulu
+}
+
+#---------------------------------------------------------------------------
+# Zone name: Pacific/Kanton
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Enderbury = [
+ZONE_ERAS_Pacific_Kanton = [
     #             -12:00    -    -12    1979 Oct
     {
       'offset_seconds': -43200,
@@ -16994,245 +17347,10 @@ ZONE_ERAS_Pacific_Enderbury = [
     },
 
 ]
-ZONE_INFO_Pacific_Enderbury = {
-    'name': 'Pacific/Enderbury',
-    'eras': ZONE_ERAS_Pacific_Enderbury
-}
 
-#---------------------------------------------------------------------------
-# Zone name: Pacific/Fakaofo
-# Era count: 2
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_Pacific_Fakaofo = [
-    #             -11:00    -    -11    2011 Dec 30
-    {
-      'offset_seconds': -39600,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': '-11',
-      'until_year': 2011,
-      'until_month': 12,
-      'until_day': 30,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-    #             13:00    -    +13
-    {
-      'offset_seconds': 46800,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': '+13',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-ZONE_INFO_Pacific_Fakaofo = {
-    'name': 'Pacific/Fakaofo',
-    'eras': ZONE_ERAS_Pacific_Fakaofo
-}
-
-#---------------------------------------------------------------------------
-# Zone name: Pacific/Fiji
-# Era count: 1
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_Pacific_Fiji = [
-    #             12:00    Fiji    +12/+13
-    {
-      'offset_seconds': 43200,
-      'zone_policy': ZONE_POLICY_Fiji,
-      'rules_delta_seconds': 0,
-      'format': '+12/+13',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-ZONE_INFO_Pacific_Fiji = {
-    'name': 'Pacific/Fiji',
-    'eras': ZONE_ERAS_Pacific_Fiji
-}
-
-#---------------------------------------------------------------------------
-# Zone name: Pacific/Funafuti
-# Era count: 1
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_Pacific_Funafuti = [
-    #             12:00    -    +12
-    {
-      'offset_seconds': 43200,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': '+12',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-ZONE_INFO_Pacific_Funafuti = {
-    'name': 'Pacific/Funafuti',
-    'eras': ZONE_ERAS_Pacific_Funafuti
-}
-
-#---------------------------------------------------------------------------
-# Zone name: Pacific/Galapagos
-# Era count: 2
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_Pacific_Galapagos = [
-    #             -5:00    -    -05    1986
-    {
-      'offset_seconds': -18000,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': '-05',
-      'until_year': 1986,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-    #             -6:00    Ecuador    -06/-05
-    {
-      'offset_seconds': -21600,
-      'zone_policy': ZONE_POLICY_Ecuador,
-      'rules_delta_seconds': 0,
-      'format': '-06/-05',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-ZONE_INFO_Pacific_Galapagos = {
-    'name': 'Pacific/Galapagos',
-    'eras': ZONE_ERAS_Pacific_Galapagos
-}
-
-#---------------------------------------------------------------------------
-# Zone name: Pacific/Gambier
-# Era count: 1
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_Pacific_Gambier = [
-    #              -9:00    -    -09
-    {
-      'offset_seconds': -32400,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': '-09',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-ZONE_INFO_Pacific_Gambier = {
-    'name': 'Pacific/Gambier',
-    'eras': ZONE_ERAS_Pacific_Gambier
-}
-
-#---------------------------------------------------------------------------
-# Zone name: Pacific/Guadalcanal
-# Era count: 1
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_Pacific_Guadalcanal = [
-    #             11:00    -    +11
-    {
-      'offset_seconds': 39600,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': '+11',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-ZONE_INFO_Pacific_Guadalcanal = {
-    'name': 'Pacific/Guadalcanal',
-    'eras': ZONE_ERAS_Pacific_Guadalcanal
-}
-
-#---------------------------------------------------------------------------
-# Zone name: Pacific/Guam
-# Era count: 2
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_Pacific_Guam = [
-    #             10:00    Guam    G%sT    2000 Dec 23
-    {
-      'offset_seconds': 36000,
-      'zone_policy': ZONE_POLICY_Guam,
-      'rules_delta_seconds': 0,
-      'format': 'G%sT',
-      'until_year': 2000,
-      'until_month': 12,
-      'until_day': 23,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-    #             10:00    -    ChST
-    {
-      'offset_seconds': 36000,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': 'ChST',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-ZONE_INFO_Pacific_Guam = {
-    'name': 'Pacific/Guam',
-    'eras': ZONE_ERAS_Pacific_Guam
-}
-
-#---------------------------------------------------------------------------
-# Zone name: Pacific/Honolulu
-# Era count: 1
-#---------------------------------------------------------------------------
-
-ZONE_ERAS_Pacific_Honolulu = [
-    #             -10:00    -    HST
-    {
-      'offset_seconds': -36000,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': 'HST',
-      'until_year': 10000,
-      'until_month': 1,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
-
-]
-ZONE_INFO_Pacific_Honolulu = {
-    'name': 'Pacific/Honolulu',
-    'eras': ZONE_ERAS_Pacific_Honolulu
+ZONE_INFO_Pacific_Kanton = {
+    'name': 'Pacific/Kanton',
+    'eras': ZONE_ERAS_Pacific_Kanton
 }
 
 #---------------------------------------------------------------------------
@@ -17279,6 +17397,7 @@ ZONE_ERAS_Pacific_Kiritimati = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Kiritimati = {
     'name': 'Pacific/Kiritimati',
     'eras': ZONE_ERAS_Pacific_Kiritimati
@@ -17316,6 +17435,7 @@ ZONE_ERAS_Pacific_Kosrae = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Kosrae = {
     'name': 'Pacific/Kosrae',
     'eras': ZONE_ERAS_Pacific_Kosrae
@@ -17353,6 +17473,7 @@ ZONE_ERAS_Pacific_Kwajalein = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Kwajalein = {
     'name': 'Pacific/Kwajalein',
     'eras': ZONE_ERAS_Pacific_Kwajalein
@@ -17378,6 +17499,7 @@ ZONE_ERAS_Pacific_Majuro = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Majuro = {
     'name': 'Pacific/Majuro',
     'eras': ZONE_ERAS_Pacific_Majuro
@@ -17403,6 +17525,7 @@ ZONE_ERAS_Pacific_Marquesas = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Marquesas = {
     'name': 'Pacific/Marquesas',
     'eras': ZONE_ERAS_Pacific_Marquesas
@@ -17440,6 +17563,7 @@ ZONE_ERAS_Pacific_Nauru = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Nauru = {
     'name': 'Pacific/Nauru',
     'eras': ZONE_ERAS_Pacific_Nauru
@@ -17447,22 +17571,10 @@ ZONE_INFO_Pacific_Nauru = {
 
 #---------------------------------------------------------------------------
 # Zone name: Pacific/Niue
-# Era count: 2
+# Era count: 1
 #---------------------------------------------------------------------------
 
 ZONE_ERAS_Pacific_Niue = [
-    #             -11:30    -    -1130    1978 Oct  1
-    {
-      'offset_seconds': -41400,
-      'zone_policy': '-',
-      'rules_delta_seconds': 0,
-      'format': '-1130',
-      'until_year': 1978,
-      'until_month': 10,
-      'until_day': 1,
-      'until_seconds': 0,
-      'until_time_suffix': 'w',
-    },
     #             -11:00    -    -11
     {
       'offset_seconds': -39600,
@@ -17477,6 +17589,7 @@ ZONE_ERAS_Pacific_Niue = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Niue = {
     'name': 'Pacific/Niue',
     'eras': ZONE_ERAS_Pacific_Niue
@@ -17550,6 +17663,7 @@ ZONE_ERAS_Pacific_Norfolk = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Norfolk = {
     'name': 'Pacific/Norfolk',
     'eras': ZONE_ERAS_Pacific_Norfolk
@@ -17575,6 +17689,7 @@ ZONE_ERAS_Pacific_Noumea = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Noumea = {
     'name': 'Pacific/Noumea',
     'eras': ZONE_ERAS_Pacific_Noumea
@@ -17600,6 +17715,7 @@ ZONE_ERAS_Pacific_Pago_Pago = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Pago_Pago = {
     'name': 'Pacific/Pago_Pago',
     'eras': ZONE_ERAS_Pacific_Pago_Pago
@@ -17625,6 +17741,7 @@ ZONE_ERAS_Pacific_Palau = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Palau = {
     'name': 'Pacific/Palau',
     'eras': ZONE_ERAS_Pacific_Palau
@@ -17662,6 +17779,7 @@ ZONE_ERAS_Pacific_Pitcairn = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Pitcairn = {
     'name': 'Pacific/Pitcairn',
     'eras': ZONE_ERAS_Pacific_Pitcairn
@@ -17687,6 +17805,7 @@ ZONE_ERAS_Pacific_Pohnpei = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Pohnpei = {
     'name': 'Pacific/Pohnpei',
     'eras': ZONE_ERAS_Pacific_Pohnpei
@@ -17712,6 +17831,7 @@ ZONE_ERAS_Pacific_Port_Moresby = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Port_Moresby = {
     'name': 'Pacific/Port_Moresby',
     'eras': ZONE_ERAS_Pacific_Port_Moresby
@@ -17749,6 +17869,7 @@ ZONE_ERAS_Pacific_Rarotonga = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Rarotonga = {
     'name': 'Pacific/Rarotonga',
     'eras': ZONE_ERAS_Pacific_Rarotonga
@@ -17774,6 +17895,7 @@ ZONE_ERAS_Pacific_Tahiti = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Tahiti = {
     'name': 'Pacific/Tahiti',
     'eras': ZONE_ERAS_Pacific_Tahiti
@@ -17799,6 +17921,7 @@ ZONE_ERAS_Pacific_Tarawa = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Tarawa = {
     'name': 'Pacific/Tarawa',
     'eras': ZONE_ERAS_Pacific_Tarawa
@@ -17836,6 +17959,7 @@ ZONE_ERAS_Pacific_Tongatapu = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Tongatapu = {
     'name': 'Pacific/Tongatapu',
     'eras': ZONE_ERAS_Pacific_Tongatapu
@@ -17861,6 +17985,7 @@ ZONE_ERAS_Pacific_Wake = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Wake = {
     'name': 'Pacific/Wake',
     'eras': ZONE_ERAS_Pacific_Wake
@@ -17886,6 +18011,7 @@ ZONE_ERAS_Pacific_Wallis = [
     },
 
 ]
+
 ZONE_INFO_Pacific_Wallis = {
     'name': 'Pacific/Wallis',
     'eras': ZONE_ERAS_Pacific_Wallis
@@ -17911,6 +18037,7 @@ ZONE_ERAS_WET = [
     },
 
 ]
+
 ZONE_INFO_WET = {
     'name': 'WET',
     'eras': ZONE_ERAS_WET
@@ -17919,396 +18046,1312 @@ ZONE_INFO_WET = {
 
 
 #---------------------------------------------------------------------------
+# Supported links: 217
+#---------------------------------------------------------------------------
 
-ZONE_INFO_MAP = {
-    'Africa/Abidjan': ZONE_INFO_Africa_Abidjan, # Africa/Abidjan
-    'Africa/Accra': ZONE_INFO_Africa_Accra, # Africa/Accra
-    'Africa/Algiers': ZONE_INFO_Africa_Algiers, # Africa/Algiers
-    'Africa/Bissau': ZONE_INFO_Africa_Bissau, # Africa/Bissau
-    'Africa/Cairo': ZONE_INFO_Africa_Cairo, # Africa/Cairo
-    'Africa/Casablanca': ZONE_INFO_Africa_Casablanca, # Africa/Casablanca
-    'Africa/Ceuta': ZONE_INFO_Africa_Ceuta, # Africa/Ceuta
-    'Africa/El_Aaiun': ZONE_INFO_Africa_El_Aaiun, # Africa/El_Aaiun
-    'Africa/Johannesburg': ZONE_INFO_Africa_Johannesburg, # Africa/Johannesburg
-    'Africa/Juba': ZONE_INFO_Africa_Juba, # Africa/Juba
-    'Africa/Khartoum': ZONE_INFO_Africa_Khartoum, # Africa/Khartoum
-    'Africa/Lagos': ZONE_INFO_Africa_Lagos, # Africa/Lagos
-    'Africa/Maputo': ZONE_INFO_Africa_Maputo, # Africa/Maputo
-    'Africa/Monrovia': ZONE_INFO_Africa_Monrovia, # Africa/Monrovia
-    'Africa/Nairobi': ZONE_INFO_Africa_Nairobi, # Africa/Nairobi
-    'Africa/Ndjamena': ZONE_INFO_Africa_Ndjamena, # Africa/Ndjamena
-    'Africa/Sao_Tome': ZONE_INFO_Africa_Sao_Tome, # Africa/Sao_Tome
-    'Africa/Tripoli': ZONE_INFO_Africa_Tripoli, # Africa/Tripoli
-    'Africa/Tunis': ZONE_INFO_Africa_Tunis, # Africa/Tunis
-    'Africa/Windhoek': ZONE_INFO_Africa_Windhoek, # Africa/Windhoek
-    'America/Adak': ZONE_INFO_America_Adak, # America/Adak
-    'America/Anchorage': ZONE_INFO_America_Anchorage, # America/Anchorage
-    'America/Araguaina': ZONE_INFO_America_Araguaina, # America/Araguaina
-    'America/Argentina/Buenos_Aires': ZONE_INFO_America_Argentina_Buenos_Aires, # America/Argentina/Buenos_Aires
-    'America/Argentina/Catamarca': ZONE_INFO_America_Argentina_Catamarca, # America/Argentina/Catamarca
-    'America/Argentina/Cordoba': ZONE_INFO_America_Argentina_Cordoba, # America/Argentina/Cordoba
-    'America/Argentina/Jujuy': ZONE_INFO_America_Argentina_Jujuy, # America/Argentina/Jujuy
-    'America/Argentina/La_Rioja': ZONE_INFO_America_Argentina_La_Rioja, # America/Argentina/La_Rioja
-    'America/Argentina/Mendoza': ZONE_INFO_America_Argentina_Mendoza, # America/Argentina/Mendoza
-    'America/Argentina/Rio_Gallegos': ZONE_INFO_America_Argentina_Rio_Gallegos, # America/Argentina/Rio_Gallegos
-    'America/Argentina/Salta': ZONE_INFO_America_Argentina_Salta, # America/Argentina/Salta
-    'America/Argentina/San_Juan': ZONE_INFO_America_Argentina_San_Juan, # America/Argentina/San_Juan
-    'America/Argentina/San_Luis': ZONE_INFO_America_Argentina_San_Luis, # America/Argentina/San_Luis
-    'America/Argentina/Tucuman': ZONE_INFO_America_Argentina_Tucuman, # America/Argentina/Tucuman
-    'America/Argentina/Ushuaia': ZONE_INFO_America_Argentina_Ushuaia, # America/Argentina/Ushuaia
-    'America/Asuncion': ZONE_INFO_America_Asuncion, # America/Asuncion
-    'America/Atikokan': ZONE_INFO_America_Atikokan, # America/Atikokan
-    'America/Bahia': ZONE_INFO_America_Bahia, # America/Bahia
-    'America/Bahia_Banderas': ZONE_INFO_America_Bahia_Banderas, # America/Bahia_Banderas
-    'America/Barbados': ZONE_INFO_America_Barbados, # America/Barbados
-    'America/Belem': ZONE_INFO_America_Belem, # America/Belem
-    'America/Belize': ZONE_INFO_America_Belize, # America/Belize
-    'America/Blanc-Sablon': ZONE_INFO_America_Blanc_Sablon, # America/Blanc-Sablon
-    'America/Boa_Vista': ZONE_INFO_America_Boa_Vista, # America/Boa_Vista
-    'America/Bogota': ZONE_INFO_America_Bogota, # America/Bogota
-    'America/Boise': ZONE_INFO_America_Boise, # America/Boise
-    'America/Cambridge_Bay': ZONE_INFO_America_Cambridge_Bay, # America/Cambridge_Bay
-    'America/Campo_Grande': ZONE_INFO_America_Campo_Grande, # America/Campo_Grande
-    'America/Cancun': ZONE_INFO_America_Cancun, # America/Cancun
-    'America/Caracas': ZONE_INFO_America_Caracas, # America/Caracas
-    'America/Cayenne': ZONE_INFO_America_Cayenne, # America/Cayenne
-    'America/Chicago': ZONE_INFO_America_Chicago, # America/Chicago
-    'America/Chihuahua': ZONE_INFO_America_Chihuahua, # America/Chihuahua
-    'America/Costa_Rica': ZONE_INFO_America_Costa_Rica, # America/Costa_Rica
-    'America/Creston': ZONE_INFO_America_Creston, # America/Creston
-    'America/Cuiaba': ZONE_INFO_America_Cuiaba, # America/Cuiaba
-    'America/Curacao': ZONE_INFO_America_Curacao, # America/Curacao
-    'America/Danmarkshavn': ZONE_INFO_America_Danmarkshavn, # America/Danmarkshavn
-    'America/Dawson': ZONE_INFO_America_Dawson, # America/Dawson
-    'America/Dawson_Creek': ZONE_INFO_America_Dawson_Creek, # America/Dawson_Creek
-    'America/Denver': ZONE_INFO_America_Denver, # America/Denver
-    'America/Detroit': ZONE_INFO_America_Detroit, # America/Detroit
-    'America/Edmonton': ZONE_INFO_America_Edmonton, # America/Edmonton
-    'America/Eirunepe': ZONE_INFO_America_Eirunepe, # America/Eirunepe
-    'America/El_Salvador': ZONE_INFO_America_El_Salvador, # America/El_Salvador
-    'America/Fort_Nelson': ZONE_INFO_America_Fort_Nelson, # America/Fort_Nelson
-    'America/Fortaleza': ZONE_INFO_America_Fortaleza, # America/Fortaleza
-    'America/Glace_Bay': ZONE_INFO_America_Glace_Bay, # America/Glace_Bay
-    'America/Goose_Bay': ZONE_INFO_America_Goose_Bay, # America/Goose_Bay
-    'America/Grand_Turk': ZONE_INFO_America_Grand_Turk, # America/Grand_Turk
-    'America/Guatemala': ZONE_INFO_America_Guatemala, # America/Guatemala
-    'America/Guayaquil': ZONE_INFO_America_Guayaquil, # America/Guayaquil
-    'America/Guyana': ZONE_INFO_America_Guyana, # America/Guyana
-    'America/Halifax': ZONE_INFO_America_Halifax, # America/Halifax
-    'America/Havana': ZONE_INFO_America_Havana, # America/Havana
-    'America/Hermosillo': ZONE_INFO_America_Hermosillo, # America/Hermosillo
-    'America/Indiana/Indianapolis': ZONE_INFO_America_Indiana_Indianapolis, # America/Indiana/Indianapolis
-    'America/Indiana/Knox': ZONE_INFO_America_Indiana_Knox, # America/Indiana/Knox
-    'America/Indiana/Marengo': ZONE_INFO_America_Indiana_Marengo, # America/Indiana/Marengo
-    'America/Indiana/Petersburg': ZONE_INFO_America_Indiana_Petersburg, # America/Indiana/Petersburg
-    'America/Indiana/Tell_City': ZONE_INFO_America_Indiana_Tell_City, # America/Indiana/Tell_City
-    'America/Indiana/Vevay': ZONE_INFO_America_Indiana_Vevay, # America/Indiana/Vevay
-    'America/Indiana/Vincennes': ZONE_INFO_America_Indiana_Vincennes, # America/Indiana/Vincennes
-    'America/Indiana/Winamac': ZONE_INFO_America_Indiana_Winamac, # America/Indiana/Winamac
-    'America/Inuvik': ZONE_INFO_America_Inuvik, # America/Inuvik
-    'America/Iqaluit': ZONE_INFO_America_Iqaluit, # America/Iqaluit
-    'America/Jamaica': ZONE_INFO_America_Jamaica, # America/Jamaica
-    'America/Juneau': ZONE_INFO_America_Juneau, # America/Juneau
-    'America/Kentucky/Louisville': ZONE_INFO_America_Kentucky_Louisville, # America/Kentucky/Louisville
-    'America/Kentucky/Monticello': ZONE_INFO_America_Kentucky_Monticello, # America/Kentucky/Monticello
-    'America/La_Paz': ZONE_INFO_America_La_Paz, # America/La_Paz
-    'America/Lima': ZONE_INFO_America_Lima, # America/Lima
-    'America/Los_Angeles': ZONE_INFO_America_Los_Angeles, # America/Los_Angeles
-    'America/Maceio': ZONE_INFO_America_Maceio, # America/Maceio
-    'America/Managua': ZONE_INFO_America_Managua, # America/Managua
-    'America/Manaus': ZONE_INFO_America_Manaus, # America/Manaus
-    'America/Martinique': ZONE_INFO_America_Martinique, # America/Martinique
-    'America/Matamoros': ZONE_INFO_America_Matamoros, # America/Matamoros
-    'America/Mazatlan': ZONE_INFO_America_Mazatlan, # America/Mazatlan
-    'America/Menominee': ZONE_INFO_America_Menominee, # America/Menominee
-    'America/Merida': ZONE_INFO_America_Merida, # America/Merida
-    'America/Metlakatla': ZONE_INFO_America_Metlakatla, # America/Metlakatla
-    'America/Mexico_City': ZONE_INFO_America_Mexico_City, # America/Mexico_City
-    'America/Miquelon': ZONE_INFO_America_Miquelon, # America/Miquelon
-    'America/Moncton': ZONE_INFO_America_Moncton, # America/Moncton
-    'America/Monterrey': ZONE_INFO_America_Monterrey, # America/Monterrey
-    'America/Montevideo': ZONE_INFO_America_Montevideo, # America/Montevideo
-    'America/Nassau': ZONE_INFO_America_Nassau, # America/Nassau
-    'America/New_York': ZONE_INFO_America_New_York, # America/New_York
-    'America/Nipigon': ZONE_INFO_America_Nipigon, # America/Nipigon
-    'America/Nome': ZONE_INFO_America_Nome, # America/Nome
-    'America/Noronha': ZONE_INFO_America_Noronha, # America/Noronha
-    'America/North_Dakota/Beulah': ZONE_INFO_America_North_Dakota_Beulah, # America/North_Dakota/Beulah
-    'America/North_Dakota/Center': ZONE_INFO_America_North_Dakota_Center, # America/North_Dakota/Center
-    'America/North_Dakota/New_Salem': ZONE_INFO_America_North_Dakota_New_Salem, # America/North_Dakota/New_Salem
-    'America/Nuuk': ZONE_INFO_America_Nuuk, # America/Nuuk
-    'America/Ojinaga': ZONE_INFO_America_Ojinaga, # America/Ojinaga
-    'America/Panama': ZONE_INFO_America_Panama, # America/Panama
-    'America/Pangnirtung': ZONE_INFO_America_Pangnirtung, # America/Pangnirtung
-    'America/Paramaribo': ZONE_INFO_America_Paramaribo, # America/Paramaribo
-    'America/Phoenix': ZONE_INFO_America_Phoenix, # America/Phoenix
-    'America/Port-au-Prince': ZONE_INFO_America_Port_au_Prince, # America/Port-au-Prince
-    'America/Port_of_Spain': ZONE_INFO_America_Port_of_Spain, # America/Port_of_Spain
-    'America/Porto_Velho': ZONE_INFO_America_Porto_Velho, # America/Porto_Velho
-    'America/Puerto_Rico': ZONE_INFO_America_Puerto_Rico, # America/Puerto_Rico
-    'America/Punta_Arenas': ZONE_INFO_America_Punta_Arenas, # America/Punta_Arenas
-    'America/Rainy_River': ZONE_INFO_America_Rainy_River, # America/Rainy_River
-    'America/Rankin_Inlet': ZONE_INFO_America_Rankin_Inlet, # America/Rankin_Inlet
-    'America/Recife': ZONE_INFO_America_Recife, # America/Recife
-    'America/Regina': ZONE_INFO_America_Regina, # America/Regina
-    'America/Resolute': ZONE_INFO_America_Resolute, # America/Resolute
-    'America/Rio_Branco': ZONE_INFO_America_Rio_Branco, # America/Rio_Branco
-    'America/Santarem': ZONE_INFO_America_Santarem, # America/Santarem
-    'America/Santiago': ZONE_INFO_America_Santiago, # America/Santiago
-    'America/Santo_Domingo': ZONE_INFO_America_Santo_Domingo, # America/Santo_Domingo
-    'America/Sao_Paulo': ZONE_INFO_America_Sao_Paulo, # America/Sao_Paulo
-    'America/Scoresbysund': ZONE_INFO_America_Scoresbysund, # America/Scoresbysund
-    'America/Sitka': ZONE_INFO_America_Sitka, # America/Sitka
-    'America/St_Johns': ZONE_INFO_America_St_Johns, # America/St_Johns
-    'America/Swift_Current': ZONE_INFO_America_Swift_Current, # America/Swift_Current
-    'America/Tegucigalpa': ZONE_INFO_America_Tegucigalpa, # America/Tegucigalpa
-    'America/Thule': ZONE_INFO_America_Thule, # America/Thule
-    'America/Thunder_Bay': ZONE_INFO_America_Thunder_Bay, # America/Thunder_Bay
-    'America/Tijuana': ZONE_INFO_America_Tijuana, # America/Tijuana
-    'America/Toronto': ZONE_INFO_America_Toronto, # America/Toronto
-    'America/Vancouver': ZONE_INFO_America_Vancouver, # America/Vancouver
-    'America/Whitehorse': ZONE_INFO_America_Whitehorse, # America/Whitehorse
-    'America/Winnipeg': ZONE_INFO_America_Winnipeg, # America/Winnipeg
-    'America/Yakutat': ZONE_INFO_America_Yakutat, # America/Yakutat
-    'America/Yellowknife': ZONE_INFO_America_Yellowknife, # America/Yellowknife
-    'Antarctica/Casey': ZONE_INFO_Antarctica_Casey, # Antarctica/Casey
-    'Antarctica/Davis': ZONE_INFO_Antarctica_Davis, # Antarctica/Davis
-    'Antarctica/DumontDUrville': ZONE_INFO_Antarctica_DumontDUrville, # Antarctica/DumontDUrville
-    'Antarctica/Macquarie': ZONE_INFO_Antarctica_Macquarie, # Antarctica/Macquarie
-    'Antarctica/Mawson': ZONE_INFO_Antarctica_Mawson, # Antarctica/Mawson
-    'Antarctica/Palmer': ZONE_INFO_Antarctica_Palmer, # Antarctica/Palmer
-    'Antarctica/Rothera': ZONE_INFO_Antarctica_Rothera, # Antarctica/Rothera
-    'Antarctica/Syowa': ZONE_INFO_Antarctica_Syowa, # Antarctica/Syowa
-    'Antarctica/Troll': ZONE_INFO_Antarctica_Troll, # Antarctica/Troll
-    'Antarctica/Vostok': ZONE_INFO_Antarctica_Vostok, # Antarctica/Vostok
-    'Asia/Almaty': ZONE_INFO_Asia_Almaty, # Asia/Almaty
-    'Asia/Amman': ZONE_INFO_Asia_Amman, # Asia/Amman
-    'Asia/Anadyr': ZONE_INFO_Asia_Anadyr, # Asia/Anadyr
-    'Asia/Aqtau': ZONE_INFO_Asia_Aqtau, # Asia/Aqtau
-    'Asia/Aqtobe': ZONE_INFO_Asia_Aqtobe, # Asia/Aqtobe
-    'Asia/Ashgabat': ZONE_INFO_Asia_Ashgabat, # Asia/Ashgabat
-    'Asia/Atyrau': ZONE_INFO_Asia_Atyrau, # Asia/Atyrau
-    'Asia/Baghdad': ZONE_INFO_Asia_Baghdad, # Asia/Baghdad
-    'Asia/Baku': ZONE_INFO_Asia_Baku, # Asia/Baku
-    'Asia/Bangkok': ZONE_INFO_Asia_Bangkok, # Asia/Bangkok
-    'Asia/Barnaul': ZONE_INFO_Asia_Barnaul, # Asia/Barnaul
-    'Asia/Beirut': ZONE_INFO_Asia_Beirut, # Asia/Beirut
-    'Asia/Bishkek': ZONE_INFO_Asia_Bishkek, # Asia/Bishkek
-    'Asia/Brunei': ZONE_INFO_Asia_Brunei, # Asia/Brunei
-    'Asia/Chita': ZONE_INFO_Asia_Chita, # Asia/Chita
-    'Asia/Choibalsan': ZONE_INFO_Asia_Choibalsan, # Asia/Choibalsan
-    'Asia/Colombo': ZONE_INFO_Asia_Colombo, # Asia/Colombo
-    'Asia/Damascus': ZONE_INFO_Asia_Damascus, # Asia/Damascus
-    'Asia/Dhaka': ZONE_INFO_Asia_Dhaka, # Asia/Dhaka
-    'Asia/Dili': ZONE_INFO_Asia_Dili, # Asia/Dili
-    'Asia/Dubai': ZONE_INFO_Asia_Dubai, # Asia/Dubai
-    'Asia/Dushanbe': ZONE_INFO_Asia_Dushanbe, # Asia/Dushanbe
-    'Asia/Famagusta': ZONE_INFO_Asia_Famagusta, # Asia/Famagusta
-    'Asia/Gaza': ZONE_INFO_Asia_Gaza, # Asia/Gaza
-    'Asia/Hebron': ZONE_INFO_Asia_Hebron, # Asia/Hebron
-    'Asia/Ho_Chi_Minh': ZONE_INFO_Asia_Ho_Chi_Minh, # Asia/Ho_Chi_Minh
-    'Asia/Hong_Kong': ZONE_INFO_Asia_Hong_Kong, # Asia/Hong_Kong
-    'Asia/Hovd': ZONE_INFO_Asia_Hovd, # Asia/Hovd
-    'Asia/Irkutsk': ZONE_INFO_Asia_Irkutsk, # Asia/Irkutsk
-    'Asia/Jakarta': ZONE_INFO_Asia_Jakarta, # Asia/Jakarta
-    'Asia/Jayapura': ZONE_INFO_Asia_Jayapura, # Asia/Jayapura
-    'Asia/Jerusalem': ZONE_INFO_Asia_Jerusalem, # Asia/Jerusalem
-    'Asia/Kabul': ZONE_INFO_Asia_Kabul, # Asia/Kabul
-    'Asia/Kamchatka': ZONE_INFO_Asia_Kamchatka, # Asia/Kamchatka
-    'Asia/Karachi': ZONE_INFO_Asia_Karachi, # Asia/Karachi
-    'Asia/Kathmandu': ZONE_INFO_Asia_Kathmandu, # Asia/Kathmandu
-    'Asia/Khandyga': ZONE_INFO_Asia_Khandyga, # Asia/Khandyga
-    'Asia/Kolkata': ZONE_INFO_Asia_Kolkata, # Asia/Kolkata
-    'Asia/Krasnoyarsk': ZONE_INFO_Asia_Krasnoyarsk, # Asia/Krasnoyarsk
-    'Asia/Kuala_Lumpur': ZONE_INFO_Asia_Kuala_Lumpur, # Asia/Kuala_Lumpur
-    'Asia/Kuching': ZONE_INFO_Asia_Kuching, # Asia/Kuching
-    'Asia/Macau': ZONE_INFO_Asia_Macau, # Asia/Macau
-    'Asia/Magadan': ZONE_INFO_Asia_Magadan, # Asia/Magadan
-    'Asia/Makassar': ZONE_INFO_Asia_Makassar, # Asia/Makassar
-    'Asia/Manila': ZONE_INFO_Asia_Manila, # Asia/Manila
-    'Asia/Nicosia': ZONE_INFO_Asia_Nicosia, # Asia/Nicosia
-    'Asia/Novokuznetsk': ZONE_INFO_Asia_Novokuznetsk, # Asia/Novokuznetsk
-    'Asia/Novosibirsk': ZONE_INFO_Asia_Novosibirsk, # Asia/Novosibirsk
-    'Asia/Omsk': ZONE_INFO_Asia_Omsk, # Asia/Omsk
-    'Asia/Oral': ZONE_INFO_Asia_Oral, # Asia/Oral
-    'Asia/Pontianak': ZONE_INFO_Asia_Pontianak, # Asia/Pontianak
-    'Asia/Pyongyang': ZONE_INFO_Asia_Pyongyang, # Asia/Pyongyang
-    'Asia/Qatar': ZONE_INFO_Asia_Qatar, # Asia/Qatar
-    'Asia/Qostanay': ZONE_INFO_Asia_Qostanay, # Asia/Qostanay
-    'Asia/Qyzylorda': ZONE_INFO_Asia_Qyzylorda, # Asia/Qyzylorda
-    'Asia/Riyadh': ZONE_INFO_Asia_Riyadh, # Asia/Riyadh
-    'Asia/Sakhalin': ZONE_INFO_Asia_Sakhalin, # Asia/Sakhalin
-    'Asia/Samarkand': ZONE_INFO_Asia_Samarkand, # Asia/Samarkand
-    'Asia/Seoul': ZONE_INFO_Asia_Seoul, # Asia/Seoul
-    'Asia/Shanghai': ZONE_INFO_Asia_Shanghai, # Asia/Shanghai
-    'Asia/Singapore': ZONE_INFO_Asia_Singapore, # Asia/Singapore
-    'Asia/Srednekolymsk': ZONE_INFO_Asia_Srednekolymsk, # Asia/Srednekolymsk
-    'Asia/Taipei': ZONE_INFO_Asia_Taipei, # Asia/Taipei
-    'Asia/Tashkent': ZONE_INFO_Asia_Tashkent, # Asia/Tashkent
-    'Asia/Tbilisi': ZONE_INFO_Asia_Tbilisi, # Asia/Tbilisi
-    'Asia/Tehran': ZONE_INFO_Asia_Tehran, # Asia/Tehran
-    'Asia/Thimphu': ZONE_INFO_Asia_Thimphu, # Asia/Thimphu
-    'Asia/Tokyo': ZONE_INFO_Asia_Tokyo, # Asia/Tokyo
-    'Asia/Tomsk': ZONE_INFO_Asia_Tomsk, # Asia/Tomsk
-    'Asia/Ulaanbaatar': ZONE_INFO_Asia_Ulaanbaatar, # Asia/Ulaanbaatar
-    'Asia/Urumqi': ZONE_INFO_Asia_Urumqi, # Asia/Urumqi
-    'Asia/Ust-Nera': ZONE_INFO_Asia_Ust_Nera, # Asia/Ust-Nera
-    'Asia/Vladivostok': ZONE_INFO_Asia_Vladivostok, # Asia/Vladivostok
-    'Asia/Yakutsk': ZONE_INFO_Asia_Yakutsk, # Asia/Yakutsk
-    'Asia/Yangon': ZONE_INFO_Asia_Yangon, # Asia/Yangon
-    'Asia/Yekaterinburg': ZONE_INFO_Asia_Yekaterinburg, # Asia/Yekaterinburg
-    'Asia/Yerevan': ZONE_INFO_Asia_Yerevan, # Asia/Yerevan
-    'Atlantic/Azores': ZONE_INFO_Atlantic_Azores, # Atlantic/Azores
-    'Atlantic/Bermuda': ZONE_INFO_Atlantic_Bermuda, # Atlantic/Bermuda
-    'Atlantic/Canary': ZONE_INFO_Atlantic_Canary, # Atlantic/Canary
-    'Atlantic/Cape_Verde': ZONE_INFO_Atlantic_Cape_Verde, # Atlantic/Cape_Verde
-    'Atlantic/Faroe': ZONE_INFO_Atlantic_Faroe, # Atlantic/Faroe
-    'Atlantic/Madeira': ZONE_INFO_Atlantic_Madeira, # Atlantic/Madeira
-    'Atlantic/Reykjavik': ZONE_INFO_Atlantic_Reykjavik, # Atlantic/Reykjavik
-    'Atlantic/South_Georgia': ZONE_INFO_Atlantic_South_Georgia, # Atlantic/South_Georgia
-    'Atlantic/Stanley': ZONE_INFO_Atlantic_Stanley, # Atlantic/Stanley
-    'Australia/Adelaide': ZONE_INFO_Australia_Adelaide, # Australia/Adelaide
-    'Australia/Brisbane': ZONE_INFO_Australia_Brisbane, # Australia/Brisbane
-    'Australia/Broken_Hill': ZONE_INFO_Australia_Broken_Hill, # Australia/Broken_Hill
-    'Australia/Darwin': ZONE_INFO_Australia_Darwin, # Australia/Darwin
-    'Australia/Eucla': ZONE_INFO_Australia_Eucla, # Australia/Eucla
-    'Australia/Hobart': ZONE_INFO_Australia_Hobart, # Australia/Hobart
-    'Australia/Lindeman': ZONE_INFO_Australia_Lindeman, # Australia/Lindeman
-    'Australia/Lord_Howe': ZONE_INFO_Australia_Lord_Howe, # Australia/Lord_Howe
-    'Australia/Melbourne': ZONE_INFO_Australia_Melbourne, # Australia/Melbourne
-    'Australia/Perth': ZONE_INFO_Australia_Perth, # Australia/Perth
-    'Australia/Sydney': ZONE_INFO_Australia_Sydney, # Australia/Sydney
-    'CET': ZONE_INFO_CET, # CET
-    'CST6CDT': ZONE_INFO_CST6CDT, # CST6CDT
-    'EET': ZONE_INFO_EET, # EET
-    'EST': ZONE_INFO_EST, # EST
-    'EST5EDT': ZONE_INFO_EST5EDT, # EST5EDT
-    'Etc/GMT': ZONE_INFO_Etc_GMT, # Etc/GMT
-    'Etc/GMT-1': ZONE_INFO_Etc_GMT_1, # Etc/GMT-1
-    'Etc/GMT-10': ZONE_INFO_Etc_GMT_10, # Etc/GMT-10
-    'Etc/GMT-11': ZONE_INFO_Etc_GMT_11, # Etc/GMT-11
-    'Etc/GMT-12': ZONE_INFO_Etc_GMT_12, # Etc/GMT-12
-    'Etc/GMT-13': ZONE_INFO_Etc_GMT_13, # Etc/GMT-13
-    'Etc/GMT-14': ZONE_INFO_Etc_GMT_14, # Etc/GMT-14
-    'Etc/GMT-2': ZONE_INFO_Etc_GMT_2, # Etc/GMT-2
-    'Etc/GMT-3': ZONE_INFO_Etc_GMT_3, # Etc/GMT-3
-    'Etc/GMT-4': ZONE_INFO_Etc_GMT_4, # Etc/GMT-4
-    'Etc/GMT-5': ZONE_INFO_Etc_GMT_5, # Etc/GMT-5
-    'Etc/GMT-6': ZONE_INFO_Etc_GMT_6, # Etc/GMT-6
-    'Etc/GMT-7': ZONE_INFO_Etc_GMT_7, # Etc/GMT-7
-    'Etc/GMT-8': ZONE_INFO_Etc_GMT_8, # Etc/GMT-8
-    'Etc/GMT-9': ZONE_INFO_Etc_GMT_9, # Etc/GMT-9
-    'Etc/GMT+1': ZONE_INFO_Etc_GMT_PLUS_1, # Etc/GMT+1
-    'Etc/GMT+10': ZONE_INFO_Etc_GMT_PLUS_10, # Etc/GMT+10
-    'Etc/GMT+11': ZONE_INFO_Etc_GMT_PLUS_11, # Etc/GMT+11
-    'Etc/GMT+12': ZONE_INFO_Etc_GMT_PLUS_12, # Etc/GMT+12
-    'Etc/GMT+2': ZONE_INFO_Etc_GMT_PLUS_2, # Etc/GMT+2
-    'Etc/GMT+3': ZONE_INFO_Etc_GMT_PLUS_3, # Etc/GMT+3
-    'Etc/GMT+4': ZONE_INFO_Etc_GMT_PLUS_4, # Etc/GMT+4
-    'Etc/GMT+5': ZONE_INFO_Etc_GMT_PLUS_5, # Etc/GMT+5
-    'Etc/GMT+6': ZONE_INFO_Etc_GMT_PLUS_6, # Etc/GMT+6
-    'Etc/GMT+7': ZONE_INFO_Etc_GMT_PLUS_7, # Etc/GMT+7
-    'Etc/GMT+8': ZONE_INFO_Etc_GMT_PLUS_8, # Etc/GMT+8
-    'Etc/GMT+9': ZONE_INFO_Etc_GMT_PLUS_9, # Etc/GMT+9
-    'Etc/UTC': ZONE_INFO_Etc_UTC, # Etc/UTC
-    'Europe/Amsterdam': ZONE_INFO_Europe_Amsterdam, # Europe/Amsterdam
-    'Europe/Andorra': ZONE_INFO_Europe_Andorra, # Europe/Andorra
-    'Europe/Astrakhan': ZONE_INFO_Europe_Astrakhan, # Europe/Astrakhan
-    'Europe/Athens': ZONE_INFO_Europe_Athens, # Europe/Athens
-    'Europe/Belgrade': ZONE_INFO_Europe_Belgrade, # Europe/Belgrade
-    'Europe/Berlin': ZONE_INFO_Europe_Berlin, # Europe/Berlin
-    'Europe/Brussels': ZONE_INFO_Europe_Brussels, # Europe/Brussels
-    'Europe/Bucharest': ZONE_INFO_Europe_Bucharest, # Europe/Bucharest
-    'Europe/Budapest': ZONE_INFO_Europe_Budapest, # Europe/Budapest
-    'Europe/Chisinau': ZONE_INFO_Europe_Chisinau, # Europe/Chisinau
-    'Europe/Copenhagen': ZONE_INFO_Europe_Copenhagen, # Europe/Copenhagen
-    'Europe/Dublin': ZONE_INFO_Europe_Dublin, # Europe/Dublin
-    'Europe/Gibraltar': ZONE_INFO_Europe_Gibraltar, # Europe/Gibraltar
-    'Europe/Helsinki': ZONE_INFO_Europe_Helsinki, # Europe/Helsinki
-    'Europe/Istanbul': ZONE_INFO_Europe_Istanbul, # Europe/Istanbul
-    'Europe/Kaliningrad': ZONE_INFO_Europe_Kaliningrad, # Europe/Kaliningrad
-    'Europe/Kiev': ZONE_INFO_Europe_Kiev, # Europe/Kiev
-    'Europe/Kirov': ZONE_INFO_Europe_Kirov, # Europe/Kirov
-    'Europe/Lisbon': ZONE_INFO_Europe_Lisbon, # Europe/Lisbon
-    'Europe/London': ZONE_INFO_Europe_London, # Europe/London
-    'Europe/Luxembourg': ZONE_INFO_Europe_Luxembourg, # Europe/Luxembourg
-    'Europe/Madrid': ZONE_INFO_Europe_Madrid, # Europe/Madrid
-    'Europe/Malta': ZONE_INFO_Europe_Malta, # Europe/Malta
-    'Europe/Minsk': ZONE_INFO_Europe_Minsk, # Europe/Minsk
-    'Europe/Monaco': ZONE_INFO_Europe_Monaco, # Europe/Monaco
-    'Europe/Moscow': ZONE_INFO_Europe_Moscow, # Europe/Moscow
-    'Europe/Oslo': ZONE_INFO_Europe_Oslo, # Europe/Oslo
-    'Europe/Paris': ZONE_INFO_Europe_Paris, # Europe/Paris
-    'Europe/Prague': ZONE_INFO_Europe_Prague, # Europe/Prague
-    'Europe/Riga': ZONE_INFO_Europe_Riga, # Europe/Riga
-    'Europe/Rome': ZONE_INFO_Europe_Rome, # Europe/Rome
-    'Europe/Samara': ZONE_INFO_Europe_Samara, # Europe/Samara
-    'Europe/Saratov': ZONE_INFO_Europe_Saratov, # Europe/Saratov
-    'Europe/Simferopol': ZONE_INFO_Europe_Simferopol, # Europe/Simferopol
-    'Europe/Sofia': ZONE_INFO_Europe_Sofia, # Europe/Sofia
-    'Europe/Stockholm': ZONE_INFO_Europe_Stockholm, # Europe/Stockholm
-    'Europe/Tallinn': ZONE_INFO_Europe_Tallinn, # Europe/Tallinn
-    'Europe/Tirane': ZONE_INFO_Europe_Tirane, # Europe/Tirane
-    'Europe/Ulyanovsk': ZONE_INFO_Europe_Ulyanovsk, # Europe/Ulyanovsk
-    'Europe/Uzhgorod': ZONE_INFO_Europe_Uzhgorod, # Europe/Uzhgorod
-    'Europe/Vienna': ZONE_INFO_Europe_Vienna, # Europe/Vienna
-    'Europe/Vilnius': ZONE_INFO_Europe_Vilnius, # Europe/Vilnius
-    'Europe/Volgograd': ZONE_INFO_Europe_Volgograd, # Europe/Volgograd
-    'Europe/Warsaw': ZONE_INFO_Europe_Warsaw, # Europe/Warsaw
-    'Europe/Zaporozhye': ZONE_INFO_Europe_Zaporozhye, # Europe/Zaporozhye
-    'Europe/Zurich': ZONE_INFO_Europe_Zurich, # Europe/Zurich
-    'HST': ZONE_INFO_HST, # HST
-    'Indian/Chagos': ZONE_INFO_Indian_Chagos, # Indian/Chagos
-    'Indian/Christmas': ZONE_INFO_Indian_Christmas, # Indian/Christmas
-    'Indian/Cocos': ZONE_INFO_Indian_Cocos, # Indian/Cocos
-    'Indian/Kerguelen': ZONE_INFO_Indian_Kerguelen, # Indian/Kerguelen
-    'Indian/Mahe': ZONE_INFO_Indian_Mahe, # Indian/Mahe
-    'Indian/Maldives': ZONE_INFO_Indian_Maldives, # Indian/Maldives
-    'Indian/Mauritius': ZONE_INFO_Indian_Mauritius, # Indian/Mauritius
-    'Indian/Reunion': ZONE_INFO_Indian_Reunion, # Indian/Reunion
-    'MET': ZONE_INFO_MET, # MET
-    'MST': ZONE_INFO_MST, # MST
-    'MST7MDT': ZONE_INFO_MST7MDT, # MST7MDT
-    'PST8PDT': ZONE_INFO_PST8PDT, # PST8PDT
-    'Pacific/Apia': ZONE_INFO_Pacific_Apia, # Pacific/Apia
-    'Pacific/Auckland': ZONE_INFO_Pacific_Auckland, # Pacific/Auckland
-    'Pacific/Bougainville': ZONE_INFO_Pacific_Bougainville, # Pacific/Bougainville
-    'Pacific/Chatham': ZONE_INFO_Pacific_Chatham, # Pacific/Chatham
-    'Pacific/Chuuk': ZONE_INFO_Pacific_Chuuk, # Pacific/Chuuk
-    'Pacific/Easter': ZONE_INFO_Pacific_Easter, # Pacific/Easter
-    'Pacific/Efate': ZONE_INFO_Pacific_Efate, # Pacific/Efate
-    'Pacific/Enderbury': ZONE_INFO_Pacific_Enderbury, # Pacific/Enderbury
-    'Pacific/Fakaofo': ZONE_INFO_Pacific_Fakaofo, # Pacific/Fakaofo
-    'Pacific/Fiji': ZONE_INFO_Pacific_Fiji, # Pacific/Fiji
-    'Pacific/Funafuti': ZONE_INFO_Pacific_Funafuti, # Pacific/Funafuti
-    'Pacific/Galapagos': ZONE_INFO_Pacific_Galapagos, # Pacific/Galapagos
-    'Pacific/Gambier': ZONE_INFO_Pacific_Gambier, # Pacific/Gambier
-    'Pacific/Guadalcanal': ZONE_INFO_Pacific_Guadalcanal, # Pacific/Guadalcanal
-    'Pacific/Guam': ZONE_INFO_Pacific_Guam, # Pacific/Guam
-    'Pacific/Honolulu': ZONE_INFO_Pacific_Honolulu, # Pacific/Honolulu
-    'Pacific/Kiritimati': ZONE_INFO_Pacific_Kiritimati, # Pacific/Kiritimati
-    'Pacific/Kosrae': ZONE_INFO_Pacific_Kosrae, # Pacific/Kosrae
-    'Pacific/Kwajalein': ZONE_INFO_Pacific_Kwajalein, # Pacific/Kwajalein
-    'Pacific/Majuro': ZONE_INFO_Pacific_Majuro, # Pacific/Majuro
-    'Pacific/Marquesas': ZONE_INFO_Pacific_Marquesas, # Pacific/Marquesas
-    'Pacific/Nauru': ZONE_INFO_Pacific_Nauru, # Pacific/Nauru
-    'Pacific/Niue': ZONE_INFO_Pacific_Niue, # Pacific/Niue
-    'Pacific/Norfolk': ZONE_INFO_Pacific_Norfolk, # Pacific/Norfolk
-    'Pacific/Noumea': ZONE_INFO_Pacific_Noumea, # Pacific/Noumea
-    'Pacific/Pago_Pago': ZONE_INFO_Pacific_Pago_Pago, # Pacific/Pago_Pago
-    'Pacific/Palau': ZONE_INFO_Pacific_Palau, # Pacific/Palau
-    'Pacific/Pitcairn': ZONE_INFO_Pacific_Pitcairn, # Pacific/Pitcairn
-    'Pacific/Pohnpei': ZONE_INFO_Pacific_Pohnpei, # Pacific/Pohnpei
-    'Pacific/Port_Moresby': ZONE_INFO_Pacific_Port_Moresby, # Pacific/Port_Moresby
-    'Pacific/Rarotonga': ZONE_INFO_Pacific_Rarotonga, # Pacific/Rarotonga
-    'Pacific/Tahiti': ZONE_INFO_Pacific_Tahiti, # Pacific/Tahiti
-    'Pacific/Tarawa': ZONE_INFO_Pacific_Tarawa, # Pacific/Tarawa
-    'Pacific/Tongatapu': ZONE_INFO_Pacific_Tongatapu, # Pacific/Tongatapu
-    'Pacific/Wake': ZONE_INFO_Pacific_Wake, # Pacific/Wake
-    'Pacific/Wallis': ZONE_INFO_Pacific_Wallis, # Pacific/Wallis
-    'WET': ZONE_INFO_WET, # WET
-
+# Link name: Africa/Accra -> Africa/Abidjan
+ZONE_INFO_Africa_Accra = {
+    'name': 'Africa/Accra',
+    'eras': ZONE_ERAS_Africa_Abidjan
 }
+
+# Link name: Africa/Addis_Ababa -> Africa/Nairobi
+ZONE_INFO_Africa_Addis_Ababa = {
+    'name': 'Africa/Addis_Ababa',
+    'eras': ZONE_ERAS_Africa_Nairobi
+}
+
+# Link name: Africa/Asmara -> Africa/Nairobi
+ZONE_INFO_Africa_Asmara = {
+    'name': 'Africa/Asmara',
+    'eras': ZONE_ERAS_Africa_Nairobi
+}
+
+# Link name: Africa/Asmera -> Africa/Nairobi
+ZONE_INFO_Africa_Asmera = {
+    'name': 'Africa/Asmera',
+    'eras': ZONE_ERAS_Africa_Nairobi
+}
+
+# Link name: Africa/Bamako -> Africa/Abidjan
+ZONE_INFO_Africa_Bamako = {
+    'name': 'Africa/Bamako',
+    'eras': ZONE_ERAS_Africa_Abidjan
+}
+
+# Link name: Africa/Bangui -> Africa/Lagos
+ZONE_INFO_Africa_Bangui = {
+    'name': 'Africa/Bangui',
+    'eras': ZONE_ERAS_Africa_Lagos
+}
+
+# Link name: Africa/Banjul -> Africa/Abidjan
+ZONE_INFO_Africa_Banjul = {
+    'name': 'Africa/Banjul',
+    'eras': ZONE_ERAS_Africa_Abidjan
+}
+
+# Link name: Africa/Blantyre -> Africa/Maputo
+ZONE_INFO_Africa_Blantyre = {
+    'name': 'Africa/Blantyre',
+    'eras': ZONE_ERAS_Africa_Maputo
+}
+
+# Link name: Africa/Brazzaville -> Africa/Lagos
+ZONE_INFO_Africa_Brazzaville = {
+    'name': 'Africa/Brazzaville',
+    'eras': ZONE_ERAS_Africa_Lagos
+}
+
+# Link name: Africa/Bujumbura -> Africa/Maputo
+ZONE_INFO_Africa_Bujumbura = {
+    'name': 'Africa/Bujumbura',
+    'eras': ZONE_ERAS_Africa_Maputo
+}
+
+# Link name: Africa/Conakry -> Africa/Abidjan
+ZONE_INFO_Africa_Conakry = {
+    'name': 'Africa/Conakry',
+    'eras': ZONE_ERAS_Africa_Abidjan
+}
+
+# Link name: Africa/Dakar -> Africa/Abidjan
+ZONE_INFO_Africa_Dakar = {
+    'name': 'Africa/Dakar',
+    'eras': ZONE_ERAS_Africa_Abidjan
+}
+
+# Link name: Africa/Dar_es_Salaam -> Africa/Nairobi
+ZONE_INFO_Africa_Dar_es_Salaam = {
+    'name': 'Africa/Dar_es_Salaam',
+    'eras': ZONE_ERAS_Africa_Nairobi
+}
+
+# Link name: Africa/Djibouti -> Africa/Nairobi
+ZONE_INFO_Africa_Djibouti = {
+    'name': 'Africa/Djibouti',
+    'eras': ZONE_ERAS_Africa_Nairobi
+}
+
+# Link name: Africa/Douala -> Africa/Lagos
+ZONE_INFO_Africa_Douala = {
+    'name': 'Africa/Douala',
+    'eras': ZONE_ERAS_Africa_Lagos
+}
+
+# Link name: Africa/Freetown -> Africa/Abidjan
+ZONE_INFO_Africa_Freetown = {
+    'name': 'Africa/Freetown',
+    'eras': ZONE_ERAS_Africa_Abidjan
+}
+
+# Link name: Africa/Gaborone -> Africa/Maputo
+ZONE_INFO_Africa_Gaborone = {
+    'name': 'Africa/Gaborone',
+    'eras': ZONE_ERAS_Africa_Maputo
+}
+
+# Link name: Africa/Harare -> Africa/Maputo
+ZONE_INFO_Africa_Harare = {
+    'name': 'Africa/Harare',
+    'eras': ZONE_ERAS_Africa_Maputo
+}
+
+# Link name: Africa/Kampala -> Africa/Nairobi
+ZONE_INFO_Africa_Kampala = {
+    'name': 'Africa/Kampala',
+    'eras': ZONE_ERAS_Africa_Nairobi
+}
+
+# Link name: Africa/Kigali -> Africa/Maputo
+ZONE_INFO_Africa_Kigali = {
+    'name': 'Africa/Kigali',
+    'eras': ZONE_ERAS_Africa_Maputo
+}
+
+# Link name: Africa/Kinshasa -> Africa/Lagos
+ZONE_INFO_Africa_Kinshasa = {
+    'name': 'Africa/Kinshasa',
+    'eras': ZONE_ERAS_Africa_Lagos
+}
+
+# Link name: Africa/Libreville -> Africa/Lagos
+ZONE_INFO_Africa_Libreville = {
+    'name': 'Africa/Libreville',
+    'eras': ZONE_ERAS_Africa_Lagos
+}
+
+# Link name: Africa/Lome -> Africa/Abidjan
+ZONE_INFO_Africa_Lome = {
+    'name': 'Africa/Lome',
+    'eras': ZONE_ERAS_Africa_Abidjan
+}
+
+# Link name: Africa/Luanda -> Africa/Lagos
+ZONE_INFO_Africa_Luanda = {
+    'name': 'Africa/Luanda',
+    'eras': ZONE_ERAS_Africa_Lagos
+}
+
+# Link name: Africa/Lubumbashi -> Africa/Maputo
+ZONE_INFO_Africa_Lubumbashi = {
+    'name': 'Africa/Lubumbashi',
+    'eras': ZONE_ERAS_Africa_Maputo
+}
+
+# Link name: Africa/Lusaka -> Africa/Maputo
+ZONE_INFO_Africa_Lusaka = {
+    'name': 'Africa/Lusaka',
+    'eras': ZONE_ERAS_Africa_Maputo
+}
+
+# Link name: Africa/Malabo -> Africa/Lagos
+ZONE_INFO_Africa_Malabo = {
+    'name': 'Africa/Malabo',
+    'eras': ZONE_ERAS_Africa_Lagos
+}
+
+# Link name: Africa/Maseru -> Africa/Johannesburg
+ZONE_INFO_Africa_Maseru = {
+    'name': 'Africa/Maseru',
+    'eras': ZONE_ERAS_Africa_Johannesburg
+}
+
+# Link name: Africa/Mbabane -> Africa/Johannesburg
+ZONE_INFO_Africa_Mbabane = {
+    'name': 'Africa/Mbabane',
+    'eras': ZONE_ERAS_Africa_Johannesburg
+}
+
+# Link name: Africa/Mogadishu -> Africa/Nairobi
+ZONE_INFO_Africa_Mogadishu = {
+    'name': 'Africa/Mogadishu',
+    'eras': ZONE_ERAS_Africa_Nairobi
+}
+
+# Link name: Africa/Niamey -> Africa/Lagos
+ZONE_INFO_Africa_Niamey = {
+    'name': 'Africa/Niamey',
+    'eras': ZONE_ERAS_Africa_Lagos
+}
+
+# Link name: Africa/Nouakchott -> Africa/Abidjan
+ZONE_INFO_Africa_Nouakchott = {
+    'name': 'Africa/Nouakchott',
+    'eras': ZONE_ERAS_Africa_Abidjan
+}
+
+# Link name: Africa/Ouagadougou -> Africa/Abidjan
+ZONE_INFO_Africa_Ouagadougou = {
+    'name': 'Africa/Ouagadougou',
+    'eras': ZONE_ERAS_Africa_Abidjan
+}
+
+# Link name: Africa/Porto-Novo -> Africa/Lagos
+ZONE_INFO_Africa_Porto_Novo = {
+    'name': 'Africa/Porto-Novo',
+    'eras': ZONE_ERAS_Africa_Lagos
+}
+
+# Link name: Africa/Timbuktu -> Africa/Abidjan
+ZONE_INFO_Africa_Timbuktu = {
+    'name': 'Africa/Timbuktu',
+    'eras': ZONE_ERAS_Africa_Abidjan
+}
+
+# Link name: America/Anguilla -> America/Puerto_Rico
+ZONE_INFO_America_Anguilla = {
+    'name': 'America/Anguilla',
+    'eras': ZONE_ERAS_America_Puerto_Rico
+}
+
+# Link name: America/Antigua -> America/Puerto_Rico
+ZONE_INFO_America_Antigua = {
+    'name': 'America/Antigua',
+    'eras': ZONE_ERAS_America_Puerto_Rico
+}
+
+# Link name: America/Argentina/ComodRivadavia -> America/Argentina/Catamarca
+ZONE_INFO_America_Argentina_ComodRivadavia = {
+    'name': 'America/Argentina/ComodRivadavia',
+    'eras': ZONE_ERAS_America_Argentina_Catamarca
+}
+
+# Link name: America/Aruba -> America/Puerto_Rico
+ZONE_INFO_America_Aruba = {
+    'name': 'America/Aruba',
+    'eras': ZONE_ERAS_America_Puerto_Rico
+}
+
+# Link name: America/Atikokan -> America/Panama
+ZONE_INFO_America_Atikokan = {
+    'name': 'America/Atikokan',
+    'eras': ZONE_ERAS_America_Panama
+}
+
+# Link name: America/Atka -> America/Adak
+ZONE_INFO_America_Atka = {
+    'name': 'America/Atka',
+    'eras': ZONE_ERAS_America_Adak
+}
+
+# Link name: America/Blanc-Sablon -> America/Puerto_Rico
+ZONE_INFO_America_Blanc_Sablon = {
+    'name': 'America/Blanc-Sablon',
+    'eras': ZONE_ERAS_America_Puerto_Rico
+}
+
+# Link name: America/Buenos_Aires -> America/Argentina/Buenos_Aires
+ZONE_INFO_America_Buenos_Aires = {
+    'name': 'America/Buenos_Aires',
+    'eras': ZONE_ERAS_America_Argentina_Buenos_Aires
+}
+
+# Link name: America/Catamarca -> America/Argentina/Catamarca
+ZONE_INFO_America_Catamarca = {
+    'name': 'America/Catamarca',
+    'eras': ZONE_ERAS_America_Argentina_Catamarca
+}
+
+# Link name: America/Cayman -> America/Panama
+ZONE_INFO_America_Cayman = {
+    'name': 'America/Cayman',
+    'eras': ZONE_ERAS_America_Panama
+}
+
+# Link name: America/Coral_Harbour -> America/Panama
+ZONE_INFO_America_Coral_Harbour = {
+    'name': 'America/Coral_Harbour',
+    'eras': ZONE_ERAS_America_Panama
+}
+
+# Link name: America/Cordoba -> America/Argentina/Cordoba
+ZONE_INFO_America_Cordoba = {
+    'name': 'America/Cordoba',
+    'eras': ZONE_ERAS_America_Argentina_Cordoba
+}
+
+# Link name: America/Creston -> America/Phoenix
+ZONE_INFO_America_Creston = {
+    'name': 'America/Creston',
+    'eras': ZONE_ERAS_America_Phoenix
+}
+
+# Link name: America/Curacao -> America/Puerto_Rico
+ZONE_INFO_America_Curacao = {
+    'name': 'America/Curacao',
+    'eras': ZONE_ERAS_America_Puerto_Rico
+}
+
+# Link name: America/Dominica -> America/Puerto_Rico
+ZONE_INFO_America_Dominica = {
+    'name': 'America/Dominica',
+    'eras': ZONE_ERAS_America_Puerto_Rico
+}
+
+# Link name: America/Ensenada -> America/Tijuana
+ZONE_INFO_America_Ensenada = {
+    'name': 'America/Ensenada',
+    'eras': ZONE_ERAS_America_Tijuana
+}
+
+# Link name: America/Fort_Wayne -> America/Indiana/Indianapolis
+ZONE_INFO_America_Fort_Wayne = {
+    'name': 'America/Fort_Wayne',
+    'eras': ZONE_ERAS_America_Indiana_Indianapolis
+}
+
+# Link name: America/Godthab -> America/Nuuk
+ZONE_INFO_America_Godthab = {
+    'name': 'America/Godthab',
+    'eras': ZONE_ERAS_America_Nuuk
+}
+
+# Link name: America/Grenada -> America/Puerto_Rico
+ZONE_INFO_America_Grenada = {
+    'name': 'America/Grenada',
+    'eras': ZONE_ERAS_America_Puerto_Rico
+}
+
+# Link name: America/Guadeloupe -> America/Puerto_Rico
+ZONE_INFO_America_Guadeloupe = {
+    'name': 'America/Guadeloupe',
+    'eras': ZONE_ERAS_America_Puerto_Rico
+}
+
+# Link name: America/Indianapolis -> America/Indiana/Indianapolis
+ZONE_INFO_America_Indianapolis = {
+    'name': 'America/Indianapolis',
+    'eras': ZONE_ERAS_America_Indiana_Indianapolis
+}
+
+# Link name: America/Jujuy -> America/Argentina/Jujuy
+ZONE_INFO_America_Jujuy = {
+    'name': 'America/Jujuy',
+    'eras': ZONE_ERAS_America_Argentina_Jujuy
+}
+
+# Link name: America/Knox_IN -> America/Indiana/Knox
+ZONE_INFO_America_Knox_IN = {
+    'name': 'America/Knox_IN',
+    'eras': ZONE_ERAS_America_Indiana_Knox
+}
+
+# Link name: America/Kralendijk -> America/Puerto_Rico
+ZONE_INFO_America_Kralendijk = {
+    'name': 'America/Kralendijk',
+    'eras': ZONE_ERAS_America_Puerto_Rico
+}
+
+# Link name: America/Louisville -> America/Kentucky/Louisville
+ZONE_INFO_America_Louisville = {
+    'name': 'America/Louisville',
+    'eras': ZONE_ERAS_America_Kentucky_Louisville
+}
+
+# Link name: America/Lower_Princes -> America/Puerto_Rico
+ZONE_INFO_America_Lower_Princes = {
+    'name': 'America/Lower_Princes',
+    'eras': ZONE_ERAS_America_Puerto_Rico
+}
+
+# Link name: America/Marigot -> America/Puerto_Rico
+ZONE_INFO_America_Marigot = {
+    'name': 'America/Marigot',
+    'eras': ZONE_ERAS_America_Puerto_Rico
+}
+
+# Link name: America/Mendoza -> America/Argentina/Mendoza
+ZONE_INFO_America_Mendoza = {
+    'name': 'America/Mendoza',
+    'eras': ZONE_ERAS_America_Argentina_Mendoza
+}
+
+# Link name: America/Montreal -> America/Toronto
+ZONE_INFO_America_Montreal = {
+    'name': 'America/Montreal',
+    'eras': ZONE_ERAS_America_Toronto
+}
+
+# Link name: America/Montserrat -> America/Puerto_Rico
+ZONE_INFO_America_Montserrat = {
+    'name': 'America/Montserrat',
+    'eras': ZONE_ERAS_America_Puerto_Rico
+}
+
+# Link name: America/Nassau -> America/Toronto
+ZONE_INFO_America_Nassau = {
+    'name': 'America/Nassau',
+    'eras': ZONE_ERAS_America_Toronto
+}
+
+# Link name: America/Port_of_Spain -> America/Puerto_Rico
+ZONE_INFO_America_Port_of_Spain = {
+    'name': 'America/Port_of_Spain',
+    'eras': ZONE_ERAS_America_Puerto_Rico
+}
+
+# Link name: America/Porto_Acre -> America/Rio_Branco
+ZONE_INFO_America_Porto_Acre = {
+    'name': 'America/Porto_Acre',
+    'eras': ZONE_ERAS_America_Rio_Branco
+}
+
+# Link name: America/Rosario -> America/Argentina/Cordoba
+ZONE_INFO_America_Rosario = {
+    'name': 'America/Rosario',
+    'eras': ZONE_ERAS_America_Argentina_Cordoba
+}
+
+# Link name: America/Santa_Isabel -> America/Tijuana
+ZONE_INFO_America_Santa_Isabel = {
+    'name': 'America/Santa_Isabel',
+    'eras': ZONE_ERAS_America_Tijuana
+}
+
+# Link name: America/Shiprock -> America/Denver
+ZONE_INFO_America_Shiprock = {
+    'name': 'America/Shiprock',
+    'eras': ZONE_ERAS_America_Denver
+}
+
+# Link name: America/St_Barthelemy -> America/Puerto_Rico
+ZONE_INFO_America_St_Barthelemy = {
+    'name': 'America/St_Barthelemy',
+    'eras': ZONE_ERAS_America_Puerto_Rico
+}
+
+# Link name: America/St_Kitts -> America/Puerto_Rico
+ZONE_INFO_America_St_Kitts = {
+    'name': 'America/St_Kitts',
+    'eras': ZONE_ERAS_America_Puerto_Rico
+}
+
+# Link name: America/St_Lucia -> America/Puerto_Rico
+ZONE_INFO_America_St_Lucia = {
+    'name': 'America/St_Lucia',
+    'eras': ZONE_ERAS_America_Puerto_Rico
+}
+
+# Link name: America/St_Thomas -> America/Puerto_Rico
+ZONE_INFO_America_St_Thomas = {
+    'name': 'America/St_Thomas',
+    'eras': ZONE_ERAS_America_Puerto_Rico
+}
+
+# Link name: America/St_Vincent -> America/Puerto_Rico
+ZONE_INFO_America_St_Vincent = {
+    'name': 'America/St_Vincent',
+    'eras': ZONE_ERAS_America_Puerto_Rico
+}
+
+# Link name: America/Tortola -> America/Puerto_Rico
+ZONE_INFO_America_Tortola = {
+    'name': 'America/Tortola',
+    'eras': ZONE_ERAS_America_Puerto_Rico
+}
+
+# Link name: America/Virgin -> America/Puerto_Rico
+ZONE_INFO_America_Virgin = {
+    'name': 'America/Virgin',
+    'eras': ZONE_ERAS_America_Puerto_Rico
+}
+
+# Link name: Antarctica/DumontDUrville -> Pacific/Port_Moresby
+ZONE_INFO_Antarctica_DumontDUrville = {
+    'name': 'Antarctica/DumontDUrville',
+    'eras': ZONE_ERAS_Pacific_Port_Moresby
+}
+
+# Link name: Antarctica/McMurdo -> Pacific/Auckland
+ZONE_INFO_Antarctica_McMurdo = {
+    'name': 'Antarctica/McMurdo',
+    'eras': ZONE_ERAS_Pacific_Auckland
+}
+
+# Link name: Antarctica/South_Pole -> Pacific/Auckland
+ZONE_INFO_Antarctica_South_Pole = {
+    'name': 'Antarctica/South_Pole',
+    'eras': ZONE_ERAS_Pacific_Auckland
+}
+
+# Link name: Antarctica/Syowa -> Asia/Riyadh
+ZONE_INFO_Antarctica_Syowa = {
+    'name': 'Antarctica/Syowa',
+    'eras': ZONE_ERAS_Asia_Riyadh
+}
+
+# Link name: Arctic/Longyearbyen -> Europe/Oslo
+ZONE_INFO_Arctic_Longyearbyen = {
+    'name': 'Arctic/Longyearbyen',
+    'eras': ZONE_ERAS_Europe_Oslo
+}
+
+# Link name: Asia/Aden -> Asia/Riyadh
+ZONE_INFO_Asia_Aden = {
+    'name': 'Asia/Aden',
+    'eras': ZONE_ERAS_Asia_Riyadh
+}
+
+# Link name: Asia/Ashkhabad -> Asia/Ashgabat
+ZONE_INFO_Asia_Ashkhabad = {
+    'name': 'Asia/Ashkhabad',
+    'eras': ZONE_ERAS_Asia_Ashgabat
+}
+
+# Link name: Asia/Bahrain -> Asia/Qatar
+ZONE_INFO_Asia_Bahrain = {
+    'name': 'Asia/Bahrain',
+    'eras': ZONE_ERAS_Asia_Qatar
+}
+
+# Link name: Asia/Calcutta -> Asia/Kolkata
+ZONE_INFO_Asia_Calcutta = {
+    'name': 'Asia/Calcutta',
+    'eras': ZONE_ERAS_Asia_Kolkata
+}
+
+# Link name: Asia/Chongqing -> Asia/Shanghai
+ZONE_INFO_Asia_Chongqing = {
+    'name': 'Asia/Chongqing',
+    'eras': ZONE_ERAS_Asia_Shanghai
+}
+
+# Link name: Asia/Chungking -> Asia/Shanghai
+ZONE_INFO_Asia_Chungking = {
+    'name': 'Asia/Chungking',
+    'eras': ZONE_ERAS_Asia_Shanghai
+}
+
+# Link name: Asia/Dacca -> Asia/Dhaka
+ZONE_INFO_Asia_Dacca = {
+    'name': 'Asia/Dacca',
+    'eras': ZONE_ERAS_Asia_Dhaka
+}
+
+# Link name: Asia/Harbin -> Asia/Shanghai
+ZONE_INFO_Asia_Harbin = {
+    'name': 'Asia/Harbin',
+    'eras': ZONE_ERAS_Asia_Shanghai
+}
+
+# Link name: Asia/Istanbul -> Europe/Istanbul
+ZONE_INFO_Asia_Istanbul = {
+    'name': 'Asia/Istanbul',
+    'eras': ZONE_ERAS_Europe_Istanbul
+}
+
+# Link name: Asia/Kashgar -> Asia/Urumqi
+ZONE_INFO_Asia_Kashgar = {
+    'name': 'Asia/Kashgar',
+    'eras': ZONE_ERAS_Asia_Urumqi
+}
+
+# Link name: Asia/Katmandu -> Asia/Kathmandu
+ZONE_INFO_Asia_Katmandu = {
+    'name': 'Asia/Katmandu',
+    'eras': ZONE_ERAS_Asia_Kathmandu
+}
+
+# Link name: Asia/Kuwait -> Asia/Riyadh
+ZONE_INFO_Asia_Kuwait = {
+    'name': 'Asia/Kuwait',
+    'eras': ZONE_ERAS_Asia_Riyadh
+}
+
+# Link name: Asia/Macao -> Asia/Macau
+ZONE_INFO_Asia_Macao = {
+    'name': 'Asia/Macao',
+    'eras': ZONE_ERAS_Asia_Macau
+}
+
+# Link name: Asia/Muscat -> Asia/Dubai
+ZONE_INFO_Asia_Muscat = {
+    'name': 'Asia/Muscat',
+    'eras': ZONE_ERAS_Asia_Dubai
+}
+
+# Link name: Asia/Phnom_Penh -> Asia/Bangkok
+ZONE_INFO_Asia_Phnom_Penh = {
+    'name': 'Asia/Phnom_Penh',
+    'eras': ZONE_ERAS_Asia_Bangkok
+}
+
+# Link name: Asia/Rangoon -> Asia/Yangon
+ZONE_INFO_Asia_Rangoon = {
+    'name': 'Asia/Rangoon',
+    'eras': ZONE_ERAS_Asia_Yangon
+}
+
+# Link name: Asia/Saigon -> Asia/Ho_Chi_Minh
+ZONE_INFO_Asia_Saigon = {
+    'name': 'Asia/Saigon',
+    'eras': ZONE_ERAS_Asia_Ho_Chi_Minh
+}
+
+# Link name: Asia/Tel_Aviv -> Asia/Jerusalem
+ZONE_INFO_Asia_Tel_Aviv = {
+    'name': 'Asia/Tel_Aviv',
+    'eras': ZONE_ERAS_Asia_Jerusalem
+}
+
+# Link name: Asia/Thimbu -> Asia/Thimphu
+ZONE_INFO_Asia_Thimbu = {
+    'name': 'Asia/Thimbu',
+    'eras': ZONE_ERAS_Asia_Thimphu
+}
+
+# Link name: Asia/Ujung_Pandang -> Asia/Makassar
+ZONE_INFO_Asia_Ujung_Pandang = {
+    'name': 'Asia/Ujung_Pandang',
+    'eras': ZONE_ERAS_Asia_Makassar
+}
+
+# Link name: Asia/Ulan_Bator -> Asia/Ulaanbaatar
+ZONE_INFO_Asia_Ulan_Bator = {
+    'name': 'Asia/Ulan_Bator',
+    'eras': ZONE_ERAS_Asia_Ulaanbaatar
+}
+
+# Link name: Asia/Vientiane -> Asia/Bangkok
+ZONE_INFO_Asia_Vientiane = {
+    'name': 'Asia/Vientiane',
+    'eras': ZONE_ERAS_Asia_Bangkok
+}
+
+# Link name: Atlantic/Faeroe -> Atlantic/Faroe
+ZONE_INFO_Atlantic_Faeroe = {
+    'name': 'Atlantic/Faeroe',
+    'eras': ZONE_ERAS_Atlantic_Faroe
+}
+
+# Link name: Atlantic/Jan_Mayen -> Europe/Oslo
+ZONE_INFO_Atlantic_Jan_Mayen = {
+    'name': 'Atlantic/Jan_Mayen',
+    'eras': ZONE_ERAS_Europe_Oslo
+}
+
+# Link name: Atlantic/St_Helena -> Africa/Abidjan
+ZONE_INFO_Atlantic_St_Helena = {
+    'name': 'Atlantic/St_Helena',
+    'eras': ZONE_ERAS_Africa_Abidjan
+}
+
+# Link name: Australia/ACT -> Australia/Sydney
+ZONE_INFO_Australia_ACT = {
+    'name': 'Australia/ACT',
+    'eras': ZONE_ERAS_Australia_Sydney
+}
+
+# Link name: Australia/Canberra -> Australia/Sydney
+ZONE_INFO_Australia_Canberra = {
+    'name': 'Australia/Canberra',
+    'eras': ZONE_ERAS_Australia_Sydney
+}
+
+# Link name: Australia/Currie -> Australia/Hobart
+ZONE_INFO_Australia_Currie = {
+    'name': 'Australia/Currie',
+    'eras': ZONE_ERAS_Australia_Hobart
+}
+
+# Link name: Australia/LHI -> Australia/Lord_Howe
+ZONE_INFO_Australia_LHI = {
+    'name': 'Australia/LHI',
+    'eras': ZONE_ERAS_Australia_Lord_Howe
+}
+
+# Link name: Australia/NSW -> Australia/Sydney
+ZONE_INFO_Australia_NSW = {
+    'name': 'Australia/NSW',
+    'eras': ZONE_ERAS_Australia_Sydney
+}
+
+# Link name: Australia/North -> Australia/Darwin
+ZONE_INFO_Australia_North = {
+    'name': 'Australia/North',
+    'eras': ZONE_ERAS_Australia_Darwin
+}
+
+# Link name: Australia/Queensland -> Australia/Brisbane
+ZONE_INFO_Australia_Queensland = {
+    'name': 'Australia/Queensland',
+    'eras': ZONE_ERAS_Australia_Brisbane
+}
+
+# Link name: Australia/South -> Australia/Adelaide
+ZONE_INFO_Australia_South = {
+    'name': 'Australia/South',
+    'eras': ZONE_ERAS_Australia_Adelaide
+}
+
+# Link name: Australia/Tasmania -> Australia/Hobart
+ZONE_INFO_Australia_Tasmania = {
+    'name': 'Australia/Tasmania',
+    'eras': ZONE_ERAS_Australia_Hobart
+}
+
+# Link name: Australia/Victoria -> Australia/Melbourne
+ZONE_INFO_Australia_Victoria = {
+    'name': 'Australia/Victoria',
+    'eras': ZONE_ERAS_Australia_Melbourne
+}
+
+# Link name: Australia/West -> Australia/Perth
+ZONE_INFO_Australia_West = {
+    'name': 'Australia/West',
+    'eras': ZONE_ERAS_Australia_Perth
+}
+
+# Link name: Australia/Yancowinna -> Australia/Broken_Hill
+ZONE_INFO_Australia_Yancowinna = {
+    'name': 'Australia/Yancowinna',
+    'eras': ZONE_ERAS_Australia_Broken_Hill
+}
+
+# Link name: Brazil/Acre -> America/Rio_Branco
+ZONE_INFO_Brazil_Acre = {
+    'name': 'Brazil/Acre',
+    'eras': ZONE_ERAS_America_Rio_Branco
+}
+
+# Link name: Brazil/DeNoronha -> America/Noronha
+ZONE_INFO_Brazil_DeNoronha = {
+    'name': 'Brazil/DeNoronha',
+    'eras': ZONE_ERAS_America_Noronha
+}
+
+# Link name: Brazil/East -> America/Sao_Paulo
+ZONE_INFO_Brazil_East = {
+    'name': 'Brazil/East',
+    'eras': ZONE_ERAS_America_Sao_Paulo
+}
+
+# Link name: Brazil/West -> America/Manaus
+ZONE_INFO_Brazil_West = {
+    'name': 'Brazil/West',
+    'eras': ZONE_ERAS_America_Manaus
+}
+
+# Link name: Canada/Atlantic -> America/Halifax
+ZONE_INFO_Canada_Atlantic = {
+    'name': 'Canada/Atlantic',
+    'eras': ZONE_ERAS_America_Halifax
+}
+
+# Link name: Canada/Central -> America/Winnipeg
+ZONE_INFO_Canada_Central = {
+    'name': 'Canada/Central',
+    'eras': ZONE_ERAS_America_Winnipeg
+}
+
+# Link name: Canada/Eastern -> America/Toronto
+ZONE_INFO_Canada_Eastern = {
+    'name': 'Canada/Eastern',
+    'eras': ZONE_ERAS_America_Toronto
+}
+
+# Link name: Canada/Mountain -> America/Edmonton
+ZONE_INFO_Canada_Mountain = {
+    'name': 'Canada/Mountain',
+    'eras': ZONE_ERAS_America_Edmonton
+}
+
+# Link name: Canada/Newfoundland -> America/St_Johns
+ZONE_INFO_Canada_Newfoundland = {
+    'name': 'Canada/Newfoundland',
+    'eras': ZONE_ERAS_America_St_Johns
+}
+
+# Link name: Canada/Pacific -> America/Vancouver
+ZONE_INFO_Canada_Pacific = {
+    'name': 'Canada/Pacific',
+    'eras': ZONE_ERAS_America_Vancouver
+}
+
+# Link name: Canada/Saskatchewan -> America/Regina
+ZONE_INFO_Canada_Saskatchewan = {
+    'name': 'Canada/Saskatchewan',
+    'eras': ZONE_ERAS_America_Regina
+}
+
+# Link name: Canada/Yukon -> America/Whitehorse
+ZONE_INFO_Canada_Yukon = {
+    'name': 'Canada/Yukon',
+    'eras': ZONE_ERAS_America_Whitehorse
+}
+
+# Link name: Chile/Continental -> America/Santiago
+ZONE_INFO_Chile_Continental = {
+    'name': 'Chile/Continental',
+    'eras': ZONE_ERAS_America_Santiago
+}
+
+# Link name: Chile/EasterIsland -> Pacific/Easter
+ZONE_INFO_Chile_EasterIsland = {
+    'name': 'Chile/EasterIsland',
+    'eras': ZONE_ERAS_Pacific_Easter
+}
+
+# Link name: Cuba -> America/Havana
+ZONE_INFO_Cuba = {
+    'name': 'Cuba',
+    'eras': ZONE_ERAS_America_Havana
+}
+
+# Link name: Egypt -> Africa/Cairo
+ZONE_INFO_Egypt = {
+    'name': 'Egypt',
+    'eras': ZONE_ERAS_Africa_Cairo
+}
+
+# Link name: Eire -> Europe/Dublin
+ZONE_INFO_Eire = {
+    'name': 'Eire',
+    'eras': ZONE_ERAS_Europe_Dublin
+}
+
+# Link name: Etc/GMT+0 -> Etc/GMT
+ZONE_INFO_Etc_GMT_PLUS_0 = {
+    'name': 'Etc/GMT+0',
+    'eras': ZONE_ERAS_Etc_GMT
+}
+
+# Link name: Etc/GMT-0 -> Etc/GMT
+ZONE_INFO_Etc_GMT_0 = {
+    'name': 'Etc/GMT-0',
+    'eras': ZONE_ERAS_Etc_GMT
+}
+
+# Link name: Etc/GMT0 -> Etc/GMT
+ZONE_INFO_Etc_GMT0 = {
+    'name': 'Etc/GMT0',
+    'eras': ZONE_ERAS_Etc_GMT
+}
+
+# Link name: Etc/Greenwich -> Etc/GMT
+ZONE_INFO_Etc_Greenwich = {
+    'name': 'Etc/Greenwich',
+    'eras': ZONE_ERAS_Etc_GMT
+}
+
+# Link name: Etc/UCT -> Etc/UTC
+ZONE_INFO_Etc_UCT = {
+    'name': 'Etc/UCT',
+    'eras': ZONE_ERAS_Etc_UTC
+}
+
+# Link name: Etc/Universal -> Etc/UTC
+ZONE_INFO_Etc_Universal = {
+    'name': 'Etc/Universal',
+    'eras': ZONE_ERAS_Etc_UTC
+}
+
+# Link name: Etc/Zulu -> Etc/UTC
+ZONE_INFO_Etc_Zulu = {
+    'name': 'Etc/Zulu',
+    'eras': ZONE_ERAS_Etc_UTC
+}
+
+# Link name: Europe/Belfast -> Europe/London
+ZONE_INFO_Europe_Belfast = {
+    'name': 'Europe/Belfast',
+    'eras': ZONE_ERAS_Europe_London
+}
+
+# Link name: Europe/Bratislava -> Europe/Prague
+ZONE_INFO_Europe_Bratislava = {
+    'name': 'Europe/Bratislava',
+    'eras': ZONE_ERAS_Europe_Prague
+}
+
+# Link name: Europe/Busingen -> Europe/Zurich
+ZONE_INFO_Europe_Busingen = {
+    'name': 'Europe/Busingen',
+    'eras': ZONE_ERAS_Europe_Zurich
+}
+
+# Link name: Europe/Guernsey -> Europe/London
+ZONE_INFO_Europe_Guernsey = {
+    'name': 'Europe/Guernsey',
+    'eras': ZONE_ERAS_Europe_London
+}
+
+# Link name: Europe/Isle_of_Man -> Europe/London
+ZONE_INFO_Europe_Isle_of_Man = {
+    'name': 'Europe/Isle_of_Man',
+    'eras': ZONE_ERAS_Europe_London
+}
+
+# Link name: Europe/Jersey -> Europe/London
+ZONE_INFO_Europe_Jersey = {
+    'name': 'Europe/Jersey',
+    'eras': ZONE_ERAS_Europe_London
+}
+
+# Link name: Europe/Ljubljana -> Europe/Belgrade
+ZONE_INFO_Europe_Ljubljana = {
+    'name': 'Europe/Ljubljana',
+    'eras': ZONE_ERAS_Europe_Belgrade
+}
+
+# Link name: Europe/Mariehamn -> Europe/Helsinki
+ZONE_INFO_Europe_Mariehamn = {
+    'name': 'Europe/Mariehamn',
+    'eras': ZONE_ERAS_Europe_Helsinki
+}
+
+# Link name: Europe/Nicosia -> Asia/Nicosia
+ZONE_INFO_Europe_Nicosia = {
+    'name': 'Europe/Nicosia',
+    'eras': ZONE_ERAS_Asia_Nicosia
+}
+
+# Link name: Europe/Podgorica -> Europe/Belgrade
+ZONE_INFO_Europe_Podgorica = {
+    'name': 'Europe/Podgorica',
+    'eras': ZONE_ERAS_Europe_Belgrade
+}
+
+# Link name: Europe/San_Marino -> Europe/Rome
+ZONE_INFO_Europe_San_Marino = {
+    'name': 'Europe/San_Marino',
+    'eras': ZONE_ERAS_Europe_Rome
+}
+
+# Link name: Europe/Sarajevo -> Europe/Belgrade
+ZONE_INFO_Europe_Sarajevo = {
+    'name': 'Europe/Sarajevo',
+    'eras': ZONE_ERAS_Europe_Belgrade
+}
+
+# Link name: Europe/Skopje -> Europe/Belgrade
+ZONE_INFO_Europe_Skopje = {
+    'name': 'Europe/Skopje',
+    'eras': ZONE_ERAS_Europe_Belgrade
+}
+
+# Link name: Europe/Tiraspol -> Europe/Chisinau
+ZONE_INFO_Europe_Tiraspol = {
+    'name': 'Europe/Tiraspol',
+    'eras': ZONE_ERAS_Europe_Chisinau
+}
+
+# Link name: Europe/Vaduz -> Europe/Zurich
+ZONE_INFO_Europe_Vaduz = {
+    'name': 'Europe/Vaduz',
+    'eras': ZONE_ERAS_Europe_Zurich
+}
+
+# Link name: Europe/Vatican -> Europe/Rome
+ZONE_INFO_Europe_Vatican = {
+    'name': 'Europe/Vatican',
+    'eras': ZONE_ERAS_Europe_Rome
+}
+
+# Link name: Europe/Zagreb -> Europe/Belgrade
+ZONE_INFO_Europe_Zagreb = {
+    'name': 'Europe/Zagreb',
+    'eras': ZONE_ERAS_Europe_Belgrade
+}
+
+# Link name: GB -> Europe/London
+ZONE_INFO_GB = {
+    'name': 'GB',
+    'eras': ZONE_ERAS_Europe_London
+}
+
+# Link name: GB-Eire -> Europe/London
+ZONE_INFO_GB_Eire = {
+    'name': 'GB-Eire',
+    'eras': ZONE_ERAS_Europe_London
+}
+
+# Link name: GMT -> Etc/GMT
+ZONE_INFO_GMT = {
+    'name': 'GMT',
+    'eras': ZONE_ERAS_Etc_GMT
+}
+
+# Link name: GMT+0 -> Etc/GMT
+ZONE_INFO_GMT_PLUS_0 = {
+    'name': 'GMT+0',
+    'eras': ZONE_ERAS_Etc_GMT
+}
+
+# Link name: GMT-0 -> Etc/GMT
+ZONE_INFO_GMT_0 = {
+    'name': 'GMT-0',
+    'eras': ZONE_ERAS_Etc_GMT
+}
+
+# Link name: GMT0 -> Etc/GMT
+ZONE_INFO_GMT0 = {
+    'name': 'GMT0',
+    'eras': ZONE_ERAS_Etc_GMT
+}
+
+# Link name: Greenwich -> Etc/GMT
+ZONE_INFO_Greenwich = {
+    'name': 'Greenwich',
+    'eras': ZONE_ERAS_Etc_GMT
+}
+
+# Link name: Hongkong -> Asia/Hong_Kong
+ZONE_INFO_Hongkong = {
+    'name': 'Hongkong',
+    'eras': ZONE_ERAS_Asia_Hong_Kong
+}
+
+# Link name: Iceland -> Atlantic/Reykjavik
+ZONE_INFO_Iceland = {
+    'name': 'Iceland',
+    'eras': ZONE_ERAS_Atlantic_Reykjavik
+}
+
+# Link name: Indian/Antananarivo -> Africa/Nairobi
+ZONE_INFO_Indian_Antananarivo = {
+    'name': 'Indian/Antananarivo',
+    'eras': ZONE_ERAS_Africa_Nairobi
+}
+
+# Link name: Indian/Comoro -> Africa/Nairobi
+ZONE_INFO_Indian_Comoro = {
+    'name': 'Indian/Comoro',
+    'eras': ZONE_ERAS_Africa_Nairobi
+}
+
+# Link name: Indian/Mayotte -> Africa/Nairobi
+ZONE_INFO_Indian_Mayotte = {
+    'name': 'Indian/Mayotte',
+    'eras': ZONE_ERAS_Africa_Nairobi
+}
+
+# Link name: Iran -> Asia/Tehran
+ZONE_INFO_Iran = {
+    'name': 'Iran',
+    'eras': ZONE_ERAS_Asia_Tehran
+}
+
+# Link name: Israel -> Asia/Jerusalem
+ZONE_INFO_Israel = {
+    'name': 'Israel',
+    'eras': ZONE_ERAS_Asia_Jerusalem
+}
+
+# Link name: Jamaica -> America/Jamaica
+ZONE_INFO_Jamaica = {
+    'name': 'Jamaica',
+    'eras': ZONE_ERAS_America_Jamaica
+}
+
+# Link name: Japan -> Asia/Tokyo
+ZONE_INFO_Japan = {
+    'name': 'Japan',
+    'eras': ZONE_ERAS_Asia_Tokyo
+}
+
+# Link name: Kwajalein -> Pacific/Kwajalein
+ZONE_INFO_Kwajalein = {
+    'name': 'Kwajalein',
+    'eras': ZONE_ERAS_Pacific_Kwajalein
+}
+
+# Link name: Libya -> Africa/Tripoli
+ZONE_INFO_Libya = {
+    'name': 'Libya',
+    'eras': ZONE_ERAS_Africa_Tripoli
+}
+
+# Link name: Mexico/BajaNorte -> America/Tijuana
+ZONE_INFO_Mexico_BajaNorte = {
+    'name': 'Mexico/BajaNorte',
+    'eras': ZONE_ERAS_America_Tijuana
+}
+
+# Link name: Mexico/BajaSur -> America/Mazatlan
+ZONE_INFO_Mexico_BajaSur = {
+    'name': 'Mexico/BajaSur',
+    'eras': ZONE_ERAS_America_Mazatlan
+}
+
+# Link name: Mexico/General -> America/Mexico_City
+ZONE_INFO_Mexico_General = {
+    'name': 'Mexico/General',
+    'eras': ZONE_ERAS_America_Mexico_City
+}
+
+# Link name: NZ -> Pacific/Auckland
+ZONE_INFO_NZ = {
+    'name': 'NZ',
+    'eras': ZONE_ERAS_Pacific_Auckland
+}
+
+# Link name: NZ-CHAT -> Pacific/Chatham
+ZONE_INFO_NZ_CHAT = {
+    'name': 'NZ-CHAT',
+    'eras': ZONE_ERAS_Pacific_Chatham
+}
+
+# Link name: Navajo -> America/Denver
+ZONE_INFO_Navajo = {
+    'name': 'Navajo',
+    'eras': ZONE_ERAS_America_Denver
+}
+
+# Link name: PRC -> Asia/Shanghai
+ZONE_INFO_PRC = {
+    'name': 'PRC',
+    'eras': ZONE_ERAS_Asia_Shanghai
+}
+
+# Link name: Pacific/Enderbury -> Pacific/Kanton
+ZONE_INFO_Pacific_Enderbury = {
+    'name': 'Pacific/Enderbury',
+    'eras': ZONE_ERAS_Pacific_Kanton
+}
+
+# Link name: Pacific/Johnston -> Pacific/Honolulu
+ZONE_INFO_Pacific_Johnston = {
+    'name': 'Pacific/Johnston',
+    'eras': ZONE_ERAS_Pacific_Honolulu
+}
+
+# Link name: Pacific/Midway -> Pacific/Pago_Pago
+ZONE_INFO_Pacific_Midway = {
+    'name': 'Pacific/Midway',
+    'eras': ZONE_ERAS_Pacific_Pago_Pago
+}
+
+# Link name: Pacific/Ponape -> Pacific/Pohnpei
+ZONE_INFO_Pacific_Ponape = {
+    'name': 'Pacific/Ponape',
+    'eras': ZONE_ERAS_Pacific_Pohnpei
+}
+
+# Link name: Pacific/Saipan -> Pacific/Guam
+ZONE_INFO_Pacific_Saipan = {
+    'name': 'Pacific/Saipan',
+    'eras': ZONE_ERAS_Pacific_Guam
+}
+
+# Link name: Pacific/Samoa -> Pacific/Pago_Pago
+ZONE_INFO_Pacific_Samoa = {
+    'name': 'Pacific/Samoa',
+    'eras': ZONE_ERAS_Pacific_Pago_Pago
+}
+
+# Link name: Pacific/Truk -> Pacific/Chuuk
+ZONE_INFO_Pacific_Truk = {
+    'name': 'Pacific/Truk',
+    'eras': ZONE_ERAS_Pacific_Chuuk
+}
+
+# Link name: Pacific/Yap -> Pacific/Chuuk
+ZONE_INFO_Pacific_Yap = {
+    'name': 'Pacific/Yap',
+    'eras': ZONE_ERAS_Pacific_Chuuk
+}
+
+# Link name: Poland -> Europe/Warsaw
+ZONE_INFO_Poland = {
+    'name': 'Poland',
+    'eras': ZONE_ERAS_Europe_Warsaw
+}
+
+# Link name: Portugal -> Europe/Lisbon
+ZONE_INFO_Portugal = {
+    'name': 'Portugal',
+    'eras': ZONE_ERAS_Europe_Lisbon
+}
+
+# Link name: ROC -> Asia/Taipei
+ZONE_INFO_ROC = {
+    'name': 'ROC',
+    'eras': ZONE_ERAS_Asia_Taipei
+}
+
+# Link name: ROK -> Asia/Seoul
+ZONE_INFO_ROK = {
+    'name': 'ROK',
+    'eras': ZONE_ERAS_Asia_Seoul
+}
+
+# Link name: Singapore -> Asia/Singapore
+ZONE_INFO_Singapore = {
+    'name': 'Singapore',
+    'eras': ZONE_ERAS_Asia_Singapore
+}
+
+# Link name: Turkey -> Europe/Istanbul
+ZONE_INFO_Turkey = {
+    'name': 'Turkey',
+    'eras': ZONE_ERAS_Europe_Istanbul
+}
+
+# Link name: UCT -> Etc/UTC
+ZONE_INFO_UCT = {
+    'name': 'UCT',
+    'eras': ZONE_ERAS_Etc_UTC
+}
+
+# Link name: US/Alaska -> America/Anchorage
+ZONE_INFO_US_Alaska = {
+    'name': 'US/Alaska',
+    'eras': ZONE_ERAS_America_Anchorage
+}
+
+# Link name: US/Aleutian -> America/Adak
+ZONE_INFO_US_Aleutian = {
+    'name': 'US/Aleutian',
+    'eras': ZONE_ERAS_America_Adak
+}
+
+# Link name: US/Arizona -> America/Phoenix
+ZONE_INFO_US_Arizona = {
+    'name': 'US/Arizona',
+    'eras': ZONE_ERAS_America_Phoenix
+}
+
+# Link name: US/Central -> America/Chicago
+ZONE_INFO_US_Central = {
+    'name': 'US/Central',
+    'eras': ZONE_ERAS_America_Chicago
+}
+
+# Link name: US/East-Indiana -> America/Indiana/Indianapolis
+ZONE_INFO_US_East_Indiana = {
+    'name': 'US/East-Indiana',
+    'eras': ZONE_ERAS_America_Indiana_Indianapolis
+}
+
+# Link name: US/Eastern -> America/New_York
+ZONE_INFO_US_Eastern = {
+    'name': 'US/Eastern',
+    'eras': ZONE_ERAS_America_New_York
+}
+
+# Link name: US/Hawaii -> Pacific/Honolulu
+ZONE_INFO_US_Hawaii = {
+    'name': 'US/Hawaii',
+    'eras': ZONE_ERAS_Pacific_Honolulu
+}
+
+# Link name: US/Indiana-Starke -> America/Indiana/Knox
+ZONE_INFO_US_Indiana_Starke = {
+    'name': 'US/Indiana-Starke',
+    'eras': ZONE_ERAS_America_Indiana_Knox
+}
+
+# Link name: US/Michigan -> America/Detroit
+ZONE_INFO_US_Michigan = {
+    'name': 'US/Michigan',
+    'eras': ZONE_ERAS_America_Detroit
+}
+
+# Link name: US/Mountain -> America/Denver
+ZONE_INFO_US_Mountain = {
+    'name': 'US/Mountain',
+    'eras': ZONE_ERAS_America_Denver
+}
+
+# Link name: US/Pacific -> America/Los_Angeles
+ZONE_INFO_US_Pacific = {
+    'name': 'US/Pacific',
+    'eras': ZONE_ERAS_America_Los_Angeles
+}
+
+# Link name: US/Samoa -> Pacific/Pago_Pago
+ZONE_INFO_US_Samoa = {
+    'name': 'US/Samoa',
+    'eras': ZONE_ERAS_Pacific_Pago_Pago
+}
+
+# Link name: UTC -> Etc/UTC
+ZONE_INFO_UTC = {
+    'name': 'UTC',
+    'eras': ZONE_ERAS_Etc_UTC
+}
+
+# Link name: Universal -> Etc/UTC
+ZONE_INFO_Universal = {
+    'name': 'Universal',
+    'eras': ZONE_ERAS_Etc_UTC
+}
+
+# Link name: W-SU -> Europe/Moscow
+ZONE_INFO_W_SU = {
+    'name': 'W-SU',
+    'eras': ZONE_ERAS_Europe_Moscow
+}
+
+# Link name: Zulu -> Etc/UTC
+ZONE_INFO_Zulu = {
+    'name': 'Zulu',
+    'eras': ZONE_ERAS_Etc_UTC
+}
+
+
 
 #---------------------------------------------------------------------------
 # Unsuported zones: 0
@@ -18324,4 +19367,16 @@ ZONE_INFO_MAP = {
 # Antarctica/Casey (["UNTIL '0:01' not on 15-minute boundary"])
 # Asia/Gaza (["UNTIL '0:01' not on 15-minute boundary"])
 # Pacific/Kiritimati (["STDOFF '-10:40' not on 15-minute boundary"])
+
+
+#---------------------------------------------------------------------------
+# Unsuported links: 0
+#---------------------------------------------------------------------------
+
+
+
+#---------------------------------------------------------------------------
+# Notable links: 0
+#---------------------------------------------------------------------------
+
 

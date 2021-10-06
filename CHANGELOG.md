@@ -1,6 +1,7 @@
 # Changelog
 
 * Unreleased
+* v0.1 (2021-10-06, TZDB 2021c)
     * `zone_processor.py`
         * Correctly attached the UTC offsets of `start_date_time` of a
           `MatchingEra` to the previous `MatchingEra`.
@@ -16,6 +17,11 @@
               `MatchingEra`.
             * Resolves all validation errors between Python `acetime.acetz`
               class and the Hinnant `date` library.
-* (2021-09-08)
+    * Replace `acetz.getz()` with `ZoneManager.gettz()` whose `ZoneManager`
+      class takes a zone registry.
+        * Two pre-defined registries are: `zone_regsitry.ZONE_REGISTRY` and
+          `zone_regsitry.ZONE_AND_LINK_REGISTRY`.
+    * Upgrade to TZDB 2021c.
+* (2021-09-08, TZDB 2021a)
     * Initial split from
       [AceTimeTools](https://github.com/bxparks/AceTimeTools).
