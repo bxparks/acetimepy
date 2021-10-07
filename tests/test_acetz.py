@@ -2,10 +2,13 @@ import sys
 import unittest
 import logging
 from datetime import datetime, timedelta, timezone
+from typing import cast
 
 from acetime.common import SECONDS_SINCE_UNIX_EPOCH
 from acetime.acetz import acetz, ZoneManager
+from acetime.zone_info_types import ZoneInfo
 from acetime.zonedbpy.zone_registry import ZONE_REGISTRY
+from acetime.zonedbpy.zone_infos import ZONE_INFO_America_Los_Angeles
 
 
 # Enable logging during unittests.
@@ -42,29 +45,50 @@ def print_zp_at_dt(tz: acetz, dt: datetime) -> None:
 zone_manager = ZoneManager(ZONE_REGISTRY)
 
 
-# @unittest.skip
 class TestLosAngeles(unittest.TestCase):
 
     def test_constructor(self) -> None:
-        atz = zone_manager.gettz('America/Los_Angeles')
-        adt = datetime(2000, 1, 2, 3, 4, 5, tzinfo=atz)
+        """Create date from AceTime epoch seconds using the constructor
+        that specifies the timezone directly.
+        """
 
-        self.assertEqual(2000, adt.year)
-        self.assertEqual(1, adt.month)
-        self.assertEqual(2, adt.day)
-        self.assertEqual(3, adt.hour)
-        self.assertEqual(4, adt.minute)
-        self.assertEqual(5, adt.second)
+        tz = zone_manager.gettz('America/Los_Angeles')
+
+        dtc = datetime(2000, 1, 2, 3, 4, 5, tzinfo=tz)
+        self.assertEqual(2000, dtc.year)
+        self.assertEqual(1, dtc.month)
+        self.assertEqual(2, dtc.day)
+        self.assertEqual(3, dtc.hour)
+        self.assertEqual(4, dtc.minute)
+        self.assertEqual(5, dtc.second)
 
         # date +%s -d '2000-01-02T03:04:05-08:00'
-        self.assertEqual(946811045, int(adt.timestamp()))
+        self.assertEqual(946811045, int(dtc.timestamp()))
 
-        adt_utcoffset = adt.utcoffset()
-        assert(adt_utcoffset is not None)
-        self.assertEqual(-8 * 3600, adt_utcoffset.total_seconds())
+        dtc_utcoffset = dtc.utcoffset()
+        assert(dtc_utcoffset is not None)
+        self.assertEqual(-8 * 3600, dtc_utcoffset.total_seconds())
 
-        assert(adt.tzinfo is not None)
-        self.assertEqual("PST", adt.tzinfo.tzname(adt))
+        assert(dtc.tzinfo is not None)
+        self.assertEqual("PST", dtc.tzinfo.tzname(dtc))
+
+    def test_fromtimestamp(self) -> None:
+        """Create date from AceTime epoch seconds using fromtimestamp()."""
+
+        tz = zone_manager.gettz('America/Los_Angeles')
+
+        unix_seconds = 946811045
+        dte = datetime.fromtimestamp(unix_seconds, tz=tz)
+
+        expected = datetime(2000, 1, 2, 3, 4, 5, tzinfo=tz)
+        self.assertEqual(dte, expected)
+
+        dte_utcoffset = dte.utcoffset()
+        assert(dte_utcoffset is not None)
+        self.assertEqual(-8 * 3600, dte_utcoffset.total_seconds())
+
+        assert(dte.tzinfo is not None)
+        self.assertEqual("PST", dte.tzinfo.tzname(dte))
 
     def test_before_spring_forward(self) -> None:
         tz = zone_manager.gettz('America/Los_Angeles')
@@ -268,8 +292,31 @@ class TestLosAngeles(unittest.TestCase):
 
         self.assertEqual(dtc, dtt)
 
+    def test_zone_info(self) -> None:
+        """Test creation of acetz object using a ZoneInfo database entry,
+        instead of going through the ZoneManager.
+        """
+        tz = acetz(cast(ZoneInfo, ZONE_INFO_America_Los_Angeles))
 
-# @unittest.skip
+        epoch_seconds = 7984800
+        unix_seconds = epoch_seconds + SECONDS_SINCE_UNIX_EPOCH
+        dtu = datetime.fromtimestamp(unix_seconds, tz=timezone.utc)
+
+        dtc = datetime(2000, 4, 2, 3, 0, 0, tzinfo=tz)
+        self.assertEqual(unix_seconds, int(dtc.timestamp()))
+        self.assertEqual(2000, dtc.year)
+        self.assertEqual(4, dtc.month)
+        self.assertEqual(2, dtc.day)
+        self.assertEqual(3, dtc.hour)
+        self.assertEqual(0, dtc.minute)
+        self.assertEqual(0, dtc.second)
+        self.assertEqual("PDT", dtc.tzname())
+        self.assertEqual(timedelta(hours=-7), dtc.utcoffset())
+        self.assertEqual(timedelta(hours=1), dtc.dst())
+
+        self.assertEqual(dtu, dtc)
+
+
 class TestTunis(unittest.TestCase):
 
     def test_2006_01_01(self) -> None:
