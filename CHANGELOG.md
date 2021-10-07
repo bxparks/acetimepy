@@ -1,6 +1,9 @@
 # Changelog
 
 * Unreleased
+    * Add tests for creating `acetz` directly from a ZoneInfo entry, instead
+      of going through the ZoneManager.
+    * Add Instllation, Usage, and other documentation to README.md.
 * v0.1 (2021-10-06, TZDB 2021c)
     * `zone_processor.py`
         * Correctly attached the UTC offsets of `start_date_time` of a
