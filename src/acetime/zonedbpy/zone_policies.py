@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedbpy
-#     --tz_version 2021c
+#     --tz_version 2021d
 #     --action zonedb
 #     --language python
 #     --scope extended
@@ -22,13 +22,13 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2021c
+# from https://github.com/eggert/tz/releases/tag/2021d
 #
 # DO NOT EDIT
 
 #---------------------------------------------------------------------------
 # Supported zone policies: 116
-# numRules: 1139
+# numRules: 1140
 #---------------------------------------------------------------------------
 
 #---------------------------------------------------------------------------
@@ -4797,7 +4797,7 @@ ZONE_POLICY_Falk = {
 
 #---------------------------------------------------------------------------
 # Policy name: Fiji
-# Rule count: 14
+# Rule count: 15
 #---------------------------------------------------------------------------
 ZONE_RULES_Fiji = [
     # Anchor: Rule    Fiji    1999    2000    -    Feb    lastSun    3:00    0    -
@@ -4920,10 +4920,10 @@ ZONE_RULES_Fiji = [
         'delta_seconds': 3600,
         'letter': '-',
     },
-    # Rule    Fiji    2015    max    -    Jan    Sun>=12    3:00    0    -
+    # Rule    Fiji    2015    2021    -    Jan    Sun>=12    3:00    0    -
     {
         'from_year': 2015,
-        'to_year': 9999,
+        'to_year': 2021,
         'in_month': 1,
         'on_day_of_week': 7,
         'on_day_of_month': 12,
@@ -4956,9 +4956,9 @@ ZONE_RULES_Fiji = [
         'delta_seconds': 3600,
         'letter': '-',
     },
-    # Rule    Fiji    2021    max    -    Nov    Sun>=8    2:00    1:00    -
+    # Rule    Fiji    2022    max    -    Nov    Sun>=8    2:00    1:00    -
     {
-        'from_year': 2021,
+        'from_year': 2022,
         'to_year': 9999,
         'in_month': 11,
         'on_day_of_week': 7,
@@ -4966,6 +4966,18 @@ ZONE_RULES_Fiji = [
         'at_seconds': 7200,
         'at_time_suffix': 'w',
         'delta_seconds': 3600,
+        'letter': '-',
+    },
+    # Rule    Fiji    2023    max    -    Jan    Sun>=12    3:00    0    -
+    {
+        'from_year': 2023,
+        'to_year': 9999,
+        'in_month': 1,
+        'on_day_of_week': 7,
+        'on_day_of_month': 12,
+        'at_seconds': 10800,
+        'at_time_suffix': 'w',
+        'delta_seconds': 0,
         'letter': '-',
     },
 
