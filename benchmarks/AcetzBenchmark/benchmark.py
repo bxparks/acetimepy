@@ -26,7 +26,9 @@ import time
 from argparse import ArgumentParser
 from typing import Iterable
 from typing import Set
+from typing import Optional
 import pytz
+from pytz import BaseTzInfo
 from datetime import tzinfo
 from datetime import datetime
 from dateutil.tz import gettz
@@ -51,6 +53,7 @@ class Benchmark:
 
         # Find common zone names.
         common_zones: Set[str] = set()
+        tz: Optional[tzinfo]
         for name, zone_info in ZONE_REGISTRY.items():
             # pytz
             try:
@@ -74,23 +77,25 @@ class Benchmark:
         self.run_dateutil(common_zones)
         self.run_pytz(common_zones)
 
-    def run_acetz(self, zones: Iterable) -> None:
+    def run_acetz(self, zones: Iterable[str]) -> None:
         start = time.time()
         for name in zones:
             tz = self.zone_manager.gettz(name)
+            assert tz is not None
             self.loop_with_tz(tz)
         elapsed = time.time() - start
         print(f"acetz: {elapsed:.2f}")
 
-    def run_dateutil(self, zones: Iterable) -> None:
+    def run_dateutil(self, zones: Iterable[str]) -> None:
         start = time.time()
         for name in zones:
             tz = gettz(name)
+            assert tz is not None
             self.loop_with_tz(tz)
         elapsed = time.time() - start
         print(f"dateutil: {elapsed:.2f}")
 
-    def run_pytz(self, zones: Iterable) -> None:
+    def run_pytz(self, zones: Iterable[str]) -> None:
         start = time.time()
         for name in zones:
             tz = pytz.timezone(name)
@@ -108,7 +113,7 @@ class Benchmark:
                     epoch_seconds = unix_seconds - SECONDS_SINCE_UNIX_EPOCH
                     epoch_seconds
 
-    def loop_with_pytz(self, tz: tzinfo) -> None:
+    def loop_with_pytz(self, tz: BaseTzInfo) -> None:
         """Run the benchmark for pytz, which requires special handling."""
         for year in range(self.start_year, self.until_year):
             for month in range(1, 12):

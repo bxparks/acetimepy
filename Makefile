@@ -9,7 +9,7 @@ all: mypy flake8 tests
 mypy:
 	mypy --strict \
 		--exclude src/acetime/zonedbpy \
-		src tests
+		src tests benchmarks
 
 tests:
 	python3 -m unittest
