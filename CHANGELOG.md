@@ -1,6 +1,8 @@
 # Changelog
 
 * Unreleased
+    * Add `AcetzBenchmark` to compare speed of `acetz` with `dateutil.tz`
+      and `pytz`.
 * v0.2 (2021-10-18, TZDB 2021d)
     * Add tests for creating `acetz` directly from a ZoneInfo entry, instead
       of going through the ZoneManager.
