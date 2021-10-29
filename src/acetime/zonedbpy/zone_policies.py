@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedbpy
-#     --tz_version 2021d
+#     --tz_version 2021e
 #     --action zonedb
 #     --language python
 #     --scope extended
@@ -22,13 +22,13 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2021d
+# from https://github.com/eggert/tz/releases/tag/2021e
 #
 # DO NOT EDIT
 
 #---------------------------------------------------------------------------
 # Supported zone policies: 116
-# numRules: 1140
+# numRules: 1141
 #---------------------------------------------------------------------------
 
 #---------------------------------------------------------------------------
@@ -10593,7 +10593,7 @@ ZONE_POLICY_Pakistan = {
 
 #---------------------------------------------------------------------------
 # Policy name: Palestine
-# Rule count: 29
+# Rule count: 30
 #---------------------------------------------------------------------------
 ZONE_RULES_Palestine = [
     # Anchor: Rule Palestine    1999    2003    -    Oct    Fri>=15    0:00    0    -
@@ -10932,13 +10932,25 @@ ZONE_RULES_Palestine = [
         'delta_seconds': 3600,
         'letter': 'S',
     },
-    # Rule Palestine    2020    max    -    Oct    Sat>=24    1:00    0    -
+    # Rule Palestine    2020    only    -    Oct    24    1:00    0    -
     {
         'from_year': 2020,
+        'to_year': 2020,
+        'in_month': 10,
+        'on_day_of_week': 0,
+        'on_day_of_month': 24,
+        'at_seconds': 3600,
+        'at_time_suffix': 'w',
+        'delta_seconds': 0,
+        'letter': '-',
+    },
+    # Rule Palestine    2021    max    -    Oct    lastFri    1:00    0    -
+    {
+        'from_year': 2021,
         'to_year': 9999,
         'in_month': 10,
-        'on_day_of_week': 6,
-        'on_day_of_month': 24,
+        'on_day_of_week': 5,
+        'on_day_of_month': 0,
         'at_seconds': 3600,
         'at_time_suffix': 'w',
         'delta_seconds': 0,
