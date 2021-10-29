@@ -34,7 +34,7 @@ Currently, the two main purposes of this library are:
    [MicroPython](https://micropython.org/) to bring
    support for IANA timezones to that environment.
 
-**Version**: v0.2 (2021-10-17, TZDB 2021d)
+**Version**: v0.2.1 (2021-10-28, TZDB 2021e)
 
 **Changelog**: [CHANGELOG.md](CHANGELOG.md)
 
@@ -173,14 +173,14 @@ To run the validation tests:
 <a name="FeedbackAndSupport"></a>
 ## Feedback and Support
 
-If you have any questions, comments and other support questions about how to
-use this library, please use the
-[GitHub Discussions](https://github.com/bxparks/AceTimePython/discussions)
-for this project. If you have bug reports or feature requests, please file a
-ticket in [GitHub Issues](https://github.com/bxparks/AceTimePython/issues).
-I'd love to hear about how this software and its documentation can be improved.
-I can't promise that I will incorporate everything, but I will give your ideas
-serious consideration.
+If you have any questions, comments, or feature requests for this library,
+please use the [GitHub
+Discussions](https://github.com/bxparks/AceTimePython/discussions) for this
+project. If you have bug reports, please file a ticket in [GitHub
+Issues](https://github.com/bxparks/AceTimePython/issues). Feature requests
+should go into Discussions first because they often have alternative solutions
+which are useful to remain visible, instead of disappearing from the default
+view of the Issue tracker after the ticket is closed.
 
 Please refrain from emailing me directly unless the content is sensitive. The
 problem with email is that I cannot reference the email conversation when other
