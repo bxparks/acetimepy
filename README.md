@@ -34,7 +34,7 @@ Currently, the two main purposes of this library are:
    [MicroPython](https://micropython.org/) to bring
    support for IANA timezones to that environment.
 
-**Version**: v0.2 (2021-10-17, TZDB 2021d)
+**Version**: v0.2.1 (2021-10-28, TZDB 2021e)
 
 **Changelog**: [CHANGELOG.md](CHANGELOG.md)
 
