@@ -51,9 +51,12 @@ from typing import Tuple
 from datetime import tzinfo
 from datetime import datetime
 from datetime import timezone
-try:
-    import zoneinfo  # type: ignore
-except ImportError:
+
+# This seems to be more compatible with MyPy than using try/except.
+import sys
+if sys.version_info >= (3, 9):
+    import zoneinfo
+else:
     from backports import zoneinfo
 
 from acetime.acetz import ZoneManager
