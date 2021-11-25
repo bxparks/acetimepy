@@ -32,9 +32,10 @@ Common timezones: 377
 Start year: 2000
 Until year: 2038
 BENCHMARKS
-acetz: 343824 10.542 349102 13.463
-dateutil: 343824 6.195 349102 7.360
-pytz: 343824 16.001 349102 15.454
+acetz 343824 10.542 349102 13.463
+dateutil 343824 6.195 349102 7.360
+pytz 343824 16.001 349102 15.454
+zoneinfo 343824 1.376 349102 0.631
 END
 
 By default the start_year is 2000, and the until_year is 2038 because both
@@ -55,9 +56,15 @@ from datetime import datetime
 from datetime import timezone
 from dateutil.tz import gettz
 
+# This seems to be more compatible with MyPy than using try/except.
+import sys
+if sys.version_info >= (3, 9):
+    import zoneinfo
+else:
+    from backports import zoneinfo
+
 from acetime.acetz import ZoneManager
 from acetime.zonedbpy.zone_registry import ZONE_REGISTRY
-
 
 class Benchmark:
     def __init__(
@@ -86,18 +93,31 @@ class Benchmark:
         print(f"Until year: {self.until_year}")
 
         print("BENCHMARKS")
+        # acetz
+        print("Benchmarking acetz", file=sys.stderr)
         count1, elapsed1 = self.run_acetz(common_zones)
         count2, elapsed2 = self.run_acetz_epoch(common_zones)
         self.print_result("acetz", count1, elapsed1, count2, elapsed2)
 
+        # dateutil
+        print("Benchmarking dateutil", file=sys.stderr)
         count1, elapsed1 = self.run_dateutil(common_zones)
         count2, elapsed2 = self.run_dateutil_epoch(common_zones)
         self.print_result(
             "dateutil", count1, elapsed1, count2, elapsed2)
 
+        # pytz
+        print("Benchmarking pytz", file=sys.stderr)
         count1, elapsed1 = self.run_pytz(common_zones)
         count2, elapsed2 = self.run_pytz_epoch(common_zones)
         self.print_result("pytz", count1, elapsed1, count2, elapsed2)
+
+        # zoneinfo
+        print("Benchmarking zoneinfo", file=sys.stderr)
+        count1, elapsed1 = self.run_zoneinfo(common_zones)
+        count2, elapsed2 = self.run_zoneinfo_epoch(common_zones)
+        self.print_result(
+            "zoneinfo", count1, elapsed1, count2, elapsed2)
 
         print("END")
 
@@ -111,7 +131,7 @@ class Benchmark:
         """Print label, count, and micros_per_iteration."""
         perf1 = elapsed1 * 1000000 / count1
         perf2 = elapsed2 * 1000000 / count2
-        print(f"{label}: {count1} {perf1:.3f} {count2} {perf2:.3f}")
+        print(f"{label} {count1} {perf1:.3f} {count2} {perf2:.3f}")
 
     def find_common_zones(self) -> Set[str]:
         """Find common zone names."""
@@ -199,6 +219,28 @@ class Benchmark:
         for name in zones:
             tz = pytz.timezone(name)
             count += self.loop_epoch_to_components_pytz(tz)
+        elapsed = time.time() - start
+        return count, elapsed
+
+    def run_zoneinfo(self, zones: Iterable[str]) -> Tuple[int, float]:
+        """Return count and micros per iteration."""
+        start = time.time()
+        count = 0
+        for name in zones:
+            tz = zoneinfo.ZoneInfo(name)
+            assert tz is not None
+            count += self.loop_components_to_epoch_tz(tz)
+        elapsed = time.time() - start
+        return count, elapsed
+
+    def run_zoneinfo_epoch(self, zones: Iterable[str]) -> Tuple[int, float]:
+        """Return count and micros per iteration."""
+        start = time.time()
+        count = 0
+        for name in zones:
+            tz = zoneinfo.ZoneInfo(name)
+            assert tz is not None
+            count += self.loop_epoch_to_components_tz(tz)
         elapsed = time.time() - start
         return count, elapsed
 
