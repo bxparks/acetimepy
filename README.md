@@ -19,6 +19,7 @@ class from the following Python libraries:
 
 * pytz (https://pypi.org/project/pytz/)
 * dateutil (https://pypi.org/project/python-dateutil/)
+* zoneinfo (https://docs.python.org/3/library/zoneinfo.html)
 
 The initial motivation of this library was to provide an easier prototyping
 environment for the algorithms used by the `ExtendedZoneProcessor` class in the
@@ -47,7 +48,7 @@ Currently, the two main purposes of this library are:
 
 * [Installation](#Installation)
 * [Usage](#Usage)
-    * [Package Structure](#Package Structure)
+    * [Package Structure](#PackageStructure)
     * [ZoneManager and acetz](#ZoneManagerAndAcetz)
 * [System Requirements](#SystemRequirements)
 * [License](#License)

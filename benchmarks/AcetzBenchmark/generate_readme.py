@@ -14,23 +14,25 @@ print(f"""\
 
 The `benchmark.py` compares the speed of 4 timezone subclasses of `tzinfo`:
 
-* `acetz` from AceTimePython projet
-* `dateutil.tz` from the `python-dateutil` project
-* `pytz` from the `pytz` project
-* `zoneinfo` from the Python 3.9 standard library
+* `acetz` from this project
+* `pytz` from https://pypi.org/project/pytz/
+* `dateutil.tz` from https://pypi.org/project/python-dateutil/,
+  backported to Python 3.8 and earlier using
+  https://pypi.org/project/backports.zoneinfo/
+* `zoneinfo` from https://docs.python.org/3/library/zoneinfo.html
 
-There are 2 columns for each library:
+There are 2 columns for each library in the table below:
 
 * "comp to epoch": Measures the time to convert date-time components (yyyy-mm-dd
   hh:mm:ss) to epoch seconds.
 * "epoch to comp": Measures the reverse mapping, from epoch seconds to date-time
   components.
 
-The `benchmark.py` scans through all 377 timezones, sampling 2 days, for each
-month, from the year 2000 until 2037. The number in the table below is given
-units of microseconds per iteration, averaged over all timezones.
+The `benchmark.py` scans through all 377 timezones (as of TZDB 2021e), sampling
+2 days for each month from the year 2000 until 2038. The numbers in the table
+below is given units of microseconds per iteration, averaged over all timezones.
 
-**Version**: AceTimePython v1.0.2+
+**Version**: AceTimePython v0.2.1+
 
 **NOTE**: This file was auto-generated using `make README.md`. DO NOT EDIT.
 

@@ -1,6 +1,8 @@
 # Changelog
 
 * Unreleased
+    * Consolidate `AcetzBenchmark`, add `generate_table.py` and `README.md`
+      generator.
 * v0.2.1 (2021-10-28, TZDB 2021e)
     * Add `AcetzBenchmark` to compare speed of `acetz` with `dateutil.tz`
       and `pytz`.
