@@ -66,6 +66,7 @@ else:
 from acetime.acetz import ZoneManager
 from acetime.zonedbpy.zone_registry import ZONE_REGISTRY
 
+
 class Benchmark:
     def __init__(
         self,
