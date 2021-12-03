@@ -1,8 +1,11 @@
 # Changelog
 
 * Unreleased
+* v0.3.0 (2021-12-02, TZDB 2021e)
     * Consolidate `AcetzBenchmark`, add `generate_table.py` and `README.md`
       generator.
+    * Add support for `zoneinfo` library from Python 3.9, and
+      `backports.zoneinfo` for 3.8 and 3.7.
 * v0.2.1 (2021-10-28, TZDB 2021e)
     * Add `AcetzBenchmark` to compare speed of `acetz` with `dateutil.tz`
       and `pytz`.
