@@ -19,6 +19,7 @@ class from the following Python libraries:
 
 * pytz (https://pypi.org/project/pytz/)
 * dateutil (https://pypi.org/project/python-dateutil/)
+* zoneinfo (https://docs.python.org/3/library/zoneinfo.html)
 
 The initial motivation of this library was to provide an easier prototyping
 environment for the algorithms used by the `ExtendedZoneProcessor` class in the
@@ -34,7 +35,7 @@ Currently, the two main purposes of this library are:
    [MicroPython](https://micropython.org/) to bring
    support for IANA timezones to that environment.
 
-**Version**: v0.2.1 (2021-10-28, TZDB 2021e)
+**Version**: v0.3.0 (2021-12-02, TZDB 2021e)
 
 **Changelog**: [CHANGELOG.md](CHANGELOG.md)
 
@@ -47,7 +48,7 @@ Currently, the two main purposes of this library are:
 
 * [Installation](#Installation)
 * [Usage](#Usage)
-    * [Package Structure](#Package Structure)
+    * [Package Structure](#PackageStructure)
     * [ZoneManager and acetz](#ZoneManagerAndAcetz)
 * [System Requirements](#SystemRequirements)
 * [License](#License)
