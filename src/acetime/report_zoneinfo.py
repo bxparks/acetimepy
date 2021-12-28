@@ -8,7 +8,7 @@ zoneinfo, and print out a report of the discrepencies.
 """
 
 import logging
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta, timezone, tzinfo
 from argparse import ArgumentParser
 from typing import Any, Tuple, List
 
@@ -55,7 +55,7 @@ class Comparator():
 
         self._diff_tz(zi_tz, ace_tz)
 
-    def _diff_tz(self, zi_tz: Any, ace_tz: Any) -> None:
+    def _diff_tz(self, zi_tz: tzinfo, ace_tz: tzinfo) -> None:
         """Add DST transitions, using 'A' and 'B' designators"""
 
         transitions = self._find_transitions(zi_tz)
@@ -63,7 +63,7 @@ class Comparator():
             self._check_dt(left, ace_tz)
             self._check_dt(right, ace_tz)
 
-    def _find_transitions(self, tz: Any) -> List[TransitionTimes]:
+    def _find_transitions(self, tz: tzinfo) -> List[TransitionTimes]:
         """Find the DST transition using 'zoneinfo' package by sampling the time
         period from [start_year, until_year].
         """
@@ -109,7 +109,7 @@ class Comparator():
 
     def _binary_search_transition(
         self,
-        tz: Any,
+        tz: tzinfo,
         dt_left: datetime,
         dt_right: datetime,
     ) -> Tuple[datetime, datetime]:
@@ -135,7 +135,7 @@ class Comparator():
 
         return dt_left, dt_right
 
-    def _check_dt(self, dt: datetime, ace_tz: Any) -> None:
+    def _check_dt(self, dt: datetime, ace_tz: tzinfo) -> None:
         """Check that the given 'dt' matches the datetime using the given tz.
         """
 
