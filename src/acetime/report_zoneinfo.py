@@ -3,8 +3,8 @@
 # MIT License
 
 """
-Compare timezone transitions between AceTimePython acetime.acetz and Python 3.9
-zoneinfo, and generate a report of the discrepencies.
+Compare timezone transitions between AceTimePython acetime.acetz class and the
+Python 3.9 zoneinfo.ZoneInfo class, and generate a report of the discrepencies.
 """
 
 import logging
@@ -57,7 +57,11 @@ class Comparator():
         self._diff_tz(zi_tz, ace_tz)
 
     def _diff_tz(self, zi_tz: tzinfo, ace_tz: tzinfo) -> None:
-        """Add DST transitions, using 'A' and 'B' designators"""
+        """Find the DST transitions from start_year to until_year, and determine
+        if there exists any mismatches between representation of a datetime
+        using the acetime.acetz.acetz class and a datetime using the
+        zoneinfo.ZoneInfo class.
+        """
 
         transitions = self._find_transitions(zi_tz)
         for (left, right, only_dst) in transitions:
@@ -65,8 +69,8 @@ class Comparator():
             self._check_dt(right, ace_tz)
 
     def _find_transitions(self, tz: tzinfo) -> List[TransitionTimes]:
-        """Find the DST transition using 'zoneinfo' package by sampling the time
-        period from [start_year, until_year].
+        """Find the DST transition using given tzinfo class, by sampling the
+        time period from [start_year, until_year].
         """
         # TODO: Do I need to start 1 day before Jan 1 UTC, in case the
         # local time is ahead of UTC?
@@ -137,7 +141,8 @@ class Comparator():
         return dt_left, dt_right
 
     def _check_dt(self, dt: datetime, ace_tz: tzinfo) -> None:
-        """Check that the given 'dt' matches the datetime using the given tz.
+        """Check that the given 'dt' computed using zoneinfo.ZoneInfo matches
+        the datetime as determined by using the given acetime.acetz.acetz class.
         """
 
         # Extract the components of the zoneinfo version of datetime.
@@ -162,13 +167,13 @@ class Comparator():
         assert expected.tzinfo is not None
         expected_abbrev = expected.tzinfo.tzname(expected)
 
-        # Compare the two date times.
-        if unix_seconds != expected_unix_seconds:
+        # Compare the two datetime instances.
+        if expected_unix_seconds != unix_seconds:
             raise Exception(
                 "Unexpected mismatch of unix seconds: {self.zone_name}: "
-                f"{unix_seconds}, {expected_unix_seconds}"
+                f"{expected_unix_seconds} != {unix_seconds}"
             )
-        if dst_offset != expected_dst_offset:
+        if expected_dst_offset != dst_offset:
             self.print_variance(
                 "dst_offset",
                 unix_seconds,
@@ -176,7 +181,7 @@ class Comparator():
                 expected_dst_offset,
                 dst_offset,
             )
-        if total_offset != expected_total_offset:
+        if expected_total_offset != total_offset:
             self.print_variance(
                 "total_offset",
                 unix_seconds,
@@ -184,7 +189,7 @@ class Comparator():
                 expected_total_offset,
                 total_offset,
             )
-        if dt.year != expected.year:
+        if expected.year != dt.year:
             self.print_variance(
                 "year",
                 unix_seconds,
@@ -192,7 +197,7 @@ class Comparator():
                 expected.year,
                 dt.year,
             )
-        if dt.month != expected.month:
+        if expected.month != dt.month:
             self.print_variance(
                 "month",
                 unix_seconds,
@@ -200,7 +205,7 @@ class Comparator():
                 expected.month,
                 dt.month,
             )
-        if dt.day != expected.day:
+        if expected.day != dt.day:
             self.print_variance(
                 "day",
                 unix_seconds,
@@ -208,7 +213,7 @@ class Comparator():
                 expected.day,
                 dt.day,
             )
-        if dt.hour != expected.hour:
+        if expected.hour != dt.hour:
             self.print_variance(
                 "hour",
                 unix_seconds,
@@ -216,7 +221,7 @@ class Comparator():
                 expected.hour,
                 dt.hour,
             )
-        if dt.minute != expected.minute:
+        if expected.minute != dt.minute:
             self.print_variance(
                 "minute",
                 unix_seconds,
@@ -224,7 +229,7 @@ class Comparator():
                 expected.minute,
                 dt.minute,
             )
-        if dt.second != expected.second:
+        if expected.second != dt.second:
             self.print_variance(
                 "second",
                 unix_seconds,
@@ -232,7 +237,7 @@ class Comparator():
                 expected.second,
                 dt.second,
             )
-        if abbrev != expected_abbrev:
+        if expected_abbrev != abbrev:
             self.print_variance(
                 "abbrev",
                 unix_seconds,
@@ -286,7 +291,8 @@ def main() -> None:
 
     # Print header
     print(f"""\
-# Variance report for acetime.acetz compared to Python 3.9 zoneinfo.
+# Variance report for acetime.acetz.acetz compared to Python 3.9
+# zoneinfo.ZoneInfo.
 #
 # Context
 # -------
