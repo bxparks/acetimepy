@@ -25,8 +25,8 @@ from acetime.zone_processor import MATCH_STATUS_PRIOR
 from acetime.zone_processor import MATCH_STATUS_EXACT_MATCH
 from acetime.zone_processor import MATCH_STATUS_WITHIN_MATCH
 from acetime.zone_processor import MATCH_STATUS_FAR_FUTURE
-from acetime.zone_info_types import ZonePolicy
-from acetime.zone_info_types import ZoneEra
+from acetime.zonedb_types import ZonePolicy
+from acetime.zonedb_types import ZoneEra
 
 
 class TestZoneProcessorHelperMethods(unittest.TestCase):

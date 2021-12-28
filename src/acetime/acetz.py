@@ -7,7 +7,7 @@ from datetime import datetime, tzinfo, timedelta, timezone
 
 from .common import SECONDS_SINCE_UNIX_EPOCH
 from .zone_processor import ZoneProcessor
-from .zone_info_types import ZoneInfo, ZoneInfoMap
+from .zonedb_types import ZoneInfo, ZoneInfoMap
 
 
 class acetz(tzinfo):

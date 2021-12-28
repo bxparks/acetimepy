@@ -3,9 +3,9 @@
 # MIT License
 
 """
-Data structures required by ZoneProcessor class. Created inline by
-ZoneInfoInliner. Written out to 'zone_policies.py' and 'zone_infos.py' by
-pygenerator.py
+Data structures of the zonedb which are consumed by the ZoneProcessor class.
+These data structures are created in-memory by ZoneInfoInliner. They are written
+to 'zone_policies.py' and 'zone_infos.py' by AceTimeTools/pygenerator.py
 """
 
 from typing import Dict

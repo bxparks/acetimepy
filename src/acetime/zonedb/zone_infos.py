@@ -27,7 +27,7 @@
 # DO NOT EDIT
 
 from typing import List
-from ..zone_info_types import (
+from ..zonedb_types import (
     ZoneEra,
     ZoneInfo,
 )

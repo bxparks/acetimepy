@@ -26,7 +26,7 @@
 #
 # DO NOT EDIT
 
-from ..zone_info_types import ZoneInfoMap
+from ..zonedb_types import ZoneInfoMap
 from .zone_infos import *
 
 # Supported Zones: 377
