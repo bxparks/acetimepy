@@ -6,7 +6,7 @@ from typing import cast
 import unittest
 from datetime import datetime
 
-from acetime.zonedbpy import zone_infos
+from acetime.zonedb import zone_infos
 from acetime.zone_processor import YearMonthTuple
 from acetime.zone_processor import DateTuple
 from acetime.zone_processor import Transition

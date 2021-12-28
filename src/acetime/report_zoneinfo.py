@@ -21,7 +21,7 @@ else:
 
 # AceTimePython classes
 from acetime.acetz import ZoneManager
-from acetime.zonedbpy.zone_registry import ZONE_REGISTRY
+from acetime.zonedb.zone_registry import ZONE_REGISTRY
 
 # The [start, until) time interval used to search for DST transitions,
 # and flag that is True if ONLY the DST changed.

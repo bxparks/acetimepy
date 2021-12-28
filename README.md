@@ -100,12 +100,12 @@ Within `acetz` module, there are 2 classes that the end-user will normally use:
 * `acetime.acetz.ZoneManager`
 * `acetime.acetz.acetz` (subclass of `datetime.tzinfo`)
 
-The TZ database files are located in the `acetime.zonedbpy` subpackage. There
+The TZ database files are located in the `acetime.zonedb` subpackage. There
 are 3 modules here:
 
-* `acetime.zonedbpy.zone_infos`
-* `acetime.zonedbpy.zone_policies`
-* `acetime.zonedbpy.zone_registry`
+* `acetime.zonedb.zone_infos`
+* `acetime.zonedb.zone_policies`
+* `acetime.zonedb.zone_registry`
 
 <a name="ZoneManagerAndAcetz"></a>
 ### ZoneManager and acetz
@@ -113,11 +113,11 @@ are 3 modules here:
 Normally, the `acetz` class will be instantiated through the `ZoneManager`
 class. An instance of a `ZoneManager` will need to be created and initialized
 with a registry of the zones in the TZ database. The
-`acetime.zonedbpy.zone_registry` module provides 2 pre-generated registries:
+`acetime.zonedb.zone_registry` module provides 2 pre-generated registries:
 
-* `acetime.zonedbpy.zone_registry.ZONE_REGISTRY`
+* `acetime.zonedb.zone_registry.ZONE_REGISTRY`
     * contains 377 Zone entries as of TZDB 2021c
-* `acetime.zonedbpy.zone_registry.ZONE_AND_LINK_REGISTRY`
+* `acetime.zonedb.zone_registry.ZONE_AND_LINK_REGISTRY`
     * contains all 594 Zone and Link entries as of TZDB 2021c
 
 We can then create an instance of `acetz` for a specific zone through the
@@ -125,7 +125,7 @@ ZoneManager:
 
 ```Python
 from acetime.acetz import acetz, ZoneManager
-from acetime.zonedbpy.zone_registry import ZONE_REGISTRY
+from acetime.zonedb.zone_registry import ZONE_REGISTRY
 from acetime.common import SECONDS_SINCE_UNIX_EPOCH
 
 zone_manager = ZoneManager(ZONE_REGISTRY)
@@ -158,7 +158,7 @@ For end-users of the library:
 
 * Python 3.7 or newer
 
-To generate the `zonedbpy` TZ database:
+To generate the `zonedb` TZ database:
 
 * [AceTimeTools](https://github.com/bxparks/AceTimeTools)
 

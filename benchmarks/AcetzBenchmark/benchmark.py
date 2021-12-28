@@ -64,7 +64,7 @@ else:
     from backports import zoneinfo
 
 from acetime.acetz import ZoneManager
-from acetime.zonedbpy.zone_registry import ZONE_REGISTRY
+from acetime.zonedb.zone_registry import ZONE_REGISTRY
 
 
 class Benchmark:

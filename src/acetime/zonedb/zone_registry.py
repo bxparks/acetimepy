@@ -2,7 +2,7 @@
 #
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
-#     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedbpy
+#     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedb
 #     --tz_version 2021e
 #     --action zonedb
 #     --language python
@@ -26,15 +26,7 @@
 #
 # DO NOT EDIT
 
-from typing import List
-from ..zone_info_types import (
-    ZoneRule,
-    ZonePolicy,
-    ZonePolicyMap,
-    ZoneEra,
-    ZoneInfo,
-    ZoneInfoMap,
-)
+from ..zone_info_types import ZoneInfoMap
 from .zone_infos import *
 
 # Supported Zones: 377
