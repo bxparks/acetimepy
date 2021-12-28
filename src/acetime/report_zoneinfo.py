@@ -4,7 +4,7 @@
 
 """
 Compare timezone transitions between AceTimePython acetime.acetz and Python 3.9
-zoneinfo, and print out a report of the discrepencies.
+zoneinfo, and generate a report of the discrepencies.
 """
 
 import logging
@@ -20,6 +20,7 @@ else:
     from backports import zoneinfo
 
 # AceTimePython classes
+import acetime.version
 from acetime.acetz import ZoneManager
 from acetime.zonedb.zone_registry import ZONE_REGISTRY
 
@@ -246,14 +247,16 @@ class Comparator():
         unix_seconds: int,
         dt: datetime,
         expected: Any,
-        got: Any,
+        observed: Any,
     ) -> None:
         # Print zone on the first variance
         if not self.has_diff:
             print(f"Zone {self.zone_name}")
             self.has_diff = True
 
-        print(f"{unix_seconds}: {dt}: {label}: expected {expected}, got {got}")
+        print(
+            f"{unix_seconds}: {dt}: {label}: exp {expected}, obs {observed}"
+        )
 
 
 def main() -> None:
@@ -281,6 +284,25 @@ def main() -> None:
     # Configure logging
     logging.basicConfig(level=logging.INFO)
 
+    # Print header
+    print(f"""\
+# Variance report for acetime.acetz compared to Python 3.9 zoneinfo.
+#
+# Context
+# -------
+# Acetime Version: {acetime.version.__version__}
+# ZoneInfo Version: Python 3.9 2019e
+# Start Year: {args.start_year}
+# Until Year: {args.until_year}
+#
+# Report Format
+# -------------
+# Zone {{zone_name}}
+# {{seconds}}: {{date}}: {{label}}: exp {{value}}, obs {{value}}
+# [...]
+""")
+
+    # Generate report for non-matching zones.
     zone_manager = ZoneManager(ZONE_REGISTRY)
     comparator = Comparator(
         start_year=args.start_year,
