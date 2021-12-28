@@ -26,6 +26,16 @@
 #
 # DO NOT EDIT
 
+from typing import List
+from ..zone_info_types import (
+    ZoneRule,
+    ZonePolicy,
+    ZonePolicyMap,
+    ZoneEra,
+    ZoneInfo,
+    ZoneInfoMap,
+)
+
 from .zone_policies import *
 
 #---------------------------------------------------------------------------
@@ -38,7 +48,7 @@ from .zone_policies import *
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Africa_Abidjan = [
+ZONE_ERAS_Africa_Abidjan: List[ZoneEra] = [
     #              0:00    -    GMT
     {
       'offset_seconds': 0,
@@ -54,7 +64,7 @@ ZONE_ERAS_Africa_Abidjan = [
 
 ]
 
-ZONE_INFO_Africa_Abidjan = {
+ZONE_INFO_Africa_Abidjan: ZoneInfo = {
     'name': 'Africa/Abidjan',
     'eras': ZONE_ERAS_Africa_Abidjan
 }
@@ -64,7 +74,7 @@ ZONE_INFO_Africa_Abidjan = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Africa_Algiers = [
+ZONE_ERAS_Africa_Algiers: List[ZoneEra] = [
     #             0:00    Algeria    WE%sT    1977 Oct 21
     {
       'offset_seconds': 0,
@@ -116,7 +126,7 @@ ZONE_ERAS_Africa_Algiers = [
 
 ]
 
-ZONE_INFO_Africa_Algiers = {
+ZONE_INFO_Africa_Algiers: ZoneInfo = {
     'name': 'Africa/Algiers',
     'eras': ZONE_ERAS_Africa_Algiers
 }
@@ -126,7 +136,7 @@ ZONE_INFO_Africa_Algiers = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Africa_Bissau = [
+ZONE_ERAS_Africa_Bissau: List[ZoneEra] = [
     #             -1:00    -    -01    1975
     {
       'offset_seconds': -3600,
@@ -154,7 +164,7 @@ ZONE_ERAS_Africa_Bissau = [
 
 ]
 
-ZONE_INFO_Africa_Bissau = {
+ZONE_INFO_Africa_Bissau: ZoneInfo = {
     'name': 'Africa/Bissau',
     'eras': ZONE_ERAS_Africa_Bissau
 }
@@ -164,7 +174,7 @@ ZONE_INFO_Africa_Bissau = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Africa_Cairo = [
+ZONE_ERAS_Africa_Cairo: List[ZoneEra] = [
     #             2:00    Egypt    EE%sT
     {
       'offset_seconds': 7200,
@@ -180,7 +190,7 @@ ZONE_ERAS_Africa_Cairo = [
 
 ]
 
-ZONE_INFO_Africa_Cairo = {
+ZONE_INFO_Africa_Cairo: ZoneInfo = {
     'name': 'Africa/Cairo',
     'eras': ZONE_ERAS_Africa_Cairo
 }
@@ -190,7 +200,7 @@ ZONE_INFO_Africa_Cairo = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Africa_Casablanca = [
+ZONE_ERAS_Africa_Casablanca: List[ZoneEra] = [
     #              0:00    Morocco    +00/+01    1984 Mar 16
     {
       'offset_seconds': 0,
@@ -242,7 +252,7 @@ ZONE_ERAS_Africa_Casablanca = [
 
 ]
 
-ZONE_INFO_Africa_Casablanca = {
+ZONE_INFO_Africa_Casablanca: ZoneInfo = {
     'name': 'Africa/Casablanca',
     'eras': ZONE_ERAS_Africa_Casablanca
 }
@@ -252,7 +262,7 @@ ZONE_INFO_Africa_Casablanca = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Africa_Ceuta = [
+ZONE_ERAS_Africa_Ceuta: List[ZoneEra] = [
     #              0:00 SpainAfrica WE%sT    1984 Mar 16
     {
       'offset_seconds': 0,
@@ -292,7 +302,7 @@ ZONE_ERAS_Africa_Ceuta = [
 
 ]
 
-ZONE_INFO_Africa_Ceuta = {
+ZONE_INFO_Africa_Ceuta: ZoneInfo = {
     'name': 'Africa/Ceuta',
     'eras': ZONE_ERAS_Africa_Ceuta
 }
@@ -302,7 +312,7 @@ ZONE_INFO_Africa_Ceuta = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Africa_El_Aaiun = [
+ZONE_ERAS_Africa_El_Aaiun: List[ZoneEra] = [
     #             -1:00    -    -01    1976 Apr 14
     {
       'offset_seconds': -3600,
@@ -342,7 +352,7 @@ ZONE_ERAS_Africa_El_Aaiun = [
 
 ]
 
-ZONE_INFO_Africa_El_Aaiun = {
+ZONE_INFO_Africa_El_Aaiun: ZoneInfo = {
     'name': 'Africa/El_Aaiun',
     'eras': ZONE_ERAS_Africa_El_Aaiun
 }
@@ -352,7 +362,7 @@ ZONE_INFO_Africa_El_Aaiun = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Africa_Johannesburg = [
+ZONE_ERAS_Africa_Johannesburg: List[ZoneEra] = [
     #             2:00    SA    SAST
     {
       'offset_seconds': 7200,
@@ -368,7 +378,7 @@ ZONE_ERAS_Africa_Johannesburg = [
 
 ]
 
-ZONE_INFO_Africa_Johannesburg = {
+ZONE_INFO_Africa_Johannesburg: ZoneInfo = {
     'name': 'Africa/Johannesburg',
     'eras': ZONE_ERAS_Africa_Johannesburg
 }
@@ -378,7 +388,7 @@ ZONE_INFO_Africa_Johannesburg = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Africa_Juba = [
+ZONE_ERAS_Africa_Juba: List[ZoneEra] = [
     #             2:00    Sudan    CA%sT    2000 Jan 15 12:00
     {
       'offset_seconds': 7200,
@@ -418,7 +428,7 @@ ZONE_ERAS_Africa_Juba = [
 
 ]
 
-ZONE_INFO_Africa_Juba = {
+ZONE_INFO_Africa_Juba: ZoneInfo = {
     'name': 'Africa/Juba',
     'eras': ZONE_ERAS_Africa_Juba
 }
@@ -428,7 +438,7 @@ ZONE_INFO_Africa_Juba = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Africa_Khartoum = [
+ZONE_ERAS_Africa_Khartoum: List[ZoneEra] = [
     #             2:00    Sudan    CA%sT    2000 Jan 15 12:00
     {
       'offset_seconds': 7200,
@@ -468,7 +478,7 @@ ZONE_ERAS_Africa_Khartoum = [
 
 ]
 
-ZONE_INFO_Africa_Khartoum = {
+ZONE_INFO_Africa_Khartoum: ZoneInfo = {
     'name': 'Africa/Khartoum',
     'eras': ZONE_ERAS_Africa_Khartoum
 }
@@ -478,7 +488,7 @@ ZONE_INFO_Africa_Khartoum = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Africa_Lagos = [
+ZONE_ERAS_Africa_Lagos: List[ZoneEra] = [
     #             1:00    -    WAT
     {
       'offset_seconds': 3600,
@@ -494,7 +504,7 @@ ZONE_ERAS_Africa_Lagos = [
 
 ]
 
-ZONE_INFO_Africa_Lagos = {
+ZONE_INFO_Africa_Lagos: ZoneInfo = {
     'name': 'Africa/Lagos',
     'eras': ZONE_ERAS_Africa_Lagos
 }
@@ -504,7 +514,7 @@ ZONE_INFO_Africa_Lagos = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Africa_Maputo = [
+ZONE_ERAS_Africa_Maputo: List[ZoneEra] = [
     #             2:00    -    CAT
     {
       'offset_seconds': 7200,
@@ -520,7 +530,7 @@ ZONE_ERAS_Africa_Maputo = [
 
 ]
 
-ZONE_INFO_Africa_Maputo = {
+ZONE_INFO_Africa_Maputo: ZoneInfo = {
     'name': 'Africa/Maputo',
     'eras': ZONE_ERAS_Africa_Maputo
 }
@@ -530,7 +540,7 @@ ZONE_INFO_Africa_Maputo = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Africa_Monrovia = [
+ZONE_ERAS_Africa_Monrovia: List[ZoneEra] = [
     #              0:00    -    GMT
     {
       'offset_seconds': 0,
@@ -546,7 +556,7 @@ ZONE_ERAS_Africa_Monrovia = [
 
 ]
 
-ZONE_INFO_Africa_Monrovia = {
+ZONE_INFO_Africa_Monrovia: ZoneInfo = {
     'name': 'Africa/Monrovia',
     'eras': ZONE_ERAS_Africa_Monrovia
 }
@@ -556,7 +566,7 @@ ZONE_INFO_Africa_Monrovia = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Africa_Nairobi = [
+ZONE_ERAS_Africa_Nairobi: List[ZoneEra] = [
     #             3:00    -    EAT
     {
       'offset_seconds': 10800,
@@ -572,7 +582,7 @@ ZONE_ERAS_Africa_Nairobi = [
 
 ]
 
-ZONE_INFO_Africa_Nairobi = {
+ZONE_INFO_Africa_Nairobi: ZoneInfo = {
     'name': 'Africa/Nairobi',
     'eras': ZONE_ERAS_Africa_Nairobi
 }
@@ -582,7 +592,7 @@ ZONE_INFO_Africa_Nairobi = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Africa_Ndjamena = [
+ZONE_ERAS_Africa_Ndjamena: List[ZoneEra] = [
     #             1:00    -    WAT    1979 Oct 14
     {
       'offset_seconds': 3600,
@@ -622,7 +632,7 @@ ZONE_ERAS_Africa_Ndjamena = [
 
 ]
 
-ZONE_INFO_Africa_Ndjamena = {
+ZONE_INFO_Africa_Ndjamena: ZoneInfo = {
     'name': 'Africa/Ndjamena',
     'eras': ZONE_ERAS_Africa_Ndjamena
 }
@@ -632,7 +642,7 @@ ZONE_INFO_Africa_Ndjamena = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Africa_Sao_Tome = [
+ZONE_ERAS_Africa_Sao_Tome: List[ZoneEra] = [
     #              0:00    -    GMT    2018 Jan  1 01:00
     {
       'offset_seconds': 0,
@@ -672,7 +682,7 @@ ZONE_ERAS_Africa_Sao_Tome = [
 
 ]
 
-ZONE_INFO_Africa_Sao_Tome = {
+ZONE_INFO_Africa_Sao_Tome: ZoneInfo = {
     'name': 'Africa/Sao_Tome',
     'eras': ZONE_ERAS_Africa_Sao_Tome
 }
@@ -682,7 +692,7 @@ ZONE_INFO_Africa_Sao_Tome = {
 # Era count: 7
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Africa_Tripoli = [
+ZONE_ERAS_Africa_Tripoli: List[ZoneEra] = [
     #             2:00    -    EET    1982
     {
       'offset_seconds': 7200,
@@ -770,7 +780,7 @@ ZONE_ERAS_Africa_Tripoli = [
 
 ]
 
-ZONE_INFO_Africa_Tripoli = {
+ZONE_INFO_Africa_Tripoli: ZoneInfo = {
     'name': 'Africa/Tripoli',
     'eras': ZONE_ERAS_Africa_Tripoli
 }
@@ -780,7 +790,7 @@ ZONE_INFO_Africa_Tripoli = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Africa_Tunis = [
+ZONE_ERAS_Africa_Tunis: List[ZoneEra] = [
     #             1:00    Tunisia    CE%sT
     {
       'offset_seconds': 3600,
@@ -796,7 +806,7 @@ ZONE_ERAS_Africa_Tunis = [
 
 ]
 
-ZONE_INFO_Africa_Tunis = {
+ZONE_INFO_Africa_Tunis: ZoneInfo = {
     'name': 'Africa/Tunis',
     'eras': ZONE_ERAS_Africa_Tunis
 }
@@ -806,7 +816,7 @@ ZONE_INFO_Africa_Tunis = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Africa_Windhoek = [
+ZONE_ERAS_Africa_Windhoek: List[ZoneEra] = [
     #             2:00    -    SAST    1990 Mar 21
     {
       'offset_seconds': 7200,
@@ -834,7 +844,7 @@ ZONE_ERAS_Africa_Windhoek = [
 
 ]
 
-ZONE_INFO_Africa_Windhoek = {
+ZONE_INFO_Africa_Windhoek: ZoneInfo = {
     'name': 'Africa/Windhoek',
     'eras': ZONE_ERAS_Africa_Windhoek
 }
@@ -844,7 +854,7 @@ ZONE_INFO_Africa_Windhoek = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Adak = [
+ZONE_ERAS_America_Adak: List[ZoneEra] = [
     #             -11:00    US    B%sT    1983 Oct 30  2:00
     {
       'offset_seconds': -39600,
@@ -884,7 +894,7 @@ ZONE_ERAS_America_Adak = [
 
 ]
 
-ZONE_INFO_America_Adak = {
+ZONE_INFO_America_Adak: ZoneInfo = {
     'name': 'America/Adak',
     'eras': ZONE_ERAS_America_Adak
 }
@@ -894,7 +904,7 @@ ZONE_INFO_America_Adak = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Anchorage = [
+ZONE_ERAS_America_Anchorage: List[ZoneEra] = [
     #             -10:00    US    AH%sT    1983 Oct 30  2:00
     {
       'offset_seconds': -36000,
@@ -934,7 +944,7 @@ ZONE_ERAS_America_Anchorage = [
 
 ]
 
-ZONE_INFO_America_Anchorage = {
+ZONE_INFO_America_Anchorage: ZoneInfo = {
     'name': 'America/Anchorage',
     'eras': ZONE_ERAS_America_Anchorage
 }
@@ -944,7 +954,7 @@ ZONE_INFO_America_Anchorage = {
 # Era count: 6
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Araguaina = [
+ZONE_ERAS_America_Araguaina: List[ZoneEra] = [
     #             -3:00    Brazil    -03/-02    1990 Sep 17
     {
       'offset_seconds': -10800,
@@ -1020,7 +1030,7 @@ ZONE_ERAS_America_Araguaina = [
 
 ]
 
-ZONE_INFO_America_Araguaina = {
+ZONE_INFO_America_Araguaina: ZoneInfo = {
     'name': 'America/Araguaina',
     'eras': ZONE_ERAS_America_Araguaina
 }
@@ -1030,7 +1040,7 @@ ZONE_INFO_America_Araguaina = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Argentina_Buenos_Aires = [
+ZONE_ERAS_America_Argentina_Buenos_Aires: List[ZoneEra] = [
     #             -3:00    Arg    -03/-02    1999 Oct  3
     {
       'offset_seconds': -10800,
@@ -1070,7 +1080,7 @@ ZONE_ERAS_America_Argentina_Buenos_Aires = [
 
 ]
 
-ZONE_INFO_America_Argentina_Buenos_Aires = {
+ZONE_INFO_America_Argentina_Buenos_Aires: ZoneInfo = {
     'name': 'America/Argentina/Buenos_Aires',
     'eras': ZONE_ERAS_America_Argentina_Buenos_Aires
 }
@@ -1080,7 +1090,7 @@ ZONE_INFO_America_Argentina_Buenos_Aires = {
 # Era count: 8
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Argentina_Catamarca = [
+ZONE_ERAS_America_Argentina_Catamarca: List[ZoneEra] = [
     #             -3:00    Arg    -03/-02    1991 Mar  3
     {
       'offset_seconds': -10800,
@@ -1180,7 +1190,7 @@ ZONE_ERAS_America_Argentina_Catamarca = [
 
 ]
 
-ZONE_INFO_America_Argentina_Catamarca = {
+ZONE_INFO_America_Argentina_Catamarca: ZoneInfo = {
     'name': 'America/Argentina/Catamarca',
     'eras': ZONE_ERAS_America_Argentina_Catamarca
 }
@@ -1190,7 +1200,7 @@ ZONE_INFO_America_Argentina_Catamarca = {
 # Era count: 5
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Argentina_Cordoba = [
+ZONE_ERAS_America_Argentina_Cordoba: List[ZoneEra] = [
     #             -3:00    Arg    -03/-02    1991 Mar  3
     {
       'offset_seconds': -10800,
@@ -1254,7 +1264,7 @@ ZONE_ERAS_America_Argentina_Cordoba = [
 
 ]
 
-ZONE_INFO_America_Argentina_Cordoba = {
+ZONE_INFO_America_Argentina_Cordoba: ZoneInfo = {
     'name': 'America/Argentina/Cordoba',
     'eras': ZONE_ERAS_America_Argentina_Cordoba
 }
@@ -1264,7 +1274,7 @@ ZONE_INFO_America_Argentina_Cordoba = {
 # Era count: 9
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Argentina_Jujuy = [
+ZONE_ERAS_America_Argentina_Jujuy: List[ZoneEra] = [
     #             -3:00    Arg    -03/-02    1990 Mar  4
     {
       'offset_seconds': -10800,
@@ -1376,7 +1386,7 @@ ZONE_ERAS_America_Argentina_Jujuy = [
 
 ]
 
-ZONE_INFO_America_Argentina_Jujuy = {
+ZONE_INFO_America_Argentina_Jujuy: ZoneInfo = {
     'name': 'America/Argentina/Jujuy',
     'eras': ZONE_ERAS_America_Argentina_Jujuy
 }
@@ -1386,7 +1396,7 @@ ZONE_INFO_America_Argentina_Jujuy = {
 # Era count: 8
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Argentina_La_Rioja = [
+ZONE_ERAS_America_Argentina_La_Rioja: List[ZoneEra] = [
     #             -3:00    Arg    -03/-02    1991 Mar  1
     {
       'offset_seconds': -10800,
@@ -1486,7 +1496,7 @@ ZONE_ERAS_America_Argentina_La_Rioja = [
 
 ]
 
-ZONE_INFO_America_Argentina_La_Rioja = {
+ZONE_INFO_America_Argentina_La_Rioja: ZoneInfo = {
     'name': 'America/Argentina/La_Rioja',
     'eras': ZONE_ERAS_America_Argentina_La_Rioja
 }
@@ -1496,7 +1506,7 @@ ZONE_INFO_America_Argentina_La_Rioja = {
 # Era count: 12
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Argentina_Mendoza = [
+ZONE_ERAS_America_Argentina_Mendoza: List[ZoneEra] = [
     #             -3:00    Arg    -03/-02    1990 Mar  4
     {
       'offset_seconds': -10800,
@@ -1644,7 +1654,7 @@ ZONE_ERAS_America_Argentina_Mendoza = [
 
 ]
 
-ZONE_INFO_America_Argentina_Mendoza = {
+ZONE_INFO_America_Argentina_Mendoza: ZoneInfo = {
     'name': 'America/Argentina/Mendoza',
     'eras': ZONE_ERAS_America_Argentina_Mendoza
 }
@@ -1654,7 +1664,7 @@ ZONE_INFO_America_Argentina_Mendoza = {
 # Era count: 6
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Argentina_Rio_Gallegos = [
+ZONE_ERAS_America_Argentina_Rio_Gallegos: List[ZoneEra] = [
     #             -3:00    Arg    -03/-02    1999 Oct  3
     {
       'offset_seconds': -10800,
@@ -1730,7 +1740,7 @@ ZONE_ERAS_America_Argentina_Rio_Gallegos = [
 
 ]
 
-ZONE_INFO_America_Argentina_Rio_Gallegos = {
+ZONE_INFO_America_Argentina_Rio_Gallegos: ZoneInfo = {
     'name': 'America/Argentina/Rio_Gallegos',
     'eras': ZONE_ERAS_America_Argentina_Rio_Gallegos
 }
@@ -1740,7 +1750,7 @@ ZONE_INFO_America_Argentina_Rio_Gallegos = {
 # Era count: 6
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Argentina_Salta = [
+ZONE_ERAS_America_Argentina_Salta: List[ZoneEra] = [
     #             -3:00    Arg    -03/-02    1991 Mar  3
     {
       'offset_seconds': -10800,
@@ -1816,7 +1826,7 @@ ZONE_ERAS_America_Argentina_Salta = [
 
 ]
 
-ZONE_INFO_America_Argentina_Salta = {
+ZONE_INFO_America_Argentina_Salta: ZoneInfo = {
     'name': 'America/Argentina/Salta',
     'eras': ZONE_ERAS_America_Argentina_Salta
 }
@@ -1826,7 +1836,7 @@ ZONE_INFO_America_Argentina_Salta = {
 # Era count: 8
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Argentina_San_Juan = [
+ZONE_ERAS_America_Argentina_San_Juan: List[ZoneEra] = [
     #             -3:00    Arg    -03/-02    1991 Mar  1
     {
       'offset_seconds': -10800,
@@ -1926,7 +1936,7 @@ ZONE_ERAS_America_Argentina_San_Juan = [
 
 ]
 
-ZONE_INFO_America_Argentina_San_Juan = {
+ZONE_INFO_America_Argentina_San_Juan: ZoneInfo = {
     'name': 'America/Argentina/San_Juan',
     'eras': ZONE_ERAS_America_Argentina_San_Juan
 }
@@ -1936,7 +1946,7 @@ ZONE_INFO_America_Argentina_San_Juan = {
 # Era count: 12
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Argentina_San_Luis = [
+ZONE_ERAS_America_Argentina_San_Luis: List[ZoneEra] = [
     #             -3:00    Arg    -03/-02    1990
     {
       'offset_seconds': -10800,
@@ -2084,7 +2094,7 @@ ZONE_ERAS_America_Argentina_San_Luis = [
 
 ]
 
-ZONE_INFO_America_Argentina_San_Luis = {
+ZONE_INFO_America_Argentina_San_Luis: ZoneInfo = {
     'name': 'America/Argentina/San_Luis',
     'eras': ZONE_ERAS_America_Argentina_San_Luis
 }
@@ -2094,7 +2104,7 @@ ZONE_INFO_America_Argentina_San_Luis = {
 # Era count: 7
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Argentina_Tucuman = [
+ZONE_ERAS_America_Argentina_Tucuman: List[ZoneEra] = [
     #             -3:00    Arg    -03/-02    1991 Mar  3
     {
       'offset_seconds': -10800,
@@ -2182,7 +2192,7 @@ ZONE_ERAS_America_Argentina_Tucuman = [
 
 ]
 
-ZONE_INFO_America_Argentina_Tucuman = {
+ZONE_INFO_America_Argentina_Tucuman: ZoneInfo = {
     'name': 'America/Argentina/Tucuman',
     'eras': ZONE_ERAS_America_Argentina_Tucuman
 }
@@ -2192,7 +2202,7 @@ ZONE_INFO_America_Argentina_Tucuman = {
 # Era count: 6
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Argentina_Ushuaia = [
+ZONE_ERAS_America_Argentina_Ushuaia: List[ZoneEra] = [
     #             -3:00    Arg    -03/-02    1999 Oct  3
     {
       'offset_seconds': -10800,
@@ -2268,7 +2278,7 @@ ZONE_ERAS_America_Argentina_Ushuaia = [
 
 ]
 
-ZONE_INFO_America_Argentina_Ushuaia = {
+ZONE_INFO_America_Argentina_Ushuaia: ZoneInfo = {
     'name': 'America/Argentina/Ushuaia',
     'eras': ZONE_ERAS_America_Argentina_Ushuaia
 }
@@ -2278,7 +2288,7 @@ ZONE_INFO_America_Argentina_Ushuaia = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Asuncion = [
+ZONE_ERAS_America_Asuncion: List[ZoneEra] = [
     #             -3:00    -    -03    1974 Apr
     {
       'offset_seconds': -10800,
@@ -2306,7 +2316,7 @@ ZONE_ERAS_America_Asuncion = [
 
 ]
 
-ZONE_INFO_America_Asuncion = {
+ZONE_INFO_America_Asuncion: ZoneInfo = {
     'name': 'America/Asuncion',
     'eras': ZONE_ERAS_America_Asuncion
 }
@@ -2316,7 +2326,7 @@ ZONE_INFO_America_Asuncion = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Bahia = [
+ZONE_ERAS_America_Bahia: List[ZoneEra] = [
     #             -3:00    Brazil    -03/-02    2003 Sep 24
     {
       'offset_seconds': -10800,
@@ -2368,7 +2378,7 @@ ZONE_ERAS_America_Bahia = [
 
 ]
 
-ZONE_INFO_America_Bahia = {
+ZONE_INFO_America_Bahia: ZoneInfo = {
     'name': 'America/Bahia',
     'eras': ZONE_ERAS_America_Bahia
 }
@@ -2378,7 +2388,7 @@ ZONE_INFO_America_Bahia = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Bahia_Banderas = [
+ZONE_ERAS_America_Bahia_Banderas: List[ZoneEra] = [
     #             -7:00    Mexico    M%sT    2010 Apr  4  2:00
     {
       'offset_seconds': -25200,
@@ -2406,7 +2416,7 @@ ZONE_ERAS_America_Bahia_Banderas = [
 
 ]
 
-ZONE_INFO_America_Bahia_Banderas = {
+ZONE_INFO_America_Bahia_Banderas: ZoneInfo = {
     'name': 'America/Bahia_Banderas',
     'eras': ZONE_ERAS_America_Bahia_Banderas
 }
@@ -2416,7 +2426,7 @@ ZONE_INFO_America_Bahia_Banderas = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Barbados = [
+ZONE_ERAS_America_Barbados: List[ZoneEra] = [
     #             -4:00    Barb    A%sT
     {
       'offset_seconds': -14400,
@@ -2432,7 +2442,7 @@ ZONE_ERAS_America_Barbados = [
 
 ]
 
-ZONE_INFO_America_Barbados = {
+ZONE_INFO_America_Barbados: ZoneInfo = {
     'name': 'America/Barbados',
     'eras': ZONE_ERAS_America_Barbados
 }
@@ -2442,7 +2452,7 @@ ZONE_INFO_America_Barbados = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Belem = [
+ZONE_ERAS_America_Belem: List[ZoneEra] = [
     #             -3:00    Brazil    -03/-02    1988 Sep 12
     {
       'offset_seconds': -10800,
@@ -2470,7 +2480,7 @@ ZONE_ERAS_America_Belem = [
 
 ]
 
-ZONE_INFO_America_Belem = {
+ZONE_INFO_America_Belem: ZoneInfo = {
     'name': 'America/Belem',
     'eras': ZONE_ERAS_America_Belem
 }
@@ -2480,7 +2490,7 @@ ZONE_INFO_America_Belem = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Belize = [
+ZONE_ERAS_America_Belize: List[ZoneEra] = [
     #             -6:00    Belize    %s
     {
       'offset_seconds': -21600,
@@ -2496,7 +2506,7 @@ ZONE_ERAS_America_Belize = [
 
 ]
 
-ZONE_INFO_America_Belize = {
+ZONE_INFO_America_Belize: ZoneInfo = {
     'name': 'America/Belize',
     'eras': ZONE_ERAS_America_Belize
 }
@@ -2506,7 +2516,7 @@ ZONE_INFO_America_Belize = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Boa_Vista = [
+ZONE_ERAS_America_Boa_Vista: List[ZoneEra] = [
     #             -4:00    Brazil    -04/-03    1988 Sep 12
     {
       'offset_seconds': -14400,
@@ -2558,7 +2568,7 @@ ZONE_ERAS_America_Boa_Vista = [
 
 ]
 
-ZONE_INFO_America_Boa_Vista = {
+ZONE_INFO_America_Boa_Vista: ZoneInfo = {
     'name': 'America/Boa_Vista',
     'eras': ZONE_ERAS_America_Boa_Vista
 }
@@ -2568,7 +2578,7 @@ ZONE_INFO_America_Boa_Vista = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Bogota = [
+ZONE_ERAS_America_Bogota: List[ZoneEra] = [
     #             -5:00    CO    -05/-04
     {
       'offset_seconds': -18000,
@@ -2584,7 +2594,7 @@ ZONE_ERAS_America_Bogota = [
 
 ]
 
-ZONE_INFO_America_Bogota = {
+ZONE_INFO_America_Bogota: ZoneInfo = {
     'name': 'America/Bogota',
     'eras': ZONE_ERAS_America_Bogota
 }
@@ -2594,7 +2604,7 @@ ZONE_INFO_America_Bogota = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Boise = [
+ZONE_ERAS_America_Boise: List[ZoneEra] = [
     #             -7:00    US    M%sT    1974
     {
       'offset_seconds': -25200,
@@ -2634,7 +2644,7 @@ ZONE_ERAS_America_Boise = [
 
 ]
 
-ZONE_INFO_America_Boise = {
+ZONE_INFO_America_Boise: ZoneInfo = {
     'name': 'America/Boise',
     'eras': ZONE_ERAS_America_Boise
 }
@@ -2644,7 +2654,7 @@ ZONE_INFO_America_Boise = {
 # Era count: 5
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Cambridge_Bay = [
+ZONE_ERAS_America_Cambridge_Bay: List[ZoneEra] = [
     #             -7:00    NT_YK    M%sT    1999 Oct 31  2:00
     {
       'offset_seconds': -25200,
@@ -2708,7 +2718,7 @@ ZONE_ERAS_America_Cambridge_Bay = [
 
 ]
 
-ZONE_INFO_America_Cambridge_Bay = {
+ZONE_INFO_America_Cambridge_Bay: ZoneInfo = {
     'name': 'America/Cambridge_Bay',
     'eras': ZONE_ERAS_America_Cambridge_Bay
 }
@@ -2718,7 +2728,7 @@ ZONE_INFO_America_Cambridge_Bay = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Campo_Grande = [
+ZONE_ERAS_America_Campo_Grande: List[ZoneEra] = [
     #             -4:00    Brazil    -04/-03
     {
       'offset_seconds': -14400,
@@ -2734,7 +2744,7 @@ ZONE_ERAS_America_Campo_Grande = [
 
 ]
 
-ZONE_INFO_America_Campo_Grande = {
+ZONE_INFO_America_Campo_Grande: ZoneInfo = {
     'name': 'America/Campo_Grande',
     'eras': ZONE_ERAS_America_Campo_Grande
 }
@@ -2744,7 +2754,7 @@ ZONE_INFO_America_Campo_Grande = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Cancun = [
+ZONE_ERAS_America_Cancun: List[ZoneEra] = [
     #             -6:00    -    CST    1981 Dec 23
     {
       'offset_seconds': -21600,
@@ -2796,7 +2806,7 @@ ZONE_ERAS_America_Cancun = [
 
 ]
 
-ZONE_INFO_America_Cancun = {
+ZONE_INFO_America_Cancun: ZoneInfo = {
     'name': 'America/Cancun',
     'eras': ZONE_ERAS_America_Cancun
 }
@@ -2806,7 +2816,7 @@ ZONE_INFO_America_Cancun = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Caracas = [
+ZONE_ERAS_America_Caracas: List[ZoneEra] = [
     #             -4:00    -    -04    2007 Dec  9  3:00
     {
       'offset_seconds': -14400,
@@ -2846,7 +2856,7 @@ ZONE_ERAS_America_Caracas = [
 
 ]
 
-ZONE_INFO_America_Caracas = {
+ZONE_INFO_America_Caracas: ZoneInfo = {
     'name': 'America/Caracas',
     'eras': ZONE_ERAS_America_Caracas
 }
@@ -2856,7 +2866,7 @@ ZONE_INFO_America_Caracas = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Cayenne = [
+ZONE_ERAS_America_Cayenne: List[ZoneEra] = [
     #             -3:00    -    -03
     {
       'offset_seconds': -10800,
@@ -2872,7 +2882,7 @@ ZONE_ERAS_America_Cayenne = [
 
 ]
 
-ZONE_INFO_America_Cayenne = {
+ZONE_INFO_America_Cayenne: ZoneInfo = {
     'name': 'America/Cayenne',
     'eras': ZONE_ERAS_America_Cayenne
 }
@@ -2882,7 +2892,7 @@ ZONE_INFO_America_Cayenne = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Chicago = [
+ZONE_ERAS_America_Chicago: List[ZoneEra] = [
     #             -6:00    US    C%sT
     {
       'offset_seconds': -21600,
@@ -2898,7 +2908,7 @@ ZONE_ERAS_America_Chicago = [
 
 ]
 
-ZONE_INFO_America_Chicago = {
+ZONE_INFO_America_Chicago: ZoneInfo = {
     'name': 'America/Chicago',
     'eras': ZONE_ERAS_America_Chicago
 }
@@ -2908,7 +2918,7 @@ ZONE_INFO_America_Chicago = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Chihuahua = [
+ZONE_ERAS_America_Chihuahua: List[ZoneEra] = [
     #             -6:00    -    CST    1996
     {
       'offset_seconds': -21600,
@@ -2960,7 +2970,7 @@ ZONE_ERAS_America_Chihuahua = [
 
 ]
 
-ZONE_INFO_America_Chihuahua = {
+ZONE_INFO_America_Chihuahua: ZoneInfo = {
     'name': 'America/Chihuahua',
     'eras': ZONE_ERAS_America_Chihuahua
 }
@@ -2970,7 +2980,7 @@ ZONE_INFO_America_Chihuahua = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Costa_Rica = [
+ZONE_ERAS_America_Costa_Rica: List[ZoneEra] = [
     #             -6:00    CR    C%sT
     {
       'offset_seconds': -21600,
@@ -2986,7 +2996,7 @@ ZONE_ERAS_America_Costa_Rica = [
 
 ]
 
-ZONE_INFO_America_Costa_Rica = {
+ZONE_INFO_America_Costa_Rica: ZoneInfo = {
     'name': 'America/Costa_Rica',
     'eras': ZONE_ERAS_America_Costa_Rica
 }
@@ -2996,7 +3006,7 @@ ZONE_INFO_America_Costa_Rica = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Cuiaba = [
+ZONE_ERAS_America_Cuiaba: List[ZoneEra] = [
     #             -4:00    Brazil    -04/-03    2003 Sep 24
     {
       'offset_seconds': -14400,
@@ -3036,7 +3046,7 @@ ZONE_ERAS_America_Cuiaba = [
 
 ]
 
-ZONE_INFO_America_Cuiaba = {
+ZONE_INFO_America_Cuiaba: ZoneInfo = {
     'name': 'America/Cuiaba',
     'eras': ZONE_ERAS_America_Cuiaba
 }
@@ -3046,7 +3056,7 @@ ZONE_INFO_America_Cuiaba = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Danmarkshavn = [
+ZONE_ERAS_America_Danmarkshavn: List[ZoneEra] = [
     #             -3:00    -    -03    1980 Apr  6  2:00
     {
       'offset_seconds': -10800,
@@ -3086,7 +3096,7 @@ ZONE_ERAS_America_Danmarkshavn = [
 
 ]
 
-ZONE_INFO_America_Danmarkshavn = {
+ZONE_INFO_America_Danmarkshavn: ZoneInfo = {
     'name': 'America/Danmarkshavn',
     'eras': ZONE_ERAS_America_Danmarkshavn
 }
@@ -3096,7 +3106,7 @@ ZONE_INFO_America_Danmarkshavn = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Dawson = [
+ZONE_ERAS_America_Dawson: List[ZoneEra] = [
     #             -9:00    NT_YK    Y%sT    1973 Oct 28  0:00
     {
       'offset_seconds': -32400,
@@ -3148,7 +3158,7 @@ ZONE_ERAS_America_Dawson = [
 
 ]
 
-ZONE_INFO_America_Dawson = {
+ZONE_INFO_America_Dawson: ZoneInfo = {
     'name': 'America/Dawson',
     'eras': ZONE_ERAS_America_Dawson
 }
@@ -3158,7 +3168,7 @@ ZONE_INFO_America_Dawson = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Dawson_Creek = [
+ZONE_ERAS_America_Dawson_Creek: List[ZoneEra] = [
     #             -7:00    -    MST
     {
       'offset_seconds': -25200,
@@ -3174,7 +3184,7 @@ ZONE_ERAS_America_Dawson_Creek = [
 
 ]
 
-ZONE_INFO_America_Dawson_Creek = {
+ZONE_INFO_America_Dawson_Creek: ZoneInfo = {
     'name': 'America/Dawson_Creek',
     'eras': ZONE_ERAS_America_Dawson_Creek
 }
@@ -3184,7 +3194,7 @@ ZONE_INFO_America_Dawson_Creek = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Denver = [
+ZONE_ERAS_America_Denver: List[ZoneEra] = [
     #             -7:00    US    M%sT
     {
       'offset_seconds': -25200,
@@ -3200,7 +3210,7 @@ ZONE_ERAS_America_Denver = [
 
 ]
 
-ZONE_INFO_America_Denver = {
+ZONE_INFO_America_Denver: ZoneInfo = {
     'name': 'America/Denver',
     'eras': ZONE_ERAS_America_Denver
 }
@@ -3210,7 +3220,7 @@ ZONE_INFO_America_Denver = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Detroit = [
+ZONE_ERAS_America_Detroit: List[ZoneEra] = [
     #             -5:00    -    EST    1973
     {
       'offset_seconds': -18000,
@@ -3262,7 +3272,7 @@ ZONE_ERAS_America_Detroit = [
 
 ]
 
-ZONE_INFO_America_Detroit = {
+ZONE_INFO_America_Detroit: ZoneInfo = {
     'name': 'America/Detroit',
     'eras': ZONE_ERAS_America_Detroit
 }
@@ -3272,7 +3282,7 @@ ZONE_INFO_America_Detroit = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Edmonton = [
+ZONE_ERAS_America_Edmonton: List[ZoneEra] = [
     #             -7:00    Edm    M%sT    1987
     {
       'offset_seconds': -25200,
@@ -3300,7 +3310,7 @@ ZONE_ERAS_America_Edmonton = [
 
 ]
 
-ZONE_INFO_America_Edmonton = {
+ZONE_INFO_America_Edmonton: ZoneInfo = {
     'name': 'America/Edmonton',
     'eras': ZONE_ERAS_America_Edmonton
 }
@@ -3310,7 +3320,7 @@ ZONE_INFO_America_Edmonton = {
 # Era count: 6
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Eirunepe = [
+ZONE_ERAS_America_Eirunepe: List[ZoneEra] = [
     #             -5:00    Brazil    -05/-04    1988 Sep 12
     {
       'offset_seconds': -18000,
@@ -3386,7 +3396,7 @@ ZONE_ERAS_America_Eirunepe = [
 
 ]
 
-ZONE_INFO_America_Eirunepe = {
+ZONE_INFO_America_Eirunepe: ZoneInfo = {
     'name': 'America/Eirunepe',
     'eras': ZONE_ERAS_America_Eirunepe
 }
@@ -3396,7 +3406,7 @@ ZONE_INFO_America_Eirunepe = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_El_Salvador = [
+ZONE_ERAS_America_El_Salvador: List[ZoneEra] = [
     #             -6:00    Salv    C%sT
     {
       'offset_seconds': -21600,
@@ -3412,7 +3422,7 @@ ZONE_ERAS_America_El_Salvador = [
 
 ]
 
-ZONE_INFO_America_El_Salvador = {
+ZONE_INFO_America_El_Salvador: ZoneInfo = {
     'name': 'America/El_Salvador',
     'eras': ZONE_ERAS_America_El_Salvador
 }
@@ -3422,7 +3432,7 @@ ZONE_INFO_America_El_Salvador = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Fort_Nelson = [
+ZONE_ERAS_America_Fort_Nelson: List[ZoneEra] = [
     #             -8:00    Vanc    P%sT    1987
     {
       'offset_seconds': -28800,
@@ -3462,7 +3472,7 @@ ZONE_ERAS_America_Fort_Nelson = [
 
 ]
 
-ZONE_INFO_America_Fort_Nelson = {
+ZONE_INFO_America_Fort_Nelson: ZoneInfo = {
     'name': 'America/Fort_Nelson',
     'eras': ZONE_ERAS_America_Fort_Nelson
 }
@@ -3472,7 +3482,7 @@ ZONE_INFO_America_Fort_Nelson = {
 # Era count: 6
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Fortaleza = [
+ZONE_ERAS_America_Fortaleza: List[ZoneEra] = [
     #             -3:00    Brazil    -03/-02    1990 Sep 17
     {
       'offset_seconds': -10800,
@@ -3548,7 +3558,7 @@ ZONE_ERAS_America_Fortaleza = [
 
 ]
 
-ZONE_INFO_America_Fortaleza = {
+ZONE_INFO_America_Fortaleza: ZoneInfo = {
     'name': 'America/Fortaleza',
     'eras': ZONE_ERAS_America_Fortaleza
 }
@@ -3558,7 +3568,7 @@ ZONE_INFO_America_Fortaleza = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Glace_Bay = [
+ZONE_ERAS_America_Glace_Bay: List[ZoneEra] = [
     #             -4:00    Halifax    A%sT    1974
     {
       'offset_seconds': -14400,
@@ -3586,7 +3596,7 @@ ZONE_ERAS_America_Glace_Bay = [
 
 ]
 
-ZONE_INFO_America_Glace_Bay = {
+ZONE_INFO_America_Glace_Bay: ZoneInfo = {
     'name': 'America/Glace_Bay',
     'eras': ZONE_ERAS_America_Glace_Bay
 }
@@ -3596,7 +3606,7 @@ ZONE_INFO_America_Glace_Bay = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Goose_Bay = [
+ZONE_ERAS_America_Goose_Bay: List[ZoneEra] = [
     #             -4:00    StJohns    A%sT    2011 Nov
     {
       'offset_seconds': -14400,
@@ -3624,7 +3634,7 @@ ZONE_ERAS_America_Goose_Bay = [
 
 ]
 
-ZONE_INFO_America_Goose_Bay = {
+ZONE_INFO_America_Goose_Bay: ZoneInfo = {
     'name': 'America/Goose_Bay',
     'eras': ZONE_ERAS_America_Goose_Bay
 }
@@ -3634,7 +3644,7 @@ ZONE_INFO_America_Goose_Bay = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Grand_Turk = [
+ZONE_ERAS_America_Grand_Turk: List[ZoneEra] = [
     #             -5:00    -    EST    1979
     {
       'offset_seconds': -18000,
@@ -3686,7 +3696,7 @@ ZONE_ERAS_America_Grand_Turk = [
 
 ]
 
-ZONE_INFO_America_Grand_Turk = {
+ZONE_INFO_America_Grand_Turk: ZoneInfo = {
     'name': 'America/Grand_Turk',
     'eras': ZONE_ERAS_America_Grand_Turk
 }
@@ -3696,7 +3706,7 @@ ZONE_INFO_America_Grand_Turk = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Guatemala = [
+ZONE_ERAS_America_Guatemala: List[ZoneEra] = [
     #             -6:00    Guat    C%sT
     {
       'offset_seconds': -21600,
@@ -3712,7 +3722,7 @@ ZONE_ERAS_America_Guatemala = [
 
 ]
 
-ZONE_INFO_America_Guatemala = {
+ZONE_INFO_America_Guatemala: ZoneInfo = {
     'name': 'America/Guatemala',
     'eras': ZONE_ERAS_America_Guatemala
 }
@@ -3722,7 +3732,7 @@ ZONE_INFO_America_Guatemala = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Guayaquil = [
+ZONE_ERAS_America_Guayaquil: List[ZoneEra] = [
     #             -5:00    Ecuador    -05/-04
     {
       'offset_seconds': -18000,
@@ -3738,7 +3748,7 @@ ZONE_ERAS_America_Guayaquil = [
 
 ]
 
-ZONE_INFO_America_Guayaquil = {
+ZONE_INFO_America_Guayaquil: ZoneInfo = {
     'name': 'America/Guayaquil',
     'eras': ZONE_ERAS_America_Guayaquil
 }
@@ -3748,7 +3758,7 @@ ZONE_INFO_America_Guayaquil = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Guyana = [
+ZONE_ERAS_America_Guyana: List[ZoneEra] = [
     #             -3:45    -    -0345    1975 Aug  1
     {
       'offset_seconds': -13500,
@@ -3788,7 +3798,7 @@ ZONE_ERAS_America_Guyana = [
 
 ]
 
-ZONE_INFO_America_Guyana = {
+ZONE_INFO_America_Guyana: ZoneInfo = {
     'name': 'America/Guyana',
     'eras': ZONE_ERAS_America_Guyana
 }
@@ -3798,7 +3808,7 @@ ZONE_INFO_America_Guyana = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Halifax = [
+ZONE_ERAS_America_Halifax: List[ZoneEra] = [
     #             -4:00    Halifax    A%sT    1974
     {
       'offset_seconds': -14400,
@@ -3826,7 +3836,7 @@ ZONE_ERAS_America_Halifax = [
 
 ]
 
-ZONE_INFO_America_Halifax = {
+ZONE_INFO_America_Halifax: ZoneInfo = {
     'name': 'America/Halifax',
     'eras': ZONE_ERAS_America_Halifax
 }
@@ -3836,7 +3846,7 @@ ZONE_INFO_America_Halifax = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Havana = [
+ZONE_ERAS_America_Havana: List[ZoneEra] = [
     #             -5:00    Cuba    C%sT
     {
       'offset_seconds': -18000,
@@ -3852,7 +3862,7 @@ ZONE_ERAS_America_Havana = [
 
 ]
 
-ZONE_INFO_America_Havana = {
+ZONE_INFO_America_Havana: ZoneInfo = {
     'name': 'America/Havana',
     'eras': ZONE_ERAS_America_Havana
 }
@@ -3862,7 +3872,7 @@ ZONE_INFO_America_Havana = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Hermosillo = [
+ZONE_ERAS_America_Hermosillo: List[ZoneEra] = [
     #             -7:00    Mexico    M%sT    1999
     {
       'offset_seconds': -25200,
@@ -3890,7 +3900,7 @@ ZONE_ERAS_America_Hermosillo = [
 
 ]
 
-ZONE_INFO_America_Hermosillo = {
+ZONE_INFO_America_Hermosillo: ZoneInfo = {
     'name': 'America/Hermosillo',
     'eras': ZONE_ERAS_America_Hermosillo
 }
@@ -3900,7 +3910,7 @@ ZONE_INFO_America_Hermosillo = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Indiana_Indianapolis = [
+ZONE_ERAS_America_Indiana_Indianapolis: List[ZoneEra] = [
     #             -5:00    -    EST    2006
     {
       'offset_seconds': -18000,
@@ -3928,7 +3938,7 @@ ZONE_ERAS_America_Indiana_Indianapolis = [
 
 ]
 
-ZONE_INFO_America_Indiana_Indianapolis = {
+ZONE_INFO_America_Indiana_Indianapolis: ZoneInfo = {
     'name': 'America/Indiana/Indianapolis',
     'eras': ZONE_ERAS_America_Indiana_Indianapolis
 }
@@ -3938,7 +3948,7 @@ ZONE_INFO_America_Indiana_Indianapolis = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Indiana_Knox = [
+ZONE_ERAS_America_Indiana_Knox: List[ZoneEra] = [
     #             -6:00    US    C%sT    1991 Oct 27  2:00
     {
       'offset_seconds': -21600,
@@ -3978,7 +3988,7 @@ ZONE_ERAS_America_Indiana_Knox = [
 
 ]
 
-ZONE_INFO_America_Indiana_Knox = {
+ZONE_INFO_America_Indiana_Knox: ZoneInfo = {
     'name': 'America/Indiana/Knox',
     'eras': ZONE_ERAS_America_Indiana_Knox
 }
@@ -3988,7 +3998,7 @@ ZONE_INFO_America_Indiana_Knox = {
 # Era count: 5
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Indiana_Marengo = [
+ZONE_ERAS_America_Indiana_Marengo: List[ZoneEra] = [
     #             -5:00    US    E%sT    1974 Jan  6  2:00
     {
       'offset_seconds': -18000,
@@ -4052,7 +4062,7 @@ ZONE_ERAS_America_Indiana_Marengo = [
 
 ]
 
-ZONE_INFO_America_Indiana_Marengo = {
+ZONE_INFO_America_Indiana_Marengo: ZoneInfo = {
     'name': 'America/Indiana/Marengo',
     'eras': ZONE_ERAS_America_Indiana_Marengo
 }
@@ -4062,7 +4072,7 @@ ZONE_INFO_America_Indiana_Marengo = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Indiana_Petersburg = [
+ZONE_ERAS_America_Indiana_Petersburg: List[ZoneEra] = [
     #             -6:00    US    C%sT    1977 Oct 30  2:00
     {
       'offset_seconds': -21600,
@@ -4114,7 +4124,7 @@ ZONE_ERAS_America_Indiana_Petersburg = [
 
 ]
 
-ZONE_INFO_America_Indiana_Petersburg = {
+ZONE_INFO_America_Indiana_Petersburg: ZoneInfo = {
     'name': 'America/Indiana/Petersburg',
     'eras': ZONE_ERAS_America_Indiana_Petersburg
 }
@@ -4124,7 +4134,7 @@ ZONE_INFO_America_Indiana_Petersburg = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Indiana_Tell_City = [
+ZONE_ERAS_America_Indiana_Tell_City: List[ZoneEra] = [
     #             -5:00    -    EST    2006 Apr  2  2:00
     {
       'offset_seconds': -18000,
@@ -4152,7 +4162,7 @@ ZONE_ERAS_America_Indiana_Tell_City = [
 
 ]
 
-ZONE_INFO_America_Indiana_Tell_City = {
+ZONE_INFO_America_Indiana_Tell_City: ZoneInfo = {
     'name': 'America/Indiana/Tell_City',
     'eras': ZONE_ERAS_America_Indiana_Tell_City
 }
@@ -4162,7 +4172,7 @@ ZONE_INFO_America_Indiana_Tell_City = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Indiana_Vevay = [
+ZONE_ERAS_America_Indiana_Vevay: List[ZoneEra] = [
     #             -5:00    US    E%sT    1973
     {
       'offset_seconds': -18000,
@@ -4202,7 +4212,7 @@ ZONE_ERAS_America_Indiana_Vevay = [
 
 ]
 
-ZONE_INFO_America_Indiana_Vevay = {
+ZONE_INFO_America_Indiana_Vevay: ZoneInfo = {
     'name': 'America/Indiana/Vevay',
     'eras': ZONE_ERAS_America_Indiana_Vevay
 }
@@ -4212,7 +4222,7 @@ ZONE_INFO_America_Indiana_Vevay = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Indiana_Vincennes = [
+ZONE_ERAS_America_Indiana_Vincennes: List[ZoneEra] = [
     #             -5:00    -    EST    2006 Apr  2  2:00
     {
       'offset_seconds': -18000,
@@ -4252,7 +4262,7 @@ ZONE_ERAS_America_Indiana_Vincennes = [
 
 ]
 
-ZONE_INFO_America_Indiana_Vincennes = {
+ZONE_INFO_America_Indiana_Vincennes: ZoneInfo = {
     'name': 'America/Indiana/Vincennes',
     'eras': ZONE_ERAS_America_Indiana_Vincennes
 }
@@ -4262,7 +4272,7 @@ ZONE_INFO_America_Indiana_Vincennes = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Indiana_Winamac = [
+ZONE_ERAS_America_Indiana_Winamac: List[ZoneEra] = [
     #             -5:00    -    EST    2006 Apr  2  2:00
     {
       'offset_seconds': -18000,
@@ -4302,7 +4312,7 @@ ZONE_ERAS_America_Indiana_Winamac = [
 
 ]
 
-ZONE_INFO_America_Indiana_Winamac = {
+ZONE_INFO_America_Indiana_Winamac: ZoneInfo = {
     'name': 'America/Indiana/Winamac',
     'eras': ZONE_ERAS_America_Indiana_Winamac
 }
@@ -4312,7 +4322,7 @@ ZONE_INFO_America_Indiana_Winamac = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Inuvik = [
+ZONE_ERAS_America_Inuvik: List[ZoneEra] = [
     #             -8:00    NT_YK    P%sT    1979 Apr lastSun  2:00
     {
       'offset_seconds': -28800,
@@ -4352,7 +4362,7 @@ ZONE_ERAS_America_Inuvik = [
 
 ]
 
-ZONE_INFO_America_Inuvik = {
+ZONE_INFO_America_Inuvik: ZoneInfo = {
     'name': 'America/Inuvik',
     'eras': ZONE_ERAS_America_Inuvik
 }
@@ -4362,7 +4372,7 @@ ZONE_INFO_America_Inuvik = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Iqaluit = [
+ZONE_ERAS_America_Iqaluit: List[ZoneEra] = [
     #             -5:00    NT_YK    E%sT    1999 Oct 31  2:00
     {
       'offset_seconds': -18000,
@@ -4402,7 +4412,7 @@ ZONE_ERAS_America_Iqaluit = [
 
 ]
 
-ZONE_INFO_America_Iqaluit = {
+ZONE_INFO_America_Iqaluit: ZoneInfo = {
     'name': 'America/Iqaluit',
     'eras': ZONE_ERAS_America_Iqaluit
 }
@@ -4412,7 +4422,7 @@ ZONE_INFO_America_Iqaluit = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Jamaica = [
+ZONE_ERAS_America_Jamaica: List[ZoneEra] = [
     #             -5:00    -    EST    1974
     {
       'offset_seconds': -18000,
@@ -4452,7 +4462,7 @@ ZONE_ERAS_America_Jamaica = [
 
 ]
 
-ZONE_INFO_America_Jamaica = {
+ZONE_INFO_America_Jamaica: ZoneInfo = {
     'name': 'America/Jamaica',
     'eras': ZONE_ERAS_America_Jamaica
 }
@@ -4462,7 +4472,7 @@ ZONE_INFO_America_Jamaica = {
 # Era count: 5
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Juneau = [
+ZONE_ERAS_America_Juneau: List[ZoneEra] = [
     #              -8:00    US    P%sT    1980 Apr 27  2:00
     {
       'offset_seconds': -28800,
@@ -4526,7 +4536,7 @@ ZONE_ERAS_America_Juneau = [
 
 ]
 
-ZONE_INFO_America_Juneau = {
+ZONE_INFO_America_Juneau: ZoneInfo = {
     'name': 'America/Juneau',
     'eras': ZONE_ERAS_America_Juneau
 }
@@ -4536,7 +4546,7 @@ ZONE_INFO_America_Juneau = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Kentucky_Louisville = [
+ZONE_ERAS_America_Kentucky_Louisville: List[ZoneEra] = [
     #             -5:00    US    E%sT    1974 Jan  6  2:00
     {
       'offset_seconds': -18000,
@@ -4576,7 +4586,7 @@ ZONE_ERAS_America_Kentucky_Louisville = [
 
 ]
 
-ZONE_INFO_America_Kentucky_Louisville = {
+ZONE_INFO_America_Kentucky_Louisville: ZoneInfo = {
     'name': 'America/Kentucky/Louisville',
     'eras': ZONE_ERAS_America_Kentucky_Louisville
 }
@@ -4586,7 +4596,7 @@ ZONE_INFO_America_Kentucky_Louisville = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Kentucky_Monticello = [
+ZONE_ERAS_America_Kentucky_Monticello: List[ZoneEra] = [
     #             -6:00    US    C%sT    2000 Oct 29  2:00
     {
       'offset_seconds': -21600,
@@ -4614,7 +4624,7 @@ ZONE_ERAS_America_Kentucky_Monticello = [
 
 ]
 
-ZONE_INFO_America_Kentucky_Monticello = {
+ZONE_INFO_America_Kentucky_Monticello: ZoneInfo = {
     'name': 'America/Kentucky/Monticello',
     'eras': ZONE_ERAS_America_Kentucky_Monticello
 }
@@ -4624,7 +4634,7 @@ ZONE_INFO_America_Kentucky_Monticello = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_La_Paz = [
+ZONE_ERAS_America_La_Paz: List[ZoneEra] = [
     #             -4:00    -    -04
     {
       'offset_seconds': -14400,
@@ -4640,7 +4650,7 @@ ZONE_ERAS_America_La_Paz = [
 
 ]
 
-ZONE_INFO_America_La_Paz = {
+ZONE_INFO_America_La_Paz: ZoneInfo = {
     'name': 'America/La_Paz',
     'eras': ZONE_ERAS_America_La_Paz
 }
@@ -4650,7 +4660,7 @@ ZONE_INFO_America_La_Paz = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Lima = [
+ZONE_ERAS_America_Lima: List[ZoneEra] = [
     #             -5:00    Peru    -05/-04
     {
       'offset_seconds': -18000,
@@ -4666,7 +4676,7 @@ ZONE_ERAS_America_Lima = [
 
 ]
 
-ZONE_INFO_America_Lima = {
+ZONE_INFO_America_Lima: ZoneInfo = {
     'name': 'America/Lima',
     'eras': ZONE_ERAS_America_Lima
 }
@@ -4676,7 +4686,7 @@ ZONE_INFO_America_Lima = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Los_Angeles = [
+ZONE_ERAS_America_Los_Angeles: List[ZoneEra] = [
     #             -8:00    US    P%sT
     {
       'offset_seconds': -28800,
@@ -4692,7 +4702,7 @@ ZONE_ERAS_America_Los_Angeles = [
 
 ]
 
-ZONE_INFO_America_Los_Angeles = {
+ZONE_INFO_America_Los_Angeles: ZoneInfo = {
     'name': 'America/Los_Angeles',
     'eras': ZONE_ERAS_America_Los_Angeles
 }
@@ -4702,7 +4712,7 @@ ZONE_INFO_America_Los_Angeles = {
 # Era count: 8
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Maceio = [
+ZONE_ERAS_America_Maceio: List[ZoneEra] = [
     #             -3:00    Brazil    -03/-02    1990 Sep 17
     {
       'offset_seconds': -10800,
@@ -4802,7 +4812,7 @@ ZONE_ERAS_America_Maceio = [
 
 ]
 
-ZONE_INFO_America_Maceio = {
+ZONE_INFO_America_Maceio: ZoneInfo = {
     'name': 'America/Maceio',
     'eras': ZONE_ERAS_America_Maceio
 }
@@ -4812,7 +4822,7 @@ ZONE_INFO_America_Maceio = {
 # Era count: 7
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Managua = [
+ZONE_ERAS_America_Managua: List[ZoneEra] = [
     #             -6:00    -    CST    1973 May
     {
       'offset_seconds': -21600,
@@ -4900,7 +4910,7 @@ ZONE_ERAS_America_Managua = [
 
 ]
 
-ZONE_INFO_America_Managua = {
+ZONE_INFO_America_Managua: ZoneInfo = {
     'name': 'America/Managua',
     'eras': ZONE_ERAS_America_Managua
 }
@@ -4910,7 +4920,7 @@ ZONE_INFO_America_Managua = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Manaus = [
+ZONE_ERAS_America_Manaus: List[ZoneEra] = [
     #             -4:00    Brazil    -04/-03    1988 Sep 12
     {
       'offset_seconds': -14400,
@@ -4962,7 +4972,7 @@ ZONE_ERAS_America_Manaus = [
 
 ]
 
-ZONE_INFO_America_Manaus = {
+ZONE_INFO_America_Manaus: ZoneInfo = {
     'name': 'America/Manaus',
     'eras': ZONE_ERAS_America_Manaus
 }
@@ -4972,7 +4982,7 @@ ZONE_INFO_America_Manaus = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Martinique = [
+ZONE_ERAS_America_Martinique: List[ZoneEra] = [
     #             -4:00    -    AST    1980 Apr  6
     {
       'offset_seconds': -14400,
@@ -5012,7 +5022,7 @@ ZONE_ERAS_America_Martinique = [
 
 ]
 
-ZONE_INFO_America_Martinique = {
+ZONE_INFO_America_Martinique: ZoneInfo = {
     'name': 'America/Martinique',
     'eras': ZONE_ERAS_America_Martinique
 }
@@ -5022,7 +5032,7 @@ ZONE_INFO_America_Martinique = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Matamoros = [
+ZONE_ERAS_America_Matamoros: List[ZoneEra] = [
     #             -6:00    -    CST    1988
     {
       'offset_seconds': -21600,
@@ -5074,7 +5084,7 @@ ZONE_ERAS_America_Matamoros = [
 
 ]
 
-ZONE_INFO_America_Matamoros = {
+ZONE_INFO_America_Matamoros: ZoneInfo = {
     'name': 'America/Matamoros',
     'eras': ZONE_ERAS_America_Matamoros
 }
@@ -5084,7 +5094,7 @@ ZONE_INFO_America_Matamoros = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Mazatlan = [
+ZONE_ERAS_America_Mazatlan: List[ZoneEra] = [
     #             -7:00    Mexico    M%sT
     {
       'offset_seconds': -25200,
@@ -5100,7 +5110,7 @@ ZONE_ERAS_America_Mazatlan = [
 
 ]
 
-ZONE_INFO_America_Mazatlan = {
+ZONE_INFO_America_Mazatlan: ZoneInfo = {
     'name': 'America/Mazatlan',
     'eras': ZONE_ERAS_America_Mazatlan
 }
@@ -5110,7 +5120,7 @@ ZONE_INFO_America_Mazatlan = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Menominee = [
+ZONE_ERAS_America_Menominee: List[ZoneEra] = [
     #             -5:00    -    EST    1973 Apr 29  2:00
     {
       'offset_seconds': -18000,
@@ -5138,7 +5148,7 @@ ZONE_ERAS_America_Menominee = [
 
 ]
 
-ZONE_INFO_America_Menominee = {
+ZONE_INFO_America_Menominee: ZoneInfo = {
     'name': 'America/Menominee',
     'eras': ZONE_ERAS_America_Menominee
 }
@@ -5148,7 +5158,7 @@ ZONE_INFO_America_Menominee = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Merida = [
+ZONE_ERAS_America_Merida: List[ZoneEra] = [
     #             -6:00    -    CST    1981 Dec 23
     {
       'offset_seconds': -21600,
@@ -5188,7 +5198,7 @@ ZONE_ERAS_America_Merida = [
 
 ]
 
-ZONE_INFO_America_Merida = {
+ZONE_INFO_America_Merida: ZoneInfo = {
     'name': 'America/Merida',
     'eras': ZONE_ERAS_America_Merida
 }
@@ -5198,7 +5208,7 @@ ZONE_INFO_America_Merida = {
 # Era count: 5
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Metlakatla = [
+ZONE_ERAS_America_Metlakatla: List[ZoneEra] = [
     #              -8:00    US    P%sT    1983 Oct 30  2:00
     {
       'offset_seconds': -28800,
@@ -5262,7 +5272,7 @@ ZONE_ERAS_America_Metlakatla = [
 
 ]
 
-ZONE_INFO_America_Metlakatla = {
+ZONE_INFO_America_Metlakatla: ZoneInfo = {
     'name': 'America/Metlakatla',
     'eras': ZONE_ERAS_America_Metlakatla
 }
@@ -5272,7 +5282,7 @@ ZONE_INFO_America_Metlakatla = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Mexico_City = [
+ZONE_ERAS_America_Mexico_City: List[ZoneEra] = [
     #             -6:00    Mexico    C%sT    2001 Sep 30  2:00
     {
       'offset_seconds': -21600,
@@ -5312,7 +5322,7 @@ ZONE_ERAS_America_Mexico_City = [
 
 ]
 
-ZONE_INFO_America_Mexico_City = {
+ZONE_INFO_America_Mexico_City: ZoneInfo = {
     'name': 'America/Mexico_City',
     'eras': ZONE_ERAS_America_Mexico_City
 }
@@ -5322,7 +5332,7 @@ ZONE_INFO_America_Mexico_City = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Miquelon = [
+ZONE_ERAS_America_Miquelon: List[ZoneEra] = [
     #             -4:00    -    AST    1980 May
     {
       'offset_seconds': -14400,
@@ -5362,7 +5372,7 @@ ZONE_ERAS_America_Miquelon = [
 
 ]
 
-ZONE_INFO_America_Miquelon = {
+ZONE_INFO_America_Miquelon: ZoneInfo = {
     'name': 'America/Miquelon',
     'eras': ZONE_ERAS_America_Miquelon
 }
@@ -5372,7 +5382,7 @@ ZONE_INFO_America_Miquelon = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Moncton = [
+ZONE_ERAS_America_Moncton: List[ZoneEra] = [
     #             -4:00    Moncton    A%sT    1973
     {
       'offset_seconds': -14400,
@@ -5424,7 +5434,7 @@ ZONE_ERAS_America_Moncton = [
 
 ]
 
-ZONE_INFO_America_Moncton = {
+ZONE_INFO_America_Moncton: ZoneInfo = {
     'name': 'America/Moncton',
     'eras': ZONE_ERAS_America_Moncton
 }
@@ -5434,7 +5444,7 @@ ZONE_INFO_America_Moncton = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Monterrey = [
+ZONE_ERAS_America_Monterrey: List[ZoneEra] = [
     #             -6:00    -    CST    1988
     {
       'offset_seconds': -21600,
@@ -5474,7 +5484,7 @@ ZONE_ERAS_America_Monterrey = [
 
 ]
 
-ZONE_INFO_America_Monterrey = {
+ZONE_INFO_America_Monterrey: ZoneInfo = {
     'name': 'America/Monterrey',
     'eras': ZONE_ERAS_America_Monterrey
 }
@@ -5484,7 +5494,7 @@ ZONE_INFO_America_Monterrey = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Montevideo = [
+ZONE_ERAS_America_Montevideo: List[ZoneEra] = [
     #             -3:00    Uruguay    -03/-02    1974
     {
       'offset_seconds': -10800,
@@ -5536,7 +5546,7 @@ ZONE_ERAS_America_Montevideo = [
 
 ]
 
-ZONE_INFO_America_Montevideo = {
+ZONE_INFO_America_Montevideo: ZoneInfo = {
     'name': 'America/Montevideo',
     'eras': ZONE_ERAS_America_Montevideo
 }
@@ -5546,7 +5556,7 @@ ZONE_INFO_America_Montevideo = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_New_York = [
+ZONE_ERAS_America_New_York: List[ZoneEra] = [
     #             -5:00    US    E%sT
     {
       'offset_seconds': -18000,
@@ -5562,7 +5572,7 @@ ZONE_ERAS_America_New_York = [
 
 ]
 
-ZONE_INFO_America_New_York = {
+ZONE_INFO_America_New_York: ZoneInfo = {
     'name': 'America/New_York',
     'eras': ZONE_ERAS_America_New_York
 }
@@ -5572,7 +5582,7 @@ ZONE_INFO_America_New_York = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Nipigon = [
+ZONE_ERAS_America_Nipigon: List[ZoneEra] = [
     #             -5:00    Canada    E%sT
     {
       'offset_seconds': -18000,
@@ -5588,7 +5598,7 @@ ZONE_ERAS_America_Nipigon = [
 
 ]
 
-ZONE_INFO_America_Nipigon = {
+ZONE_INFO_America_Nipigon: ZoneInfo = {
     'name': 'America/Nipigon',
     'eras': ZONE_ERAS_America_Nipigon
 }
@@ -5598,7 +5608,7 @@ ZONE_INFO_America_Nipigon = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Nome = [
+ZONE_ERAS_America_Nome: List[ZoneEra] = [
     #             -11:00    US    B%sT    1983 Oct 30  2:00
     {
       'offset_seconds': -39600,
@@ -5638,7 +5648,7 @@ ZONE_ERAS_America_Nome = [
 
 ]
 
-ZONE_INFO_America_Nome = {
+ZONE_INFO_America_Nome: ZoneInfo = {
     'name': 'America/Nome',
     'eras': ZONE_ERAS_America_Nome
 }
@@ -5648,7 +5658,7 @@ ZONE_INFO_America_Nome = {
 # Era count: 6
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Noronha = [
+ZONE_ERAS_America_Noronha: List[ZoneEra] = [
     #             -2:00    Brazil    -02/-01    1990 Sep 17
     {
       'offset_seconds': -7200,
@@ -5724,7 +5734,7 @@ ZONE_ERAS_America_Noronha = [
 
 ]
 
-ZONE_INFO_America_Noronha = {
+ZONE_INFO_America_Noronha: ZoneInfo = {
     'name': 'America/Noronha',
     'eras': ZONE_ERAS_America_Noronha
 }
@@ -5734,7 +5744,7 @@ ZONE_INFO_America_Noronha = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_North_Dakota_Beulah = [
+ZONE_ERAS_America_North_Dakota_Beulah: List[ZoneEra] = [
     #             -7:00    US    M%sT    2010 Nov  7  2:00
     {
       'offset_seconds': -25200,
@@ -5762,7 +5772,7 @@ ZONE_ERAS_America_North_Dakota_Beulah = [
 
 ]
 
-ZONE_INFO_America_North_Dakota_Beulah = {
+ZONE_INFO_America_North_Dakota_Beulah: ZoneInfo = {
     'name': 'America/North_Dakota/Beulah',
     'eras': ZONE_ERAS_America_North_Dakota_Beulah
 }
@@ -5772,7 +5782,7 @@ ZONE_INFO_America_North_Dakota_Beulah = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_North_Dakota_Center = [
+ZONE_ERAS_America_North_Dakota_Center: List[ZoneEra] = [
     #             -7:00    US    M%sT    1992 Oct 25  2:00
     {
       'offset_seconds': -25200,
@@ -5800,7 +5810,7 @@ ZONE_ERAS_America_North_Dakota_Center = [
 
 ]
 
-ZONE_INFO_America_North_Dakota_Center = {
+ZONE_INFO_America_North_Dakota_Center: ZoneInfo = {
     'name': 'America/North_Dakota/Center',
     'eras': ZONE_ERAS_America_North_Dakota_Center
 }
@@ -5810,7 +5820,7 @@ ZONE_INFO_America_North_Dakota_Center = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_North_Dakota_New_Salem = [
+ZONE_ERAS_America_North_Dakota_New_Salem: List[ZoneEra] = [
     #             -7:00    US    M%sT    2003 Oct 26  2:00
     {
       'offset_seconds': -25200,
@@ -5838,7 +5848,7 @@ ZONE_ERAS_America_North_Dakota_New_Salem = [
 
 ]
 
-ZONE_INFO_America_North_Dakota_New_Salem = {
+ZONE_INFO_America_North_Dakota_New_Salem: ZoneInfo = {
     'name': 'America/North_Dakota/New_Salem',
     'eras': ZONE_ERAS_America_North_Dakota_New_Salem
 }
@@ -5848,7 +5858,7 @@ ZONE_INFO_America_North_Dakota_New_Salem = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Nuuk = [
+ZONE_ERAS_America_Nuuk: List[ZoneEra] = [
     #             -3:00    -    -03    1980 Apr  6  2:00
     {
       'offset_seconds': -10800,
@@ -5876,7 +5886,7 @@ ZONE_ERAS_America_Nuuk = [
 
 ]
 
-ZONE_INFO_America_Nuuk = {
+ZONE_INFO_America_Nuuk: ZoneInfo = {
     'name': 'America/Nuuk',
     'eras': ZONE_ERAS_America_Nuuk
 }
@@ -5886,7 +5896,7 @@ ZONE_INFO_America_Nuuk = {
 # Era count: 5
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Ojinaga = [
+ZONE_ERAS_America_Ojinaga: List[ZoneEra] = [
     #             -6:00    -    CST    1996
     {
       'offset_seconds': -21600,
@@ -5950,7 +5960,7 @@ ZONE_ERAS_America_Ojinaga = [
 
 ]
 
-ZONE_INFO_America_Ojinaga = {
+ZONE_INFO_America_Ojinaga: ZoneInfo = {
     'name': 'America/Ojinaga',
     'eras': ZONE_ERAS_America_Ojinaga
 }
@@ -5960,7 +5970,7 @@ ZONE_INFO_America_Ojinaga = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Panama = [
+ZONE_ERAS_America_Panama: List[ZoneEra] = [
     #             -5:00    -    EST
     {
       'offset_seconds': -18000,
@@ -5976,7 +5986,7 @@ ZONE_ERAS_America_Panama = [
 
 ]
 
-ZONE_INFO_America_Panama = {
+ZONE_INFO_America_Panama: ZoneInfo = {
     'name': 'America/Panama',
     'eras': ZONE_ERAS_America_Panama
 }
@@ -5986,7 +5996,7 @@ ZONE_INFO_America_Panama = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Pangnirtung = [
+ZONE_ERAS_America_Pangnirtung: List[ZoneEra] = [
     #             -4:00    NT_YK    A%sT    1995 Apr Sun>=1  2:00
     {
       'offset_seconds': -14400,
@@ -6038,7 +6048,7 @@ ZONE_ERAS_America_Pangnirtung = [
 
 ]
 
-ZONE_INFO_America_Pangnirtung = {
+ZONE_INFO_America_Pangnirtung: ZoneInfo = {
     'name': 'America/Pangnirtung',
     'eras': ZONE_ERAS_America_Pangnirtung
 }
@@ -6048,7 +6058,7 @@ ZONE_INFO_America_Pangnirtung = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Paramaribo = [
+ZONE_ERAS_America_Paramaribo: List[ZoneEra] = [
     #             -3:30    -    -0330    1984 Oct
     {
       'offset_seconds': -12600,
@@ -6076,7 +6086,7 @@ ZONE_ERAS_America_Paramaribo = [
 
 ]
 
-ZONE_INFO_America_Paramaribo = {
+ZONE_INFO_America_Paramaribo: ZoneInfo = {
     'name': 'America/Paramaribo',
     'eras': ZONE_ERAS_America_Paramaribo
 }
@@ -6086,7 +6096,7 @@ ZONE_INFO_America_Paramaribo = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Phoenix = [
+ZONE_ERAS_America_Phoenix: List[ZoneEra] = [
     #             -7:00    -    MST
     {
       'offset_seconds': -25200,
@@ -6102,7 +6112,7 @@ ZONE_ERAS_America_Phoenix = [
 
 ]
 
-ZONE_INFO_America_Phoenix = {
+ZONE_INFO_America_Phoenix: ZoneInfo = {
     'name': 'America/Phoenix',
     'eras': ZONE_ERAS_America_Phoenix
 }
@@ -6112,7 +6122,7 @@ ZONE_INFO_America_Phoenix = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Port_au_Prince = [
+ZONE_ERAS_America_Port_au_Prince: List[ZoneEra] = [
     #             -5:00    Haiti    E%sT
     {
       'offset_seconds': -18000,
@@ -6128,7 +6138,7 @@ ZONE_ERAS_America_Port_au_Prince = [
 
 ]
 
-ZONE_INFO_America_Port_au_Prince = {
+ZONE_INFO_America_Port_au_Prince: ZoneInfo = {
     'name': 'America/Port-au-Prince',
     'eras': ZONE_ERAS_America_Port_au_Prince
 }
@@ -6138,7 +6148,7 @@ ZONE_INFO_America_Port_au_Prince = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Porto_Velho = [
+ZONE_ERAS_America_Porto_Velho: List[ZoneEra] = [
     #             -4:00    Brazil    -04/-03    1988 Sep 12
     {
       'offset_seconds': -14400,
@@ -6166,7 +6176,7 @@ ZONE_ERAS_America_Porto_Velho = [
 
 ]
 
-ZONE_INFO_America_Porto_Velho = {
+ZONE_INFO_America_Porto_Velho: ZoneInfo = {
     'name': 'America/Porto_Velho',
     'eras': ZONE_ERAS_America_Porto_Velho
 }
@@ -6176,7 +6186,7 @@ ZONE_INFO_America_Porto_Velho = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Puerto_Rico = [
+ZONE_ERAS_America_Puerto_Rico: List[ZoneEra] = [
     #             -4:00    -    AST
     {
       'offset_seconds': -14400,
@@ -6192,7 +6202,7 @@ ZONE_ERAS_America_Puerto_Rico = [
 
 ]
 
-ZONE_INFO_America_Puerto_Rico = {
+ZONE_INFO_America_Puerto_Rico: ZoneInfo = {
     'name': 'America/Puerto_Rico',
     'eras': ZONE_ERAS_America_Puerto_Rico
 }
@@ -6202,7 +6212,7 @@ ZONE_INFO_America_Puerto_Rico = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Punta_Arenas = [
+ZONE_ERAS_America_Punta_Arenas: List[ZoneEra] = [
     #             -4:00    Chile    -04/-03    2016 Dec  4
     {
       'offset_seconds': -14400,
@@ -6230,7 +6240,7 @@ ZONE_ERAS_America_Punta_Arenas = [
 
 ]
 
-ZONE_INFO_America_Punta_Arenas = {
+ZONE_INFO_America_Punta_Arenas: ZoneInfo = {
     'name': 'America/Punta_Arenas',
     'eras': ZONE_ERAS_America_Punta_Arenas
 }
@@ -6240,7 +6250,7 @@ ZONE_INFO_America_Punta_Arenas = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Rainy_River = [
+ZONE_ERAS_America_Rainy_River: List[ZoneEra] = [
     #             -6:00    Canada    C%sT
     {
       'offset_seconds': -21600,
@@ -6256,7 +6266,7 @@ ZONE_ERAS_America_Rainy_River = [
 
 ]
 
-ZONE_INFO_America_Rainy_River = {
+ZONE_INFO_America_Rainy_River: ZoneInfo = {
     'name': 'America/Rainy_River',
     'eras': ZONE_ERAS_America_Rainy_River
 }
@@ -6266,7 +6276,7 @@ ZONE_INFO_America_Rainy_River = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Rankin_Inlet = [
+ZONE_ERAS_America_Rankin_Inlet: List[ZoneEra] = [
     #             -6:00    NT_YK    C%sT    2000 Oct 29  2:00
     {
       'offset_seconds': -21600,
@@ -6306,7 +6316,7 @@ ZONE_ERAS_America_Rankin_Inlet = [
 
 ]
 
-ZONE_INFO_America_Rankin_Inlet = {
+ZONE_INFO_America_Rankin_Inlet: ZoneInfo = {
     'name': 'America/Rankin_Inlet',
     'eras': ZONE_ERAS_America_Rankin_Inlet
 }
@@ -6316,7 +6326,7 @@ ZONE_INFO_America_Rankin_Inlet = {
 # Era count: 6
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Recife = [
+ZONE_ERAS_America_Recife: List[ZoneEra] = [
     #             -3:00    Brazil    -03/-02    1990 Sep 17
     {
       'offset_seconds': -10800,
@@ -6392,7 +6402,7 @@ ZONE_ERAS_America_Recife = [
 
 ]
 
-ZONE_INFO_America_Recife = {
+ZONE_INFO_America_Recife: ZoneInfo = {
     'name': 'America/Recife',
     'eras': ZONE_ERAS_America_Recife
 }
@@ -6402,7 +6412,7 @@ ZONE_INFO_America_Recife = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Regina = [
+ZONE_ERAS_America_Regina: List[ZoneEra] = [
     #             -6:00    -    CST
     {
       'offset_seconds': -21600,
@@ -6418,7 +6428,7 @@ ZONE_ERAS_America_Regina = [
 
 ]
 
-ZONE_INFO_America_Regina = {
+ZONE_INFO_America_Regina: ZoneInfo = {
     'name': 'America/Regina',
     'eras': ZONE_ERAS_America_Regina
 }
@@ -6428,7 +6438,7 @@ ZONE_INFO_America_Regina = {
 # Era count: 5
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Resolute = [
+ZONE_ERAS_America_Resolute: List[ZoneEra] = [
     #             -6:00    NT_YK    C%sT    2000 Oct 29  2:00
     {
       'offset_seconds': -21600,
@@ -6492,7 +6502,7 @@ ZONE_ERAS_America_Resolute = [
 
 ]
 
-ZONE_INFO_America_Resolute = {
+ZONE_INFO_America_Resolute: ZoneInfo = {
     'name': 'America/Resolute',
     'eras': ZONE_ERAS_America_Resolute
 }
@@ -6502,7 +6512,7 @@ ZONE_INFO_America_Resolute = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Rio_Branco = [
+ZONE_ERAS_America_Rio_Branco: List[ZoneEra] = [
     #             -5:00    Brazil    -05/-04    1988 Sep 12
     {
       'offset_seconds': -18000,
@@ -6554,7 +6564,7 @@ ZONE_ERAS_America_Rio_Branco = [
 
 ]
 
-ZONE_INFO_America_Rio_Branco = {
+ZONE_INFO_America_Rio_Branco: ZoneInfo = {
     'name': 'America/Rio_Branco',
     'eras': ZONE_ERAS_America_Rio_Branco
 }
@@ -6564,7 +6574,7 @@ ZONE_INFO_America_Rio_Branco = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Santarem = [
+ZONE_ERAS_America_Santarem: List[ZoneEra] = [
     #             -4:00    Brazil    -04/-03    1988 Sep 12
     {
       'offset_seconds': -14400,
@@ -6604,7 +6614,7 @@ ZONE_ERAS_America_Santarem = [
 
 ]
 
-ZONE_INFO_America_Santarem = {
+ZONE_INFO_America_Santarem: ZoneInfo = {
     'name': 'America/Santarem',
     'eras': ZONE_ERAS_America_Santarem
 }
@@ -6614,7 +6624,7 @@ ZONE_INFO_America_Santarem = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Santiago = [
+ZONE_ERAS_America_Santiago: List[ZoneEra] = [
     #             -4:00    Chile    -04/-03
     {
       'offset_seconds': -14400,
@@ -6630,7 +6640,7 @@ ZONE_ERAS_America_Santiago = [
 
 ]
 
-ZONE_INFO_America_Santiago = {
+ZONE_INFO_America_Santiago: ZoneInfo = {
     'name': 'America/Santiago',
     'eras': ZONE_ERAS_America_Santiago
 }
@@ -6640,7 +6650,7 @@ ZONE_INFO_America_Santiago = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Santo_Domingo = [
+ZONE_ERAS_America_Santo_Domingo: List[ZoneEra] = [
     #             -5:00    DR    %s    1974 Oct 27
     {
       'offset_seconds': -18000,
@@ -6692,7 +6702,7 @@ ZONE_ERAS_America_Santo_Domingo = [
 
 ]
 
-ZONE_INFO_America_Santo_Domingo = {
+ZONE_INFO_America_Santo_Domingo: ZoneInfo = {
     'name': 'America/Santo_Domingo',
     'eras': ZONE_ERAS_America_Santo_Domingo
 }
@@ -6702,7 +6712,7 @@ ZONE_INFO_America_Santo_Domingo = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Sao_Paulo = [
+ZONE_ERAS_America_Sao_Paulo: List[ZoneEra] = [
     #             -3:00    Brazil    -03/-02
     {
       'offset_seconds': -10800,
@@ -6718,7 +6728,7 @@ ZONE_ERAS_America_Sao_Paulo = [
 
 ]
 
-ZONE_INFO_America_Sao_Paulo = {
+ZONE_INFO_America_Sao_Paulo: ZoneInfo = {
     'name': 'America/Sao_Paulo',
     'eras': ZONE_ERAS_America_Sao_Paulo
 }
@@ -6728,7 +6738,7 @@ ZONE_INFO_America_Sao_Paulo = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Scoresbysund = [
+ZONE_ERAS_America_Scoresbysund: List[ZoneEra] = [
     #             -2:00    -    -02    1980 Apr  6  2:00
     {
       'offset_seconds': -7200,
@@ -6768,7 +6778,7 @@ ZONE_ERAS_America_Scoresbysund = [
 
 ]
 
-ZONE_INFO_America_Scoresbysund = {
+ZONE_INFO_America_Scoresbysund: ZoneInfo = {
     'name': 'America/Scoresbysund',
     'eras': ZONE_ERAS_America_Scoresbysund
 }
@@ -6778,7 +6788,7 @@ ZONE_INFO_America_Scoresbysund = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Sitka = [
+ZONE_ERAS_America_Sitka: List[ZoneEra] = [
     #              -8:00    US    P%sT    1983 Oct 30  2:00
     {
       'offset_seconds': -28800,
@@ -6818,7 +6828,7 @@ ZONE_ERAS_America_Sitka = [
 
 ]
 
-ZONE_INFO_America_Sitka = {
+ZONE_INFO_America_Sitka: ZoneInfo = {
     'name': 'America/Sitka',
     'eras': ZONE_ERAS_America_Sitka
 }
@@ -6828,7 +6838,7 @@ ZONE_INFO_America_Sitka = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_St_Johns = [
+ZONE_ERAS_America_St_Johns: List[ZoneEra] = [
     #             -3:30    StJohns    N%sT    2011 Nov
     {
       'offset_seconds': -12600,
@@ -6856,7 +6866,7 @@ ZONE_ERAS_America_St_Johns = [
 
 ]
 
-ZONE_INFO_America_St_Johns = {
+ZONE_INFO_America_St_Johns: ZoneInfo = {
     'name': 'America/St_Johns',
     'eras': ZONE_ERAS_America_St_Johns
 }
@@ -6866,7 +6876,7 @@ ZONE_INFO_America_St_Johns = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Swift_Current = [
+ZONE_ERAS_America_Swift_Current: List[ZoneEra] = [
     #             -6:00    -    CST
     {
       'offset_seconds': -21600,
@@ -6882,7 +6892,7 @@ ZONE_ERAS_America_Swift_Current = [
 
 ]
 
-ZONE_INFO_America_Swift_Current = {
+ZONE_INFO_America_Swift_Current: ZoneInfo = {
     'name': 'America/Swift_Current',
     'eras': ZONE_ERAS_America_Swift_Current
 }
@@ -6892,7 +6902,7 @@ ZONE_INFO_America_Swift_Current = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Tegucigalpa = [
+ZONE_ERAS_America_Tegucigalpa: List[ZoneEra] = [
     #             -6:00    Hond    C%sT
     {
       'offset_seconds': -21600,
@@ -6908,7 +6918,7 @@ ZONE_ERAS_America_Tegucigalpa = [
 
 ]
 
-ZONE_INFO_America_Tegucigalpa = {
+ZONE_INFO_America_Tegucigalpa: ZoneInfo = {
     'name': 'America/Tegucigalpa',
     'eras': ZONE_ERAS_America_Tegucigalpa
 }
@@ -6918,7 +6928,7 @@ ZONE_INFO_America_Tegucigalpa = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Thule = [
+ZONE_ERAS_America_Thule: List[ZoneEra] = [
     #             -4:00    Thule    A%sT
     {
       'offset_seconds': -14400,
@@ -6934,7 +6944,7 @@ ZONE_ERAS_America_Thule = [
 
 ]
 
-ZONE_INFO_America_Thule = {
+ZONE_INFO_America_Thule: ZoneInfo = {
     'name': 'America/Thule',
     'eras': ZONE_ERAS_America_Thule
 }
@@ -6944,7 +6954,7 @@ ZONE_INFO_America_Thule = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Thunder_Bay = [
+ZONE_ERAS_America_Thunder_Bay: List[ZoneEra] = [
     #             -5:00    Toronto    E%sT    1973
     {
       'offset_seconds': -18000,
@@ -6984,7 +6994,7 @@ ZONE_ERAS_America_Thunder_Bay = [
 
 ]
 
-ZONE_INFO_America_Thunder_Bay = {
+ZONE_INFO_America_Thunder_Bay: ZoneInfo = {
     'name': 'America/Thunder_Bay',
     'eras': ZONE_ERAS_America_Thunder_Bay
 }
@@ -6994,7 +7004,7 @@ ZONE_INFO_America_Thunder_Bay = {
 # Era count: 6
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Tijuana = [
+ZONE_ERAS_America_Tijuana: List[ZoneEra] = [
     #             -8:00    -    PST    1976
     {
       'offset_seconds': -28800,
@@ -7070,7 +7080,7 @@ ZONE_ERAS_America_Tijuana = [
 
 ]
 
-ZONE_INFO_America_Tijuana = {
+ZONE_INFO_America_Tijuana: ZoneInfo = {
     'name': 'America/Tijuana',
     'eras': ZONE_ERAS_America_Tijuana
 }
@@ -7080,7 +7090,7 @@ ZONE_INFO_America_Tijuana = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Toronto = [
+ZONE_ERAS_America_Toronto: List[ZoneEra] = [
     #             -5:00    Toronto    E%sT    1974
     {
       'offset_seconds': -18000,
@@ -7108,7 +7118,7 @@ ZONE_ERAS_America_Toronto = [
 
 ]
 
-ZONE_INFO_America_Toronto = {
+ZONE_INFO_America_Toronto: ZoneInfo = {
     'name': 'America/Toronto',
     'eras': ZONE_ERAS_America_Toronto
 }
@@ -7118,7 +7128,7 @@ ZONE_INFO_America_Toronto = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Vancouver = [
+ZONE_ERAS_America_Vancouver: List[ZoneEra] = [
     #             -8:00    Vanc    P%sT    1987
     {
       'offset_seconds': -28800,
@@ -7146,7 +7156,7 @@ ZONE_ERAS_America_Vancouver = [
 
 ]
 
-ZONE_INFO_America_Vancouver = {
+ZONE_INFO_America_Vancouver: ZoneInfo = {
     'name': 'America/Vancouver',
     'eras': ZONE_ERAS_America_Vancouver
 }
@@ -7156,7 +7166,7 @@ ZONE_INFO_America_Vancouver = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Whitehorse = [
+ZONE_ERAS_America_Whitehorse: List[ZoneEra] = [
     #             -8:00    NT_YK    P%sT    1980
     {
       'offset_seconds': -28800,
@@ -7196,7 +7206,7 @@ ZONE_ERAS_America_Whitehorse = [
 
 ]
 
-ZONE_INFO_America_Whitehorse = {
+ZONE_INFO_America_Whitehorse: ZoneInfo = {
     'name': 'America/Whitehorse',
     'eras': ZONE_ERAS_America_Whitehorse
 }
@@ -7206,7 +7216,7 @@ ZONE_INFO_America_Whitehorse = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Winnipeg = [
+ZONE_ERAS_America_Winnipeg: List[ZoneEra] = [
     #             -6:00    Winn    C%sT    2006
     {
       'offset_seconds': -21600,
@@ -7234,7 +7244,7 @@ ZONE_ERAS_America_Winnipeg = [
 
 ]
 
-ZONE_INFO_America_Winnipeg = {
+ZONE_INFO_America_Winnipeg: ZoneInfo = {
     'name': 'America/Winnipeg',
     'eras': ZONE_ERAS_America_Winnipeg
 }
@@ -7244,7 +7254,7 @@ ZONE_INFO_America_Winnipeg = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Yakutat = [
+ZONE_ERAS_America_Yakutat: List[ZoneEra] = [
     #              -9:00    US    Y%sT    1983 Nov 30
     {
       'offset_seconds': -32400,
@@ -7272,7 +7282,7 @@ ZONE_ERAS_America_Yakutat = [
 
 ]
 
-ZONE_INFO_America_Yakutat = {
+ZONE_INFO_America_Yakutat: ZoneInfo = {
     'name': 'America/Yakutat',
     'eras': ZONE_ERAS_America_Yakutat
 }
@@ -7282,7 +7292,7 @@ ZONE_INFO_America_Yakutat = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_America_Yellowknife = [
+ZONE_ERAS_America_Yellowknife: List[ZoneEra] = [
     #             -7:00    NT_YK    M%sT    1980
     {
       'offset_seconds': -25200,
@@ -7310,7 +7320,7 @@ ZONE_ERAS_America_Yellowknife = [
 
 ]
 
-ZONE_INFO_America_Yellowknife = {
+ZONE_INFO_America_Yellowknife: ZoneInfo = {
     'name': 'America/Yellowknife',
     'eras': ZONE_ERAS_America_Yellowknife
 }
@@ -7320,7 +7330,7 @@ ZONE_INFO_America_Yellowknife = {
 # Era count: 12
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Antarctica_Casey = [
+ZONE_ERAS_Antarctica_Casey: List[ZoneEra] = [
     #              8:00    -    +08    2009 Oct 18  2:00
     {
       'offset_seconds': 28800,
@@ -7468,7 +7478,7 @@ ZONE_ERAS_Antarctica_Casey = [
 
 ]
 
-ZONE_INFO_Antarctica_Casey = {
+ZONE_INFO_Antarctica_Casey: ZoneInfo = {
     'name': 'Antarctica/Casey',
     'eras': ZONE_ERAS_Antarctica_Casey
 }
@@ -7478,7 +7488,7 @@ ZONE_INFO_Antarctica_Casey = {
 # Era count: 5
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Antarctica_Davis = [
+ZONE_ERAS_Antarctica_Davis: List[ZoneEra] = [
     #             7:00    -    +07    2009 Oct 18  2:00
     {
       'offset_seconds': 25200,
@@ -7542,7 +7552,7 @@ ZONE_ERAS_Antarctica_Davis = [
 
 ]
 
-ZONE_INFO_Antarctica_Davis = {
+ZONE_INFO_Antarctica_Davis: ZoneInfo = {
     'name': 'Antarctica/Davis',
     'eras': ZONE_ERAS_Antarctica_Davis
 }
@@ -7552,7 +7562,7 @@ ZONE_INFO_Antarctica_Davis = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Antarctica_Macquarie = [
+ZONE_ERAS_Antarctica_Macquarie: List[ZoneEra] = [
     #             10:00    AT    AE%sT    2010
     {
       'offset_seconds': 36000,
@@ -7592,7 +7602,7 @@ ZONE_ERAS_Antarctica_Macquarie = [
 
 ]
 
-ZONE_INFO_Antarctica_Macquarie = {
+ZONE_INFO_Antarctica_Macquarie: ZoneInfo = {
     'name': 'Antarctica/Macquarie',
     'eras': ZONE_ERAS_Antarctica_Macquarie
 }
@@ -7602,7 +7612,7 @@ ZONE_INFO_Antarctica_Macquarie = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Antarctica_Mawson = [
+ZONE_ERAS_Antarctica_Mawson: List[ZoneEra] = [
     #             6:00    -    +06    2009 Oct 18  2:00
     {
       'offset_seconds': 21600,
@@ -7630,7 +7640,7 @@ ZONE_ERAS_Antarctica_Mawson = [
 
 ]
 
-ZONE_INFO_Antarctica_Mawson = {
+ZONE_INFO_Antarctica_Mawson: ZoneInfo = {
     'name': 'Antarctica/Mawson',
     'eras': ZONE_ERAS_Antarctica_Mawson
 }
@@ -7640,7 +7650,7 @@ ZONE_INFO_Antarctica_Mawson = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Antarctica_Palmer = [
+ZONE_ERAS_Antarctica_Palmer: List[ZoneEra] = [
     #             -3:00    Arg    -03/-02    1982 May
     {
       'offset_seconds': -10800,
@@ -7680,7 +7690,7 @@ ZONE_ERAS_Antarctica_Palmer = [
 
 ]
 
-ZONE_INFO_Antarctica_Palmer = {
+ZONE_INFO_Antarctica_Palmer: ZoneInfo = {
     'name': 'Antarctica/Palmer',
     'eras': ZONE_ERAS_Antarctica_Palmer
 }
@@ -7690,7 +7700,7 @@ ZONE_INFO_Antarctica_Palmer = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Antarctica_Rothera = [
+ZONE_ERAS_Antarctica_Rothera: List[ZoneEra] = [
     # 0 - -00 1976 Dec 1
     {
       'offset_seconds': 0,
@@ -7718,7 +7728,7 @@ ZONE_ERAS_Antarctica_Rothera = [
 
 ]
 
-ZONE_INFO_Antarctica_Rothera = {
+ZONE_INFO_Antarctica_Rothera: ZoneInfo = {
     'name': 'Antarctica/Rothera',
     'eras': ZONE_ERAS_Antarctica_Rothera
 }
@@ -7728,7 +7738,7 @@ ZONE_INFO_Antarctica_Rothera = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Antarctica_Troll = [
+ZONE_ERAS_Antarctica_Troll: List[ZoneEra] = [
     # 0 - -00 2005 Feb 12
     {
       'offset_seconds': 0,
@@ -7756,7 +7766,7 @@ ZONE_ERAS_Antarctica_Troll = [
 
 ]
 
-ZONE_INFO_Antarctica_Troll = {
+ZONE_INFO_Antarctica_Troll: ZoneInfo = {
     'name': 'Antarctica/Troll',
     'eras': ZONE_ERAS_Antarctica_Troll
 }
@@ -7766,7 +7776,7 @@ ZONE_INFO_Antarctica_Troll = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Antarctica_Vostok = [
+ZONE_ERAS_Antarctica_Vostok: List[ZoneEra] = [
     #             6:00    -    +06
     {
       'offset_seconds': 21600,
@@ -7782,7 +7792,7 @@ ZONE_ERAS_Antarctica_Vostok = [
 
 ]
 
-ZONE_INFO_Antarctica_Vostok = {
+ZONE_INFO_Antarctica_Vostok: ZoneInfo = {
     'name': 'Antarctica/Vostok',
     'eras': ZONE_ERAS_Antarctica_Vostok
 }
@@ -7792,7 +7802,7 @@ ZONE_INFO_Antarctica_Vostok = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Almaty = [
+ZONE_ERAS_Asia_Almaty: List[ZoneEra] = [
     #             6:00 RussiaAsia +06/+07    1991 Mar 31  2:00s
     {
       'offset_seconds': 21600,
@@ -7844,7 +7854,7 @@ ZONE_ERAS_Asia_Almaty = [
 
 ]
 
-ZONE_INFO_Asia_Almaty = {
+ZONE_INFO_Asia_Almaty: ZoneInfo = {
     'name': 'Asia/Almaty',
     'eras': ZONE_ERAS_Asia_Almaty
 }
@@ -7854,7 +7864,7 @@ ZONE_INFO_Asia_Almaty = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Amman = [
+ZONE_ERAS_Asia_Amman: List[ZoneEra] = [
     #             2:00    Jordan    EE%sT
     {
       'offset_seconds': 7200,
@@ -7870,7 +7880,7 @@ ZONE_ERAS_Asia_Amman = [
 
 ]
 
-ZONE_INFO_Asia_Amman = {
+ZONE_INFO_Asia_Amman: ZoneInfo = {
     'name': 'Asia/Amman',
     'eras': ZONE_ERAS_Asia_Amman
 }
@@ -7880,7 +7890,7 @@ ZONE_INFO_Asia_Amman = {
 # Era count: 6
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Anadyr = [
+ZONE_ERAS_Asia_Anadyr: List[ZoneEra] = [
     #             13:00    Russia    +13/+14    1982 Apr  1  0:00s
     {
       'offset_seconds': 46800,
@@ -7956,7 +7966,7 @@ ZONE_ERAS_Asia_Anadyr = [
 
 ]
 
-ZONE_INFO_Asia_Anadyr = {
+ZONE_INFO_Asia_Anadyr: ZoneInfo = {
     'name': 'Asia/Anadyr',
     'eras': ZONE_ERAS_Asia_Anadyr
 }
@@ -7966,7 +7976,7 @@ ZONE_INFO_Asia_Anadyr = {
 # Era count: 7
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Aqtau = [
+ZONE_ERAS_Asia_Aqtau: List[ZoneEra] = [
     #             5:00    -    +05    1981 Oct  1
     {
       'offset_seconds': 18000,
@@ -8054,7 +8064,7 @@ ZONE_ERAS_Asia_Aqtau = [
 
 ]
 
-ZONE_INFO_Asia_Aqtau = {
+ZONE_INFO_Asia_Aqtau: ZoneInfo = {
     'name': 'Asia/Aqtau',
     'eras': ZONE_ERAS_Asia_Aqtau
 }
@@ -8064,7 +8074,7 @@ ZONE_INFO_Asia_Aqtau = {
 # Era count: 7
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Aqtobe = [
+ZONE_ERAS_Asia_Aqtobe: List[ZoneEra] = [
     #             5:00    -    +05    1981 Apr  1
     {
       'offset_seconds': 18000,
@@ -8152,7 +8162,7 @@ ZONE_ERAS_Asia_Aqtobe = [
 
 ]
 
-ZONE_INFO_Asia_Aqtobe = {
+ZONE_INFO_Asia_Aqtobe: ZoneInfo = {
     'name': 'Asia/Aqtobe',
     'eras': ZONE_ERAS_Asia_Aqtobe
 }
@@ -8162,7 +8172,7 @@ ZONE_INFO_Asia_Aqtobe = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Ashgabat = [
+ZONE_ERAS_Asia_Ashgabat: List[ZoneEra] = [
     #             5:00 RussiaAsia    +05/+06    1991 Mar 31  2:00
     {
       'offset_seconds': 18000,
@@ -8202,7 +8212,7 @@ ZONE_ERAS_Asia_Ashgabat = [
 
 ]
 
-ZONE_INFO_Asia_Ashgabat = {
+ZONE_INFO_Asia_Ashgabat: ZoneInfo = {
     'name': 'Asia/Ashgabat',
     'eras': ZONE_ERAS_Asia_Ashgabat
 }
@@ -8212,7 +8222,7 @@ ZONE_INFO_Asia_Ashgabat = {
 # Era count: 7
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Atyrau = [
+ZONE_ERAS_Asia_Atyrau: List[ZoneEra] = [
     #             5:00    -    +05    1981 Oct  1
     {
       'offset_seconds': 18000,
@@ -8300,7 +8310,7 @@ ZONE_ERAS_Asia_Atyrau = [
 
 ]
 
-ZONE_INFO_Asia_Atyrau = {
+ZONE_INFO_Asia_Atyrau: ZoneInfo = {
     'name': 'Asia/Atyrau',
     'eras': ZONE_ERAS_Asia_Atyrau
 }
@@ -8310,7 +8320,7 @@ ZONE_INFO_Asia_Atyrau = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Baghdad = [
+ZONE_ERAS_Asia_Baghdad: List[ZoneEra] = [
     #             3:00    -    +03    1982 May
     {
       'offset_seconds': 10800,
@@ -8338,7 +8348,7 @@ ZONE_ERAS_Asia_Baghdad = [
 
 ]
 
-ZONE_INFO_Asia_Baghdad = {
+ZONE_INFO_Asia_Baghdad: ZoneInfo = {
     'name': 'Asia/Baghdad',
     'eras': ZONE_ERAS_Asia_Baghdad
 }
@@ -8348,7 +8358,7 @@ ZONE_INFO_Asia_Baghdad = {
 # Era count: 5
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Baku = [
+ZONE_ERAS_Asia_Baku: List[ZoneEra] = [
     #             4:00 RussiaAsia +04/+05    1991 Mar 31  2:00s
     {
       'offset_seconds': 14400,
@@ -8412,7 +8422,7 @@ ZONE_ERAS_Asia_Baku = [
 
 ]
 
-ZONE_INFO_Asia_Baku = {
+ZONE_INFO_Asia_Baku: ZoneInfo = {
     'name': 'Asia/Baku',
     'eras': ZONE_ERAS_Asia_Baku
 }
@@ -8422,7 +8432,7 @@ ZONE_INFO_Asia_Baku = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Bangkok = [
+ZONE_ERAS_Asia_Bangkok: List[ZoneEra] = [
     #             7:00    -    +07
     {
       'offset_seconds': 25200,
@@ -8438,7 +8448,7 @@ ZONE_ERAS_Asia_Bangkok = [
 
 ]
 
-ZONE_INFO_Asia_Bangkok = {
+ZONE_INFO_Asia_Bangkok: ZoneInfo = {
     'name': 'Asia/Bangkok',
     'eras': ZONE_ERAS_Asia_Bangkok
 }
@@ -8448,7 +8458,7 @@ ZONE_INFO_Asia_Bangkok = {
 # Era count: 7
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Barnaul = [
+ZONE_ERAS_Asia_Barnaul: List[ZoneEra] = [
     #              7:00    Russia    +07/+08    1991 Mar 31  2:00s
     {
       'offset_seconds': 25200,
@@ -8536,7 +8546,7 @@ ZONE_ERAS_Asia_Barnaul = [
 
 ]
 
-ZONE_INFO_Asia_Barnaul = {
+ZONE_INFO_Asia_Barnaul: ZoneInfo = {
     'name': 'Asia/Barnaul',
     'eras': ZONE_ERAS_Asia_Barnaul
 }
@@ -8546,7 +8556,7 @@ ZONE_INFO_Asia_Barnaul = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Beirut = [
+ZONE_ERAS_Asia_Beirut: List[ZoneEra] = [
     #             2:00    Lebanon    EE%sT
     {
       'offset_seconds': 7200,
@@ -8562,7 +8572,7 @@ ZONE_ERAS_Asia_Beirut = [
 
 ]
 
-ZONE_INFO_Asia_Beirut = {
+ZONE_INFO_Asia_Beirut: ZoneInfo = {
     'name': 'Asia/Beirut',
     'eras': ZONE_ERAS_Asia_Beirut
 }
@@ -8572,7 +8582,7 @@ ZONE_INFO_Asia_Beirut = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Bishkek = [
+ZONE_ERAS_Asia_Bishkek: List[ZoneEra] = [
     #             6:00 RussiaAsia +06/+07    1991 Mar 31  2:00s
     {
       'offset_seconds': 21600,
@@ -8624,7 +8634,7 @@ ZONE_ERAS_Asia_Bishkek = [
 
 ]
 
-ZONE_INFO_Asia_Bishkek = {
+ZONE_INFO_Asia_Bishkek: ZoneInfo = {
     'name': 'Asia/Bishkek',
     'eras': ZONE_ERAS_Asia_Bishkek
 }
@@ -8634,7 +8644,7 @@ ZONE_INFO_Asia_Bishkek = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Brunei = [
+ZONE_ERAS_Asia_Brunei: List[ZoneEra] = [
     #             8:00    -    +08
     {
       'offset_seconds': 28800,
@@ -8650,7 +8660,7 @@ ZONE_ERAS_Asia_Brunei = [
 
 ]
 
-ZONE_INFO_Asia_Brunei = {
+ZONE_INFO_Asia_Brunei: ZoneInfo = {
     'name': 'Asia/Brunei',
     'eras': ZONE_ERAS_Asia_Brunei
 }
@@ -8660,7 +8670,7 @@ ZONE_INFO_Asia_Brunei = {
 # Era count: 6
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Chita = [
+ZONE_ERAS_Asia_Chita: List[ZoneEra] = [
     #              9:00    Russia    +09/+10    1991 Mar 31  2:00s
     {
       'offset_seconds': 32400,
@@ -8736,7 +8746,7 @@ ZONE_ERAS_Asia_Chita = [
 
 ]
 
-ZONE_INFO_Asia_Chita = {
+ZONE_INFO_Asia_Chita: ZoneInfo = {
     'name': 'Asia/Chita',
     'eras': ZONE_ERAS_Asia_Chita
 }
@@ -8746,7 +8756,7 @@ ZONE_INFO_Asia_Chita = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Choibalsan = [
+ZONE_ERAS_Asia_Choibalsan: List[ZoneEra] = [
     #             7:00    -    +07    1978
     {
       'offset_seconds': 25200,
@@ -8798,7 +8808,7 @@ ZONE_ERAS_Asia_Choibalsan = [
 
 ]
 
-ZONE_INFO_Asia_Choibalsan = {
+ZONE_INFO_Asia_Choibalsan: ZoneInfo = {
     'name': 'Asia/Choibalsan',
     'eras': ZONE_ERAS_Asia_Choibalsan
 }
@@ -8808,7 +8818,7 @@ ZONE_INFO_Asia_Choibalsan = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Colombo = [
+ZONE_ERAS_Asia_Colombo: List[ZoneEra] = [
     #             5:30    -    +0530    1996 May 25  0:00
     {
       'offset_seconds': 19800,
@@ -8860,7 +8870,7 @@ ZONE_ERAS_Asia_Colombo = [
 
 ]
 
-ZONE_INFO_Asia_Colombo = {
+ZONE_INFO_Asia_Colombo: ZoneInfo = {
     'name': 'Asia/Colombo',
     'eras': ZONE_ERAS_Asia_Colombo
 }
@@ -8870,7 +8880,7 @@ ZONE_INFO_Asia_Colombo = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Damascus = [
+ZONE_ERAS_Asia_Damascus: List[ZoneEra] = [
     #             2:00    Syria    EE%sT
     {
       'offset_seconds': 7200,
@@ -8886,7 +8896,7 @@ ZONE_ERAS_Asia_Damascus = [
 
 ]
 
-ZONE_INFO_Asia_Damascus = {
+ZONE_INFO_Asia_Damascus: ZoneInfo = {
     'name': 'Asia/Damascus',
     'eras': ZONE_ERAS_Asia_Damascus
 }
@@ -8896,7 +8906,7 @@ ZONE_INFO_Asia_Damascus = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Dhaka = [
+ZONE_ERAS_Asia_Dhaka: List[ZoneEra] = [
     #             6:00    -    +06    2009
     {
       'offset_seconds': 21600,
@@ -8924,7 +8934,7 @@ ZONE_ERAS_Asia_Dhaka = [
 
 ]
 
-ZONE_INFO_Asia_Dhaka = {
+ZONE_INFO_Asia_Dhaka: ZoneInfo = {
     'name': 'Asia/Dhaka',
     'eras': ZONE_ERAS_Asia_Dhaka
 }
@@ -8934,7 +8944,7 @@ ZONE_INFO_Asia_Dhaka = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Dili = [
+ZONE_ERAS_Asia_Dili: List[ZoneEra] = [
     #             9:00    -    +09    1976 May  3
     {
       'offset_seconds': 32400,
@@ -8974,7 +8984,7 @@ ZONE_ERAS_Asia_Dili = [
 
 ]
 
-ZONE_INFO_Asia_Dili = {
+ZONE_INFO_Asia_Dili: ZoneInfo = {
     'name': 'Asia/Dili',
     'eras': ZONE_ERAS_Asia_Dili
 }
@@ -8984,7 +8994,7 @@ ZONE_INFO_Asia_Dili = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Dubai = [
+ZONE_ERAS_Asia_Dubai: List[ZoneEra] = [
     #             4:00    -    +04
     {
       'offset_seconds': 14400,
@@ -9000,7 +9010,7 @@ ZONE_ERAS_Asia_Dubai = [
 
 ]
 
-ZONE_INFO_Asia_Dubai = {
+ZONE_INFO_Asia_Dubai: ZoneInfo = {
     'name': 'Asia/Dubai',
     'eras': ZONE_ERAS_Asia_Dubai
 }
@@ -9010,7 +9020,7 @@ ZONE_INFO_Asia_Dubai = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Dushanbe = [
+ZONE_ERAS_Asia_Dushanbe: List[ZoneEra] = [
     #             6:00 RussiaAsia +06/+07    1991 Mar 31  2:00s
     {
       'offset_seconds': 21600,
@@ -9050,7 +9060,7 @@ ZONE_ERAS_Asia_Dushanbe = [
 
 ]
 
-ZONE_INFO_Asia_Dushanbe = {
+ZONE_INFO_Asia_Dushanbe: ZoneInfo = {
     'name': 'Asia/Dushanbe',
     'eras': ZONE_ERAS_Asia_Dushanbe
 }
@@ -9060,7 +9070,7 @@ ZONE_INFO_Asia_Dushanbe = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Famagusta = [
+ZONE_ERAS_Asia_Famagusta: List[ZoneEra] = [
     #             2:00    Cyprus    EE%sT    1998 Sep
     {
       'offset_seconds': 7200,
@@ -9112,7 +9122,7 @@ ZONE_ERAS_Asia_Famagusta = [
 
 ]
 
-ZONE_INFO_Asia_Famagusta = {
+ZONE_INFO_Asia_Famagusta: ZoneInfo = {
     'name': 'Asia/Famagusta',
     'eras': ZONE_ERAS_Asia_Famagusta
 }
@@ -9122,7 +9132,7 @@ ZONE_INFO_Asia_Famagusta = {
 # Era count: 9
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Gaza = [
+ZONE_ERAS_Asia_Gaza: List[ZoneEra] = [
     #             2:00    Zion    I%sT    1996
     {
       'offset_seconds': 7200,
@@ -9234,7 +9244,7 @@ ZONE_ERAS_Asia_Gaza = [
 
 ]
 
-ZONE_INFO_Asia_Gaza = {
+ZONE_INFO_Asia_Gaza: ZoneInfo = {
     'name': 'Asia/Gaza',
     'eras': ZONE_ERAS_Asia_Gaza
 }
@@ -9244,7 +9254,7 @@ ZONE_INFO_Asia_Gaza = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Hebron = [
+ZONE_ERAS_Asia_Hebron: List[ZoneEra] = [
     #             2:00    Zion    I%sT    1996
     {
       'offset_seconds': 7200,
@@ -9284,7 +9294,7 @@ ZONE_ERAS_Asia_Hebron = [
 
 ]
 
-ZONE_INFO_Asia_Hebron = {
+ZONE_INFO_Asia_Hebron: ZoneInfo = {
     'name': 'Asia/Hebron',
     'eras': ZONE_ERAS_Asia_Hebron
 }
@@ -9294,7 +9304,7 @@ ZONE_INFO_Asia_Hebron = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Ho_Chi_Minh = [
+ZONE_ERAS_Asia_Ho_Chi_Minh: List[ZoneEra] = [
     #             8:00    -    +08    1975 Jun 13
     {
       'offset_seconds': 28800,
@@ -9322,7 +9332,7 @@ ZONE_ERAS_Asia_Ho_Chi_Minh = [
 
 ]
 
-ZONE_INFO_Asia_Ho_Chi_Minh = {
+ZONE_INFO_Asia_Ho_Chi_Minh: ZoneInfo = {
     'name': 'Asia/Ho_Chi_Minh',
     'eras': ZONE_ERAS_Asia_Ho_Chi_Minh
 }
@@ -9332,7 +9342,7 @@ ZONE_INFO_Asia_Ho_Chi_Minh = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Hong_Kong = [
+ZONE_ERAS_Asia_Hong_Kong: List[ZoneEra] = [
     #             8:00    HK    HK%sT
     {
       'offset_seconds': 28800,
@@ -9348,7 +9358,7 @@ ZONE_ERAS_Asia_Hong_Kong = [
 
 ]
 
-ZONE_INFO_Asia_Hong_Kong = {
+ZONE_INFO_Asia_Hong_Kong: ZoneInfo = {
     'name': 'Asia/Hong_Kong',
     'eras': ZONE_ERAS_Asia_Hong_Kong
 }
@@ -9358,7 +9368,7 @@ ZONE_INFO_Asia_Hong_Kong = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Hovd = [
+ZONE_ERAS_Asia_Hovd: List[ZoneEra] = [
     #             6:00    -    +06    1978
     {
       'offset_seconds': 21600,
@@ -9386,7 +9396,7 @@ ZONE_ERAS_Asia_Hovd = [
 
 ]
 
-ZONE_INFO_Asia_Hovd = {
+ZONE_INFO_Asia_Hovd: ZoneInfo = {
     'name': 'Asia/Hovd',
     'eras': ZONE_ERAS_Asia_Hovd
 }
@@ -9396,7 +9406,7 @@ ZONE_INFO_Asia_Hovd = {
 # Era count: 5
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Irkutsk = [
+ZONE_ERAS_Asia_Irkutsk: List[ZoneEra] = [
     #              8:00    Russia    +08/+09    1991 Mar 31  2:00s
     {
       'offset_seconds': 28800,
@@ -9460,7 +9470,7 @@ ZONE_ERAS_Asia_Irkutsk = [
 
 ]
 
-ZONE_INFO_Asia_Irkutsk = {
+ZONE_INFO_Asia_Irkutsk: ZoneInfo = {
     'name': 'Asia/Irkutsk',
     'eras': ZONE_ERAS_Asia_Irkutsk
 }
@@ -9470,7 +9480,7 @@ ZONE_INFO_Asia_Irkutsk = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Jakarta = [
+ZONE_ERAS_Asia_Jakarta: List[ZoneEra] = [
     #             7:00    -    WIB
     {
       'offset_seconds': 25200,
@@ -9486,7 +9496,7 @@ ZONE_ERAS_Asia_Jakarta = [
 
 ]
 
-ZONE_INFO_Asia_Jakarta = {
+ZONE_INFO_Asia_Jakarta: ZoneInfo = {
     'name': 'Asia/Jakarta',
     'eras': ZONE_ERAS_Asia_Jakarta
 }
@@ -9496,7 +9506,7 @@ ZONE_INFO_Asia_Jakarta = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Jayapura = [
+ZONE_ERAS_Asia_Jayapura: List[ZoneEra] = [
     #             9:00    -    WIT
     {
       'offset_seconds': 32400,
@@ -9512,7 +9522,7 @@ ZONE_ERAS_Asia_Jayapura = [
 
 ]
 
-ZONE_INFO_Asia_Jayapura = {
+ZONE_INFO_Asia_Jayapura: ZoneInfo = {
     'name': 'Asia/Jayapura',
     'eras': ZONE_ERAS_Asia_Jayapura
 }
@@ -9522,7 +9532,7 @@ ZONE_INFO_Asia_Jayapura = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Jerusalem = [
+ZONE_ERAS_Asia_Jerusalem: List[ZoneEra] = [
     #             2:00    Zion    I%sT
     {
       'offset_seconds': 7200,
@@ -9538,7 +9548,7 @@ ZONE_ERAS_Asia_Jerusalem = [
 
 ]
 
-ZONE_INFO_Asia_Jerusalem = {
+ZONE_INFO_Asia_Jerusalem: ZoneInfo = {
     'name': 'Asia/Jerusalem',
     'eras': ZONE_ERAS_Asia_Jerusalem
 }
@@ -9548,7 +9558,7 @@ ZONE_INFO_Asia_Jerusalem = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Kabul = [
+ZONE_ERAS_Asia_Kabul: List[ZoneEra] = [
     #             4:30    -    +0430
     {
       'offset_seconds': 16200,
@@ -9564,7 +9574,7 @@ ZONE_ERAS_Asia_Kabul = [
 
 ]
 
-ZONE_INFO_Asia_Kabul = {
+ZONE_INFO_Asia_Kabul: ZoneInfo = {
     'name': 'Asia/Kabul',
     'eras': ZONE_ERAS_Asia_Kabul
 }
@@ -9574,7 +9584,7 @@ ZONE_INFO_Asia_Kabul = {
 # Era count: 5
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Kamchatka = [
+ZONE_ERAS_Asia_Kamchatka: List[ZoneEra] = [
     #             12:00    Russia    +12/+13    1991 Mar 31  2:00s
     {
       'offset_seconds': 43200,
@@ -9638,7 +9648,7 @@ ZONE_ERAS_Asia_Kamchatka = [
 
 ]
 
-ZONE_INFO_Asia_Kamchatka = {
+ZONE_INFO_Asia_Kamchatka: ZoneInfo = {
     'name': 'Asia/Kamchatka',
     'eras': ZONE_ERAS_Asia_Kamchatka
 }
@@ -9648,7 +9658,7 @@ ZONE_INFO_Asia_Kamchatka = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Karachi = [
+ZONE_ERAS_Asia_Karachi: List[ZoneEra] = [
     #             5:00 Pakistan    PK%sT
     {
       'offset_seconds': 18000,
@@ -9664,7 +9674,7 @@ ZONE_ERAS_Asia_Karachi = [
 
 ]
 
-ZONE_INFO_Asia_Karachi = {
+ZONE_INFO_Asia_Karachi: ZoneInfo = {
     'name': 'Asia/Karachi',
     'eras': ZONE_ERAS_Asia_Karachi
 }
@@ -9674,7 +9684,7 @@ ZONE_INFO_Asia_Karachi = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Kathmandu = [
+ZONE_ERAS_Asia_Kathmandu: List[ZoneEra] = [
     #             5:30    -    +0530    1986
     {
       'offset_seconds': 19800,
@@ -9702,7 +9712,7 @@ ZONE_ERAS_Asia_Kathmandu = [
 
 ]
 
-ZONE_INFO_Asia_Kathmandu = {
+ZONE_INFO_Asia_Kathmandu: ZoneInfo = {
     'name': 'Asia/Kathmandu',
     'eras': ZONE_ERAS_Asia_Kathmandu
 }
@@ -9712,7 +9722,7 @@ ZONE_INFO_Asia_Kathmandu = {
 # Era count: 7
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Khandyga = [
+ZONE_ERAS_Asia_Khandyga: List[ZoneEra] = [
     #              9:00    Russia    +09/+10    1991 Mar 31  2:00s
     {
       'offset_seconds': 32400,
@@ -9800,7 +9810,7 @@ ZONE_ERAS_Asia_Khandyga = [
 
 ]
 
-ZONE_INFO_Asia_Khandyga = {
+ZONE_INFO_Asia_Khandyga: ZoneInfo = {
     'name': 'Asia/Khandyga',
     'eras': ZONE_ERAS_Asia_Khandyga
 }
@@ -9810,7 +9820,7 @@ ZONE_INFO_Asia_Khandyga = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Kolkata = [
+ZONE_ERAS_Asia_Kolkata: List[ZoneEra] = [
     #             5:30    -    IST
     {
       'offset_seconds': 19800,
@@ -9826,7 +9836,7 @@ ZONE_ERAS_Asia_Kolkata = [
 
 ]
 
-ZONE_INFO_Asia_Kolkata = {
+ZONE_INFO_Asia_Kolkata: ZoneInfo = {
     'name': 'Asia/Kolkata',
     'eras': ZONE_ERAS_Asia_Kolkata
 }
@@ -9836,7 +9846,7 @@ ZONE_INFO_Asia_Kolkata = {
 # Era count: 5
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Krasnoyarsk = [
+ZONE_ERAS_Asia_Krasnoyarsk: List[ZoneEra] = [
     #              7:00    Russia    +07/+08    1991 Mar 31  2:00s
     {
       'offset_seconds': 25200,
@@ -9900,7 +9910,7 @@ ZONE_ERAS_Asia_Krasnoyarsk = [
 
 ]
 
-ZONE_INFO_Asia_Krasnoyarsk = {
+ZONE_INFO_Asia_Krasnoyarsk: ZoneInfo = {
     'name': 'Asia/Krasnoyarsk',
     'eras': ZONE_ERAS_Asia_Krasnoyarsk
 }
@@ -9910,7 +9920,7 @@ ZONE_INFO_Asia_Krasnoyarsk = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Kuala_Lumpur = [
+ZONE_ERAS_Asia_Kuala_Lumpur: List[ZoneEra] = [
     #             7:30    -    +0730    1982 Jan  1
     {
       'offset_seconds': 27000,
@@ -9938,7 +9948,7 @@ ZONE_ERAS_Asia_Kuala_Lumpur = [
 
 ]
 
-ZONE_INFO_Asia_Kuala_Lumpur = {
+ZONE_INFO_Asia_Kuala_Lumpur: ZoneInfo = {
     'name': 'Asia/Kuala_Lumpur',
     'eras': ZONE_ERAS_Asia_Kuala_Lumpur
 }
@@ -9948,7 +9958,7 @@ ZONE_INFO_Asia_Kuala_Lumpur = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Kuching = [
+ZONE_ERAS_Asia_Kuching: List[ZoneEra] = [
     #             8:00    -    +08
     {
       'offset_seconds': 28800,
@@ -9964,7 +9974,7 @@ ZONE_ERAS_Asia_Kuching = [
 
 ]
 
-ZONE_INFO_Asia_Kuching = {
+ZONE_INFO_Asia_Kuching: ZoneInfo = {
     'name': 'Asia/Kuching',
     'eras': ZONE_ERAS_Asia_Kuching
 }
@@ -9974,7 +9984,7 @@ ZONE_INFO_Asia_Kuching = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Macau = [
+ZONE_ERAS_Asia_Macau: List[ZoneEra] = [
     #             8:00    Macau    C%sT
     {
       'offset_seconds': 28800,
@@ -9990,7 +10000,7 @@ ZONE_ERAS_Asia_Macau = [
 
 ]
 
-ZONE_INFO_Asia_Macau = {
+ZONE_INFO_Asia_Macau: ZoneInfo = {
     'name': 'Asia/Macau',
     'eras': ZONE_ERAS_Asia_Macau
 }
@@ -10000,7 +10010,7 @@ ZONE_INFO_Asia_Macau = {
 # Era count: 6
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Magadan = [
+ZONE_ERAS_Asia_Magadan: List[ZoneEra] = [
     #             11:00    Russia    +11/+12    1991 Mar 31  2:00s
     {
       'offset_seconds': 39600,
@@ -10076,7 +10086,7 @@ ZONE_ERAS_Asia_Magadan = [
 
 ]
 
-ZONE_INFO_Asia_Magadan = {
+ZONE_INFO_Asia_Magadan: ZoneInfo = {
     'name': 'Asia/Magadan',
     'eras': ZONE_ERAS_Asia_Magadan
 }
@@ -10086,7 +10096,7 @@ ZONE_INFO_Asia_Magadan = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Makassar = [
+ZONE_ERAS_Asia_Makassar: List[ZoneEra] = [
     #             8:00    -    WITA
     {
       'offset_seconds': 28800,
@@ -10102,7 +10112,7 @@ ZONE_ERAS_Asia_Makassar = [
 
 ]
 
-ZONE_INFO_Asia_Makassar = {
+ZONE_INFO_Asia_Makassar: ZoneInfo = {
     'name': 'Asia/Makassar',
     'eras': ZONE_ERAS_Asia_Makassar
 }
@@ -10112,7 +10122,7 @@ ZONE_INFO_Asia_Makassar = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Manila = [
+ZONE_ERAS_Asia_Manila: List[ZoneEra] = [
     #             8:00    Phil    P%sT
     {
       'offset_seconds': 28800,
@@ -10128,7 +10138,7 @@ ZONE_ERAS_Asia_Manila = [
 
 ]
 
-ZONE_INFO_Asia_Manila = {
+ZONE_INFO_Asia_Manila: ZoneInfo = {
     'name': 'Asia/Manila',
     'eras': ZONE_ERAS_Asia_Manila
 }
@@ -10138,7 +10148,7 @@ ZONE_INFO_Asia_Manila = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Nicosia = [
+ZONE_ERAS_Asia_Nicosia: List[ZoneEra] = [
     #             2:00    Cyprus    EE%sT    1998 Sep
     {
       'offset_seconds': 7200,
@@ -10166,7 +10176,7 @@ ZONE_ERAS_Asia_Nicosia = [
 
 ]
 
-ZONE_INFO_Asia_Nicosia = {
+ZONE_INFO_Asia_Nicosia: ZoneInfo = {
     'name': 'Asia/Nicosia',
     'eras': ZONE_ERAS_Asia_Nicosia
 }
@@ -10176,7 +10186,7 @@ ZONE_INFO_Asia_Nicosia = {
 # Era count: 5
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Novokuznetsk = [
+ZONE_ERAS_Asia_Novokuznetsk: List[ZoneEra] = [
     #              7:00    Russia    +07/+08    1991 Mar 31  2:00s
     {
       'offset_seconds': 25200,
@@ -10240,7 +10250,7 @@ ZONE_ERAS_Asia_Novokuznetsk = [
 
 ]
 
-ZONE_INFO_Asia_Novokuznetsk = {
+ZONE_INFO_Asia_Novokuznetsk: ZoneInfo = {
     'name': 'Asia/Novokuznetsk',
     'eras': ZONE_ERAS_Asia_Novokuznetsk
 }
@@ -10250,7 +10260,7 @@ ZONE_INFO_Asia_Novokuznetsk = {
 # Era count: 7
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Novosibirsk = [
+ZONE_ERAS_Asia_Novosibirsk: List[ZoneEra] = [
     #              7:00    Russia    +07/+08    1991 Mar 31  2:00s
     {
       'offset_seconds': 25200,
@@ -10338,7 +10348,7 @@ ZONE_ERAS_Asia_Novosibirsk = [
 
 ]
 
-ZONE_INFO_Asia_Novosibirsk = {
+ZONE_INFO_Asia_Novosibirsk: ZoneInfo = {
     'name': 'Asia/Novosibirsk',
     'eras': ZONE_ERAS_Asia_Novosibirsk
 }
@@ -10348,7 +10358,7 @@ ZONE_INFO_Asia_Novosibirsk = {
 # Era count: 5
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Omsk = [
+ZONE_ERAS_Asia_Omsk: List[ZoneEra] = [
     #              6:00    Russia    +06/+07    1991 Mar 31  2:00s
     {
       'offset_seconds': 21600,
@@ -10412,7 +10422,7 @@ ZONE_ERAS_Asia_Omsk = [
 
 ]
 
-ZONE_INFO_Asia_Omsk = {
+ZONE_INFO_Asia_Omsk: ZoneInfo = {
     'name': 'Asia/Omsk',
     'eras': ZONE_ERAS_Asia_Omsk
 }
@@ -10422,7 +10432,7 @@ ZONE_INFO_Asia_Omsk = {
 # Era count: 8
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Oral = [
+ZONE_ERAS_Asia_Oral: List[ZoneEra] = [
     #             5:00    -    +05    1981 Apr  1
     {
       'offset_seconds': 18000,
@@ -10522,7 +10532,7 @@ ZONE_ERAS_Asia_Oral = [
 
 ]
 
-ZONE_INFO_Asia_Oral = {
+ZONE_INFO_Asia_Oral: ZoneInfo = {
     'name': 'Asia/Oral',
     'eras': ZONE_ERAS_Asia_Oral
 }
@@ -10532,7 +10542,7 @@ ZONE_INFO_Asia_Oral = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Pontianak = [
+ZONE_ERAS_Asia_Pontianak: List[ZoneEra] = [
     #             8:00    -    WITA    1988 Jan  1
     {
       'offset_seconds': 28800,
@@ -10560,7 +10570,7 @@ ZONE_ERAS_Asia_Pontianak = [
 
 ]
 
-ZONE_INFO_Asia_Pontianak = {
+ZONE_INFO_Asia_Pontianak: ZoneInfo = {
     'name': 'Asia/Pontianak',
     'eras': ZONE_ERAS_Asia_Pontianak
 }
@@ -10570,7 +10580,7 @@ ZONE_INFO_Asia_Pontianak = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Pyongyang = [
+ZONE_ERAS_Asia_Pyongyang: List[ZoneEra] = [
     #             9:00    -    KST    2015 Aug 15 00:00
     {
       'offset_seconds': 32400,
@@ -10610,7 +10620,7 @@ ZONE_ERAS_Asia_Pyongyang = [
 
 ]
 
-ZONE_INFO_Asia_Pyongyang = {
+ZONE_INFO_Asia_Pyongyang: ZoneInfo = {
     'name': 'Asia/Pyongyang',
     'eras': ZONE_ERAS_Asia_Pyongyang
 }
@@ -10620,7 +10630,7 @@ ZONE_INFO_Asia_Pyongyang = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Qatar = [
+ZONE_ERAS_Asia_Qatar: List[ZoneEra] = [
     #             3:00    -    +03
     {
       'offset_seconds': 10800,
@@ -10636,7 +10646,7 @@ ZONE_ERAS_Asia_Qatar = [
 
 ]
 
-ZONE_INFO_Asia_Qatar = {
+ZONE_INFO_Asia_Qatar: ZoneInfo = {
     'name': 'Asia/Qatar',
     'eras': ZONE_ERAS_Asia_Qatar
 }
@@ -10646,7 +10656,7 @@ ZONE_INFO_Asia_Qatar = {
 # Era count: 7
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Qostanay = [
+ZONE_ERAS_Asia_Qostanay: List[ZoneEra] = [
     #             5:00    -    +05    1981 Apr  1
     {
       'offset_seconds': 18000,
@@ -10734,7 +10744,7 @@ ZONE_ERAS_Asia_Qostanay = [
 
 ]
 
-ZONE_INFO_Asia_Qostanay = {
+ZONE_INFO_Asia_Qostanay: ZoneInfo = {
     'name': 'Asia/Qostanay',
     'eras': ZONE_ERAS_Asia_Qostanay
 }
@@ -10744,7 +10754,7 @@ ZONE_INFO_Asia_Qostanay = {
 # Era count: 10
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Qyzylorda = [
+ZONE_ERAS_Asia_Qyzylorda: List[ZoneEra] = [
     #             5:00    -    +05    1981 Apr  1
     {
       'offset_seconds': 18000,
@@ -10868,7 +10878,7 @@ ZONE_ERAS_Asia_Qyzylorda = [
 
 ]
 
-ZONE_INFO_Asia_Qyzylorda = {
+ZONE_INFO_Asia_Qyzylorda: ZoneInfo = {
     'name': 'Asia/Qyzylorda',
     'eras': ZONE_ERAS_Asia_Qyzylorda
 }
@@ -10878,7 +10888,7 @@ ZONE_INFO_Asia_Qyzylorda = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Riyadh = [
+ZONE_ERAS_Asia_Riyadh: List[ZoneEra] = [
     #             3:00    -    +03
     {
       'offset_seconds': 10800,
@@ -10894,7 +10904,7 @@ ZONE_ERAS_Asia_Riyadh = [
 
 ]
 
-ZONE_INFO_Asia_Riyadh = {
+ZONE_INFO_Asia_Riyadh: ZoneInfo = {
     'name': 'Asia/Riyadh',
     'eras': ZONE_ERAS_Asia_Riyadh
 }
@@ -10904,7 +10914,7 @@ ZONE_INFO_Asia_Riyadh = {
 # Era count: 7
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Sakhalin = [
+ZONE_ERAS_Asia_Sakhalin: List[ZoneEra] = [
     #             11:00    Russia    +11/+12    1991 Mar 31  2:00s
     {
       'offset_seconds': 39600,
@@ -10992,7 +11002,7 @@ ZONE_ERAS_Asia_Sakhalin = [
 
 ]
 
-ZONE_INFO_Asia_Sakhalin = {
+ZONE_INFO_Asia_Sakhalin: ZoneInfo = {
     'name': 'Asia/Sakhalin',
     'eras': ZONE_ERAS_Asia_Sakhalin
 }
@@ -11002,7 +11012,7 @@ ZONE_INFO_Asia_Sakhalin = {
 # Era count: 5
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Samarkand = [
+ZONE_ERAS_Asia_Samarkand: List[ZoneEra] = [
     #             5:00    -    +05    1981 Apr  1
     {
       'offset_seconds': 18000,
@@ -11066,7 +11076,7 @@ ZONE_ERAS_Asia_Samarkand = [
 
 ]
 
-ZONE_INFO_Asia_Samarkand = {
+ZONE_INFO_Asia_Samarkand: ZoneInfo = {
     'name': 'Asia/Samarkand',
     'eras': ZONE_ERAS_Asia_Samarkand
 }
@@ -11076,7 +11086,7 @@ ZONE_INFO_Asia_Samarkand = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Seoul = [
+ZONE_ERAS_Asia_Seoul: List[ZoneEra] = [
     #             9:00    ROK    K%sT
     {
       'offset_seconds': 32400,
@@ -11092,7 +11102,7 @@ ZONE_ERAS_Asia_Seoul = [
 
 ]
 
-ZONE_INFO_Asia_Seoul = {
+ZONE_INFO_Asia_Seoul: ZoneInfo = {
     'name': 'Asia/Seoul',
     'eras': ZONE_ERAS_Asia_Seoul
 }
@@ -11102,7 +11112,7 @@ ZONE_INFO_Asia_Seoul = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Shanghai = [
+ZONE_ERAS_Asia_Shanghai: List[ZoneEra] = [
     #             8:00    PRC    C%sT
     {
       'offset_seconds': 28800,
@@ -11118,7 +11128,7 @@ ZONE_ERAS_Asia_Shanghai = [
 
 ]
 
-ZONE_INFO_Asia_Shanghai = {
+ZONE_INFO_Asia_Shanghai: ZoneInfo = {
     'name': 'Asia/Shanghai',
     'eras': ZONE_ERAS_Asia_Shanghai
 }
@@ -11128,7 +11138,7 @@ ZONE_INFO_Asia_Shanghai = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Singapore = [
+ZONE_ERAS_Asia_Singapore: List[ZoneEra] = [
     #             7:30    -    +0730    1982 Jan  1
     {
       'offset_seconds': 27000,
@@ -11156,7 +11166,7 @@ ZONE_ERAS_Asia_Singapore = [
 
 ]
 
-ZONE_INFO_Asia_Singapore = {
+ZONE_INFO_Asia_Singapore: ZoneInfo = {
     'name': 'Asia/Singapore',
     'eras': ZONE_ERAS_Asia_Singapore
 }
@@ -11166,7 +11176,7 @@ ZONE_INFO_Asia_Singapore = {
 # Era count: 5
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Srednekolymsk = [
+ZONE_ERAS_Asia_Srednekolymsk: List[ZoneEra] = [
     #             11:00    Russia    +11/+12    1991 Mar 31  2:00s
     {
       'offset_seconds': 39600,
@@ -11230,7 +11240,7 @@ ZONE_ERAS_Asia_Srednekolymsk = [
 
 ]
 
-ZONE_INFO_Asia_Srednekolymsk = {
+ZONE_INFO_Asia_Srednekolymsk: ZoneInfo = {
     'name': 'Asia/Srednekolymsk',
     'eras': ZONE_ERAS_Asia_Srednekolymsk
 }
@@ -11240,7 +11250,7 @@ ZONE_INFO_Asia_Srednekolymsk = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Taipei = [
+ZONE_ERAS_Asia_Taipei: List[ZoneEra] = [
     #             8:00    Taiwan    C%sT
     {
       'offset_seconds': 28800,
@@ -11256,7 +11266,7 @@ ZONE_ERAS_Asia_Taipei = [
 
 ]
 
-ZONE_INFO_Asia_Taipei = {
+ZONE_INFO_Asia_Taipei: ZoneInfo = {
     'name': 'Asia/Taipei',
     'eras': ZONE_ERAS_Asia_Taipei
 }
@@ -11266,7 +11276,7 @@ ZONE_INFO_Asia_Taipei = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Tashkent = [
+ZONE_ERAS_Asia_Tashkent: List[ZoneEra] = [
     #             6:00 RussiaAsia    +06/+07    1991 Mar 31  2:00
     {
       'offset_seconds': 21600,
@@ -11306,7 +11316,7 @@ ZONE_ERAS_Asia_Tashkent = [
 
 ]
 
-ZONE_INFO_Asia_Tashkent = {
+ZONE_INFO_Asia_Tashkent: ZoneInfo = {
     'name': 'Asia/Tashkent',
     'eras': ZONE_ERAS_Asia_Tashkent
 }
@@ -11316,7 +11326,7 @@ ZONE_INFO_Asia_Tashkent = {
 # Era count: 8
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Tbilisi = [
+ZONE_ERAS_Asia_Tbilisi: List[ZoneEra] = [
     #             4:00 RussiaAsia +04/+05    1991 Mar 31  2:00s
     {
       'offset_seconds': 14400,
@@ -11416,7 +11426,7 @@ ZONE_ERAS_Asia_Tbilisi = [
 
 ]
 
-ZONE_INFO_Asia_Tbilisi = {
+ZONE_INFO_Asia_Tbilisi: ZoneInfo = {
     'name': 'Asia/Tbilisi',
     'eras': ZONE_ERAS_Asia_Tbilisi
 }
@@ -11426,7 +11436,7 @@ ZONE_INFO_Asia_Tbilisi = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Tehran = [
+ZONE_ERAS_Asia_Tehran: List[ZoneEra] = [
     #             3:30    -    +0330    1977 Nov
     {
       'offset_seconds': 12600,
@@ -11466,7 +11476,7 @@ ZONE_ERAS_Asia_Tehran = [
 
 ]
 
-ZONE_INFO_Asia_Tehran = {
+ZONE_INFO_Asia_Tehran: ZoneInfo = {
     'name': 'Asia/Tehran',
     'eras': ZONE_ERAS_Asia_Tehran
 }
@@ -11476,7 +11486,7 @@ ZONE_INFO_Asia_Tehran = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Thimphu = [
+ZONE_ERAS_Asia_Thimphu: List[ZoneEra] = [
     #             5:30    -    +0530    1987 Oct
     {
       'offset_seconds': 19800,
@@ -11504,7 +11514,7 @@ ZONE_ERAS_Asia_Thimphu = [
 
 ]
 
-ZONE_INFO_Asia_Thimphu = {
+ZONE_INFO_Asia_Thimphu: ZoneInfo = {
     'name': 'Asia/Thimphu',
     'eras': ZONE_ERAS_Asia_Thimphu
 }
@@ -11514,7 +11524,7 @@ ZONE_INFO_Asia_Thimphu = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Tokyo = [
+ZONE_ERAS_Asia_Tokyo: List[ZoneEra] = [
     #             9:00    Japan    J%sT
     {
       'offset_seconds': 32400,
@@ -11530,7 +11540,7 @@ ZONE_ERAS_Asia_Tokyo = [
 
 ]
 
-ZONE_INFO_Asia_Tokyo = {
+ZONE_INFO_Asia_Tokyo: ZoneInfo = {
     'name': 'Asia/Tokyo',
     'eras': ZONE_ERAS_Asia_Tokyo
 }
@@ -11540,7 +11550,7 @@ ZONE_INFO_Asia_Tokyo = {
 # Era count: 7
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Tomsk = [
+ZONE_ERAS_Asia_Tomsk: List[ZoneEra] = [
     #              7:00    Russia    +07/+08    1991 Mar 31  2:00s
     {
       'offset_seconds': 25200,
@@ -11628,7 +11638,7 @@ ZONE_ERAS_Asia_Tomsk = [
 
 ]
 
-ZONE_INFO_Asia_Tomsk = {
+ZONE_INFO_Asia_Tomsk: ZoneInfo = {
     'name': 'Asia/Tomsk',
     'eras': ZONE_ERAS_Asia_Tomsk
 }
@@ -11638,7 +11648,7 @@ ZONE_INFO_Asia_Tomsk = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Ulaanbaatar = [
+ZONE_ERAS_Asia_Ulaanbaatar: List[ZoneEra] = [
     #             7:00    -    +07    1978
     {
       'offset_seconds': 25200,
@@ -11666,7 +11676,7 @@ ZONE_ERAS_Asia_Ulaanbaatar = [
 
 ]
 
-ZONE_INFO_Asia_Ulaanbaatar = {
+ZONE_INFO_Asia_Ulaanbaatar: ZoneInfo = {
     'name': 'Asia/Ulaanbaatar',
     'eras': ZONE_ERAS_Asia_Ulaanbaatar
 }
@@ -11676,7 +11686,7 @@ ZONE_INFO_Asia_Ulaanbaatar = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Urumqi = [
+ZONE_ERAS_Asia_Urumqi: List[ZoneEra] = [
     #             6:00    -    +06
     {
       'offset_seconds': 21600,
@@ -11692,7 +11702,7 @@ ZONE_ERAS_Asia_Urumqi = [
 
 ]
 
-ZONE_INFO_Asia_Urumqi = {
+ZONE_INFO_Asia_Urumqi: ZoneInfo = {
     'name': 'Asia/Urumqi',
     'eras': ZONE_ERAS_Asia_Urumqi
 }
@@ -11702,7 +11712,7 @@ ZONE_INFO_Asia_Urumqi = {
 # Era count: 7
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Ust_Nera = [
+ZONE_ERAS_Asia_Ust_Nera: List[ZoneEra] = [
     #              9:00    Russia    +09/+10    1981 Apr  1
     {
       'offset_seconds': 32400,
@@ -11790,7 +11800,7 @@ ZONE_ERAS_Asia_Ust_Nera = [
 
 ]
 
-ZONE_INFO_Asia_Ust_Nera = {
+ZONE_INFO_Asia_Ust_Nera: ZoneInfo = {
     'name': 'Asia/Ust-Nera',
     'eras': ZONE_ERAS_Asia_Ust_Nera
 }
@@ -11800,7 +11810,7 @@ ZONE_INFO_Asia_Ust_Nera = {
 # Era count: 5
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Vladivostok = [
+ZONE_ERAS_Asia_Vladivostok: List[ZoneEra] = [
     #             10:00    Russia    +10/+11    1991 Mar 31  2:00s
     {
       'offset_seconds': 36000,
@@ -11864,7 +11874,7 @@ ZONE_ERAS_Asia_Vladivostok = [
 
 ]
 
-ZONE_INFO_Asia_Vladivostok = {
+ZONE_INFO_Asia_Vladivostok: ZoneInfo = {
     'name': 'Asia/Vladivostok',
     'eras': ZONE_ERAS_Asia_Vladivostok
 }
@@ -11874,7 +11884,7 @@ ZONE_INFO_Asia_Vladivostok = {
 # Era count: 5
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Yakutsk = [
+ZONE_ERAS_Asia_Yakutsk: List[ZoneEra] = [
     #              9:00    Russia    +09/+10    1991 Mar 31  2:00s
     {
       'offset_seconds': 32400,
@@ -11938,7 +11948,7 @@ ZONE_ERAS_Asia_Yakutsk = [
 
 ]
 
-ZONE_INFO_Asia_Yakutsk = {
+ZONE_INFO_Asia_Yakutsk: ZoneInfo = {
     'name': 'Asia/Yakutsk',
     'eras': ZONE_ERAS_Asia_Yakutsk
 }
@@ -11948,7 +11958,7 @@ ZONE_INFO_Asia_Yakutsk = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Yangon = [
+ZONE_ERAS_Asia_Yangon: List[ZoneEra] = [
     #             6:30    -    +0630
     {
       'offset_seconds': 23400,
@@ -11964,7 +11974,7 @@ ZONE_ERAS_Asia_Yangon = [
 
 ]
 
-ZONE_INFO_Asia_Yangon = {
+ZONE_INFO_Asia_Yangon: ZoneInfo = {
     'name': 'Asia/Yangon',
     'eras': ZONE_ERAS_Asia_Yangon
 }
@@ -11974,7 +11984,7 @@ ZONE_INFO_Asia_Yangon = {
 # Era count: 5
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Yekaterinburg = [
+ZONE_ERAS_Asia_Yekaterinburg: List[ZoneEra] = [
     #              5:00    Russia    +05/+06    1991 Mar 31  2:00s
     {
       'offset_seconds': 18000,
@@ -12038,7 +12048,7 @@ ZONE_ERAS_Asia_Yekaterinburg = [
 
 ]
 
-ZONE_INFO_Asia_Yekaterinburg = {
+ZONE_INFO_Asia_Yekaterinburg: ZoneInfo = {
     'name': 'Asia/Yekaterinburg',
     'eras': ZONE_ERAS_Asia_Yekaterinburg
 }
@@ -12048,7 +12058,7 @@ ZONE_INFO_Asia_Yekaterinburg = {
 # Era count: 5
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Asia_Yerevan = [
+ZONE_ERAS_Asia_Yerevan: List[ZoneEra] = [
     #             4:00 RussiaAsia +04/+05    1991 Mar 31  2:00s
     {
       'offset_seconds': 14400,
@@ -12112,7 +12122,7 @@ ZONE_ERAS_Asia_Yerevan = [
 
 ]
 
-ZONE_INFO_Asia_Yerevan = {
+ZONE_INFO_Asia_Yerevan: ZoneInfo = {
     'name': 'Asia/Yerevan',
     'eras': ZONE_ERAS_Asia_Yerevan
 }
@@ -12122,7 +12132,7 @@ ZONE_INFO_Asia_Yerevan = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Atlantic_Azores = [
+ZONE_ERAS_Atlantic_Azores: List[ZoneEra] = [
     #             -1:00    Port    -01/+00    1983 Sep 25  1:00s
     {
       'offset_seconds': -3600,
@@ -12174,7 +12184,7 @@ ZONE_ERAS_Atlantic_Azores = [
 
 ]
 
-ZONE_INFO_Atlantic_Azores = {
+ZONE_INFO_Atlantic_Azores: ZoneInfo = {
     'name': 'Atlantic/Azores',
     'eras': ZONE_ERAS_Atlantic_Azores
 }
@@ -12184,7 +12194,7 @@ ZONE_INFO_Atlantic_Azores = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Atlantic_Bermuda = [
+ZONE_ERAS_Atlantic_Bermuda: List[ZoneEra] = [
     #             -4:00    Bermuda    A%sT    1974 Apr 28  2:00
     {
       'offset_seconds': -14400,
@@ -12224,7 +12234,7 @@ ZONE_ERAS_Atlantic_Bermuda = [
 
 ]
 
-ZONE_INFO_Atlantic_Bermuda = {
+ZONE_INFO_Atlantic_Bermuda: ZoneInfo = {
     'name': 'Atlantic/Bermuda',
     'eras': ZONE_ERAS_Atlantic_Bermuda
 }
@@ -12234,7 +12244,7 @@ ZONE_INFO_Atlantic_Bermuda = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Atlantic_Canary = [
+ZONE_ERAS_Atlantic_Canary: List[ZoneEra] = [
     #              0:00    -    WET    1980 Apr  6  0:00s
     {
       'offset_seconds': 0,
@@ -12274,7 +12284,7 @@ ZONE_ERAS_Atlantic_Canary = [
 
 ]
 
-ZONE_INFO_Atlantic_Canary = {
+ZONE_INFO_Atlantic_Canary: ZoneInfo = {
     'name': 'Atlantic/Canary',
     'eras': ZONE_ERAS_Atlantic_Canary
 }
@@ -12284,7 +12294,7 @@ ZONE_INFO_Atlantic_Canary = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Atlantic_Cape_Verde = [
+ZONE_ERAS_Atlantic_Cape_Verde: List[ZoneEra] = [
     #             -2:00    -    -02    1975 Nov 25  2:00
     {
       'offset_seconds': -7200,
@@ -12312,7 +12322,7 @@ ZONE_ERAS_Atlantic_Cape_Verde = [
 
 ]
 
-ZONE_INFO_Atlantic_Cape_Verde = {
+ZONE_INFO_Atlantic_Cape_Verde: ZoneInfo = {
     'name': 'Atlantic/Cape_Verde',
     'eras': ZONE_ERAS_Atlantic_Cape_Verde
 }
@@ -12322,7 +12332,7 @@ ZONE_INFO_Atlantic_Cape_Verde = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Atlantic_Faroe = [
+ZONE_ERAS_Atlantic_Faroe: List[ZoneEra] = [
     #              0:00    -    WET    1981
     {
       'offset_seconds': 0,
@@ -12350,7 +12360,7 @@ ZONE_ERAS_Atlantic_Faroe = [
 
 ]
 
-ZONE_INFO_Atlantic_Faroe = {
+ZONE_INFO_Atlantic_Faroe: ZoneInfo = {
     'name': 'Atlantic/Faroe',
     'eras': ZONE_ERAS_Atlantic_Faroe
 }
@@ -12360,7 +12370,7 @@ ZONE_INFO_Atlantic_Faroe = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Atlantic_Madeira = [
+ZONE_ERAS_Atlantic_Madeira: List[ZoneEra] = [
     #              0:00    Port    WE%sT    1983 Sep 25  1:00s
     {
       'offset_seconds': 0,
@@ -12388,7 +12398,7 @@ ZONE_ERAS_Atlantic_Madeira = [
 
 ]
 
-ZONE_INFO_Atlantic_Madeira = {
+ZONE_INFO_Atlantic_Madeira: ZoneInfo = {
     'name': 'Atlantic/Madeira',
     'eras': ZONE_ERAS_Atlantic_Madeira
 }
@@ -12398,7 +12408,7 @@ ZONE_INFO_Atlantic_Madeira = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Atlantic_Reykjavik = [
+ZONE_ERAS_Atlantic_Reykjavik: List[ZoneEra] = [
     #              0:00    -    GMT
     {
       'offset_seconds': 0,
@@ -12414,7 +12424,7 @@ ZONE_ERAS_Atlantic_Reykjavik = [
 
 ]
 
-ZONE_INFO_Atlantic_Reykjavik = {
+ZONE_INFO_Atlantic_Reykjavik: ZoneInfo = {
     'name': 'Atlantic/Reykjavik',
     'eras': ZONE_ERAS_Atlantic_Reykjavik
 }
@@ -12424,7 +12434,7 @@ ZONE_INFO_Atlantic_Reykjavik = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Atlantic_South_Georgia = [
+ZONE_ERAS_Atlantic_South_Georgia: List[ZoneEra] = [
     #             -2:00    -    -02
     {
       'offset_seconds': -7200,
@@ -12440,7 +12450,7 @@ ZONE_ERAS_Atlantic_South_Georgia = [
 
 ]
 
-ZONE_INFO_Atlantic_South_Georgia = {
+ZONE_INFO_Atlantic_South_Georgia: ZoneInfo = {
     'name': 'Atlantic/South_Georgia',
     'eras': ZONE_ERAS_Atlantic_South_Georgia
 }
@@ -12450,7 +12460,7 @@ ZONE_INFO_Atlantic_South_Georgia = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Atlantic_Stanley = [
+ZONE_ERAS_Atlantic_Stanley: List[ZoneEra] = [
     #             -4:00    Falk    -04/-03    1983 May
     {
       'offset_seconds': -14400,
@@ -12502,7 +12512,7 @@ ZONE_ERAS_Atlantic_Stanley = [
 
 ]
 
-ZONE_INFO_Atlantic_Stanley = {
+ZONE_INFO_Atlantic_Stanley: ZoneInfo = {
     'name': 'Atlantic/Stanley',
     'eras': ZONE_ERAS_Atlantic_Stanley
 }
@@ -12512,7 +12522,7 @@ ZONE_INFO_Atlantic_Stanley = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Australia_Adelaide = [
+ZONE_ERAS_Australia_Adelaide: List[ZoneEra] = [
     #             9:30    AS    AC%sT
     {
       'offset_seconds': 34200,
@@ -12528,7 +12538,7 @@ ZONE_ERAS_Australia_Adelaide = [
 
 ]
 
-ZONE_INFO_Australia_Adelaide = {
+ZONE_INFO_Australia_Adelaide: ZoneInfo = {
     'name': 'Australia/Adelaide',
     'eras': ZONE_ERAS_Australia_Adelaide
 }
@@ -12538,7 +12548,7 @@ ZONE_INFO_Australia_Adelaide = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Australia_Brisbane = [
+ZONE_ERAS_Australia_Brisbane: List[ZoneEra] = [
     #             10:00    AQ    AE%sT
     {
       'offset_seconds': 36000,
@@ -12554,7 +12564,7 @@ ZONE_ERAS_Australia_Brisbane = [
 
 ]
 
-ZONE_INFO_Australia_Brisbane = {
+ZONE_INFO_Australia_Brisbane: ZoneInfo = {
     'name': 'Australia/Brisbane',
     'eras': ZONE_ERAS_Australia_Brisbane
 }
@@ -12564,7 +12574,7 @@ ZONE_INFO_Australia_Brisbane = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Australia_Broken_Hill = [
+ZONE_ERAS_Australia_Broken_Hill: List[ZoneEra] = [
     #             9:30    AN    AC%sT    2000
     {
       'offset_seconds': 34200,
@@ -12592,7 +12602,7 @@ ZONE_ERAS_Australia_Broken_Hill = [
 
 ]
 
-ZONE_INFO_Australia_Broken_Hill = {
+ZONE_INFO_Australia_Broken_Hill: ZoneInfo = {
     'name': 'Australia/Broken_Hill',
     'eras': ZONE_ERAS_Australia_Broken_Hill
 }
@@ -12602,7 +12612,7 @@ ZONE_INFO_Australia_Broken_Hill = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Australia_Darwin = [
+ZONE_ERAS_Australia_Darwin: List[ZoneEra] = [
     #              9:30    Aus    AC%sT
     {
       'offset_seconds': 34200,
@@ -12618,7 +12628,7 @@ ZONE_ERAS_Australia_Darwin = [
 
 ]
 
-ZONE_INFO_Australia_Darwin = {
+ZONE_INFO_Australia_Darwin: ZoneInfo = {
     'name': 'Australia/Darwin',
     'eras': ZONE_ERAS_Australia_Darwin
 }
@@ -12628,7 +12638,7 @@ ZONE_INFO_Australia_Darwin = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Australia_Eucla = [
+ZONE_ERAS_Australia_Eucla: List[ZoneEra] = [
     #              8:45    AW  +0845/+0945
     {
       'offset_seconds': 31500,
@@ -12644,7 +12654,7 @@ ZONE_ERAS_Australia_Eucla = [
 
 ]
 
-ZONE_INFO_Australia_Eucla = {
+ZONE_INFO_Australia_Eucla: ZoneInfo = {
     'name': 'Australia/Eucla',
     'eras': ZONE_ERAS_Australia_Eucla
 }
@@ -12654,7 +12664,7 @@ ZONE_INFO_Australia_Eucla = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Australia_Hobart = [
+ZONE_ERAS_Australia_Hobart: List[ZoneEra] = [
     #             10:00    AT    AE%sT
     {
       'offset_seconds': 36000,
@@ -12670,7 +12680,7 @@ ZONE_ERAS_Australia_Hobart = [
 
 ]
 
-ZONE_INFO_Australia_Hobart = {
+ZONE_INFO_Australia_Hobart: ZoneInfo = {
     'name': 'Australia/Hobart',
     'eras': ZONE_ERAS_Australia_Hobart
 }
@@ -12680,7 +12690,7 @@ ZONE_INFO_Australia_Hobart = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Australia_Lindeman = [
+ZONE_ERAS_Australia_Lindeman: List[ZoneEra] = [
     #             10:00    AQ    AE%sT    1992 Jul
     {
       'offset_seconds': 36000,
@@ -12708,7 +12718,7 @@ ZONE_ERAS_Australia_Lindeman = [
 
 ]
 
-ZONE_INFO_Australia_Lindeman = {
+ZONE_INFO_Australia_Lindeman: ZoneInfo = {
     'name': 'Australia/Lindeman',
     'eras': ZONE_ERAS_Australia_Lindeman
 }
@@ -12718,7 +12728,7 @@ ZONE_INFO_Australia_Lindeman = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Australia_Lord_Howe = [
+ZONE_ERAS_Australia_Lord_Howe: List[ZoneEra] = [
     #             10:00    -    AEST    1981 Mar
     {
       'offset_seconds': 36000,
@@ -12758,7 +12768,7 @@ ZONE_ERAS_Australia_Lord_Howe = [
 
 ]
 
-ZONE_INFO_Australia_Lord_Howe = {
+ZONE_INFO_Australia_Lord_Howe: ZoneInfo = {
     'name': 'Australia/Lord_Howe',
     'eras': ZONE_ERAS_Australia_Lord_Howe
 }
@@ -12768,7 +12778,7 @@ ZONE_INFO_Australia_Lord_Howe = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Australia_Melbourne = [
+ZONE_ERAS_Australia_Melbourne: List[ZoneEra] = [
     #             10:00    AV    AE%sT
     {
       'offset_seconds': 36000,
@@ -12784,7 +12794,7 @@ ZONE_ERAS_Australia_Melbourne = [
 
 ]
 
-ZONE_INFO_Australia_Melbourne = {
+ZONE_INFO_Australia_Melbourne: ZoneInfo = {
     'name': 'Australia/Melbourne',
     'eras': ZONE_ERAS_Australia_Melbourne
 }
@@ -12794,7 +12804,7 @@ ZONE_INFO_Australia_Melbourne = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Australia_Perth = [
+ZONE_ERAS_Australia_Perth: List[ZoneEra] = [
     #              8:00    AW    AW%sT
     {
       'offset_seconds': 28800,
@@ -12810,7 +12820,7 @@ ZONE_ERAS_Australia_Perth = [
 
 ]
 
-ZONE_INFO_Australia_Perth = {
+ZONE_INFO_Australia_Perth: ZoneInfo = {
     'name': 'Australia/Perth',
     'eras': ZONE_ERAS_Australia_Perth
 }
@@ -12820,7 +12830,7 @@ ZONE_INFO_Australia_Perth = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Australia_Sydney = [
+ZONE_ERAS_Australia_Sydney: List[ZoneEra] = [
     #             10:00    AN    AE%sT
     {
       'offset_seconds': 36000,
@@ -12836,7 +12846,7 @@ ZONE_ERAS_Australia_Sydney = [
 
 ]
 
-ZONE_INFO_Australia_Sydney = {
+ZONE_INFO_Australia_Sydney: ZoneInfo = {
     'name': 'Australia/Sydney',
     'eras': ZONE_ERAS_Australia_Sydney
 }
@@ -12846,7 +12856,7 @@ ZONE_INFO_Australia_Sydney = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_CET = [
+ZONE_ERAS_CET: List[ZoneEra] = [
     # 1:00 C-Eur CE%sT
     {
       'offset_seconds': 3600,
@@ -12862,7 +12872,7 @@ ZONE_ERAS_CET = [
 
 ]
 
-ZONE_INFO_CET = {
+ZONE_INFO_CET: ZoneInfo = {
     'name': 'CET',
     'eras': ZONE_ERAS_CET
 }
@@ -12872,7 +12882,7 @@ ZONE_INFO_CET = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_CST6CDT = [
+ZONE_ERAS_CST6CDT: List[ZoneEra] = [
     # -6:00 US C%sT
     {
       'offset_seconds': -21600,
@@ -12888,7 +12898,7 @@ ZONE_ERAS_CST6CDT = [
 
 ]
 
-ZONE_INFO_CST6CDT = {
+ZONE_INFO_CST6CDT: ZoneInfo = {
     'name': 'CST6CDT',
     'eras': ZONE_ERAS_CST6CDT
 }
@@ -12898,7 +12908,7 @@ ZONE_INFO_CST6CDT = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_EET = [
+ZONE_ERAS_EET: List[ZoneEra] = [
     # 2:00 EU EE%sT
     {
       'offset_seconds': 7200,
@@ -12914,7 +12924,7 @@ ZONE_ERAS_EET = [
 
 ]
 
-ZONE_INFO_EET = {
+ZONE_INFO_EET: ZoneInfo = {
     'name': 'EET',
     'eras': ZONE_ERAS_EET
 }
@@ -12924,7 +12934,7 @@ ZONE_INFO_EET = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_EST = [
+ZONE_ERAS_EST: List[ZoneEra] = [
     # -5:00 - EST
     {
       'offset_seconds': -18000,
@@ -12940,7 +12950,7 @@ ZONE_ERAS_EST = [
 
 ]
 
-ZONE_INFO_EST = {
+ZONE_INFO_EST: ZoneInfo = {
     'name': 'EST',
     'eras': ZONE_ERAS_EST
 }
@@ -12950,7 +12960,7 @@ ZONE_INFO_EST = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_EST5EDT = [
+ZONE_ERAS_EST5EDT: List[ZoneEra] = [
     # -5:00 US E%sT
     {
       'offset_seconds': -18000,
@@ -12966,7 +12976,7 @@ ZONE_ERAS_EST5EDT = [
 
 ]
 
-ZONE_INFO_EST5EDT = {
+ZONE_INFO_EST5EDT: ZoneInfo = {
     'name': 'EST5EDT',
     'eras': ZONE_ERAS_EST5EDT
 }
@@ -12976,7 +12986,7 @@ ZONE_INFO_EST5EDT = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT = [
+ZONE_ERAS_Etc_GMT: List[ZoneEra] = [
     # 0 - GMT
     {
       'offset_seconds': 0,
@@ -12992,7 +13002,7 @@ ZONE_ERAS_Etc_GMT = [
 
 ]
 
-ZONE_INFO_Etc_GMT = {
+ZONE_INFO_Etc_GMT: ZoneInfo = {
     'name': 'Etc/GMT',
     'eras': ZONE_ERAS_Etc_GMT
 }
@@ -13002,7 +13012,7 @@ ZONE_INFO_Etc_GMT = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_PLUS_1 = [
+ZONE_ERAS_Etc_GMT_PLUS_1: List[ZoneEra] = [
     # -1 - -01
     {
       'offset_seconds': -3600,
@@ -13018,7 +13028,7 @@ ZONE_ERAS_Etc_GMT_PLUS_1 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_PLUS_1 = {
+ZONE_INFO_Etc_GMT_PLUS_1: ZoneInfo = {
     'name': 'Etc/GMT+1',
     'eras': ZONE_ERAS_Etc_GMT_PLUS_1
 }
@@ -13028,7 +13038,7 @@ ZONE_INFO_Etc_GMT_PLUS_1 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_PLUS_10 = [
+ZONE_ERAS_Etc_GMT_PLUS_10: List[ZoneEra] = [
     # -10 - -10
     {
       'offset_seconds': -36000,
@@ -13044,7 +13054,7 @@ ZONE_ERAS_Etc_GMT_PLUS_10 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_PLUS_10 = {
+ZONE_INFO_Etc_GMT_PLUS_10: ZoneInfo = {
     'name': 'Etc/GMT+10',
     'eras': ZONE_ERAS_Etc_GMT_PLUS_10
 }
@@ -13054,7 +13064,7 @@ ZONE_INFO_Etc_GMT_PLUS_10 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_PLUS_11 = [
+ZONE_ERAS_Etc_GMT_PLUS_11: List[ZoneEra] = [
     # -11 - -11
     {
       'offset_seconds': -39600,
@@ -13070,7 +13080,7 @@ ZONE_ERAS_Etc_GMT_PLUS_11 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_PLUS_11 = {
+ZONE_INFO_Etc_GMT_PLUS_11: ZoneInfo = {
     'name': 'Etc/GMT+11',
     'eras': ZONE_ERAS_Etc_GMT_PLUS_11
 }
@@ -13080,7 +13090,7 @@ ZONE_INFO_Etc_GMT_PLUS_11 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_PLUS_12 = [
+ZONE_ERAS_Etc_GMT_PLUS_12: List[ZoneEra] = [
     # -12 - -12
     {
       'offset_seconds': -43200,
@@ -13096,7 +13106,7 @@ ZONE_ERAS_Etc_GMT_PLUS_12 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_PLUS_12 = {
+ZONE_INFO_Etc_GMT_PLUS_12: ZoneInfo = {
     'name': 'Etc/GMT+12',
     'eras': ZONE_ERAS_Etc_GMT_PLUS_12
 }
@@ -13106,7 +13116,7 @@ ZONE_INFO_Etc_GMT_PLUS_12 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_PLUS_2 = [
+ZONE_ERAS_Etc_GMT_PLUS_2: List[ZoneEra] = [
     # -2 - -02
     {
       'offset_seconds': -7200,
@@ -13122,7 +13132,7 @@ ZONE_ERAS_Etc_GMT_PLUS_2 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_PLUS_2 = {
+ZONE_INFO_Etc_GMT_PLUS_2: ZoneInfo = {
     'name': 'Etc/GMT+2',
     'eras': ZONE_ERAS_Etc_GMT_PLUS_2
 }
@@ -13132,7 +13142,7 @@ ZONE_INFO_Etc_GMT_PLUS_2 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_PLUS_3 = [
+ZONE_ERAS_Etc_GMT_PLUS_3: List[ZoneEra] = [
     # -3 - -03
     {
       'offset_seconds': -10800,
@@ -13148,7 +13158,7 @@ ZONE_ERAS_Etc_GMT_PLUS_3 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_PLUS_3 = {
+ZONE_INFO_Etc_GMT_PLUS_3: ZoneInfo = {
     'name': 'Etc/GMT+3',
     'eras': ZONE_ERAS_Etc_GMT_PLUS_3
 }
@@ -13158,7 +13168,7 @@ ZONE_INFO_Etc_GMT_PLUS_3 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_PLUS_4 = [
+ZONE_ERAS_Etc_GMT_PLUS_4: List[ZoneEra] = [
     # -4 - -04
     {
       'offset_seconds': -14400,
@@ -13174,7 +13184,7 @@ ZONE_ERAS_Etc_GMT_PLUS_4 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_PLUS_4 = {
+ZONE_INFO_Etc_GMT_PLUS_4: ZoneInfo = {
     'name': 'Etc/GMT+4',
     'eras': ZONE_ERAS_Etc_GMT_PLUS_4
 }
@@ -13184,7 +13194,7 @@ ZONE_INFO_Etc_GMT_PLUS_4 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_PLUS_5 = [
+ZONE_ERAS_Etc_GMT_PLUS_5: List[ZoneEra] = [
     # -5 - -05
     {
       'offset_seconds': -18000,
@@ -13200,7 +13210,7 @@ ZONE_ERAS_Etc_GMT_PLUS_5 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_PLUS_5 = {
+ZONE_INFO_Etc_GMT_PLUS_5: ZoneInfo = {
     'name': 'Etc/GMT+5',
     'eras': ZONE_ERAS_Etc_GMT_PLUS_5
 }
@@ -13210,7 +13220,7 @@ ZONE_INFO_Etc_GMT_PLUS_5 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_PLUS_6 = [
+ZONE_ERAS_Etc_GMT_PLUS_6: List[ZoneEra] = [
     # -6 - -06
     {
       'offset_seconds': -21600,
@@ -13226,7 +13236,7 @@ ZONE_ERAS_Etc_GMT_PLUS_6 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_PLUS_6 = {
+ZONE_INFO_Etc_GMT_PLUS_6: ZoneInfo = {
     'name': 'Etc/GMT+6',
     'eras': ZONE_ERAS_Etc_GMT_PLUS_6
 }
@@ -13236,7 +13246,7 @@ ZONE_INFO_Etc_GMT_PLUS_6 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_PLUS_7 = [
+ZONE_ERAS_Etc_GMT_PLUS_7: List[ZoneEra] = [
     # -7 - -07
     {
       'offset_seconds': -25200,
@@ -13252,7 +13262,7 @@ ZONE_ERAS_Etc_GMT_PLUS_7 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_PLUS_7 = {
+ZONE_INFO_Etc_GMT_PLUS_7: ZoneInfo = {
     'name': 'Etc/GMT+7',
     'eras': ZONE_ERAS_Etc_GMT_PLUS_7
 }
@@ -13262,7 +13272,7 @@ ZONE_INFO_Etc_GMT_PLUS_7 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_PLUS_8 = [
+ZONE_ERAS_Etc_GMT_PLUS_8: List[ZoneEra] = [
     # -8 - -08
     {
       'offset_seconds': -28800,
@@ -13278,7 +13288,7 @@ ZONE_ERAS_Etc_GMT_PLUS_8 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_PLUS_8 = {
+ZONE_INFO_Etc_GMT_PLUS_8: ZoneInfo = {
     'name': 'Etc/GMT+8',
     'eras': ZONE_ERAS_Etc_GMT_PLUS_8
 }
@@ -13288,7 +13298,7 @@ ZONE_INFO_Etc_GMT_PLUS_8 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_PLUS_9 = [
+ZONE_ERAS_Etc_GMT_PLUS_9: List[ZoneEra] = [
     # -9 - -09
     {
       'offset_seconds': -32400,
@@ -13304,7 +13314,7 @@ ZONE_ERAS_Etc_GMT_PLUS_9 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_PLUS_9 = {
+ZONE_INFO_Etc_GMT_PLUS_9: ZoneInfo = {
     'name': 'Etc/GMT+9',
     'eras': ZONE_ERAS_Etc_GMT_PLUS_9
 }
@@ -13314,7 +13324,7 @@ ZONE_INFO_Etc_GMT_PLUS_9 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_1 = [
+ZONE_ERAS_Etc_GMT_1: List[ZoneEra] = [
     # 1 - +01
     {
       'offset_seconds': 3600,
@@ -13330,7 +13340,7 @@ ZONE_ERAS_Etc_GMT_1 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_1 = {
+ZONE_INFO_Etc_GMT_1: ZoneInfo = {
     'name': 'Etc/GMT-1',
     'eras': ZONE_ERAS_Etc_GMT_1
 }
@@ -13340,7 +13350,7 @@ ZONE_INFO_Etc_GMT_1 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_10 = [
+ZONE_ERAS_Etc_GMT_10: List[ZoneEra] = [
     # 10 - +10
     {
       'offset_seconds': 36000,
@@ -13356,7 +13366,7 @@ ZONE_ERAS_Etc_GMT_10 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_10 = {
+ZONE_INFO_Etc_GMT_10: ZoneInfo = {
     'name': 'Etc/GMT-10',
     'eras': ZONE_ERAS_Etc_GMT_10
 }
@@ -13366,7 +13376,7 @@ ZONE_INFO_Etc_GMT_10 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_11 = [
+ZONE_ERAS_Etc_GMT_11: List[ZoneEra] = [
     # 11 - +11
     {
       'offset_seconds': 39600,
@@ -13382,7 +13392,7 @@ ZONE_ERAS_Etc_GMT_11 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_11 = {
+ZONE_INFO_Etc_GMT_11: ZoneInfo = {
     'name': 'Etc/GMT-11',
     'eras': ZONE_ERAS_Etc_GMT_11
 }
@@ -13392,7 +13402,7 @@ ZONE_INFO_Etc_GMT_11 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_12 = [
+ZONE_ERAS_Etc_GMT_12: List[ZoneEra] = [
     # 12 - +12
     {
       'offset_seconds': 43200,
@@ -13408,7 +13418,7 @@ ZONE_ERAS_Etc_GMT_12 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_12 = {
+ZONE_INFO_Etc_GMT_12: ZoneInfo = {
     'name': 'Etc/GMT-12',
     'eras': ZONE_ERAS_Etc_GMT_12
 }
@@ -13418,7 +13428,7 @@ ZONE_INFO_Etc_GMT_12 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_13 = [
+ZONE_ERAS_Etc_GMT_13: List[ZoneEra] = [
     # 13 - +13
     {
       'offset_seconds': 46800,
@@ -13434,7 +13444,7 @@ ZONE_ERAS_Etc_GMT_13 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_13 = {
+ZONE_INFO_Etc_GMT_13: ZoneInfo = {
     'name': 'Etc/GMT-13',
     'eras': ZONE_ERAS_Etc_GMT_13
 }
@@ -13444,7 +13454,7 @@ ZONE_INFO_Etc_GMT_13 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_14 = [
+ZONE_ERAS_Etc_GMT_14: List[ZoneEra] = [
     # 14 - +14
     {
       'offset_seconds': 50400,
@@ -13460,7 +13470,7 @@ ZONE_ERAS_Etc_GMT_14 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_14 = {
+ZONE_INFO_Etc_GMT_14: ZoneInfo = {
     'name': 'Etc/GMT-14',
     'eras': ZONE_ERAS_Etc_GMT_14
 }
@@ -13470,7 +13480,7 @@ ZONE_INFO_Etc_GMT_14 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_2 = [
+ZONE_ERAS_Etc_GMT_2: List[ZoneEra] = [
     # 2 - +02
     {
       'offset_seconds': 7200,
@@ -13486,7 +13496,7 @@ ZONE_ERAS_Etc_GMT_2 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_2 = {
+ZONE_INFO_Etc_GMT_2: ZoneInfo = {
     'name': 'Etc/GMT-2',
     'eras': ZONE_ERAS_Etc_GMT_2
 }
@@ -13496,7 +13506,7 @@ ZONE_INFO_Etc_GMT_2 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_3 = [
+ZONE_ERAS_Etc_GMT_3: List[ZoneEra] = [
     # 3 - +03
     {
       'offset_seconds': 10800,
@@ -13512,7 +13522,7 @@ ZONE_ERAS_Etc_GMT_3 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_3 = {
+ZONE_INFO_Etc_GMT_3: ZoneInfo = {
     'name': 'Etc/GMT-3',
     'eras': ZONE_ERAS_Etc_GMT_3
 }
@@ -13522,7 +13532,7 @@ ZONE_INFO_Etc_GMT_3 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_4 = [
+ZONE_ERAS_Etc_GMT_4: List[ZoneEra] = [
     # 4 - +04
     {
       'offset_seconds': 14400,
@@ -13538,7 +13548,7 @@ ZONE_ERAS_Etc_GMT_4 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_4 = {
+ZONE_INFO_Etc_GMT_4: ZoneInfo = {
     'name': 'Etc/GMT-4',
     'eras': ZONE_ERAS_Etc_GMT_4
 }
@@ -13548,7 +13558,7 @@ ZONE_INFO_Etc_GMT_4 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_5 = [
+ZONE_ERAS_Etc_GMT_5: List[ZoneEra] = [
     # 5 - +05
     {
       'offset_seconds': 18000,
@@ -13564,7 +13574,7 @@ ZONE_ERAS_Etc_GMT_5 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_5 = {
+ZONE_INFO_Etc_GMT_5: ZoneInfo = {
     'name': 'Etc/GMT-5',
     'eras': ZONE_ERAS_Etc_GMT_5
 }
@@ -13574,7 +13584,7 @@ ZONE_INFO_Etc_GMT_5 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_6 = [
+ZONE_ERAS_Etc_GMT_6: List[ZoneEra] = [
     # 6 - +06
     {
       'offset_seconds': 21600,
@@ -13590,7 +13600,7 @@ ZONE_ERAS_Etc_GMT_6 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_6 = {
+ZONE_INFO_Etc_GMT_6: ZoneInfo = {
     'name': 'Etc/GMT-6',
     'eras': ZONE_ERAS_Etc_GMT_6
 }
@@ -13600,7 +13610,7 @@ ZONE_INFO_Etc_GMT_6 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_7 = [
+ZONE_ERAS_Etc_GMT_7: List[ZoneEra] = [
     # 7 - +07
     {
       'offset_seconds': 25200,
@@ -13616,7 +13626,7 @@ ZONE_ERAS_Etc_GMT_7 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_7 = {
+ZONE_INFO_Etc_GMT_7: ZoneInfo = {
     'name': 'Etc/GMT-7',
     'eras': ZONE_ERAS_Etc_GMT_7
 }
@@ -13626,7 +13636,7 @@ ZONE_INFO_Etc_GMT_7 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_8 = [
+ZONE_ERAS_Etc_GMT_8: List[ZoneEra] = [
     # 8 - +08
     {
       'offset_seconds': 28800,
@@ -13642,7 +13652,7 @@ ZONE_ERAS_Etc_GMT_8 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_8 = {
+ZONE_INFO_Etc_GMT_8: ZoneInfo = {
     'name': 'Etc/GMT-8',
     'eras': ZONE_ERAS_Etc_GMT_8
 }
@@ -13652,7 +13662,7 @@ ZONE_INFO_Etc_GMT_8 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_GMT_9 = [
+ZONE_ERAS_Etc_GMT_9: List[ZoneEra] = [
     # 9 - +09
     {
       'offset_seconds': 32400,
@@ -13668,7 +13678,7 @@ ZONE_ERAS_Etc_GMT_9 = [
 
 ]
 
-ZONE_INFO_Etc_GMT_9 = {
+ZONE_INFO_Etc_GMT_9: ZoneInfo = {
     'name': 'Etc/GMT-9',
     'eras': ZONE_ERAS_Etc_GMT_9
 }
@@ -13678,7 +13688,7 @@ ZONE_INFO_Etc_GMT_9 = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Etc_UTC = [
+ZONE_ERAS_Etc_UTC: List[ZoneEra] = [
     # 0 - UTC
     {
       'offset_seconds': 0,
@@ -13694,7 +13704,7 @@ ZONE_ERAS_Etc_UTC = [
 
 ]
 
-ZONE_INFO_Etc_UTC = {
+ZONE_INFO_Etc_UTC: ZoneInfo = {
     'name': 'Etc/UTC',
     'eras': ZONE_ERAS_Etc_UTC
 }
@@ -13704,7 +13714,7 @@ ZONE_INFO_Etc_UTC = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Amsterdam = [
+ZONE_ERAS_Europe_Amsterdam: List[ZoneEra] = [
     #             1:00    Neth    CE%sT    1977
     {
       'offset_seconds': 3600,
@@ -13732,7 +13742,7 @@ ZONE_ERAS_Europe_Amsterdam = [
 
 ]
 
-ZONE_INFO_Europe_Amsterdam = {
+ZONE_INFO_Europe_Amsterdam: ZoneInfo = {
     'name': 'Europe/Amsterdam',
     'eras': ZONE_ERAS_Europe_Amsterdam
 }
@@ -13742,7 +13752,7 @@ ZONE_INFO_Europe_Amsterdam = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Andorra = [
+ZONE_ERAS_Europe_Andorra: List[ZoneEra] = [
     #             1:00    -    CET    1985 Mar 31  2:00
     {
       'offset_seconds': 3600,
@@ -13770,7 +13780,7 @@ ZONE_ERAS_Europe_Andorra = [
 
 ]
 
-ZONE_INFO_Europe_Andorra = {
+ZONE_INFO_Europe_Andorra: ZoneInfo = {
     'name': 'Europe/Andorra',
     'eras': ZONE_ERAS_Europe_Andorra
 }
@@ -13780,7 +13790,7 @@ ZONE_INFO_Europe_Andorra = {
 # Era count: 7
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Astrakhan = [
+ZONE_ERAS_Europe_Astrakhan: List[ZoneEra] = [
     #              4:00    Russia    +04/+05    1989 Mar 26  2:00s
     {
       'offset_seconds': 14400,
@@ -13868,7 +13878,7 @@ ZONE_ERAS_Europe_Astrakhan = [
 
 ]
 
-ZONE_INFO_Europe_Astrakhan = {
+ZONE_INFO_Europe_Astrakhan: ZoneInfo = {
     'name': 'Europe/Astrakhan',
     'eras': ZONE_ERAS_Europe_Astrakhan
 }
@@ -13878,7 +13888,7 @@ ZONE_INFO_Europe_Astrakhan = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Athens = [
+ZONE_ERAS_Europe_Athens: List[ZoneEra] = [
     #             2:00    Greece    EE%sT    1981
     {
       'offset_seconds': 7200,
@@ -13906,7 +13916,7 @@ ZONE_ERAS_Europe_Athens = [
 
 ]
 
-ZONE_INFO_Europe_Athens = {
+ZONE_INFO_Europe_Athens: ZoneInfo = {
     'name': 'Europe/Athens',
     'eras': ZONE_ERAS_Europe_Athens
 }
@@ -13916,7 +13926,7 @@ ZONE_INFO_Europe_Athens = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Belgrade = [
+ZONE_ERAS_Europe_Belgrade: List[ZoneEra] = [
     #             1:00    -    CET    1982 Nov 27
     {
       'offset_seconds': 3600,
@@ -13944,7 +13954,7 @@ ZONE_ERAS_Europe_Belgrade = [
 
 ]
 
-ZONE_INFO_Europe_Belgrade = {
+ZONE_INFO_Europe_Belgrade: ZoneInfo = {
     'name': 'Europe/Belgrade',
     'eras': ZONE_ERAS_Europe_Belgrade
 }
@@ -13954,7 +13964,7 @@ ZONE_INFO_Europe_Belgrade = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Berlin = [
+ZONE_ERAS_Europe_Berlin: List[ZoneEra] = [
     #             1:00    Germany    CE%sT    1980
     {
       'offset_seconds': 3600,
@@ -13982,7 +13992,7 @@ ZONE_ERAS_Europe_Berlin = [
 
 ]
 
-ZONE_INFO_Europe_Berlin = {
+ZONE_INFO_Europe_Berlin: ZoneInfo = {
     'name': 'Europe/Berlin',
     'eras': ZONE_ERAS_Europe_Berlin
 }
@@ -13992,7 +14002,7 @@ ZONE_INFO_Europe_Berlin = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Brussels = [
+ZONE_ERAS_Europe_Brussels: List[ZoneEra] = [
     #             1:00    Belgium    CE%sT    1977
     {
       'offset_seconds': 3600,
@@ -14020,7 +14030,7 @@ ZONE_ERAS_Europe_Brussels = [
 
 ]
 
-ZONE_INFO_Europe_Brussels = {
+ZONE_INFO_Europe_Brussels: ZoneInfo = {
     'name': 'Europe/Brussels',
     'eras': ZONE_ERAS_Europe_Brussels
 }
@@ -14030,7 +14040,7 @@ ZONE_INFO_Europe_Brussels = {
 # Era count: 5
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Bucharest = [
+ZONE_ERAS_Europe_Bucharest: List[ZoneEra] = [
     #             2:00    Romania    EE%sT    1981 Mar 29  2:00s
     {
       'offset_seconds': 7200,
@@ -14094,7 +14104,7 @@ ZONE_ERAS_Europe_Bucharest = [
 
 ]
 
-ZONE_INFO_Europe_Bucharest = {
+ZONE_INFO_Europe_Bucharest: ZoneInfo = {
     'name': 'Europe/Bucharest',
     'eras': ZONE_ERAS_Europe_Bucharest
 }
@@ -14104,7 +14114,7 @@ ZONE_INFO_Europe_Bucharest = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Budapest = [
+ZONE_ERAS_Europe_Budapest: List[ZoneEra] = [
     #             1:00    Hungary    CE%sT    1984
     {
       'offset_seconds': 3600,
@@ -14132,7 +14142,7 @@ ZONE_ERAS_Europe_Budapest = [
 
 ]
 
-ZONE_INFO_Europe_Budapest = {
+ZONE_INFO_Europe_Budapest: ZoneInfo = {
     'name': 'Europe/Budapest',
     'eras': ZONE_ERAS_Europe_Budapest
 }
@@ -14142,7 +14152,7 @@ ZONE_INFO_Europe_Budapest = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Chisinau = [
+ZONE_ERAS_Europe_Chisinau: List[ZoneEra] = [
     #             3:00    Russia    MSK/MSD    1990 May  6  2:00
     {
       'offset_seconds': 10800,
@@ -14194,7 +14204,7 @@ ZONE_ERAS_Europe_Chisinau = [
 
 ]
 
-ZONE_INFO_Europe_Chisinau = {
+ZONE_INFO_Europe_Chisinau: ZoneInfo = {
     'name': 'Europe/Chisinau',
     'eras': ZONE_ERAS_Europe_Chisinau
 }
@@ -14204,7 +14214,7 @@ ZONE_INFO_Europe_Chisinau = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Copenhagen = [
+ZONE_ERAS_Europe_Copenhagen: List[ZoneEra] = [
     #              1:00    Denmark    CE%sT    1980
     {
       'offset_seconds': 3600,
@@ -14232,7 +14242,7 @@ ZONE_ERAS_Europe_Copenhagen = [
 
 ]
 
-ZONE_INFO_Europe_Copenhagen = {
+ZONE_INFO_Europe_Copenhagen: ZoneInfo = {
     'name': 'Europe/Copenhagen',
     'eras': ZONE_ERAS_Europe_Copenhagen
 }
@@ -14242,7 +14252,7 @@ ZONE_INFO_Europe_Copenhagen = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Dublin = [
+ZONE_ERAS_Europe_Dublin: List[ZoneEra] = [
     #              1:00    Eire    IST/GMT
     {
       'offset_seconds': 3600,
@@ -14258,7 +14268,7 @@ ZONE_ERAS_Europe_Dublin = [
 
 ]
 
-ZONE_INFO_Europe_Dublin = {
+ZONE_INFO_Europe_Dublin: ZoneInfo = {
     'name': 'Europe/Dublin',
     'eras': ZONE_ERAS_Europe_Dublin
 }
@@ -14268,7 +14278,7 @@ ZONE_INFO_Europe_Dublin = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Gibraltar = [
+ZONE_ERAS_Europe_Gibraltar: List[ZoneEra] = [
     #             1:00    -    CET    1982
     {
       'offset_seconds': 3600,
@@ -14296,7 +14306,7 @@ ZONE_ERAS_Europe_Gibraltar = [
 
 ]
 
-ZONE_INFO_Europe_Gibraltar = {
+ZONE_INFO_Europe_Gibraltar: ZoneInfo = {
     'name': 'Europe/Gibraltar',
     'eras': ZONE_ERAS_Europe_Gibraltar
 }
@@ -14306,7 +14316,7 @@ ZONE_INFO_Europe_Gibraltar = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Helsinki = [
+ZONE_ERAS_Europe_Helsinki: List[ZoneEra] = [
     #             2:00    Finland    EE%sT    1983
     {
       'offset_seconds': 7200,
@@ -14334,7 +14344,7 @@ ZONE_ERAS_Europe_Helsinki = [
 
 ]
 
-ZONE_INFO_Europe_Helsinki = {
+ZONE_INFO_Europe_Helsinki: ZoneInfo = {
     'name': 'Europe/Helsinki',
     'eras': ZONE_ERAS_Europe_Helsinki
 }
@@ -14344,7 +14354,7 @@ ZONE_INFO_Europe_Helsinki = {
 # Era count: 11
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Istanbul = [
+ZONE_ERAS_Europe_Istanbul: List[ZoneEra] = [
     #             2:00    Turkey    EE%sT    1978 Jun 29
     {
       'offset_seconds': 7200,
@@ -14480,7 +14490,7 @@ ZONE_ERAS_Europe_Istanbul = [
 
 ]
 
-ZONE_INFO_Europe_Istanbul = {
+ZONE_INFO_Europe_Istanbul: ZoneInfo = {
     'name': 'Europe/Istanbul',
     'eras': ZONE_ERAS_Europe_Istanbul
 }
@@ -14490,7 +14500,7 @@ ZONE_INFO_Europe_Istanbul = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Kaliningrad = [
+ZONE_ERAS_Europe_Kaliningrad: List[ZoneEra] = [
     #              3:00    Russia    MSK/MSD    1989 Mar 26  2:00s
     {
       'offset_seconds': 10800,
@@ -14542,7 +14552,7 @@ ZONE_ERAS_Europe_Kaliningrad = [
 
 ]
 
-ZONE_INFO_Europe_Kaliningrad = {
+ZONE_INFO_Europe_Kaliningrad: ZoneInfo = {
     'name': 'Europe/Kaliningrad',
     'eras': ZONE_ERAS_Europe_Kaliningrad
 }
@@ -14552,7 +14562,7 @@ ZONE_INFO_Europe_Kaliningrad = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Kiev = [
+ZONE_ERAS_Europe_Kiev: List[ZoneEra] = [
     #             3:00    Russia    MSK/MSD    1990 Jul  1  2:00
     {
       'offset_seconds': 10800,
@@ -14604,7 +14614,7 @@ ZONE_ERAS_Europe_Kiev = [
 
 ]
 
-ZONE_INFO_Europe_Kiev = {
+ZONE_INFO_Europe_Kiev: ZoneInfo = {
     'name': 'Europe/Kiev',
     'eras': ZONE_ERAS_Europe_Kiev
 }
@@ -14614,7 +14624,7 @@ ZONE_INFO_Europe_Kiev = {
 # Era count: 6
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Kirov = [
+ZONE_ERAS_Europe_Kirov: List[ZoneEra] = [
     #              4:00    Russia    +04/+05    1989 Mar 26  2:00s
     {
       'offset_seconds': 14400,
@@ -14690,7 +14700,7 @@ ZONE_ERAS_Europe_Kirov = [
 
 ]
 
-ZONE_INFO_Europe_Kirov = {
+ZONE_INFO_Europe_Kirov: ZoneInfo = {
     'name': 'Europe/Kirov',
     'eras': ZONE_ERAS_Europe_Kirov
 }
@@ -14700,7 +14710,7 @@ ZONE_INFO_Europe_Kirov = {
 # Era count: 5
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Lisbon = [
+ZONE_ERAS_Europe_Lisbon: List[ZoneEra] = [
     #              1:00    -    CET    1976 Sep 26  1:00
     {
       'offset_seconds': 3600,
@@ -14764,7 +14774,7 @@ ZONE_ERAS_Europe_Lisbon = [
 
 ]
 
-ZONE_INFO_Europe_Lisbon = {
+ZONE_INFO_Europe_Lisbon: ZoneInfo = {
     'name': 'Europe/Lisbon',
     'eras': ZONE_ERAS_Europe_Lisbon
 }
@@ -14774,7 +14784,7 @@ ZONE_INFO_Europe_Lisbon = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_London = [
+ZONE_ERAS_Europe_London: List[ZoneEra] = [
     #              0:00    GB-Eire    %s    1996
     {
       'offset_seconds': 0,
@@ -14802,7 +14812,7 @@ ZONE_ERAS_Europe_London = [
 
 ]
 
-ZONE_INFO_Europe_London = {
+ZONE_INFO_Europe_London: ZoneInfo = {
     'name': 'Europe/London',
     'eras': ZONE_ERAS_Europe_London
 }
@@ -14812,7 +14822,7 @@ ZONE_INFO_Europe_London = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Luxembourg = [
+ZONE_ERAS_Europe_Luxembourg: List[ZoneEra] = [
     #             1:00    Belgium    CE%sT    1977
     {
       'offset_seconds': 3600,
@@ -14840,7 +14850,7 @@ ZONE_ERAS_Europe_Luxembourg = [
 
 ]
 
-ZONE_INFO_Europe_Luxembourg = {
+ZONE_INFO_Europe_Luxembourg: ZoneInfo = {
     'name': 'Europe/Luxembourg',
     'eras': ZONE_ERAS_Europe_Luxembourg
 }
@@ -14850,7 +14860,7 @@ ZONE_INFO_Europe_Luxembourg = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Madrid = [
+ZONE_ERAS_Europe_Madrid: List[ZoneEra] = [
     #              1:00    Spain    CE%sT    1979
     {
       'offset_seconds': 3600,
@@ -14878,7 +14888,7 @@ ZONE_ERAS_Europe_Madrid = [
 
 ]
 
-ZONE_INFO_Europe_Madrid = {
+ZONE_INFO_Europe_Madrid: ZoneInfo = {
     'name': 'Europe/Madrid',
     'eras': ZONE_ERAS_Europe_Madrid
 }
@@ -14888,7 +14898,7 @@ ZONE_INFO_Europe_Madrid = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Malta = [
+ZONE_ERAS_Europe_Malta: List[ZoneEra] = [
     #             1:00    Italy    CE%sT    1973 Mar 31
     {
       'offset_seconds': 3600,
@@ -14928,7 +14938,7 @@ ZONE_ERAS_Europe_Malta = [
 
 ]
 
-ZONE_INFO_Europe_Malta = {
+ZONE_INFO_Europe_Malta: ZoneInfo = {
     'name': 'Europe/Malta',
     'eras': ZONE_ERAS_Europe_Malta
 }
@@ -14938,7 +14948,7 @@ ZONE_INFO_Europe_Malta = {
 # Era count: 4
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Minsk = [
+ZONE_ERAS_Europe_Minsk: List[ZoneEra] = [
     #             3:00    Russia    MSK/MSD    1990
     {
       'offset_seconds': 10800,
@@ -14990,7 +15000,7 @@ ZONE_ERAS_Europe_Minsk = [
 
 ]
 
-ZONE_INFO_Europe_Minsk = {
+ZONE_INFO_Europe_Minsk: ZoneInfo = {
     'name': 'Europe/Minsk',
     'eras': ZONE_ERAS_Europe_Minsk
 }
@@ -15000,7 +15010,7 @@ ZONE_INFO_Europe_Minsk = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Monaco = [
+ZONE_ERAS_Europe_Monaco: List[ZoneEra] = [
     #             1:00    France    CE%sT    1977
     {
       'offset_seconds': 3600,
@@ -15028,7 +15038,7 @@ ZONE_ERAS_Europe_Monaco = [
 
 ]
 
-ZONE_INFO_Europe_Monaco = {
+ZONE_INFO_Europe_Monaco: ZoneInfo = {
     'name': 'Europe/Monaco',
     'eras': ZONE_ERAS_Europe_Monaco
 }
@@ -15038,7 +15048,7 @@ ZONE_INFO_Europe_Monaco = {
 # Era count: 5
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Moscow = [
+ZONE_ERAS_Europe_Moscow: List[ZoneEra] = [
     #              3:00    Russia    MSK/MSD    1991 Mar 31  2:00s
     {
       'offset_seconds': 10800,
@@ -15102,7 +15112,7 @@ ZONE_ERAS_Europe_Moscow = [
 
 ]
 
-ZONE_INFO_Europe_Moscow = {
+ZONE_INFO_Europe_Moscow: ZoneInfo = {
     'name': 'Europe/Moscow',
     'eras': ZONE_ERAS_Europe_Moscow
 }
@@ -15112,7 +15122,7 @@ ZONE_INFO_Europe_Moscow = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Oslo = [
+ZONE_ERAS_Europe_Oslo: List[ZoneEra] = [
     #             1:00    Norway    CE%sT    1980
     {
       'offset_seconds': 3600,
@@ -15140,7 +15150,7 @@ ZONE_ERAS_Europe_Oslo = [
 
 ]
 
-ZONE_INFO_Europe_Oslo = {
+ZONE_INFO_Europe_Oslo: ZoneInfo = {
     'name': 'Europe/Oslo',
     'eras': ZONE_ERAS_Europe_Oslo
 }
@@ -15150,7 +15160,7 @@ ZONE_INFO_Europe_Oslo = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Paris = [
+ZONE_ERAS_Europe_Paris: List[ZoneEra] = [
     #             1:00    France    CE%sT    1977
     {
       'offset_seconds': 3600,
@@ -15178,7 +15188,7 @@ ZONE_ERAS_Europe_Paris = [
 
 ]
 
-ZONE_INFO_Europe_Paris = {
+ZONE_INFO_Europe_Paris: ZoneInfo = {
     'name': 'Europe/Paris',
     'eras': ZONE_ERAS_Europe_Paris
 }
@@ -15188,7 +15198,7 @@ ZONE_INFO_Europe_Paris = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Prague = [
+ZONE_ERAS_Europe_Prague: List[ZoneEra] = [
     #             1:00    Czech    CE%sT    1979
     {
       'offset_seconds': 3600,
@@ -15216,7 +15226,7 @@ ZONE_ERAS_Europe_Prague = [
 
 ]
 
-ZONE_INFO_Europe_Prague = {
+ZONE_INFO_Europe_Prague: ZoneInfo = {
     'name': 'Europe/Prague',
     'eras': ZONE_ERAS_Europe_Prague
 }
@@ -15226,7 +15236,7 @@ ZONE_INFO_Europe_Prague = {
 # Era count: 6
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Riga = [
+ZONE_ERAS_Europe_Riga: List[ZoneEra] = [
     #             3:00    Russia    MSK/MSD    1989 Mar lastSun  2:00s
     {
       'offset_seconds': 10800,
@@ -15302,7 +15312,7 @@ ZONE_ERAS_Europe_Riga = [
 
 ]
 
-ZONE_INFO_Europe_Riga = {
+ZONE_INFO_Europe_Riga: ZoneInfo = {
     'name': 'Europe/Riga',
     'eras': ZONE_ERAS_Europe_Riga
 }
@@ -15312,7 +15322,7 @@ ZONE_INFO_Europe_Riga = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Rome = [
+ZONE_ERAS_Europe_Rome: List[ZoneEra] = [
     #             1:00    Italy    CE%sT    1980
     {
       'offset_seconds': 3600,
@@ -15340,7 +15350,7 @@ ZONE_ERAS_Europe_Rome = [
 
 ]
 
-ZONE_INFO_Europe_Rome = {
+ZONE_INFO_Europe_Rome: ZoneInfo = {
     'name': 'Europe/Rome',
     'eras': ZONE_ERAS_Europe_Rome
 }
@@ -15350,7 +15360,7 @@ ZONE_INFO_Europe_Rome = {
 # Era count: 7
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Samara = [
+ZONE_ERAS_Europe_Samara: List[ZoneEra] = [
     #              4:00    Russia    +04/+05    1989 Mar 26  2:00s
     {
       'offset_seconds': 14400,
@@ -15438,7 +15448,7 @@ ZONE_ERAS_Europe_Samara = [
 
 ]
 
-ZONE_INFO_Europe_Samara = {
+ZONE_INFO_Europe_Samara: ZoneInfo = {
     'name': 'Europe/Samara',
     'eras': ZONE_ERAS_Europe_Samara
 }
@@ -15448,7 +15458,7 @@ ZONE_INFO_Europe_Samara = {
 # Era count: 7
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Saratov = [
+ZONE_ERAS_Europe_Saratov: List[ZoneEra] = [
     #              4:00    Russia    +04/+05    1988 Mar 27  2:00s
     {
       'offset_seconds': 14400,
@@ -15536,7 +15546,7 @@ ZONE_ERAS_Europe_Saratov = [
 
 ]
 
-ZONE_INFO_Europe_Saratov = {
+ZONE_INFO_Europe_Saratov: ZoneInfo = {
     'name': 'Europe/Saratov',
     'eras': ZONE_ERAS_Europe_Saratov
 }
@@ -15546,7 +15556,7 @@ ZONE_INFO_Europe_Saratov = {
 # Era count: 11
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Simferopol = [
+ZONE_ERAS_Europe_Simferopol: List[ZoneEra] = [
     #              3:00    Russia    MSK/MSD    1990
     {
       'offset_seconds': 10800,
@@ -15682,7 +15692,7 @@ ZONE_ERAS_Europe_Simferopol = [
 
 ]
 
-ZONE_INFO_Europe_Simferopol = {
+ZONE_INFO_Europe_Simferopol: ZoneInfo = {
     'name': 'Europe/Simferopol',
     'eras': ZONE_ERAS_Europe_Simferopol
 }
@@ -15692,7 +15702,7 @@ ZONE_INFO_Europe_Simferopol = {
 # Era count: 5
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Sofia = [
+ZONE_ERAS_Europe_Sofia: List[ZoneEra] = [
     #             2:00    -    EET    1979 Mar 31 23:00
     {
       'offset_seconds': 7200,
@@ -15756,7 +15766,7 @@ ZONE_ERAS_Europe_Sofia = [
 
 ]
 
-ZONE_INFO_Europe_Sofia = {
+ZONE_INFO_Europe_Sofia: ZoneInfo = {
     'name': 'Europe/Sofia',
     'eras': ZONE_ERAS_Europe_Sofia
 }
@@ -15766,7 +15776,7 @@ ZONE_INFO_Europe_Sofia = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Stockholm = [
+ZONE_ERAS_Europe_Stockholm: List[ZoneEra] = [
     #             1:00    -    CET    1980
     {
       'offset_seconds': 3600,
@@ -15794,7 +15804,7 @@ ZONE_ERAS_Europe_Stockholm = [
 
 ]
 
-ZONE_INFO_Europe_Stockholm = {
+ZONE_INFO_Europe_Stockholm: ZoneInfo = {
     'name': 'Europe/Stockholm',
     'eras': ZONE_ERAS_Europe_Stockholm
 }
@@ -15804,7 +15814,7 @@ ZONE_INFO_Europe_Stockholm = {
 # Era count: 6
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Tallinn = [
+ZONE_ERAS_Europe_Tallinn: List[ZoneEra] = [
     #             3:00    Russia    MSK/MSD    1989 Mar 26  2:00s
     {
       'offset_seconds': 10800,
@@ -15880,7 +15890,7 @@ ZONE_ERAS_Europe_Tallinn = [
 
 ]
 
-ZONE_INFO_Europe_Tallinn = {
+ZONE_INFO_Europe_Tallinn: ZoneInfo = {
     'name': 'Europe/Tallinn',
     'eras': ZONE_ERAS_Europe_Tallinn
 }
@@ -15890,7 +15900,7 @@ ZONE_INFO_Europe_Tallinn = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Tirane = [
+ZONE_ERAS_Europe_Tirane: List[ZoneEra] = [
     #             1:00    Albania    CE%sT    1984 Jul
     {
       'offset_seconds': 3600,
@@ -15918,7 +15928,7 @@ ZONE_ERAS_Europe_Tirane = [
 
 ]
 
-ZONE_INFO_Europe_Tirane = {
+ZONE_INFO_Europe_Tirane: ZoneInfo = {
     'name': 'Europe/Tirane',
     'eras': ZONE_ERAS_Europe_Tirane
 }
@@ -15928,7 +15938,7 @@ ZONE_INFO_Europe_Tirane = {
 # Era count: 7
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Ulyanovsk = [
+ZONE_ERAS_Europe_Ulyanovsk: List[ZoneEra] = [
     #              4:00    Russia    +04/+05    1989 Mar 26  2:00s
     {
       'offset_seconds': 14400,
@@ -16016,7 +16026,7 @@ ZONE_ERAS_Europe_Ulyanovsk = [
 
 ]
 
-ZONE_INFO_Europe_Ulyanovsk = {
+ZONE_INFO_Europe_Ulyanovsk: ZoneInfo = {
     'name': 'Europe/Ulyanovsk',
     'eras': ZONE_ERAS_Europe_Ulyanovsk
 }
@@ -16026,7 +16036,7 @@ ZONE_INFO_Europe_Ulyanovsk = {
 # Era count: 6
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Uzhgorod = [
+ZONE_ERAS_Europe_Uzhgorod: List[ZoneEra] = [
     #             3:00    Russia    MSK/MSD    1990
     {
       'offset_seconds': 10800,
@@ -16102,7 +16112,7 @@ ZONE_ERAS_Europe_Uzhgorod = [
 
 ]
 
-ZONE_INFO_Europe_Uzhgorod = {
+ZONE_INFO_Europe_Uzhgorod: ZoneInfo = {
     'name': 'Europe/Uzhgorod',
     'eras': ZONE_ERAS_Europe_Uzhgorod
 }
@@ -16112,7 +16122,7 @@ ZONE_INFO_Europe_Uzhgorod = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Vienna = [
+ZONE_ERAS_Europe_Vienna: List[ZoneEra] = [
     #             1:00    Austria    CE%sT    1981
     {
       'offset_seconds': 3600,
@@ -16140,7 +16150,7 @@ ZONE_ERAS_Europe_Vienna = [
 
 ]
 
-ZONE_INFO_Europe_Vienna = {
+ZONE_INFO_Europe_Vienna: ZoneInfo = {
     'name': 'Europe/Vienna',
     'eras': ZONE_ERAS_Europe_Vienna
 }
@@ -16150,7 +16160,7 @@ ZONE_INFO_Europe_Vienna = {
 # Era count: 7
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Vilnius = [
+ZONE_ERAS_Europe_Vilnius: List[ZoneEra] = [
     #             3:00    Russia    MSK/MSD    1989 Mar 26  2:00s
     {
       'offset_seconds': 10800,
@@ -16238,7 +16248,7 @@ ZONE_ERAS_Europe_Vilnius = [
 
 ]
 
-ZONE_INFO_Europe_Vilnius = {
+ZONE_INFO_Europe_Vilnius: ZoneInfo = {
     'name': 'Europe/Vilnius',
     'eras': ZONE_ERAS_Europe_Vilnius
 }
@@ -16248,7 +16258,7 @@ ZONE_INFO_Europe_Vilnius = {
 # Era count: 8
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Volgograd = [
+ZONE_ERAS_Europe_Volgograd: List[ZoneEra] = [
     #              4:00    Russia    +04/+05    1988 Mar 27  2:00s
     {
       'offset_seconds': 14400,
@@ -16348,7 +16358,7 @@ ZONE_ERAS_Europe_Volgograd = [
 
 ]
 
-ZONE_INFO_Europe_Volgograd = {
+ZONE_INFO_Europe_Volgograd: ZoneInfo = {
     'name': 'Europe/Volgograd',
     'eras': ZONE_ERAS_Europe_Volgograd
 }
@@ -16358,7 +16368,7 @@ ZONE_INFO_Europe_Volgograd = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Warsaw = [
+ZONE_ERAS_Europe_Warsaw: List[ZoneEra] = [
     #             1:00    Poland    CE%sT    1977
     {
       'offset_seconds': 3600,
@@ -16398,7 +16408,7 @@ ZONE_ERAS_Europe_Warsaw = [
 
 ]
 
-ZONE_INFO_Europe_Warsaw = {
+ZONE_INFO_Europe_Warsaw: ZoneInfo = {
     'name': 'Europe/Warsaw',
     'eras': ZONE_ERAS_Europe_Warsaw
 }
@@ -16408,7 +16418,7 @@ ZONE_INFO_Europe_Warsaw = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Zaporozhye = [
+ZONE_ERAS_Europe_Zaporozhye: List[ZoneEra] = [
     #             3:00    Russia    MSK/MSD    1991 Mar 31  2:00
     {
       'offset_seconds': 10800,
@@ -16448,7 +16458,7 @@ ZONE_ERAS_Europe_Zaporozhye = [
 
 ]
 
-ZONE_INFO_Europe_Zaporozhye = {
+ZONE_INFO_Europe_Zaporozhye: ZoneInfo = {
     'name': 'Europe/Zaporozhye',
     'eras': ZONE_ERAS_Europe_Zaporozhye
 }
@@ -16458,7 +16468,7 @@ ZONE_INFO_Europe_Zaporozhye = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Europe_Zurich = [
+ZONE_ERAS_Europe_Zurich: List[ZoneEra] = [
     #             1:00    Swiss    CE%sT    1981
     {
       'offset_seconds': 3600,
@@ -16486,7 +16496,7 @@ ZONE_ERAS_Europe_Zurich = [
 
 ]
 
-ZONE_INFO_Europe_Zurich = {
+ZONE_INFO_Europe_Zurich: ZoneInfo = {
     'name': 'Europe/Zurich',
     'eras': ZONE_ERAS_Europe_Zurich
 }
@@ -16496,7 +16506,7 @@ ZONE_INFO_Europe_Zurich = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_HST = [
+ZONE_ERAS_HST: List[ZoneEra] = [
     # -10:00 - HST
     {
       'offset_seconds': -36000,
@@ -16512,7 +16522,7 @@ ZONE_ERAS_HST = [
 
 ]
 
-ZONE_INFO_HST = {
+ZONE_INFO_HST: ZoneInfo = {
     'name': 'HST',
     'eras': ZONE_ERAS_HST
 }
@@ -16522,7 +16532,7 @@ ZONE_INFO_HST = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Indian_Chagos = [
+ZONE_ERAS_Indian_Chagos: List[ZoneEra] = [
     #             5:00    -    +05    1996
     {
       'offset_seconds': 18000,
@@ -16550,7 +16560,7 @@ ZONE_ERAS_Indian_Chagos = [
 
 ]
 
-ZONE_INFO_Indian_Chagos = {
+ZONE_INFO_Indian_Chagos: ZoneInfo = {
     'name': 'Indian/Chagos',
     'eras': ZONE_ERAS_Indian_Chagos
 }
@@ -16560,7 +16570,7 @@ ZONE_INFO_Indian_Chagos = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Indian_Christmas = [
+ZONE_ERAS_Indian_Christmas: List[ZoneEra] = [
     #             7:00    -    +07
     {
       'offset_seconds': 25200,
@@ -16576,7 +16586,7 @@ ZONE_ERAS_Indian_Christmas = [
 
 ]
 
-ZONE_INFO_Indian_Christmas = {
+ZONE_INFO_Indian_Christmas: ZoneInfo = {
     'name': 'Indian/Christmas',
     'eras': ZONE_ERAS_Indian_Christmas
 }
@@ -16586,7 +16596,7 @@ ZONE_INFO_Indian_Christmas = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Indian_Cocos = [
+ZONE_ERAS_Indian_Cocos: List[ZoneEra] = [
     #             6:30    -    +0630
     {
       'offset_seconds': 23400,
@@ -16602,7 +16612,7 @@ ZONE_ERAS_Indian_Cocos = [
 
 ]
 
-ZONE_INFO_Indian_Cocos = {
+ZONE_INFO_Indian_Cocos: ZoneInfo = {
     'name': 'Indian/Cocos',
     'eras': ZONE_ERAS_Indian_Cocos
 }
@@ -16612,7 +16622,7 @@ ZONE_INFO_Indian_Cocos = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Indian_Kerguelen = [
+ZONE_ERAS_Indian_Kerguelen: List[ZoneEra] = [
     #             5:00    -    +05
     {
       'offset_seconds': 18000,
@@ -16628,7 +16638,7 @@ ZONE_ERAS_Indian_Kerguelen = [
 
 ]
 
-ZONE_INFO_Indian_Kerguelen = {
+ZONE_INFO_Indian_Kerguelen: ZoneInfo = {
     'name': 'Indian/Kerguelen',
     'eras': ZONE_ERAS_Indian_Kerguelen
 }
@@ -16638,7 +16648,7 @@ ZONE_INFO_Indian_Kerguelen = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Indian_Mahe = [
+ZONE_ERAS_Indian_Mahe: List[ZoneEra] = [
     #             4:00    -    +04
     {
       'offset_seconds': 14400,
@@ -16654,7 +16664,7 @@ ZONE_ERAS_Indian_Mahe = [
 
 ]
 
-ZONE_INFO_Indian_Mahe = {
+ZONE_INFO_Indian_Mahe: ZoneInfo = {
     'name': 'Indian/Mahe',
     'eras': ZONE_ERAS_Indian_Mahe
 }
@@ -16664,7 +16674,7 @@ ZONE_INFO_Indian_Mahe = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Indian_Maldives = [
+ZONE_ERAS_Indian_Maldives: List[ZoneEra] = [
     #             5:00    -    +05
     {
       'offset_seconds': 18000,
@@ -16680,7 +16690,7 @@ ZONE_ERAS_Indian_Maldives = [
 
 ]
 
-ZONE_INFO_Indian_Maldives = {
+ZONE_INFO_Indian_Maldives: ZoneInfo = {
     'name': 'Indian/Maldives',
     'eras': ZONE_ERAS_Indian_Maldives
 }
@@ -16690,7 +16700,7 @@ ZONE_INFO_Indian_Maldives = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Indian_Mauritius = [
+ZONE_ERAS_Indian_Mauritius: List[ZoneEra] = [
     #             4:00 Mauritius    +04/+05
     {
       'offset_seconds': 14400,
@@ -16706,7 +16716,7 @@ ZONE_ERAS_Indian_Mauritius = [
 
 ]
 
-ZONE_INFO_Indian_Mauritius = {
+ZONE_INFO_Indian_Mauritius: ZoneInfo = {
     'name': 'Indian/Mauritius',
     'eras': ZONE_ERAS_Indian_Mauritius
 }
@@ -16716,7 +16726,7 @@ ZONE_INFO_Indian_Mauritius = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Indian_Reunion = [
+ZONE_ERAS_Indian_Reunion: List[ZoneEra] = [
     #             4:00    -    +04
     {
       'offset_seconds': 14400,
@@ -16732,7 +16742,7 @@ ZONE_ERAS_Indian_Reunion = [
 
 ]
 
-ZONE_INFO_Indian_Reunion = {
+ZONE_INFO_Indian_Reunion: ZoneInfo = {
     'name': 'Indian/Reunion',
     'eras': ZONE_ERAS_Indian_Reunion
 }
@@ -16742,7 +16752,7 @@ ZONE_INFO_Indian_Reunion = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_MET = [
+ZONE_ERAS_MET: List[ZoneEra] = [
     # 1:00 C-Eur ME%sT
     {
       'offset_seconds': 3600,
@@ -16758,7 +16768,7 @@ ZONE_ERAS_MET = [
 
 ]
 
-ZONE_INFO_MET = {
+ZONE_INFO_MET: ZoneInfo = {
     'name': 'MET',
     'eras': ZONE_ERAS_MET
 }
@@ -16768,7 +16778,7 @@ ZONE_INFO_MET = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_MST = [
+ZONE_ERAS_MST: List[ZoneEra] = [
     # -7:00 - MST
     {
       'offset_seconds': -25200,
@@ -16784,7 +16794,7 @@ ZONE_ERAS_MST = [
 
 ]
 
-ZONE_INFO_MST = {
+ZONE_INFO_MST: ZoneInfo = {
     'name': 'MST',
     'eras': ZONE_ERAS_MST
 }
@@ -16794,7 +16804,7 @@ ZONE_INFO_MST = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_MST7MDT = [
+ZONE_ERAS_MST7MDT: List[ZoneEra] = [
     # -7:00 US M%sT
     {
       'offset_seconds': -25200,
@@ -16810,7 +16820,7 @@ ZONE_ERAS_MST7MDT = [
 
 ]
 
-ZONE_INFO_MST7MDT = {
+ZONE_INFO_MST7MDT: ZoneInfo = {
     'name': 'MST7MDT',
     'eras': ZONE_ERAS_MST7MDT
 }
@@ -16820,7 +16830,7 @@ ZONE_INFO_MST7MDT = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_PST8PDT = [
+ZONE_ERAS_PST8PDT: List[ZoneEra] = [
     # -8:00 US P%sT
     {
       'offset_seconds': -28800,
@@ -16836,7 +16846,7 @@ ZONE_ERAS_PST8PDT = [
 
 ]
 
-ZONE_INFO_PST8PDT = {
+ZONE_INFO_PST8PDT: ZoneInfo = {
     'name': 'PST8PDT',
     'eras': ZONE_ERAS_PST8PDT
 }
@@ -16846,7 +16856,7 @@ ZONE_INFO_PST8PDT = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Apia = [
+ZONE_ERAS_Pacific_Apia: List[ZoneEra] = [
     #             -11:00    WS    -11/-10    2011 Dec 29 24:00
     {
       'offset_seconds': -39600,
@@ -16874,7 +16884,7 @@ ZONE_ERAS_Pacific_Apia = [
 
 ]
 
-ZONE_INFO_Pacific_Apia = {
+ZONE_INFO_Pacific_Apia: ZoneInfo = {
     'name': 'Pacific/Apia',
     'eras': ZONE_ERAS_Pacific_Apia
 }
@@ -16884,7 +16894,7 @@ ZONE_INFO_Pacific_Apia = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Auckland = [
+ZONE_ERAS_Pacific_Auckland: List[ZoneEra] = [
     #             12:00    NZ    NZ%sT
     {
       'offset_seconds': 43200,
@@ -16900,7 +16910,7 @@ ZONE_ERAS_Pacific_Auckland = [
 
 ]
 
-ZONE_INFO_Pacific_Auckland = {
+ZONE_INFO_Pacific_Auckland: ZoneInfo = {
     'name': 'Pacific/Auckland',
     'eras': ZONE_ERAS_Pacific_Auckland
 }
@@ -16910,7 +16920,7 @@ ZONE_INFO_Pacific_Auckland = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Bougainville = [
+ZONE_ERAS_Pacific_Bougainville: List[ZoneEra] = [
     #             10:00    -    +10    2014 Dec 28  2:00
     {
       'offset_seconds': 36000,
@@ -16938,7 +16948,7 @@ ZONE_ERAS_Pacific_Bougainville = [
 
 ]
 
-ZONE_INFO_Pacific_Bougainville = {
+ZONE_INFO_Pacific_Bougainville: ZoneInfo = {
     'name': 'Pacific/Bougainville',
     'eras': ZONE_ERAS_Pacific_Bougainville
 }
@@ -16948,7 +16958,7 @@ ZONE_INFO_Pacific_Bougainville = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Chatham = [
+ZONE_ERAS_Pacific_Chatham: List[ZoneEra] = [
     #             12:45    Chatham    +1245/+1345
     {
       'offset_seconds': 45900,
@@ -16964,7 +16974,7 @@ ZONE_ERAS_Pacific_Chatham = [
 
 ]
 
-ZONE_INFO_Pacific_Chatham = {
+ZONE_INFO_Pacific_Chatham: ZoneInfo = {
     'name': 'Pacific/Chatham',
     'eras': ZONE_ERAS_Pacific_Chatham
 }
@@ -16974,7 +16984,7 @@ ZONE_INFO_Pacific_Chatham = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Chuuk = [
+ZONE_ERAS_Pacific_Chuuk: List[ZoneEra] = [
     #              10:00    -    +10
     {
       'offset_seconds': 36000,
@@ -16990,7 +17000,7 @@ ZONE_ERAS_Pacific_Chuuk = [
 
 ]
 
-ZONE_INFO_Pacific_Chuuk = {
+ZONE_INFO_Pacific_Chuuk: ZoneInfo = {
     'name': 'Pacific/Chuuk',
     'eras': ZONE_ERAS_Pacific_Chuuk
 }
@@ -17000,7 +17010,7 @@ ZONE_INFO_Pacific_Chuuk = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Easter = [
+ZONE_ERAS_Pacific_Easter: List[ZoneEra] = [
     #             -7:00    Chile    -07/-06    1982 Mar 14 3:00u
     {
       'offset_seconds': -25200,
@@ -17028,7 +17038,7 @@ ZONE_ERAS_Pacific_Easter = [
 
 ]
 
-ZONE_INFO_Pacific_Easter = {
+ZONE_INFO_Pacific_Easter: ZoneInfo = {
     'name': 'Pacific/Easter',
     'eras': ZONE_ERAS_Pacific_Easter
 }
@@ -17038,7 +17048,7 @@ ZONE_INFO_Pacific_Easter = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Efate = [
+ZONE_ERAS_Pacific_Efate: List[ZoneEra] = [
     #             11:00    Vanuatu    +11/+12
     {
       'offset_seconds': 39600,
@@ -17054,7 +17064,7 @@ ZONE_ERAS_Pacific_Efate = [
 
 ]
 
-ZONE_INFO_Pacific_Efate = {
+ZONE_INFO_Pacific_Efate: ZoneInfo = {
     'name': 'Pacific/Efate',
     'eras': ZONE_ERAS_Pacific_Efate
 }
@@ -17064,7 +17074,7 @@ ZONE_INFO_Pacific_Efate = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Fakaofo = [
+ZONE_ERAS_Pacific_Fakaofo: List[ZoneEra] = [
     #             -11:00    -    -11    2011 Dec 30
     {
       'offset_seconds': -39600,
@@ -17092,7 +17102,7 @@ ZONE_ERAS_Pacific_Fakaofo = [
 
 ]
 
-ZONE_INFO_Pacific_Fakaofo = {
+ZONE_INFO_Pacific_Fakaofo: ZoneInfo = {
     'name': 'Pacific/Fakaofo',
     'eras': ZONE_ERAS_Pacific_Fakaofo
 }
@@ -17102,7 +17112,7 @@ ZONE_INFO_Pacific_Fakaofo = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Fiji = [
+ZONE_ERAS_Pacific_Fiji: List[ZoneEra] = [
     #             12:00    Fiji    +12/+13
     {
       'offset_seconds': 43200,
@@ -17118,7 +17128,7 @@ ZONE_ERAS_Pacific_Fiji = [
 
 ]
 
-ZONE_INFO_Pacific_Fiji = {
+ZONE_INFO_Pacific_Fiji: ZoneInfo = {
     'name': 'Pacific/Fiji',
     'eras': ZONE_ERAS_Pacific_Fiji
 }
@@ -17128,7 +17138,7 @@ ZONE_INFO_Pacific_Fiji = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Funafuti = [
+ZONE_ERAS_Pacific_Funafuti: List[ZoneEra] = [
     #             12:00    -    +12
     {
       'offset_seconds': 43200,
@@ -17144,7 +17154,7 @@ ZONE_ERAS_Pacific_Funafuti = [
 
 ]
 
-ZONE_INFO_Pacific_Funafuti = {
+ZONE_INFO_Pacific_Funafuti: ZoneInfo = {
     'name': 'Pacific/Funafuti',
     'eras': ZONE_ERAS_Pacific_Funafuti
 }
@@ -17154,7 +17164,7 @@ ZONE_INFO_Pacific_Funafuti = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Galapagos = [
+ZONE_ERAS_Pacific_Galapagos: List[ZoneEra] = [
     #             -5:00    -    -05    1986
     {
       'offset_seconds': -18000,
@@ -17182,7 +17192,7 @@ ZONE_ERAS_Pacific_Galapagos = [
 
 ]
 
-ZONE_INFO_Pacific_Galapagos = {
+ZONE_INFO_Pacific_Galapagos: ZoneInfo = {
     'name': 'Pacific/Galapagos',
     'eras': ZONE_ERAS_Pacific_Galapagos
 }
@@ -17192,7 +17202,7 @@ ZONE_INFO_Pacific_Galapagos = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Gambier = [
+ZONE_ERAS_Pacific_Gambier: List[ZoneEra] = [
     #              -9:00    -    -09
     {
       'offset_seconds': -32400,
@@ -17208,7 +17218,7 @@ ZONE_ERAS_Pacific_Gambier = [
 
 ]
 
-ZONE_INFO_Pacific_Gambier = {
+ZONE_INFO_Pacific_Gambier: ZoneInfo = {
     'name': 'Pacific/Gambier',
     'eras': ZONE_ERAS_Pacific_Gambier
 }
@@ -17218,7 +17228,7 @@ ZONE_INFO_Pacific_Gambier = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Guadalcanal = [
+ZONE_ERAS_Pacific_Guadalcanal: List[ZoneEra] = [
     #             11:00    -    +11
     {
       'offset_seconds': 39600,
@@ -17234,7 +17244,7 @@ ZONE_ERAS_Pacific_Guadalcanal = [
 
 ]
 
-ZONE_INFO_Pacific_Guadalcanal = {
+ZONE_INFO_Pacific_Guadalcanal: ZoneInfo = {
     'name': 'Pacific/Guadalcanal',
     'eras': ZONE_ERAS_Pacific_Guadalcanal
 }
@@ -17244,7 +17254,7 @@ ZONE_INFO_Pacific_Guadalcanal = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Guam = [
+ZONE_ERAS_Pacific_Guam: List[ZoneEra] = [
     #             10:00    Guam    G%sT    2000 Dec 23
     {
       'offset_seconds': 36000,
@@ -17272,7 +17282,7 @@ ZONE_ERAS_Pacific_Guam = [
 
 ]
 
-ZONE_INFO_Pacific_Guam = {
+ZONE_INFO_Pacific_Guam: ZoneInfo = {
     'name': 'Pacific/Guam',
     'eras': ZONE_ERAS_Pacific_Guam
 }
@@ -17282,7 +17292,7 @@ ZONE_INFO_Pacific_Guam = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Honolulu = [
+ZONE_ERAS_Pacific_Honolulu: List[ZoneEra] = [
     #             -10:00    -    HST
     {
       'offset_seconds': -36000,
@@ -17298,7 +17308,7 @@ ZONE_ERAS_Pacific_Honolulu = [
 
 ]
 
-ZONE_INFO_Pacific_Honolulu = {
+ZONE_INFO_Pacific_Honolulu: ZoneInfo = {
     'name': 'Pacific/Honolulu',
     'eras': ZONE_ERAS_Pacific_Honolulu
 }
@@ -17308,7 +17318,7 @@ ZONE_INFO_Pacific_Honolulu = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Kanton = [
+ZONE_ERAS_Pacific_Kanton: List[ZoneEra] = [
     #             -12:00    -    -12    1979 Oct
     {
       'offset_seconds': -43200,
@@ -17348,7 +17358,7 @@ ZONE_ERAS_Pacific_Kanton = [
 
 ]
 
-ZONE_INFO_Pacific_Kanton = {
+ZONE_INFO_Pacific_Kanton: ZoneInfo = {
     'name': 'Pacific/Kanton',
     'eras': ZONE_ERAS_Pacific_Kanton
 }
@@ -17358,7 +17368,7 @@ ZONE_INFO_Pacific_Kanton = {
 # Era count: 3
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Kiritimati = [
+ZONE_ERAS_Pacific_Kiritimati: List[ZoneEra] = [
     #             -10:40    -    -1040    1979 Oct
     {
       'offset_seconds': -38400,
@@ -17398,7 +17408,7 @@ ZONE_ERAS_Pacific_Kiritimati = [
 
 ]
 
-ZONE_INFO_Pacific_Kiritimati = {
+ZONE_INFO_Pacific_Kiritimati: ZoneInfo = {
     'name': 'Pacific/Kiritimati',
     'eras': ZONE_ERAS_Pacific_Kiritimati
 }
@@ -17408,7 +17418,7 @@ ZONE_INFO_Pacific_Kiritimati = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Kosrae = [
+ZONE_ERAS_Pacific_Kosrae: List[ZoneEra] = [
     #              12:00    -    +12    1999
     {
       'offset_seconds': 43200,
@@ -17436,7 +17446,7 @@ ZONE_ERAS_Pacific_Kosrae = [
 
 ]
 
-ZONE_INFO_Pacific_Kosrae = {
+ZONE_INFO_Pacific_Kosrae: ZoneInfo = {
     'name': 'Pacific/Kosrae',
     'eras': ZONE_ERAS_Pacific_Kosrae
 }
@@ -17446,7 +17456,7 @@ ZONE_INFO_Pacific_Kosrae = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Kwajalein = [
+ZONE_ERAS_Pacific_Kwajalein: List[ZoneEra] = [
     #             -12:00    -    -12    1993 Aug 20 24:00
     {
       'offset_seconds': -43200,
@@ -17474,7 +17484,7 @@ ZONE_ERAS_Pacific_Kwajalein = [
 
 ]
 
-ZONE_INFO_Pacific_Kwajalein = {
+ZONE_INFO_Pacific_Kwajalein: ZoneInfo = {
     'name': 'Pacific/Kwajalein',
     'eras': ZONE_ERAS_Pacific_Kwajalein
 }
@@ -17484,7 +17494,7 @@ ZONE_INFO_Pacific_Kwajalein = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Majuro = [
+ZONE_ERAS_Pacific_Majuro: List[ZoneEra] = [
     #              12:00    -    +12
     {
       'offset_seconds': 43200,
@@ -17500,7 +17510,7 @@ ZONE_ERAS_Pacific_Majuro = [
 
 ]
 
-ZONE_INFO_Pacific_Majuro = {
+ZONE_INFO_Pacific_Majuro: ZoneInfo = {
     'name': 'Pacific/Majuro',
     'eras': ZONE_ERAS_Pacific_Majuro
 }
@@ -17510,7 +17520,7 @@ ZONE_INFO_Pacific_Majuro = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Marquesas = [
+ZONE_ERAS_Pacific_Marquesas: List[ZoneEra] = [
     #              -9:30    -    -0930
     {
       'offset_seconds': -34200,
@@ -17526,7 +17536,7 @@ ZONE_ERAS_Pacific_Marquesas = [
 
 ]
 
-ZONE_INFO_Pacific_Marquesas = {
+ZONE_INFO_Pacific_Marquesas: ZoneInfo = {
     'name': 'Pacific/Marquesas',
     'eras': ZONE_ERAS_Pacific_Marquesas
 }
@@ -17536,7 +17546,7 @@ ZONE_INFO_Pacific_Marquesas = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Nauru = [
+ZONE_ERAS_Pacific_Nauru: List[ZoneEra] = [
     #             11:30    -    +1130    1979 Feb 10  2:00
     {
       'offset_seconds': 41400,
@@ -17564,7 +17574,7 @@ ZONE_ERAS_Pacific_Nauru = [
 
 ]
 
-ZONE_INFO_Pacific_Nauru = {
+ZONE_INFO_Pacific_Nauru: ZoneInfo = {
     'name': 'Pacific/Nauru',
     'eras': ZONE_ERAS_Pacific_Nauru
 }
@@ -17574,7 +17584,7 @@ ZONE_INFO_Pacific_Nauru = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Niue = [
+ZONE_ERAS_Pacific_Niue: List[ZoneEra] = [
     #             -11:00    -    -11
     {
       'offset_seconds': -39600,
@@ -17590,7 +17600,7 @@ ZONE_ERAS_Pacific_Niue = [
 
 ]
 
-ZONE_INFO_Pacific_Niue = {
+ZONE_INFO_Pacific_Niue: ZoneInfo = {
     'name': 'Pacific/Niue',
     'eras': ZONE_ERAS_Pacific_Niue
 }
@@ -17600,7 +17610,7 @@ ZONE_INFO_Pacific_Niue = {
 # Era count: 5
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Norfolk = [
+ZONE_ERAS_Pacific_Norfolk: List[ZoneEra] = [
     #             11:30    -    +1130    1974 Oct 27 02:00s
     {
       'offset_seconds': 41400,
@@ -17664,7 +17674,7 @@ ZONE_ERAS_Pacific_Norfolk = [
 
 ]
 
-ZONE_INFO_Pacific_Norfolk = {
+ZONE_INFO_Pacific_Norfolk: ZoneInfo = {
     'name': 'Pacific/Norfolk',
     'eras': ZONE_ERAS_Pacific_Norfolk
 }
@@ -17674,7 +17684,7 @@ ZONE_INFO_Pacific_Norfolk = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Noumea = [
+ZONE_ERAS_Pacific_Noumea: List[ZoneEra] = [
     #             11:00    NC    +11/+12
     {
       'offset_seconds': 39600,
@@ -17690,7 +17700,7 @@ ZONE_ERAS_Pacific_Noumea = [
 
 ]
 
-ZONE_INFO_Pacific_Noumea = {
+ZONE_INFO_Pacific_Noumea: ZoneInfo = {
     'name': 'Pacific/Noumea',
     'eras': ZONE_ERAS_Pacific_Noumea
 }
@@ -17700,7 +17710,7 @@ ZONE_INFO_Pacific_Noumea = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Pago_Pago = [
+ZONE_ERAS_Pacific_Pago_Pago: List[ZoneEra] = [
     #             -11:00    -    SST
     {
       'offset_seconds': -39600,
@@ -17716,7 +17726,7 @@ ZONE_ERAS_Pacific_Pago_Pago = [
 
 ]
 
-ZONE_INFO_Pacific_Pago_Pago = {
+ZONE_INFO_Pacific_Pago_Pago: ZoneInfo = {
     'name': 'Pacific/Pago_Pago',
     'eras': ZONE_ERAS_Pacific_Pago_Pago
 }
@@ -17726,7 +17736,7 @@ ZONE_INFO_Pacific_Pago_Pago = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Palau = [
+ZONE_ERAS_Pacific_Palau: List[ZoneEra] = [
     #               9:00    -    +09
     {
       'offset_seconds': 32400,
@@ -17742,7 +17752,7 @@ ZONE_ERAS_Pacific_Palau = [
 
 ]
 
-ZONE_INFO_Pacific_Palau = {
+ZONE_INFO_Pacific_Palau: ZoneInfo = {
     'name': 'Pacific/Palau',
     'eras': ZONE_ERAS_Pacific_Palau
 }
@@ -17752,7 +17762,7 @@ ZONE_INFO_Pacific_Palau = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Pitcairn = [
+ZONE_ERAS_Pacific_Pitcairn: List[ZoneEra] = [
     #             -8:30    -    -0830    1998 Apr 27  0:00
     {
       'offset_seconds': -30600,
@@ -17780,7 +17790,7 @@ ZONE_ERAS_Pacific_Pitcairn = [
 
 ]
 
-ZONE_INFO_Pacific_Pitcairn = {
+ZONE_INFO_Pacific_Pitcairn: ZoneInfo = {
     'name': 'Pacific/Pitcairn',
     'eras': ZONE_ERAS_Pacific_Pitcairn
 }
@@ -17790,7 +17800,7 @@ ZONE_INFO_Pacific_Pitcairn = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Pohnpei = [
+ZONE_ERAS_Pacific_Pohnpei: List[ZoneEra] = [
     #              11:00    -    +11
     {
       'offset_seconds': 39600,
@@ -17806,7 +17816,7 @@ ZONE_ERAS_Pacific_Pohnpei = [
 
 ]
 
-ZONE_INFO_Pacific_Pohnpei = {
+ZONE_INFO_Pacific_Pohnpei: ZoneInfo = {
     'name': 'Pacific/Pohnpei',
     'eras': ZONE_ERAS_Pacific_Pohnpei
 }
@@ -17816,7 +17826,7 @@ ZONE_INFO_Pacific_Pohnpei = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Port_Moresby = [
+ZONE_ERAS_Pacific_Port_Moresby: List[ZoneEra] = [
     #             10:00    -    +10
     {
       'offset_seconds': 36000,
@@ -17832,7 +17842,7 @@ ZONE_ERAS_Pacific_Port_Moresby = [
 
 ]
 
-ZONE_INFO_Pacific_Port_Moresby = {
+ZONE_INFO_Pacific_Port_Moresby: ZoneInfo = {
     'name': 'Pacific/Port_Moresby',
     'eras': ZONE_ERAS_Pacific_Port_Moresby
 }
@@ -17842,7 +17852,7 @@ ZONE_INFO_Pacific_Port_Moresby = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Rarotonga = [
+ZONE_ERAS_Pacific_Rarotonga: List[ZoneEra] = [
     #             -10:30    -    -1030    1978 Nov 12
     {
       'offset_seconds': -37800,
@@ -17870,7 +17880,7 @@ ZONE_ERAS_Pacific_Rarotonga = [
 
 ]
 
-ZONE_INFO_Pacific_Rarotonga = {
+ZONE_INFO_Pacific_Rarotonga: ZoneInfo = {
     'name': 'Pacific/Rarotonga',
     'eras': ZONE_ERAS_Pacific_Rarotonga
 }
@@ -17880,7 +17890,7 @@ ZONE_INFO_Pacific_Rarotonga = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Tahiti = [
+ZONE_ERAS_Pacific_Tahiti: List[ZoneEra] = [
     #             -10:00    -    -10
     {
       'offset_seconds': -36000,
@@ -17896,7 +17906,7 @@ ZONE_ERAS_Pacific_Tahiti = [
 
 ]
 
-ZONE_INFO_Pacific_Tahiti = {
+ZONE_INFO_Pacific_Tahiti: ZoneInfo = {
     'name': 'Pacific/Tahiti',
     'eras': ZONE_ERAS_Pacific_Tahiti
 }
@@ -17906,7 +17916,7 @@ ZONE_INFO_Pacific_Tahiti = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Tarawa = [
+ZONE_ERAS_Pacific_Tarawa: List[ZoneEra] = [
     #              12:00    -    +12
     {
       'offset_seconds': 43200,
@@ -17922,7 +17932,7 @@ ZONE_ERAS_Pacific_Tarawa = [
 
 ]
 
-ZONE_INFO_Pacific_Tarawa = {
+ZONE_INFO_Pacific_Tarawa: ZoneInfo = {
     'name': 'Pacific/Tarawa',
     'eras': ZONE_ERAS_Pacific_Tarawa
 }
@@ -17932,7 +17942,7 @@ ZONE_INFO_Pacific_Tarawa = {
 # Era count: 2
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Tongatapu = [
+ZONE_ERAS_Pacific_Tongatapu: List[ZoneEra] = [
     #             13:00    -    +13    1999
     {
       'offset_seconds': 46800,
@@ -17960,7 +17970,7 @@ ZONE_ERAS_Pacific_Tongatapu = [
 
 ]
 
-ZONE_INFO_Pacific_Tongatapu = {
+ZONE_INFO_Pacific_Tongatapu: ZoneInfo = {
     'name': 'Pacific/Tongatapu',
     'eras': ZONE_ERAS_Pacific_Tongatapu
 }
@@ -17970,7 +17980,7 @@ ZONE_INFO_Pacific_Tongatapu = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Wake = [
+ZONE_ERAS_Pacific_Wake: List[ZoneEra] = [
     #             12:00    -    +12
     {
       'offset_seconds': 43200,
@@ -17986,7 +17996,7 @@ ZONE_ERAS_Pacific_Wake = [
 
 ]
 
-ZONE_INFO_Pacific_Wake = {
+ZONE_INFO_Pacific_Wake: ZoneInfo = {
     'name': 'Pacific/Wake',
     'eras': ZONE_ERAS_Pacific_Wake
 }
@@ -17996,7 +18006,7 @@ ZONE_INFO_Pacific_Wake = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_Pacific_Wallis = [
+ZONE_ERAS_Pacific_Wallis: List[ZoneEra] = [
     #             12:00    -    +12
     {
       'offset_seconds': 43200,
@@ -18012,7 +18022,7 @@ ZONE_ERAS_Pacific_Wallis = [
 
 ]
 
-ZONE_INFO_Pacific_Wallis = {
+ZONE_INFO_Pacific_Wallis: ZoneInfo = {
     'name': 'Pacific/Wallis',
     'eras': ZONE_ERAS_Pacific_Wallis
 }
@@ -18022,7 +18032,7 @@ ZONE_INFO_Pacific_Wallis = {
 # Era count: 1
 #---------------------------------------------------------------------------
 
-ZONE_ERAS_WET = [
+ZONE_ERAS_WET: List[ZoneEra] = [
     # 0:00 EU WE%sT
     {
       'offset_seconds': 0,
@@ -18038,7 +18048,7 @@ ZONE_ERAS_WET = [
 
 ]
 
-ZONE_INFO_WET = {
+ZONE_INFO_WET: ZoneInfo = {
     'name': 'WET',
     'eras': ZONE_ERAS_WET
 }
@@ -18050,1303 +18060,1303 @@ ZONE_INFO_WET = {
 #---------------------------------------------------------------------------
 
 # Link name: Africa/Accra -> Africa/Abidjan
-ZONE_INFO_Africa_Accra = {
+ZONE_INFO_Africa_Accra: ZoneInfo = {
     'name': 'Africa/Accra',
     'eras': ZONE_ERAS_Africa_Abidjan
 }
 
 # Link name: Africa/Addis_Ababa -> Africa/Nairobi
-ZONE_INFO_Africa_Addis_Ababa = {
+ZONE_INFO_Africa_Addis_Ababa: ZoneInfo = {
     'name': 'Africa/Addis_Ababa',
     'eras': ZONE_ERAS_Africa_Nairobi
 }
 
 # Link name: Africa/Asmara -> Africa/Nairobi
-ZONE_INFO_Africa_Asmara = {
+ZONE_INFO_Africa_Asmara: ZoneInfo = {
     'name': 'Africa/Asmara',
     'eras': ZONE_ERAS_Africa_Nairobi
 }
 
 # Link name: Africa/Asmera -> Africa/Nairobi
-ZONE_INFO_Africa_Asmera = {
+ZONE_INFO_Africa_Asmera: ZoneInfo = {
     'name': 'Africa/Asmera',
     'eras': ZONE_ERAS_Africa_Nairobi
 }
 
 # Link name: Africa/Bamako -> Africa/Abidjan
-ZONE_INFO_Africa_Bamako = {
+ZONE_INFO_Africa_Bamako: ZoneInfo = {
     'name': 'Africa/Bamako',
     'eras': ZONE_ERAS_Africa_Abidjan
 }
 
 # Link name: Africa/Bangui -> Africa/Lagos
-ZONE_INFO_Africa_Bangui = {
+ZONE_INFO_Africa_Bangui: ZoneInfo = {
     'name': 'Africa/Bangui',
     'eras': ZONE_ERAS_Africa_Lagos
 }
 
 # Link name: Africa/Banjul -> Africa/Abidjan
-ZONE_INFO_Africa_Banjul = {
+ZONE_INFO_Africa_Banjul: ZoneInfo = {
     'name': 'Africa/Banjul',
     'eras': ZONE_ERAS_Africa_Abidjan
 }
 
 # Link name: Africa/Blantyre -> Africa/Maputo
-ZONE_INFO_Africa_Blantyre = {
+ZONE_INFO_Africa_Blantyre: ZoneInfo = {
     'name': 'Africa/Blantyre',
     'eras': ZONE_ERAS_Africa_Maputo
 }
 
 # Link name: Africa/Brazzaville -> Africa/Lagos
-ZONE_INFO_Africa_Brazzaville = {
+ZONE_INFO_Africa_Brazzaville: ZoneInfo = {
     'name': 'Africa/Brazzaville',
     'eras': ZONE_ERAS_Africa_Lagos
 }
 
 # Link name: Africa/Bujumbura -> Africa/Maputo
-ZONE_INFO_Africa_Bujumbura = {
+ZONE_INFO_Africa_Bujumbura: ZoneInfo = {
     'name': 'Africa/Bujumbura',
     'eras': ZONE_ERAS_Africa_Maputo
 }
 
 # Link name: Africa/Conakry -> Africa/Abidjan
-ZONE_INFO_Africa_Conakry = {
+ZONE_INFO_Africa_Conakry: ZoneInfo = {
     'name': 'Africa/Conakry',
     'eras': ZONE_ERAS_Africa_Abidjan
 }
 
 # Link name: Africa/Dakar -> Africa/Abidjan
-ZONE_INFO_Africa_Dakar = {
+ZONE_INFO_Africa_Dakar: ZoneInfo = {
     'name': 'Africa/Dakar',
     'eras': ZONE_ERAS_Africa_Abidjan
 }
 
 # Link name: Africa/Dar_es_Salaam -> Africa/Nairobi
-ZONE_INFO_Africa_Dar_es_Salaam = {
+ZONE_INFO_Africa_Dar_es_Salaam: ZoneInfo = {
     'name': 'Africa/Dar_es_Salaam',
     'eras': ZONE_ERAS_Africa_Nairobi
 }
 
 # Link name: Africa/Djibouti -> Africa/Nairobi
-ZONE_INFO_Africa_Djibouti = {
+ZONE_INFO_Africa_Djibouti: ZoneInfo = {
     'name': 'Africa/Djibouti',
     'eras': ZONE_ERAS_Africa_Nairobi
 }
 
 # Link name: Africa/Douala -> Africa/Lagos
-ZONE_INFO_Africa_Douala = {
+ZONE_INFO_Africa_Douala: ZoneInfo = {
     'name': 'Africa/Douala',
     'eras': ZONE_ERAS_Africa_Lagos
 }
 
 # Link name: Africa/Freetown -> Africa/Abidjan
-ZONE_INFO_Africa_Freetown = {
+ZONE_INFO_Africa_Freetown: ZoneInfo = {
     'name': 'Africa/Freetown',
     'eras': ZONE_ERAS_Africa_Abidjan
 }
 
 # Link name: Africa/Gaborone -> Africa/Maputo
-ZONE_INFO_Africa_Gaborone = {
+ZONE_INFO_Africa_Gaborone: ZoneInfo = {
     'name': 'Africa/Gaborone',
     'eras': ZONE_ERAS_Africa_Maputo
 }
 
 # Link name: Africa/Harare -> Africa/Maputo
-ZONE_INFO_Africa_Harare = {
+ZONE_INFO_Africa_Harare: ZoneInfo = {
     'name': 'Africa/Harare',
     'eras': ZONE_ERAS_Africa_Maputo
 }
 
 # Link name: Africa/Kampala -> Africa/Nairobi
-ZONE_INFO_Africa_Kampala = {
+ZONE_INFO_Africa_Kampala: ZoneInfo = {
     'name': 'Africa/Kampala',
     'eras': ZONE_ERAS_Africa_Nairobi
 }
 
 # Link name: Africa/Kigali -> Africa/Maputo
-ZONE_INFO_Africa_Kigali = {
+ZONE_INFO_Africa_Kigali: ZoneInfo = {
     'name': 'Africa/Kigali',
     'eras': ZONE_ERAS_Africa_Maputo
 }
 
 # Link name: Africa/Kinshasa -> Africa/Lagos
-ZONE_INFO_Africa_Kinshasa = {
+ZONE_INFO_Africa_Kinshasa: ZoneInfo = {
     'name': 'Africa/Kinshasa',
     'eras': ZONE_ERAS_Africa_Lagos
 }
 
 # Link name: Africa/Libreville -> Africa/Lagos
-ZONE_INFO_Africa_Libreville = {
+ZONE_INFO_Africa_Libreville: ZoneInfo = {
     'name': 'Africa/Libreville',
     'eras': ZONE_ERAS_Africa_Lagos
 }
 
 # Link name: Africa/Lome -> Africa/Abidjan
-ZONE_INFO_Africa_Lome = {
+ZONE_INFO_Africa_Lome: ZoneInfo = {
     'name': 'Africa/Lome',
     'eras': ZONE_ERAS_Africa_Abidjan
 }
 
 # Link name: Africa/Luanda -> Africa/Lagos
-ZONE_INFO_Africa_Luanda = {
+ZONE_INFO_Africa_Luanda: ZoneInfo = {
     'name': 'Africa/Luanda',
     'eras': ZONE_ERAS_Africa_Lagos
 }
 
 # Link name: Africa/Lubumbashi -> Africa/Maputo
-ZONE_INFO_Africa_Lubumbashi = {
+ZONE_INFO_Africa_Lubumbashi: ZoneInfo = {
     'name': 'Africa/Lubumbashi',
     'eras': ZONE_ERAS_Africa_Maputo
 }
 
 # Link name: Africa/Lusaka -> Africa/Maputo
-ZONE_INFO_Africa_Lusaka = {
+ZONE_INFO_Africa_Lusaka: ZoneInfo = {
     'name': 'Africa/Lusaka',
     'eras': ZONE_ERAS_Africa_Maputo
 }
 
 # Link name: Africa/Malabo -> Africa/Lagos
-ZONE_INFO_Africa_Malabo = {
+ZONE_INFO_Africa_Malabo: ZoneInfo = {
     'name': 'Africa/Malabo',
     'eras': ZONE_ERAS_Africa_Lagos
 }
 
 # Link name: Africa/Maseru -> Africa/Johannesburg
-ZONE_INFO_Africa_Maseru = {
+ZONE_INFO_Africa_Maseru: ZoneInfo = {
     'name': 'Africa/Maseru',
     'eras': ZONE_ERAS_Africa_Johannesburg
 }
 
 # Link name: Africa/Mbabane -> Africa/Johannesburg
-ZONE_INFO_Africa_Mbabane = {
+ZONE_INFO_Africa_Mbabane: ZoneInfo = {
     'name': 'Africa/Mbabane',
     'eras': ZONE_ERAS_Africa_Johannesburg
 }
 
 # Link name: Africa/Mogadishu -> Africa/Nairobi
-ZONE_INFO_Africa_Mogadishu = {
+ZONE_INFO_Africa_Mogadishu: ZoneInfo = {
     'name': 'Africa/Mogadishu',
     'eras': ZONE_ERAS_Africa_Nairobi
 }
 
 # Link name: Africa/Niamey -> Africa/Lagos
-ZONE_INFO_Africa_Niamey = {
+ZONE_INFO_Africa_Niamey: ZoneInfo = {
     'name': 'Africa/Niamey',
     'eras': ZONE_ERAS_Africa_Lagos
 }
 
 # Link name: Africa/Nouakchott -> Africa/Abidjan
-ZONE_INFO_Africa_Nouakchott = {
+ZONE_INFO_Africa_Nouakchott: ZoneInfo = {
     'name': 'Africa/Nouakchott',
     'eras': ZONE_ERAS_Africa_Abidjan
 }
 
 # Link name: Africa/Ouagadougou -> Africa/Abidjan
-ZONE_INFO_Africa_Ouagadougou = {
+ZONE_INFO_Africa_Ouagadougou: ZoneInfo = {
     'name': 'Africa/Ouagadougou',
     'eras': ZONE_ERAS_Africa_Abidjan
 }
 
 # Link name: Africa/Porto-Novo -> Africa/Lagos
-ZONE_INFO_Africa_Porto_Novo = {
+ZONE_INFO_Africa_Porto_Novo: ZoneInfo = {
     'name': 'Africa/Porto-Novo',
     'eras': ZONE_ERAS_Africa_Lagos
 }
 
 # Link name: Africa/Timbuktu -> Africa/Abidjan
-ZONE_INFO_Africa_Timbuktu = {
+ZONE_INFO_Africa_Timbuktu: ZoneInfo = {
     'name': 'Africa/Timbuktu',
     'eras': ZONE_ERAS_Africa_Abidjan
 }
 
 # Link name: America/Anguilla -> America/Puerto_Rico
-ZONE_INFO_America_Anguilla = {
+ZONE_INFO_America_Anguilla: ZoneInfo = {
     'name': 'America/Anguilla',
     'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/Antigua -> America/Puerto_Rico
-ZONE_INFO_America_Antigua = {
+ZONE_INFO_America_Antigua: ZoneInfo = {
     'name': 'America/Antigua',
     'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/Argentina/ComodRivadavia -> America/Argentina/Catamarca
-ZONE_INFO_America_Argentina_ComodRivadavia = {
+ZONE_INFO_America_Argentina_ComodRivadavia: ZoneInfo = {
     'name': 'America/Argentina/ComodRivadavia',
     'eras': ZONE_ERAS_America_Argentina_Catamarca
 }
 
 # Link name: America/Aruba -> America/Puerto_Rico
-ZONE_INFO_America_Aruba = {
+ZONE_INFO_America_Aruba: ZoneInfo = {
     'name': 'America/Aruba',
     'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/Atikokan -> America/Panama
-ZONE_INFO_America_Atikokan = {
+ZONE_INFO_America_Atikokan: ZoneInfo = {
     'name': 'America/Atikokan',
     'eras': ZONE_ERAS_America_Panama
 }
 
 # Link name: America/Atka -> America/Adak
-ZONE_INFO_America_Atka = {
+ZONE_INFO_America_Atka: ZoneInfo = {
     'name': 'America/Atka',
     'eras': ZONE_ERAS_America_Adak
 }
 
 # Link name: America/Blanc-Sablon -> America/Puerto_Rico
-ZONE_INFO_America_Blanc_Sablon = {
+ZONE_INFO_America_Blanc_Sablon: ZoneInfo = {
     'name': 'America/Blanc-Sablon',
     'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/Buenos_Aires -> America/Argentina/Buenos_Aires
-ZONE_INFO_America_Buenos_Aires = {
+ZONE_INFO_America_Buenos_Aires: ZoneInfo = {
     'name': 'America/Buenos_Aires',
     'eras': ZONE_ERAS_America_Argentina_Buenos_Aires
 }
 
 # Link name: America/Catamarca -> America/Argentina/Catamarca
-ZONE_INFO_America_Catamarca = {
+ZONE_INFO_America_Catamarca: ZoneInfo = {
     'name': 'America/Catamarca',
     'eras': ZONE_ERAS_America_Argentina_Catamarca
 }
 
 # Link name: America/Cayman -> America/Panama
-ZONE_INFO_America_Cayman = {
+ZONE_INFO_America_Cayman: ZoneInfo = {
     'name': 'America/Cayman',
     'eras': ZONE_ERAS_America_Panama
 }
 
 # Link name: America/Coral_Harbour -> America/Panama
-ZONE_INFO_America_Coral_Harbour = {
+ZONE_INFO_America_Coral_Harbour: ZoneInfo = {
     'name': 'America/Coral_Harbour',
     'eras': ZONE_ERAS_America_Panama
 }
 
 # Link name: America/Cordoba -> America/Argentina/Cordoba
-ZONE_INFO_America_Cordoba = {
+ZONE_INFO_America_Cordoba: ZoneInfo = {
     'name': 'America/Cordoba',
     'eras': ZONE_ERAS_America_Argentina_Cordoba
 }
 
 # Link name: America/Creston -> America/Phoenix
-ZONE_INFO_America_Creston = {
+ZONE_INFO_America_Creston: ZoneInfo = {
     'name': 'America/Creston',
     'eras': ZONE_ERAS_America_Phoenix
 }
 
 # Link name: America/Curacao -> America/Puerto_Rico
-ZONE_INFO_America_Curacao = {
+ZONE_INFO_America_Curacao: ZoneInfo = {
     'name': 'America/Curacao',
     'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/Dominica -> America/Puerto_Rico
-ZONE_INFO_America_Dominica = {
+ZONE_INFO_America_Dominica: ZoneInfo = {
     'name': 'America/Dominica',
     'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/Ensenada -> America/Tijuana
-ZONE_INFO_America_Ensenada = {
+ZONE_INFO_America_Ensenada: ZoneInfo = {
     'name': 'America/Ensenada',
     'eras': ZONE_ERAS_America_Tijuana
 }
 
 # Link name: America/Fort_Wayne -> America/Indiana/Indianapolis
-ZONE_INFO_America_Fort_Wayne = {
+ZONE_INFO_America_Fort_Wayne: ZoneInfo = {
     'name': 'America/Fort_Wayne',
     'eras': ZONE_ERAS_America_Indiana_Indianapolis
 }
 
 # Link name: America/Godthab -> America/Nuuk
-ZONE_INFO_America_Godthab = {
+ZONE_INFO_America_Godthab: ZoneInfo = {
     'name': 'America/Godthab',
     'eras': ZONE_ERAS_America_Nuuk
 }
 
 # Link name: America/Grenada -> America/Puerto_Rico
-ZONE_INFO_America_Grenada = {
+ZONE_INFO_America_Grenada: ZoneInfo = {
     'name': 'America/Grenada',
     'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/Guadeloupe -> America/Puerto_Rico
-ZONE_INFO_America_Guadeloupe = {
+ZONE_INFO_America_Guadeloupe: ZoneInfo = {
     'name': 'America/Guadeloupe',
     'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/Indianapolis -> America/Indiana/Indianapolis
-ZONE_INFO_America_Indianapolis = {
+ZONE_INFO_America_Indianapolis: ZoneInfo = {
     'name': 'America/Indianapolis',
     'eras': ZONE_ERAS_America_Indiana_Indianapolis
 }
 
 # Link name: America/Jujuy -> America/Argentina/Jujuy
-ZONE_INFO_America_Jujuy = {
+ZONE_INFO_America_Jujuy: ZoneInfo = {
     'name': 'America/Jujuy',
     'eras': ZONE_ERAS_America_Argentina_Jujuy
 }
 
 # Link name: America/Knox_IN -> America/Indiana/Knox
-ZONE_INFO_America_Knox_IN = {
+ZONE_INFO_America_Knox_IN: ZoneInfo = {
     'name': 'America/Knox_IN',
     'eras': ZONE_ERAS_America_Indiana_Knox
 }
 
 # Link name: America/Kralendijk -> America/Puerto_Rico
-ZONE_INFO_America_Kralendijk = {
+ZONE_INFO_America_Kralendijk: ZoneInfo = {
     'name': 'America/Kralendijk',
     'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/Louisville -> America/Kentucky/Louisville
-ZONE_INFO_America_Louisville = {
+ZONE_INFO_America_Louisville: ZoneInfo = {
     'name': 'America/Louisville',
     'eras': ZONE_ERAS_America_Kentucky_Louisville
 }
 
 # Link name: America/Lower_Princes -> America/Puerto_Rico
-ZONE_INFO_America_Lower_Princes = {
+ZONE_INFO_America_Lower_Princes: ZoneInfo = {
     'name': 'America/Lower_Princes',
     'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/Marigot -> America/Puerto_Rico
-ZONE_INFO_America_Marigot = {
+ZONE_INFO_America_Marigot: ZoneInfo = {
     'name': 'America/Marigot',
     'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/Mendoza -> America/Argentina/Mendoza
-ZONE_INFO_America_Mendoza = {
+ZONE_INFO_America_Mendoza: ZoneInfo = {
     'name': 'America/Mendoza',
     'eras': ZONE_ERAS_America_Argentina_Mendoza
 }
 
 # Link name: America/Montreal -> America/Toronto
-ZONE_INFO_America_Montreal = {
+ZONE_INFO_America_Montreal: ZoneInfo = {
     'name': 'America/Montreal',
     'eras': ZONE_ERAS_America_Toronto
 }
 
 # Link name: America/Montserrat -> America/Puerto_Rico
-ZONE_INFO_America_Montserrat = {
+ZONE_INFO_America_Montserrat: ZoneInfo = {
     'name': 'America/Montserrat',
     'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/Nassau -> America/Toronto
-ZONE_INFO_America_Nassau = {
+ZONE_INFO_America_Nassau: ZoneInfo = {
     'name': 'America/Nassau',
     'eras': ZONE_ERAS_America_Toronto
 }
 
 # Link name: America/Port_of_Spain -> America/Puerto_Rico
-ZONE_INFO_America_Port_of_Spain = {
+ZONE_INFO_America_Port_of_Spain: ZoneInfo = {
     'name': 'America/Port_of_Spain',
     'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/Porto_Acre -> America/Rio_Branco
-ZONE_INFO_America_Porto_Acre = {
+ZONE_INFO_America_Porto_Acre: ZoneInfo = {
     'name': 'America/Porto_Acre',
     'eras': ZONE_ERAS_America_Rio_Branco
 }
 
 # Link name: America/Rosario -> America/Argentina/Cordoba
-ZONE_INFO_America_Rosario = {
+ZONE_INFO_America_Rosario: ZoneInfo = {
     'name': 'America/Rosario',
     'eras': ZONE_ERAS_America_Argentina_Cordoba
 }
 
 # Link name: America/Santa_Isabel -> America/Tijuana
-ZONE_INFO_America_Santa_Isabel = {
+ZONE_INFO_America_Santa_Isabel: ZoneInfo = {
     'name': 'America/Santa_Isabel',
     'eras': ZONE_ERAS_America_Tijuana
 }
 
 # Link name: America/Shiprock -> America/Denver
-ZONE_INFO_America_Shiprock = {
+ZONE_INFO_America_Shiprock: ZoneInfo = {
     'name': 'America/Shiprock',
     'eras': ZONE_ERAS_America_Denver
 }
 
 # Link name: America/St_Barthelemy -> America/Puerto_Rico
-ZONE_INFO_America_St_Barthelemy = {
+ZONE_INFO_America_St_Barthelemy: ZoneInfo = {
     'name': 'America/St_Barthelemy',
     'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/St_Kitts -> America/Puerto_Rico
-ZONE_INFO_America_St_Kitts = {
+ZONE_INFO_America_St_Kitts: ZoneInfo = {
     'name': 'America/St_Kitts',
     'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/St_Lucia -> America/Puerto_Rico
-ZONE_INFO_America_St_Lucia = {
+ZONE_INFO_America_St_Lucia: ZoneInfo = {
     'name': 'America/St_Lucia',
     'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/St_Thomas -> America/Puerto_Rico
-ZONE_INFO_America_St_Thomas = {
+ZONE_INFO_America_St_Thomas: ZoneInfo = {
     'name': 'America/St_Thomas',
     'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/St_Vincent -> America/Puerto_Rico
-ZONE_INFO_America_St_Vincent = {
+ZONE_INFO_America_St_Vincent: ZoneInfo = {
     'name': 'America/St_Vincent',
     'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/Tortola -> America/Puerto_Rico
-ZONE_INFO_America_Tortola = {
+ZONE_INFO_America_Tortola: ZoneInfo = {
     'name': 'America/Tortola',
     'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: America/Virgin -> America/Puerto_Rico
-ZONE_INFO_America_Virgin = {
+ZONE_INFO_America_Virgin: ZoneInfo = {
     'name': 'America/Virgin',
     'eras': ZONE_ERAS_America_Puerto_Rico
 }
 
 # Link name: Antarctica/DumontDUrville -> Pacific/Port_Moresby
-ZONE_INFO_Antarctica_DumontDUrville = {
+ZONE_INFO_Antarctica_DumontDUrville: ZoneInfo = {
     'name': 'Antarctica/DumontDUrville',
     'eras': ZONE_ERAS_Pacific_Port_Moresby
 }
 
 # Link name: Antarctica/McMurdo -> Pacific/Auckland
-ZONE_INFO_Antarctica_McMurdo = {
+ZONE_INFO_Antarctica_McMurdo: ZoneInfo = {
     'name': 'Antarctica/McMurdo',
     'eras': ZONE_ERAS_Pacific_Auckland
 }
 
 # Link name: Antarctica/South_Pole -> Pacific/Auckland
-ZONE_INFO_Antarctica_South_Pole = {
+ZONE_INFO_Antarctica_South_Pole: ZoneInfo = {
     'name': 'Antarctica/South_Pole',
     'eras': ZONE_ERAS_Pacific_Auckland
 }
 
 # Link name: Antarctica/Syowa -> Asia/Riyadh
-ZONE_INFO_Antarctica_Syowa = {
+ZONE_INFO_Antarctica_Syowa: ZoneInfo = {
     'name': 'Antarctica/Syowa',
     'eras': ZONE_ERAS_Asia_Riyadh
 }
 
 # Link name: Arctic/Longyearbyen -> Europe/Oslo
-ZONE_INFO_Arctic_Longyearbyen = {
+ZONE_INFO_Arctic_Longyearbyen: ZoneInfo = {
     'name': 'Arctic/Longyearbyen',
     'eras': ZONE_ERAS_Europe_Oslo
 }
 
 # Link name: Asia/Aden -> Asia/Riyadh
-ZONE_INFO_Asia_Aden = {
+ZONE_INFO_Asia_Aden: ZoneInfo = {
     'name': 'Asia/Aden',
     'eras': ZONE_ERAS_Asia_Riyadh
 }
 
 # Link name: Asia/Ashkhabad -> Asia/Ashgabat
-ZONE_INFO_Asia_Ashkhabad = {
+ZONE_INFO_Asia_Ashkhabad: ZoneInfo = {
     'name': 'Asia/Ashkhabad',
     'eras': ZONE_ERAS_Asia_Ashgabat
 }
 
 # Link name: Asia/Bahrain -> Asia/Qatar
-ZONE_INFO_Asia_Bahrain = {
+ZONE_INFO_Asia_Bahrain: ZoneInfo = {
     'name': 'Asia/Bahrain',
     'eras': ZONE_ERAS_Asia_Qatar
 }
 
 # Link name: Asia/Calcutta -> Asia/Kolkata
-ZONE_INFO_Asia_Calcutta = {
+ZONE_INFO_Asia_Calcutta: ZoneInfo = {
     'name': 'Asia/Calcutta',
     'eras': ZONE_ERAS_Asia_Kolkata
 }
 
 # Link name: Asia/Chongqing -> Asia/Shanghai
-ZONE_INFO_Asia_Chongqing = {
+ZONE_INFO_Asia_Chongqing: ZoneInfo = {
     'name': 'Asia/Chongqing',
     'eras': ZONE_ERAS_Asia_Shanghai
 }
 
 # Link name: Asia/Chungking -> Asia/Shanghai
-ZONE_INFO_Asia_Chungking = {
+ZONE_INFO_Asia_Chungking: ZoneInfo = {
     'name': 'Asia/Chungking',
     'eras': ZONE_ERAS_Asia_Shanghai
 }
 
 # Link name: Asia/Dacca -> Asia/Dhaka
-ZONE_INFO_Asia_Dacca = {
+ZONE_INFO_Asia_Dacca: ZoneInfo = {
     'name': 'Asia/Dacca',
     'eras': ZONE_ERAS_Asia_Dhaka
 }
 
 # Link name: Asia/Harbin -> Asia/Shanghai
-ZONE_INFO_Asia_Harbin = {
+ZONE_INFO_Asia_Harbin: ZoneInfo = {
     'name': 'Asia/Harbin',
     'eras': ZONE_ERAS_Asia_Shanghai
 }
 
 # Link name: Asia/Istanbul -> Europe/Istanbul
-ZONE_INFO_Asia_Istanbul = {
+ZONE_INFO_Asia_Istanbul: ZoneInfo = {
     'name': 'Asia/Istanbul',
     'eras': ZONE_ERAS_Europe_Istanbul
 }
 
 # Link name: Asia/Kashgar -> Asia/Urumqi
-ZONE_INFO_Asia_Kashgar = {
+ZONE_INFO_Asia_Kashgar: ZoneInfo = {
     'name': 'Asia/Kashgar',
     'eras': ZONE_ERAS_Asia_Urumqi
 }
 
 # Link name: Asia/Katmandu -> Asia/Kathmandu
-ZONE_INFO_Asia_Katmandu = {
+ZONE_INFO_Asia_Katmandu: ZoneInfo = {
     'name': 'Asia/Katmandu',
     'eras': ZONE_ERAS_Asia_Kathmandu
 }
 
 # Link name: Asia/Kuwait -> Asia/Riyadh
-ZONE_INFO_Asia_Kuwait = {
+ZONE_INFO_Asia_Kuwait: ZoneInfo = {
     'name': 'Asia/Kuwait',
     'eras': ZONE_ERAS_Asia_Riyadh
 }
 
 # Link name: Asia/Macao -> Asia/Macau
-ZONE_INFO_Asia_Macao = {
+ZONE_INFO_Asia_Macao: ZoneInfo = {
     'name': 'Asia/Macao',
     'eras': ZONE_ERAS_Asia_Macau
 }
 
 # Link name: Asia/Muscat -> Asia/Dubai
-ZONE_INFO_Asia_Muscat = {
+ZONE_INFO_Asia_Muscat: ZoneInfo = {
     'name': 'Asia/Muscat',
     'eras': ZONE_ERAS_Asia_Dubai
 }
 
 # Link name: Asia/Phnom_Penh -> Asia/Bangkok
-ZONE_INFO_Asia_Phnom_Penh = {
+ZONE_INFO_Asia_Phnom_Penh: ZoneInfo = {
     'name': 'Asia/Phnom_Penh',
     'eras': ZONE_ERAS_Asia_Bangkok
 }
 
 # Link name: Asia/Rangoon -> Asia/Yangon
-ZONE_INFO_Asia_Rangoon = {
+ZONE_INFO_Asia_Rangoon: ZoneInfo = {
     'name': 'Asia/Rangoon',
     'eras': ZONE_ERAS_Asia_Yangon
 }
 
 # Link name: Asia/Saigon -> Asia/Ho_Chi_Minh
-ZONE_INFO_Asia_Saigon = {
+ZONE_INFO_Asia_Saigon: ZoneInfo = {
     'name': 'Asia/Saigon',
     'eras': ZONE_ERAS_Asia_Ho_Chi_Minh
 }
 
 # Link name: Asia/Tel_Aviv -> Asia/Jerusalem
-ZONE_INFO_Asia_Tel_Aviv = {
+ZONE_INFO_Asia_Tel_Aviv: ZoneInfo = {
     'name': 'Asia/Tel_Aviv',
     'eras': ZONE_ERAS_Asia_Jerusalem
 }
 
 # Link name: Asia/Thimbu -> Asia/Thimphu
-ZONE_INFO_Asia_Thimbu = {
+ZONE_INFO_Asia_Thimbu: ZoneInfo = {
     'name': 'Asia/Thimbu',
     'eras': ZONE_ERAS_Asia_Thimphu
 }
 
 # Link name: Asia/Ujung_Pandang -> Asia/Makassar
-ZONE_INFO_Asia_Ujung_Pandang = {
+ZONE_INFO_Asia_Ujung_Pandang: ZoneInfo = {
     'name': 'Asia/Ujung_Pandang',
     'eras': ZONE_ERAS_Asia_Makassar
 }
 
 # Link name: Asia/Ulan_Bator -> Asia/Ulaanbaatar
-ZONE_INFO_Asia_Ulan_Bator = {
+ZONE_INFO_Asia_Ulan_Bator: ZoneInfo = {
     'name': 'Asia/Ulan_Bator',
     'eras': ZONE_ERAS_Asia_Ulaanbaatar
 }
 
 # Link name: Asia/Vientiane -> Asia/Bangkok
-ZONE_INFO_Asia_Vientiane = {
+ZONE_INFO_Asia_Vientiane: ZoneInfo = {
     'name': 'Asia/Vientiane',
     'eras': ZONE_ERAS_Asia_Bangkok
 }
 
 # Link name: Atlantic/Faeroe -> Atlantic/Faroe
-ZONE_INFO_Atlantic_Faeroe = {
+ZONE_INFO_Atlantic_Faeroe: ZoneInfo = {
     'name': 'Atlantic/Faeroe',
     'eras': ZONE_ERAS_Atlantic_Faroe
 }
 
 # Link name: Atlantic/Jan_Mayen -> Europe/Oslo
-ZONE_INFO_Atlantic_Jan_Mayen = {
+ZONE_INFO_Atlantic_Jan_Mayen: ZoneInfo = {
     'name': 'Atlantic/Jan_Mayen',
     'eras': ZONE_ERAS_Europe_Oslo
 }
 
 # Link name: Atlantic/St_Helena -> Africa/Abidjan
-ZONE_INFO_Atlantic_St_Helena = {
+ZONE_INFO_Atlantic_St_Helena: ZoneInfo = {
     'name': 'Atlantic/St_Helena',
     'eras': ZONE_ERAS_Africa_Abidjan
 }
 
 # Link name: Australia/ACT -> Australia/Sydney
-ZONE_INFO_Australia_ACT = {
+ZONE_INFO_Australia_ACT: ZoneInfo = {
     'name': 'Australia/ACT',
     'eras': ZONE_ERAS_Australia_Sydney
 }
 
 # Link name: Australia/Canberra -> Australia/Sydney
-ZONE_INFO_Australia_Canberra = {
+ZONE_INFO_Australia_Canberra: ZoneInfo = {
     'name': 'Australia/Canberra',
     'eras': ZONE_ERAS_Australia_Sydney
 }
 
 # Link name: Australia/Currie -> Australia/Hobart
-ZONE_INFO_Australia_Currie = {
+ZONE_INFO_Australia_Currie: ZoneInfo = {
     'name': 'Australia/Currie',
     'eras': ZONE_ERAS_Australia_Hobart
 }
 
 # Link name: Australia/LHI -> Australia/Lord_Howe
-ZONE_INFO_Australia_LHI = {
+ZONE_INFO_Australia_LHI: ZoneInfo = {
     'name': 'Australia/LHI',
     'eras': ZONE_ERAS_Australia_Lord_Howe
 }
 
 # Link name: Australia/NSW -> Australia/Sydney
-ZONE_INFO_Australia_NSW = {
+ZONE_INFO_Australia_NSW: ZoneInfo = {
     'name': 'Australia/NSW',
     'eras': ZONE_ERAS_Australia_Sydney
 }
 
 # Link name: Australia/North -> Australia/Darwin
-ZONE_INFO_Australia_North = {
+ZONE_INFO_Australia_North: ZoneInfo = {
     'name': 'Australia/North',
     'eras': ZONE_ERAS_Australia_Darwin
 }
 
 # Link name: Australia/Queensland -> Australia/Brisbane
-ZONE_INFO_Australia_Queensland = {
+ZONE_INFO_Australia_Queensland: ZoneInfo = {
     'name': 'Australia/Queensland',
     'eras': ZONE_ERAS_Australia_Brisbane
 }
 
 # Link name: Australia/South -> Australia/Adelaide
-ZONE_INFO_Australia_South = {
+ZONE_INFO_Australia_South: ZoneInfo = {
     'name': 'Australia/South',
     'eras': ZONE_ERAS_Australia_Adelaide
 }
 
 # Link name: Australia/Tasmania -> Australia/Hobart
-ZONE_INFO_Australia_Tasmania = {
+ZONE_INFO_Australia_Tasmania: ZoneInfo = {
     'name': 'Australia/Tasmania',
     'eras': ZONE_ERAS_Australia_Hobart
 }
 
 # Link name: Australia/Victoria -> Australia/Melbourne
-ZONE_INFO_Australia_Victoria = {
+ZONE_INFO_Australia_Victoria: ZoneInfo = {
     'name': 'Australia/Victoria',
     'eras': ZONE_ERAS_Australia_Melbourne
 }
 
 # Link name: Australia/West -> Australia/Perth
-ZONE_INFO_Australia_West = {
+ZONE_INFO_Australia_West: ZoneInfo = {
     'name': 'Australia/West',
     'eras': ZONE_ERAS_Australia_Perth
 }
 
 # Link name: Australia/Yancowinna -> Australia/Broken_Hill
-ZONE_INFO_Australia_Yancowinna = {
+ZONE_INFO_Australia_Yancowinna: ZoneInfo = {
     'name': 'Australia/Yancowinna',
     'eras': ZONE_ERAS_Australia_Broken_Hill
 }
 
 # Link name: Brazil/Acre -> America/Rio_Branco
-ZONE_INFO_Brazil_Acre = {
+ZONE_INFO_Brazil_Acre: ZoneInfo = {
     'name': 'Brazil/Acre',
     'eras': ZONE_ERAS_America_Rio_Branco
 }
 
 # Link name: Brazil/DeNoronha -> America/Noronha
-ZONE_INFO_Brazil_DeNoronha = {
+ZONE_INFO_Brazil_DeNoronha: ZoneInfo = {
     'name': 'Brazil/DeNoronha',
     'eras': ZONE_ERAS_America_Noronha
 }
 
 # Link name: Brazil/East -> America/Sao_Paulo
-ZONE_INFO_Brazil_East = {
+ZONE_INFO_Brazil_East: ZoneInfo = {
     'name': 'Brazil/East',
     'eras': ZONE_ERAS_America_Sao_Paulo
 }
 
 # Link name: Brazil/West -> America/Manaus
-ZONE_INFO_Brazil_West = {
+ZONE_INFO_Brazil_West: ZoneInfo = {
     'name': 'Brazil/West',
     'eras': ZONE_ERAS_America_Manaus
 }
 
 # Link name: Canada/Atlantic -> America/Halifax
-ZONE_INFO_Canada_Atlantic = {
+ZONE_INFO_Canada_Atlantic: ZoneInfo = {
     'name': 'Canada/Atlantic',
     'eras': ZONE_ERAS_America_Halifax
 }
 
 # Link name: Canada/Central -> America/Winnipeg
-ZONE_INFO_Canada_Central = {
+ZONE_INFO_Canada_Central: ZoneInfo = {
     'name': 'Canada/Central',
     'eras': ZONE_ERAS_America_Winnipeg
 }
 
 # Link name: Canada/Eastern -> America/Toronto
-ZONE_INFO_Canada_Eastern = {
+ZONE_INFO_Canada_Eastern: ZoneInfo = {
     'name': 'Canada/Eastern',
     'eras': ZONE_ERAS_America_Toronto
 }
 
 # Link name: Canada/Mountain -> America/Edmonton
-ZONE_INFO_Canada_Mountain = {
+ZONE_INFO_Canada_Mountain: ZoneInfo = {
     'name': 'Canada/Mountain',
     'eras': ZONE_ERAS_America_Edmonton
 }
 
 # Link name: Canada/Newfoundland -> America/St_Johns
-ZONE_INFO_Canada_Newfoundland = {
+ZONE_INFO_Canada_Newfoundland: ZoneInfo = {
     'name': 'Canada/Newfoundland',
     'eras': ZONE_ERAS_America_St_Johns
 }
 
 # Link name: Canada/Pacific -> America/Vancouver
-ZONE_INFO_Canada_Pacific = {
+ZONE_INFO_Canada_Pacific: ZoneInfo = {
     'name': 'Canada/Pacific',
     'eras': ZONE_ERAS_America_Vancouver
 }
 
 # Link name: Canada/Saskatchewan -> America/Regina
-ZONE_INFO_Canada_Saskatchewan = {
+ZONE_INFO_Canada_Saskatchewan: ZoneInfo = {
     'name': 'Canada/Saskatchewan',
     'eras': ZONE_ERAS_America_Regina
 }
 
 # Link name: Canada/Yukon -> America/Whitehorse
-ZONE_INFO_Canada_Yukon = {
+ZONE_INFO_Canada_Yukon: ZoneInfo = {
     'name': 'Canada/Yukon',
     'eras': ZONE_ERAS_America_Whitehorse
 }
 
 # Link name: Chile/Continental -> America/Santiago
-ZONE_INFO_Chile_Continental = {
+ZONE_INFO_Chile_Continental: ZoneInfo = {
     'name': 'Chile/Continental',
     'eras': ZONE_ERAS_America_Santiago
 }
 
 # Link name: Chile/EasterIsland -> Pacific/Easter
-ZONE_INFO_Chile_EasterIsland = {
+ZONE_INFO_Chile_EasterIsland: ZoneInfo = {
     'name': 'Chile/EasterIsland',
     'eras': ZONE_ERAS_Pacific_Easter
 }
 
 # Link name: Cuba -> America/Havana
-ZONE_INFO_Cuba = {
+ZONE_INFO_Cuba: ZoneInfo = {
     'name': 'Cuba',
     'eras': ZONE_ERAS_America_Havana
 }
 
 # Link name: Egypt -> Africa/Cairo
-ZONE_INFO_Egypt = {
+ZONE_INFO_Egypt: ZoneInfo = {
     'name': 'Egypt',
     'eras': ZONE_ERAS_Africa_Cairo
 }
 
 # Link name: Eire -> Europe/Dublin
-ZONE_INFO_Eire = {
+ZONE_INFO_Eire: ZoneInfo = {
     'name': 'Eire',
     'eras': ZONE_ERAS_Europe_Dublin
 }
 
 # Link name: Etc/GMT+0 -> Etc/GMT
-ZONE_INFO_Etc_GMT_PLUS_0 = {
+ZONE_INFO_Etc_GMT_PLUS_0: ZoneInfo = {
     'name': 'Etc/GMT+0',
     'eras': ZONE_ERAS_Etc_GMT
 }
 
 # Link name: Etc/GMT-0 -> Etc/GMT
-ZONE_INFO_Etc_GMT_0 = {
+ZONE_INFO_Etc_GMT_0: ZoneInfo = {
     'name': 'Etc/GMT-0',
     'eras': ZONE_ERAS_Etc_GMT
 }
 
 # Link name: Etc/GMT0 -> Etc/GMT
-ZONE_INFO_Etc_GMT0 = {
+ZONE_INFO_Etc_GMT0: ZoneInfo = {
     'name': 'Etc/GMT0',
     'eras': ZONE_ERAS_Etc_GMT
 }
 
 # Link name: Etc/Greenwich -> Etc/GMT
-ZONE_INFO_Etc_Greenwich = {
+ZONE_INFO_Etc_Greenwich: ZoneInfo = {
     'name': 'Etc/Greenwich',
     'eras': ZONE_ERAS_Etc_GMT
 }
 
 # Link name: Etc/UCT -> Etc/UTC
-ZONE_INFO_Etc_UCT = {
+ZONE_INFO_Etc_UCT: ZoneInfo = {
     'name': 'Etc/UCT',
     'eras': ZONE_ERAS_Etc_UTC
 }
 
 # Link name: Etc/Universal -> Etc/UTC
-ZONE_INFO_Etc_Universal = {
+ZONE_INFO_Etc_Universal: ZoneInfo = {
     'name': 'Etc/Universal',
     'eras': ZONE_ERAS_Etc_UTC
 }
 
 # Link name: Etc/Zulu -> Etc/UTC
-ZONE_INFO_Etc_Zulu = {
+ZONE_INFO_Etc_Zulu: ZoneInfo = {
     'name': 'Etc/Zulu',
     'eras': ZONE_ERAS_Etc_UTC
 }
 
 # Link name: Europe/Belfast -> Europe/London
-ZONE_INFO_Europe_Belfast = {
+ZONE_INFO_Europe_Belfast: ZoneInfo = {
     'name': 'Europe/Belfast',
     'eras': ZONE_ERAS_Europe_London
 }
 
 # Link name: Europe/Bratislava -> Europe/Prague
-ZONE_INFO_Europe_Bratislava = {
+ZONE_INFO_Europe_Bratislava: ZoneInfo = {
     'name': 'Europe/Bratislava',
     'eras': ZONE_ERAS_Europe_Prague
 }
 
 # Link name: Europe/Busingen -> Europe/Zurich
-ZONE_INFO_Europe_Busingen = {
+ZONE_INFO_Europe_Busingen: ZoneInfo = {
     'name': 'Europe/Busingen',
     'eras': ZONE_ERAS_Europe_Zurich
 }
 
 # Link name: Europe/Guernsey -> Europe/London
-ZONE_INFO_Europe_Guernsey = {
+ZONE_INFO_Europe_Guernsey: ZoneInfo = {
     'name': 'Europe/Guernsey',
     'eras': ZONE_ERAS_Europe_London
 }
 
 # Link name: Europe/Isle_of_Man -> Europe/London
-ZONE_INFO_Europe_Isle_of_Man = {
+ZONE_INFO_Europe_Isle_of_Man: ZoneInfo = {
     'name': 'Europe/Isle_of_Man',
     'eras': ZONE_ERAS_Europe_London
 }
 
 # Link name: Europe/Jersey -> Europe/London
-ZONE_INFO_Europe_Jersey = {
+ZONE_INFO_Europe_Jersey: ZoneInfo = {
     'name': 'Europe/Jersey',
     'eras': ZONE_ERAS_Europe_London
 }
 
 # Link name: Europe/Ljubljana -> Europe/Belgrade
-ZONE_INFO_Europe_Ljubljana = {
+ZONE_INFO_Europe_Ljubljana: ZoneInfo = {
     'name': 'Europe/Ljubljana',
     'eras': ZONE_ERAS_Europe_Belgrade
 }
 
 # Link name: Europe/Mariehamn -> Europe/Helsinki
-ZONE_INFO_Europe_Mariehamn = {
+ZONE_INFO_Europe_Mariehamn: ZoneInfo = {
     'name': 'Europe/Mariehamn',
     'eras': ZONE_ERAS_Europe_Helsinki
 }
 
 # Link name: Europe/Nicosia -> Asia/Nicosia
-ZONE_INFO_Europe_Nicosia = {
+ZONE_INFO_Europe_Nicosia: ZoneInfo = {
     'name': 'Europe/Nicosia',
     'eras': ZONE_ERAS_Asia_Nicosia
 }
 
 # Link name: Europe/Podgorica -> Europe/Belgrade
-ZONE_INFO_Europe_Podgorica = {
+ZONE_INFO_Europe_Podgorica: ZoneInfo = {
     'name': 'Europe/Podgorica',
     'eras': ZONE_ERAS_Europe_Belgrade
 }
 
 # Link name: Europe/San_Marino -> Europe/Rome
-ZONE_INFO_Europe_San_Marino = {
+ZONE_INFO_Europe_San_Marino: ZoneInfo = {
     'name': 'Europe/San_Marino',
     'eras': ZONE_ERAS_Europe_Rome
 }
 
 # Link name: Europe/Sarajevo -> Europe/Belgrade
-ZONE_INFO_Europe_Sarajevo = {
+ZONE_INFO_Europe_Sarajevo: ZoneInfo = {
     'name': 'Europe/Sarajevo',
     'eras': ZONE_ERAS_Europe_Belgrade
 }
 
 # Link name: Europe/Skopje -> Europe/Belgrade
-ZONE_INFO_Europe_Skopje = {
+ZONE_INFO_Europe_Skopje: ZoneInfo = {
     'name': 'Europe/Skopje',
     'eras': ZONE_ERAS_Europe_Belgrade
 }
 
 # Link name: Europe/Tiraspol -> Europe/Chisinau
-ZONE_INFO_Europe_Tiraspol = {
+ZONE_INFO_Europe_Tiraspol: ZoneInfo = {
     'name': 'Europe/Tiraspol',
     'eras': ZONE_ERAS_Europe_Chisinau
 }
 
 # Link name: Europe/Vaduz -> Europe/Zurich
-ZONE_INFO_Europe_Vaduz = {
+ZONE_INFO_Europe_Vaduz: ZoneInfo = {
     'name': 'Europe/Vaduz',
     'eras': ZONE_ERAS_Europe_Zurich
 }
 
 # Link name: Europe/Vatican -> Europe/Rome
-ZONE_INFO_Europe_Vatican = {
+ZONE_INFO_Europe_Vatican: ZoneInfo = {
     'name': 'Europe/Vatican',
     'eras': ZONE_ERAS_Europe_Rome
 }
 
 # Link name: Europe/Zagreb -> Europe/Belgrade
-ZONE_INFO_Europe_Zagreb = {
+ZONE_INFO_Europe_Zagreb: ZoneInfo = {
     'name': 'Europe/Zagreb',
     'eras': ZONE_ERAS_Europe_Belgrade
 }
 
 # Link name: GB -> Europe/London
-ZONE_INFO_GB = {
+ZONE_INFO_GB: ZoneInfo = {
     'name': 'GB',
     'eras': ZONE_ERAS_Europe_London
 }
 
 # Link name: GB-Eire -> Europe/London
-ZONE_INFO_GB_Eire = {
+ZONE_INFO_GB_Eire: ZoneInfo = {
     'name': 'GB-Eire',
     'eras': ZONE_ERAS_Europe_London
 }
 
 # Link name: GMT -> Etc/GMT
-ZONE_INFO_GMT = {
+ZONE_INFO_GMT: ZoneInfo = {
     'name': 'GMT',
     'eras': ZONE_ERAS_Etc_GMT
 }
 
 # Link name: GMT+0 -> Etc/GMT
-ZONE_INFO_GMT_PLUS_0 = {
+ZONE_INFO_GMT_PLUS_0: ZoneInfo = {
     'name': 'GMT+0',
     'eras': ZONE_ERAS_Etc_GMT
 }
 
 # Link name: GMT-0 -> Etc/GMT
-ZONE_INFO_GMT_0 = {
+ZONE_INFO_GMT_0: ZoneInfo = {
     'name': 'GMT-0',
     'eras': ZONE_ERAS_Etc_GMT
 }
 
 # Link name: GMT0 -> Etc/GMT
-ZONE_INFO_GMT0 = {
+ZONE_INFO_GMT0: ZoneInfo = {
     'name': 'GMT0',
     'eras': ZONE_ERAS_Etc_GMT
 }
 
 # Link name: Greenwich -> Etc/GMT
-ZONE_INFO_Greenwich = {
+ZONE_INFO_Greenwich: ZoneInfo = {
     'name': 'Greenwich',
     'eras': ZONE_ERAS_Etc_GMT
 }
 
 # Link name: Hongkong -> Asia/Hong_Kong
-ZONE_INFO_Hongkong = {
+ZONE_INFO_Hongkong: ZoneInfo = {
     'name': 'Hongkong',
     'eras': ZONE_ERAS_Asia_Hong_Kong
 }
 
 # Link name: Iceland -> Atlantic/Reykjavik
-ZONE_INFO_Iceland = {
+ZONE_INFO_Iceland: ZoneInfo = {
     'name': 'Iceland',
     'eras': ZONE_ERAS_Atlantic_Reykjavik
 }
 
 # Link name: Indian/Antananarivo -> Africa/Nairobi
-ZONE_INFO_Indian_Antananarivo = {
+ZONE_INFO_Indian_Antananarivo: ZoneInfo = {
     'name': 'Indian/Antananarivo',
     'eras': ZONE_ERAS_Africa_Nairobi
 }
 
 # Link name: Indian/Comoro -> Africa/Nairobi
-ZONE_INFO_Indian_Comoro = {
+ZONE_INFO_Indian_Comoro: ZoneInfo = {
     'name': 'Indian/Comoro',
     'eras': ZONE_ERAS_Africa_Nairobi
 }
 
 # Link name: Indian/Mayotte -> Africa/Nairobi
-ZONE_INFO_Indian_Mayotte = {
+ZONE_INFO_Indian_Mayotte: ZoneInfo = {
     'name': 'Indian/Mayotte',
     'eras': ZONE_ERAS_Africa_Nairobi
 }
 
 # Link name: Iran -> Asia/Tehran
-ZONE_INFO_Iran = {
+ZONE_INFO_Iran: ZoneInfo = {
     'name': 'Iran',
     'eras': ZONE_ERAS_Asia_Tehran
 }
 
 # Link name: Israel -> Asia/Jerusalem
-ZONE_INFO_Israel = {
+ZONE_INFO_Israel: ZoneInfo = {
     'name': 'Israel',
     'eras': ZONE_ERAS_Asia_Jerusalem
 }
 
 # Link name: Jamaica -> America/Jamaica
-ZONE_INFO_Jamaica = {
+ZONE_INFO_Jamaica: ZoneInfo = {
     'name': 'Jamaica',
     'eras': ZONE_ERAS_America_Jamaica
 }
 
 # Link name: Japan -> Asia/Tokyo
-ZONE_INFO_Japan = {
+ZONE_INFO_Japan: ZoneInfo = {
     'name': 'Japan',
     'eras': ZONE_ERAS_Asia_Tokyo
 }
 
 # Link name: Kwajalein -> Pacific/Kwajalein
-ZONE_INFO_Kwajalein = {
+ZONE_INFO_Kwajalein: ZoneInfo = {
     'name': 'Kwajalein',
     'eras': ZONE_ERAS_Pacific_Kwajalein
 }
 
 # Link name: Libya -> Africa/Tripoli
-ZONE_INFO_Libya = {
+ZONE_INFO_Libya: ZoneInfo = {
     'name': 'Libya',
     'eras': ZONE_ERAS_Africa_Tripoli
 }
 
 # Link name: Mexico/BajaNorte -> America/Tijuana
-ZONE_INFO_Mexico_BajaNorte = {
+ZONE_INFO_Mexico_BajaNorte: ZoneInfo = {
     'name': 'Mexico/BajaNorte',
     'eras': ZONE_ERAS_America_Tijuana
 }
 
 # Link name: Mexico/BajaSur -> America/Mazatlan
-ZONE_INFO_Mexico_BajaSur = {
+ZONE_INFO_Mexico_BajaSur: ZoneInfo = {
     'name': 'Mexico/BajaSur',
     'eras': ZONE_ERAS_America_Mazatlan
 }
 
 # Link name: Mexico/General -> America/Mexico_City
-ZONE_INFO_Mexico_General = {
+ZONE_INFO_Mexico_General: ZoneInfo = {
     'name': 'Mexico/General',
     'eras': ZONE_ERAS_America_Mexico_City
 }
 
 # Link name: NZ -> Pacific/Auckland
-ZONE_INFO_NZ = {
+ZONE_INFO_NZ: ZoneInfo = {
     'name': 'NZ',
     'eras': ZONE_ERAS_Pacific_Auckland
 }
 
 # Link name: NZ-CHAT -> Pacific/Chatham
-ZONE_INFO_NZ_CHAT = {
+ZONE_INFO_NZ_CHAT: ZoneInfo = {
     'name': 'NZ-CHAT',
     'eras': ZONE_ERAS_Pacific_Chatham
 }
 
 # Link name: Navajo -> America/Denver
-ZONE_INFO_Navajo = {
+ZONE_INFO_Navajo: ZoneInfo = {
     'name': 'Navajo',
     'eras': ZONE_ERAS_America_Denver
 }
 
 # Link name: PRC -> Asia/Shanghai
-ZONE_INFO_PRC = {
+ZONE_INFO_PRC: ZoneInfo = {
     'name': 'PRC',
     'eras': ZONE_ERAS_Asia_Shanghai
 }
 
 # Link name: Pacific/Enderbury -> Pacific/Kanton
-ZONE_INFO_Pacific_Enderbury = {
+ZONE_INFO_Pacific_Enderbury: ZoneInfo = {
     'name': 'Pacific/Enderbury',
     'eras': ZONE_ERAS_Pacific_Kanton
 }
 
 # Link name: Pacific/Johnston -> Pacific/Honolulu
-ZONE_INFO_Pacific_Johnston = {
+ZONE_INFO_Pacific_Johnston: ZoneInfo = {
     'name': 'Pacific/Johnston',
     'eras': ZONE_ERAS_Pacific_Honolulu
 }
 
 # Link name: Pacific/Midway -> Pacific/Pago_Pago
-ZONE_INFO_Pacific_Midway = {
+ZONE_INFO_Pacific_Midway: ZoneInfo = {
     'name': 'Pacific/Midway',
     'eras': ZONE_ERAS_Pacific_Pago_Pago
 }
 
 # Link name: Pacific/Ponape -> Pacific/Pohnpei
-ZONE_INFO_Pacific_Ponape = {
+ZONE_INFO_Pacific_Ponape: ZoneInfo = {
     'name': 'Pacific/Ponape',
     'eras': ZONE_ERAS_Pacific_Pohnpei
 }
 
 # Link name: Pacific/Saipan -> Pacific/Guam
-ZONE_INFO_Pacific_Saipan = {
+ZONE_INFO_Pacific_Saipan: ZoneInfo = {
     'name': 'Pacific/Saipan',
     'eras': ZONE_ERAS_Pacific_Guam
 }
 
 # Link name: Pacific/Samoa -> Pacific/Pago_Pago
-ZONE_INFO_Pacific_Samoa = {
+ZONE_INFO_Pacific_Samoa: ZoneInfo = {
     'name': 'Pacific/Samoa',
     'eras': ZONE_ERAS_Pacific_Pago_Pago
 }
 
 # Link name: Pacific/Truk -> Pacific/Chuuk
-ZONE_INFO_Pacific_Truk = {
+ZONE_INFO_Pacific_Truk: ZoneInfo = {
     'name': 'Pacific/Truk',
     'eras': ZONE_ERAS_Pacific_Chuuk
 }
 
 # Link name: Pacific/Yap -> Pacific/Chuuk
-ZONE_INFO_Pacific_Yap = {
+ZONE_INFO_Pacific_Yap: ZoneInfo = {
     'name': 'Pacific/Yap',
     'eras': ZONE_ERAS_Pacific_Chuuk
 }
 
 # Link name: Poland -> Europe/Warsaw
-ZONE_INFO_Poland = {
+ZONE_INFO_Poland: ZoneInfo = {
     'name': 'Poland',
     'eras': ZONE_ERAS_Europe_Warsaw
 }
 
 # Link name: Portugal -> Europe/Lisbon
-ZONE_INFO_Portugal = {
+ZONE_INFO_Portugal: ZoneInfo = {
     'name': 'Portugal',
     'eras': ZONE_ERAS_Europe_Lisbon
 }
 
 # Link name: ROC -> Asia/Taipei
-ZONE_INFO_ROC = {
+ZONE_INFO_ROC: ZoneInfo = {
     'name': 'ROC',
     'eras': ZONE_ERAS_Asia_Taipei
 }
 
 # Link name: ROK -> Asia/Seoul
-ZONE_INFO_ROK = {
+ZONE_INFO_ROK: ZoneInfo = {
     'name': 'ROK',
     'eras': ZONE_ERAS_Asia_Seoul
 }
 
 # Link name: Singapore -> Asia/Singapore
-ZONE_INFO_Singapore = {
+ZONE_INFO_Singapore: ZoneInfo = {
     'name': 'Singapore',
     'eras': ZONE_ERAS_Asia_Singapore
 }
 
 # Link name: Turkey -> Europe/Istanbul
-ZONE_INFO_Turkey = {
+ZONE_INFO_Turkey: ZoneInfo = {
     'name': 'Turkey',
     'eras': ZONE_ERAS_Europe_Istanbul
 }
 
 # Link name: UCT -> Etc/UTC
-ZONE_INFO_UCT = {
+ZONE_INFO_UCT: ZoneInfo = {
     'name': 'UCT',
     'eras': ZONE_ERAS_Etc_UTC
 }
 
 # Link name: US/Alaska -> America/Anchorage
-ZONE_INFO_US_Alaska = {
+ZONE_INFO_US_Alaska: ZoneInfo = {
     'name': 'US/Alaska',
     'eras': ZONE_ERAS_America_Anchorage
 }
 
 # Link name: US/Aleutian -> America/Adak
-ZONE_INFO_US_Aleutian = {
+ZONE_INFO_US_Aleutian: ZoneInfo = {
     'name': 'US/Aleutian',
     'eras': ZONE_ERAS_America_Adak
 }
 
 # Link name: US/Arizona -> America/Phoenix
-ZONE_INFO_US_Arizona = {
+ZONE_INFO_US_Arizona: ZoneInfo = {
     'name': 'US/Arizona',
     'eras': ZONE_ERAS_America_Phoenix
 }
 
 # Link name: US/Central -> America/Chicago
-ZONE_INFO_US_Central = {
+ZONE_INFO_US_Central: ZoneInfo = {
     'name': 'US/Central',
     'eras': ZONE_ERAS_America_Chicago
 }
 
 # Link name: US/East-Indiana -> America/Indiana/Indianapolis
-ZONE_INFO_US_East_Indiana = {
+ZONE_INFO_US_East_Indiana: ZoneInfo = {
     'name': 'US/East-Indiana',
     'eras': ZONE_ERAS_America_Indiana_Indianapolis
 }
 
 # Link name: US/Eastern -> America/New_York
-ZONE_INFO_US_Eastern = {
+ZONE_INFO_US_Eastern: ZoneInfo = {
     'name': 'US/Eastern',
     'eras': ZONE_ERAS_America_New_York
 }
 
 # Link name: US/Hawaii -> Pacific/Honolulu
-ZONE_INFO_US_Hawaii = {
+ZONE_INFO_US_Hawaii: ZoneInfo = {
     'name': 'US/Hawaii',
     'eras': ZONE_ERAS_Pacific_Honolulu
 }
 
 # Link name: US/Indiana-Starke -> America/Indiana/Knox
-ZONE_INFO_US_Indiana_Starke = {
+ZONE_INFO_US_Indiana_Starke: ZoneInfo = {
     'name': 'US/Indiana-Starke',
     'eras': ZONE_ERAS_America_Indiana_Knox
 }
 
 # Link name: US/Michigan -> America/Detroit
-ZONE_INFO_US_Michigan = {
+ZONE_INFO_US_Michigan: ZoneInfo = {
     'name': 'US/Michigan',
     'eras': ZONE_ERAS_America_Detroit
 }
 
 # Link name: US/Mountain -> America/Denver
-ZONE_INFO_US_Mountain = {
+ZONE_INFO_US_Mountain: ZoneInfo = {
     'name': 'US/Mountain',
     'eras': ZONE_ERAS_America_Denver
 }
 
 # Link name: US/Pacific -> America/Los_Angeles
-ZONE_INFO_US_Pacific = {
+ZONE_INFO_US_Pacific: ZoneInfo = {
     'name': 'US/Pacific',
     'eras': ZONE_ERAS_America_Los_Angeles
 }
 
 # Link name: US/Samoa -> Pacific/Pago_Pago
-ZONE_INFO_US_Samoa = {
+ZONE_INFO_US_Samoa: ZoneInfo = {
     'name': 'US/Samoa',
     'eras': ZONE_ERAS_Pacific_Pago_Pago
 }
 
 # Link name: UTC -> Etc/UTC
-ZONE_INFO_UTC = {
+ZONE_INFO_UTC: ZoneInfo = {
     'name': 'UTC',
     'eras': ZONE_ERAS_Etc_UTC
 }
 
 # Link name: Universal -> Etc/UTC
-ZONE_INFO_Universal = {
+ZONE_INFO_Universal: ZoneInfo = {
     'name': 'Universal',
     'eras': ZONE_ERAS_Etc_UTC
 }
 
 # Link name: W-SU -> Europe/Moscow
-ZONE_INFO_W_SU = {
+ZONE_INFO_W_SU: ZoneInfo = {
     'name': 'W-SU',
     'eras': ZONE_ERAS_Europe_Moscow
 }
 
 # Link name: Zulu -> Etc/UTC
-ZONE_INFO_Zulu = {
+ZONE_INFO_Zulu: ZoneInfo = {
     'name': 'Zulu',
     'eras': ZONE_ERAS_Etc_UTC
 }

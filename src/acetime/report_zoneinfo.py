@@ -10,7 +10,7 @@ zoneinfo, and print out a report of the discrepencies.
 import logging
 from datetime import datetime, timedelta, timezone
 from argparse import ArgumentParser
-from typing import Any, Tuple, List, Dict, Optional
+from typing import Any, Tuple, List
 
 # Using sys.version_info works better for MyPy than using a try/except block.
 import sys
@@ -22,10 +22,6 @@ else:
 # AceTimePython classes
 from acetime.acetz import ZoneManager
 from acetime.zonedbpy.zone_registry import ZONE_REGISTRY
-
-# Number of seconds from Unix Epoch (1970-01-01 00:00:00) to AceTime Epoch
-# (2000-01-01 00:00:00)
-SECONDS_SINCE_UNIX_EPOCH = 946684800
 
 # The [start, until) time interval used to search for DST transitions,
 # and flag that is True if ONLY the DST changed.
@@ -145,7 +141,6 @@ class Comparator():
 
         # Extract the components of the zoneinfo version of datetime.
         unix_seconds = int(dt.timestamp())
-        epoch_seconds = unix_seconds - SECONDS_SINCE_UNIX_EPOCH
         total_offset = int(dt.utcoffset().total_seconds())  # type: ignore
         dst_offset = int(dt.dst().total_seconds())  # type: ignore
         # See https://stackoverflow.com/questions/5946499 for more info on how
@@ -157,13 +152,12 @@ class Comparator():
         # Extract the components of the acetz version of datetime.
         expected = dt.astimezone(ace_tz)
         expected_unix_seconds = int(expected.timestamp())
-        expected_epoch_seconds = (
-            expected_unix_seconds - SECONDS_SINCE_UNIX_EPOCH
-        )
         expected_total_offset = int(
-            expected.utcoffset().total_seconds() # type: ignore
+            expected.utcoffset().total_seconds()  # type: ignore
         )
-        expected_dst_offset = int(expected.dst().total_seconds()) # type: ignore
+        expected_dst_offset = int(
+            expected.dst().total_seconds()  # type: ignore
+        )
         assert expected.tzinfo is not None
         expected_abbrev = expected.tzinfo.tzname(expected)
 

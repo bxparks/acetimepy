@@ -26,10 +26,19 @@
 #
 # DO NOT EDIT
 
+from typing import List
+from ..zone_info_types import (
+    ZoneRule,
+    ZonePolicy,
+    ZonePolicyMap,
+    ZoneEra,
+    ZoneInfo,
+    ZoneInfoMap,
+)
 from .zone_infos import *
 
 # Supported Zones: 377
-ZONE_REGISTRY = {
+ZONE_REGISTRY: ZoneInfoMap = {
     'Africa/Abidjan': ZONE_INFO_Africa_Abidjan,
     'Africa/Algiers': ZONE_INFO_Africa_Algiers,
     'Africa/Bissau': ZONE_INFO_Africa_Bissau,
@@ -411,7 +420,7 @@ ZONE_REGISTRY = {
 }
 
 # Supported Zones and Links: 594
-ZONE_AND_LINK_REGISTRY = {
+ZONE_AND_LINK_REGISTRY: ZoneInfoMap = {
     'Africa/Abidjan': ZONE_INFO_Africa_Abidjan,
     'Africa/Accra': ZONE_INFO_Africa_Accra,
     'Africa/Addis_Ababa': ZONE_INFO_Africa_Addis_Ababa,

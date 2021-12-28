@@ -247,8 +247,9 @@ class Transition:
         else:
             delta_seconds = self.delta_seconds
             zone_rule = self.zone_rule
-            zone_rule_from = cast(ZoneRule, zone_rule)['from_year']
-            zone_rule_to = cast(ZoneRule, zone_rule)['to_year']
+            assert zone_rule is not None
+            zone_rule_from = zone_rule['from_year']
+            zone_rule_to = zone_rule['to_year']
             original_transition = (
                 date_tuple_to_string(self.original_transition_time)
                 if self.original_transition_time

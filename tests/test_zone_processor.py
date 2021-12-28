@@ -25,7 +25,6 @@ from acetime.zone_processor import MATCH_STATUS_PRIOR
 from acetime.zone_processor import MATCH_STATUS_EXACT_MATCH
 from acetime.zone_processor import MATCH_STATUS_WITHIN_MATCH
 from acetime.zone_processor import MATCH_STATUS_FAR_FUTURE
-from acetime.zone_info_types import ZoneInfo
 from acetime.zone_info_types import ZonePolicy
 from acetime.zone_info_types import ZoneEra
 
@@ -334,9 +333,7 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
     def test_Los_Angeles(self) -> None:
         """America/Los_Angela uses a simple US rule.
         """
-        zone_processor = ZoneProcessor(
-            cast(ZoneInfo, zone_infos.ZONE_INFO_America_Los_Angeles),
-        )
+        zone_processor = ZoneProcessor(zone_infos.ZONE_INFO_America_Los_Angeles)
         zone_processor.init_for_year(2000)
 
         matches = zone_processor.matches
@@ -382,7 +379,7 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
         1977, then switched back in 2006, then switched back again in 2007.
         """
         zone_processor = ZoneProcessor(
-            cast(ZoneInfo, zone_infos.ZONE_INFO_America_Indiana_Petersburg),
+            zone_infos.ZONE_INFO_America_Indiana_Petersburg
         )
         zone_processor.init_for_year(2006)
 
@@ -433,9 +430,7 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
     def test_London(self) -> None:
         """Europe/London uses a EU which has a 'u' in the AT field.
         """
-        zone_processor = ZoneProcessor(
-            cast(ZoneInfo, zone_infos.ZONE_INFO_Europe_London),
-        )
+        zone_processor = ZoneProcessor(zone_infos.ZONE_INFO_Europe_London)
         zone_processor.init_for_year(2000)
 
         matches = zone_processor.matches
@@ -480,9 +475,7 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
         """America/Winnipeg uses 'Rule Winn' until 2006 which has an 's' suffix
         in the Rule.AT field.
         """
-        zone_processor = ZoneProcessor(
-            cast(ZoneInfo, zone_infos.ZONE_INFO_America_Winnipeg),
-        )
+        zone_processor = ZoneProcessor(zone_infos.ZONE_INFO_America_Winnipeg)
         zone_processor.init_for_year(2005)
 
         matches = zone_processor.matches
@@ -541,9 +534,7 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
     def test_Moscow(self) -> None:
         """Europe/Moscow uses 's' in the Zone UNTIL field.
         """
-        zone_processor = ZoneProcessor(
-            cast(ZoneInfo, zone_infos.ZONE_INFO_Europe_Moscow),
-        )
+        zone_processor = ZoneProcessor(zone_infos.ZONE_INFO_Europe_Moscow)
         zone_processor.init_for_year(2011)
 
         matches = zone_processor.matches
@@ -585,9 +576,7 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
     def test_Famagusta(self) -> None:
         """Asia/Famagusta uses 'u' in the Zone UNTIL field.
         """
-        zone_processor = ZoneProcessor(
-            cast(ZoneInfo, zone_infos.ZONE_INFO_Asia_Famagusta),
-        )
+        zone_processor = ZoneProcessor(zone_infos.ZONE_INFO_Asia_Famagusta)
         zone_processor.init_for_year(2017)
 
         matches = zone_processor.matches
@@ -630,7 +619,7 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
         """America/Santo_Domingo uses 2 ZoneEra changes in year 2000.
         """
         zone_processor = ZoneProcessor(
-            cast(ZoneInfo, zone_infos.ZONE_INFO_America_Santo_Domingo),
+            zone_infos.ZONE_INFO_America_Santo_Domingo
         )
         zone_processor.init_for_year(2000)
 
@@ -687,9 +676,7 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
     def test_Moncton(self) -> None:
         """America/Moncton transitioned DST at 00:01 through 2006.
         """
-        zone_processor = ZoneProcessor(
-            cast(ZoneInfo, zone_infos.ZONE_INFO_America_Moncton),
-        )
+        zone_processor = ZoneProcessor(zone_infos.ZONE_INFO_America_Moncton)
         zone_processor.init_for_year(2006)
 
         matches = zone_processor.matches
@@ -748,9 +735,7 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
     def test_Istanbul(self) -> None:
         """Europe/Istanbul uses an 'hh:mm' offset in the RULES field in 2015.
         """
-        zone_processor = ZoneProcessor(
-            cast(ZoneInfo, zone_infos.ZONE_INFO_Europe_Istanbul),
-        )
+        zone_processor = ZoneProcessor(zone_infos.ZONE_INFO_Europe_Istanbul)
         zone_processor.init_for_year(2015)
 
         matches = zone_processor.matches
@@ -816,9 +801,7 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
     def test_Dublin(self) -> None:
         """Europe/Dublin uses negative DST during Winter.
         """
-        zone_processor = ZoneProcessor(
-            cast(ZoneInfo, zone_infos.ZONE_INFO_Europe_Dublin),
-        )
+        zone_processor = ZoneProcessor(zone_infos.ZONE_INFO_Europe_Dublin)
         zone_processor.init_for_year(2000)
 
         matches = zone_processor.matches
@@ -864,9 +847,7 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
         going from Thursday 29th December 2011 23:59:59 Hours to Saturday 31st
         December 2011 00:00:00 Hours.
         """
-        zone_processor = ZoneProcessor(
-            cast(ZoneInfo, zone_infos.ZONE_INFO_Pacific_Apia),
-        )
+        zone_processor = ZoneProcessor(zone_infos.ZONE_INFO_Pacific_Apia)
         zone_processor.init_for_year(2011)
 
         matches = zone_processor.matches
@@ -934,7 +915,7 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
         this from 2 to 3. Antarctica/Macquarie stays on AEDT all year in 2010.
         """
         zone_processor = ZoneProcessor(
-            cast(ZoneInfo, zone_infos.ZONE_INFO_Antarctica_Macquarie),
+            zone_infos.ZONE_INFO_Antarctica_Macquarie
         )
         zone_processor.init_for_year(2010)
 
@@ -996,9 +977,7 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
         rules (which itself uses 'u' in the UNTIL fields), then uses 's' time to
         switch to Moscow time.
         """
-        zone_processor = ZoneProcessor(
-            cast(ZoneInfo, zone_infos.ZONE_INFO_Europe_Simferopol),
-        )
+        zone_processor = ZoneProcessor(zone_infos.ZONE_INFO_Europe_Simferopol)
         zone_processor.init_for_year(2014)
 
         matches = zone_processor.matches
@@ -1055,9 +1034,7 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
     def test_Kamchatka(self) -> None:
         """Asia/Kamchatka uses 's' in the Zone UNTIL and Rule AT fields.
         """
-        zone_processor = ZoneProcessor(
-            cast(ZoneInfo, zone_infos.ZONE_INFO_Asia_Kamchatka),
-        )
+        zone_processor = ZoneProcessor(zone_infos.ZONE_INFO_Asia_Kamchatka)
         zone_processor.init_for_year(2011)
 
         matches = zone_processor.matches
@@ -1099,9 +1076,7 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
 
 class TestZoneProcessorGetTransition(unittest.TestCase):
     def test_get_transition_for_datetime(self) -> None:
-        zone_processor = ZoneProcessor(
-            cast(ZoneInfo, zone_infos.ZONE_INFO_America_Los_Angeles),
-        )
+        zone_processor = ZoneProcessor(zone_infos.ZONE_INFO_America_Los_Angeles)
 
         # Just after a DST transition
         dt = datetime(2000, 4, 2, 3, 0, 0)
