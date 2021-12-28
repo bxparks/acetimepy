@@ -1,4 +1,4 @@
-.PHONY: all mypy flake8 tests zonedb
+.PHONY: all mypy flake8 tests
 
 all: mypy flake8 tests
 
@@ -44,3 +44,8 @@ flake8:
 		--max-line-length=100 \
 		--show-source \
 		--statistics
+
+# Generate the variance report of acetime.acetz.acetz compared to
+# zoneinfo.ZoneInfo.
+zoneinfo_variance.txt: src/acetime/report_zoneinfo.py
+	python3.9 src/acetime/report_zoneinfo.py > $@
