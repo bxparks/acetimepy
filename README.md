@@ -43,17 +43,18 @@ Currently, the main purposes of this library are:
    [MicroPython](https://micropython.org/) to bring
    support for IANA timezones to that environment.
 
-This library is **not** intended to be used in production. Informal testing
-indicates that `acetime` is similar in performance to `pytz` and `dateutil`,
-while `zoneinfo` is substantially faster than the others because it is
-implemented as a C-module. However among these 4 Python libraries, `acetime`
-seems to be the only library that returns accurate datetime information
-(especially the `datetime.dst()` function) for all timezones within the years
-supported by `acetime` (from 1974 until 2050). In addition, `acetime` supports
-deterministic timezones because it uses its own internal `zonedb` database,
-instead of pulling in the non-deterministic timezone database from underlying
-operating system (like `dateutil` and `zoneinfo`). These features imply that
-`acetime` may be useful in a testing or continuous integration environment.
+This library is **not** intended to be used in production. Informal benchmarking
+(see [Benchmarks](#Benchmarks) below) shows that `acetime` is similar in
+performance to `pytz` and `dateutil`, while `zoneinfo` is substantially faster
+than the others because it is implemented as a C-module. However among these 4
+Python libraries, `acetime` seems to be the only library that returns accurate
+datetime information (especially the `datetime.dst()` function) for all
+timezones within the years supported by `acetime` (from 1974 until 2050). In
+addition, `acetime` supports deterministic timezones because it uses its own
+internal `zonedb` database, instead of pulling in the non-deterministic timezone
+database from underlying operating system (like `dateutil` and `zoneinfo`).
+These features indicate that `acetime` may be most useful in a testing or
+continuous integration environment.
 
 **Version**: v0.3.0 (2021-12-02, TZDB 2021e)
 
@@ -73,6 +74,7 @@ operating system (like `dateutil` and `zoneinfo`). These features imply that
     * [Acetz Using ZoneManager Factory](#AcetzUsingZoneManagerFactory)
     * [DateTime Fold](#DateTimeFold)
     * [Compare to Other Python Libraries](#CompareToOtherLibraries)
+* [Benchmarks](#Benchmarks)
 * [System Requirements](#SystemRequirements)
 * [License](#License)
 * [Feedback and Support](#FeedbackAndSupport)
@@ -394,6 +396,25 @@ Zone Pacific/Rarotonga
 636542940: 1990-03-03 23:59:00-09:30: dst_offset: exp 1800, obs 3600
 657108000: 1990-10-28 00:30:00-09:30: dst_offset: exp 1800, obs 3600
 667992540: 1991-03-02 23:59:00-09:30: dst_offset: exp 1800, obs 3600
+```
+
+<a name="Benchmarks"></a>
+## Benchmarks
+
+The [benchmarks/AcetzBenchmark](benchmarks/AcetzBenchmark) script is
+an informal benchmarking of 4 Python timezone libraries:
+`acetime`, `pytz`, `dateutil` and `zoneinfo`. The results are:
+
+```
++-------------------+----------------+----------------+
+| Time Zone Library | comp to epoch  | epoch to comp  |
+|                   | (micros/iter)  | (micros/iter)  |
+|-------------------+----------------+----------------|
+| acetz             |         10.256 |         12.700 |
+| dateutil          |          5.974 |          7.372 |
+| pytz              |         15.744 |         15.286 |
+| zoneinfo          |          1.415 |          0.636 |
++-------------------+----------------+----------------+
 ```
 
 <a name="SystemRequirements"></a>
