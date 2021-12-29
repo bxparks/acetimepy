@@ -46,8 +46,8 @@ def calc_day_of_month(
 ) -> Tuple[int, int]:
     """Return the actual (month, day) of expressions such as
     (on_day_of_week >= on_day_of_month), (on_day_of_week <= on_day_of_month), or
-    (lastMon) See BasicZoneProcessor::calcStartDayOfMonth(). Shifts into
-    previous or next month can occur.
+    (lastMon) See calcStartDayOfMonth() in AceTime/src/ace_time/ZoneProcessor.h.
+    Shifts into previous or next month can occur.
 
     Return (13, xx) if a shift to the next year occurs
     Return (0, xx) if a shift to the previous year occurs
@@ -56,7 +56,7 @@ def calc_day_of_month(
         return (month, on_day_of_month)
 
     if on_day_of_month >= 0:
-        days_in_month = _days_in_month(year, month)
+        days_in_month = days_in_year_month(year, month)
 
         # Handle lastXxx by transforming it into (Xxx >= (daysInMonth - 6))
         if on_day_of_month == 0:
@@ -76,12 +76,12 @@ def calc_day_of_month(
         day = on_day_of_month - day_of_week_shift
         if day < 1:
             month -= 1
-            days_in_prev_month = _days_in_month(year, month)
+            days_in_prev_month = days_in_year_month(year, month)
             day += days_in_prev_month
         return (month, day)
 
 
-def _days_in_month(year: int, month: int) -> int:
+def days_in_year_month(year: int, month: int) -> int:
     """Return the number of days in the given (year, month). The
     month is usually 1-12, but can be 0 to indicate December of the previous
     year, and 13 to indicate Jan of the following year.
