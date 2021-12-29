@@ -281,13 +281,14 @@ This prints:
 <a name="CompareToOtherLibraries"></a>
 ### Compare to Other Python Libraries
 
-The `report_zoneinfo.py` script compares the `acetime.acetz.acetz` class against
-the Python 3.9 `zoneinfo.ZoneInfo` class, and generates a variance report. The
-output [zoneinfo_variance.txt](zoneinfo_variance.txt) is reproduced below. It
-shows that the `zoneinfo.ZoneInfo` class has some bugs related to the accuracy
-of the `datetime.dst()` method for a few zones. It is relatively easy to see
-that `acetime.acetz.acetz` produces the correct DST offset by going to the
-[original TZDB source files](https://github.com/eggert/tz) for each zone.
+The [report_zoneinfo.py](utils/Variance/report_zoneinfo.py) script compares the
+`acetime.acetz.acetz` class against the Python 3.9 `zoneinfo.ZoneInfo` class,
+and generates a variance report. The output
+[zoneinfo_variance.txt](utils/Variance/zoneinfo_variance.txt) is reproduced
+below. It shows that the `zoneinfo.ZoneInfo` class has some bugs related to the
+accuracy of the `datetime.dst()` method for a few zones. It is relatively easy
+to see that `acetime.acetz.acetz` produces the correct DST offset by going to
+the [original TZDB source files](https://github.com/eggert/tz) for each zone.
 
 ```
 # Variance report for acetime.acetz.acetz compared to Python 3.9
@@ -455,9 +456,9 @@ Zone Pacific/Rarotonga
 <a name="Benchmarks"></a>
 ## Benchmarks
 
-The [benchmarks/AcetzBenchmark](benchmarks/AcetzBenchmark) script is
-an informal benchmarking of 4 Python timezone libraries:
-`acetime`, `pytz`, `dateutil` and `zoneinfo`. The results are:
+The [utils/AcetzBenchmark](utils/AcetzBenchmark) script is an informal
+benchmarking of 4 Python timezone libraries: `acetime`, `pytz`, `dateutil` and
+`zoneinfo`. The results are:
 
 ```
 +-------------------+----------------+----------------+
