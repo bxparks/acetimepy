@@ -3,6 +3,8 @@
 * Unreleased
     * Rename `src/acetime/zoneinfo` to `zonedb`.
     * Add typing info to `zonedb` generated files.
+    * Add zone context info (`TZDB_VERSION`, `START_YEAR`, `UNTIL_YEAR`) to
+      `zone_infos.py`.
     * Add `report_zoneinfo.py` to generate variance report between `acetime`
       and Python 3.9 `zoneinfo` packages.
     * Add variance report for Python 3.9 `zoneinfo` package, showing

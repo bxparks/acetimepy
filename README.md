@@ -72,6 +72,7 @@ continuous integration.
 * [Installation](#Installation)
 * [Usage](#Usage)
     * [Package Structure](#PackageStructure)
+    * [Zone Context](#ZoneContext)
     * [Acetz Using Constructor](#AcetzUsingConstructor)
     * [Acetz Using ZoneManager Factory](#AcetzUsingZoneManagerFactory)
     * [DateTime Fold](#DateTimeFold)
@@ -144,6 +145,19 @@ are 3 modules here:
 * `acetime.zonedb.zone_registry`
 
 These are passed into the `acetz` or `ZoneManger` objects.
+
+<a name="ZoneContext"></a>
+### Zone Context
+
+Three constants are provided in the `acetime.zonedb.zone_infos` module:
+
+* `TZDB_VERSION` (e.g. "2021e")
+* `START_YEAR` (e.g. 1974)
+* `UNTIL_YEAR` (e.g. 2050)
+
+(These could have been placed in a separate `acetime.zonedb.zone_context`
+module, but the AceTime C++ library puts them in `zone_infos`, so this library
+follows that convention.)
 
 <a name="AcetzUsingConstructor"></a>
 ### Acetz Using Constructor
