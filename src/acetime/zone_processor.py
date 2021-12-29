@@ -24,10 +24,10 @@ from .common import SECONDS_SINCE_UNIX_EPOCH
 from .common import seconds_to_hms
 from .common import hms_to_seconds
 from .common import calc_day_of_month
-from .zone_info_types import ZoneRule
-from .zone_info_types import ZonePolicy
-from .zone_info_types import ZoneEra
-from .zone_info_types import ZoneInfo
+from .zonedb_types import ZoneRule
+from .zonedb_types import ZonePolicy
+from .zonedb_types import ZoneEra
+from .zonedb_types import ZoneInfo
 
 
 class DateTuple(NamedTuple):
@@ -247,8 +247,9 @@ class Transition:
         else:
             delta_seconds = self.delta_seconds
             zone_rule = self.zone_rule
-            zone_rule_from = cast(ZoneRule, zone_rule)['from_year']
-            zone_rule_to = cast(ZoneRule, zone_rule)['to_year']
+            assert zone_rule is not None
+            zone_rule_from = zone_rule['from_year']
+            zone_rule_to = zone_rule['to_year']
             original_transition = (
                 date_tuple_to_string(self.original_transition_time)
                 if self.original_transition_time

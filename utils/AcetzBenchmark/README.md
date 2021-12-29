@@ -1,13 +1,16 @@
 # Acetz Benchmark
 
-The `benchmark.py` compares the speed of 4 timezone subclasses of `tzinfo`:
+The `benchmark.py` script compares the speed of 4 timezone libraries:
 
-* `acetz` from this project
-* `pytz` from https://pypi.org/project/pytz/
-* `dateutil.tz` from https://pypi.org/project/python-dateutil/,
+* `acetime.acetz.acetz` from this project,
+  [AceTimePython](https://github.com/bxparks/AceTimePython)
+* `pytz.BaseTzInfo` from [pytz](https://pypi.org/project/pytz/)
+* `dateutil.tz` from
+  [python-dateutil](https://pypi.org/project/python-dateutil/)
+* `zoneinfo.ZoneInfo` from
+  [zoneinfo](https://docs.python.org/3/library/zoneinfo.html)
   backported to Python 3.8 and earlier using
-  https://pypi.org/project/backports.zoneinfo/
-* `zoneinfo` from https://docs.python.org/3/library/zoneinfo.html
+  [backports.zoneinfo](https://pypi.org/project/backports.zoneinfo/)
 
 There are 2 columns for each library in the table below:
 
@@ -20,7 +23,7 @@ The `benchmark.py` scans through all 377 timezones (as of TZDB 2021e), sampling
 2 days for each month from the year 2000 until 2038. The numbers in the table
 below is given units of microseconds per iteration, averaged over all timezones.
 
-**Version**: AceTimePython v0.3.0
+**Version**: AceTimePython v0.4.0
 
 **NOTE**: This file was auto-generated using `make README.md`. DO NOT EDIT.
 
@@ -50,7 +53,7 @@ $ make README.md
 | Time Zone Library | comp to epoch  | epoch to comp  |
 |                   | (micros/iter)  | (micros/iter)  |
 |-------------------+----------------+----------------|
-| acetz             |         10.256 |         12.700 |
+| acetime           |         10.256 |         12.700 |
 | dateutil          |          5.974 |          7.372 |
 | pytz              |         15.744 |         15.286 |
 | zoneinfo          |          1.415 |          0.636 |

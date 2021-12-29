@@ -1,21 +1,28 @@
 # AceTime for Python
 
-This library provides the `acetz` class which is an implementation of the
-[tzinfo](https://docs.python.org/3/library/datetime.html#tzinfo-objects)
+This library provides the `acetime.acetz.acetz` class which is an implementation
+of the [tzinfo](https://docs.python.org/3/library/datetime.html#tzinfo-objects)
 abstract class in the Python standard `datetime` package. The timezone algorithm
-used by `acetz` is implemented by the `zone_processor` class and is identical to
-the one used by the `ExtendedZoneProcessor` class in the
+used by the `acetz` class is identical to the one used by the
+`ExtendedZoneProcessor` class in the
 [AceTime](https://github.com/bxparks/AceTime) library for Arduino.
 
-The underlying zoneinfo database is derived from the [IANA TZ
-database](https://www.iana.org/time-zones) by the same
-[AceTimeTools](https://github.com/bxparks/AceTimeTools) project  used to
-generate the TZ database for AceTime. By default, it contains all Zone and Link
-entries from the year 2000 until 2050. Custom subsets of the full TZ database
-can be created to save memory.
+This library provides a `acetime.zonedb` package that contains timezone
+information for all Zone and Link entries from the [IANA TZ
+database](https://www.iana.org/time-zones) from the year 1974 until 2050. Custom
+subsets of the full TZ database could be created to save memory using the
+[AceTimeTools](https://github.com/bxparks/AceTimeTools) project but the process
+has not been documented.
 
-The `acetz` class should be a drop-in replacement for the equivalent `tzinfo`
-class from the following Python libraries:
+An `acetz` instance can be created by passing an appropriate `zonedb` entry to
+the `acetz` constructor. Or it can be created through the
+`acetime.acetz.ZoneManager` factory class which is initialized with the
+`acetime.zonedb.zone_registry.ZONE_REGISTRY` (or `ZONE_AND_LINK_REGISTRY`)
+containing all `zonedb` entries.
+
+The `acetz` class is a subclass of `datetime.tzinfo` so it should be a drop-in
+replacement for the equivalent `tzinfo` subclasses from the following
+Python libraries:
 
 * pytz (https://pypi.org/project/pytz/)
 * dateutil (https://pypi.org/project/python-dateutil/)
@@ -23,19 +30,35 @@ class from the following Python libraries:
 
 The initial motivation of this library was to provide an easier prototyping
 environment for the algorithms used by the `ExtendedZoneProcessor` class in the
-`AceTime` library. That motivation became mostly moot after
-[EpoxyDuino](https://github.com/bxparks/EpoxyDuino) became a suitable
-environment for developing AceTime on a Linux desktop.
+[AceTime](https://github.com/bxparks/AceTime) library. That motivation became
+mostly moot after [EpoxyDuino](https://github.com/bxparks/EpoxyDuino) became a
+suitable environment for developing AceTime on a Linux desktop.
 
-Currently, the two main purposes of this library are:
+Currently, the main purposes of this library are:
 
 1) Validating the AceTime `ExtendedZoneProcessor` class through the
    [AceTimeValidation](https://github.com/bxparks/AceTimeValidation) project.
-2) Exploring the feasibility of porting this library to
+2) Verifying the accuracy of other Python libraries against the `acetime`
+   package. See the [Compare to Other Python
+   Libraries](#CompareToOtherLibraries) section below.
+3) Exploring the feasibility of porting this library to
    [MicroPython](https://micropython.org/) to bring
    support for IANA timezones to that environment.
 
-**Version**: v0.3.0 (2021-12-02, TZDB 2021e)
+This library is **not** intended to be used in production. Informal benchmarking
+(see [Benchmarks](#Benchmarks) below) shows that `acetime` is similar in
+performance to `pytz` and `dateutil`, while `zoneinfo` is substantially faster
+than the others because it is implemented as a C-module. However among these 4
+Python libraries, `acetime` seems to be the only library that returns accurate
+datetime information (especially the `datetime.dst()` function) for all
+timezones within the years supported by `acetime` (from 1974 until 2050). In
+addition, `acetime` supports deterministic timezones because it uses its own
+internal `zonedb` database, instead of pulling in the non-deterministic timezone
+database from underlying operating system (like `dateutil` and `zoneinfo`).
+These features indicate that `acetime` may be most useful for validation or
+continuous integration.
+
+**Version**: v0.4.0 (2021-12-29, TZDB 2021e)
 
 **Changelog**: [CHANGELOG.md](CHANGELOG.md)
 
@@ -49,7 +72,12 @@ Currently, the two main purposes of this library are:
 * [Installation](#Installation)
 * [Usage](#Usage)
     * [Package Structure](#PackageStructure)
-    * [ZoneManager and acetz](#ZoneManagerAndAcetz)
+    * [Zone Context](#ZoneContext)
+    * [Acetz Using Constructor](#AcetzUsingConstructor)
+    * [Acetz Using ZoneManager Factory](#AcetzUsingZoneManagerFactory)
+    * [DateTime Fold](#DateTimeFold)
+    * [Compare to Other Python Libraries](#CompareToOtherLibraries)
+* [Benchmarks](#Benchmarks)
 * [System Requirements](#SystemRequirements)
 * [License](#License)
 * [Feedback and Support](#FeedbackAndSupport)
@@ -83,66 +111,140 @@ $ pip3 install
 <a name="Usage"></a>
 ## Usage
 
+The package structure and usage of this library is motivated by the purpose of
+this library to validate the C++ AceTime library. Therefore, this library may
+not implement some "pythonic" conventions that some Python programmers may
+prefer.
+
 <a name="PackageStructure"></a>
 ### Package Structure
 
-The AceTimePython library provides the top-level package named `acetime`. There
-are 2 main modules under `acetime`:
+The name of this library is `AceTimePython` (to distinguish it from the
+[AceTime](https://github.com/bxparks/AceTime) Arduino C++ library). It provides
+a top-level package called `acetime`. There are 3 modules under the `acetime`
+package which the end-users will normally import:
 
 * `acetime.acetz`
 * `acetime.zone_processor`
+* `acetime.common`
 
-Normally, only the `acetz` module will be needed by the end-user. The
-`zone_processor` package is mostly an internal implementation detail.
+Often, only the `acetz` module will be needed by the end-user. The
+`zone_processor` module is mostly an internal implementation detail, and the
+`common` module contains low-level utility functions and constants.
 
-Within `acetz` module, there are 2 classes that the end-user will normally use:
+Within the `acetz` module, there are 2 classes that the end-user will use:
 
 * `acetime.acetz.ZoneManager`
 * `acetime.acetz.acetz` (subclass of `datetime.tzinfo`)
 
-The TZ database files are located in the `acetime.zonedbpy` subpackage. There
+The TZ database files are located in the `acetime.zonedb` subpackage. There
 are 3 modules here:
 
-* `acetime.zonedbpy.zone_infos`
-* `acetime.zonedbpy.zone_policies`
-* `acetime.zonedbpy.zone_registry`
+* `acetime.zonedb.zone_infos`
+* `acetime.zonedb.zone_policies`
+* `acetime.zonedb.zone_registry`
 
-<a name="ZoneManagerAndAcetz"></a>
-### ZoneManager and acetz
+These are passed into the `acetz` or `ZoneManger` objects.
 
-Normally, the `acetz` class will be instantiated through the `ZoneManager`
-class. An instance of a `ZoneManager` will need to be created and initialized
-with a registry of the zones in the TZ database. The
-`acetime.zonedbpy.zone_registry` module provides 2 pre-generated registries:
+<a name="ZoneContext"></a>
+### Zone Context
 
-* `acetime.zonedbpy.zone_registry.ZONE_REGISTRY`
-    * contains 377 Zone entries as of TZDB 2021c
-* `acetime.zonedbpy.zone_registry.ZONE_AND_LINK_REGISTRY`
-    * contains all 594 Zone and Link entries as of TZDB 2021c
+Three constants are provided in the `acetime.zonedb.zone_infos` module:
 
-We can then create an instance of `acetz` for a specific zone through the
-ZoneManager:
+* `TZDB_VERSION` (e.g. "2021e")
+* `START_YEAR` (e.g. 1974)
+* `UNTIL_YEAR` (e.g. 2050)
 
-```Python
-from acetime.acetz import acetz, ZoneManager
-from acetime.zonedbpy.zone_registry import ZONE_REGISTRY
+(These could have been placed in a separate `acetime.zonedb.zone_context`
+module, but the AceTime C++ library puts them in `zone_infos`, so this library
+follows that convention.)
+
+<a name="AcetzUsingConstructor"></a>
+### Acetz Using Constructor
+
+An instance of `acetz` can be created directly through the constructor using a
+`zonedb` entry, like this:
+
+```python
+from datetime import datetime
+from acetime.acetz import acetz
+from acetime.zonedb.zone_infos import ZONE_INFO_America_Los_Angeles
 from acetime.common import SECONDS_SINCE_UNIX_EPOCH
 
+# Create an acetz from a zonedb entry.
+tz = acetz(ZONE_INFO_America_Los_Angeles)
+
+# Create date from epoch seconds
+acetime_seconds = 7984800
+unix_seconds = acetime_seconds + SECONDS_SINCE_UNIX_EPOCH
+dte = datetime.fromtimestamp(unix_seconds, tz=tz)
+
+# Create date from components
+dtc = datetime(2000, 4, 2, 3, 0, 0, tzinfo=tz)
+
+assert dte == dtc
+print(dte)
+```
+
+This should print
+```
+2000-04-02 03:00:00-07:00
+```
+
+The list of other `ZONE_INFO_xxx` entries can be found in the
+[zone_infos.py](src/acetime/zonedb/zone_infos.py) file.
+
+<a name="AcetzUsingZoneManagerFactory"></a>
+### Acetz Using ZoneManager Factory
+
+The `acetz` class can also be created through the `ZoneManager` factory class.
+An instance of `ZoneManager` must be configured with the registry of the
+supported timezones. This library provides an `acetime.zonedb.zone_registry`
+module which has 2 pre-generated registries containing timezone information from
+1974 until 2050:
+
+* `acetime.zonedb.zone_registry.ZONE_REGISTRY`
+    * contains all primary Zone entries
+    * 377 zones as of TZDB 2021e
+* `acetime.zonedb.zone_registry.ZONE_AND_LINK_REGISTRY`
+    * contains all Zone and Link entries
+    * 594 zones and links as of TZDB 2021e
+
+We can then create an instance of `acetz` using a timezone name (e.g.
+"America/Los_Angeles") through the `ZoneManager.gettz()` method:
+
+```Python
+from datetime import datetime
+from acetime.acetz import ZoneManager
+from acetime.zonedb.zone_registry import ZONE_REGISTRY
+from acetime.common import SECONDS_SINCE_UNIX_EPOCH
+
+# Create a ZoneManager configured with the given registry
 zone_manager = ZoneManager(ZONE_REGISTRY)
 
-def do_something():
-    tz = zone_manager.gettz('America/Los_Angeles')
+# Create an acetz using the ZoneManager.
+tz = zone_manager.gettz('America/Los_Angeles')
 
-    # Create date from epoch seconds
-    epoch_seconds = 7984800
-    unix_seconds = epoch_seconds + SECONDS_SINCE_UNIX_EPOCH
-    dte = datetime.fromtimestamp(unix_seconds, tz=tz)
+# Create date from epoch seconds
+acetime_seconds = 7984800
+unix_seconds = acetime_seconds + SECONDS_SINCE_UNIX_EPOCH
+dte = datetime.fromtimestamp(unix_seconds, tz=tz)
 
-    # Create date from components
-    dtc = datetime(2000, 4, 2, 3, 0, 0, tzinfo=tz)
+# Create date from components
+dtc = datetime(2000, 4, 2, 3, 0, 0, tzinfo=tz)
 
-    assert dte == dtc
+assert dte == dtc
+print(dte)
 ```
+
+This should also print
+```
+2000-04-02 03:00:00-07:00
+```
+
+It is possible to generate custom registries with different subsets of timezones
+using the tools provided by the
+[AceTimeTools](https://github.com/bxparks/AceTimeTools) project.
 
 <a name="DateTimeFold"></a>
 ### DateTime Fold
@@ -151,6 +253,225 @@ The `acetz` class supports the `fold` parameter in
 [`datetime`](https://docs.python.org/3/library/datetime.html#datetime-objects)
 which was introduced in Python 3.6.
 
+The following code snippet shows 2 ways to create a `datetime` for 01:59:59
+which occurs twice on 2000-10-29 in the America/Los_Angeles timezone:
+
+```python
+from datetime import datetime
+from acetime.acetz import acetz
+from acetime.zonedb.zone_infos import ZONE_INFO_America_Los_Angeles
+
+tz = acetz(ZONE_INFO_America_Los_Angeles)
+
+# Creates the earlier of the 2 times.
+dt = datetime(2000, 10, 29, 1, 59, 59, tzinfo=tz, fold=0)
+print(dt)
+
+# Creates the later of the 2 times.
+dt = datetime(2000, 10, 29, 1, 59, 59, tzinfo=tz, fold=1)
+print(dt)
+```
+
+This prints:
+```
+2000-10-29 01:59:59-07:00
+2000-10-29 01:59:59-08:00
+```
+
+<a name="CompareToOtherLibraries"></a>
+### Compare to Other Python Libraries
+
+The [report_zoneinfo.py](utils/Variance/report_zoneinfo.py) script compares the
+`acetime.acetz.acetz` class against the Python 3.9 `zoneinfo.ZoneInfo` class,
+and generates a variance report. The output
+[zoneinfo_variance.txt](utils/Variance/zoneinfo_variance.txt) is reproduced
+below. It shows that the `zoneinfo.ZoneInfo` class has some bugs related to the
+accuracy of the `datetime.dst()` method for a few zones. It is relatively easy
+to see that `acetime.acetz.acetz` produces the correct DST offset by going to
+the [original TZDB source files](https://github.com/eggert/tz) for each zone.
+
+```
+# Variance report for acetime.acetz.acetz compared to Python 3.9
+# zoneinfo.ZoneInfo.
+#
+# Context
+# -------
+# AceTimePython Version: 0.4.0
+# AceTimePython ZoneDB Version: 2021e
+# AceTimePython ZoneDB Start Year: 1974
+# AceTimePython ZoneDB Until Year: 2050
+# ZoneInfo Version: Python 3.9 2021e
+# Report Start Year: 1974
+# Report Until Year: 2050
+#
+# Report Format
+# -------------
+# Zone {zone_name}
+# {seconds}: {date}: {label}: exp {value}, obs {value}
+# [...]
+
+Zone America/Bahia_Banderas
+1270371600: 2010-04-04 04:00:00-05:00: dst_offset: exp 3600, obs 7200
+1288508340: 2010-10-31 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+1301817600: 2011-04-03 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+1319957940: 2011-10-30 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+1333267200: 2012-04-01 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+1351407540: 2012-10-28 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+1365321600: 2013-04-07 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+1382857140: 2013-10-27 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+1396771200: 2014-04-06 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+1414306740: 2014-10-26 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+1428220800: 2015-04-05 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+1445756340: 2015-10-25 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+1459670400: 2016-04-03 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+1477810740: 2016-10-30 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+1491120000: 2017-04-02 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+1509260340: 2017-10-29 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+1522569600: 2018-04-01 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+1540709940: 2018-10-28 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+1554624000: 2019-04-07 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+1572159540: 2019-10-27 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+1586073600: 2020-04-05 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+1603609140: 2020-10-25 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+1617523200: 2021-04-04 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+1635663540: 2021-10-31 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+1648972800: 2022-04-03 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+1667113140: 2022-10-30 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+1680422400: 2023-04-02 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+1698562740: 2023-10-29 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+1712476800: 2024-04-07 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+1730012340: 2024-10-27 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+1743926400: 2025-04-06 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+1761461940: 2025-10-26 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+1775376000: 2026-04-05 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+1792911540: 2026-10-25 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+1806825600: 2027-04-04 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+1824965940: 2027-10-31 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+1838275200: 2028-04-02 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+1856415540: 2028-10-29 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+1869724800: 2029-04-01 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+1887865140: 2029-10-28 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+1901779200: 2030-04-07 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+1919314740: 2030-10-27 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+1933228800: 2031-04-06 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+1950764340: 2031-10-26 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+1964678400: 2032-04-04 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+1982818740: 2032-10-31 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+1996128000: 2033-04-03 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+2014268340: 2033-10-30 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+2027577600: 2034-04-02 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+2045717940: 2034-10-29 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+2059027200: 2035-04-01 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+2077167540: 2035-10-28 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+2091081600: 2036-04-06 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+2108617140: 2036-10-26 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+2122531200: 2037-04-05 03:00:00-05:00: dst_offset: exp 3600, obs 7200
+2140066740: 2037-10-25 01:59:00-05:00: dst_offset: exp 3600, obs 7200
+Zone America/Scoresbysund
+354679200: 1981-03-29 02:00:00+00:00: dst_offset: exp 3600, obs 7200
+370400340: 1981-09-27 00:59:00+00:00: dst_offset: exp 3600, obs 7200
+Zone Asia/Choibalsan
+417974400: 1983-04-01 02:00:00+10:00: dst_offset: exp 3600, obs 7200
+433778340: 1983-09-30 23:59:00+10:00: dst_offset: exp 3600, obs 7200
+449593200: 1984-04-01 01:00:00+10:00: dst_offset: exp 3600, obs 7200
+465314340: 1984-09-29 23:59:00+10:00: dst_offset: exp 3600, obs 7200
+481042800: 1985-03-31 01:00:00+10:00: dst_offset: exp 3600, obs 7200
+496763940: 1985-09-28 23:59:00+10:00: dst_offset: exp 3600, obs 7200
+512492400: 1986-03-30 01:00:00+10:00: dst_offset: exp 3600, obs 7200
+528213540: 1986-09-27 23:59:00+10:00: dst_offset: exp 3600, obs 7200
+543942000: 1987-03-29 01:00:00+10:00: dst_offset: exp 3600, obs 7200
+559663140: 1987-09-26 23:59:00+10:00: dst_offset: exp 3600, obs 7200
+575391600: 1988-03-27 01:00:00+10:00: dst_offset: exp 3600, obs 7200
+591112740: 1988-09-24 23:59:00+10:00: dst_offset: exp 3600, obs 7200
+606841200: 1989-03-26 01:00:00+10:00: dst_offset: exp 3600, obs 7200
+622562340: 1989-09-23 23:59:00+10:00: dst_offset: exp 3600, obs 7200
+638290800: 1990-03-25 01:00:00+10:00: dst_offset: exp 3600, obs 7200
+654616740: 1990-09-29 23:59:00+10:00: dst_offset: exp 3600, obs 7200
+670345200: 1991-03-31 01:00:00+10:00: dst_offset: exp 3600, obs 7200
+686066340: 1991-09-28 23:59:00+10:00: dst_offset: exp 3600, obs 7200
+701794800: 1992-03-29 01:00:00+10:00: dst_offset: exp 3600, obs 7200
+717515940: 1992-09-26 23:59:00+10:00: dst_offset: exp 3600, obs 7200
+733244400: 1993-03-28 01:00:00+10:00: dst_offset: exp 3600, obs 7200
+748965540: 1993-09-25 23:59:00+10:00: dst_offset: exp 3600, obs 7200
+764694000: 1994-03-27 01:00:00+10:00: dst_offset: exp 3600, obs 7200
+780415140: 1994-09-24 23:59:00+10:00: dst_offset: exp 3600, obs 7200
+796143600: 1995-03-26 01:00:00+10:00: dst_offset: exp 3600, obs 7200
+811864740: 1995-09-23 23:59:00+10:00: dst_offset: exp 3600, obs 7200
+828198000: 1996-03-31 01:00:00+10:00: dst_offset: exp 3600, obs 7200
+843919140: 1996-09-28 23:59:00+10:00: dst_offset: exp 3600, obs 7200
+859647600: 1997-03-30 01:00:00+10:00: dst_offset: exp 3600, obs 7200
+875368740: 1997-09-27 23:59:00+10:00: dst_offset: exp 3600, obs 7200
+891097200: 1998-03-29 01:00:00+10:00: dst_offset: exp 3600, obs 7200
+906818340: 1998-09-26 23:59:00+10:00: dst_offset: exp 3600, obs 7200
+988390800: 2001-04-28 03:00:00+10:00: dst_offset: exp 3600, obs 7200
+1001692740: 2001-09-29 01:59:00+10:00: dst_offset: exp 3600, obs 7200
+1017421200: 2002-03-30 03:00:00+10:00: dst_offset: exp 3600, obs 7200
+1033142340: 2002-09-28 01:59:00+10:00: dst_offset: exp 3600, obs 7200
+1048870800: 2003-03-29 03:00:00+10:00: dst_offset: exp 3600, obs 7200
+1064591940: 2003-09-27 01:59:00+10:00: dst_offset: exp 3600, obs 7200
+1080320400: 2004-03-27 03:00:00+10:00: dst_offset: exp 3600, obs 7200
+1096041540: 2004-09-25 01:59:00+10:00: dst_offset: exp 3600, obs 7200
+1111770000: 2005-03-26 03:00:00+10:00: dst_offset: exp 3600, obs 7200
+1127491140: 2005-09-24 01:59:00+10:00: dst_offset: exp 3600, obs 7200
+1143219600: 2006-03-25 03:00:00+10:00: dst_offset: exp 3600, obs 7200
+1159545540: 2006-09-30 01:59:00+10:00: dst_offset: exp 3600, obs 7200
+Zone Asia/Ust-Nera
+354898800: 1981-04-01 03:00:00+12:00: dst_offset: exp 3600, obs 10800
+370699140: 1981-09-30 23:59:00+12:00: dst_offset: exp 3600, obs 10800
+386427600: 1982-04-01 01:00:00+12:00: dst_offset: exp 3600, obs 10800
+402235140: 1982-09-30 23:59:00+12:00: dst_offset: exp 3600, obs 10800
+417963600: 1983-04-01 01:00:00+12:00: dst_offset: exp 3600, obs 10800
+433771140: 1983-09-30 23:59:00+12:00: dst_offset: exp 3600, obs 10800
+449586000: 1984-04-01 01:00:00+12:00: dst_offset: exp 3600, obs 10800
+465317940: 1984-09-30 02:59:00+12:00: dst_offset: exp 3600, obs 10800
+Zone Pacific/Rarotonga
+279714600: 1978-11-12 01:00:00-09:30: dst_offset: exp 1800, obs 3600
+289387740: 1979-03-03 23:59:00-09:30: dst_offset: exp 1800, obs 3600
+309952800: 1979-10-28 00:30:00-09:30: dst_offset: exp 1800, obs 3600
+320837340: 1980-03-01 23:59:00-09:30: dst_offset: exp 1800, obs 3600
+341402400: 1980-10-26 00:30:00-09:30: dst_offset: exp 1800, obs 3600
+352286940: 1981-02-28 23:59:00-09:30: dst_offset: exp 1800, obs 3600
+372852000: 1981-10-25 00:30:00-09:30: dst_offset: exp 1800, obs 3600
+384341340: 1982-03-06 23:59:00-09:30: dst_offset: exp 1800, obs 3600
+404906400: 1982-10-31 00:30:00-09:30: dst_offset: exp 1800, obs 3600
+415790940: 1983-03-05 23:59:00-09:30: dst_offset: exp 1800, obs 3600
+436356000: 1983-10-30 00:30:00-09:30: dst_offset: exp 1800, obs 3600
+447240540: 1984-03-03 23:59:00-09:30: dst_offset: exp 1800, obs 3600
+467805600: 1984-10-28 00:30:00-09:30: dst_offset: exp 1800, obs 3600
+478690140: 1985-03-02 23:59:00-09:30: dst_offset: exp 1800, obs 3600
+499255200: 1985-10-27 00:30:00-09:30: dst_offset: exp 1800, obs 3600
+510139740: 1986-03-01 23:59:00-09:30: dst_offset: exp 1800, obs 3600
+530704800: 1986-10-26 00:30:00-09:30: dst_offset: exp 1800, obs 3600
+541589340: 1987-02-28 23:59:00-09:30: dst_offset: exp 1800, obs 3600
+562154400: 1987-10-25 00:30:00-09:30: dst_offset: exp 1800, obs 3600
+573643740: 1988-03-05 23:59:00-09:30: dst_offset: exp 1800, obs 3600
+594208800: 1988-10-30 00:30:00-09:30: dst_offset: exp 1800, obs 3600
+605093340: 1989-03-04 23:59:00-09:30: dst_offset: exp 1800, obs 3600
+625658400: 1989-10-29 00:30:00-09:30: dst_offset: exp 1800, obs 3600
+636542940: 1990-03-03 23:59:00-09:30: dst_offset: exp 1800, obs 3600
+657108000: 1990-10-28 00:30:00-09:30: dst_offset: exp 1800, obs 3600
+667992540: 1991-03-02 23:59:00-09:30: dst_offset: exp 1800, obs 3600
+```
+
+<a name="Benchmarks"></a>
+## Benchmarks
+
+The [utils/AcetzBenchmark](utils/AcetzBenchmark) script is an informal
+benchmarking of 4 Python timezone libraries: `acetime`, `pytz`, `dateutil` and
+`zoneinfo`. The results are:
+
+```
++-------------------+----------------+----------------+
+| Time Zone Library | comp to epoch  | epoch to comp  |
+|                   | (micros/iter)  | (micros/iter)  |
+|-------------------+----------------+----------------|
+| acetime           |         10.256 |         12.700 |
+| dateutil          |          5.974 |          7.372 |
+| pytz              |         15.744 |         15.286 |
+| zoneinfo          |          1.415 |          0.636 |
++-------------------+----------------+----------------+
+```
+
 <a name="SystemRequirements"></a>
 ## System Requirements
 
@@ -158,7 +479,7 @@ For end-users of the library:
 
 * Python 3.7 or newer
 
-To generate the `zonedbpy` TZ database:
+To generate the `zonedb` TZ database:
 
 * [AceTimeTools](https://github.com/bxparks/AceTimeTools)
 

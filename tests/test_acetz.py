@@ -2,13 +2,11 @@ import sys
 import unittest
 import logging
 from datetime import datetime, timedelta, timezone
-from typing import cast
 
 from acetime.common import SECONDS_SINCE_UNIX_EPOCH
 from acetime.acetz import acetz, ZoneManager
-from acetime.zone_info_types import ZoneInfo
-from acetime.zonedbpy.zone_registry import ZONE_REGISTRY
-from acetime.zonedbpy.zone_infos import ZONE_INFO_America_Los_Angeles
+from acetime.zonedb.zone_registry import ZONE_REGISTRY
+from acetime.zonedb.zone_infos import ZONE_INFO_America_Los_Angeles
 
 
 # Enable logging during unittests.
@@ -296,7 +294,7 @@ class TestLosAngeles(unittest.TestCase):
         """Test creation of acetz object using a ZoneInfo database entry,
         instead of going through the ZoneManager.
         """
-        tz = acetz(cast(ZoneInfo, ZONE_INFO_America_Los_Angeles))
+        tz = acetz(ZONE_INFO_America_Los_Angeles)
 
         epoch_seconds = 7984800
         unix_seconds = epoch_seconds + SECONDS_SINCE_UNIX_EPOCH

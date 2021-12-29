@@ -15,7 +15,7 @@ import setuptools
 with open('README.md', encoding="utf-8") as f:
     long_description = f.read()
 
-# Read the version string from bigquery_schema_generator/version.py.
+# Read the version string from src/acetime/version.py.
 # See https://packaging.python.org/guides/single-sourcing-package-version/
 version = {}
 with open("src/acetime/version.py") as fp:

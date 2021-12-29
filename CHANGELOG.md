@@ -1,6 +1,15 @@
 # Changelog
 
 * Unreleased
+* v0.4.0 (2021-12-29, TZDB 2021e)
+    * Rename `src/acetime/zoneinfo` to `zonedb`.
+    * Add typing info to `zonedb` generated files.
+    * Add zone context info (`TZDB_VERSION`, `START_YEAR`, `UNTIL_YEAR`) to
+      `zone_infos.py`.
+    * Create `utils/Variance/report_zoneinfo.py`
+        * To compare `acetime` and Python 3.9 `zoneinfo` packages.
+        * Add variance report into README.md.
+    * Move `benchmarks/AcetzBenchmark/` to `utils/AcetzBenchmark/`.
 * v0.3.0 (2021-12-02, TZDB 2021e)
     * Consolidate `AcetzBenchmark`, add `generate_table.py` and `README.md`
       generator.

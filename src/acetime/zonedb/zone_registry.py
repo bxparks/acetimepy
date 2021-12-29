@@ -2,7 +2,7 @@
 #
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
-#     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedbpy
+#     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedb
 #     --tz_version 2021e
 #     --action zonedb
 #     --language python
@@ -26,10 +26,11 @@
 #
 # DO NOT EDIT
 
+from ..zonedb_types import ZoneInfoMap
 from .zone_infos import *
 
 # Supported Zones: 377
-ZONE_REGISTRY = {
+ZONE_REGISTRY: ZoneInfoMap = {
     'Africa/Abidjan': ZONE_INFO_Africa_Abidjan,
     'Africa/Algiers': ZONE_INFO_Africa_Algiers,
     'Africa/Bissau': ZONE_INFO_Africa_Bissau,
@@ -411,7 +412,7 @@ ZONE_REGISTRY = {
 }
 
 # Supported Zones and Links: 594
-ZONE_AND_LINK_REGISTRY = {
+ZONE_AND_LINK_REGISTRY: ZoneInfoMap = {
     'Africa/Abidjan': ZONE_INFO_Africa_Abidjan,
     'Africa/Accra': ZONE_INFO_Africa_Accra,
     'Africa/Addis_Ababa': ZONE_INFO_Africa_Addis_Ababa,

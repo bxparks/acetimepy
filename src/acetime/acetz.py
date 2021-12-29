@@ -3,14 +3,11 @@
 # MIT License
 
 from typing import Optional
-from typing import Dict
-from typing import cast
-from typing import Any
 from datetime import datetime, tzinfo, timedelta, timezone
 
 from .common import SECONDS_SINCE_UNIX_EPOCH
 from .zone_processor import ZoneProcessor
-from .zone_info_types import ZoneInfo
+from .zonedb_types import ZoneInfo, ZoneInfoMap
 
 
 class acetz(tzinfo):
@@ -74,7 +71,7 @@ class acetz(tzinfo):
             raise ValueError("dt.tzinfo is not self")
 
         # Extract the epoch_seconds of the source 'dt'
-        assert dt is not None
+        assert dt
         utcdt = dt.replace(tzinfo=timezone.utc)
         unix_seconds = int(utcdt.timestamp())
         epoch_seconds = unix_seconds - SECONDS_SINCE_UNIX_EPOCH
@@ -101,7 +98,7 @@ class ZoneManager:
     zone_registry.ZONE_AND_LINK_REGISTRY, but applications may define a custom
     registry instead.
     """
-    def __init__(self, registry: Dict[Any, Any]):
+    def __init__(self, registry: ZoneInfoMap):
         self.registry = registry
 
     def gettz(self, zone_name: str) -> acetz:
@@ -111,5 +108,4 @@ class ZoneManager:
         zone_info = self.registry.get(zone_name)
         if not zone_info:
             raise Exception(f"Zone '{zone_name}' not found")
-        zone_info = cast(ZoneInfo, zone_info)
         return acetz(zone_info)

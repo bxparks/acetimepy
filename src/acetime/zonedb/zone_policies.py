@@ -2,7 +2,7 @@
 #
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
-#     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedbpy
+#     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedb
 #     --tz_version 2021e
 #     --action zonedb
 #     --language python
@@ -26,16 +26,22 @@
 #
 # DO NOT EDIT
 
-#---------------------------------------------------------------------------
+from typing import List
+from ..zonedb_types import (
+    ZoneRule,
+    ZonePolicy,
+)
+
+# ---------------------------------------------------------------------------
 # Supported zone policies: 116
 # numRules: 1141
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: AN
 # Rule count: 16
-#---------------------------------------------------------------------------
-ZONE_RULES_AN = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_AN: List[ZoneRule] = [
     # Rule    AN    1971    1985    -    Oct    lastSun    2:00s    1:00    D
     {
         'from_year': 1971,
@@ -230,16 +236,16 @@ ZONE_RULES_AN = [
     },
 
 ]
-ZONE_POLICY_AN = {
+ZONE_POLICY_AN: ZonePolicy = {
     'name': 'AN',
     'rules': ZONE_RULES_AN
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: AQ
 # Rule count: 3
-#---------------------------------------------------------------------------
-ZONE_RULES_AQ = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_AQ: List[ZoneRule] = [
     # Rule    AQ    1972    only    -    Feb    lastSun    2:00s    0    S
     {
         'from_year': 1972,
@@ -278,16 +284,16 @@ ZONE_RULES_AQ = [
     },
 
 ]
-ZONE_POLICY_AQ = {
+ZONE_POLICY_AQ: ZonePolicy = {
     'name': 'AQ',
     'rules': ZONE_RULES_AQ
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: AS
 # Rule count: 15
-#---------------------------------------------------------------------------
-ZONE_RULES_AS = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_AS: List[ZoneRule] = [
     # Rule    AS    1971    1985    -    Oct    lastSun    2:00s    1:00    D
     {
         'from_year': 1971,
@@ -470,16 +476,16 @@ ZONE_RULES_AS = [
     },
 
 ]
-ZONE_POLICY_AS = {
+ZONE_POLICY_AS: ZonePolicy = {
     'name': 'AS',
     'rules': ZONE_RULES_AS
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: AT
 # Rule count: 16
-#---------------------------------------------------------------------------
-ZONE_RULES_AT = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_AT: List[ZoneRule] = [
     # Rule    AT    1968    1985    -    Oct    lastSun    2:00s    1:00    D
     {
         'from_year': 1968,
@@ -674,16 +680,16 @@ ZONE_RULES_AT = [
     },
 
 ]
-ZONE_POLICY_AT = {
+ZONE_POLICY_AT: ZonePolicy = {
     'name': 'AT',
     'rules': ZONE_RULES_AT
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: AV
 # Rule count: 14
-#---------------------------------------------------------------------------
-ZONE_RULES_AV = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_AV: List[ZoneRule] = [
     # Rule    AV    1971    1985    -    Oct    lastSun    2:00s    1:00    D
     {
         'from_year': 1971,
@@ -854,16 +860,16 @@ ZONE_RULES_AV = [
     },
 
 ]
-ZONE_POLICY_AV = {
+ZONE_POLICY_AV: ZonePolicy = {
     'name': 'AV',
     'rules': ZONE_RULES_AV
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: AW
 # Rule count: 10
-#---------------------------------------------------------------------------
-ZONE_RULES_AW = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_AW: List[ZoneRule] = [
     # Anchor: Rule    AW    1975    only    -    Mar    Sun>=1    2:00s    0    S
     {
         'from_year': 0,
@@ -986,16 +992,16 @@ ZONE_RULES_AW = [
     },
 
 ]
-ZONE_POLICY_AW = {
+ZONE_POLICY_AW: ZonePolicy = {
     'name': 'AW',
     'rules': ZONE_RULES_AW
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Albania
 # Rule count: 22
-#---------------------------------------------------------------------------
-ZONE_RULES_Albania = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Albania: List[ZoneRule] = [
     # Rule    Albania    1943    only    -    Apr    10    3:00    0    -
     {
         'from_year': 1943,
@@ -1262,16 +1268,16 @@ ZONE_RULES_Albania = [
     },
 
 ]
-ZONE_POLICY_Albania = {
+ZONE_POLICY_Albania: ZonePolicy = {
     'name': 'Albania',
     'rules': ZONE_RULES_Albania
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Algeria
 # Rule count: 7
-#---------------------------------------------------------------------------
-ZONE_RULES_Algeria = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Algeria: List[ZoneRule] = [
     # Rule    Algeria    1971    only    -    Sep    26    23:00s    0    -
     {
         'from_year': 1971,
@@ -1358,16 +1364,16 @@ ZONE_RULES_Algeria = [
     },
 
 ]
-ZONE_POLICY_Algeria = {
+ZONE_POLICY_Algeria: ZonePolicy = {
     'name': 'Algeria',
     'rules': ZONE_RULES_Algeria
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Arg
 # Rule count: 11
-#---------------------------------------------------------------------------
-ZONE_RULES_Arg = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Arg: List[ZoneRule] = [
     # Rule    Arg    1968    1969    -    Apr    Sun>=1    0:00    0    -
     {
         'from_year': 1968,
@@ -1502,16 +1508,16 @@ ZONE_RULES_Arg = [
     },
 
 ]
-ZONE_POLICY_Arg = {
+ZONE_POLICY_Arg: ZonePolicy = {
     'name': 'Arg',
     'rules': ZONE_RULES_Arg
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Armenia
 # Rule count: 3
-#---------------------------------------------------------------------------
-ZONE_RULES_Armenia = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Armenia: List[ZoneRule] = [
     # Anchor: Rule Armenia    2011    only    -    Oct    lastSun     2:00s    0    -
     {
         'from_year': 0,
@@ -1550,16 +1556,16 @@ ZONE_RULES_Armenia = [
     },
 
 ]
-ZONE_POLICY_Armenia = {
+ZONE_POLICY_Armenia: ZonePolicy = {
     'name': 'Armenia',
     'rules': ZONE_RULES_Armenia
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Aus
 # Rule count: 1
-#---------------------------------------------------------------------------
-ZONE_RULES_Aus = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Aus: List[ZoneRule] = [
     # Rule    Aus    1943    1944    -    Mar    lastSun    2:00s    0    S
     {
         'from_year': 1943,
@@ -1574,16 +1580,16 @@ ZONE_RULES_Aus = [
     },
 
 ]
-ZONE_POLICY_Aus = {
+ZONE_POLICY_Aus: ZonePolicy = {
     'name': 'Aus',
     'rules': ZONE_RULES_Aus
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Austria
 # Rule count: 3
-#---------------------------------------------------------------------------
-ZONE_RULES_Austria = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Austria: List[ZoneRule] = [
     # Rule    Austria    1947    1948    -    Oct    Sun>=1    2:00s    0    -
     {
         'from_year': 1947,
@@ -1622,16 +1628,16 @@ ZONE_RULES_Austria = [
     },
 
 ]
-ZONE_POLICY_Austria = {
+ZONE_POLICY_Austria: ZonePolicy = {
     'name': 'Austria',
     'rules': ZONE_RULES_Austria
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Azer
 # Rule count: 3
-#---------------------------------------------------------------------------
-ZONE_RULES_Azer = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Azer: List[ZoneRule] = [
     # Anchor: Rule    Azer    1997    2015    -    Oct    lastSun     5:00    0    -
     {
         'from_year': 0,
@@ -1670,16 +1676,16 @@ ZONE_RULES_Azer = [
     },
 
 ]
-ZONE_POLICY_Azer = {
+ZONE_POLICY_Azer: ZonePolicy = {
     'name': 'Azer',
     'rules': ZONE_RULES_Azer
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Barb
 # Rule count: 6
-#---------------------------------------------------------------------------
-ZONE_RULES_Barb = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Barb: List[ZoneRule] = [
     # Rule    Barb    1944    only    -    Sep    10    6:00u    0    S
     {
         'from_year': 1944,
@@ -1754,16 +1760,16 @@ ZONE_RULES_Barb = [
     },
 
 ]
-ZONE_POLICY_Barb = {
+ZONE_POLICY_Barb: ZonePolicy = {
     'name': 'Barb',
     'rules': ZONE_RULES_Barb
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Belgium
 # Rule count: 1
-#---------------------------------------------------------------------------
-ZONE_RULES_Belgium = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Belgium: List[ZoneRule] = [
     # Rule    Belgium    1946    only    -    Oct     7     2:00s    0    -
     {
         'from_year': 1946,
@@ -1778,16 +1784,16 @@ ZONE_RULES_Belgium = [
     },
 
 ]
-ZONE_POLICY_Belgium = {
+ZONE_POLICY_Belgium: ZonePolicy = {
     'name': 'Belgium',
     'rules': ZONE_RULES_Belgium
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Belize
 # Rule count: 5
-#---------------------------------------------------------------------------
-ZONE_RULES_Belize = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Belize: List[ZoneRule] = [
     # Rule    Belize    1948    1968    -    Feb    Sat>=8    24:00    0    CST
     {
         'from_year': 1948,
@@ -1850,16 +1856,16 @@ ZONE_RULES_Belize = [
     },
 
 ]
-ZONE_POLICY_Belize = {
+ZONE_POLICY_Belize: ZonePolicy = {
     'name': 'Belize',
     'rules': ZONE_RULES_Belize
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Bermuda
 # Rule count: 1
-#---------------------------------------------------------------------------
-ZONE_RULES_Bermuda = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Bermuda: List[ZoneRule] = [
     # Rule    Bermuda    1956    only    -    Oct    lastSun     2:00    0    S
     {
         'from_year': 1956,
@@ -1874,16 +1880,16 @@ ZONE_RULES_Bermuda = [
     },
 
 ]
-ZONE_POLICY_Bermuda = {
+ZONE_POLICY_Bermuda: ZonePolicy = {
     'name': 'Bermuda',
     'rules': ZONE_RULES_Bermuda
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Brazil
 # Rule count: 44
-#---------------------------------------------------------------------------
-ZONE_RULES_Brazil = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Brazil: List[ZoneRule] = [
     # Rule    Brazil    1966    1968    -    Mar     1     0:00    0    -
     {
         'from_year': 1966,
@@ -2414,16 +2420,16 @@ ZONE_RULES_Brazil = [
     },
 
 ]
-ZONE_POLICY_Brazil = {
+ZONE_POLICY_Brazil: ZonePolicy = {
     'name': 'Brazil',
     'rules': ZONE_RULES_Brazil
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Bulg
 # Rule count: 6
-#---------------------------------------------------------------------------
-ZONE_RULES_Bulg = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Bulg: List[ZoneRule] = [
     # Anchor: Rule    Bulg    1979    only    -    Oct     1     1:00    0    -
     {
         'from_year': 0,
@@ -2498,16 +2504,16 @@ ZONE_RULES_Bulg = [
     },
 
 ]
-ZONE_POLICY_Bulg = {
+ZONE_POLICY_Bulg: ZonePolicy = {
     'name': 'Bulg',
     'rules': ZONE_RULES_Bulg
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: C_Eur
 # Rule count: 7
-#---------------------------------------------------------------------------
-ZONE_RULES_C_Eur = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_C_Eur: List[ZoneRule] = [
     # Rule    C-Eur    1945    only    -    Sep    16     2:00s    0    -
     {
         'from_year': 1945,
@@ -2594,16 +2600,16 @@ ZONE_RULES_C_Eur = [
     },
 
 ]
-ZONE_POLICY_C_Eur = {
+ZONE_POLICY_C_Eur: ZonePolicy = {
     'name': 'C_Eur',
     'rules': ZONE_RULES_C_Eur
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: CO
 # Rule count: 3
-#---------------------------------------------------------------------------
-ZONE_RULES_CO = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_CO: List[ZoneRule] = [
     # Anchor: Rule    CO    1993    only    -    Apr     4    0:00    0    -
     {
         'from_year': 0,
@@ -2642,16 +2648,16 @@ ZONE_RULES_CO = [
     },
 
 ]
-ZONE_POLICY_CO = {
+ZONE_POLICY_CO: ZonePolicy = {
     'name': 'CO',
     'rules': ZONE_RULES_CO
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: CR
 # Rule count: 6
-#---------------------------------------------------------------------------
-ZONE_RULES_CR = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_CR: List[ZoneRule] = [
     # Anchor: Rule    CR    1979    1980    -    Jun    Sun>=1    0:00    0    S
     {
         'from_year': 0,
@@ -2726,16 +2732,16 @@ ZONE_RULES_CR = [
     },
 
 ]
-ZONE_POLICY_CR = {
+ZONE_POLICY_CR: ZonePolicy = {
     'name': 'CR',
     'rules': ZONE_RULES_CR
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Canada
 # Rule count: 6
-#---------------------------------------------------------------------------
-ZONE_RULES_Canada = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Canada: List[ZoneRule] = [
     # Rule    Canada    1945    only    -    Sep    30    2:00    0    S
     {
         'from_year': 1945,
@@ -2810,16 +2816,16 @@ ZONE_RULES_Canada = [
     },
 
 ]
-ZONE_POLICY_Canada = {
+ZONE_POLICY_Canada: ZonePolicy = {
     'name': 'Canada',
     'rules': ZONE_RULES_Canada
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Chatham
 # Rule count: 10
-#---------------------------------------------------------------------------
-ZONE_RULES_Chatham = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Chatham: List[ZoneRule] = [
     # Anchor: Rule    Chatham    1975    only    -    Feb    lastSun    2:45s    0    -
     {
         'from_year': 0,
@@ -2942,16 +2948,16 @@ ZONE_RULES_Chatham = [
     },
 
 ]
-ZONE_POLICY_Chatham = {
+ZONE_POLICY_Chatham: ZonePolicy = {
     'name': 'Chatham',
     'rules': ZONE_RULES_Chatham
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Chile
 # Rule count: 27
-#---------------------------------------------------------------------------
-ZONE_RULES_Chile = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Chile: List[ZoneRule] = [
     # Rule    Chile    1970    1972    -    Oct    Sun>=9    4:00u    1:00    -
     {
         'from_year': 1970,
@@ -3278,16 +3284,16 @@ ZONE_RULES_Chile = [
     },
 
 ]
-ZONE_POLICY_Chile = {
+ZONE_POLICY_Chile: ZonePolicy = {
     'name': 'Chile',
     'rules': ZONE_RULES_Chile
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Cook
 # Rule count: 4
-#---------------------------------------------------------------------------
-ZONE_RULES_Cook = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Cook: List[ZoneRule] = [
     # Anchor: Rule    Cook    1979    1991    -    Mar    Sun>=1    0:00    0    -
     {
         'from_year': 0,
@@ -3338,16 +3344,16 @@ ZONE_RULES_Cook = [
     },
 
 ]
-ZONE_POLICY_Cook = {
+ZONE_POLICY_Cook: ZonePolicy = {
     'name': 'Cook',
     'rules': ZONE_RULES_Cook
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Cuba
 # Rule count: 26
-#---------------------------------------------------------------------------
-ZONE_RULES_Cuba = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Cuba: List[ZoneRule] = [
     # Rule    Cuba    1969    1977    -    Apr    lastSun    0:00    1:00    D
     {
         'from_year': 1969,
@@ -3662,16 +3668,16 @@ ZONE_RULES_Cuba = [
     },
 
 ]
-ZONE_POLICY_Cuba = {
+ZONE_POLICY_Cuba: ZonePolicy = {
     'name': 'Cuba',
     'rules': ZONE_RULES_Cuba
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Cyprus
 # Rule count: 10
-#---------------------------------------------------------------------------
-ZONE_RULES_Cyprus = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Cyprus: List[ZoneRule] = [
     # Anchor: Rule    Cyprus    1975    only    -    Oct    12    0:00    0    -
     {
         'from_year': 0,
@@ -3794,16 +3800,16 @@ ZONE_RULES_Cyprus = [
     },
 
 ]
-ZONE_POLICY_Cyprus = {
+ZONE_POLICY_Cyprus: ZonePolicy = {
     'name': 'Cyprus',
     'rules': ZONE_RULES_Cyprus
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Czech
 # Rule count: 1
-#---------------------------------------------------------------------------
-ZONE_RULES_Czech = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Czech: List[ZoneRule] = [
     # Rule    Czech    1946    1949    -    Oct    Sun>=1    2:00s    0    -
     {
         'from_year': 1946,
@@ -3818,16 +3824,16 @@ ZONE_RULES_Czech = [
     },
 
 ]
-ZONE_POLICY_Czech = {
+ZONE_POLICY_Czech: ZonePolicy = {
     'name': 'Czech',
     'rules': ZONE_RULES_Czech
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: DR
 # Rule count: 3
-#---------------------------------------------------------------------------
-ZONE_RULES_DR = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_DR: List[ZoneRule] = [
     # Rule    DR    1969    1973    -    Oct    lastSun    0:00    0:30    -0430
     {
         'from_year': 1969,
@@ -3866,16 +3872,16 @@ ZONE_RULES_DR = [
     },
 
 ]
-ZONE_POLICY_DR = {
+ZONE_POLICY_DR: ZonePolicy = {
     'name': 'DR',
     'rules': ZONE_RULES_DR
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Denmark
 # Rule count: 1
-#---------------------------------------------------------------------------
-ZONE_RULES_Denmark = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Denmark: List[ZoneRule] = [
     # Rule    Denmark    1948    only    -    Aug     8     2:00s    0    -
     {
         'from_year': 1948,
@@ -3890,16 +3896,16 @@ ZONE_RULES_Denmark = [
     },
 
 ]
-ZONE_POLICY_Denmark = {
+ZONE_POLICY_Denmark: ZonePolicy = {
     'name': 'Denmark',
     'rules': ZONE_RULES_Denmark
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Dhaka
 # Rule count: 3
-#---------------------------------------------------------------------------
-ZONE_RULES_Dhaka = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Dhaka: List[ZoneRule] = [
     # Anchor: Rule    Dhaka    2009    only    -    Dec    31    24:00    0    -
     {
         'from_year': 0,
@@ -3938,16 +3944,16 @@ ZONE_RULES_Dhaka = [
     },
 
 ]
-ZONE_POLICY_Dhaka = {
+ZONE_POLICY_Dhaka: ZonePolicy = {
     'name': 'Dhaka',
     'rules': ZONE_RULES_Dhaka
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: E_Eur
 # Rule count: 5
-#---------------------------------------------------------------------------
-ZONE_RULES_E_Eur = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_E_Eur: List[ZoneRule] = [
     # Anchor: Rule    E-Eur    1979    1995    -    Sep    lastSun     0:00    0    -
     {
         'from_year': 0,
@@ -4010,16 +4016,16 @@ ZONE_RULES_E_Eur = [
     },
 
 ]
-ZONE_POLICY_E_Eur = {
+ZONE_POLICY_E_Eur: ZonePolicy = {
     'name': 'E_Eur',
     'rules': ZONE_RULES_E_Eur
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: E_EurAsia
 # Rule count: 4
-#---------------------------------------------------------------------------
-ZONE_RULES_E_EurAsia = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_E_EurAsia: List[ZoneRule] = [
     # Anchor: Rule E-EurAsia    1979    1995    -    Sep    lastSun     0:00    0    -
     {
         'from_year': 0,
@@ -4070,16 +4076,16 @@ ZONE_RULES_E_EurAsia = [
     },
 
 ]
-ZONE_POLICY_E_EurAsia = {
+ZONE_POLICY_E_EurAsia: ZonePolicy = {
     'name': 'E_EurAsia',
     'rules': ZONE_RULES_E_EurAsia
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: EU
 # Rule count: 7
-#---------------------------------------------------------------------------
-ZONE_RULES_EU = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_EU: List[ZoneRule] = [
     # Anchor: Rule    EU    1977    only    -    Sep    lastSun     1:00u    0    -
     {
         'from_year': 0,
@@ -4166,16 +4172,16 @@ ZONE_RULES_EU = [
     },
 
 ]
-ZONE_POLICY_EU = {
+ZONE_POLICY_EU: ZonePolicy = {
     'name': 'EU',
     'rules': ZONE_RULES_EU
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: EUAsia
 # Rule count: 4
-#---------------------------------------------------------------------------
-ZONE_RULES_EUAsia = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_EUAsia: List[ZoneRule] = [
     # Anchor: Rule    EUAsia    1979    1995    -    Sep    lastSun     1:00u    0    -
     {
         'from_year': 0,
@@ -4226,16 +4232,16 @@ ZONE_RULES_EUAsia = [
     },
 
 ]
-ZONE_POLICY_EUAsia = {
+ZONE_POLICY_EUAsia: ZonePolicy = {
     'name': 'EUAsia',
     'rules': ZONE_RULES_EUAsia
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Ecuador
 # Rule count: 3
-#---------------------------------------------------------------------------
-ZONE_RULES_Ecuador = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Ecuador: List[ZoneRule] = [
     # Anchor: Rule    Ecuador    1993    only    -    Feb     5    0:00    0    -
     {
         'from_year': 0,
@@ -4274,16 +4280,16 @@ ZONE_RULES_Ecuador = [
     },
 
 ]
-ZONE_POLICY_Ecuador = {
+ZONE_POLICY_Ecuador: ZonePolicy = {
     'name': 'Ecuador',
     'rules': ZONE_RULES_Ecuador
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Edm
 # Rule count: 3
-#---------------------------------------------------------------------------
-ZONE_RULES_Edm = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Edm: List[ZoneRule] = [
     # Rule    Edm    1947    only    -    Sep    lastSun    2:00    0    S
     {
         'from_year': 1947,
@@ -4322,16 +4328,16 @@ ZONE_RULES_Edm = [
     },
 
 ]
-ZONE_POLICY_Edm = {
+ZONE_POLICY_Edm: ZonePolicy = {
     'name': 'Edm',
     'rules': ZONE_RULES_Edm
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Egypt
 # Rule count: 21
-#---------------------------------------------------------------------------
-ZONE_RULES_Egypt = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Egypt: List[ZoneRule] = [
     # Rule    Egypt    1959    1981    -    May     1    1:00    1:00    S
     {
         'from_year': 1959,
@@ -4586,16 +4592,16 @@ ZONE_RULES_Egypt = [
     },
 
 ]
-ZONE_POLICY_Egypt = {
+ZONE_POLICY_Egypt: ZonePolicy = {
     'name': 'Egypt',
     'rules': ZONE_RULES_Egypt
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Eire
 # Rule count: 7
-#---------------------------------------------------------------------------
-ZONE_RULES_Eire = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Eire: List[ZoneRule] = [
     # Rule    Eire    1971    only    -    Oct    31     2:00u    -1:00    -
     {
         'from_year': 1971,
@@ -4682,16 +4688,16 @@ ZONE_RULES_Eire = [
     },
 
 ]
-ZONE_POLICY_Eire = {
+ZONE_POLICY_Eire: ZonePolicy = {
     'name': 'Eire',
     'rules': ZONE_RULES_Eire
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Falk
 # Rule count: 8
-#---------------------------------------------------------------------------
-ZONE_RULES_Falk = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Falk: List[ZoneRule] = [
     # Rule    Falk    1943    only    -    Jan    1    0:00    0    -
     {
         'from_year': 1943,
@@ -4790,16 +4796,16 @@ ZONE_RULES_Falk = [
     },
 
 ]
-ZONE_POLICY_Falk = {
+ZONE_POLICY_Falk: ZonePolicy = {
     'name': 'Falk',
     'rules': ZONE_RULES_Falk
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Fiji
 # Rule count: 15
-#---------------------------------------------------------------------------
-ZONE_RULES_Fiji = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Fiji: List[ZoneRule] = [
     # Anchor: Rule    Fiji    1999    2000    -    Feb    lastSun    3:00    0    -
     {
         'from_year': 0,
@@ -4982,16 +4988,16 @@ ZONE_RULES_Fiji = [
     },
 
 ]
-ZONE_POLICY_Fiji = {
+ZONE_POLICY_Fiji: ZonePolicy = {
     'name': 'Fiji',
     'rules': ZONE_RULES_Fiji
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Finland
 # Rule count: 3
-#---------------------------------------------------------------------------
-ZONE_RULES_Finland = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Finland: List[ZoneRule] = [
     # Rule    Finland    1942    only    -    Oct    4    1:00    0    -
     {
         'from_year': 1942,
@@ -5030,16 +5036,16 @@ ZONE_RULES_Finland = [
     },
 
 ]
-ZONE_POLICY_Finland = {
+ZONE_POLICY_Finland: ZonePolicy = {
     'name': 'Finland',
     'rules': ZONE_RULES_Finland
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: France
 # Rule count: 3
-#---------------------------------------------------------------------------
-ZONE_RULES_France = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_France: List[ZoneRule] = [
     # Rule    France    1945    only    -    Sep    16     3:00    0    -
     {
         'from_year': 1945,
@@ -5078,16 +5084,16 @@ ZONE_RULES_France = [
     },
 
 ]
-ZONE_POLICY_France = {
+ZONE_POLICY_France: ZonePolicy = {
     'name': 'France',
     'rules': ZONE_RULES_France
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: GB_Eire
 # Rule count: 6
-#---------------------------------------------------------------------------
-ZONE_RULES_GB_Eire = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_GB_Eire: List[ZoneRule] = [
     # Rule    GB-Eire    1961    1968    -    Oct    Sun>=23    2:00s    0    GMT
     {
         'from_year': 1961,
@@ -5162,16 +5168,16 @@ ZONE_RULES_GB_Eire = [
     },
 
 ]
-ZONE_POLICY_GB_Eire = {
+ZONE_POLICY_GB_Eire: ZonePolicy = {
     'name': 'GB_Eire',
     'rules': ZONE_RULES_GB_Eire
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Germany
 # Rule count: 1
-#---------------------------------------------------------------------------
-ZONE_RULES_Germany = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Germany: List[ZoneRule] = [
     # Rule    Germany    1947    1949    -    Oct    Sun>=1    2:00s    0    -
     {
         'from_year': 1947,
@@ -5186,16 +5192,16 @@ ZONE_RULES_Germany = [
     },
 
 ]
-ZONE_POLICY_Germany = {
+ZONE_POLICY_Germany: ZonePolicy = {
     'name': 'Germany',
     'rules': ZONE_RULES_Germany
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Greece
 # Rule count: 12
-#---------------------------------------------------------------------------
-ZONE_RULES_Greece = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Greece: List[ZoneRule] = [
     # Rule    Greece    1952    only    -    Nov     2    0:00    0    -
     {
         'from_year': 1952,
@@ -5342,16 +5348,16 @@ ZONE_RULES_Greece = [
     },
 
 ]
-ZONE_POLICY_Greece = {
+ZONE_POLICY_Greece: ZonePolicy = {
     'name': 'Greece',
     'rules': ZONE_RULES_Greece
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Guam
 # Rule count: 7
-#---------------------------------------------------------------------------
-ZONE_RULES_Guam = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Guam: List[ZoneRule] = [
     # Rule    Guam    1970    1971    -    Sep    Sun>=1    2:00    0    S
     {
         'from_year': 1970,
@@ -5438,16 +5444,16 @@ ZONE_RULES_Guam = [
     },
 
 ]
-ZONE_POLICY_Guam = {
+ZONE_POLICY_Guam: ZonePolicy = {
     'name': 'Guam',
     'rules': ZONE_RULES_Guam
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Guat
 # Rule count: 9
-#---------------------------------------------------------------------------
-ZONE_RULES_Guat = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Guat: List[ZoneRule] = [
     # Anchor: Rule    Guat    1974    only    -    Feb    24    0:00    0    S
     {
         'from_year': 0,
@@ -5558,16 +5564,16 @@ ZONE_RULES_Guat = [
     },
 
 ]
-ZONE_POLICY_Guat = {
+ZONE_POLICY_Guat: ZonePolicy = {
     'name': 'Guat',
     'rules': ZONE_RULES_Guat
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: HK
 # Rule count: 6
-#---------------------------------------------------------------------------
-ZONE_RULES_HK = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_HK: List[ZoneRule] = [
     # Rule    HK    1953    1964    -    Oct    Sun>=31    3:30    0    -
     {
         'from_year': 1953,
@@ -5642,16 +5648,16 @@ ZONE_RULES_HK = [
     },
 
 ]
-ZONE_POLICY_HK = {
+ZONE_POLICY_HK: ZonePolicy = {
     'name': 'HK',
     'rules': ZONE_RULES_HK
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Haiti
 # Rule count: 12
-#---------------------------------------------------------------------------
-ZONE_RULES_Haiti = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Haiti: List[ZoneRule] = [
     # Anchor: Rule    Haiti    1983    1987    -    Oct    lastSun    0:00    0    S
     {
         'from_year': 0,
@@ -5798,16 +5804,16 @@ ZONE_RULES_Haiti = [
     },
 
 ]
-ZONE_POLICY_Haiti = {
+ZONE_POLICY_Haiti: ZonePolicy = {
     'name': 'Haiti',
     'rules': ZONE_RULES_Haiti
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Halifax
 # Rule count: 3
-#---------------------------------------------------------------------------
-ZONE_RULES_Halifax = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Halifax: List[ZoneRule] = [
     # Rule    Halifax    1956    1959    -    Sep    lastSun    2:00    0    S
     {
         'from_year': 1956,
@@ -5846,16 +5852,16 @@ ZONE_RULES_Halifax = [
     },
 
 ]
-ZONE_POLICY_Halifax = {
+ZONE_POLICY_Halifax: ZonePolicy = {
     'name': 'Halifax',
     'rules': ZONE_RULES_Halifax
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Holiday
 # Rule count: 3
-#---------------------------------------------------------------------------
-ZONE_RULES_Holiday = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Holiday: List[ZoneRule] = [
     # Anchor: Rule    Holiday    1993    1994    -    Mar    Sun>=1    2:00s    0    S
     {
         'from_year': 0,
@@ -5894,16 +5900,16 @@ ZONE_RULES_Holiday = [
     },
 
 ]
-ZONE_POLICY_Holiday = {
+ZONE_POLICY_Holiday: ZonePolicy = {
     'name': 'Holiday',
     'rules': ZONE_RULES_Holiday
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Hond
 # Rule count: 5
-#---------------------------------------------------------------------------
-ZONE_RULES_Hond = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Hond: List[ZoneRule] = [
     # Anchor: Rule    Hond    1987    1988    -    Sep    lastSun    0:00    0    S
     {
         'from_year': 0,
@@ -5966,16 +5972,16 @@ ZONE_RULES_Hond = [
     },
 
 ]
-ZONE_POLICY_Hond = {
+ZONE_POLICY_Hond: ZonePolicy = {
     'name': 'Hond',
     'rules': ZONE_RULES_Hond
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Hungary
 # Rule count: 5
-#---------------------------------------------------------------------------
-ZONE_RULES_Hungary = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Hungary: List[ZoneRule] = [
     # Rule    Hungary    1956    1957    -    Sep    lastSun     3:00    0    -
     {
         'from_year': 1956,
@@ -6038,16 +6044,16 @@ ZONE_RULES_Hungary = [
     },
 
 ]
-ZONE_POLICY_Hungary = {
+ZONE_POLICY_Hungary: ZonePolicy = {
     'name': 'Hungary',
     'rules': ZONE_RULES_Hungary
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Iran
 # Rule count: 64
-#---------------------------------------------------------------------------
-ZONE_RULES_Iran = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Iran: List[ZoneRule] = [
     # Anchor: Rule    Iran    1978    only    -    Oct    20    24:00    0    -
     {
         'from_year': 0,
@@ -6818,16 +6824,16 @@ ZONE_RULES_Iran = [
     },
 
 ]
-ZONE_POLICY_Iran = {
+ZONE_POLICY_Iran: ZonePolicy = {
     'name': 'Iran',
     'rules': ZONE_RULES_Iran
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Iraq
 # Rule count: 9
-#---------------------------------------------------------------------------
-ZONE_RULES_Iraq = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Iraq: List[ZoneRule] = [
     # Anchor: Rule    Iraq    1982    1984    -    Oct    1    0:00    0    -
     {
         'from_year': 0,
@@ -6938,16 +6944,16 @@ ZONE_RULES_Iraq = [
     },
 
 ]
-ZONE_POLICY_Iraq = {
+ZONE_POLICY_Iraq: ZonePolicy = {
     'name': 'Iraq',
     'rules': ZONE_RULES_Iraq
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Italy
 # Rule count: 10
-#---------------------------------------------------------------------------
-ZONE_RULES_Italy = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Italy: List[ZoneRule] = [
     # Rule    Italy    1972    only    -    Oct     1     0:00s    0    -
     {
         'from_year': 1972,
@@ -7070,16 +7076,16 @@ ZONE_RULES_Italy = [
     },
 
 ]
-ZONE_POLICY_Italy = {
+ZONE_POLICY_Italy: ZonePolicy = {
     'name': 'Italy',
     'rules': ZONE_RULES_Italy
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Japan
 # Rule count: 1
-#---------------------------------------------------------------------------
-ZONE_RULES_Japan = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Japan: List[ZoneRule] = [
     # Rule    Japan    1948    1951    -    Sep    Sat>=8    25:00    0    S
     {
         'from_year': 1948,
@@ -7094,16 +7100,16 @@ ZONE_RULES_Japan = [
     },
 
 ]
-ZONE_POLICY_Japan = {
+ZONE_POLICY_Japan: ZonePolicy = {
     'name': 'Japan',
     'rules': ZONE_RULES_Japan
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Jordan
 # Rule count: 33
-#---------------------------------------------------------------------------
-ZONE_RULES_Jordan = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Jordan: List[ZoneRule] = [
     # Anchor: Rule    Jordan    1973    1975    -    Oct    1    0:00    0    -
     {
         'from_year': 0,
@@ -7502,16 +7508,16 @@ ZONE_RULES_Jordan = [
     },
 
 ]
-ZONE_POLICY_Jordan = {
+ZONE_POLICY_Jordan: ZonePolicy = {
     'name': 'Jordan',
     'rules': ZONE_RULES_Jordan
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Kyrgyz
 # Rule count: 5
-#---------------------------------------------------------------------------
-ZONE_RULES_Kyrgyz = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Kyrgyz: List[ZoneRule] = [
     # Anchor: Rule    Kyrgyz    1992    1996    -    Sep    lastSun    0:00    0    -
     {
         'from_year': 0,
@@ -7574,16 +7580,16 @@ ZONE_RULES_Kyrgyz = [
     },
 
 ]
-ZONE_POLICY_Kyrgyz = {
+ZONE_POLICY_Kyrgyz: ZonePolicy = {
     'name': 'Kyrgyz',
     'rules': ZONE_RULES_Kyrgyz
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: LH
 # Rule count: 15
-#---------------------------------------------------------------------------
-ZONE_RULES_LH = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_LH: List[ZoneRule] = [
     # Anchor: Rule    LH    1982    1985    -    Mar    Sun>=1    2:00    0    -
     {
         'from_year': 0,
@@ -7766,16 +7772,16 @@ ZONE_RULES_LH = [
     },
 
 ]
-ZONE_POLICY_LH = {
+ZONE_POLICY_LH: ZonePolicy = {
     'name': 'LH',
     'rules': ZONE_RULES_LH
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Latvia
 # Rule count: 3
-#---------------------------------------------------------------------------
-ZONE_RULES_Latvia = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Latvia: List[ZoneRule] = [
     # Anchor: Rule    Latvia    1989    1996    -    Sep    lastSun     2:00s    0    -
     {
         'from_year': 0,
@@ -7814,16 +7820,16 @@ ZONE_RULES_Latvia = [
     },
 
 ]
-ZONE_POLICY_Latvia = {
+ZONE_POLICY_Latvia: ZonePolicy = {
     'name': 'Latvia',
     'rules': ZONE_RULES_Latvia
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Lebanon
 # Rule count: 14
-#---------------------------------------------------------------------------
-ZONE_RULES_Lebanon = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Lebanon: List[ZoneRule] = [
     # Rule    Lebanon    1972    only    -    Jun    22    0:00    1:00    S
     {
         'from_year': 1972,
@@ -7994,16 +8000,16 @@ ZONE_RULES_Lebanon = [
     },
 
 ]
-ZONE_POLICY_Lebanon = {
+ZONE_POLICY_Lebanon: ZonePolicy = {
     'name': 'Lebanon',
     'rules': ZONE_RULES_Lebanon
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Libya
 # Rule count: 12
-#---------------------------------------------------------------------------
-ZONE_RULES_Libya = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Libya: List[ZoneRule] = [
     # Rule    Libya    1956    only    -    Jan     1    0:00    0    -
     {
         'from_year': 1956,
@@ -8150,16 +8156,16 @@ ZONE_RULES_Libya = [
     },
 
 ]
-ZONE_POLICY_Libya = {
+ZONE_POLICY_Libya: ZonePolicy = {
     'name': 'Libya',
     'rules': ZONE_RULES_Libya
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Macau
 # Rule count: 7
-#---------------------------------------------------------------------------
-ZONE_RULES_Macau = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Macau: List[ZoneRule] = [
     # Rule    Macau    1965    1973    -    Apr    Sun>=16    03:30    1:00    D
     {
         'from_year': 1965,
@@ -8246,16 +8252,16 @@ ZONE_RULES_Macau = [
     },
 
 ]
-ZONE_POLICY_Macau = {
+ZONE_POLICY_Macau: ZonePolicy = {
     'name': 'Macau',
     'rules': ZONE_RULES_Macau
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Malta
 # Rule count: 8
-#---------------------------------------------------------------------------
-ZONE_RULES_Malta = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Malta: List[ZoneRule] = [
     # Anchor: Rule    Malta    1973    only    -    Sep    29    0:00s    0    -
     {
         'from_year': 0,
@@ -8354,16 +8360,16 @@ ZONE_RULES_Malta = [
     },
 
 ]
-ZONE_POLICY_Malta = {
+ZONE_POLICY_Malta: ZonePolicy = {
     'name': 'Malta',
     'rules': ZONE_RULES_Malta
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Mauritius
 # Rule count: 5
-#---------------------------------------------------------------------------
-ZONE_RULES_Mauritius = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Mauritius: List[ZoneRule] = [
     # Anchor: Rule Mauritius    1983    only    -    Mar    21    0:00    0    -
     {
         'from_year': 0,
@@ -8426,16 +8432,16 @@ ZONE_RULES_Mauritius = [
     },
 
 ]
-ZONE_POLICY_Mauritius = {
+ZONE_POLICY_Mauritius: ZonePolicy = {
     'name': 'Mauritius',
     'rules': ZONE_RULES_Mauritius
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Mexico
 # Rule count: 7
-#---------------------------------------------------------------------------
-ZONE_RULES_Mexico = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Mexico: List[ZoneRule] = [
     # Rule    Mexico    1950    only    -    Jul    30    0:00    0    S
     {
         'from_year': 1950,
@@ -8522,16 +8528,16 @@ ZONE_RULES_Mexico = [
     },
 
 ]
-ZONE_POLICY_Mexico = {
+ZONE_POLICY_Mexico: ZonePolicy = {
     'name': 'Mexico',
     'rules': ZONE_RULES_Mexico
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Moldova
 # Rule count: 3
-#---------------------------------------------------------------------------
-ZONE_RULES_Moldova = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Moldova: List[ZoneRule] = [
     # Anchor: Rule    Moldova    1997    max    -    Oct    lastSun     3:00    0    -
     {
         'from_year': 0,
@@ -8570,16 +8576,16 @@ ZONE_RULES_Moldova = [
     },
 
 ]
-ZONE_POLICY_Moldova = {
+ZONE_POLICY_Moldova: ZonePolicy = {
     'name': 'Moldova',
     'rules': ZONE_RULES_Moldova
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Moncton
 # Rule count: 3
-#---------------------------------------------------------------------------
-ZONE_RULES_Moncton = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Moncton: List[ZoneRule] = [
     # Rule    Moncton    1957    1972    -    Oct    lastSun    2:00    0    S
     {
         'from_year': 1957,
@@ -8618,16 +8624,16 @@ ZONE_RULES_Moncton = [
     },
 
 ]
-ZONE_POLICY_Moncton = {
+ZONE_POLICY_Moncton: ZonePolicy = {
     'name': 'Moncton',
     'rules': ZONE_RULES_Moncton
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Mongol
 # Rule count: 10
-#---------------------------------------------------------------------------
-ZONE_RULES_Mongol = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Mongol: List[ZoneRule] = [
     # Anchor: Rule    Mongol    1983    only    -    Oct    1    0:00    0    -
     {
         'from_year': 0,
@@ -8750,16 +8756,16 @@ ZONE_RULES_Mongol = [
     },
 
 ]
-ZONE_POLICY_Mongol = {
+ZONE_POLICY_Mongol: ZonePolicy = {
     'name': 'Mongol',
     'rules': ZONE_RULES_Mongol
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Morocco
 # Rule count: 101
-#---------------------------------------------------------------------------
-ZONE_RULES_Morocco = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Morocco: List[ZoneRule] = [
     # Rule    Morocco    1967    only    -    Oct     1     0:00    0    -
     {
         'from_year': 1967,
@@ -9974,16 +9980,16 @@ ZONE_RULES_Morocco = [
     },
 
 ]
-ZONE_POLICY_Morocco = {
+ZONE_POLICY_Morocco: ZonePolicy = {
     'name': 'Morocco',
     'rules': ZONE_RULES_Morocco
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: NC
 # Rule count: 5
-#---------------------------------------------------------------------------
-ZONE_RULES_NC = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_NC: List[ZoneRule] = [
     # Anchor: Rule    NC    1978    1979    -    Feb    27    0:00    0    -
     {
         'from_year': 0,
@@ -10046,16 +10052,16 @@ ZONE_RULES_NC = [
     },
 
 ]
-ZONE_POLICY_NC = {
+ZONE_POLICY_NC: ZonePolicy = {
     'name': 'NC',
     'rules': ZONE_RULES_NC
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: NT_YK
 # Rule count: 4
-#---------------------------------------------------------------------------
-ZONE_RULES_NT_YK = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_NT_YK: List[ZoneRule] = [
     # Rule    NT_YK    1965    only    -    Oct    lastSun    2:00    0    S
     {
         'from_year': 1965,
@@ -10106,16 +10112,16 @@ ZONE_RULES_NT_YK = [
     },
 
 ]
-ZONE_POLICY_NT_YK = {
+ZONE_POLICY_NT_YK: ZonePolicy = {
     'name': 'NT_YK',
     'rules': ZONE_RULES_NT_YK
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: NZ
 # Rule count: 10
-#---------------------------------------------------------------------------
-ZONE_RULES_NZ = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_NZ: List[ZoneRule] = [
     # Rule    NZ    1946    only    -    Jan     1    0:00    0    S
     {
         'from_year': 1946,
@@ -10238,16 +10244,16 @@ ZONE_RULES_NZ = [
     },
 
 ]
-ZONE_POLICY_NZ = {
+ZONE_POLICY_NZ: ZonePolicy = {
     'name': 'NZ',
     'rules': ZONE_RULES_NZ
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Namibia
 # Rule count: 4
-#---------------------------------------------------------------------------
-ZONE_RULES_Namibia = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Namibia: List[ZoneRule] = [
     # Anchor: Rule    Namibia    1994    2017    -    Sep    Sun>=1    2:00    0    CAT
     {
         'from_year': 0,
@@ -10298,16 +10304,16 @@ ZONE_RULES_Namibia = [
     },
 
 ]
-ZONE_POLICY_Namibia = {
+ZONE_POLICY_Namibia: ZonePolicy = {
     'name': 'Namibia',
     'rules': ZONE_RULES_Namibia
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Neth
 # Rule count: 1
-#---------------------------------------------------------------------------
-ZONE_RULES_Neth = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Neth: List[ZoneRule] = [
     # Rule    Neth    1945    only    -    Sep    16    2:00s    0    -
     {
         'from_year': 1945,
@@ -10322,16 +10328,16 @@ ZONE_RULES_Neth = [
     },
 
 ]
-ZONE_POLICY_Neth = {
+ZONE_POLICY_Neth: ZonePolicy = {
     'name': 'Neth',
     'rules': ZONE_RULES_Neth
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Nic
 # Rule count: 7
-#---------------------------------------------------------------------------
-ZONE_RULES_Nic = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Nic: List[ZoneRule] = [
     # Anchor: Rule    Nic    1979    1980    -    Jun    Mon>=23    0:00    0    S
     {
         'from_year': 0,
@@ -10418,16 +10424,16 @@ ZONE_RULES_Nic = [
     },
 
 ]
-ZONE_POLICY_Nic = {
+ZONE_POLICY_Nic: ZonePolicy = {
     'name': 'Nic',
     'rules': ZONE_RULES_Nic
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Norway
 # Rule count: 1
-#---------------------------------------------------------------------------
-ZONE_RULES_Norway = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Norway: List[ZoneRule] = [
     # Rule    Norway    1959    1965    -    Sep    Sun>=15    2:00s    0    -
     {
         'from_year': 1959,
@@ -10442,16 +10448,16 @@ ZONE_RULES_Norway = [
     },
 
 ]
-ZONE_POLICY_Norway = {
+ZONE_POLICY_Norway: ZonePolicy = {
     'name': 'Norway',
     'rules': ZONE_RULES_Norway
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: PRC
 # Rule count: 4
-#---------------------------------------------------------------------------
-ZONE_RULES_PRC = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_PRC: List[ZoneRule] = [
     # Anchor: Rule    PRC    1986    1991    -    Sep    Sun>=11     2:00    0    S
     {
         'from_year': 0,
@@ -10502,16 +10508,16 @@ ZONE_RULES_PRC = [
     },
 
 ]
-ZONE_POLICY_PRC = {
+ZONE_POLICY_PRC: ZonePolicy = {
     'name': 'PRC',
     'rules': ZONE_RULES_PRC
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Pakistan
 # Rule count: 6
-#---------------------------------------------------------------------------
-ZONE_RULES_Pakistan = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Pakistan: List[ZoneRule] = [
     # Anchor: Rule Pakistan    2002    only    -    Oct    Sun>=2    0:00    0    -
     {
         'from_year': 0,
@@ -10586,16 +10592,16 @@ ZONE_RULES_Pakistan = [
     },
 
 ]
-ZONE_POLICY_Pakistan = {
+ZONE_POLICY_Pakistan: ZonePolicy = {
     'name': 'Pakistan',
     'rules': ZONE_RULES_Pakistan
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Palestine
 # Rule count: 30
-#---------------------------------------------------------------------------
-ZONE_RULES_Palestine = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Palestine: List[ZoneRule] = [
     # Anchor: Rule Palestine    1999    2003    -    Oct    Fri>=15    0:00    0    -
     {
         'from_year': 0,
@@ -10958,16 +10964,16 @@ ZONE_RULES_Palestine = [
     },
 
 ]
-ZONE_POLICY_Palestine = {
+ZONE_POLICY_Palestine: ZonePolicy = {
     'name': 'Palestine',
     'rules': ZONE_RULES_Palestine
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Para
 # Rule count: 23
-#---------------------------------------------------------------------------
-ZONE_RULES_Para = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Para: List[ZoneRule] = [
     # Anchor: Rule    Para    1975    1978    -    Mar     1    0:00    0    -
     {
         'from_year': 0,
@@ -11246,16 +11252,16 @@ ZONE_RULES_Para = [
     },
 
 ]
-ZONE_POLICY_Para = {
+ZONE_POLICY_Para: ZonePolicy = {
     'name': 'Para',
     'rules': ZONE_RULES_Para
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Peru
 # Rule count: 7
-#---------------------------------------------------------------------------
-ZONE_RULES_Peru = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Peru: List[ZoneRule] = [
     # Rule    Peru    1939    1940    -    Mar    Sun>=24    0:00    0    -
     {
         'from_year': 1939,
@@ -11342,16 +11348,16 @@ ZONE_RULES_Peru = [
     },
 
 ]
-ZONE_POLICY_Peru = {
+ZONE_POLICY_Peru: ZonePolicy = {
     'name': 'Peru',
     'rules': ZONE_RULES_Peru
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Phil
 # Rule count: 3
-#---------------------------------------------------------------------------
-ZONE_RULES_Phil = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Phil: List[ZoneRule] = [
     # Rule    Phil    1954    only    -    Jul    1    0:00    0    S
     {
         'from_year': 1954,
@@ -11390,16 +11396,16 @@ ZONE_RULES_Phil = [
     },
 
 ]
-ZONE_POLICY_Phil = {
+ZONE_POLICY_Phil: ZonePolicy = {
     'name': 'Phil',
     'rules': ZONE_RULES_Phil
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Poland
 # Rule count: 1
-#---------------------------------------------------------------------------
-ZONE_RULES_Poland = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Poland: List[ZoneRule] = [
     # Rule    Poland    1962    1964    -    Sep    lastSun    1:00s    0    -
     {
         'from_year': 1962,
@@ -11414,16 +11420,16 @@ ZONE_RULES_Poland = [
     },
 
 ]
-ZONE_POLICY_Poland = {
+ZONE_POLICY_Poland: ZonePolicy = {
     'name': 'Poland',
     'rules': ZONE_RULES_Poland
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Port
 # Rule count: 9
-#---------------------------------------------------------------------------
-ZONE_RULES_Port = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Port: List[ZoneRule] = [
     # Rule    Port    1947    1965    -    Oct    Sun>=1     2:00s    0    -
     {
         'from_year': 1947,
@@ -11534,16 +11540,16 @@ ZONE_RULES_Port = [
     },
 
 ]
-ZONE_POLICY_Port = {
+ZONE_POLICY_Port: ZonePolicy = {
     'name': 'Port',
     'rules': ZONE_RULES_Port
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: ROK
 # Rule count: 3
-#---------------------------------------------------------------------------
-ZONE_RULES_ROK = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_ROK: List[ZoneRule] = [
     # Rule    ROK    1957    1960    -    Sep    Sat>=17    24:00    0    S
     {
         'from_year': 1957,
@@ -11582,16 +11588,16 @@ ZONE_RULES_ROK = [
     },
 
 ]
-ZONE_POLICY_ROK = {
+ZONE_POLICY_ROK: ZonePolicy = {
     'name': 'ROK',
     'rules': ZONE_RULES_ROK
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Romania
 # Rule count: 7
-#---------------------------------------------------------------------------
-ZONE_RULES_Romania = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Romania: List[ZoneRule] = [
     # Rule    Romania    1932    1939    -    Oct    Sun>=1     0:00s    0    -
     {
         'from_year': 1932,
@@ -11678,16 +11684,16 @@ ZONE_RULES_Romania = [
     },
 
 ]
-ZONE_POLICY_Romania = {
+ZONE_POLICY_Romania: ZonePolicy = {
     'name': 'Romania',
     'rules': ZONE_RULES_Romania
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Russia
 # Rule count: 6
-#---------------------------------------------------------------------------
-ZONE_RULES_Russia = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Russia: List[ZoneRule] = [
     # Rule    Russia    1921    only    -    Oct     1     0:00    0    -
     {
         'from_year': 1921,
@@ -11762,16 +11768,16 @@ ZONE_RULES_Russia = [
     },
 
 ]
-ZONE_POLICY_Russia = {
+ZONE_POLICY_Russia: ZonePolicy = {
     'name': 'Russia',
     'rules': ZONE_RULES_Russia
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: RussiaAsia
 # Rule count: 6
-#---------------------------------------------------------------------------
-ZONE_RULES_RussiaAsia = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_RussiaAsia: List[ZoneRule] = [
     # Anchor: Rule RussiaAsia    1981    1983    -    Oct    1     0:00    0    -
     {
         'from_year': 0,
@@ -11846,16 +11852,16 @@ ZONE_RULES_RussiaAsia = [
     },
 
 ]
-ZONE_POLICY_RussiaAsia = {
+ZONE_POLICY_RussiaAsia: ZonePolicy = {
     'name': 'RussiaAsia',
     'rules': ZONE_RULES_RussiaAsia
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: SA
 # Rule count: 1
-#---------------------------------------------------------------------------
-ZONE_RULES_SA = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_SA: List[ZoneRule] = [
     # Rule    SA    1943    1944    -    Mar    Sun>=15    2:00    0    -
     {
         'from_year': 1943,
@@ -11870,16 +11876,16 @@ ZONE_RULES_SA = [
     },
 
 ]
-ZONE_POLICY_SA = {
+ZONE_POLICY_SA: ZonePolicy = {
     'name': 'SA',
     'rules': ZONE_RULES_SA
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Salv
 # Rule count: 3
-#---------------------------------------------------------------------------
-ZONE_RULES_Salv = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Salv: List[ZoneRule] = [
     # Anchor: Rule    Salv    1987    1988    -    Sep    lastSun    0:00    0    S
     {
         'from_year': 0,
@@ -11918,16 +11924,16 @@ ZONE_RULES_Salv = [
     },
 
 ]
-ZONE_POLICY_Salv = {
+ZONE_POLICY_Salv: ZonePolicy = {
     'name': 'Salv',
     'rules': ZONE_RULES_Salv
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: SanLuis
 # Rule count: 3
-#---------------------------------------------------------------------------
-ZONE_RULES_SanLuis = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_SanLuis: List[ZoneRule] = [
     # Anchor: Rule    SanLuis    2008    2009    -    Mar    Sun>=8    0:00    0    -
     {
         'from_year': 0,
@@ -11966,16 +11972,16 @@ ZONE_RULES_SanLuis = [
     },
 
 ]
-ZONE_POLICY_SanLuis = {
+ZONE_POLICY_SanLuis: ZonePolicy = {
     'name': 'SanLuis',
     'rules': ZONE_RULES_SanLuis
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Spain
 # Rule count: 8
-#---------------------------------------------------------------------------
-ZONE_RULES_Spain = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Spain: List[ZoneRule] = [
     # Rule    Spain    1949    only    -    Oct     2     1:00    0    -
     {
         'from_year': 1949,
@@ -12074,16 +12080,16 @@ ZONE_RULES_Spain = [
     },
 
 ]
-ZONE_POLICY_Spain = {
+ZONE_POLICY_Spain: ZonePolicy = {
     'name': 'Spain',
     'rules': ZONE_RULES_Spain
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: SpainAfrica
 # Rule count: 8
-#---------------------------------------------------------------------------
-ZONE_RULES_SpainAfrica = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_SpainAfrica: List[ZoneRule] = [
     # Rule SpainAfrica 1967    only    -    Oct     1     0:00    0    -
     {
         'from_year': 1967,
@@ -12182,16 +12188,16 @@ ZONE_RULES_SpainAfrica = [
     },
 
 ]
-ZONE_POLICY_SpainAfrica = {
+ZONE_POLICY_SpainAfrica: ZonePolicy = {
     'name': 'SpainAfrica',
     'rules': ZONE_RULES_SpainAfrica
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: StJohns
 # Rule count: 9
-#---------------------------------------------------------------------------
-ZONE_RULES_StJohns = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_StJohns: List[ZoneRule] = [
     # Rule    StJohns    1951    1986    -    Apr    lastSun    2:00    1:00    D
     {
         'from_year': 1951,
@@ -12302,16 +12308,16 @@ ZONE_RULES_StJohns = [
     },
 
 ]
-ZONE_POLICY_StJohns = {
+ZONE_POLICY_StJohns: ZonePolicy = {
     'name': 'StJohns',
     'rules': ZONE_RULES_StJohns
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Sudan
 # Rule count: 3
-#---------------------------------------------------------------------------
-ZONE_RULES_Sudan = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Sudan: List[ZoneRule] = [
     # Rule    Sudan    1970    1985    -    Oct    15    0:00    0    -
     {
         'from_year': 1970,
@@ -12350,16 +12356,16 @@ ZONE_RULES_Sudan = [
     },
 
 ]
-ZONE_POLICY_Sudan = {
+ZONE_POLICY_Sudan: ZonePolicy = {
     'name': 'Sudan',
     'rules': ZONE_RULES_Sudan
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Swiss
 # Rule count: 1
-#---------------------------------------------------------------------------
-ZONE_RULES_Swiss = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Swiss: List[ZoneRule] = [
     # Rule    Swiss    1941    1942    -    Oct    Mon>=1    2:00    0    -
     {
         'from_year': 1941,
@@ -12374,16 +12380,16 @@ ZONE_RULES_Swiss = [
     },
 
 ]
-ZONE_POLICY_Swiss = {
+ZONE_POLICY_Swiss: ZonePolicy = {
     'name': 'Swiss',
     'rules': ZONE_RULES_Swiss
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Syria
 # Rule count: 33
-#---------------------------------------------------------------------------
-ZONE_RULES_Syria = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Syria: List[ZoneRule] = [
     # Rule    Syria    1966    only    -    Apr    24    2:00    1:00    S
     {
         'from_year': 1966,
@@ -12782,16 +12788,16 @@ ZONE_RULES_Syria = [
     },
 
 ]
-ZONE_POLICY_Syria = {
+ZONE_POLICY_Syria: ZonePolicy = {
     'name': 'Syria',
     'rules': ZONE_RULES_Syria
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Taiwan
 # Rule count: 5
-#---------------------------------------------------------------------------
-ZONE_RULES_Taiwan = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Taiwan: List[ZoneRule] = [
     # Rule    Taiwan    1955    1961    -    Oct    1    0:00    0    S
     {
         'from_year': 1955,
@@ -12854,16 +12860,16 @@ ZONE_RULES_Taiwan = [
     },
 
 ]
-ZONE_POLICY_Taiwan = {
+ZONE_POLICY_Taiwan: ZonePolicy = {
     'name': 'Taiwan',
     'rules': ZONE_RULES_Taiwan
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Thule
 # Rule count: 7
-#---------------------------------------------------------------------------
-ZONE_RULES_Thule = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Thule: List[ZoneRule] = [
     # Anchor: Rule    Thule    1991    1992    -    Sep    lastSun    2:00    0    S
     {
         'from_year': 0,
@@ -12950,16 +12956,16 @@ ZONE_RULES_Thule = [
     },
 
 ]
-ZONE_POLICY_Thule = {
+ZONE_POLICY_Thule: ZonePolicy = {
     'name': 'Thule',
     'rules': ZONE_RULES_Thule
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Tonga
 # Rule count: 7
-#---------------------------------------------------------------------------
-ZONE_RULES_Tonga = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Tonga: List[ZoneRule] = [
     # Anchor: Rule    Tonga    2000    only    -    Mar    19    2:00s    0    -
     {
         'from_year': 0,
@@ -13046,16 +13052,16 @@ ZONE_RULES_Tonga = [
     },
 
 ]
-ZONE_POLICY_Tonga = {
+ZONE_POLICY_Tonga: ZonePolicy = {
     'name': 'Tonga',
     'rules': ZONE_RULES_Tonga
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Toronto
 # Rule count: 3
-#---------------------------------------------------------------------------
-ZONE_RULES_Toronto = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Toronto: List[ZoneRule] = [
     # Rule    Toronto    1950    1973    -    Apr    lastSun    2:00    1:00    D
     {
         'from_year': 1950,
@@ -13094,16 +13100,16 @@ ZONE_RULES_Toronto = [
     },
 
 ]
-ZONE_POLICY_Toronto = {
+ZONE_POLICY_Toronto: ZonePolicy = {
     'name': 'Toronto',
     'rules': ZONE_RULES_Toronto
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Troll
 # Rule count: 3
-#---------------------------------------------------------------------------
-ZONE_RULES_Troll = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Troll: List[ZoneRule] = [
     # Anchor: Rule    Troll    2004    max    -    Oct    lastSun    1:00u    0:00    +00
     {
         'from_year': 0,
@@ -13142,16 +13148,16 @@ ZONE_RULES_Troll = [
     },
 
 ]
-ZONE_POLICY_Troll = {
+ZONE_POLICY_Troll: ZonePolicy = {
     'name': 'Troll',
     'rules': ZONE_RULES_Troll
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Tunisia
 # Rule count: 13
-#---------------------------------------------------------------------------
-ZONE_RULES_Tunisia = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Tunisia: List[ZoneRule] = [
     # Rule    Tunisia    1945    only    -    Sep    16     0:00    0    -
     {
         'from_year': 1945,
@@ -13310,16 +13316,16 @@ ZONE_RULES_Tunisia = [
     },
 
 ]
-ZONE_POLICY_Tunisia = {
+ZONE_POLICY_Tunisia: ZonePolicy = {
     'name': 'Tunisia',
     'rules': ZONE_RULES_Tunisia
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Turkey
 # Rule count: 18
-#---------------------------------------------------------------------------
-ZONE_RULES_Turkey = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Turkey: List[ZoneRule] = [
     # Rule    Turkey    1964    only    -    Oct     1    0:00    0    -
     {
         'from_year': 1964,
@@ -13538,16 +13544,16 @@ ZONE_RULES_Turkey = [
     },
 
 ]
-ZONE_POLICY_Turkey = {
+ZONE_POLICY_Turkey: ZonePolicy = {
     'name': 'Turkey',
     'rules': ZONE_RULES_Turkey
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: US
 # Rule count: 9
-#---------------------------------------------------------------------------
-ZONE_RULES_US = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_US: List[ZoneRule] = [
     # Rule    US    1945    only    -    Sep    30    2:00    0    S
     {
         'from_year': 1945,
@@ -13658,16 +13664,16 @@ ZONE_RULES_US = [
     },
 
 ]
-ZONE_POLICY_US = {
+ZONE_POLICY_US: ZonePolicy = {
     'name': 'US',
     'rules': ZONE_RULES_US
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Uruguay
 # Rule count: 28
-#---------------------------------------------------------------------------
-ZONE_RULES_Uruguay = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Uruguay: List[ZoneRule] = [
     # Rule    Uruguay    1972    only    -    Jul    16     0:00    0    -
     {
         'from_year': 1972,
@@ -14006,16 +14012,16 @@ ZONE_RULES_Uruguay = [
     },
 
 ]
-ZONE_POLICY_Uruguay = {
+ZONE_POLICY_Uruguay: ZonePolicy = {
     'name': 'Uruguay',
     'rules': ZONE_RULES_Uruguay
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Vanc
 # Rule count: 3
-#---------------------------------------------------------------------------
-ZONE_RULES_Vanc = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Vanc: List[ZoneRule] = [
     # Rule    Vanc    1946    1986    -    Apr    lastSun    2:00    1:00    D
     {
         'from_year': 1946,
@@ -14054,16 +14060,16 @@ ZONE_RULES_Vanc = [
     },
 
 ]
-ZONE_POLICY_Vanc = {
+ZONE_POLICY_Vanc: ZonePolicy = {
     'name': 'Vanc',
     'rules': ZONE_RULES_Vanc
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Vanuatu
 # Rule count: 7
-#---------------------------------------------------------------------------
-ZONE_RULES_Vanuatu = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Vanuatu: List[ZoneRule] = [
     # Anchor: Rule    Vanuatu    1974    only    -    Mar    30    12:00u    0    -
     {
         'from_year': 0,
@@ -14150,16 +14156,16 @@ ZONE_RULES_Vanuatu = [
     },
 
 ]
-ZONE_POLICY_Vanuatu = {
+ZONE_POLICY_Vanuatu: ZonePolicy = {
     'name': 'Vanuatu',
     'rules': ZONE_RULES_Vanuatu
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: W_Eur
 # Rule count: 6
-#---------------------------------------------------------------------------
-ZONE_RULES_W_Eur = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_W_Eur: List[ZoneRule] = [
     # Anchor: Rule    W-Eur    1977    only    -    Sep    lastSun     1:00s    0    -
     {
         'from_year': 0,
@@ -14234,16 +14240,16 @@ ZONE_RULES_W_Eur = [
     },
 
 ]
-ZONE_POLICY_W_Eur = {
+ZONE_POLICY_W_Eur: ZonePolicy = {
     'name': 'W_Eur',
     'rules': ZONE_RULES_W_Eur
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: WS
 # Rule count: 6
-#---------------------------------------------------------------------------
-ZONE_RULES_WS = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_WS: List[ZoneRule] = [
     # Anchor: Rule    WS    2011    only    -    Apr    Sat>=1    4:00    0    -
     {
         'from_year': 0,
@@ -14318,16 +14324,16 @@ ZONE_RULES_WS = [
     },
 
 ]
-ZONE_POLICY_WS = {
+ZONE_POLICY_WS: ZonePolicy = {
     'name': 'WS',
     'rules': ZONE_RULES_WS
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Winn
 # Rule count: 4
-#---------------------------------------------------------------------------
-ZONE_RULES_Winn = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Winn: List[ZoneRule] = [
     # Rule    Winn    1963    only    -    Sep    22    2:00    0    S
     {
         'from_year': 1963,
@@ -14378,16 +14384,16 @@ ZONE_RULES_Winn = [
     },
 
 ]
-ZONE_POLICY_Winn = {
+ZONE_POLICY_Winn: ZonePolicy = {
     'name': 'Winn',
     'rules': ZONE_RULES_Winn
 }
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Policy name: Zion
 # Rule count: 60
-#---------------------------------------------------------------------------
-ZONE_RULES_Zion = [
+# ---------------------------------------------------------------------------
+ZONE_RULES_Zion: List[ZoneRule] = [
     # Rule    Zion    1957    only    -    Sep    21    24:00u    0    S
     {
         'from_year': 1957,
@@ -15110,16 +15116,16 @@ ZONE_RULES_Zion = [
     },
 
 ]
-ZONE_POLICY_Zion = {
+ZONE_POLICY_Zion: ZonePolicy = {
     'name': 'Zion',
     'rules': ZONE_RULES_Zion
 }
 
 
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Unsupported zone policies: 22
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 
 # CA (['unused'])
 # Chicago (['unused'])
@@ -15145,9 +15151,9 @@ ZONE_POLICY_Zion = {
 # Vincennes (['unused'])
 
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Notable zone policies: 9
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 
 # Belize (["LETTER 'CDT' not single character", "LETTER 'CST' not single character"])
 # DR (["LETTER '-0430' not single character", "LETTER 'EST' not single character"])
