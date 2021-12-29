@@ -10,13 +10,15 @@ used by the `acetz` class is identical to the one used by the
 This library provides a `acetime.zonedb` package that contains timezone
 information for all Zone and Link entries from the [IANA TZ
 database](https://www.iana.org/time-zones) from the year 1974 until 2050. Custom
-subsets of the full TZ database can be created to save memory using the
-[AceTimeTools](https://github.com/bxparks/AceTimeTools) project.
+subsets of the full TZ database could be created to save memory using the
+[AceTimeTools](https://github.com/bxparks/AceTimeTools) project but the process
+has not been documented.
 
 An `acetz` instance can be created by passing an appropriate `zonedb` entry to
 the `acetz` constructor. Or it can be created through the
 `acetime.acetz.ZoneManager` factory class which is initialized with the
-`acetime.zonedb.ZONE_REGISTRY` containing all `zonedb` entries.
+`acetime.zonedb.zone_registry.ZONE_REGISTRY` (or `ZONE_AND_LINK_REGISTRY`)
+containing all `zonedb` entries.
 
 The `acetz` class is a subclass of `datetime.tzinfo` so it should be a drop-in
 replacement for the equivalent `tzinfo` subclasses from the following
@@ -53,8 +55,8 @@ timezones within the years supported by `acetime` (from 1974 until 2050). In
 addition, `acetime` supports deterministic timezones because it uses its own
 internal `zonedb` database, instead of pulling in the non-deterministic timezone
 database from underlying operating system (like `dateutil` and `zoneinfo`).
-These features indicate that `acetime` may be most useful in a testing or
-continuous integration environment.
+These features indicate that `acetime` may be most useful for validation or
+continuous integration.
 
 **Version**: v0.3.0 (2021-12-02, TZDB 2021e)
 
@@ -108,20 +110,28 @@ $ pip3 install
 <a name="Usage"></a>
 ## Usage
 
+The package structure and usage of this library is motivated by the purpose of
+this library to validate the C++ AceTime library. Therefore, this library may
+not implement some "pythonic" conventions that some Python programmers may
+prefer.
+
 <a name="PackageStructure"></a>
 ### Package Structure
 
-The `AceTimePython` library provides the top-level package named `acetime`.
-There are 2 main modules under `acetime`:
+The name of this library is `AceTimePython` (to distinguish it from the
+[AceTime](https://github.com/bxparks/AceTime) Arduino C++ library). It provides
+a top-level package called `acetime`. There are 3 modules under the `acetime`
+package which the end-users will normally import:
 
 * `acetime.acetz`
 * `acetime.zone_processor`
+* `acetime.common`
 
-Normally, only the `acetz` module will be needed by the end-user. The
-`zone_processor` module is mostly an internal implementation detail.
+Often, only the `acetz` module will be needed by the end-user. The
+`zone_processor` module is mostly an internal implementation detail, and the
+`common` module contains low-level utility functions and constants.
 
-Within the `acetz` module, there are 2 classes that the end-user will normally
-use:
+Within the `acetz` module, there are 2 classes that the end-user will use:
 
 * `acetime.acetz.ZoneManager`
 * `acetime.acetz.acetz` (subclass of `datetime.tzinfo`)
@@ -132,6 +142,8 @@ are 3 modules here:
 * `acetime.zonedb.zone_infos`
 * `acetime.zonedb.zone_policies`
 * `acetime.zonedb.zone_registry`
+
+These are passed into the `acetz` or `ZoneManger` objects.
 
 <a name="AcetzUsingConstructor"></a>
 ### Acetz Using Constructor
@@ -166,7 +178,7 @@ This should print
 ```
 
 The list of other `ZONE_INFO_xxx` entries can be found in the
-`[zone_infos.py](src/acetime/zonedb/zone_infos.py) file.
+[zone_infos.py](src/acetime/zonedb/zone_infos.py) file.
 
 <a name="AcetzUsingZoneManagerFactory"></a>
 ### Acetz Using ZoneManager Factory
