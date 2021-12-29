@@ -9,6 +9,7 @@
       and Python 3.9 `zoneinfo` packages.
     * Add variance report for Python 3.9 `zoneinfo` package, showing
       zoneinfo bugs when calculating `dst()` for certain zones at certain times.
+    * Rename `benchmarks/` to `utils/`.
 * v0.3.0 (2021-12-02, TZDB 2021e)
     * Consolidate `AcetzBenchmark`, add `generate_table.py` and `README.md`
       generator.
