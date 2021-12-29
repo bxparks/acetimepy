@@ -1,6 +1,7 @@
 # Changelog
 
 * Unreleased
+* v0.4.0 (2021-12-29, TZDB 2021e)
     * Rename `src/acetime/zoneinfo` to `zonedb`.
     * Add typing info to `zonedb` generated files.
     * Add zone context info (`TZDB_VERSION`, `START_YEAR`, `UNTIL_YEAR`) to
