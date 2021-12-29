@@ -410,7 +410,7 @@ an informal benchmarking of 4 Python timezone libraries:
 | Time Zone Library | comp to epoch  | epoch to comp  |
 |                   | (micros/iter)  | (micros/iter)  |
 |-------------------+----------------+----------------|
-| acetz             |         10.256 |         12.700 |
+| acetime           |         10.256 |         12.700 |
 | dateutil          |          5.974 |          7.372 |
 | pytz              |         15.744 |         15.286 |
 | zoneinfo          |          1.415 |          0.636 |

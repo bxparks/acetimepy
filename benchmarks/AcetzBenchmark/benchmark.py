@@ -98,7 +98,7 @@ class Benchmark:
         print("Benchmarking acetz", file=sys.stderr)
         count1, elapsed1 = self.run_acetz(common_zones)
         count2, elapsed2 = self.run_acetz_epoch(common_zones)
-        self.print_result("acetz", count1, elapsed1, count2, elapsed2)
+        self.print_result("acetime", count1, elapsed1, count2, elapsed2)
 
         # dateutil
         print("Benchmarking dateutil", file=sys.stderr)
