@@ -253,6 +253,31 @@ The `acetz` class supports the `fold` parameter in
 [`datetime`](https://docs.python.org/3/library/datetime.html#datetime-objects)
 which was introduced in Python 3.6.
 
+The following code snippet shows 2 ways to create a `datetime` for 01:59:59
+which occurs twice on 2000-10-29 in the America/Los_Angeles timezone:
+
+```python
+from datetime import datetime
+from acetime.acetz import acetz
+from acetime.zonedb.zone_infos import ZONE_INFO_America_Los_Angeles
+
+tz = acetz(ZONE_INFO_America_Los_Angeles)
+
+# Creates the earlier of the 2 times.
+dt = datetime(2000, 10, 29, 1, 59, 59, tzinfo=tz, fold=0)
+print(dt)
+
+# Creates the later of the 2 times.
+dt = datetime(2000, 10, 29, 1, 59, 59, tzinfo=tz, fold=1)
+print(dt)
+```
+
+This prints:
+```
+2000-10-29 01:59:59-07:00
+2000-10-29 01:59:59-08:00
+```
+
 <a name="CompareToOtherLibraries"></a>
 ### Compare to Other Python Libraries
 
