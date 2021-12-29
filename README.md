@@ -10,7 +10,7 @@ used by the `acetz` class is identical to the one used by the
 This library provides a `acetime.zonedb` package that contains timezone
 information for all Zone and Link entries from the [IANA TZ
 database](https://www.iana.org/time-zones) from the year 1974 until 2050. Custom
-subsets of the full TZ database can be created to save memory.
+subsets of the full TZ database can be created to save memory using the
 [AceTimeTools](https://github.com/bxparks/AceTimeTools) project.
 
 An `acetz` instance can be created by passing an appropriate `zonedb` entry to
@@ -18,8 +18,9 @@ the `acetz` constructor. Or it can be created through the
 `acetime.acetz.ZoneManager` factory class which is initialized with the
 `acetime.zonedb.ZONE_REGISTRY` containing all `zonedb` entries.
 
-The `acetz` class should be a drop-in replacement for the equivalent
-`datetime.tzinfo` classes from the following Python libraries:
+The `acetz` class is a subclass of `datetime.tzinfo` so it should be a drop-in
+replacement for the equivalent `tzinfo` subclasses from the following
+Python libraries:
 
 * pytz (https://pypi.org/project/pytz/)
 * dateutil (https://pypi.org/project/python-dateutil/)
