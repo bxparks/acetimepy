@@ -1,13 +1,16 @@
 # Acetz Benchmark
 
-The `benchmark.py` compares the speed of 4 timezone subclasses of `tzinfo`:
+The `benchmark.py` script compares the speed of 4 timezone libraries:
 
-* `acetz` from this project
-* `pytz` from https://pypi.org/project/pytz/
-* `dateutil.tz` from https://pypi.org/project/python-dateutil/,
+* `acetime.acetz.acetz` from this project,
+  [AceTimePython](https://github.com/bxparks/AceTimePython)
+* `pytz.BaseTzInfo` from [pytz](https://pypi.org/project/pytz/)
+* `dateutil.tz` from
+  [python-dateutil](https://pypi.org/project/python-dateutil/)
+* `zoneinfo.ZoneInfo` from
+  [zoneinfo](https://docs.python.org/3/library/zoneinfo.html)
   backported to Python 3.8 and earlier using
-  https://pypi.org/project/backports.zoneinfo/
-* `zoneinfo` from https://docs.python.org/3/library/zoneinfo.html
+  [backports.zoneinfo](https://pypi.org/project/backports.zoneinfo/)
 
 There are 2 columns for each library in the table below:
 
