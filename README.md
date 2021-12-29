@@ -43,6 +43,18 @@ Currently, the main purposes of this library are:
    [MicroPython](https://micropython.org/) to bring
    support for IANA timezones to that environment.
 
+This library is **not** intended to be used in production. Informal testing
+indicates that `acetime` is similar in performance to `pytz` and `dateutil`,
+while `zoneinfo` is substantially faster than the others because it is
+implemented as a C-module. However among these 4 Python libraries, `acetime`
+seems to be the only library that returns accurate datetime information
+(especially the `datetime.dst()` function) for all timezones within the years
+supported by `acetime` (from 1974 until 2050). In addition, `acetime` supports
+deterministic timezones because it uses its own internal `zonedb` database,
+instead of pulling in the non-deterministic timezone database from underlying
+operating system (like `dateutil` and `zoneinfo`). These features imply that
+`acetime` may be useful in a testing or continuous integration environment.
+
 **Version**: v0.3.0 (2021-12-02, TZDB 2021e)
 
 **Changelog**: [CHANGELOG.md](CHANGELOG.md)
