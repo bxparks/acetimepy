@@ -22,6 +22,7 @@ else:
 # AceTimePython classes
 import acetime.version
 from acetime.acetz import ZoneManager
+from acetime.zonedb.zone_infos import TZDB_VERSION, START_YEAR, UNTIL_YEAR
 from acetime.zonedb.zone_registry import ZONE_REGISTRY
 
 # The [start, until) time interval used to search for DST transitions,
@@ -296,10 +297,13 @@ def main() -> None:
 #
 # Context
 # -------
-# Acetime Version: {acetime.version.__version__}
-# ZoneInfo Version: Python 3.9 2019e
-# Start Year: {args.start_year}
-# Until Year: {args.until_year}
+# AceTimePython Version: {acetime.version.__version__}
+# AceTimePython ZoneDB Version: {TZDB_VERSION}
+# AceTimePython ZoneDB Start Year: {START_YEAR}
+# AceTimePython ZoneDB Until Year: {UNTIL_YEAR}
+# ZoneInfo Version: Python 3.9 2021e
+# Report Start Year: {args.start_year}
+# Report Until Year: {args.until_year}
 #
 # Report Format
 # -------------

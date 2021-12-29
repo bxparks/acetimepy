@@ -58,7 +58,7 @@ database from underlying operating system (like `dateutil` and `zoneinfo`).
 These features indicate that `acetime` may be most useful for validation or
 continuous integration.
 
-**Version**: v0.3.0 (2021-12-02, TZDB 2021e)
+**Version**: v0.4.0 (2021-12-29, TZDB 2021e)
 
 **Changelog**: [CHANGELOG.md](CHANGELOG.md)
 
@@ -295,10 +295,13 @@ that `acetime.acetz.acetz` produces the correct DST offset by going to the
 #
 # Context
 # -------
-# Acetime Version: 0.3.0
-# ZoneInfo Version: Python 3.9 2019e
-# Start Year: 1974
-# Until Year: 2050
+# AceTimePython Version: 0.4.0
+# AceTimePython ZoneDB Version: 2021e
+# AceTimePython ZoneDB Start Year: 1974
+# AceTimePython ZoneDB Until Year: 2050
+# ZoneInfo Version: Python 3.9 2021e
+# Report Start Year: 1974
+# Report Until Year: 2050
 #
 # Report Format
 # -------------
