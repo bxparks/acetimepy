@@ -602,15 +602,14 @@ class ZoneProcessor:
             self.transitions[matching_index - 1].until_date_time,
             self.transitions[matching_index].start_date_time,
         )
+        # No fold if the transition caused a gap.
         if overlap_interval <= 0:
             return 0
 
-        seconds_from_zone_era_start = (
-            epoch_seconds
-            - self.transitions[matching_index].start_epoch_second
-        )
-
-        if seconds_from_zone_era_start >= overlap_interval:
+        transition_start = self.transitions[matching_index].start_epoch_second
+        seconds_from_transition_start = epoch_seconds - transition_start
+        # No fold if epoch_seconds is beyond the overlap interval.
+        if seconds_from_transition_start >= overlap_interval:
             return 0
 
         return 1
