@@ -1,6 +1,19 @@
 # Changelog
 
 * Unreleased
+    * Regenerate `zonedb/` and `zonedbx/` using latest AceTimeTool which
+      identifies notable Zones and Policies whose DST shifts are not exactly
+      0:00 or 1:00. No actual data change. Notable policies relevant from 1974
+      until 2050 are:
+        * ZonePolicy Cook: DST shift 0:30
+        * ZonePolicy DR: DST shift 0:30
+        * ZonePolicy Eire: DST shift -1:00
+        * ZonePolicy LH: DST shift 0:30
+        * ZonePolicy Morocco: DST shift -1:00
+        * ZonePolicy Namibia: DST shift -1:00
+        * ZonePolicy StJohns: DST shift 2:00
+        * ZonePolicy Troll: DST shift 2:00
+        * ZonePolicy Uruguay: DST shift 0:30 or 1:30
 * v0.4.0 (2021-12-29, TZDB 2021e)
     * Rename `src/acetime/zoneinfo` to `zonedb`.
     * Add typing info to `zonedb` generated files.
