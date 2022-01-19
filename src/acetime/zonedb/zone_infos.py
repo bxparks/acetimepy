@@ -19377,10 +19377,10 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # Notable zones: 4
 # ---------------------------------------------------------------------------
 
-# Africa/Johannesburg (["RULES not fixed but FORMAT is missing '%' or '/'"])
-# Antarctica/Casey (["UNTIL '0:01' not on 15-minute boundary"])
-# Asia/Gaza (["UNTIL '0:01' not on 15-minute boundary"])
-# Pacific/Kiritimati (["STDOFF '-10:40' not on 15-minute boundary"])
+# Africa/Johannesburg (RULES not fixed but FORMAT is missing '%' or '/')
+# Antarctica/Casey (UNTIL '0:01' not on 15-minute boundary)
+# Asia/Gaza (UNTIL '0:01' not on 15-minute boundary)
+# Pacific/Kiritimati (STDOFF '-10:40' not on 15-minute boundary)
 
 
 # ---------------------------------------------------------------------------

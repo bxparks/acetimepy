@@ -15127,28 +15127,28 @@ ZONE_POLICY_Zion: ZonePolicy = {
 # Unsupported zone policies: 22
 # ---------------------------------------------------------------------------
 
-# CA (['unused'])
-# Chicago (['unused'])
-# Denver (['unused'])
-# Detroit (['unused'])
-# EgyptAsia (['unused'])
-# Iceland (['unused'])
-# Indianapolis (['unused'])
-# Louisville (['unused'])
-# Lux (['unused'])
-# Marengo (['unused'])
-# Menominee (['unused'])
-# NBorneo (['unused'])
-# NYC (['unused'])
-# Perry (['unused'])
-# Pike (['unused'])
-# Pulaski (['unused'])
-# Regina (['unused'])
-# Shang (['unused'])
-# SovietZone (['unused'])
-# Starke (['unused'])
-# Swift (['unused'])
-# Vincennes (['unused'])
+# CA (unused)
+# Chicago (unused)
+# Denver (unused)
+# Detroit (unused)
+# EgyptAsia (unused)
+# Iceland (unused)
+# Indianapolis (unused)
+# Louisville (unused)
+# Lux (unused)
+# Marengo (unused)
+# Menominee (unused)
+# NBorneo (unused)
+# NYC (unused)
+# Perry (unused)
+# Pike (unused)
+# Pulaski (unused)
+# Regina (unused)
+# Shang (unused)
+# SovietZone (unused)
+# Starke (unused)
+# Swift (unused)
+# Vincennes (unused)
 
 
 # ---------------------------------------------------------------------------
@@ -15159,27 +15159,27 @@ ZONE_POLICY_Zion: ZonePolicy = {
 #   LETTER 'CDT' not single character,
 #   LETTER 'CST' not single character,
 # )
-# Cook (["SAVE (delta_offset) '0:30' different from 1:00"])
+# Cook (SAVE (delta_offset) '0:30' different from 1:00)
 # DR (
 #   LETTER '-0430' not single character,
 #   LETTER 'EST' not single character,
 #   SAVE (delta_offset) '0:30' different from 1:00,
 # )
-# Eire (["SAVE (delta_offset) '-1:00' different from 1:00"])
+# Eire (SAVE (delta_offset) '-1:00' different from 1:00)
 # GB-Eire (
 #   LETTER 'BST' not single character,
 #   LETTER 'GMT' not single character,
 # )
-# Guam (["AT '2:01' not on 15-minute boundary"])
-# LH (["SAVE (delta_offset) '0:30' different from 1:00"])
-# Moncton (["AT '0:01' not on 15-minute boundary"])
-# Morocco (["SAVE (delta_offset) '-1:00' different from 1:00"])
+# Guam (AT '2:01' not on 15-minute boundary)
+# LH (SAVE (delta_offset) '0:30' different from 1:00)
+# Moncton (AT '0:01' not on 15-minute boundary)
+# Morocco (SAVE (delta_offset) '-1:00' different from 1:00)
 # Namibia (
 #   LETTER 'CAT' not single character,
 #   LETTER 'WAT' not single character,
 #   SAVE (delta_offset) '-1:00' different from 1:00,
 # )
-# Palestine (["AT '0:01' not on 15-minute boundary"])
+# Palestine (AT '0:01' not on 15-minute boundary)
 # StJohns (
 #   AT '0:01' not on 15-minute boundary,
 #   LETTER 'DD' not single character,
