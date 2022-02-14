@@ -76,7 +76,8 @@ continuous integration.
     * [Acetz Using Constructor](#AcetzUsingConstructor)
     * [Acetz Using ZoneManager Factory](#AcetzUsingZoneManagerFactory)
     * [DateTime Fold](#DateTimeFold)
-    * [Compare to Other Python Libraries](#CompareToOtherLibraries)
+    * [TimeZone Full Name](#TimeZoneFullName)
+* [Compare to Other Python Libraries](#CompareToOtherLibraries)
 * [Benchmarks](#Benchmarks)
 * [System Requirements](#SystemRequirements)
 * [License](#License)
@@ -278,8 +279,26 @@ This prints:
 2000-10-29 01:59:59-08:00
 ```
 
+<a name="TimeZoneFullName"></a>
+### TimeZone Full Name
+
+The `acetz` class extends the `tzinfo` class with the `tzfullname()` method that
+complements the `tzname()` method from `tzinfo`:
+
+```Python
+class acetz(tzinfo):
+    ...
+    def tzfullname(self, follow_link: bool = False) -> str:
+    ...
+```
+
+For normal Zone entries, this returns the full time zone name (e.g.
+`America/Los_Angeles`). For Link entries, this returns the name of the link
+(e.g. `US/Pacific`). If the `follow_link` parameter is set to `True`, the method
+returns the name of the target time zone (i.e. `America/Los_Angeles`).
+
 <a name="CompareToOtherLibraries"></a>
-### Compare to Other Python Libraries
+## Compare to Other Python Libraries
 
 The [report_zoneinfo.py](utils/Variance/report_zoneinfo.py) script compares the
 `acetime.acetz.acetz` class against the Python 3.9 `zoneinfo.ZoneInfo` class,

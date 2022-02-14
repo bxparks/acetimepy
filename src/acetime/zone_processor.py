@@ -544,7 +544,20 @@ class ZoneProcessor:
             buffer_size=self.transition_storage.index_beyond,
         )
 
+    def get_name(self, follow_link: bool = False) -> str:
+        """Return the full name of the current ZoneInfo. If the ZoneInfo is a
+        Link and 'follow_link' is True, then return the full name of the target
+        zone.
+        """
+        if 'link_to' in self.zone_info and follow_link:
+            zone_info = cast(ZoneInfo, self.zone_info.get('link_to'))
+        else:
+            zone_info = self.zone_info
+        return zone_info['name']
+
+    # ------------------------------------------------------------------------
     # The following methods are designed to be used internally.
+    # ------------------------------------------------------------------------
 
     def _init_for_second(self, epoch_seconds: int) -> None:
         """Initialize the Transitions from the given epoch_seconds.

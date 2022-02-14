@@ -43,6 +43,10 @@ class acetz(tzinfo):
         return timedelta(seconds=offset_info.dst_offset)
 
     def tzname(self, dt: Optional[datetime]) -> str:
+        """Return the abbreviation of the timezone, instead of the full name,
+        for compatibility with other Python timezone libraries (pytz, dateutils,
+        and zoneinfo). Use tzfullname() to get the full name of the time zone.
+        """
         assert dt
         offset_info = self.zp.get_timezone_info_for_datetime(dt)
         if not offset_info:
@@ -87,6 +91,13 @@ class acetz(tzinfo):
         newdt = newutcdt.replace(tzinfo=self, fold=offset_info.fold)
 
         return newdt
+
+    def tzfullname(self, follow_link: bool = False) -> str:
+        """Return the full name of the time zone. If the timezone is a Link and
+        'follow_link' is True, then this returns the name of the target zone.
+        This method does *not* override a method in pareent tzinfo class.
+        """
+        return self.zp.get_name(follow_link)
 
     def zone_processor(self) -> ZoneProcessor:
         return self.zp

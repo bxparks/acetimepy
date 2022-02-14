@@ -69,7 +69,9 @@ class TestLosAngeles(unittest.TestCase):
         self.assertEqual(-8 * 3600, dtc_utcoffset.total_seconds())
 
         assert(dtc.tzinfo is not None)
-        self.assertEqual("PST", dtc.tzinfo.tzname(dtc))
+        self.assertEqual("PST", tz.tzname(dtc))
+        self.assertEqual("America/Los_Angeles", tz.tzfullname())
+        self.assertEqual("America/Los_Angeles", tz.tzfullname(follow_link=True))
 
     def test_fromtimestamp(self) -> None:
         """Create date from AceTime epoch seconds using fromtimestamp()."""
@@ -87,7 +89,9 @@ class TestLosAngeles(unittest.TestCase):
         self.assertEqual(-8 * 3600, dte_utcoffset.total_seconds())
 
         assert(dte.tzinfo is not None)
-        self.assertEqual("PST", dte.tzinfo.tzname(dte))
+        self.assertEqual("PST", tz.tzname(dte))
+        self.assertEqual("America/Los_Angeles", tz.tzfullname())
+        self.assertEqual("America/Los_Angeles", tz.tzfullname(follow_link=True))
 
     def test_before_spring_forward(self) -> None:
         tz = zone_manager.gettz('America/Los_Angeles')
@@ -344,7 +348,9 @@ class TestUSPacific(unittest.TestCase):
         self.assertEqual(dtu, dtc)
 
         assert(dtc.tzinfo is not None)
-        self.assertEqual("PDT", dtc.tzinfo.tzname(dtc))
+        self.assertEqual("PDT", tz.tzname(dtc))
+        self.assertEqual("US/Pacific", tz.tzfullname())
+        self.assertEqual("America/Los_Angeles", tz.tzfullname(follow_link=True))
 
 
 class TestTunis(unittest.TestCase):

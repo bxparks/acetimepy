@@ -18,6 +18,11 @@
         * Regenerate Link entries in `zonedb/`.
         * Tracks a similar change to `zonedb/` and `zonedbx/` database
           of the AceTime library.
+    * Add `acetz.tzfullname()` method.
+        * Returns the full name of the time zone (e.g. `America/Los_Angeles`).
+        * Returns the full name of the target time zone of a Link if the
+          `follow_link` parameter is given.
+        * See (TimeZone Full Name)[README.md#TimeZoneFullName] section.
 * v0.4.0 (2021-12-29, TZDB 2021e)
     * Rename `src/acetime/zoneinfo` to `zonedb`.
     * Add typing info to `zonedb` generated files.
