@@ -300,6 +300,7 @@ class TestLosAngeles(unittest.TestCase):
         instead of going through the ZoneManager.
         """
         tz = acetz(ZONE_INFO_America_Los_Angeles)
+        self.assertFalse(tz.islink())
 
         epoch_seconds = 7984800
         unix_seconds = epoch_seconds + SECONDS_SINCE_UNIX_EPOCH
@@ -328,6 +329,7 @@ class TestUSPacific(unittest.TestCase):
         'link_to' entry in ZoneInfo and use the America/Los_Angeles ZoneEras.
         """
         tz = acetz(ZONE_INFO_US_Pacific)
+        self.assertTrue(tz.islink())
 
         epoch_seconds = 7984800
         unix_seconds = epoch_seconds + SECONDS_SINCE_UNIX_EPOCH

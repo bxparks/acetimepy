@@ -16,7 +16,6 @@ class acetz(tzinfo):
     """
 
     def __init__(self, zone_info: ZoneInfo):
-        self.zone_info = zone_info
         self.zp = ZoneProcessor(zone_info, use_python_transition=True)
 
     def utcoffset(self, dt: Optional[datetime]) -> timedelta:
@@ -98,6 +97,9 @@ class acetz(tzinfo):
         This method does *not* override a method in pareent tzinfo class.
         """
         return self.zp.get_name(follow_link)
+
+    def islink(self) -> bool:
+        return self.zp.is_link()
 
     def zone_processor(self) -> ZoneProcessor:
         return self.zp

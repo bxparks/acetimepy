@@ -544,6 +544,9 @@ class ZoneProcessor:
             buffer_size=self.transition_storage.index_beyond,
         )
 
+    def is_link(self) -> bool:
+        return 'link_to' in self.zone_info
+
     def get_name(self, follow_link: bool = False) -> str:
         """Return the full name of the current ZoneInfo. If the ZoneInfo is a
         Link and 'follow_link' is True, then return the full name of the target

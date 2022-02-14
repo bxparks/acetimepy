@@ -76,6 +76,7 @@ continuous integration.
     * [Acetz Using Constructor](#AcetzUsingConstructor)
     * [Acetz Using ZoneManager Factory](#AcetzUsingZoneManagerFactory)
     * [DateTime Fold](#DateTimeFold)
+    * [TimeZone Is Link](#TimeZoneIsLink)
     * [TimeZone Full Name](#TimeZoneFullName)
 * [Compare to Other Python Libraries](#CompareToOtherLibraries)
 * [Benchmarks](#Benchmarks)
@@ -277,6 +278,19 @@ This prints:
 ```
 2000-10-29 01:59:59-07:00
 2000-10-29 01:59:59-08:00
+```
+
+<a name="TimeZoneIsLink"></a>
+### TimeZone Is Link
+
+The `acetz` class extends the `tzinfo` class with the `islink()` method that
+returns `True` if the timezone is a Link entry instead of a Zone entry:
+
+```Python
+class acetz(tzinfo):
+    ...
+    def islink(self) -> bool:
+    ...
 ```
 
 <a name="TimeZoneFullName"></a>

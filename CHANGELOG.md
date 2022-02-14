@@ -18,6 +18,8 @@
         * Regenerate Link entries in `zonedb/`.
         * Tracks a similar change to `zonedb/` and `zonedbx/` database
           of the AceTime library.
+    * Add `acetz.islink()` method which returns `True` if timezone is a Link
+      entry instead of a Zone entry.
     * Add `acetz.tzfullname()` method.
         * Returns the full name of the time zone (e.g. `America/Los_Angeles`).
         * Returns the full name of the target time zone of a Link if the
