@@ -7,6 +7,7 @@ from acetime.common import SECONDS_SINCE_UNIX_EPOCH
 from acetime.acetz import acetz, ZoneManager
 from acetime.zonedb.zone_registry import ZONE_REGISTRY
 from acetime.zonedb.zone_infos import ZONE_INFO_America_Los_Angeles
+from acetime.zonedb.zone_infos import ZONE_INFO_US_Pacific
 
 
 # Enable logging during unittests.
@@ -313,6 +314,37 @@ class TestLosAngeles(unittest.TestCase):
         self.assertEqual(timedelta(hours=1), dtc.dst())
 
         self.assertEqual(dtu, dtc)
+
+
+class TestUSPacific(unittest.TestCase):
+
+    def test_zone_info(self) -> None:
+        """Test creation of acetz object using the US/Pacific ZoneInfo database
+        entry, instead of going through the ZoneManager. This should follow the
+        'link_to' entry in ZoneInfo and use the America/Los_Angeles ZoneEras.
+        """
+        tz = acetz(ZONE_INFO_US_Pacific)
+
+        epoch_seconds = 7984800
+        unix_seconds = epoch_seconds + SECONDS_SINCE_UNIX_EPOCH
+        dtu = datetime.fromtimestamp(unix_seconds, tz=timezone.utc)
+
+        dtc = datetime(2000, 4, 2, 3, 0, 0, tzinfo=tz)
+        self.assertEqual(unix_seconds, int(dtc.timestamp()))
+        self.assertEqual(2000, dtc.year)
+        self.assertEqual(4, dtc.month)
+        self.assertEqual(2, dtc.day)
+        self.assertEqual(3, dtc.hour)
+        self.assertEqual(0, dtc.minute)
+        self.assertEqual(0, dtc.second)
+        self.assertEqual("PDT", dtc.tzname())
+        self.assertEqual(timedelta(hours=-7), dtc.utcoffset())
+        self.assertEqual(timedelta(hours=1), dtc.dst())
+
+        self.assertEqual(dtu, dtc)
+
+        assert(dtc.tzinfo is not None)
+        self.assertEqual("PDT", dtc.tzinfo.tzname(dtc))
 
 
 class TestTunis(unittest.TestCase):

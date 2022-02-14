@@ -8,6 +8,7 @@ These data structures are created in-memory by ZoneInfoInliner. They are written
 to 'zone_policies.py' and 'zone_infos.py' by AceTimeTools/pygenerator.py
 """
 
+from typing import Any
 from typing import Dict
 from typing import List
 from typing import Union
@@ -53,9 +54,18 @@ class ZoneEra(TypedDict):
 
 
 # A ZoneInfo is a zone_name and its list of zone eras.
-class ZoneInfo(TypedDict):
+class ZoneInfo(TypedDict, total=False):
     name: str  # name of zone
-    eras: List[ZoneEra]  # list of zone eras
+
+    # If Zone, 'eras' is the list of zone eras or target zone. If Link, this
+    # field is not defined.
+    eras: List[ZoneEra]
+
+    # If Link, then 'link_to' points to the target ZoneInfo, causing a Link to
+    # be a "symbolic link" that knows what it is pointing to. If Zone, this
+    # field is not defined. Unfortunately, mypy does not support recursive
+    # types, so we have to make it an 'Any' type.
+    link_to: Any
 
 
 # Map of zone_name to its ZoneInfo.

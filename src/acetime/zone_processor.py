@@ -719,7 +719,15 @@ class ZoneProcessor:
         because the interval spans at least 3 whole years, and potentially 4
         years for the 'most recent prior year'.
         """
-        zone_eras = self.zone_info['eras']
+        # If the timezone is a Link, follow the link and get the ZoneEras from
+        # the target ZoneInfo.
+        if 'eras' in self.zone_info:
+            zone_eras = self.zone_info.get('eras')
+        else:
+            zone_info = cast(ZoneInfo, self.zone_info.get('link_to'))
+            zone_eras = zone_info.get('eras')
+        assert zone_eras is not None
+
         prev_match: Optional[MatchingEra] = None
         matches: List[MatchingEra] = []
         for zone_era in zone_eras:

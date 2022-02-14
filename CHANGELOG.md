@@ -1,10 +1,9 @@
 # Changelog
 
 * Unreleased
-    * Regenerate `zonedb/` and `zonedbx/` using latest AceTimeTool which
-      identifies notable Zones and Policies whose DST shifts are not exactly
-      0:00 or 1:00. No actual data change. Notable policies relevant from 1974
-      until 2050 are:
+    * Regenerate `zonedb/` using latest AceTimeTool which identifies notable
+      Zones and Policies whose DST shifts are not exactly 0:00 or 1:00. No
+      actual data change. Notable policies relevant from 1974 until 2050 are:
         * ZonePolicy Cook: DST shift 0:30
         * ZonePolicy DR: DST shift 0:30
         * ZonePolicy Eire: DST shift -1:00
@@ -14,6 +13,11 @@
         * ZonePolicy StJohns: DST shift 2:00
         * ZonePolicy Troll: DST shift 2:00
         * ZonePolicy Uruguay: DST shift 0:30 or 1:30
+    * Change Link entries from "hard links" to "symbolic links".
+        * TimeZone objects now know whether it is a Link or a Zone.
+        * Regenerate Link entries in `zonedb/`.
+        * Tracks a similar change to `zonedb/` and `zonedbx/` database
+          of the AceTime library.
 * v0.4.0 (2021-12-29, TZDB 2021e)
     * Rename `src/acetime/zoneinfo` to `zonedb`.
     * Add typing info to `zonedb` generated files.
