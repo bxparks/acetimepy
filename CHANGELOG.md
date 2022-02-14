@@ -1,6 +1,7 @@
 # Changelog
 
 * Unreleased
+* v0.5.0 (2022-02-14, TZDB 2021e)
     * Regenerate `zonedb/` using latest AceTimeTool which identifies notable
       Zones and Policies whose DST shifts are not exactly 0:00 or 1:00. No
       actual data change. Notable policies relevant from 1974 until 2050 are:
