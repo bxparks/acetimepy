@@ -1,6 +1,31 @@
 # Changelog
 
 * Unreleased
+* v0.5.0 (2022-02-14, TZDB 2021e)
+    * Regenerate `zonedb/` using latest AceTimeTool which identifies notable
+      Zones and Policies whose DST shifts are not exactly 0:00 or 1:00. No
+      actual data change. Notable policies relevant from 1974 until 2050 are:
+        * ZonePolicy Cook: DST shift 0:30
+        * ZonePolicy DR: DST shift 0:30
+        * ZonePolicy Eire: DST shift -1:00
+        * ZonePolicy LH: DST shift 0:30
+        * ZonePolicy Morocco: DST shift -1:00
+        * ZonePolicy Namibia: DST shift -1:00
+        * ZonePolicy StJohns: DST shift 2:00
+        * ZonePolicy Troll: DST shift 2:00
+        * ZonePolicy Uruguay: DST shift 0:30 or 1:30
+    * Change Link entries from "hard links" to "symbolic links".
+        * TimeZone objects now know whether it is a Link or a Zone.
+        * Regenerate Link entries in `zonedb/`.
+        * Tracks a similar change to `zonedb/` and `zonedbx/` database
+          of the AceTime library.
+    * Add `acetz.islink()` method which returns `True` if timezone is a Link
+      entry instead of a Zone entry.
+    * Add `acetz.tzfullname()` method.
+        * Returns the full name of the time zone (e.g. `America/Los_Angeles`).
+        * Returns the full name of the target time zone of a Link if the
+          `follow_link` parameter is given.
+        * See (TimeZone Full Name)[README.md#TimeZoneFullName] section.
 * v0.4.0 (2021-12-29, TZDB 2021e)
     * Rename `src/acetime/zoneinfo` to `zonedb`.
     * Add typing info to `zonedb` generated files.

@@ -18066,1303 +18066,1303 @@ ZONE_INFO_WET: ZoneInfo = {
 # Link name: Africa/Accra -> Africa/Abidjan
 ZONE_INFO_Africa_Accra: ZoneInfo = {
     'name': 'Africa/Accra',
-    'eras': ZONE_ERAS_Africa_Abidjan
+    'link_to': ZONE_INFO_Africa_Abidjan
 }
 
 # Link name: Africa/Addis_Ababa -> Africa/Nairobi
 ZONE_INFO_Africa_Addis_Ababa: ZoneInfo = {
     'name': 'Africa/Addis_Ababa',
-    'eras': ZONE_ERAS_Africa_Nairobi
+    'link_to': ZONE_INFO_Africa_Nairobi
 }
 
 # Link name: Africa/Asmara -> Africa/Nairobi
 ZONE_INFO_Africa_Asmara: ZoneInfo = {
     'name': 'Africa/Asmara',
-    'eras': ZONE_ERAS_Africa_Nairobi
+    'link_to': ZONE_INFO_Africa_Nairobi
 }
 
 # Link name: Africa/Asmera -> Africa/Nairobi
 ZONE_INFO_Africa_Asmera: ZoneInfo = {
     'name': 'Africa/Asmera',
-    'eras': ZONE_ERAS_Africa_Nairobi
+    'link_to': ZONE_INFO_Africa_Nairobi
 }
 
 # Link name: Africa/Bamako -> Africa/Abidjan
 ZONE_INFO_Africa_Bamako: ZoneInfo = {
     'name': 'Africa/Bamako',
-    'eras': ZONE_ERAS_Africa_Abidjan
+    'link_to': ZONE_INFO_Africa_Abidjan
 }
 
 # Link name: Africa/Bangui -> Africa/Lagos
 ZONE_INFO_Africa_Bangui: ZoneInfo = {
     'name': 'Africa/Bangui',
-    'eras': ZONE_ERAS_Africa_Lagos
+    'link_to': ZONE_INFO_Africa_Lagos
 }
 
 # Link name: Africa/Banjul -> Africa/Abidjan
 ZONE_INFO_Africa_Banjul: ZoneInfo = {
     'name': 'Africa/Banjul',
-    'eras': ZONE_ERAS_Africa_Abidjan
+    'link_to': ZONE_INFO_Africa_Abidjan
 }
 
 # Link name: Africa/Blantyre -> Africa/Maputo
 ZONE_INFO_Africa_Blantyre: ZoneInfo = {
     'name': 'Africa/Blantyre',
-    'eras': ZONE_ERAS_Africa_Maputo
+    'link_to': ZONE_INFO_Africa_Maputo
 }
 
 # Link name: Africa/Brazzaville -> Africa/Lagos
 ZONE_INFO_Africa_Brazzaville: ZoneInfo = {
     'name': 'Africa/Brazzaville',
-    'eras': ZONE_ERAS_Africa_Lagos
+    'link_to': ZONE_INFO_Africa_Lagos
 }
 
 # Link name: Africa/Bujumbura -> Africa/Maputo
 ZONE_INFO_Africa_Bujumbura: ZoneInfo = {
     'name': 'Africa/Bujumbura',
-    'eras': ZONE_ERAS_Africa_Maputo
+    'link_to': ZONE_INFO_Africa_Maputo
 }
 
 # Link name: Africa/Conakry -> Africa/Abidjan
 ZONE_INFO_Africa_Conakry: ZoneInfo = {
     'name': 'Africa/Conakry',
-    'eras': ZONE_ERAS_Africa_Abidjan
+    'link_to': ZONE_INFO_Africa_Abidjan
 }
 
 # Link name: Africa/Dakar -> Africa/Abidjan
 ZONE_INFO_Africa_Dakar: ZoneInfo = {
     'name': 'Africa/Dakar',
-    'eras': ZONE_ERAS_Africa_Abidjan
+    'link_to': ZONE_INFO_Africa_Abidjan
 }
 
 # Link name: Africa/Dar_es_Salaam -> Africa/Nairobi
 ZONE_INFO_Africa_Dar_es_Salaam: ZoneInfo = {
     'name': 'Africa/Dar_es_Salaam',
-    'eras': ZONE_ERAS_Africa_Nairobi
+    'link_to': ZONE_INFO_Africa_Nairobi
 }
 
 # Link name: Africa/Djibouti -> Africa/Nairobi
 ZONE_INFO_Africa_Djibouti: ZoneInfo = {
     'name': 'Africa/Djibouti',
-    'eras': ZONE_ERAS_Africa_Nairobi
+    'link_to': ZONE_INFO_Africa_Nairobi
 }
 
 # Link name: Africa/Douala -> Africa/Lagos
 ZONE_INFO_Africa_Douala: ZoneInfo = {
     'name': 'Africa/Douala',
-    'eras': ZONE_ERAS_Africa_Lagos
+    'link_to': ZONE_INFO_Africa_Lagos
 }
 
 # Link name: Africa/Freetown -> Africa/Abidjan
 ZONE_INFO_Africa_Freetown: ZoneInfo = {
     'name': 'Africa/Freetown',
-    'eras': ZONE_ERAS_Africa_Abidjan
+    'link_to': ZONE_INFO_Africa_Abidjan
 }
 
 # Link name: Africa/Gaborone -> Africa/Maputo
 ZONE_INFO_Africa_Gaborone: ZoneInfo = {
     'name': 'Africa/Gaborone',
-    'eras': ZONE_ERAS_Africa_Maputo
+    'link_to': ZONE_INFO_Africa_Maputo
 }
 
 # Link name: Africa/Harare -> Africa/Maputo
 ZONE_INFO_Africa_Harare: ZoneInfo = {
     'name': 'Africa/Harare',
-    'eras': ZONE_ERAS_Africa_Maputo
+    'link_to': ZONE_INFO_Africa_Maputo
 }
 
 # Link name: Africa/Kampala -> Africa/Nairobi
 ZONE_INFO_Africa_Kampala: ZoneInfo = {
     'name': 'Africa/Kampala',
-    'eras': ZONE_ERAS_Africa_Nairobi
+    'link_to': ZONE_INFO_Africa_Nairobi
 }
 
 # Link name: Africa/Kigali -> Africa/Maputo
 ZONE_INFO_Africa_Kigali: ZoneInfo = {
     'name': 'Africa/Kigali',
-    'eras': ZONE_ERAS_Africa_Maputo
+    'link_to': ZONE_INFO_Africa_Maputo
 }
 
 # Link name: Africa/Kinshasa -> Africa/Lagos
 ZONE_INFO_Africa_Kinshasa: ZoneInfo = {
     'name': 'Africa/Kinshasa',
-    'eras': ZONE_ERAS_Africa_Lagos
+    'link_to': ZONE_INFO_Africa_Lagos
 }
 
 # Link name: Africa/Libreville -> Africa/Lagos
 ZONE_INFO_Africa_Libreville: ZoneInfo = {
     'name': 'Africa/Libreville',
-    'eras': ZONE_ERAS_Africa_Lagos
+    'link_to': ZONE_INFO_Africa_Lagos
 }
 
 # Link name: Africa/Lome -> Africa/Abidjan
 ZONE_INFO_Africa_Lome: ZoneInfo = {
     'name': 'Africa/Lome',
-    'eras': ZONE_ERAS_Africa_Abidjan
+    'link_to': ZONE_INFO_Africa_Abidjan
 }
 
 # Link name: Africa/Luanda -> Africa/Lagos
 ZONE_INFO_Africa_Luanda: ZoneInfo = {
     'name': 'Africa/Luanda',
-    'eras': ZONE_ERAS_Africa_Lagos
+    'link_to': ZONE_INFO_Africa_Lagos
 }
 
 # Link name: Africa/Lubumbashi -> Africa/Maputo
 ZONE_INFO_Africa_Lubumbashi: ZoneInfo = {
     'name': 'Africa/Lubumbashi',
-    'eras': ZONE_ERAS_Africa_Maputo
+    'link_to': ZONE_INFO_Africa_Maputo
 }
 
 # Link name: Africa/Lusaka -> Africa/Maputo
 ZONE_INFO_Africa_Lusaka: ZoneInfo = {
     'name': 'Africa/Lusaka',
-    'eras': ZONE_ERAS_Africa_Maputo
+    'link_to': ZONE_INFO_Africa_Maputo
 }
 
 # Link name: Africa/Malabo -> Africa/Lagos
 ZONE_INFO_Africa_Malabo: ZoneInfo = {
     'name': 'Africa/Malabo',
-    'eras': ZONE_ERAS_Africa_Lagos
+    'link_to': ZONE_INFO_Africa_Lagos
 }
 
 # Link name: Africa/Maseru -> Africa/Johannesburg
 ZONE_INFO_Africa_Maseru: ZoneInfo = {
     'name': 'Africa/Maseru',
-    'eras': ZONE_ERAS_Africa_Johannesburg
+    'link_to': ZONE_INFO_Africa_Johannesburg
 }
 
 # Link name: Africa/Mbabane -> Africa/Johannesburg
 ZONE_INFO_Africa_Mbabane: ZoneInfo = {
     'name': 'Africa/Mbabane',
-    'eras': ZONE_ERAS_Africa_Johannesburg
+    'link_to': ZONE_INFO_Africa_Johannesburg
 }
 
 # Link name: Africa/Mogadishu -> Africa/Nairobi
 ZONE_INFO_Africa_Mogadishu: ZoneInfo = {
     'name': 'Africa/Mogadishu',
-    'eras': ZONE_ERAS_Africa_Nairobi
+    'link_to': ZONE_INFO_Africa_Nairobi
 }
 
 # Link name: Africa/Niamey -> Africa/Lagos
 ZONE_INFO_Africa_Niamey: ZoneInfo = {
     'name': 'Africa/Niamey',
-    'eras': ZONE_ERAS_Africa_Lagos
+    'link_to': ZONE_INFO_Africa_Lagos
 }
 
 # Link name: Africa/Nouakchott -> Africa/Abidjan
 ZONE_INFO_Africa_Nouakchott: ZoneInfo = {
     'name': 'Africa/Nouakchott',
-    'eras': ZONE_ERAS_Africa_Abidjan
+    'link_to': ZONE_INFO_Africa_Abidjan
 }
 
 # Link name: Africa/Ouagadougou -> Africa/Abidjan
 ZONE_INFO_Africa_Ouagadougou: ZoneInfo = {
     'name': 'Africa/Ouagadougou',
-    'eras': ZONE_ERAS_Africa_Abidjan
+    'link_to': ZONE_INFO_Africa_Abidjan
 }
 
 # Link name: Africa/Porto-Novo -> Africa/Lagos
 ZONE_INFO_Africa_Porto_Novo: ZoneInfo = {
     'name': 'Africa/Porto-Novo',
-    'eras': ZONE_ERAS_Africa_Lagos
+    'link_to': ZONE_INFO_Africa_Lagos
 }
 
 # Link name: Africa/Timbuktu -> Africa/Abidjan
 ZONE_INFO_Africa_Timbuktu: ZoneInfo = {
     'name': 'Africa/Timbuktu',
-    'eras': ZONE_ERAS_Africa_Abidjan
+    'link_to': ZONE_INFO_Africa_Abidjan
 }
 
 # Link name: America/Anguilla -> America/Puerto_Rico
 ZONE_INFO_America_Anguilla: ZoneInfo = {
     'name': 'America/Anguilla',
-    'eras': ZONE_ERAS_America_Puerto_Rico
+    'link_to': ZONE_INFO_America_Puerto_Rico
 }
 
 # Link name: America/Antigua -> America/Puerto_Rico
 ZONE_INFO_America_Antigua: ZoneInfo = {
     'name': 'America/Antigua',
-    'eras': ZONE_ERAS_America_Puerto_Rico
+    'link_to': ZONE_INFO_America_Puerto_Rico
 }
 
 # Link name: America/Argentina/ComodRivadavia -> America/Argentina/Catamarca
 ZONE_INFO_America_Argentina_ComodRivadavia: ZoneInfo = {
     'name': 'America/Argentina/ComodRivadavia',
-    'eras': ZONE_ERAS_America_Argentina_Catamarca
+    'link_to': ZONE_INFO_America_Argentina_Catamarca
 }
 
 # Link name: America/Aruba -> America/Puerto_Rico
 ZONE_INFO_America_Aruba: ZoneInfo = {
     'name': 'America/Aruba',
-    'eras': ZONE_ERAS_America_Puerto_Rico
+    'link_to': ZONE_INFO_America_Puerto_Rico
 }
 
 # Link name: America/Atikokan -> America/Panama
 ZONE_INFO_America_Atikokan: ZoneInfo = {
     'name': 'America/Atikokan',
-    'eras': ZONE_ERAS_America_Panama
+    'link_to': ZONE_INFO_America_Panama
 }
 
 # Link name: America/Atka -> America/Adak
 ZONE_INFO_America_Atka: ZoneInfo = {
     'name': 'America/Atka',
-    'eras': ZONE_ERAS_America_Adak
+    'link_to': ZONE_INFO_America_Adak
 }
 
 # Link name: America/Blanc-Sablon -> America/Puerto_Rico
 ZONE_INFO_America_Blanc_Sablon: ZoneInfo = {
     'name': 'America/Blanc-Sablon',
-    'eras': ZONE_ERAS_America_Puerto_Rico
+    'link_to': ZONE_INFO_America_Puerto_Rico
 }
 
 # Link name: America/Buenos_Aires -> America/Argentina/Buenos_Aires
 ZONE_INFO_America_Buenos_Aires: ZoneInfo = {
     'name': 'America/Buenos_Aires',
-    'eras': ZONE_ERAS_America_Argentina_Buenos_Aires
+    'link_to': ZONE_INFO_America_Argentina_Buenos_Aires
 }
 
 # Link name: America/Catamarca -> America/Argentina/Catamarca
 ZONE_INFO_America_Catamarca: ZoneInfo = {
     'name': 'America/Catamarca',
-    'eras': ZONE_ERAS_America_Argentina_Catamarca
+    'link_to': ZONE_INFO_America_Argentina_Catamarca
 }
 
 # Link name: America/Cayman -> America/Panama
 ZONE_INFO_America_Cayman: ZoneInfo = {
     'name': 'America/Cayman',
-    'eras': ZONE_ERAS_America_Panama
+    'link_to': ZONE_INFO_America_Panama
 }
 
 # Link name: America/Coral_Harbour -> America/Panama
 ZONE_INFO_America_Coral_Harbour: ZoneInfo = {
     'name': 'America/Coral_Harbour',
-    'eras': ZONE_ERAS_America_Panama
+    'link_to': ZONE_INFO_America_Panama
 }
 
 # Link name: America/Cordoba -> America/Argentina/Cordoba
 ZONE_INFO_America_Cordoba: ZoneInfo = {
     'name': 'America/Cordoba',
-    'eras': ZONE_ERAS_America_Argentina_Cordoba
+    'link_to': ZONE_INFO_America_Argentina_Cordoba
 }
 
 # Link name: America/Creston -> America/Phoenix
 ZONE_INFO_America_Creston: ZoneInfo = {
     'name': 'America/Creston',
-    'eras': ZONE_ERAS_America_Phoenix
+    'link_to': ZONE_INFO_America_Phoenix
 }
 
 # Link name: America/Curacao -> America/Puerto_Rico
 ZONE_INFO_America_Curacao: ZoneInfo = {
     'name': 'America/Curacao',
-    'eras': ZONE_ERAS_America_Puerto_Rico
+    'link_to': ZONE_INFO_America_Puerto_Rico
 }
 
 # Link name: America/Dominica -> America/Puerto_Rico
 ZONE_INFO_America_Dominica: ZoneInfo = {
     'name': 'America/Dominica',
-    'eras': ZONE_ERAS_America_Puerto_Rico
+    'link_to': ZONE_INFO_America_Puerto_Rico
 }
 
 # Link name: America/Ensenada -> America/Tijuana
 ZONE_INFO_America_Ensenada: ZoneInfo = {
     'name': 'America/Ensenada',
-    'eras': ZONE_ERAS_America_Tijuana
+    'link_to': ZONE_INFO_America_Tijuana
 }
 
 # Link name: America/Fort_Wayne -> America/Indiana/Indianapolis
 ZONE_INFO_America_Fort_Wayne: ZoneInfo = {
     'name': 'America/Fort_Wayne',
-    'eras': ZONE_ERAS_America_Indiana_Indianapolis
+    'link_to': ZONE_INFO_America_Indiana_Indianapolis
 }
 
 # Link name: America/Godthab -> America/Nuuk
 ZONE_INFO_America_Godthab: ZoneInfo = {
     'name': 'America/Godthab',
-    'eras': ZONE_ERAS_America_Nuuk
+    'link_to': ZONE_INFO_America_Nuuk
 }
 
 # Link name: America/Grenada -> America/Puerto_Rico
 ZONE_INFO_America_Grenada: ZoneInfo = {
     'name': 'America/Grenada',
-    'eras': ZONE_ERAS_America_Puerto_Rico
+    'link_to': ZONE_INFO_America_Puerto_Rico
 }
 
 # Link name: America/Guadeloupe -> America/Puerto_Rico
 ZONE_INFO_America_Guadeloupe: ZoneInfo = {
     'name': 'America/Guadeloupe',
-    'eras': ZONE_ERAS_America_Puerto_Rico
+    'link_to': ZONE_INFO_America_Puerto_Rico
 }
 
 # Link name: America/Indianapolis -> America/Indiana/Indianapolis
 ZONE_INFO_America_Indianapolis: ZoneInfo = {
     'name': 'America/Indianapolis',
-    'eras': ZONE_ERAS_America_Indiana_Indianapolis
+    'link_to': ZONE_INFO_America_Indiana_Indianapolis
 }
 
 # Link name: America/Jujuy -> America/Argentina/Jujuy
 ZONE_INFO_America_Jujuy: ZoneInfo = {
     'name': 'America/Jujuy',
-    'eras': ZONE_ERAS_America_Argentina_Jujuy
+    'link_to': ZONE_INFO_America_Argentina_Jujuy
 }
 
 # Link name: America/Knox_IN -> America/Indiana/Knox
 ZONE_INFO_America_Knox_IN: ZoneInfo = {
     'name': 'America/Knox_IN',
-    'eras': ZONE_ERAS_America_Indiana_Knox
+    'link_to': ZONE_INFO_America_Indiana_Knox
 }
 
 # Link name: America/Kralendijk -> America/Puerto_Rico
 ZONE_INFO_America_Kralendijk: ZoneInfo = {
     'name': 'America/Kralendijk',
-    'eras': ZONE_ERAS_America_Puerto_Rico
+    'link_to': ZONE_INFO_America_Puerto_Rico
 }
 
 # Link name: America/Louisville -> America/Kentucky/Louisville
 ZONE_INFO_America_Louisville: ZoneInfo = {
     'name': 'America/Louisville',
-    'eras': ZONE_ERAS_America_Kentucky_Louisville
+    'link_to': ZONE_INFO_America_Kentucky_Louisville
 }
 
 # Link name: America/Lower_Princes -> America/Puerto_Rico
 ZONE_INFO_America_Lower_Princes: ZoneInfo = {
     'name': 'America/Lower_Princes',
-    'eras': ZONE_ERAS_America_Puerto_Rico
+    'link_to': ZONE_INFO_America_Puerto_Rico
 }
 
 # Link name: America/Marigot -> America/Puerto_Rico
 ZONE_INFO_America_Marigot: ZoneInfo = {
     'name': 'America/Marigot',
-    'eras': ZONE_ERAS_America_Puerto_Rico
+    'link_to': ZONE_INFO_America_Puerto_Rico
 }
 
 # Link name: America/Mendoza -> America/Argentina/Mendoza
 ZONE_INFO_America_Mendoza: ZoneInfo = {
     'name': 'America/Mendoza',
-    'eras': ZONE_ERAS_America_Argentina_Mendoza
+    'link_to': ZONE_INFO_America_Argentina_Mendoza
 }
 
 # Link name: America/Montreal -> America/Toronto
 ZONE_INFO_America_Montreal: ZoneInfo = {
     'name': 'America/Montreal',
-    'eras': ZONE_ERAS_America_Toronto
+    'link_to': ZONE_INFO_America_Toronto
 }
 
 # Link name: America/Montserrat -> America/Puerto_Rico
 ZONE_INFO_America_Montserrat: ZoneInfo = {
     'name': 'America/Montserrat',
-    'eras': ZONE_ERAS_America_Puerto_Rico
+    'link_to': ZONE_INFO_America_Puerto_Rico
 }
 
 # Link name: America/Nassau -> America/Toronto
 ZONE_INFO_America_Nassau: ZoneInfo = {
     'name': 'America/Nassau',
-    'eras': ZONE_ERAS_America_Toronto
+    'link_to': ZONE_INFO_America_Toronto
 }
 
 # Link name: America/Port_of_Spain -> America/Puerto_Rico
 ZONE_INFO_America_Port_of_Spain: ZoneInfo = {
     'name': 'America/Port_of_Spain',
-    'eras': ZONE_ERAS_America_Puerto_Rico
+    'link_to': ZONE_INFO_America_Puerto_Rico
 }
 
 # Link name: America/Porto_Acre -> America/Rio_Branco
 ZONE_INFO_America_Porto_Acre: ZoneInfo = {
     'name': 'America/Porto_Acre',
-    'eras': ZONE_ERAS_America_Rio_Branco
+    'link_to': ZONE_INFO_America_Rio_Branco
 }
 
 # Link name: America/Rosario -> America/Argentina/Cordoba
 ZONE_INFO_America_Rosario: ZoneInfo = {
     'name': 'America/Rosario',
-    'eras': ZONE_ERAS_America_Argentina_Cordoba
+    'link_to': ZONE_INFO_America_Argentina_Cordoba
 }
 
 # Link name: America/Santa_Isabel -> America/Tijuana
 ZONE_INFO_America_Santa_Isabel: ZoneInfo = {
     'name': 'America/Santa_Isabel',
-    'eras': ZONE_ERAS_America_Tijuana
+    'link_to': ZONE_INFO_America_Tijuana
 }
 
 # Link name: America/Shiprock -> America/Denver
 ZONE_INFO_America_Shiprock: ZoneInfo = {
     'name': 'America/Shiprock',
-    'eras': ZONE_ERAS_America_Denver
+    'link_to': ZONE_INFO_America_Denver
 }
 
 # Link name: America/St_Barthelemy -> America/Puerto_Rico
 ZONE_INFO_America_St_Barthelemy: ZoneInfo = {
     'name': 'America/St_Barthelemy',
-    'eras': ZONE_ERAS_America_Puerto_Rico
+    'link_to': ZONE_INFO_America_Puerto_Rico
 }
 
 # Link name: America/St_Kitts -> America/Puerto_Rico
 ZONE_INFO_America_St_Kitts: ZoneInfo = {
     'name': 'America/St_Kitts',
-    'eras': ZONE_ERAS_America_Puerto_Rico
+    'link_to': ZONE_INFO_America_Puerto_Rico
 }
 
 # Link name: America/St_Lucia -> America/Puerto_Rico
 ZONE_INFO_America_St_Lucia: ZoneInfo = {
     'name': 'America/St_Lucia',
-    'eras': ZONE_ERAS_America_Puerto_Rico
+    'link_to': ZONE_INFO_America_Puerto_Rico
 }
 
 # Link name: America/St_Thomas -> America/Puerto_Rico
 ZONE_INFO_America_St_Thomas: ZoneInfo = {
     'name': 'America/St_Thomas',
-    'eras': ZONE_ERAS_America_Puerto_Rico
+    'link_to': ZONE_INFO_America_Puerto_Rico
 }
 
 # Link name: America/St_Vincent -> America/Puerto_Rico
 ZONE_INFO_America_St_Vincent: ZoneInfo = {
     'name': 'America/St_Vincent',
-    'eras': ZONE_ERAS_America_Puerto_Rico
+    'link_to': ZONE_INFO_America_Puerto_Rico
 }
 
 # Link name: America/Tortola -> America/Puerto_Rico
 ZONE_INFO_America_Tortola: ZoneInfo = {
     'name': 'America/Tortola',
-    'eras': ZONE_ERAS_America_Puerto_Rico
+    'link_to': ZONE_INFO_America_Puerto_Rico
 }
 
 # Link name: America/Virgin -> America/Puerto_Rico
 ZONE_INFO_America_Virgin: ZoneInfo = {
     'name': 'America/Virgin',
-    'eras': ZONE_ERAS_America_Puerto_Rico
+    'link_to': ZONE_INFO_America_Puerto_Rico
 }
 
 # Link name: Antarctica/DumontDUrville -> Pacific/Port_Moresby
 ZONE_INFO_Antarctica_DumontDUrville: ZoneInfo = {
     'name': 'Antarctica/DumontDUrville',
-    'eras': ZONE_ERAS_Pacific_Port_Moresby
+    'link_to': ZONE_INFO_Pacific_Port_Moresby
 }
 
 # Link name: Antarctica/McMurdo -> Pacific/Auckland
 ZONE_INFO_Antarctica_McMurdo: ZoneInfo = {
     'name': 'Antarctica/McMurdo',
-    'eras': ZONE_ERAS_Pacific_Auckland
+    'link_to': ZONE_INFO_Pacific_Auckland
 }
 
 # Link name: Antarctica/South_Pole -> Pacific/Auckland
 ZONE_INFO_Antarctica_South_Pole: ZoneInfo = {
     'name': 'Antarctica/South_Pole',
-    'eras': ZONE_ERAS_Pacific_Auckland
+    'link_to': ZONE_INFO_Pacific_Auckland
 }
 
 # Link name: Antarctica/Syowa -> Asia/Riyadh
 ZONE_INFO_Antarctica_Syowa: ZoneInfo = {
     'name': 'Antarctica/Syowa',
-    'eras': ZONE_ERAS_Asia_Riyadh
+    'link_to': ZONE_INFO_Asia_Riyadh
 }
 
 # Link name: Arctic/Longyearbyen -> Europe/Oslo
 ZONE_INFO_Arctic_Longyearbyen: ZoneInfo = {
     'name': 'Arctic/Longyearbyen',
-    'eras': ZONE_ERAS_Europe_Oslo
+    'link_to': ZONE_INFO_Europe_Oslo
 }
 
 # Link name: Asia/Aden -> Asia/Riyadh
 ZONE_INFO_Asia_Aden: ZoneInfo = {
     'name': 'Asia/Aden',
-    'eras': ZONE_ERAS_Asia_Riyadh
+    'link_to': ZONE_INFO_Asia_Riyadh
 }
 
 # Link name: Asia/Ashkhabad -> Asia/Ashgabat
 ZONE_INFO_Asia_Ashkhabad: ZoneInfo = {
     'name': 'Asia/Ashkhabad',
-    'eras': ZONE_ERAS_Asia_Ashgabat
+    'link_to': ZONE_INFO_Asia_Ashgabat
 }
 
 # Link name: Asia/Bahrain -> Asia/Qatar
 ZONE_INFO_Asia_Bahrain: ZoneInfo = {
     'name': 'Asia/Bahrain',
-    'eras': ZONE_ERAS_Asia_Qatar
+    'link_to': ZONE_INFO_Asia_Qatar
 }
 
 # Link name: Asia/Calcutta -> Asia/Kolkata
 ZONE_INFO_Asia_Calcutta: ZoneInfo = {
     'name': 'Asia/Calcutta',
-    'eras': ZONE_ERAS_Asia_Kolkata
+    'link_to': ZONE_INFO_Asia_Kolkata
 }
 
 # Link name: Asia/Chongqing -> Asia/Shanghai
 ZONE_INFO_Asia_Chongqing: ZoneInfo = {
     'name': 'Asia/Chongqing',
-    'eras': ZONE_ERAS_Asia_Shanghai
+    'link_to': ZONE_INFO_Asia_Shanghai
 }
 
 # Link name: Asia/Chungking -> Asia/Shanghai
 ZONE_INFO_Asia_Chungking: ZoneInfo = {
     'name': 'Asia/Chungking',
-    'eras': ZONE_ERAS_Asia_Shanghai
+    'link_to': ZONE_INFO_Asia_Shanghai
 }
 
 # Link name: Asia/Dacca -> Asia/Dhaka
 ZONE_INFO_Asia_Dacca: ZoneInfo = {
     'name': 'Asia/Dacca',
-    'eras': ZONE_ERAS_Asia_Dhaka
+    'link_to': ZONE_INFO_Asia_Dhaka
 }
 
 # Link name: Asia/Harbin -> Asia/Shanghai
 ZONE_INFO_Asia_Harbin: ZoneInfo = {
     'name': 'Asia/Harbin',
-    'eras': ZONE_ERAS_Asia_Shanghai
+    'link_to': ZONE_INFO_Asia_Shanghai
 }
 
 # Link name: Asia/Istanbul -> Europe/Istanbul
 ZONE_INFO_Asia_Istanbul: ZoneInfo = {
     'name': 'Asia/Istanbul',
-    'eras': ZONE_ERAS_Europe_Istanbul
+    'link_to': ZONE_INFO_Europe_Istanbul
 }
 
 # Link name: Asia/Kashgar -> Asia/Urumqi
 ZONE_INFO_Asia_Kashgar: ZoneInfo = {
     'name': 'Asia/Kashgar',
-    'eras': ZONE_ERAS_Asia_Urumqi
+    'link_to': ZONE_INFO_Asia_Urumqi
 }
 
 # Link name: Asia/Katmandu -> Asia/Kathmandu
 ZONE_INFO_Asia_Katmandu: ZoneInfo = {
     'name': 'Asia/Katmandu',
-    'eras': ZONE_ERAS_Asia_Kathmandu
+    'link_to': ZONE_INFO_Asia_Kathmandu
 }
 
 # Link name: Asia/Kuwait -> Asia/Riyadh
 ZONE_INFO_Asia_Kuwait: ZoneInfo = {
     'name': 'Asia/Kuwait',
-    'eras': ZONE_ERAS_Asia_Riyadh
+    'link_to': ZONE_INFO_Asia_Riyadh
 }
 
 # Link name: Asia/Macao -> Asia/Macau
 ZONE_INFO_Asia_Macao: ZoneInfo = {
     'name': 'Asia/Macao',
-    'eras': ZONE_ERAS_Asia_Macau
+    'link_to': ZONE_INFO_Asia_Macau
 }
 
 # Link name: Asia/Muscat -> Asia/Dubai
 ZONE_INFO_Asia_Muscat: ZoneInfo = {
     'name': 'Asia/Muscat',
-    'eras': ZONE_ERAS_Asia_Dubai
+    'link_to': ZONE_INFO_Asia_Dubai
 }
 
 # Link name: Asia/Phnom_Penh -> Asia/Bangkok
 ZONE_INFO_Asia_Phnom_Penh: ZoneInfo = {
     'name': 'Asia/Phnom_Penh',
-    'eras': ZONE_ERAS_Asia_Bangkok
+    'link_to': ZONE_INFO_Asia_Bangkok
 }
 
 # Link name: Asia/Rangoon -> Asia/Yangon
 ZONE_INFO_Asia_Rangoon: ZoneInfo = {
     'name': 'Asia/Rangoon',
-    'eras': ZONE_ERAS_Asia_Yangon
+    'link_to': ZONE_INFO_Asia_Yangon
 }
 
 # Link name: Asia/Saigon -> Asia/Ho_Chi_Minh
 ZONE_INFO_Asia_Saigon: ZoneInfo = {
     'name': 'Asia/Saigon',
-    'eras': ZONE_ERAS_Asia_Ho_Chi_Minh
+    'link_to': ZONE_INFO_Asia_Ho_Chi_Minh
 }
 
 # Link name: Asia/Tel_Aviv -> Asia/Jerusalem
 ZONE_INFO_Asia_Tel_Aviv: ZoneInfo = {
     'name': 'Asia/Tel_Aviv',
-    'eras': ZONE_ERAS_Asia_Jerusalem
+    'link_to': ZONE_INFO_Asia_Jerusalem
 }
 
 # Link name: Asia/Thimbu -> Asia/Thimphu
 ZONE_INFO_Asia_Thimbu: ZoneInfo = {
     'name': 'Asia/Thimbu',
-    'eras': ZONE_ERAS_Asia_Thimphu
+    'link_to': ZONE_INFO_Asia_Thimphu
 }
 
 # Link name: Asia/Ujung_Pandang -> Asia/Makassar
 ZONE_INFO_Asia_Ujung_Pandang: ZoneInfo = {
     'name': 'Asia/Ujung_Pandang',
-    'eras': ZONE_ERAS_Asia_Makassar
+    'link_to': ZONE_INFO_Asia_Makassar
 }
 
 # Link name: Asia/Ulan_Bator -> Asia/Ulaanbaatar
 ZONE_INFO_Asia_Ulan_Bator: ZoneInfo = {
     'name': 'Asia/Ulan_Bator',
-    'eras': ZONE_ERAS_Asia_Ulaanbaatar
+    'link_to': ZONE_INFO_Asia_Ulaanbaatar
 }
 
 # Link name: Asia/Vientiane -> Asia/Bangkok
 ZONE_INFO_Asia_Vientiane: ZoneInfo = {
     'name': 'Asia/Vientiane',
-    'eras': ZONE_ERAS_Asia_Bangkok
+    'link_to': ZONE_INFO_Asia_Bangkok
 }
 
 # Link name: Atlantic/Faeroe -> Atlantic/Faroe
 ZONE_INFO_Atlantic_Faeroe: ZoneInfo = {
     'name': 'Atlantic/Faeroe',
-    'eras': ZONE_ERAS_Atlantic_Faroe
+    'link_to': ZONE_INFO_Atlantic_Faroe
 }
 
 # Link name: Atlantic/Jan_Mayen -> Europe/Oslo
 ZONE_INFO_Atlantic_Jan_Mayen: ZoneInfo = {
     'name': 'Atlantic/Jan_Mayen',
-    'eras': ZONE_ERAS_Europe_Oslo
+    'link_to': ZONE_INFO_Europe_Oslo
 }
 
 # Link name: Atlantic/St_Helena -> Africa/Abidjan
 ZONE_INFO_Atlantic_St_Helena: ZoneInfo = {
     'name': 'Atlantic/St_Helena',
-    'eras': ZONE_ERAS_Africa_Abidjan
+    'link_to': ZONE_INFO_Africa_Abidjan
 }
 
 # Link name: Australia/ACT -> Australia/Sydney
 ZONE_INFO_Australia_ACT: ZoneInfo = {
     'name': 'Australia/ACT',
-    'eras': ZONE_ERAS_Australia_Sydney
+    'link_to': ZONE_INFO_Australia_Sydney
 }
 
 # Link name: Australia/Canberra -> Australia/Sydney
 ZONE_INFO_Australia_Canberra: ZoneInfo = {
     'name': 'Australia/Canberra',
-    'eras': ZONE_ERAS_Australia_Sydney
+    'link_to': ZONE_INFO_Australia_Sydney
 }
 
 # Link name: Australia/Currie -> Australia/Hobart
 ZONE_INFO_Australia_Currie: ZoneInfo = {
     'name': 'Australia/Currie',
-    'eras': ZONE_ERAS_Australia_Hobart
+    'link_to': ZONE_INFO_Australia_Hobart
 }
 
 # Link name: Australia/LHI -> Australia/Lord_Howe
 ZONE_INFO_Australia_LHI: ZoneInfo = {
     'name': 'Australia/LHI',
-    'eras': ZONE_ERAS_Australia_Lord_Howe
+    'link_to': ZONE_INFO_Australia_Lord_Howe
 }
 
 # Link name: Australia/NSW -> Australia/Sydney
 ZONE_INFO_Australia_NSW: ZoneInfo = {
     'name': 'Australia/NSW',
-    'eras': ZONE_ERAS_Australia_Sydney
+    'link_to': ZONE_INFO_Australia_Sydney
 }
 
 # Link name: Australia/North -> Australia/Darwin
 ZONE_INFO_Australia_North: ZoneInfo = {
     'name': 'Australia/North',
-    'eras': ZONE_ERAS_Australia_Darwin
+    'link_to': ZONE_INFO_Australia_Darwin
 }
 
 # Link name: Australia/Queensland -> Australia/Brisbane
 ZONE_INFO_Australia_Queensland: ZoneInfo = {
     'name': 'Australia/Queensland',
-    'eras': ZONE_ERAS_Australia_Brisbane
+    'link_to': ZONE_INFO_Australia_Brisbane
 }
 
 # Link name: Australia/South -> Australia/Adelaide
 ZONE_INFO_Australia_South: ZoneInfo = {
     'name': 'Australia/South',
-    'eras': ZONE_ERAS_Australia_Adelaide
+    'link_to': ZONE_INFO_Australia_Adelaide
 }
 
 # Link name: Australia/Tasmania -> Australia/Hobart
 ZONE_INFO_Australia_Tasmania: ZoneInfo = {
     'name': 'Australia/Tasmania',
-    'eras': ZONE_ERAS_Australia_Hobart
+    'link_to': ZONE_INFO_Australia_Hobart
 }
 
 # Link name: Australia/Victoria -> Australia/Melbourne
 ZONE_INFO_Australia_Victoria: ZoneInfo = {
     'name': 'Australia/Victoria',
-    'eras': ZONE_ERAS_Australia_Melbourne
+    'link_to': ZONE_INFO_Australia_Melbourne
 }
 
 # Link name: Australia/West -> Australia/Perth
 ZONE_INFO_Australia_West: ZoneInfo = {
     'name': 'Australia/West',
-    'eras': ZONE_ERAS_Australia_Perth
+    'link_to': ZONE_INFO_Australia_Perth
 }
 
 # Link name: Australia/Yancowinna -> Australia/Broken_Hill
 ZONE_INFO_Australia_Yancowinna: ZoneInfo = {
     'name': 'Australia/Yancowinna',
-    'eras': ZONE_ERAS_Australia_Broken_Hill
+    'link_to': ZONE_INFO_Australia_Broken_Hill
 }
 
 # Link name: Brazil/Acre -> America/Rio_Branco
 ZONE_INFO_Brazil_Acre: ZoneInfo = {
     'name': 'Brazil/Acre',
-    'eras': ZONE_ERAS_America_Rio_Branco
+    'link_to': ZONE_INFO_America_Rio_Branco
 }
 
 # Link name: Brazil/DeNoronha -> America/Noronha
 ZONE_INFO_Brazil_DeNoronha: ZoneInfo = {
     'name': 'Brazil/DeNoronha',
-    'eras': ZONE_ERAS_America_Noronha
+    'link_to': ZONE_INFO_America_Noronha
 }
 
 # Link name: Brazil/East -> America/Sao_Paulo
 ZONE_INFO_Brazil_East: ZoneInfo = {
     'name': 'Brazil/East',
-    'eras': ZONE_ERAS_America_Sao_Paulo
+    'link_to': ZONE_INFO_America_Sao_Paulo
 }
 
 # Link name: Brazil/West -> America/Manaus
 ZONE_INFO_Brazil_West: ZoneInfo = {
     'name': 'Brazil/West',
-    'eras': ZONE_ERAS_America_Manaus
+    'link_to': ZONE_INFO_America_Manaus
 }
 
 # Link name: Canada/Atlantic -> America/Halifax
 ZONE_INFO_Canada_Atlantic: ZoneInfo = {
     'name': 'Canada/Atlantic',
-    'eras': ZONE_ERAS_America_Halifax
+    'link_to': ZONE_INFO_America_Halifax
 }
 
 # Link name: Canada/Central -> America/Winnipeg
 ZONE_INFO_Canada_Central: ZoneInfo = {
     'name': 'Canada/Central',
-    'eras': ZONE_ERAS_America_Winnipeg
+    'link_to': ZONE_INFO_America_Winnipeg
 }
 
 # Link name: Canada/Eastern -> America/Toronto
 ZONE_INFO_Canada_Eastern: ZoneInfo = {
     'name': 'Canada/Eastern',
-    'eras': ZONE_ERAS_America_Toronto
+    'link_to': ZONE_INFO_America_Toronto
 }
 
 # Link name: Canada/Mountain -> America/Edmonton
 ZONE_INFO_Canada_Mountain: ZoneInfo = {
     'name': 'Canada/Mountain',
-    'eras': ZONE_ERAS_America_Edmonton
+    'link_to': ZONE_INFO_America_Edmonton
 }
 
 # Link name: Canada/Newfoundland -> America/St_Johns
 ZONE_INFO_Canada_Newfoundland: ZoneInfo = {
     'name': 'Canada/Newfoundland',
-    'eras': ZONE_ERAS_America_St_Johns
+    'link_to': ZONE_INFO_America_St_Johns
 }
 
 # Link name: Canada/Pacific -> America/Vancouver
 ZONE_INFO_Canada_Pacific: ZoneInfo = {
     'name': 'Canada/Pacific',
-    'eras': ZONE_ERAS_America_Vancouver
+    'link_to': ZONE_INFO_America_Vancouver
 }
 
 # Link name: Canada/Saskatchewan -> America/Regina
 ZONE_INFO_Canada_Saskatchewan: ZoneInfo = {
     'name': 'Canada/Saskatchewan',
-    'eras': ZONE_ERAS_America_Regina
+    'link_to': ZONE_INFO_America_Regina
 }
 
 # Link name: Canada/Yukon -> America/Whitehorse
 ZONE_INFO_Canada_Yukon: ZoneInfo = {
     'name': 'Canada/Yukon',
-    'eras': ZONE_ERAS_America_Whitehorse
+    'link_to': ZONE_INFO_America_Whitehorse
 }
 
 # Link name: Chile/Continental -> America/Santiago
 ZONE_INFO_Chile_Continental: ZoneInfo = {
     'name': 'Chile/Continental',
-    'eras': ZONE_ERAS_America_Santiago
+    'link_to': ZONE_INFO_America_Santiago
 }
 
 # Link name: Chile/EasterIsland -> Pacific/Easter
 ZONE_INFO_Chile_EasterIsland: ZoneInfo = {
     'name': 'Chile/EasterIsland',
-    'eras': ZONE_ERAS_Pacific_Easter
+    'link_to': ZONE_INFO_Pacific_Easter
 }
 
 # Link name: Cuba -> America/Havana
 ZONE_INFO_Cuba: ZoneInfo = {
     'name': 'Cuba',
-    'eras': ZONE_ERAS_America_Havana
+    'link_to': ZONE_INFO_America_Havana
 }
 
 # Link name: Egypt -> Africa/Cairo
 ZONE_INFO_Egypt: ZoneInfo = {
     'name': 'Egypt',
-    'eras': ZONE_ERAS_Africa_Cairo
+    'link_to': ZONE_INFO_Africa_Cairo
 }
 
 # Link name: Eire -> Europe/Dublin
 ZONE_INFO_Eire: ZoneInfo = {
     'name': 'Eire',
-    'eras': ZONE_ERAS_Europe_Dublin
+    'link_to': ZONE_INFO_Europe_Dublin
 }
 
 # Link name: Etc/GMT+0 -> Etc/GMT
 ZONE_INFO_Etc_GMT_PLUS_0: ZoneInfo = {
     'name': 'Etc/GMT+0',
-    'eras': ZONE_ERAS_Etc_GMT
+    'link_to': ZONE_INFO_Etc_GMT
 }
 
 # Link name: Etc/GMT-0 -> Etc/GMT
 ZONE_INFO_Etc_GMT_0: ZoneInfo = {
     'name': 'Etc/GMT-0',
-    'eras': ZONE_ERAS_Etc_GMT
+    'link_to': ZONE_INFO_Etc_GMT
 }
 
 # Link name: Etc/GMT0 -> Etc/GMT
 ZONE_INFO_Etc_GMT0: ZoneInfo = {
     'name': 'Etc/GMT0',
-    'eras': ZONE_ERAS_Etc_GMT
+    'link_to': ZONE_INFO_Etc_GMT
 }
 
 # Link name: Etc/Greenwich -> Etc/GMT
 ZONE_INFO_Etc_Greenwich: ZoneInfo = {
     'name': 'Etc/Greenwich',
-    'eras': ZONE_ERAS_Etc_GMT
+    'link_to': ZONE_INFO_Etc_GMT
 }
 
 # Link name: Etc/UCT -> Etc/UTC
 ZONE_INFO_Etc_UCT: ZoneInfo = {
     'name': 'Etc/UCT',
-    'eras': ZONE_ERAS_Etc_UTC
+    'link_to': ZONE_INFO_Etc_UTC
 }
 
 # Link name: Etc/Universal -> Etc/UTC
 ZONE_INFO_Etc_Universal: ZoneInfo = {
     'name': 'Etc/Universal',
-    'eras': ZONE_ERAS_Etc_UTC
+    'link_to': ZONE_INFO_Etc_UTC
 }
 
 # Link name: Etc/Zulu -> Etc/UTC
 ZONE_INFO_Etc_Zulu: ZoneInfo = {
     'name': 'Etc/Zulu',
-    'eras': ZONE_ERAS_Etc_UTC
+    'link_to': ZONE_INFO_Etc_UTC
 }
 
 # Link name: Europe/Belfast -> Europe/London
 ZONE_INFO_Europe_Belfast: ZoneInfo = {
     'name': 'Europe/Belfast',
-    'eras': ZONE_ERAS_Europe_London
+    'link_to': ZONE_INFO_Europe_London
 }
 
 # Link name: Europe/Bratislava -> Europe/Prague
 ZONE_INFO_Europe_Bratislava: ZoneInfo = {
     'name': 'Europe/Bratislava',
-    'eras': ZONE_ERAS_Europe_Prague
+    'link_to': ZONE_INFO_Europe_Prague
 }
 
 # Link name: Europe/Busingen -> Europe/Zurich
 ZONE_INFO_Europe_Busingen: ZoneInfo = {
     'name': 'Europe/Busingen',
-    'eras': ZONE_ERAS_Europe_Zurich
+    'link_to': ZONE_INFO_Europe_Zurich
 }
 
 # Link name: Europe/Guernsey -> Europe/London
 ZONE_INFO_Europe_Guernsey: ZoneInfo = {
     'name': 'Europe/Guernsey',
-    'eras': ZONE_ERAS_Europe_London
+    'link_to': ZONE_INFO_Europe_London
 }
 
 # Link name: Europe/Isle_of_Man -> Europe/London
 ZONE_INFO_Europe_Isle_of_Man: ZoneInfo = {
     'name': 'Europe/Isle_of_Man',
-    'eras': ZONE_ERAS_Europe_London
+    'link_to': ZONE_INFO_Europe_London
 }
 
 # Link name: Europe/Jersey -> Europe/London
 ZONE_INFO_Europe_Jersey: ZoneInfo = {
     'name': 'Europe/Jersey',
-    'eras': ZONE_ERAS_Europe_London
+    'link_to': ZONE_INFO_Europe_London
 }
 
 # Link name: Europe/Ljubljana -> Europe/Belgrade
 ZONE_INFO_Europe_Ljubljana: ZoneInfo = {
     'name': 'Europe/Ljubljana',
-    'eras': ZONE_ERAS_Europe_Belgrade
+    'link_to': ZONE_INFO_Europe_Belgrade
 }
 
 # Link name: Europe/Mariehamn -> Europe/Helsinki
 ZONE_INFO_Europe_Mariehamn: ZoneInfo = {
     'name': 'Europe/Mariehamn',
-    'eras': ZONE_ERAS_Europe_Helsinki
+    'link_to': ZONE_INFO_Europe_Helsinki
 }
 
 # Link name: Europe/Nicosia -> Asia/Nicosia
 ZONE_INFO_Europe_Nicosia: ZoneInfo = {
     'name': 'Europe/Nicosia',
-    'eras': ZONE_ERAS_Asia_Nicosia
+    'link_to': ZONE_INFO_Asia_Nicosia
 }
 
 # Link name: Europe/Podgorica -> Europe/Belgrade
 ZONE_INFO_Europe_Podgorica: ZoneInfo = {
     'name': 'Europe/Podgorica',
-    'eras': ZONE_ERAS_Europe_Belgrade
+    'link_to': ZONE_INFO_Europe_Belgrade
 }
 
 # Link name: Europe/San_Marino -> Europe/Rome
 ZONE_INFO_Europe_San_Marino: ZoneInfo = {
     'name': 'Europe/San_Marino',
-    'eras': ZONE_ERAS_Europe_Rome
+    'link_to': ZONE_INFO_Europe_Rome
 }
 
 # Link name: Europe/Sarajevo -> Europe/Belgrade
 ZONE_INFO_Europe_Sarajevo: ZoneInfo = {
     'name': 'Europe/Sarajevo',
-    'eras': ZONE_ERAS_Europe_Belgrade
+    'link_to': ZONE_INFO_Europe_Belgrade
 }
 
 # Link name: Europe/Skopje -> Europe/Belgrade
 ZONE_INFO_Europe_Skopje: ZoneInfo = {
     'name': 'Europe/Skopje',
-    'eras': ZONE_ERAS_Europe_Belgrade
+    'link_to': ZONE_INFO_Europe_Belgrade
 }
 
 # Link name: Europe/Tiraspol -> Europe/Chisinau
 ZONE_INFO_Europe_Tiraspol: ZoneInfo = {
     'name': 'Europe/Tiraspol',
-    'eras': ZONE_ERAS_Europe_Chisinau
+    'link_to': ZONE_INFO_Europe_Chisinau
 }
 
 # Link name: Europe/Vaduz -> Europe/Zurich
 ZONE_INFO_Europe_Vaduz: ZoneInfo = {
     'name': 'Europe/Vaduz',
-    'eras': ZONE_ERAS_Europe_Zurich
+    'link_to': ZONE_INFO_Europe_Zurich
 }
 
 # Link name: Europe/Vatican -> Europe/Rome
 ZONE_INFO_Europe_Vatican: ZoneInfo = {
     'name': 'Europe/Vatican',
-    'eras': ZONE_ERAS_Europe_Rome
+    'link_to': ZONE_INFO_Europe_Rome
 }
 
 # Link name: Europe/Zagreb -> Europe/Belgrade
 ZONE_INFO_Europe_Zagreb: ZoneInfo = {
     'name': 'Europe/Zagreb',
-    'eras': ZONE_ERAS_Europe_Belgrade
+    'link_to': ZONE_INFO_Europe_Belgrade
 }
 
 # Link name: GB -> Europe/London
 ZONE_INFO_GB: ZoneInfo = {
     'name': 'GB',
-    'eras': ZONE_ERAS_Europe_London
+    'link_to': ZONE_INFO_Europe_London
 }
 
 # Link name: GB-Eire -> Europe/London
 ZONE_INFO_GB_Eire: ZoneInfo = {
     'name': 'GB-Eire',
-    'eras': ZONE_ERAS_Europe_London
+    'link_to': ZONE_INFO_Europe_London
 }
 
 # Link name: GMT -> Etc/GMT
 ZONE_INFO_GMT: ZoneInfo = {
     'name': 'GMT',
-    'eras': ZONE_ERAS_Etc_GMT
+    'link_to': ZONE_INFO_Etc_GMT
 }
 
 # Link name: GMT+0 -> Etc/GMT
 ZONE_INFO_GMT_PLUS_0: ZoneInfo = {
     'name': 'GMT+0',
-    'eras': ZONE_ERAS_Etc_GMT
+    'link_to': ZONE_INFO_Etc_GMT
 }
 
 # Link name: GMT-0 -> Etc/GMT
 ZONE_INFO_GMT_0: ZoneInfo = {
     'name': 'GMT-0',
-    'eras': ZONE_ERAS_Etc_GMT
+    'link_to': ZONE_INFO_Etc_GMT
 }
 
 # Link name: GMT0 -> Etc/GMT
 ZONE_INFO_GMT0: ZoneInfo = {
     'name': 'GMT0',
-    'eras': ZONE_ERAS_Etc_GMT
+    'link_to': ZONE_INFO_Etc_GMT
 }
 
 # Link name: Greenwich -> Etc/GMT
 ZONE_INFO_Greenwich: ZoneInfo = {
     'name': 'Greenwich',
-    'eras': ZONE_ERAS_Etc_GMT
+    'link_to': ZONE_INFO_Etc_GMT
 }
 
 # Link name: Hongkong -> Asia/Hong_Kong
 ZONE_INFO_Hongkong: ZoneInfo = {
     'name': 'Hongkong',
-    'eras': ZONE_ERAS_Asia_Hong_Kong
+    'link_to': ZONE_INFO_Asia_Hong_Kong
 }
 
 # Link name: Iceland -> Atlantic/Reykjavik
 ZONE_INFO_Iceland: ZoneInfo = {
     'name': 'Iceland',
-    'eras': ZONE_ERAS_Atlantic_Reykjavik
+    'link_to': ZONE_INFO_Atlantic_Reykjavik
 }
 
 # Link name: Indian/Antananarivo -> Africa/Nairobi
 ZONE_INFO_Indian_Antananarivo: ZoneInfo = {
     'name': 'Indian/Antananarivo',
-    'eras': ZONE_ERAS_Africa_Nairobi
+    'link_to': ZONE_INFO_Africa_Nairobi
 }
 
 # Link name: Indian/Comoro -> Africa/Nairobi
 ZONE_INFO_Indian_Comoro: ZoneInfo = {
     'name': 'Indian/Comoro',
-    'eras': ZONE_ERAS_Africa_Nairobi
+    'link_to': ZONE_INFO_Africa_Nairobi
 }
 
 # Link name: Indian/Mayotte -> Africa/Nairobi
 ZONE_INFO_Indian_Mayotte: ZoneInfo = {
     'name': 'Indian/Mayotte',
-    'eras': ZONE_ERAS_Africa_Nairobi
+    'link_to': ZONE_INFO_Africa_Nairobi
 }
 
 # Link name: Iran -> Asia/Tehran
 ZONE_INFO_Iran: ZoneInfo = {
     'name': 'Iran',
-    'eras': ZONE_ERAS_Asia_Tehran
+    'link_to': ZONE_INFO_Asia_Tehran
 }
 
 # Link name: Israel -> Asia/Jerusalem
 ZONE_INFO_Israel: ZoneInfo = {
     'name': 'Israel',
-    'eras': ZONE_ERAS_Asia_Jerusalem
+    'link_to': ZONE_INFO_Asia_Jerusalem
 }
 
 # Link name: Jamaica -> America/Jamaica
 ZONE_INFO_Jamaica: ZoneInfo = {
     'name': 'Jamaica',
-    'eras': ZONE_ERAS_America_Jamaica
+    'link_to': ZONE_INFO_America_Jamaica
 }
 
 # Link name: Japan -> Asia/Tokyo
 ZONE_INFO_Japan: ZoneInfo = {
     'name': 'Japan',
-    'eras': ZONE_ERAS_Asia_Tokyo
+    'link_to': ZONE_INFO_Asia_Tokyo
 }
 
 # Link name: Kwajalein -> Pacific/Kwajalein
 ZONE_INFO_Kwajalein: ZoneInfo = {
     'name': 'Kwajalein',
-    'eras': ZONE_ERAS_Pacific_Kwajalein
+    'link_to': ZONE_INFO_Pacific_Kwajalein
 }
 
 # Link name: Libya -> Africa/Tripoli
 ZONE_INFO_Libya: ZoneInfo = {
     'name': 'Libya',
-    'eras': ZONE_ERAS_Africa_Tripoli
+    'link_to': ZONE_INFO_Africa_Tripoli
 }
 
 # Link name: Mexico/BajaNorte -> America/Tijuana
 ZONE_INFO_Mexico_BajaNorte: ZoneInfo = {
     'name': 'Mexico/BajaNorte',
-    'eras': ZONE_ERAS_America_Tijuana
+    'link_to': ZONE_INFO_America_Tijuana
 }
 
 # Link name: Mexico/BajaSur -> America/Mazatlan
 ZONE_INFO_Mexico_BajaSur: ZoneInfo = {
     'name': 'Mexico/BajaSur',
-    'eras': ZONE_ERAS_America_Mazatlan
+    'link_to': ZONE_INFO_America_Mazatlan
 }
 
 # Link name: Mexico/General -> America/Mexico_City
 ZONE_INFO_Mexico_General: ZoneInfo = {
     'name': 'Mexico/General',
-    'eras': ZONE_ERAS_America_Mexico_City
+    'link_to': ZONE_INFO_America_Mexico_City
 }
 
 # Link name: NZ -> Pacific/Auckland
 ZONE_INFO_NZ: ZoneInfo = {
     'name': 'NZ',
-    'eras': ZONE_ERAS_Pacific_Auckland
+    'link_to': ZONE_INFO_Pacific_Auckland
 }
 
 # Link name: NZ-CHAT -> Pacific/Chatham
 ZONE_INFO_NZ_CHAT: ZoneInfo = {
     'name': 'NZ-CHAT',
-    'eras': ZONE_ERAS_Pacific_Chatham
+    'link_to': ZONE_INFO_Pacific_Chatham
 }
 
 # Link name: Navajo -> America/Denver
 ZONE_INFO_Navajo: ZoneInfo = {
     'name': 'Navajo',
-    'eras': ZONE_ERAS_America_Denver
+    'link_to': ZONE_INFO_America_Denver
 }
 
 # Link name: PRC -> Asia/Shanghai
 ZONE_INFO_PRC: ZoneInfo = {
     'name': 'PRC',
-    'eras': ZONE_ERAS_Asia_Shanghai
+    'link_to': ZONE_INFO_Asia_Shanghai
 }
 
 # Link name: Pacific/Enderbury -> Pacific/Kanton
 ZONE_INFO_Pacific_Enderbury: ZoneInfo = {
     'name': 'Pacific/Enderbury',
-    'eras': ZONE_ERAS_Pacific_Kanton
+    'link_to': ZONE_INFO_Pacific_Kanton
 }
 
 # Link name: Pacific/Johnston -> Pacific/Honolulu
 ZONE_INFO_Pacific_Johnston: ZoneInfo = {
     'name': 'Pacific/Johnston',
-    'eras': ZONE_ERAS_Pacific_Honolulu
+    'link_to': ZONE_INFO_Pacific_Honolulu
 }
 
 # Link name: Pacific/Midway -> Pacific/Pago_Pago
 ZONE_INFO_Pacific_Midway: ZoneInfo = {
     'name': 'Pacific/Midway',
-    'eras': ZONE_ERAS_Pacific_Pago_Pago
+    'link_to': ZONE_INFO_Pacific_Pago_Pago
 }
 
 # Link name: Pacific/Ponape -> Pacific/Pohnpei
 ZONE_INFO_Pacific_Ponape: ZoneInfo = {
     'name': 'Pacific/Ponape',
-    'eras': ZONE_ERAS_Pacific_Pohnpei
+    'link_to': ZONE_INFO_Pacific_Pohnpei
 }
 
 # Link name: Pacific/Saipan -> Pacific/Guam
 ZONE_INFO_Pacific_Saipan: ZoneInfo = {
     'name': 'Pacific/Saipan',
-    'eras': ZONE_ERAS_Pacific_Guam
+    'link_to': ZONE_INFO_Pacific_Guam
 }
 
 # Link name: Pacific/Samoa -> Pacific/Pago_Pago
 ZONE_INFO_Pacific_Samoa: ZoneInfo = {
     'name': 'Pacific/Samoa',
-    'eras': ZONE_ERAS_Pacific_Pago_Pago
+    'link_to': ZONE_INFO_Pacific_Pago_Pago
 }
 
 # Link name: Pacific/Truk -> Pacific/Chuuk
 ZONE_INFO_Pacific_Truk: ZoneInfo = {
     'name': 'Pacific/Truk',
-    'eras': ZONE_ERAS_Pacific_Chuuk
+    'link_to': ZONE_INFO_Pacific_Chuuk
 }
 
 # Link name: Pacific/Yap -> Pacific/Chuuk
 ZONE_INFO_Pacific_Yap: ZoneInfo = {
     'name': 'Pacific/Yap',
-    'eras': ZONE_ERAS_Pacific_Chuuk
+    'link_to': ZONE_INFO_Pacific_Chuuk
 }
 
 # Link name: Poland -> Europe/Warsaw
 ZONE_INFO_Poland: ZoneInfo = {
     'name': 'Poland',
-    'eras': ZONE_ERAS_Europe_Warsaw
+    'link_to': ZONE_INFO_Europe_Warsaw
 }
 
 # Link name: Portugal -> Europe/Lisbon
 ZONE_INFO_Portugal: ZoneInfo = {
     'name': 'Portugal',
-    'eras': ZONE_ERAS_Europe_Lisbon
+    'link_to': ZONE_INFO_Europe_Lisbon
 }
 
 # Link name: ROC -> Asia/Taipei
 ZONE_INFO_ROC: ZoneInfo = {
     'name': 'ROC',
-    'eras': ZONE_ERAS_Asia_Taipei
+    'link_to': ZONE_INFO_Asia_Taipei
 }
 
 # Link name: ROK -> Asia/Seoul
 ZONE_INFO_ROK: ZoneInfo = {
     'name': 'ROK',
-    'eras': ZONE_ERAS_Asia_Seoul
+    'link_to': ZONE_INFO_Asia_Seoul
 }
 
 # Link name: Singapore -> Asia/Singapore
 ZONE_INFO_Singapore: ZoneInfo = {
     'name': 'Singapore',
-    'eras': ZONE_ERAS_Asia_Singapore
+    'link_to': ZONE_INFO_Asia_Singapore
 }
 
 # Link name: Turkey -> Europe/Istanbul
 ZONE_INFO_Turkey: ZoneInfo = {
     'name': 'Turkey',
-    'eras': ZONE_ERAS_Europe_Istanbul
+    'link_to': ZONE_INFO_Europe_Istanbul
 }
 
 # Link name: UCT -> Etc/UTC
 ZONE_INFO_UCT: ZoneInfo = {
     'name': 'UCT',
-    'eras': ZONE_ERAS_Etc_UTC
+    'link_to': ZONE_INFO_Etc_UTC
 }
 
 # Link name: US/Alaska -> America/Anchorage
 ZONE_INFO_US_Alaska: ZoneInfo = {
     'name': 'US/Alaska',
-    'eras': ZONE_ERAS_America_Anchorage
+    'link_to': ZONE_INFO_America_Anchorage
 }
 
 # Link name: US/Aleutian -> America/Adak
 ZONE_INFO_US_Aleutian: ZoneInfo = {
     'name': 'US/Aleutian',
-    'eras': ZONE_ERAS_America_Adak
+    'link_to': ZONE_INFO_America_Adak
 }
 
 # Link name: US/Arizona -> America/Phoenix
 ZONE_INFO_US_Arizona: ZoneInfo = {
     'name': 'US/Arizona',
-    'eras': ZONE_ERAS_America_Phoenix
+    'link_to': ZONE_INFO_America_Phoenix
 }
 
 # Link name: US/Central -> America/Chicago
 ZONE_INFO_US_Central: ZoneInfo = {
     'name': 'US/Central',
-    'eras': ZONE_ERAS_America_Chicago
+    'link_to': ZONE_INFO_America_Chicago
 }
 
 # Link name: US/East-Indiana -> America/Indiana/Indianapolis
 ZONE_INFO_US_East_Indiana: ZoneInfo = {
     'name': 'US/East-Indiana',
-    'eras': ZONE_ERAS_America_Indiana_Indianapolis
+    'link_to': ZONE_INFO_America_Indiana_Indianapolis
 }
 
 # Link name: US/Eastern -> America/New_York
 ZONE_INFO_US_Eastern: ZoneInfo = {
     'name': 'US/Eastern',
-    'eras': ZONE_ERAS_America_New_York
+    'link_to': ZONE_INFO_America_New_York
 }
 
 # Link name: US/Hawaii -> Pacific/Honolulu
 ZONE_INFO_US_Hawaii: ZoneInfo = {
     'name': 'US/Hawaii',
-    'eras': ZONE_ERAS_Pacific_Honolulu
+    'link_to': ZONE_INFO_Pacific_Honolulu
 }
 
 # Link name: US/Indiana-Starke -> America/Indiana/Knox
 ZONE_INFO_US_Indiana_Starke: ZoneInfo = {
     'name': 'US/Indiana-Starke',
-    'eras': ZONE_ERAS_America_Indiana_Knox
+    'link_to': ZONE_INFO_America_Indiana_Knox
 }
 
 # Link name: US/Michigan -> America/Detroit
 ZONE_INFO_US_Michigan: ZoneInfo = {
     'name': 'US/Michigan',
-    'eras': ZONE_ERAS_America_Detroit
+    'link_to': ZONE_INFO_America_Detroit
 }
 
 # Link name: US/Mountain -> America/Denver
 ZONE_INFO_US_Mountain: ZoneInfo = {
     'name': 'US/Mountain',
-    'eras': ZONE_ERAS_America_Denver
+    'link_to': ZONE_INFO_America_Denver
 }
 
 # Link name: US/Pacific -> America/Los_Angeles
 ZONE_INFO_US_Pacific: ZoneInfo = {
     'name': 'US/Pacific',
-    'eras': ZONE_ERAS_America_Los_Angeles
+    'link_to': ZONE_INFO_America_Los_Angeles
 }
 
 # Link name: US/Samoa -> Pacific/Pago_Pago
 ZONE_INFO_US_Samoa: ZoneInfo = {
     'name': 'US/Samoa',
-    'eras': ZONE_ERAS_Pacific_Pago_Pago
+    'link_to': ZONE_INFO_Pacific_Pago_Pago
 }
 
 # Link name: UTC -> Etc/UTC
 ZONE_INFO_UTC: ZoneInfo = {
     'name': 'UTC',
-    'eras': ZONE_ERAS_Etc_UTC
+    'link_to': ZONE_INFO_Etc_UTC
 }
 
 # Link name: Universal -> Etc/UTC
 ZONE_INFO_Universal: ZoneInfo = {
     'name': 'Universal',
-    'eras': ZONE_ERAS_Etc_UTC
+    'link_to': ZONE_INFO_Etc_UTC
 }
 
 # Link name: W-SU -> Europe/Moscow
 ZONE_INFO_W_SU: ZoneInfo = {
     'name': 'W-SU',
-    'eras': ZONE_ERAS_Europe_Moscow
+    'link_to': ZONE_INFO_Europe_Moscow
 }
 
 # Link name: Zulu -> Etc/UTC
 ZONE_INFO_Zulu: ZoneInfo = {
     'name': 'Zulu',
-    'eras': ZONE_ERAS_Etc_UTC
+    'link_to': ZONE_INFO_Etc_UTC
 }
 
 
@@ -19377,10 +19377,10 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # Notable zones: 4
 # ---------------------------------------------------------------------------
 
-# Africa/Johannesburg (["RULES not fixed but FORMAT is missing '%' or '/'"])
-# Antarctica/Casey (["UNTIL '0:01' not on 15-minute boundary"])
-# Asia/Gaza (["UNTIL '0:01' not on 15-minute boundary"])
-# Pacific/Kiritimati (["STDOFF '-10:40' not on 15-minute boundary"])
+# Africa/Johannesburg (RULES not fixed but FORMAT is missing '%' or '/')
+# Antarctica/Casey (UNTIL '0:01' not on 15-minute boundary)
+# Asia/Gaza (UNTIL '0:01' not on 15-minute boundary)
+# Pacific/Kiritimati (STDOFF '-10:40' not on 15-minute boundary)
 
 
 # ---------------------------------------------------------------------------

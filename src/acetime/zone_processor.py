@@ -544,7 +544,23 @@ class ZoneProcessor:
             buffer_size=self.transition_storage.index_beyond,
         )
 
+    def is_link(self) -> bool:
+        return 'link_to' in self.zone_info
+
+    def get_name(self, follow_link: bool = False) -> str:
+        """Return the full name of the current ZoneInfo. If the ZoneInfo is a
+        Link and 'follow_link' is True, then return the full name of the target
+        zone.
+        """
+        if 'link_to' in self.zone_info and follow_link:
+            zone_info = cast(ZoneInfo, self.zone_info.get('link_to'))
+        else:
+            zone_info = self.zone_info
+        return zone_info['name']
+
+    # ------------------------------------------------------------------------
     # The following methods are designed to be used internally.
+    # ------------------------------------------------------------------------
 
     def _init_for_second(self, epoch_seconds: int) -> None:
         """Initialize the Transitions from the given epoch_seconds.
@@ -602,15 +618,14 @@ class ZoneProcessor:
             self.transitions[matching_index - 1].until_date_time,
             self.transitions[matching_index].start_date_time,
         )
+        # No fold if the transition caused a gap.
         if overlap_interval <= 0:
             return 0
 
-        seconds_from_zone_era_start = (
-            epoch_seconds
-            - self.transitions[matching_index].start_epoch_second
-        )
-
-        if seconds_from_zone_era_start >= overlap_interval:
+        transition_start = self.transitions[matching_index].start_epoch_second
+        seconds_from_transition_start = epoch_seconds - transition_start
+        # No fold if epoch_seconds is beyond the overlap interval.
+        if seconds_from_transition_start >= overlap_interval:
             return 0
 
         return 1
@@ -720,7 +735,15 @@ class ZoneProcessor:
         because the interval spans at least 3 whole years, and potentially 4
         years for the 'most recent prior year'.
         """
-        zone_eras = self.zone_info['eras']
+        # If the timezone is a Link, follow the link and get the ZoneEras from
+        # the target ZoneInfo.
+        if 'eras' in self.zone_info:
+            zone_eras = self.zone_info.get('eras')
+        else:
+            zone_info = cast(ZoneInfo, self.zone_info.get('link_to'))
+            zone_eras = zone_info.get('eras')
+        assert zone_eras is not None
+
         prev_match: Optional[MatchingEra] = None
         matches: List[MatchingEra] = []
         for zone_era in zone_eras:
