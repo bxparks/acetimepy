@@ -1,6 +1,11 @@
 # Changelog
 
 * Unreleased
+* v0.5.1 (2022-03-20, TZDB 2022a)
+    * Update to TZDB 2022a.
+        * https://mm.icann.org/pipermail/tz-announce/2022-March.txt
+        * "Palestine will spring forward on 2022-03-27, not -03-26."
+    * No changes to code.
 * v0.5.0 (2022-02-14, TZDB 2021e)
     * Regenerate `zonedb/` using latest AceTimeTool which identifies notable
       Zones and Policies whose DST shifts are not exactly 0:00 or 1:00. No
