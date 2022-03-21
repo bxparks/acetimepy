@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedb
-#     --tz_version 2021e
+#     --tz_version 2022a
 #     --action zonedb
 #     --language python
 #     --scope extended
@@ -22,7 +22,7 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2021e
+# from https://github.com/eggert/tz/releases/tag/2022a
 #
 # DO NOT EDIT
 
@@ -34,7 +34,7 @@ from ..zonedb_types import (
 
 # ---------------------------------------------------------------------------
 # Supported zone policies: 116
-# numRules: 1141
+# numRules: 1142
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -10599,7 +10599,7 @@ ZONE_POLICY_Pakistan: ZonePolicy = {
 
 # ---------------------------------------------------------------------------
 # Policy name: Palestine
-# Rule count: 30
+# Rule count: 31
 # ---------------------------------------------------------------------------
 ZONE_RULES_Palestine: List[ZoneRule] = [
     # Anchor: Rule Palestine    1999    2003    -    Oct    Fri>=15    0:00    0    -
@@ -10926,10 +10926,10 @@ ZONE_RULES_Palestine: List[ZoneRule] = [
         'delta_seconds': 0,
         'letter': '-',
     },
-    # Rule Palestine    2020    max    -    Mar    Sat>=24    0:00    1:00    S
+    # Rule Palestine    2020    2021    -    Mar    Sat>=24    0:00    1:00    S
     {
         'from_year': 2020,
-        'to_year': 9999,
+        'to_year': 2021,
         'in_month': 3,
         'on_day_of_week': 6,
         'on_day_of_month': 24,
@@ -10950,17 +10950,29 @@ ZONE_RULES_Palestine: List[ZoneRule] = [
         'delta_seconds': 0,
         'letter': '-',
     },
-    # Rule Palestine    2021    max    -    Oct    lastFri    1:00    0    -
+    # Rule Palestine    2021    max    -    Oct    Fri>=23    1:00    0    -
     {
         'from_year': 2021,
         'to_year': 9999,
         'in_month': 10,
         'on_day_of_week': 5,
-        'on_day_of_month': 0,
+        'on_day_of_month': 23,
         'at_seconds': 3600,
         'at_time_suffix': 'w',
         'delta_seconds': 0,
         'letter': '-',
+    },
+    # Rule Palestine    2022    max    -    Mar    Sun>=25    0:00    1:00    S
+    {
+        'from_year': 2022,
+        'to_year': 9999,
+        'in_month': 3,
+        'on_day_of_week': 7,
+        'on_day_of_month': 25,
+        'at_seconds': 0,
+        'at_time_suffix': 'w',
+        'delta_seconds': 3600,
+        'letter': 'S',
     },
 
 ]

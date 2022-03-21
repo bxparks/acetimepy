@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedb
-#     --tz_version 2021e
+#     --tz_version 2022a
 #     --action zonedb
 #     --language python
 #     --scope extended
@@ -22,7 +22,7 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2021e
+# from https://github.com/eggert/tz/releases/tag/2022a
 #
 # DO NOT EDIT
 
@@ -38,13 +38,13 @@ from .zone_policies import *
 # Zone Context
 # ---------------------------------------------------------------------------
 
-TZDB_VERSION = '2021e'
+TZDB_VERSION = '2022a'
 START_YEAR = 1974
 UNTIL_YEAR = 2050
 
 # ---------------------------------------------------------------------------
 # Supported zones: 377
-# numEras: 1061
+# numEras: 1062
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -14591,15 +14591,15 @@ ZONE_ERAS_Europe_Kiev: List[ZoneEra] = [
         'until_seconds': 10800,
         'until_time_suffix': 'w',
     },
-    #             2:00    E-Eur    EE%sT    1995
+    #             2:00    C-Eur    EE%sT    1996 May 13
     {
         'offset_seconds': 7200,
-        'zone_policy': ZONE_POLICY_E_Eur,
+        'zone_policy': ZONE_POLICY_C_Eur,
         'rules_delta_seconds': 0,
         'format': 'EE%sT',
-        'until_year': 1995,
-        'until_month': 1,
-        'until_day': 1,
+        'until_year': 1996,
+        'until_month': 5,
+        'until_day': 13,
         'until_seconds': 0,
         'until_time_suffix': 'w',
     },
@@ -15585,22 +15585,22 @@ ZONE_ERAS_Europe_Simferopol: List[ZoneEra] = [
         'until_seconds': 7200,
         'until_time_suffix': 'w',
     },
-    #              2:00    -    EET    1992
+    #              2:00    -    EET    1992 Mar 20
     {
         'offset_seconds': 7200,
         'zone_policy': '-',
         'rules_delta_seconds': 0,
         'format': 'EET',
         'until_year': 1992,
-        'until_month': 1,
-        'until_day': 1,
+        'until_month': 3,
+        'until_day': 20,
         'until_seconds': 0,
         'until_time_suffix': 'w',
     },
-    #              2:00    E-Eur    EE%sT    1994 May
+    #              2:00    C-Eur    EE%sT    1994 May
     {
         'offset_seconds': 7200,
-        'zone_policy': ZONE_POLICY_E_Eur,
+        'zone_policy': ZONE_POLICY_C_Eur,
         'rules_delta_seconds': 0,
         'format': 'EE%sT',
         'until_year': 1994,
@@ -16077,27 +16077,27 @@ ZONE_ERAS_Europe_Uzhgorod: List[ZoneEra] = [
         'until_seconds': 10800,
         'until_time_suffix': 'w',
     },
-    #             2:00    -    EET    1992
+    #             2:00    -    EET    1992 Mar 20
     {
         'offset_seconds': 7200,
         'zone_policy': '-',
         'rules_delta_seconds': 0,
         'format': 'EET',
         'until_year': 1992,
-        'until_month': 1,
-        'until_day': 1,
+        'until_month': 3,
+        'until_day': 20,
         'until_seconds': 0,
         'until_time_suffix': 'w',
     },
-    #             2:00    E-Eur    EE%sT    1995
+    #             2:00    C-Eur    EE%sT    1996 May 13
     {
         'offset_seconds': 7200,
-        'zone_policy': ZONE_POLICY_E_Eur,
+        'zone_policy': ZONE_POLICY_C_Eur,
         'rules_delta_seconds': 0,
         'format': 'EE%sT',
-        'until_year': 1995,
-        'until_month': 1,
-        'until_day': 1,
+        'until_year': 1996,
+        'until_month': 5,
+        'until_day': 13,
         'until_seconds': 0,
         'until_time_suffix': 'w',
     },
@@ -16419,7 +16419,7 @@ ZONE_INFO_Europe_Warsaw: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Zaporozhye
-# Era count: 3
+# Era count: 4
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Zaporozhye: List[ZoneEra] = [
@@ -16435,15 +16435,27 @@ ZONE_ERAS_Europe_Zaporozhye: List[ZoneEra] = [
         'until_seconds': 7200,
         'until_time_suffix': 'w',
     },
-    #             2:00    E-Eur    EE%sT    1995
+    #             2:00    E-Eur    EE%sT    1992 Mar 20
     {
         'offset_seconds': 7200,
         'zone_policy': ZONE_POLICY_E_Eur,
         'rules_delta_seconds': 0,
         'format': 'EE%sT',
-        'until_year': 1995,
-        'until_month': 1,
-        'until_day': 1,
+        'until_year': 1992,
+        'until_month': 3,
+        'until_day': 20,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             2:00    C-Eur    EE%sT    1996 May 13
+    {
+        'offset_seconds': 7200,
+        'zone_policy': ZONE_POLICY_C_Eur,
+        'rules_delta_seconds': 0,
+        'format': 'EE%sT',
+        'until_year': 1996,
+        'until_month': 5,
+        'until_day': 13,
         'until_seconds': 0,
         'until_time_suffix': 'w',
     },
