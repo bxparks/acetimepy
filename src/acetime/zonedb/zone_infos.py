@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedb
-#     --tz_version 2022a
+#     --tz_version 2022b
 #     --action zonedb
 #     --language python
 #     --scope extended
@@ -22,7 +22,7 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2022a
+# from https://github.com/eggert/tz/releases/tag/2022b
 #
 # DO NOT EDIT
 
@@ -38,13 +38,13 @@ from .zone_policies import *
 # Zone Context
 # ---------------------------------------------------------------------------
 
-TZDB_VERSION = '2022a'
+TZDB_VERSION = '2022b'
 START_YEAR = 1974
 UNTIL_YEAR = 2050
 
 # ---------------------------------------------------------------------------
-# Supported zones: 377
-# numEras: 1062
+# Supported zones: 356
+# numEras: 1033
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -7776,32 +7776,6 @@ ZONE_INFO_Antarctica_Troll: ZoneInfo = {
 }
 
 # ---------------------------------------------------------------------------
-# Zone name: Antarctica/Vostok
-# Era count: 1
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_Antarctica_Vostok: List[ZoneEra] = [
-    #             6:00    -    +06
-    {
-        'offset_seconds': 21600,
-        'zone_policy': '-',
-        'rules_delta_seconds': 0,
-        'format': '+06',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Antarctica_Vostok: ZoneInfo = {
-    'name': 'Antarctica/Vostok',
-    'eras': ZONE_ERAS_Antarctica_Vostok
-}
-
-# ---------------------------------------------------------------------------
 # Zone name: Asia/Almaty
 # Era count: 4
 # ---------------------------------------------------------------------------
@@ -8644,32 +8618,6 @@ ZONE_INFO_Asia_Bishkek: ZoneInfo = {
 }
 
 # ---------------------------------------------------------------------------
-# Zone name: Asia/Brunei
-# Era count: 1
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_Asia_Brunei: List[ZoneEra] = [
-    #             8:00    -    +08
-    {
-        'offset_seconds': 28800,
-        'zone_policy': '-',
-        'rules_delta_seconds': 0,
-        'format': '+08',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Asia_Brunei: ZoneInfo = {
-    'name': 'Asia/Brunei',
-    'eras': ZONE_ERAS_Asia_Brunei
-}
-
-# ---------------------------------------------------------------------------
 # Zone name: Asia/Chita
 # Era count: 6
 # ---------------------------------------------------------------------------
@@ -9037,12 +8985,12 @@ ZONE_ERAS_Asia_Dushanbe: List[ZoneEra] = [
         'until_seconds': 7200,
         'until_time_suffix': 's',
     },
-    #             5:00    1:00    +05/+06    1991 Sep  9  2:00s
+    #             5:00    1:00    +06    1991 Sep  9  2:00s
     {
         'offset_seconds': 18000,
         'zone_policy': ':',
         'rules_delta_seconds': 3600,
-        'format': '+05/+06',
+        'format': '+06',
         'until_year': 1991,
         'until_month': 9,
         'until_day': 9,
@@ -9917,44 +9865,6 @@ ZONE_ERAS_Asia_Krasnoyarsk: List[ZoneEra] = [
 ZONE_INFO_Asia_Krasnoyarsk: ZoneInfo = {
     'name': 'Asia/Krasnoyarsk',
     'eras': ZONE_ERAS_Asia_Krasnoyarsk
-}
-
-# ---------------------------------------------------------------------------
-# Zone name: Asia/Kuala_Lumpur
-# Era count: 2
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_Asia_Kuala_Lumpur: List[ZoneEra] = [
-    #             7:30    -    +0730    1982 Jan  1
-    {
-        'offset_seconds': 27000,
-        'zone_policy': '-',
-        'rules_delta_seconds': 0,
-        'format': '+0730',
-        'until_year': 1982,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-    #             8:00    -    +08
-    {
-        'offset_seconds': 28800,
-        'zone_policy': '-',
-        'rules_delta_seconds': 0,
-        'format': '+08',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Asia_Kuala_Lumpur: ZoneInfo = {
-    'name': 'Asia/Kuala_Lumpur',
-    'eras': ZONE_ERAS_Asia_Kuala_Lumpur
 }
 
 # ---------------------------------------------------------------------------
@@ -11441,16 +11351,16 @@ ZONE_INFO_Asia_Tbilisi: ZoneInfo = {
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Asia_Tehran: List[ZoneEra] = [
-    #             3:30    -    +0330    1977 Nov
+    #             3:30    Iran    +0330/+0430 1977 Oct 20 24:00
     {
         'offset_seconds': 12600,
-        'zone_policy': '-',
+        'zone_policy': ZONE_POLICY_Iran,
         'rules_delta_seconds': 0,
-        'format': '+0330',
+        'format': '+0330/+0430',
         'until_year': 1977,
-        'until_month': 11,
-        'until_day': 1,
-        'until_seconds': 0,
+        'until_month': 10,
+        'until_day': 20,
+        'until_seconds': 86400,
         'until_time_suffix': 'w',
     },
     #             4:00    Iran    +04/+05    1979
@@ -12405,32 +12315,6 @@ ZONE_ERAS_Atlantic_Madeira: List[ZoneEra] = [
 ZONE_INFO_Atlantic_Madeira: ZoneInfo = {
     'name': 'Atlantic/Madeira',
     'eras': ZONE_ERAS_Atlantic_Madeira
-}
-
-# ---------------------------------------------------------------------------
-# Zone name: Atlantic/Reykjavik
-# Era count: 1
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_Atlantic_Reykjavik: List[ZoneEra] = [
-    #              0:00    -    GMT
-    {
-        'offset_seconds': 0,
-        'zone_policy': '-',
-        'rules_delta_seconds': 0,
-        'format': 'GMT',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Atlantic_Reykjavik: ZoneInfo = {
-    'name': 'Atlantic/Reykjavik',
-    'eras': ZONE_ERAS_Atlantic_Reykjavik
 }
 
 # ---------------------------------------------------------------------------
@@ -13714,44 +13598,6 @@ ZONE_INFO_Etc_UTC: ZoneInfo = {
 }
 
 # ---------------------------------------------------------------------------
-# Zone name: Europe/Amsterdam
-# Era count: 2
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_Europe_Amsterdam: List[ZoneEra] = [
-    #             1:00    Neth    CE%sT    1977
-    {
-        'offset_seconds': 3600,
-        'zone_policy': ZONE_POLICY_Neth,
-        'rules_delta_seconds': 0,
-        'format': 'CE%sT',
-        'until_year': 1977,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-    #             1:00    EU    CE%sT
-    {
-        'offset_seconds': 3600,
-        'zone_policy': ZONE_POLICY_EU,
-        'rules_delta_seconds': 0,
-        'format': 'CE%sT',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Europe_Amsterdam: ZoneInfo = {
-    'name': 'Europe/Amsterdam',
-    'eras': ZONE_ERAS_Europe_Amsterdam
-}
-
-# ---------------------------------------------------------------------------
 # Zone name: Europe/Andorra
 # Era count: 2
 # ---------------------------------------------------------------------------
@@ -14214,44 +14060,6 @@ ZONE_INFO_Europe_Chisinau: ZoneInfo = {
 }
 
 # ---------------------------------------------------------------------------
-# Zone name: Europe/Copenhagen
-# Era count: 2
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_Europe_Copenhagen: List[ZoneEra] = [
-    #              1:00    Denmark    CE%sT    1980
-    {
-        'offset_seconds': 3600,
-        'zone_policy': ZONE_POLICY_Denmark,
-        'rules_delta_seconds': 0,
-        'format': 'CE%sT',
-        'until_year': 1980,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-    #              1:00    EU    CE%sT
-    {
-        'offset_seconds': 3600,
-        'zone_policy': ZONE_POLICY_EU,
-        'rules_delta_seconds': 0,
-        'format': 'CE%sT',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Europe_Copenhagen: ZoneInfo = {
-    'name': 'Europe/Copenhagen',
-    'eras': ZONE_ERAS_Europe_Copenhagen
-}
-
-# ---------------------------------------------------------------------------
 # Zone name: Europe/Dublin
 # Era count: 1
 # ---------------------------------------------------------------------------
@@ -14562,68 +14370,6 @@ ZONE_INFO_Europe_Kaliningrad: ZoneInfo = {
 }
 
 # ---------------------------------------------------------------------------
-# Zone name: Europe/Kiev
-# Era count: 4
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_Europe_Kiev: List[ZoneEra] = [
-    #             3:00    Russia    MSK/MSD    1990 Jul  1  2:00
-    {
-        'offset_seconds': 10800,
-        'zone_policy': ZONE_POLICY_Russia,
-        'rules_delta_seconds': 0,
-        'format': 'MSK/MSD',
-        'until_year': 1990,
-        'until_month': 7,
-        'until_day': 1,
-        'until_seconds': 7200,
-        'until_time_suffix': 'w',
-    },
-    #             2:00    1:00    EEST    1991 Sep 29  3:00
-    {
-        'offset_seconds': 7200,
-        'zone_policy': ':',
-        'rules_delta_seconds': 3600,
-        'format': 'EEST',
-        'until_year': 1991,
-        'until_month': 9,
-        'until_day': 29,
-        'until_seconds': 10800,
-        'until_time_suffix': 'w',
-    },
-    #             2:00    C-Eur    EE%sT    1996 May 13
-    {
-        'offset_seconds': 7200,
-        'zone_policy': ZONE_POLICY_C_Eur,
-        'rules_delta_seconds': 0,
-        'format': 'EE%sT',
-        'until_year': 1996,
-        'until_month': 5,
-        'until_day': 13,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-    #             2:00    EU    EE%sT
-    {
-        'offset_seconds': 7200,
-        'zone_policy': ZONE_POLICY_EU,
-        'rules_delta_seconds': 0,
-        'format': 'EE%sT',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Europe_Kiev: ZoneInfo = {
-    'name': 'Europe/Kiev',
-    'eras': ZONE_ERAS_Europe_Kiev
-}
-
-# ---------------------------------------------------------------------------
 # Zone name: Europe/Kirov
 # Era count: 6
 # ---------------------------------------------------------------------------
@@ -14707,6 +14453,68 @@ ZONE_ERAS_Europe_Kirov: List[ZoneEra] = [
 ZONE_INFO_Europe_Kirov: ZoneInfo = {
     'name': 'Europe/Kirov',
     'eras': ZONE_ERAS_Europe_Kirov
+}
+
+# ---------------------------------------------------------------------------
+# Zone name: Europe/Kyiv
+# Era count: 4
+# ---------------------------------------------------------------------------
+
+ZONE_ERAS_Europe_Kyiv: List[ZoneEra] = [
+    #             3:00    Russia    MSK/MSD    1990 Jul  1  2:00
+    {
+        'offset_seconds': 10800,
+        'zone_policy': ZONE_POLICY_Russia,
+        'rules_delta_seconds': 0,
+        'format': 'MSK/MSD',
+        'until_year': 1990,
+        'until_month': 7,
+        'until_day': 1,
+        'until_seconds': 7200,
+        'until_time_suffix': 'w',
+    },
+    #             2:00    1:00    EEST    1991 Sep 29  3:00
+    {
+        'offset_seconds': 7200,
+        'zone_policy': ':',
+        'rules_delta_seconds': 3600,
+        'format': 'EEST',
+        'until_year': 1991,
+        'until_month': 9,
+        'until_day': 29,
+        'until_seconds': 10800,
+        'until_time_suffix': 'w',
+    },
+    #             2:00    C-Eur    EE%sT    1996 May 13
+    {
+        'offset_seconds': 7200,
+        'zone_policy': ZONE_POLICY_C_Eur,
+        'rules_delta_seconds': 0,
+        'format': 'EE%sT',
+        'until_year': 1996,
+        'until_month': 5,
+        'until_day': 13,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             2:00    EU    EE%sT
+    {
+        'offset_seconds': 7200,
+        'zone_policy': ZONE_POLICY_EU,
+        'rules_delta_seconds': 0,
+        'format': 'EE%sT',
+        'until_year': 10000,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+
+]
+
+ZONE_INFO_Europe_Kyiv: ZoneInfo = {
+    'name': 'Europe/Kyiv',
+    'eras': ZONE_ERAS_Europe_Kyiv
 }
 
 # ---------------------------------------------------------------------------
@@ -14819,44 +14627,6 @@ ZONE_ERAS_Europe_London: List[ZoneEra] = [
 ZONE_INFO_Europe_London: ZoneInfo = {
     'name': 'Europe/London',
     'eras': ZONE_ERAS_Europe_London
-}
-
-# ---------------------------------------------------------------------------
-# Zone name: Europe/Luxembourg
-# Era count: 2
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_Europe_Luxembourg: List[ZoneEra] = [
-    #             1:00    Belgium    CE%sT    1977
-    {
-        'offset_seconds': 3600,
-        'zone_policy': ZONE_POLICY_Belgium,
-        'rules_delta_seconds': 0,
-        'format': 'CE%sT',
-        'until_year': 1977,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-    #             1:00    EU    CE%sT
-    {
-        'offset_seconds': 3600,
-        'zone_policy': ZONE_POLICY_EU,
-        'rules_delta_seconds': 0,
-        'format': 'CE%sT',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Europe_Luxembourg: ZoneInfo = {
-    'name': 'Europe/Luxembourg',
-    'eras': ZONE_ERAS_Europe_Luxembourg
 }
 
 # ---------------------------------------------------------------------------
@@ -15010,44 +14780,6 @@ ZONE_INFO_Europe_Minsk: ZoneInfo = {
 }
 
 # ---------------------------------------------------------------------------
-# Zone name: Europe/Monaco
-# Era count: 2
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_Europe_Monaco: List[ZoneEra] = [
-    #             1:00    France    CE%sT    1977
-    {
-        'offset_seconds': 3600,
-        'zone_policy': ZONE_POLICY_France,
-        'rules_delta_seconds': 0,
-        'format': 'CE%sT',
-        'until_year': 1977,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-    #             1:00    EU    CE%sT
-    {
-        'offset_seconds': 3600,
-        'zone_policy': ZONE_POLICY_EU,
-        'rules_delta_seconds': 0,
-        'format': 'CE%sT',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Europe_Monaco: ZoneInfo = {
-    'name': 'Europe/Monaco',
-    'eras': ZONE_ERAS_Europe_Monaco
-}
-
-# ---------------------------------------------------------------------------
 # Zone name: Europe/Moscow
 # Era count: 5
 # ---------------------------------------------------------------------------
@@ -15119,44 +14851,6 @@ ZONE_ERAS_Europe_Moscow: List[ZoneEra] = [
 ZONE_INFO_Europe_Moscow: ZoneInfo = {
     'name': 'Europe/Moscow',
     'eras': ZONE_ERAS_Europe_Moscow
-}
-
-# ---------------------------------------------------------------------------
-# Zone name: Europe/Oslo
-# Era count: 2
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_Europe_Oslo: List[ZoneEra] = [
-    #             1:00    Norway    CE%sT    1980
-    {
-        'offset_seconds': 3600,
-        'zone_policy': ZONE_POLICY_Norway,
-        'rules_delta_seconds': 0,
-        'format': 'CE%sT',
-        'until_year': 1980,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-    #             1:00    EU    CE%sT
-    {
-        'offset_seconds': 3600,
-        'zone_policy': ZONE_POLICY_EU,
-        'rules_delta_seconds': 0,
-        'format': 'CE%sT',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Europe_Oslo: ZoneInfo = {
-    'name': 'Europe/Oslo',
-    'eras': ZONE_ERAS_Europe_Oslo
 }
 
 # ---------------------------------------------------------------------------
@@ -15557,7 +15251,7 @@ ZONE_INFO_Europe_Saratov: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Simferopol
-# Era count: 11
+# Era count: 10
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Simferopol: List[ZoneEra] = [
@@ -15609,10 +15303,10 @@ ZONE_ERAS_Europe_Simferopol: List[ZoneEra] = [
         'until_seconds': 0,
         'until_time_suffix': 'w',
     },
-    #              3:00    E-Eur    MSK/MSD    1996 Mar 31  0:00s
+    #              3:00    C-Eur    MSK/MSD    1996 Mar 31  0:00s
     {
         'offset_seconds': 10800,
-        'zone_policy': ZONE_POLICY_E_Eur,
+        'zone_policy': ZONE_POLICY_C_Eur,
         'rules_delta_seconds': 0,
         'format': 'MSK/MSD',
         'until_year': 1996,
@@ -15632,18 +15326,6 @@ ZONE_ERAS_Europe_Simferopol: List[ZoneEra] = [
         'until_day': 27,
         'until_seconds': 10800,
         'until_time_suffix': 's',
-    },
-    #              3:00    Russia    MSK/MSD    1997
-    {
-        'offset_seconds': 10800,
-        'zone_policy': ZONE_POLICY_Russia,
-        'rules_delta_seconds': 0,
-        'format': 'MSK/MSD',
-        'until_year': 1997,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
     },
     #              3:00    -    MSK    1997 Mar lastSun  1:00u
     {
@@ -15773,44 +15455,6 @@ ZONE_ERAS_Europe_Sofia: List[ZoneEra] = [
 ZONE_INFO_Europe_Sofia: ZoneInfo = {
     'name': 'Europe/Sofia',
     'eras': ZONE_ERAS_Europe_Sofia
-}
-
-# ---------------------------------------------------------------------------
-# Zone name: Europe/Stockholm
-# Era count: 2
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_Europe_Stockholm: List[ZoneEra] = [
-    #             1:00    -    CET    1980
-    {
-        'offset_seconds': 3600,
-        'zone_policy': '-',
-        'rules_delta_seconds': 0,
-        'format': 'CET',
-        'until_year': 1980,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-    #             1:00    EU    CE%sT
-    {
-        'offset_seconds': 3600,
-        'zone_policy': ZONE_POLICY_EU,
-        'rules_delta_seconds': 0,
-        'format': 'CE%sT',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Europe_Stockholm: ZoneInfo = {
-    'name': 'Europe/Stockholm',
-    'eras': ZONE_ERAS_Europe_Stockholm
 }
 
 # ---------------------------------------------------------------------------
@@ -16582,110 +16226,6 @@ ZONE_INFO_Indian_Chagos: ZoneInfo = {
 }
 
 # ---------------------------------------------------------------------------
-# Zone name: Indian/Christmas
-# Era count: 1
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_Indian_Christmas: List[ZoneEra] = [
-    #             7:00    -    +07
-    {
-        'offset_seconds': 25200,
-        'zone_policy': '-',
-        'rules_delta_seconds': 0,
-        'format': '+07',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Indian_Christmas: ZoneInfo = {
-    'name': 'Indian/Christmas',
-    'eras': ZONE_ERAS_Indian_Christmas
-}
-
-# ---------------------------------------------------------------------------
-# Zone name: Indian/Cocos
-# Era count: 1
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_Indian_Cocos: List[ZoneEra] = [
-    #             6:30    -    +0630
-    {
-        'offset_seconds': 23400,
-        'zone_policy': '-',
-        'rules_delta_seconds': 0,
-        'format': '+0630',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Indian_Cocos: ZoneInfo = {
-    'name': 'Indian/Cocos',
-    'eras': ZONE_ERAS_Indian_Cocos
-}
-
-# ---------------------------------------------------------------------------
-# Zone name: Indian/Kerguelen
-# Era count: 1
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_Indian_Kerguelen: List[ZoneEra] = [
-    #             5:00    -    +05
-    {
-        'offset_seconds': 18000,
-        'zone_policy': '-',
-        'rules_delta_seconds': 0,
-        'format': '+05',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Indian_Kerguelen: ZoneInfo = {
-    'name': 'Indian/Kerguelen',
-    'eras': ZONE_ERAS_Indian_Kerguelen
-}
-
-# ---------------------------------------------------------------------------
-# Zone name: Indian/Mahe
-# Era count: 1
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_Indian_Mahe: List[ZoneEra] = [
-    #             4:00    -    +04
-    {
-        'offset_seconds': 14400,
-        'zone_policy': '-',
-        'rules_delta_seconds': 0,
-        'format': '+04',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Indian_Mahe: ZoneInfo = {
-    'name': 'Indian/Mahe',
-    'eras': ZONE_ERAS_Indian_Mahe
-}
-
-# ---------------------------------------------------------------------------
 # Zone name: Indian/Maldives
 # Era count: 1
 # ---------------------------------------------------------------------------
@@ -16735,32 +16275,6 @@ ZONE_ERAS_Indian_Mauritius: List[ZoneEra] = [
 ZONE_INFO_Indian_Mauritius: ZoneInfo = {
     'name': 'Indian/Mauritius',
     'eras': ZONE_ERAS_Indian_Mauritius
-}
-
-# ---------------------------------------------------------------------------
-# Zone name: Indian/Reunion
-# Era count: 1
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_Indian_Reunion: List[ZoneEra] = [
-    #             4:00    -    +04
-    {
-        'offset_seconds': 14400,
-        'zone_policy': '-',
-        'rules_delta_seconds': 0,
-        'format': '+04',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Indian_Reunion: ZoneInfo = {
-    'name': 'Indian/Reunion',
-    'eras': ZONE_ERAS_Indian_Reunion
 }
 
 # ---------------------------------------------------------------------------
@@ -16996,32 +16510,6 @@ ZONE_INFO_Pacific_Chatham: ZoneInfo = {
 }
 
 # ---------------------------------------------------------------------------
-# Zone name: Pacific/Chuuk
-# Era count: 1
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_Pacific_Chuuk: List[ZoneEra] = [
-    #              10:00    -    +10
-    {
-        'offset_seconds': 36000,
-        'zone_policy': '-',
-        'rules_delta_seconds': 0,
-        'format': '+10',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Pacific_Chuuk: ZoneInfo = {
-    'name': 'Pacific/Chuuk',
-    'eras': ZONE_ERAS_Pacific_Chuuk
-}
-
-# ---------------------------------------------------------------------------
 # Zone name: Pacific/Easter
 # Era count: 2
 # ---------------------------------------------------------------------------
@@ -17147,32 +16635,6 @@ ZONE_ERAS_Pacific_Fiji: List[ZoneEra] = [
 ZONE_INFO_Pacific_Fiji: ZoneInfo = {
     'name': 'Pacific/Fiji',
     'eras': ZONE_ERAS_Pacific_Fiji
-}
-
-# ---------------------------------------------------------------------------
-# Zone name: Pacific/Funafuti
-# Era count: 1
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_Pacific_Funafuti: List[ZoneEra] = [
-    #             12:00    -    +12
-    {
-        'offset_seconds': 43200,
-        'zone_policy': '-',
-        'rules_delta_seconds': 0,
-        'format': '+12',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Pacific_Funafuti: ZoneInfo = {
-    'name': 'Pacific/Funafuti',
-    'eras': ZONE_ERAS_Pacific_Funafuti
 }
 
 # ---------------------------------------------------------------------------
@@ -17506,32 +16968,6 @@ ZONE_INFO_Pacific_Kwajalein: ZoneInfo = {
 }
 
 # ---------------------------------------------------------------------------
-# Zone name: Pacific/Majuro
-# Era count: 1
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_Pacific_Majuro: List[ZoneEra] = [
-    #              12:00    -    +12
-    {
-        'offset_seconds': 43200,
-        'zone_policy': '-',
-        'rules_delta_seconds': 0,
-        'format': '+12',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Pacific_Majuro: ZoneInfo = {
-    'name': 'Pacific/Majuro',
-    'eras': ZONE_ERAS_Pacific_Majuro
-}
-
-# ---------------------------------------------------------------------------
 # Zone name: Pacific/Marquesas
 # Era count: 1
 # ---------------------------------------------------------------------------
@@ -17812,32 +17248,6 @@ ZONE_INFO_Pacific_Pitcairn: ZoneInfo = {
 }
 
 # ---------------------------------------------------------------------------
-# Zone name: Pacific/Pohnpei
-# Era count: 1
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_Pacific_Pohnpei: List[ZoneEra] = [
-    #              11:00    -    +11
-    {
-        'offset_seconds': 39600,
-        'zone_policy': '-',
-        'rules_delta_seconds': 0,
-        'format': '+11',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Pacific_Pohnpei: ZoneInfo = {
-    'name': 'Pacific/Pohnpei',
-    'eras': ZONE_ERAS_Pacific_Pohnpei
-}
-
-# ---------------------------------------------------------------------------
 # Zone name: Pacific/Port_Moresby
 # Era count: 1
 # ---------------------------------------------------------------------------
@@ -17992,58 +17402,6 @@ ZONE_INFO_Pacific_Tongatapu: ZoneInfo = {
 }
 
 # ---------------------------------------------------------------------------
-# Zone name: Pacific/Wake
-# Era count: 1
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_Pacific_Wake: List[ZoneEra] = [
-    #             12:00    -    +12
-    {
-        'offset_seconds': 43200,
-        'zone_policy': '-',
-        'rules_delta_seconds': 0,
-        'format': '+12',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Pacific_Wake: ZoneInfo = {
-    'name': 'Pacific/Wake',
-    'eras': ZONE_ERAS_Pacific_Wake
-}
-
-# ---------------------------------------------------------------------------
-# Zone name: Pacific/Wallis
-# Era count: 1
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_Pacific_Wallis: List[ZoneEra] = [
-    #             12:00    -    +12
-    {
-        'offset_seconds': 43200,
-        'zone_policy': '-',
-        'rules_delta_seconds': 0,
-        'format': '+12',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Pacific_Wallis: ZoneInfo = {
-    'name': 'Pacific/Wallis',
-    'eras': ZONE_ERAS_Pacific_Wallis
-}
-
-# ---------------------------------------------------------------------------
 # Zone name: WET
 # Era count: 1
 # ---------------------------------------------------------------------------
@@ -18072,7 +17430,7 @@ ZONE_INFO_WET: ZoneInfo = {
 
 
 # ---------------------------------------------------------------------------
-# Supported links: 217
+# Supported links: 239
 # ---------------------------------------------------------------------------
 
 # Link name: Africa/Accra -> Africa/Abidjan
@@ -18567,10 +17925,16 @@ ZONE_INFO_Antarctica_Syowa: ZoneInfo = {
     'link_to': ZONE_INFO_Asia_Riyadh
 }
 
-# Link name: Arctic/Longyearbyen -> Europe/Oslo
+# Link name: Antarctica/Vostok -> Asia/Urumqi
+ZONE_INFO_Antarctica_Vostok: ZoneInfo = {
+    'name': 'Antarctica/Vostok',
+    'link_to': ZONE_INFO_Asia_Urumqi
+}
+
+# Link name: Arctic/Longyearbyen -> Europe/Berlin
 ZONE_INFO_Arctic_Longyearbyen: ZoneInfo = {
     'name': 'Arctic/Longyearbyen',
-    'link_to': ZONE_INFO_Europe_Oslo
+    'link_to': ZONE_INFO_Europe_Berlin
 }
 
 # Link name: Asia/Aden -> Asia/Riyadh
@@ -18589,6 +17953,12 @@ ZONE_INFO_Asia_Ashkhabad: ZoneInfo = {
 ZONE_INFO_Asia_Bahrain: ZoneInfo = {
     'name': 'Asia/Bahrain',
     'link_to': ZONE_INFO_Asia_Qatar
+}
+
+# Link name: Asia/Brunei -> Asia/Kuching
+ZONE_INFO_Asia_Brunei: ZoneInfo = {
+    'name': 'Asia/Brunei',
+    'link_to': ZONE_INFO_Asia_Kuching
 }
 
 # Link name: Asia/Calcutta -> Asia/Kolkata
@@ -18637,6 +18007,12 @@ ZONE_INFO_Asia_Kashgar: ZoneInfo = {
 ZONE_INFO_Asia_Katmandu: ZoneInfo = {
     'name': 'Asia/Katmandu',
     'link_to': ZONE_INFO_Asia_Kathmandu
+}
+
+# Link name: Asia/Kuala_Lumpur -> Asia/Singapore
+ZONE_INFO_Asia_Kuala_Lumpur: ZoneInfo = {
+    'name': 'Asia/Kuala_Lumpur',
+    'link_to': ZONE_INFO_Asia_Singapore
 }
 
 # Link name: Asia/Kuwait -> Asia/Riyadh
@@ -18711,10 +18087,16 @@ ZONE_INFO_Atlantic_Faeroe: ZoneInfo = {
     'link_to': ZONE_INFO_Atlantic_Faroe
 }
 
-# Link name: Atlantic/Jan_Mayen -> Europe/Oslo
+# Link name: Atlantic/Jan_Mayen -> Europe/Berlin
 ZONE_INFO_Atlantic_Jan_Mayen: ZoneInfo = {
     'name': 'Atlantic/Jan_Mayen',
-    'link_to': ZONE_INFO_Europe_Oslo
+    'link_to': ZONE_INFO_Europe_Berlin
+}
+
+# Link name: Atlantic/Reykjavik -> Africa/Abidjan
+ZONE_INFO_Atlantic_Reykjavik: ZoneInfo = {
+    'name': 'Atlantic/Reykjavik',
+    'link_to': ZONE_INFO_Africa_Abidjan
 }
 
 # Link name: Atlantic/St_Helena -> Africa/Abidjan
@@ -18939,6 +18321,12 @@ ZONE_INFO_Etc_Zulu: ZoneInfo = {
     'link_to': ZONE_INFO_Etc_UTC
 }
 
+# Link name: Europe/Amsterdam -> Europe/Brussels
+ZONE_INFO_Europe_Amsterdam: ZoneInfo = {
+    'name': 'Europe/Amsterdam',
+    'link_to': ZONE_INFO_Europe_Brussels
+}
+
 # Link name: Europe/Belfast -> Europe/London
 ZONE_INFO_Europe_Belfast: ZoneInfo = {
     'name': 'Europe/Belfast',
@@ -18955,6 +18343,12 @@ ZONE_INFO_Europe_Bratislava: ZoneInfo = {
 ZONE_INFO_Europe_Busingen: ZoneInfo = {
     'name': 'Europe/Busingen',
     'link_to': ZONE_INFO_Europe_Zurich
+}
+
+# Link name: Europe/Copenhagen -> Europe/Berlin
+ZONE_INFO_Europe_Copenhagen: ZoneInfo = {
+    'name': 'Europe/Copenhagen',
+    'link_to': ZONE_INFO_Europe_Berlin
 }
 
 # Link name: Europe/Guernsey -> Europe/London
@@ -18975,10 +18369,22 @@ ZONE_INFO_Europe_Jersey: ZoneInfo = {
     'link_to': ZONE_INFO_Europe_London
 }
 
+# Link name: Europe/Kiev -> Europe/Kyiv
+ZONE_INFO_Europe_Kiev: ZoneInfo = {
+    'name': 'Europe/Kiev',
+    'link_to': ZONE_INFO_Europe_Kyiv
+}
+
 # Link name: Europe/Ljubljana -> Europe/Belgrade
 ZONE_INFO_Europe_Ljubljana: ZoneInfo = {
     'name': 'Europe/Ljubljana',
     'link_to': ZONE_INFO_Europe_Belgrade
+}
+
+# Link name: Europe/Luxembourg -> Europe/Brussels
+ZONE_INFO_Europe_Luxembourg: ZoneInfo = {
+    'name': 'Europe/Luxembourg',
+    'link_to': ZONE_INFO_Europe_Brussels
 }
 
 # Link name: Europe/Mariehamn -> Europe/Helsinki
@@ -18987,10 +18393,22 @@ ZONE_INFO_Europe_Mariehamn: ZoneInfo = {
     'link_to': ZONE_INFO_Europe_Helsinki
 }
 
+# Link name: Europe/Monaco -> Europe/Paris
+ZONE_INFO_Europe_Monaco: ZoneInfo = {
+    'name': 'Europe/Monaco',
+    'link_to': ZONE_INFO_Europe_Paris
+}
+
 # Link name: Europe/Nicosia -> Asia/Nicosia
 ZONE_INFO_Europe_Nicosia: ZoneInfo = {
     'name': 'Europe/Nicosia',
     'link_to': ZONE_INFO_Asia_Nicosia
+}
+
+# Link name: Europe/Oslo -> Europe/Berlin
+ZONE_INFO_Europe_Oslo: ZoneInfo = {
+    'name': 'Europe/Oslo',
+    'link_to': ZONE_INFO_Europe_Berlin
 }
 
 # Link name: Europe/Podgorica -> Europe/Belgrade
@@ -19015,6 +18433,12 @@ ZONE_INFO_Europe_Sarajevo: ZoneInfo = {
 ZONE_INFO_Europe_Skopje: ZoneInfo = {
     'name': 'Europe/Skopje',
     'link_to': ZONE_INFO_Europe_Belgrade
+}
+
+# Link name: Europe/Stockholm -> Europe/Berlin
+ZONE_INFO_Europe_Stockholm: ZoneInfo = {
+    'name': 'Europe/Stockholm',
+    'link_to': ZONE_INFO_Europe_Berlin
 }
 
 # Link name: Europe/Tiraspol -> Europe/Chisinau
@@ -19089,10 +18513,10 @@ ZONE_INFO_Hongkong: ZoneInfo = {
     'link_to': ZONE_INFO_Asia_Hong_Kong
 }
 
-# Link name: Iceland -> Atlantic/Reykjavik
+# Link name: Iceland -> Africa/Abidjan
 ZONE_INFO_Iceland: ZoneInfo = {
     'name': 'Iceland',
-    'link_to': ZONE_INFO_Atlantic_Reykjavik
+    'link_to': ZONE_INFO_Africa_Abidjan
 }
 
 # Link name: Indian/Antananarivo -> Africa/Nairobi
@@ -19101,16 +18525,46 @@ ZONE_INFO_Indian_Antananarivo: ZoneInfo = {
     'link_to': ZONE_INFO_Africa_Nairobi
 }
 
+# Link name: Indian/Christmas -> Asia/Bangkok
+ZONE_INFO_Indian_Christmas: ZoneInfo = {
+    'name': 'Indian/Christmas',
+    'link_to': ZONE_INFO_Asia_Bangkok
+}
+
+# Link name: Indian/Cocos -> Asia/Yangon
+ZONE_INFO_Indian_Cocos: ZoneInfo = {
+    'name': 'Indian/Cocos',
+    'link_to': ZONE_INFO_Asia_Yangon
+}
+
 # Link name: Indian/Comoro -> Africa/Nairobi
 ZONE_INFO_Indian_Comoro: ZoneInfo = {
     'name': 'Indian/Comoro',
     'link_to': ZONE_INFO_Africa_Nairobi
 }
 
+# Link name: Indian/Kerguelen -> Indian/Maldives
+ZONE_INFO_Indian_Kerguelen: ZoneInfo = {
+    'name': 'Indian/Kerguelen',
+    'link_to': ZONE_INFO_Indian_Maldives
+}
+
+# Link name: Indian/Mahe -> Asia/Dubai
+ZONE_INFO_Indian_Mahe: ZoneInfo = {
+    'name': 'Indian/Mahe',
+    'link_to': ZONE_INFO_Asia_Dubai
+}
+
 # Link name: Indian/Mayotte -> Africa/Nairobi
 ZONE_INFO_Indian_Mayotte: ZoneInfo = {
     'name': 'Indian/Mayotte',
     'link_to': ZONE_INFO_Africa_Nairobi
+}
+
+# Link name: Indian/Reunion -> Asia/Dubai
+ZONE_INFO_Indian_Reunion: ZoneInfo = {
+    'name': 'Indian/Reunion',
+    'link_to': ZONE_INFO_Asia_Dubai
 }
 
 # Link name: Iran -> Asia/Tehran
@@ -19191,10 +18645,22 @@ ZONE_INFO_PRC: ZoneInfo = {
     'link_to': ZONE_INFO_Asia_Shanghai
 }
 
+# Link name: Pacific/Chuuk -> Pacific/Port_Moresby
+ZONE_INFO_Pacific_Chuuk: ZoneInfo = {
+    'name': 'Pacific/Chuuk',
+    'link_to': ZONE_INFO_Pacific_Port_Moresby
+}
+
 # Link name: Pacific/Enderbury -> Pacific/Kanton
 ZONE_INFO_Pacific_Enderbury: ZoneInfo = {
     'name': 'Pacific/Enderbury',
     'link_to': ZONE_INFO_Pacific_Kanton
+}
+
+# Link name: Pacific/Funafuti -> Pacific/Tarawa
+ZONE_INFO_Pacific_Funafuti: ZoneInfo = {
+    'name': 'Pacific/Funafuti',
+    'link_to': ZONE_INFO_Pacific_Tarawa
 }
 
 # Link name: Pacific/Johnston -> Pacific/Honolulu
@@ -19203,16 +18669,28 @@ ZONE_INFO_Pacific_Johnston: ZoneInfo = {
     'link_to': ZONE_INFO_Pacific_Honolulu
 }
 
+# Link name: Pacific/Majuro -> Pacific/Tarawa
+ZONE_INFO_Pacific_Majuro: ZoneInfo = {
+    'name': 'Pacific/Majuro',
+    'link_to': ZONE_INFO_Pacific_Tarawa
+}
+
 # Link name: Pacific/Midway -> Pacific/Pago_Pago
 ZONE_INFO_Pacific_Midway: ZoneInfo = {
     'name': 'Pacific/Midway',
     'link_to': ZONE_INFO_Pacific_Pago_Pago
 }
 
-# Link name: Pacific/Ponape -> Pacific/Pohnpei
+# Link name: Pacific/Pohnpei -> Pacific/Guadalcanal
+ZONE_INFO_Pacific_Pohnpei: ZoneInfo = {
+    'name': 'Pacific/Pohnpei',
+    'link_to': ZONE_INFO_Pacific_Guadalcanal
+}
+
+# Link name: Pacific/Ponape -> Pacific/Guadalcanal
 ZONE_INFO_Pacific_Ponape: ZoneInfo = {
     'name': 'Pacific/Ponape',
-    'link_to': ZONE_INFO_Pacific_Pohnpei
+    'link_to': ZONE_INFO_Pacific_Guadalcanal
 }
 
 # Link name: Pacific/Saipan -> Pacific/Guam
@@ -19227,16 +18705,28 @@ ZONE_INFO_Pacific_Samoa: ZoneInfo = {
     'link_to': ZONE_INFO_Pacific_Pago_Pago
 }
 
-# Link name: Pacific/Truk -> Pacific/Chuuk
+# Link name: Pacific/Truk -> Pacific/Port_Moresby
 ZONE_INFO_Pacific_Truk: ZoneInfo = {
     'name': 'Pacific/Truk',
-    'link_to': ZONE_INFO_Pacific_Chuuk
+    'link_to': ZONE_INFO_Pacific_Port_Moresby
 }
 
-# Link name: Pacific/Yap -> Pacific/Chuuk
+# Link name: Pacific/Wake -> Pacific/Tarawa
+ZONE_INFO_Pacific_Wake: ZoneInfo = {
+    'name': 'Pacific/Wake',
+    'link_to': ZONE_INFO_Pacific_Tarawa
+}
+
+# Link name: Pacific/Wallis -> Pacific/Tarawa
+ZONE_INFO_Pacific_Wallis: ZoneInfo = {
+    'name': 'Pacific/Wallis',
+    'link_to': ZONE_INFO_Pacific_Tarawa
+}
+
+# Link name: Pacific/Yap -> Pacific/Port_Moresby
 ZONE_INFO_Pacific_Yap: ZoneInfo = {
     'name': 'Pacific/Yap',
-    'link_to': ZONE_INFO_Pacific_Chuuk
+    'link_to': ZONE_INFO_Pacific_Port_Moresby
 }
 
 # Link name: Poland -> Europe/Warsaw

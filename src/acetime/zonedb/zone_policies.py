@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedb
-#     --tz_version 2022a
+#     --tz_version 2022b
 #     --action zonedb
 #     --language python
 #     --scope extended
@@ -22,7 +22,7 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2022a
+# from https://github.com/eggert/tz/releases/tag/2022b
 #
 # DO NOT EDIT
 
@@ -33,8 +33,8 @@ from ..zonedb_types import (
 )
 
 # ---------------------------------------------------------------------------
-# Supported zone policies: 116
-# numRules: 1142
+# Supported zone policies: 113
+# numRules: 1117
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -2955,7 +2955,7 @@ ZONE_POLICY_Chatham: ZonePolicy = {
 
 # ---------------------------------------------------------------------------
 # Policy name: Chile
-# Rule count: 27
+# Rule count: 29
 # ---------------------------------------------------------------------------
 ZONE_RULES_Chile: List[ZoneRule] = [
     # Rule    Chile    1970    1972    -    Oct    Sun>=9    4:00u    1:00    -
@@ -3270,9 +3270,33 @@ ZONE_RULES_Chile: List[ZoneRule] = [
         'delta_seconds': 0,
         'letter': '-',
     },
-    # Rule    Chile    2019    max    -    Sep    Sun>=2    4:00u    1:00    -
+    # Rule    Chile    2019    2021    -    Sep    Sun>=2    4:00u    1:00    -
     {
         'from_year': 2019,
+        'to_year': 2021,
+        'in_month': 9,
+        'on_day_of_week': 7,
+        'on_day_of_month': 2,
+        'at_seconds': 14400,
+        'at_time_suffix': 'u',
+        'delta_seconds': 3600,
+        'letter': '-',
+    },
+    # Rule    Chile    2022    only    -    Sep    Sun>=9    4:00u    1:00    -
+    {
+        'from_year': 2022,
+        'to_year': 2022,
+        'in_month': 9,
+        'on_day_of_week': 7,
+        'on_day_of_month': 9,
+        'at_seconds': 14400,
+        'at_time_suffix': 'u',
+        'delta_seconds': 3600,
+        'letter': '-',
+    },
+    # Rule    Chile    2023    max    -    Sep    Sun>=2    4:00u    1:00    -
+    {
+        'from_year': 2023,
         'to_year': 9999,
         'in_month': 9,
         'on_day_of_week': 7,
@@ -3875,30 +3899,6 @@ ZONE_RULES_DR: List[ZoneRule] = [
 ZONE_POLICY_DR: ZonePolicy = {
     'name': 'DR',
     'rules': ZONE_RULES_DR
-}
-
-# ---------------------------------------------------------------------------
-# Policy name: Denmark
-# Rule count: 1
-# ---------------------------------------------------------------------------
-ZONE_RULES_Denmark: List[ZoneRule] = [
-    # Rule    Denmark    1948    only    -    Aug     8     2:00s    0    -
-    {
-        'from_year': 1948,
-        'to_year': 1948,
-        'in_month': 8,
-        'on_day_of_week': 0,
-        'on_day_of_month': 8,
-        'at_seconds': 7200,
-        'at_time_suffix': 's',
-        'delta_seconds': 0,
-        'letter': '-',
-    },
-
-]
-ZONE_POLICY_Denmark: ZonePolicy = {
-    'name': 'Denmark',
-    'rules': ZONE_RULES_Denmark
 }
 
 # ---------------------------------------------------------------------------
@@ -6051,13 +6051,13 @@ ZONE_POLICY_Hungary: ZonePolicy = {
 
 # ---------------------------------------------------------------------------
 # Policy name: Iran
-# Rule count: 64
+# Rule count: 40
 # ---------------------------------------------------------------------------
 ZONE_RULES_Iran: List[ZoneRule] = [
-    # Anchor: Rule    Iran    1978    only    -    Oct    20    24:00    0    -
+    # Rule    Iran    1910    only    -    Jan     1    00:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': 1910,
+        'to_year': 1910,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -6066,28 +6066,64 @@ ZONE_RULES_Iran: List[ZoneRule] = [
         'delta_seconds': 0,
         'letter': '-',
     },
-    # Rule    Iran    1978    1980    -    Mar    20    24:00    1:00    -
+    # Rule    Iran    1977    only    -    Mar    21    23:00    1:00    -
     {
-        'from_year': 1978,
-        'to_year': 1980,
+        'from_year': 1977,
+        'to_year': 1977,
         'in_month': 3,
         'on_day_of_week': 0,
-        'on_day_of_month': 20,
-        'at_seconds': 86400,
+        'on_day_of_month': 21,
+        'at_seconds': 82800,
         'at_time_suffix': 'w',
         'delta_seconds': 3600,
         'letter': '-',
     },
-    # Rule    Iran    1978    only    -    Oct    20    24:00    0    -
+    # Rule    Iran    1977    only    -    Oct    20    24:00    0    -
     {
-        'from_year': 1978,
-        'to_year': 1978,
+        'from_year': 1977,
+        'to_year': 1977,
         'in_month': 10,
         'on_day_of_week': 0,
         'on_day_of_month': 20,
         'at_seconds': 86400,
         'at_time_suffix': 'w',
         'delta_seconds': 0,
+        'letter': '-',
+    },
+    # Rule    Iran    1978    only    -    Mar    24    24:00    1:00    -
+    {
+        'from_year': 1978,
+        'to_year': 1978,
+        'in_month': 3,
+        'on_day_of_week': 0,
+        'on_day_of_month': 24,
+        'at_seconds': 86400,
+        'at_time_suffix': 'w',
+        'delta_seconds': 3600,
+        'letter': '-',
+    },
+    # Rule    Iran    1978    only    -    Aug     5    01:00    0    -
+    {
+        'from_year': 1978,
+        'to_year': 1978,
+        'in_month': 8,
+        'on_day_of_week': 0,
+        'on_day_of_month': 5,
+        'at_seconds': 3600,
+        'at_time_suffix': 'w',
+        'delta_seconds': 0,
+        'letter': '-',
+    },
+    # Rule    Iran    1979    only    -    May    26    24:00    1:00    -
+    {
+        'from_year': 1979,
+        'to_year': 1979,
+        'in_month': 5,
+        'on_day_of_week': 0,
+        'on_day_of_month': 26,
+        'at_seconds': 86400,
+        'at_time_suffix': 'w',
+        'delta_seconds': 3600,
         'letter': '-',
     },
     # Rule    Iran    1979    only    -    Sep    18    24:00    0    -
@@ -6100,6 +6136,18 @@ ZONE_RULES_Iran: List[ZoneRule] = [
         'at_seconds': 86400,
         'at_time_suffix': 'w',
         'delta_seconds': 0,
+        'letter': '-',
+    },
+    # Rule    Iran    1980    only    -    Mar    20    24:00    1:00    -
+    {
+        'from_year': 1980,
+        'to_year': 1980,
+        'in_month': 3,
+        'on_day_of_week': 0,
+        'on_day_of_month': 20,
+        'at_seconds': 86400,
+        'at_time_suffix': 'w',
+        'delta_seconds': 3600,
         'letter': '-',
     },
     # Rule    Iran    1980    only    -    Sep    22    24:00    0    -
@@ -6462,10 +6510,10 @@ ZONE_RULES_Iran: List[ZoneRule] = [
         'delta_seconds': 0,
         'letter': '-',
     },
-    # Rule    Iran    2021    2023    -    Mar    21    24:00    1:00    -
+    # Rule    Iran    2021    2022    -    Mar    21    24:00    1:00    -
     {
         'from_year': 2021,
-        'to_year': 2023,
+        'to_year': 2022,
         'in_month': 3,
         'on_day_of_week': 0,
         'on_day_of_month': 21,
@@ -6474,346 +6522,10 @@ ZONE_RULES_Iran: List[ZoneRule] = [
         'delta_seconds': 3600,
         'letter': '-',
     },
-    # Rule    Iran    2021    2023    -    Sep    21    24:00    0    -
+    # Rule    Iran    2021    2022    -    Sep    21    24:00    0    -
     {
         'from_year': 2021,
-        'to_year': 2023,
-        'in_month': 9,
-        'on_day_of_week': 0,
-        'on_day_of_month': 21,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 0,
-        'letter': '-',
-    },
-    # Rule    Iran    2024    only    -    Mar    20    24:00    1:00    -
-    {
-        'from_year': 2024,
-        'to_year': 2024,
-        'in_month': 3,
-        'on_day_of_week': 0,
-        'on_day_of_month': 20,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 3600,
-        'letter': '-',
-    },
-    # Rule    Iran    2024    only    -    Sep    20    24:00    0    -
-    {
-        'from_year': 2024,
-        'to_year': 2024,
-        'in_month': 9,
-        'on_day_of_week': 0,
-        'on_day_of_month': 20,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 0,
-        'letter': '-',
-    },
-    # Rule    Iran    2025    2027    -    Mar    21    24:00    1:00    -
-    {
-        'from_year': 2025,
-        'to_year': 2027,
-        'in_month': 3,
-        'on_day_of_week': 0,
-        'on_day_of_month': 21,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 3600,
-        'letter': '-',
-    },
-    # Rule    Iran    2025    2027    -    Sep    21    24:00    0    -
-    {
-        'from_year': 2025,
-        'to_year': 2027,
-        'in_month': 9,
-        'on_day_of_week': 0,
-        'on_day_of_month': 21,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 0,
-        'letter': '-',
-    },
-    # Rule    Iran    2028    2029    -    Mar    20    24:00    1:00    -
-    {
-        'from_year': 2028,
-        'to_year': 2029,
-        'in_month': 3,
-        'on_day_of_week': 0,
-        'on_day_of_month': 20,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 3600,
-        'letter': '-',
-    },
-    # Rule    Iran    2028    2029    -    Sep    20    24:00    0    -
-    {
-        'from_year': 2028,
-        'to_year': 2029,
-        'in_month': 9,
-        'on_day_of_week': 0,
-        'on_day_of_month': 20,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 0,
-        'letter': '-',
-    },
-    # Rule    Iran    2030    2031    -    Mar    21    24:00    1:00    -
-    {
-        'from_year': 2030,
-        'to_year': 2031,
-        'in_month': 3,
-        'on_day_of_week': 0,
-        'on_day_of_month': 21,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 3600,
-        'letter': '-',
-    },
-    # Rule    Iran    2030    2031    -    Sep    21    24:00    0    -
-    {
-        'from_year': 2030,
-        'to_year': 2031,
-        'in_month': 9,
-        'on_day_of_week': 0,
-        'on_day_of_month': 21,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 0,
-        'letter': '-',
-    },
-    # Rule    Iran    2032    2033    -    Mar    20    24:00    1:00    -
-    {
-        'from_year': 2032,
-        'to_year': 2033,
-        'in_month': 3,
-        'on_day_of_week': 0,
-        'on_day_of_month': 20,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 3600,
-        'letter': '-',
-    },
-    # Rule    Iran    2032    2033    -    Sep    20    24:00    0    -
-    {
-        'from_year': 2032,
-        'to_year': 2033,
-        'in_month': 9,
-        'on_day_of_week': 0,
-        'on_day_of_month': 20,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 0,
-        'letter': '-',
-    },
-    # Rule    Iran    2034    2035    -    Mar    21    24:00    1:00    -
-    {
-        'from_year': 2034,
-        'to_year': 2035,
-        'in_month': 3,
-        'on_day_of_week': 0,
-        'on_day_of_month': 21,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 3600,
-        'letter': '-',
-    },
-    # Rule    Iran    2034    2035    -    Sep    21    24:00    0    -
-    {
-        'from_year': 2034,
-        'to_year': 2035,
-        'in_month': 9,
-        'on_day_of_week': 0,
-        'on_day_of_month': 21,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 0,
-        'letter': '-',
-    },
-    # Rule    Iran    2036    2037    -    Mar    20    24:00    1:00    -
-    {
-        'from_year': 2036,
-        'to_year': 2037,
-        'in_month': 3,
-        'on_day_of_week': 0,
-        'on_day_of_month': 20,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 3600,
-        'letter': '-',
-    },
-    # Rule    Iran    2036    2037    -    Sep    20    24:00    0    -
-    {
-        'from_year': 2036,
-        'to_year': 2037,
-        'in_month': 9,
-        'on_day_of_week': 0,
-        'on_day_of_month': 20,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 0,
-        'letter': '-',
-    },
-    # Rule    Iran    2038    2039    -    Mar    21    24:00    1:00    -
-    {
-        'from_year': 2038,
-        'to_year': 2039,
-        'in_month': 3,
-        'on_day_of_week': 0,
-        'on_day_of_month': 21,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 3600,
-        'letter': '-',
-    },
-    # Rule    Iran    2038    2039    -    Sep    21    24:00    0    -
-    {
-        'from_year': 2038,
-        'to_year': 2039,
-        'in_month': 9,
-        'on_day_of_week': 0,
-        'on_day_of_month': 21,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 0,
-        'letter': '-',
-    },
-    # Rule    Iran    2040    2041    -    Mar    20    24:00    1:00    -
-    {
-        'from_year': 2040,
-        'to_year': 2041,
-        'in_month': 3,
-        'on_day_of_week': 0,
-        'on_day_of_month': 20,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 3600,
-        'letter': '-',
-    },
-    # Rule    Iran    2040    2041    -    Sep    20    24:00    0    -
-    {
-        'from_year': 2040,
-        'to_year': 2041,
-        'in_month': 9,
-        'on_day_of_week': 0,
-        'on_day_of_month': 20,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 0,
-        'letter': '-',
-    },
-    # Rule    Iran    2042    2043    -    Mar    21    24:00    1:00    -
-    {
-        'from_year': 2042,
-        'to_year': 2043,
-        'in_month': 3,
-        'on_day_of_week': 0,
-        'on_day_of_month': 21,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 3600,
-        'letter': '-',
-    },
-    # Rule    Iran    2042    2043    -    Sep    21    24:00    0    -
-    {
-        'from_year': 2042,
-        'to_year': 2043,
-        'in_month': 9,
-        'on_day_of_week': 0,
-        'on_day_of_month': 21,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 0,
-        'letter': '-',
-    },
-    # Rule    Iran    2044    2045    -    Mar    20    24:00    1:00    -
-    {
-        'from_year': 2044,
-        'to_year': 2045,
-        'in_month': 3,
-        'on_day_of_week': 0,
-        'on_day_of_month': 20,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 3600,
-        'letter': '-',
-    },
-    # Rule    Iran    2044    2045    -    Sep    20    24:00    0    -
-    {
-        'from_year': 2044,
-        'to_year': 2045,
-        'in_month': 9,
-        'on_day_of_week': 0,
-        'on_day_of_month': 20,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 0,
-        'letter': '-',
-    },
-    # Rule    Iran    2046    2047    -    Mar    21    24:00    1:00    -
-    {
-        'from_year': 2046,
-        'to_year': 2047,
-        'in_month': 3,
-        'on_day_of_week': 0,
-        'on_day_of_month': 21,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 3600,
-        'letter': '-',
-    },
-    # Rule    Iran    2046    2047    -    Sep    21    24:00    0    -
-    {
-        'from_year': 2046,
-        'to_year': 2047,
-        'in_month': 9,
-        'on_day_of_week': 0,
-        'on_day_of_month': 21,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 0,
-        'letter': '-',
-    },
-    # Rule    Iran    2048    2049    -    Mar    20    24:00    1:00    -
-    {
-        'from_year': 2048,
-        'to_year': 2049,
-        'in_month': 3,
-        'on_day_of_week': 0,
-        'on_day_of_month': 20,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 3600,
-        'letter': '-',
-    },
-    # Rule    Iran    2048    2049    -    Sep    20    24:00    0    -
-    {
-        'from_year': 2048,
-        'to_year': 2049,
-        'in_month': 9,
-        'on_day_of_week': 0,
-        'on_day_of_month': 20,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 0,
-        'letter': '-',
-    },
-    # Rule    Iran    2050    2051    -    Mar    21    24:00    1:00    -
-    {
-        'from_year': 2050,
-        'to_year': 2051,
-        'in_month': 3,
-        'on_day_of_week': 0,
-        'on_day_of_month': 21,
-        'at_seconds': 86400,
-        'at_time_suffix': 'w',
-        'delta_seconds': 3600,
-        'letter': '-',
-    },
-    # Rule    Iran    2050    2051    -    Sep    21    24:00    0    -
-    {
-        'from_year': 2050,
-        'to_year': 2051,
+        'to_year': 2022,
         'in_month': 9,
         'on_day_of_week': 0,
         'on_day_of_month': 21,
@@ -10310,30 +10022,6 @@ ZONE_POLICY_Namibia: ZonePolicy = {
 }
 
 # ---------------------------------------------------------------------------
-# Policy name: Neth
-# Rule count: 1
-# ---------------------------------------------------------------------------
-ZONE_RULES_Neth: List[ZoneRule] = [
-    # Rule    Neth    1945    only    -    Sep    16    2:00s    0    -
-    {
-        'from_year': 1945,
-        'to_year': 1945,
-        'in_month': 9,
-        'on_day_of_week': 0,
-        'on_day_of_month': 16,
-        'at_seconds': 7200,
-        'at_time_suffix': 's',
-        'delta_seconds': 0,
-        'letter': '-',
-    },
-
-]
-ZONE_POLICY_Neth: ZonePolicy = {
-    'name': 'Neth',
-    'rules': ZONE_RULES_Neth
-}
-
-# ---------------------------------------------------------------------------
 # Policy name: Nic
 # Rule count: 7
 # ---------------------------------------------------------------------------
@@ -10427,30 +10115,6 @@ ZONE_RULES_Nic: List[ZoneRule] = [
 ZONE_POLICY_Nic: ZonePolicy = {
     'name': 'Nic',
     'rules': ZONE_RULES_Nic
-}
-
-# ---------------------------------------------------------------------------
-# Policy name: Norway
-# Rule count: 1
-# ---------------------------------------------------------------------------
-ZONE_RULES_Norway: List[ZoneRule] = [
-    # Rule    Norway    1959    1965    -    Sep    Sun>=15    2:00s    0    -
-    {
-        'from_year': 1959,
-        'to_year': 1965,
-        'in_month': 9,
-        'on_day_of_week': 7,
-        'on_day_of_month': 15,
-        'at_seconds': 7200,
-        'at_time_suffix': 's',
-        'delta_seconds': 0,
-        'letter': '-',
-    },
-
-]
-ZONE_POLICY_Norway: ZonePolicy = {
-    'name': 'Norway',
-    'rules': ZONE_RULES_Norway
 }
 
 # ---------------------------------------------------------------------------
@@ -15136,7 +14800,7 @@ ZONE_POLICY_Zion: ZonePolicy = {
 
 
 # ---------------------------------------------------------------------------
-# Unsupported zone policies: 22
+# Unsupported zone policies: 20
 # ---------------------------------------------------------------------------
 
 # CA (unused)
@@ -15144,10 +14808,8 @@ ZONE_POLICY_Zion: ZonePolicy = {
 # Denver (unused)
 # Detroit (unused)
 # EgyptAsia (unused)
-# Iceland (unused)
 # Indianapolis (unused)
 # Louisville (unused)
-# Lux (unused)
 # Marengo (unused)
 # Menominee (unused)
 # NBorneo (unused)
