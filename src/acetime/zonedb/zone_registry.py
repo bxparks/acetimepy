@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedb
-#     --tz_version 2022a
+#     --tz_version 2022b
 #     --action zonedb
 #     --language python
 #     --scope extended
@@ -22,14 +22,14 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2022a
+# from https://github.com/eggert/tz/releases/tag/2022b
 #
 # DO NOT EDIT
 
 from ..zonedb_types import ZoneInfoMap
 from .zone_infos import *
 
-# Supported Zones: 377
+# Supported Zones: 356
 ZONE_REGISTRY: ZoneInfoMap = {
     'Africa/Abidjan': ZONE_INFO_Africa_Abidjan,
     'Africa/Algiers': ZONE_INFO_Africa_Algiers,
@@ -181,7 +181,6 @@ ZONE_REGISTRY: ZoneInfoMap = {
     'Antarctica/Palmer': ZONE_INFO_Antarctica_Palmer,
     'Antarctica/Rothera': ZONE_INFO_Antarctica_Rothera,
     'Antarctica/Troll': ZONE_INFO_Antarctica_Troll,
-    'Antarctica/Vostok': ZONE_INFO_Antarctica_Vostok,
     'Asia/Almaty': ZONE_INFO_Asia_Almaty,
     'Asia/Amman': ZONE_INFO_Asia_Amman,
     'Asia/Anadyr': ZONE_INFO_Asia_Anadyr,
@@ -195,7 +194,6 @@ ZONE_REGISTRY: ZoneInfoMap = {
     'Asia/Barnaul': ZONE_INFO_Asia_Barnaul,
     'Asia/Beirut': ZONE_INFO_Asia_Beirut,
     'Asia/Bishkek': ZONE_INFO_Asia_Bishkek,
-    'Asia/Brunei': ZONE_INFO_Asia_Brunei,
     'Asia/Chita': ZONE_INFO_Asia_Chita,
     'Asia/Choibalsan': ZONE_INFO_Asia_Choibalsan,
     'Asia/Colombo': ZONE_INFO_Asia_Colombo,
@@ -221,7 +219,6 @@ ZONE_REGISTRY: ZoneInfoMap = {
     'Asia/Khandyga': ZONE_INFO_Asia_Khandyga,
     'Asia/Kolkata': ZONE_INFO_Asia_Kolkata,
     'Asia/Krasnoyarsk': ZONE_INFO_Asia_Krasnoyarsk,
-    'Asia/Kuala_Lumpur': ZONE_INFO_Asia_Kuala_Lumpur,
     'Asia/Kuching': ZONE_INFO_Asia_Kuching,
     'Asia/Macau': ZONE_INFO_Asia_Macau,
     'Asia/Magadan': ZONE_INFO_Asia_Magadan,
@@ -265,7 +262,6 @@ ZONE_REGISTRY: ZoneInfoMap = {
     'Atlantic/Cape_Verde': ZONE_INFO_Atlantic_Cape_Verde,
     'Atlantic/Faroe': ZONE_INFO_Atlantic_Faroe,
     'Atlantic/Madeira': ZONE_INFO_Atlantic_Madeira,
-    'Atlantic/Reykjavik': ZONE_INFO_Atlantic_Reykjavik,
     'Atlantic/South_Georgia': ZONE_INFO_Atlantic_South_Georgia,
     'Atlantic/Stanley': ZONE_INFO_Atlantic_Stanley,
     'Australia/Adelaide': ZONE_INFO_Australia_Adelaide,
@@ -312,7 +308,6 @@ ZONE_REGISTRY: ZoneInfoMap = {
     'Etc/GMT-8': ZONE_INFO_Etc_GMT_8,
     'Etc/GMT-9': ZONE_INFO_Etc_GMT_9,
     'Etc/UTC': ZONE_INFO_Etc_UTC,
-    'Europe/Amsterdam': ZONE_INFO_Europe_Amsterdam,
     'Europe/Andorra': ZONE_INFO_Europe_Andorra,
     'Europe/Astrakhan': ZONE_INFO_Europe_Astrakhan,
     'Europe/Athens': ZONE_INFO_Europe_Athens,
@@ -322,23 +317,19 @@ ZONE_REGISTRY: ZoneInfoMap = {
     'Europe/Bucharest': ZONE_INFO_Europe_Bucharest,
     'Europe/Budapest': ZONE_INFO_Europe_Budapest,
     'Europe/Chisinau': ZONE_INFO_Europe_Chisinau,
-    'Europe/Copenhagen': ZONE_INFO_Europe_Copenhagen,
     'Europe/Dublin': ZONE_INFO_Europe_Dublin,
     'Europe/Gibraltar': ZONE_INFO_Europe_Gibraltar,
     'Europe/Helsinki': ZONE_INFO_Europe_Helsinki,
     'Europe/Istanbul': ZONE_INFO_Europe_Istanbul,
     'Europe/Kaliningrad': ZONE_INFO_Europe_Kaliningrad,
-    'Europe/Kiev': ZONE_INFO_Europe_Kiev,
     'Europe/Kirov': ZONE_INFO_Europe_Kirov,
+    'Europe/Kyiv': ZONE_INFO_Europe_Kyiv,
     'Europe/Lisbon': ZONE_INFO_Europe_Lisbon,
     'Europe/London': ZONE_INFO_Europe_London,
-    'Europe/Luxembourg': ZONE_INFO_Europe_Luxembourg,
     'Europe/Madrid': ZONE_INFO_Europe_Madrid,
     'Europe/Malta': ZONE_INFO_Europe_Malta,
     'Europe/Minsk': ZONE_INFO_Europe_Minsk,
-    'Europe/Monaco': ZONE_INFO_Europe_Monaco,
     'Europe/Moscow': ZONE_INFO_Europe_Moscow,
-    'Europe/Oslo': ZONE_INFO_Europe_Oslo,
     'Europe/Paris': ZONE_INFO_Europe_Paris,
     'Europe/Prague': ZONE_INFO_Europe_Prague,
     'Europe/Riga': ZONE_INFO_Europe_Riga,
@@ -347,7 +338,6 @@ ZONE_REGISTRY: ZoneInfoMap = {
     'Europe/Saratov': ZONE_INFO_Europe_Saratov,
     'Europe/Simferopol': ZONE_INFO_Europe_Simferopol,
     'Europe/Sofia': ZONE_INFO_Europe_Sofia,
-    'Europe/Stockholm': ZONE_INFO_Europe_Stockholm,
     'Europe/Tallinn': ZONE_INFO_Europe_Tallinn,
     'Europe/Tirane': ZONE_INFO_Europe_Tirane,
     'Europe/Ulyanovsk': ZONE_INFO_Europe_Ulyanovsk,
@@ -360,13 +350,8 @@ ZONE_REGISTRY: ZoneInfoMap = {
     'Europe/Zurich': ZONE_INFO_Europe_Zurich,
     'HST': ZONE_INFO_HST,
     'Indian/Chagos': ZONE_INFO_Indian_Chagos,
-    'Indian/Christmas': ZONE_INFO_Indian_Christmas,
-    'Indian/Cocos': ZONE_INFO_Indian_Cocos,
-    'Indian/Kerguelen': ZONE_INFO_Indian_Kerguelen,
-    'Indian/Mahe': ZONE_INFO_Indian_Mahe,
     'Indian/Maldives': ZONE_INFO_Indian_Maldives,
     'Indian/Mauritius': ZONE_INFO_Indian_Mauritius,
-    'Indian/Reunion': ZONE_INFO_Indian_Reunion,
     'MET': ZONE_INFO_MET,
     'MST': ZONE_INFO_MST,
     'MST7MDT': ZONE_INFO_MST7MDT,
@@ -375,12 +360,10 @@ ZONE_REGISTRY: ZoneInfoMap = {
     'Pacific/Auckland': ZONE_INFO_Pacific_Auckland,
     'Pacific/Bougainville': ZONE_INFO_Pacific_Bougainville,
     'Pacific/Chatham': ZONE_INFO_Pacific_Chatham,
-    'Pacific/Chuuk': ZONE_INFO_Pacific_Chuuk,
     'Pacific/Easter': ZONE_INFO_Pacific_Easter,
     'Pacific/Efate': ZONE_INFO_Pacific_Efate,
     'Pacific/Fakaofo': ZONE_INFO_Pacific_Fakaofo,
     'Pacific/Fiji': ZONE_INFO_Pacific_Fiji,
-    'Pacific/Funafuti': ZONE_INFO_Pacific_Funafuti,
     'Pacific/Galapagos': ZONE_INFO_Pacific_Galapagos,
     'Pacific/Gambier': ZONE_INFO_Pacific_Gambier,
     'Pacific/Guadalcanal': ZONE_INFO_Pacific_Guadalcanal,
@@ -390,7 +373,6 @@ ZONE_REGISTRY: ZoneInfoMap = {
     'Pacific/Kiritimati': ZONE_INFO_Pacific_Kiritimati,
     'Pacific/Kosrae': ZONE_INFO_Pacific_Kosrae,
     'Pacific/Kwajalein': ZONE_INFO_Pacific_Kwajalein,
-    'Pacific/Majuro': ZONE_INFO_Pacific_Majuro,
     'Pacific/Marquesas': ZONE_INFO_Pacific_Marquesas,
     'Pacific/Nauru': ZONE_INFO_Pacific_Nauru,
     'Pacific/Niue': ZONE_INFO_Pacific_Niue,
@@ -399,19 +381,16 @@ ZONE_REGISTRY: ZoneInfoMap = {
     'Pacific/Pago_Pago': ZONE_INFO_Pacific_Pago_Pago,
     'Pacific/Palau': ZONE_INFO_Pacific_Palau,
     'Pacific/Pitcairn': ZONE_INFO_Pacific_Pitcairn,
-    'Pacific/Pohnpei': ZONE_INFO_Pacific_Pohnpei,
     'Pacific/Port_Moresby': ZONE_INFO_Pacific_Port_Moresby,
     'Pacific/Rarotonga': ZONE_INFO_Pacific_Rarotonga,
     'Pacific/Tahiti': ZONE_INFO_Pacific_Tahiti,
     'Pacific/Tarawa': ZONE_INFO_Pacific_Tarawa,
     'Pacific/Tongatapu': ZONE_INFO_Pacific_Tongatapu,
-    'Pacific/Wake': ZONE_INFO_Pacific_Wake,
-    'Pacific/Wallis': ZONE_INFO_Pacific_Wallis,
     'WET': ZONE_INFO_WET,
 
 }
 
-# Supported Zones and Links: 594
+# Supported Zones and Links: 595
 ZONE_AND_LINK_REGISTRY: ZoneInfoMap = {
     'Africa/Abidjan': ZONE_INFO_Africa_Abidjan,
     'Africa/Accra': ZONE_INFO_Africa_Accra,
@@ -862,6 +841,7 @@ ZONE_AND_LINK_REGISTRY: ZoneInfoMap = {
     'Europe/Kaliningrad': ZONE_INFO_Europe_Kaliningrad,
     'Europe/Kiev': ZONE_INFO_Europe_Kiev,
     'Europe/Kirov': ZONE_INFO_Europe_Kirov,
+    'Europe/Kyiv': ZONE_INFO_Europe_Kyiv,
     'Europe/Lisbon': ZONE_INFO_Europe_Lisbon,
     'Europe/Ljubljana': ZONE_INFO_Europe_Ljubljana,
     'Europe/London': ZONE_INFO_Europe_London,
