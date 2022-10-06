@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedb
-#     --tz_version 2022b
+#     --tz_version 2022d
 #     --action zonedb
 #     --language python
 #     --scope extended
@@ -22,7 +22,7 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2022b
+# from https://github.com/eggert/tz/releases/tag/2022d
 #
 # DO NOT EDIT
 
@@ -38,13 +38,13 @@ from .zone_policies import *
 # Zone Context
 # ---------------------------------------------------------------------------
 
-TZDB_VERSION = '2022b'
+TZDB_VERSION = '2022d'
 START_YEAR = 1974
 UNTIL_YEAR = 2050
 
 # ---------------------------------------------------------------------------
-# Supported zones: 356
-# numEras: 1033
+# Supported zones: 354
+# numEras: 1023
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -15680,92 +15680,6 @@ ZONE_INFO_Europe_Ulyanovsk: ZoneInfo = {
 }
 
 # ---------------------------------------------------------------------------
-# Zone name: Europe/Uzhgorod
-# Era count: 6
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_Europe_Uzhgorod: List[ZoneEra] = [
-    #             3:00    Russia    MSK/MSD    1990
-    {
-        'offset_seconds': 10800,
-        'zone_policy': ZONE_POLICY_Russia,
-        'rules_delta_seconds': 0,
-        'format': 'MSK/MSD',
-        'until_year': 1990,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-    #             3:00    -    MSK    1990 Jul  1  2:00
-    {
-        'offset_seconds': 10800,
-        'zone_policy': '-',
-        'rules_delta_seconds': 0,
-        'format': 'MSK',
-        'until_year': 1990,
-        'until_month': 7,
-        'until_day': 1,
-        'until_seconds': 7200,
-        'until_time_suffix': 'w',
-    },
-    #             1:00    -    CET    1991 Mar 31  3:00
-    {
-        'offset_seconds': 3600,
-        'zone_policy': '-',
-        'rules_delta_seconds': 0,
-        'format': 'CET',
-        'until_year': 1991,
-        'until_month': 3,
-        'until_day': 31,
-        'until_seconds': 10800,
-        'until_time_suffix': 'w',
-    },
-    #             2:00    -    EET    1992 Mar 20
-    {
-        'offset_seconds': 7200,
-        'zone_policy': '-',
-        'rules_delta_seconds': 0,
-        'format': 'EET',
-        'until_year': 1992,
-        'until_month': 3,
-        'until_day': 20,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-    #             2:00    C-Eur    EE%sT    1996 May 13
-    {
-        'offset_seconds': 7200,
-        'zone_policy': ZONE_POLICY_C_Eur,
-        'rules_delta_seconds': 0,
-        'format': 'EE%sT',
-        'until_year': 1996,
-        'until_month': 5,
-        'until_day': 13,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-    #             2:00    EU    EE%sT
-    {
-        'offset_seconds': 7200,
-        'zone_policy': ZONE_POLICY_EU,
-        'rules_delta_seconds': 0,
-        'format': 'EE%sT',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Europe_Uzhgorod: ZoneInfo = {
-    'name': 'Europe/Uzhgorod',
-    'eras': ZONE_ERAS_Europe_Uzhgorod
-}
-
-# ---------------------------------------------------------------------------
 # Zone name: Europe/Vienna
 # Era count: 2
 # ---------------------------------------------------------------------------
@@ -16059,68 +15973,6 @@ ZONE_ERAS_Europe_Warsaw: List[ZoneEra] = [
 ZONE_INFO_Europe_Warsaw: ZoneInfo = {
     'name': 'Europe/Warsaw',
     'eras': ZONE_ERAS_Europe_Warsaw
-}
-
-# ---------------------------------------------------------------------------
-# Zone name: Europe/Zaporozhye
-# Era count: 4
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_Europe_Zaporozhye: List[ZoneEra] = [
-    #             3:00    Russia    MSK/MSD    1991 Mar 31  2:00
-    {
-        'offset_seconds': 10800,
-        'zone_policy': ZONE_POLICY_Russia,
-        'rules_delta_seconds': 0,
-        'format': 'MSK/MSD',
-        'until_year': 1991,
-        'until_month': 3,
-        'until_day': 31,
-        'until_seconds': 7200,
-        'until_time_suffix': 'w',
-    },
-    #             2:00    E-Eur    EE%sT    1992 Mar 20
-    {
-        'offset_seconds': 7200,
-        'zone_policy': ZONE_POLICY_E_Eur,
-        'rules_delta_seconds': 0,
-        'format': 'EE%sT',
-        'until_year': 1992,
-        'until_month': 3,
-        'until_day': 20,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-    #             2:00    C-Eur    EE%sT    1996 May 13
-    {
-        'offset_seconds': 7200,
-        'zone_policy': ZONE_POLICY_C_Eur,
-        'rules_delta_seconds': 0,
-        'format': 'EE%sT',
-        'until_year': 1996,
-        'until_month': 5,
-        'until_day': 13,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-    #             2:00    EU    EE%sT
-    {
-        'offset_seconds': 7200,
-        'zone_policy': ZONE_POLICY_EU,
-        'rules_delta_seconds': 0,
-        'format': 'EE%sT',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_Europe_Zaporozhye: ZoneInfo = {
-    'name': 'Europe/Zaporozhye',
-    'eras': ZONE_ERAS_Europe_Zaporozhye
 }
 
 # ---------------------------------------------------------------------------
@@ -17430,7 +17282,7 @@ ZONE_INFO_WET: ZoneInfo = {
 
 
 # ---------------------------------------------------------------------------
-# Supported links: 239
+# Supported links: 241
 # ---------------------------------------------------------------------------
 
 # Link name: Africa/Accra -> Africa/Abidjan
@@ -18447,6 +18299,12 @@ ZONE_INFO_Europe_Tiraspol: ZoneInfo = {
     'link_to': ZONE_INFO_Europe_Chisinau
 }
 
+# Link name: Europe/Uzhgorod -> Europe/Kyiv
+ZONE_INFO_Europe_Uzhgorod: ZoneInfo = {
+    'name': 'Europe/Uzhgorod',
+    'link_to': ZONE_INFO_Europe_Kyiv
+}
+
 # Link name: Europe/Vaduz -> Europe/Zurich
 ZONE_INFO_Europe_Vaduz: ZoneInfo = {
     'name': 'Europe/Vaduz',
@@ -18463,6 +18321,12 @@ ZONE_INFO_Europe_Vatican: ZoneInfo = {
 ZONE_INFO_Europe_Zagreb: ZoneInfo = {
     'name': 'Europe/Zagreb',
     'link_to': ZONE_INFO_Europe_Belgrade
+}
+
+# Link name: Europe/Zaporozhye -> Europe/Kyiv
+ZONE_INFO_Europe_Zaporozhye: ZoneInfo = {
+    'name': 'Europe/Zaporozhye',
+    'link_to': ZONE_INFO_Europe_Kyiv
 }
 
 # Link name: GB -> Europe/London
