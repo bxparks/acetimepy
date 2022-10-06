@@ -1,6 +1,7 @@
 # Changelog
 
 * Unreleased
+* v0.5.3 (2022-10-06, TZDB 2022d)
     * Upgrade TZDB from 2022b to 2022d
         * 2022c
             * https://mm.icann.org/pipermail/tz-announce/2022-August/000072.html
