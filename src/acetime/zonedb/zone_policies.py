@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedb
-#     --tz_version 2022b
+#     --tz_version 2022d
 #     --action zonedb
 #     --language python
 #     --scope extended
@@ -22,7 +22,7 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2022b
+# from https://github.com/eggert/tz/releases/tag/2022d
 #
 # DO NOT EDIT
 
@@ -34,7 +34,7 @@ from ..zonedb_types import (
 
 # ---------------------------------------------------------------------------
 # Supported zone policies: 113
-# numRules: 1117
+# numRules: 1119
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -10263,7 +10263,7 @@ ZONE_POLICY_Pakistan: ZonePolicy = {
 
 # ---------------------------------------------------------------------------
 # Policy name: Palestine
-# Rule count: 31
+# Rule count: 33
 # ---------------------------------------------------------------------------
 ZONE_RULES_Palestine: List[ZoneRule] = [
     # Anchor: Rule Palestine    1999    2003    -    Oct    Fri>=15    0:00    0    -
@@ -10542,25 +10542,25 @@ ZONE_RULES_Palestine: List[ZoneRule] = [
         'delta_seconds': 0,
         'letter': '-',
     },
-    # Rule Palestine    2016    2018    -    Mar    Sat>=24    1:00    1:00    S
+    # Rule Palestine    2016    2018    -    Mar    Sat<=30    1:00    1:00    S
     {
         'from_year': 2016,
         'to_year': 2018,
         'in_month': 3,
         'on_day_of_week': 6,
-        'on_day_of_month': 24,
+        'on_day_of_month': -30,
         'at_seconds': 3600,
         'at_time_suffix': 'w',
         'delta_seconds': 3600,
         'letter': 'S',
     },
-    # Rule Palestine    2016    2018    -    Oct    Sat>=24    1:00    0    -
+    # Rule Palestine    2016    2018    -    Oct    Sat<=30    1:00    0    -
     {
         'from_year': 2016,
         'to_year': 2018,
         'in_month': 10,
         'on_day_of_week': 6,
-        'on_day_of_month': 24,
+        'on_day_of_month': -30,
         'at_seconds': 3600,
         'at_time_suffix': 'w',
         'delta_seconds': 0,
@@ -10578,25 +10578,25 @@ ZONE_RULES_Palestine: List[ZoneRule] = [
         'delta_seconds': 3600,
         'letter': 'S',
     },
-    # Rule Palestine    2019    only    -    Oct    Sat>=24    0:00    0    -
+    # Rule Palestine    2019    only    -    Oct    Sat<=30    0:00    0    -
     {
         'from_year': 2019,
         'to_year': 2019,
         'in_month': 10,
         'on_day_of_week': 6,
-        'on_day_of_month': 24,
+        'on_day_of_month': -30,
         'at_seconds': 0,
         'at_time_suffix': 'w',
         'delta_seconds': 0,
         'letter': '-',
     },
-    # Rule Palestine    2020    2021    -    Mar    Sat>=24    0:00    1:00    S
+    # Rule Palestine    2020    2021    -    Mar    Sat<=30    0:00    1:00    S
     {
         'from_year': 2020,
         'to_year': 2021,
         'in_month': 3,
         'on_day_of_week': 6,
-        'on_day_of_month': 24,
+        'on_day_of_month': -30,
         'at_seconds': 0,
         'at_time_suffix': 'w',
         'delta_seconds': 3600,
@@ -10614,26 +10614,50 @@ ZONE_RULES_Palestine: List[ZoneRule] = [
         'delta_seconds': 0,
         'letter': '-',
     },
-    # Rule Palestine    2021    max    -    Oct    Fri>=23    1:00    0    -
+    # Rule Palestine    2021    only    -    Oct    29    1:00    0    -
     {
         'from_year': 2021,
-        'to_year': 9999,
+        'to_year': 2021,
         'in_month': 10,
-        'on_day_of_week': 5,
-        'on_day_of_month': 23,
+        'on_day_of_week': 0,
+        'on_day_of_month': 29,
         'at_seconds': 3600,
         'at_time_suffix': 'w',
         'delta_seconds': 0,
         'letter': '-',
     },
-    # Rule Palestine    2022    max    -    Mar    Sun>=25    0:00    1:00    S
+    # Rule Palestine    2022    only    -    Mar    27    0:00    1:00    S
+    {
+        'from_year': 2022,
+        'to_year': 2022,
+        'in_month': 3,
+        'on_day_of_week': 0,
+        'on_day_of_month': 27,
+        'at_seconds': 0,
+        'at_time_suffix': 'w',
+        'delta_seconds': 3600,
+        'letter': 'S',
+    },
+    # Rule Palestine    2022    max    -    Oct    Sat<=30    2:00    0    -
     {
         'from_year': 2022,
         'to_year': 9999,
+        'in_month': 10,
+        'on_day_of_week': 6,
+        'on_day_of_month': -30,
+        'at_seconds': 7200,
+        'at_time_suffix': 'w',
+        'delta_seconds': 0,
+        'letter': '-',
+    },
+    # Rule Palestine    2023    max    -    Mar    Sat<=30    2:00    1:00    S
+    {
+        'from_year': 2023,
+        'to_year': 9999,
         'in_month': 3,
-        'on_day_of_week': 7,
-        'on_day_of_month': 25,
-        'at_seconds': 0,
+        'on_day_of_week': 6,
+        'on_day_of_month': -30,
+        'at_seconds': 7200,
         'at_time_suffix': 'w',
         'delta_seconds': 3600,
         'letter': 'S',

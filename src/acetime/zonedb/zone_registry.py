@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedb
-#     --tz_version 2022b
+#     --tz_version 2022d
 #     --action zonedb
 #     --language python
 #     --scope extended
@@ -22,14 +22,14 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2022b
+# from https://github.com/eggert/tz/releases/tag/2022d
 #
 # DO NOT EDIT
 
 from ..zonedb_types import ZoneInfoMap
 from .zone_infos import *
 
-# Supported Zones: 356
+# Supported Zones: 354
 ZONE_REGISTRY: ZoneInfoMap = {
     'Africa/Abidjan': ZONE_INFO_Africa_Abidjan,
     'Africa/Algiers': ZONE_INFO_Africa_Algiers,
@@ -341,12 +341,10 @@ ZONE_REGISTRY: ZoneInfoMap = {
     'Europe/Tallinn': ZONE_INFO_Europe_Tallinn,
     'Europe/Tirane': ZONE_INFO_Europe_Tirane,
     'Europe/Ulyanovsk': ZONE_INFO_Europe_Ulyanovsk,
-    'Europe/Uzhgorod': ZONE_INFO_Europe_Uzhgorod,
     'Europe/Vienna': ZONE_INFO_Europe_Vienna,
     'Europe/Vilnius': ZONE_INFO_Europe_Vilnius,
     'Europe/Volgograd': ZONE_INFO_Europe_Volgograd,
     'Europe/Warsaw': ZONE_INFO_Europe_Warsaw,
-    'Europe/Zaporozhye': ZONE_INFO_Europe_Zaporozhye,
     'Europe/Zurich': ZONE_INFO_Europe_Zurich,
     'HST': ZONE_INFO_HST,
     'Indian/Chagos': ZONE_INFO_Indian_Chagos,
