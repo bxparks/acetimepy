@@ -208,7 +208,7 @@ class Transition:
             return self.matching_era.zone_era['rules_delta_seconds']
 
     def copy(self) -> 'Transition':
-        result = cast('Transition', self.__class__.__new__(self.__class__))
+        result = self.__class__.__new__(self.__class__)
         result.matching_era = self.matching_era
         result.start_date_time = self.start_date_time
         result.until_date_time = self.until_date_time
