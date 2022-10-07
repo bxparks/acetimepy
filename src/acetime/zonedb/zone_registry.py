@@ -8,7 +8,7 @@
 #     --language python
 #     --scope extended
 #     --start_year 1974
-#     --until_year 2050
+#     --until_year 2100
 #
 # using the TZ Database files
 #

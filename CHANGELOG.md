@@ -1,6 +1,8 @@
 # Changelog
 
 * Unreleased
+    * Extend zonedb range from `[1974,2050)` (exclusive at end) to
+      `[1974,2100)`.
 * v0.5.3 (2022-10-06, TZDB 2022d)
     * Upgrade TZDB from 2022b to 2022d
         * 2022c
