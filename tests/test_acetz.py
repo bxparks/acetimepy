@@ -65,10 +65,10 @@ class TestLosAngeles(unittest.TestCase):
         self.assertEqual(946811045, int(dtc.timestamp()))
 
         dtc_utcoffset = dtc.utcoffset()
-        assert(dtc_utcoffset is not None)
+        assert dtc_utcoffset is not None
         self.assertEqual(-8 * 3600, dtc_utcoffset.total_seconds())
 
-        assert(dtc.tzinfo is not None)
+        assert dtc.tzinfo is not None
         self.assertEqual("PST", tz.tzname(dtc))
         self.assertEqual("America/Los_Angeles", tz.tzfullname())
         self.assertEqual("America/Los_Angeles", tz.tzfullname(follow_link=True))
@@ -85,10 +85,10 @@ class TestLosAngeles(unittest.TestCase):
         self.assertEqual(dte, expected)
 
         dte_utcoffset = dte.utcoffset()
-        assert(dte_utcoffset is not None)
+        assert dte_utcoffset is not None
         self.assertEqual(-8 * 3600, dte_utcoffset.total_seconds())
 
-        assert(dte.tzinfo is not None)
+        assert dte.tzinfo is not None
         self.assertEqual("PST", tz.tzname(dte))
         self.assertEqual("America/Los_Angeles", tz.tzfullname())
         self.assertEqual("America/Los_Angeles", tz.tzfullname(follow_link=True))
@@ -349,7 +349,7 @@ class TestUSPacific(unittest.TestCase):
 
         self.assertEqual(dtu, dtc)
 
-        assert(dtc.tzinfo is not None)
+        assert dtc.tzinfo is not None
         self.assertEqual("PDT", tz.tzname(dtc))
         self.assertEqual("US/Pacific", tz.tzfullname())
         self.assertEqual("America/Los_Angeles", tz.tzfullname(follow_link=True))
