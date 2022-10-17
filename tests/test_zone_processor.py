@@ -1087,3 +1087,83 @@ class TestZoneProcessorGetTransition(unittest.TestCase):
         dt = datetime(2000, 4, 2, 2, 59, 59)
         transition = zone_processor.get_transition_for_datetime(dt)
         self.assertIsNotNone(transition)
+
+
+class TestZoneProcessorIsFinalBufferSize(unittest.TestCase):
+    def test_los_angeles(self) -> None:
+        """America/Los_Angeles uses US Policy, and the last Rule was 2007"""
+        zone_processor = ZoneProcessor(zone_infos.ZONE_INFO_America_Los_Angeles)
+        self.assertFalse(zone_processor.is_terminal_year(2000))
+        self.assertFalse(zone_processor.is_terminal_year(2006))
+        self.assertTrue(zone_processor.is_terminal_year(2007))
+        self.assertTrue(zone_processor.is_terminal_year(2100))
+        self.assertTrue(zone_processor.is_terminal_year(9999))
+
+    def test_paris(self) -> None:
+        """Europe/Paris uses EU Policy from 1977, and the last Rule was an
+        infinite Rule from 1996. """
+        zone_processor = ZoneProcessor(zone_infos.ZONE_INFO_Europe_Paris)
+        self.assertFalse(zone_processor.is_terminal_year(1995))
+        self.assertTrue(zone_processor.is_terminal_year(2000))
+        self.assertTrue(zone_processor.is_terminal_year(2050))
+        self.assertTrue(zone_processor.is_terminal_year(2100))
+        self.assertTrue(zone_processor.is_terminal_year(9999))
+
+    def test_tokyo(self) -> None:
+        """Asia/Tokyo uses Japan Policy, which has a single finite Rule from
+        1948 to 1951."""
+        zone_processor = ZoneProcessor(zone_infos.ZONE_INFO_Asia_Tokyo)
+        self.assertTrue(zone_processor.is_terminal_year(1995))
+        self.assertTrue(zone_processor.is_terminal_year(2000))
+        self.assertTrue(zone_processor.is_terminal_year(2050))
+        self.assertTrue(zone_processor.is_terminal_year(2100))
+        self.assertTrue(zone_processor.is_terminal_year(9999))
+
+    def test_amman(self) -> None:
+        """Asia/Amman uses Jordan Policy, which has 2 overlapping infinite
+        Rules, (one from 2014, one from 2022), and a finite Rule from
+        [2014,2021]. Should return True on or after 2022.
+        """
+        zone_processor = ZoneProcessor(zone_infos.ZONE_INFO_Asia_Amman)
+        self.assertFalse(zone_processor.is_terminal_year(2000))
+        self.assertFalse(zone_processor.is_terminal_year(2014))
+        self.assertFalse(zone_processor.is_terminal_year(2015))
+        self.assertFalse(zone_processor.is_terminal_year(2021))
+        self.assertTrue(zone_processor.is_terminal_year(2022))
+        self.assertTrue(zone_processor.is_terminal_year(2050))
+        self.assertTrue(zone_processor.is_terminal_year(2100))
+        self.assertTrue(zone_processor.is_terminal_year(9999))
+
+    def test_casablanca(self) -> None:
+        """Africa/Casablanca uses Morocco Policy after 2018, which contains
+        a separate rule for each year through 2088.
+        """
+        zone_processor = ZoneProcessor(zone_infos.ZONE_INFO_Africa_Casablanca)
+        self.assertFalse(zone_processor.is_terminal_year(2000))
+        self.assertFalse(zone_processor.is_terminal_year(2017))
+        self.assertFalse(zone_processor.is_terminal_year(2018))
+        self.assertFalse(zone_processor.is_terminal_year(2087))
+        self.assertTrue(zone_processor.is_terminal_year(2088))
+        self.assertTrue(zone_processor.is_terminal_year(2089))
+        self.assertTrue(zone_processor.is_terminal_year(9999))
+
+    def test_abidjan(self) -> None:
+        """Africa/Abidjan uses a fixed offset ZoneEra until year 10000.
+        """
+        zone_processor = ZoneProcessor(zone_infos.ZONE_INFO_Africa_Abidjan)
+        self.assertTrue(zone_processor.is_terminal_year(2000))
+        self.assertTrue(zone_processor.is_terminal_year(2050))
+        self.assertTrue(zone_processor.is_terminal_year(2100))
+        self.assertTrue(zone_processor.is_terminal_year(2200))
+        self.assertTrue(zone_processor.is_terminal_year(9999))
+
+    def test_cairo(self) -> None:
+        """Africa/Cairo uses Egypt Policy, which contains 3 Rules for 2014.
+        There are no further transitions after that.
+        """
+        zone_processor = ZoneProcessor(zone_infos.ZONE_INFO_Africa_Cairo)
+        self.assertFalse(zone_processor.is_terminal_year(2000))
+        self.assertFalse(zone_processor.is_terminal_year(2013))
+        self.assertFalse(zone_processor.is_terminal_year(2014))
+        self.assertTrue(zone_processor.is_terminal_year(2015))
+        self.assertTrue(zone_processor.is_terminal_year(9999))
