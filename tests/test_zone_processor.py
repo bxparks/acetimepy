@@ -1167,3 +1167,18 @@ class TestZoneProcessorIsFinalBufferSize(unittest.TestCase):
         self.assertFalse(zone_processor.is_terminal_year(2014))
         self.assertTrue(zone_processor.is_terminal_year(2015))
         self.assertTrue(zone_processor.is_terminal_year(9999))
+
+    def test_havana(self) -> None:
+        """America/Havana uses Cuba Policy. Has 2 infinite Rules at 2012 and
+        2013, so the terminal year is 2013.
+        """
+        zone_processor = ZoneProcessor(zone_infos.ZONE_INFO_America_Havana)
+        self.assertFalse(zone_processor.is_terminal_year(2000))
+        self.assertFalse(zone_processor.is_terminal_year(2009))
+        self.assertFalse(zone_processor.is_terminal_year(2010))
+        self.assertFalse(zone_processor.is_terminal_year(2011))
+        self.assertFalse(zone_processor.is_terminal_year(2012))
+        self.assertTrue(zone_processor.is_terminal_year(2013))
+        self.assertTrue(zone_processor.is_terminal_year(2014))
+        self.assertTrue(zone_processor.is_terminal_year(2015))
+        self.assertTrue(zone_processor.is_terminal_year(9999))
