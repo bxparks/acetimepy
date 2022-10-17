@@ -8,7 +8,7 @@
 #     --language python
 #     --scope extended
 #     --start_year 1974
-#     --until_year 2100
+#     --until_year 10000
 #
 # using the TZ Database files
 #
@@ -40,7 +40,7 @@ from .zone_policies import *
 
 TZDB_VERSION = '2022d'
 START_YEAR = 1974
-UNTIL_YEAR = 2100
+UNTIL_YEAR = 10000
 
 # ---------------------------------------------------------------------------
 # Supported zones: 354
