@@ -17,6 +17,12 @@ import datetime
 # Marker year to indicate -Infinity year.
 MIN_YEAR: int = 0
 
+# Marker year to indicate Infinity for UNTIL year.
+MAX_UNTIL_YEAR: int = 10000
+
+# Marker year to indicate Infinity for TO year.
+MAX_TO_YEAR: int = MAX_UNTIL_YEAR - 1
+
 # Number of seconds from Unix Epoch (1970-01-01 00:00:00) to AceTime Epoch
 # (2000-01-01 00:00:00)
 SECONDS_SINCE_UNIX_EPOCH = 946684800

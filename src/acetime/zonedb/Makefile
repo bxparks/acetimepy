@@ -2,7 +2,7 @@ TARGETS := zone_infos.py zone_policies.py zone_registry.py
 
 TZ_VERSION := 2022d
 START_YEAR := 1974
-UNTIL_YEAR := 2100
+UNTIL_YEAR := 10000
 
 TOOLS := $(abspath ../../../../AceTimeTools)
 
