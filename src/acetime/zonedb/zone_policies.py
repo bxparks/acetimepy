@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedb
-#     --tz_version 2022d
+#     --tz_version 2022e
 #     --action zonedb
 #     --language python
 #     --scope extended
@@ -22,7 +22,7 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2022d
+# from https://github.com/eggert/tz/releases/tag/2022e
 #
 # DO NOT EDIT
 
@@ -7194,10 +7194,10 @@ ZONE_RULES_Jordan: List[ZoneRule] = [
         'delta_seconds': 3600,
         'letter': 'S',
     },
-    # Rule    Jordan    2014    max    -    Oct    lastFri    0:00s    0    -
+    # Rule    Jordan    2014    2022    -    Oct    lastFri    0:00s    0    -
     {
         'from_year': 2014,
-        'to_year': 9999,
+        'to_year': 2022,
         'in_month': 10,
         'on_day_of_week': 5,
         'on_day_of_month': 0,
@@ -7206,10 +7206,10 @@ ZONE_RULES_Jordan: List[ZoneRule] = [
         'delta_seconds': 0,
         'letter': '-',
     },
-    # Rule    Jordan    2022    max    -    Feb    lastThu    24:00    1:00    S
+    # Rule    Jordan    2022    only    -    Feb    lastThu    24:00    1:00    S
     {
         'from_year': 2022,
-        'to_year': 9999,
+        'to_year': 2022,
         'in_month': 2,
         'on_day_of_week': 4,
         'on_day_of_month': 0,
@@ -13362,10 +13362,10 @@ ZONE_RULES_Syria: List[ZoneRule] = [
         'delta_seconds': 3600,
         'letter': 'S',
     },
-    # Rule    Syria    2012    max    -    Mar    lastFri    0:00    1:00    S
+    # Rule    Syria    2012    2022    -    Mar    lastFri    0:00    1:00    S
     {
         'from_year': 2012,
-        'to_year': 9999,
+        'to_year': 2022,
         'in_month': 3,
         'on_day_of_week': 5,
         'on_day_of_month': 0,
@@ -13374,10 +13374,10 @@ ZONE_RULES_Syria: List[ZoneRule] = [
         'delta_seconds': 3600,
         'letter': 'S',
     },
-    # Rule    Syria    2009    max    -    Oct    lastFri    0:00    0    -
+    # Rule    Syria    2009    2022    -    Oct    lastFri    0:00    0    -
     {
         'from_year': 2009,
-        'to_year': 9999,
+        'to_year': 2022,
         'in_month': 10,
         'on_day_of_week': 5,
         'on_day_of_month': 0,
