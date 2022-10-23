@@ -3,12 +3,12 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedb
-#     --tz_version 2022d
+#     --tz_version 2022e
 #     --action zonedb
 #     --language python
 #     --scope extended
 #     --start_year 1974
-#     --until_year 2050
+#     --until_year 10000
 #
 # using the TZ Database files
 #
@@ -22,7 +22,7 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2022d
+# from https://github.com/eggert/tz/releases/tag/2022e
 #
 # DO NOT EDIT
 

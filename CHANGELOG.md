@@ -1,6 +1,12 @@
 # Changelog
 
 * Unreleased
+* v0.5.4 (2022-10-22, TZDB 2022e)
+    * Extend zonedb range from `[1974,2050)` to `[1974,10000)` by using
+      `is_terminal_year()` to speed up the `bufestimate.py` algorithm.
+    * Upgrade TZDB from 2022d to 2022e
+        * https://mm.icann.org/pipermail/tz-announce/2022-October/000074.html
+            * Jordan and Syria switch from +02/+03 with DST to year-round +03.
 * v0.5.3 (2022-10-06, TZDB 2022d)
     * Upgrade TZDB from 2022b to 2022d
         * 2022c

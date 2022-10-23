@@ -9,7 +9,7 @@ used by the `acetz` class is identical to the one used by the
 
 This library provides a `acetime.zonedb` package that contains timezone
 information for all Zone and Link entries from the [IANA TZ
-database](https://www.iana.org/time-zones) from the year 1974 until 2050. Custom
+database](https://www.iana.org/time-zones) from the year 1974 until 2100. Custom
 subsets of the full TZ database could be created to save memory using the
 [AceTimeTools](https://github.com/bxparks/AceTimeTools) project but the process
 has not been documented.
@@ -51,14 +51,14 @@ performance to `pytz` and `dateutil`, while `zoneinfo` is substantially faster
 than the others because it is implemented as a C-module. However among these 4
 Python libraries, `acetime` seems to be the only library that returns accurate
 datetime information (especially the `datetime.dst()` function) for all
-timezones within the years supported by `acetime` (from 1974 until 2050). In
+timezones within the years supported by `acetime` (from 1974 until 2100). In
 addition, `acetime` supports deterministic timezones because it uses its own
 internal `zonedb` database, instead of pulling in the non-deterministic timezone
 database from underlying operating system (like `dateutil` and `zoneinfo`).
 These features indicate that `acetime` may be most useful for validation or
 continuous integration.
 
-**Version**: v0.5.3 (2022-10-06, TZDB 2022d)
+**Version**: v0.5.4 (2022-10-22, TZDB 2022e)
 
 **Changelog**: [CHANGELOG.md](CHANGELOG.md)
 
@@ -155,7 +155,7 @@ Three constants are provided in the `acetime.zonedb.zone_infos` module:
 
 * `TZDB_VERSION` (e.g. "2021e")
 * `START_YEAR` (e.g. 1974)
-* `UNTIL_YEAR` (e.g. 2050)
+* `UNTIL_YEAR` (e.g. 2100)
 
 (These could have been placed in a separate `acetime.zonedb.zone_context`
 module, but the AceTime C++ library puts them in `zone_infos`, so this library
@@ -203,7 +203,7 @@ The `acetz` class can also be created through the `ZoneManager` factory class.
 An instance of `ZoneManager` must be configured with the registry of the
 supported timezones. This library provides an `acetime.zonedb.zone_registry`
 module which has 2 pre-generated registries containing timezone information from
-1974 until 2050:
+1974 until 2100:
 
 * `acetime.zonedb.zone_registry.ZONE_REGISTRY`
     * contains all primary Zone entries

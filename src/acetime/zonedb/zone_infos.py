@@ -3,12 +3,12 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedb
-#     --tz_version 2022d
+#     --tz_version 2022e
 #     --action zonedb
 #     --language python
 #     --scope extended
 #     --start_year 1974
-#     --until_year 2050
+#     --until_year 10000
 #
 # using the TZ Database files
 #
@@ -22,7 +22,7 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2022d
+# from https://github.com/eggert/tz/releases/tag/2022e
 #
 # DO NOT EDIT
 
@@ -38,13 +38,13 @@ from .zone_policies import *
 # Zone Context
 # ---------------------------------------------------------------------------
 
-TZDB_VERSION = '2022d'
+TZDB_VERSION = '2022e'
 START_YEAR = 1974
-UNTIL_YEAR = 2050
+UNTIL_YEAR = 10000
 
 # ---------------------------------------------------------------------------
 # Supported zones: 354
-# numEras: 1023
+# numEras: 1025
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -7839,16 +7839,28 @@ ZONE_INFO_Asia_Almaty: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Asia/Amman
-# Era count: 1
+# Era count: 2
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Asia_Amman: List[ZoneEra] = [
-    #             2:00    Jordan    EE%sT
+    #             2:00    Jordan    EE%sT    2022 Oct 28 0:00s
     {
         'offset_seconds': 7200,
         'zone_policy': ZONE_POLICY_Jordan,
         'rules_delta_seconds': 0,
         'format': 'EE%sT',
+        'until_year': 2022,
+        'until_month': 10,
+        'until_day': 28,
+        'until_seconds': 0,
+        'until_time_suffix': 's',
+    },
+    #             3:00    -    +03
+    {
+        'offset_seconds': 10800,
+        'zone_policy': '-',
+        'rules_delta_seconds': 0,
+        'format': '+03',
         'until_year': 10000,
         'until_month': 1,
         'until_day': 1,
@@ -8829,16 +8841,28 @@ ZONE_INFO_Asia_Colombo: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Asia/Damascus
-# Era count: 1
+# Era count: 2
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Asia_Damascus: List[ZoneEra] = [
-    #             2:00    Syria    EE%sT
+    #             2:00    Syria    EE%sT    2022 Oct 28 0:00
     {
         'offset_seconds': 7200,
         'zone_policy': ZONE_POLICY_Syria,
         'rules_delta_seconds': 0,
         'format': 'EE%sT',
+        'until_year': 2022,
+        'until_month': 10,
+        'until_day': 28,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             3:00    -    +03
+    {
+        'offset_seconds': 10800,
+        'zone_policy': '-',
+        'rules_delta_seconds': 0,
+        'format': '+03',
         'until_year': 10000,
         'until_month': 1,
         'until_day': 1,

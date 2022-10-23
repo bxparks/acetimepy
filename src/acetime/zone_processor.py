@@ -20,6 +20,7 @@ from typing import Tuple
 from typing import cast
 
 from .common import MIN_YEAR
+from .common import MAX_TO_YEAR
 from .common import SECONDS_SINCE_UNIX_EPOCH
 from .common import seconds_to_hms
 from .common import hms_to_seconds
@@ -208,7 +209,7 @@ class Transition:
             return self.matching_era.zone_era['rules_delta_seconds']
 
     def copy(self) -> 'Transition':
-        result = cast('Transition', self.__class__.__new__(self.__class__))
+        result = self.__class__.__new__(self.__class__)
         result.matching_era = self.matching_era
         result.start_date_time = self.start_date_time
         result.until_date_time = self.until_date_time
@@ -543,6 +544,70 @@ class ZoneProcessor:
             active_size=len(self.transitions),
             buffer_size=self.transition_storage.index_beyond,
         )
+
+    def is_terminal_year(self, year: int) -> bool:
+        """Return true if the given `year` is large enough that it contains the
+        transitions of the last rules of the zone, and any future year will
+        cause no changes to the value of get_buffer_sizes().
+
+        1) If year exceeds the last ZoneEra entry, then return True.
+        2) If year is not in the last ZoneEra, return False.
+        3) The year matches the last ZoneEra entry, so:
+            3.1) If the last ZoneEra is a Simple ZoneEra (no reference to
+                ZonePolicy), then return True.
+            3.2) The last ZoneEra is Named ZoneEra (references a ZonePolicy):
+                3.2.1) If there are upcoming Rules which haven't matched the
+                       current year, return False.
+                3.2.2) If all matching Rules are infinite or none, return True.
+            3.3) Otherwise, some matching Rules are finite, so return False.
+        """
+        # If the timezone is a Link, follow the link and get the ZoneEras from
+        # the target ZoneInfo.
+        if 'eras' in self.zone_info:
+            zone_eras = self.zone_info.get('eras')
+        else:
+            zone_info = cast(ZoneInfo, self.zone_info.get('link_to'))
+            zone_eras = zone_info.get('eras')
+        assert zone_eras is not None
+
+        # 1) Check if the year is beyond the last ZoneEra.
+        zone_era = zone_eras[-1]
+        until_year = zone_era['until_year']
+        if year > until_year:  # check >= (until_year + 1), to be safe
+            return True
+
+        # 2) Check if year matches the last ZoneEra.
+        prev_until_year = 0
+        if len(zone_eras) > 1:
+            prev_until_year = zone_eras[-2]['until_year']
+        if year < prev_until_year:
+            return False
+
+        # 3.1) Check if the last ZoneEra is a Simple one.
+        zone_policy = zone_era['zone_policy']
+        if zone_policy in ['-', ':']:
+            return True
+        zone_policy = cast(ZonePolicy, zone_policy)
+
+        # 3.2) Last ZoneEra was a Named era, so search the Rules of the Policy.
+        rules = zone_policy['rules']
+        num_finite_matches = 0
+        num_infinite_matches = 0
+        for rule in rules:
+            from_year = rule['from_year']
+            if year < from_year:
+                return False  # 3.2.1
+            else:  # year >= from_year
+                to_year = rule['to_year']
+                if to_year == MAX_TO_YEAR:
+                    num_infinite_matches += 1
+                elif year <= to_year:
+                    num_finite_matches += 1
+        if num_finite_matches == 0:
+            return True  # 3.2.2
+
+        # 3.3) Otherwise, some matching Rules are finite.
+        return False
 
     def is_link(self) -> bool:
         return 'link_to' in self.zone_info
