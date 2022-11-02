@@ -3,10 +3,11 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedb
-#     --tz_version 2022e
+#     --tz_version 2022f
 #     --action zonedb
 #     --language python
 #     --scope extended
+#     --generate_int16_year
 #     --start_year 1974
 #     --until_year 10000
 #
@@ -22,7 +23,7 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2022e
+# from https://github.com/eggert/tz/releases/tag/2022f
 #
 # DO NOT EDIT
 
@@ -38,13 +39,13 @@ from .zone_policies import *
 # Zone Context
 # ---------------------------------------------------------------------------
 
-TZDB_VERSION = '2022e'
+TZDB_VERSION = '2022f'
 START_YEAR = 1974
 UNTIL_YEAR = 10000
 
 # ---------------------------------------------------------------------------
-# Supported zones: 354
-# numEras: 1025
+# Supported zones: 351
+# numEras: 1022
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -2919,7 +2920,7 @@ ZONE_INFO_America_Chicago: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Chihuahua
-# Era count: 4
+# Era count: 5
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Chihuahua: List[ZoneEra] = [
@@ -2959,12 +2960,24 @@ ZONE_ERAS_America_Chihuahua: List[ZoneEra] = [
         'until_seconds': 10800,
         'until_time_suffix': 'w',
     },
-    #             -7:00    Mexico    M%sT
+    #             -7:00    Mexico    M%sT    2022 Oct 30  2:00
     {
         'offset_seconds': -25200,
         'zone_policy': ZONE_POLICY_Mexico,
         'rules_delta_seconds': 0,
         'format': 'M%sT',
+        'until_year': 2022,
+        'until_month': 10,
+        'until_day': 30,
+        'until_seconds': 7200,
+        'until_time_suffix': 'w',
+    },
+    #             -6:00    -    CST
+    {
+        'offset_seconds': -21600,
+        'zone_policy': '-',
+        'rules_delta_seconds': 0,
+        'format': 'CST',
         'until_year': 10000,
         'until_month': 1,
         'until_day': 1,
@@ -5582,32 +5595,6 @@ ZONE_INFO_America_New_York: ZoneInfo = {
 }
 
 # ---------------------------------------------------------------------------
-# Zone name: America/Nipigon
-# Era count: 1
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_America_Nipigon: List[ZoneEra] = [
-    #             -5:00    Canada    E%sT
-    {
-        'offset_seconds': -18000,
-        'zone_policy': ZONE_POLICY_Canada,
-        'rules_delta_seconds': 0,
-        'format': 'E%sT',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_America_Nipigon: ZoneInfo = {
-    'name': 'America/Nipigon',
-    'eras': ZONE_ERAS_America_Nipigon
-}
-
-# ---------------------------------------------------------------------------
 # Zone name: America/Nome
 # Era count: 3
 # ---------------------------------------------------------------------------
@@ -5897,7 +5884,7 @@ ZONE_INFO_America_Nuuk: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Ojinaga
-# Era count: 5
+# Era count: 6
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Ojinaga: List[ZoneEra] = [
@@ -5949,12 +5936,24 @@ ZONE_ERAS_America_Ojinaga: List[ZoneEra] = [
         'until_seconds': 0,
         'until_time_suffix': 'w',
     },
-    #             -7:00    US    M%sT
+    #             -7:00    US    M%sT    2022 Oct 30  2:00
     {
         'offset_seconds': -25200,
         'zone_policy': ZONE_POLICY_US,
         'rules_delta_seconds': 0,
         'format': 'M%sT',
+        'until_year': 2022,
+        'until_month': 10,
+        'until_day': 30,
+        'until_seconds': 7200,
+        'until_time_suffix': 'w',
+    },
+    #             -6:00    -    CST
+    {
+        'offset_seconds': -21600,
+        'zone_policy': '-',
+        'rules_delta_seconds': 0,
+        'format': 'CST',
         'until_year': 10000,
         'until_month': 1,
         'until_day': 1,
@@ -6247,32 +6246,6 @@ ZONE_ERAS_America_Punta_Arenas: List[ZoneEra] = [
 ZONE_INFO_America_Punta_Arenas: ZoneInfo = {
     'name': 'America/Punta_Arenas',
     'eras': ZONE_ERAS_America_Punta_Arenas
-}
-
-# ---------------------------------------------------------------------------
-# Zone name: America/Rainy_River
-# Era count: 1
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_America_Rainy_River: List[ZoneEra] = [
-    #             -6:00    Canada    C%sT
-    {
-        'offset_seconds': -21600,
-        'zone_policy': ZONE_POLICY_Canada,
-        'rules_delta_seconds': 0,
-        'format': 'C%sT',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_America_Rainy_River: ZoneInfo = {
-    'name': 'America/Rainy_River',
-    'eras': ZONE_ERAS_America_Rainy_River
 }
 
 # ---------------------------------------------------------------------------
@@ -6951,56 +6924,6 @@ ZONE_ERAS_America_Thule: List[ZoneEra] = [
 ZONE_INFO_America_Thule: ZoneInfo = {
     'name': 'America/Thule',
     'eras': ZONE_ERAS_America_Thule
-}
-
-# ---------------------------------------------------------------------------
-# Zone name: America/Thunder_Bay
-# Era count: 3
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_America_Thunder_Bay: List[ZoneEra] = [
-    #             -5:00    Toronto    E%sT    1973
-    {
-        'offset_seconds': -18000,
-        'zone_policy': ZONE_POLICY_Toronto,
-        'rules_delta_seconds': 0,
-        'format': 'E%sT',
-        'until_year': 1973,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-    #             -5:00    -    EST    1974
-    {
-        'offset_seconds': -18000,
-        'zone_policy': '-',
-        'rules_delta_seconds': 0,
-        'format': 'EST',
-        'until_year': 1974,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-    #             -5:00    Canada    E%sT
-    {
-        'offset_seconds': -18000,
-        'zone_policy': ZONE_POLICY_Canada,
-        'rules_delta_seconds': 0,
-        'format': 'E%sT',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_America_Thunder_Bay: ZoneInfo = {
-    'name': 'America/Thunder_Bay',
-    'eras': ZONE_ERAS_America_Thunder_Bay
 }
 
 # ---------------------------------------------------------------------------
@@ -17306,7 +17229,7 @@ ZONE_INFO_WET: ZoneInfo = {
 
 
 # ---------------------------------------------------------------------------
-# Supported links: 241
+# Supported links: 244
 # ---------------------------------------------------------------------------
 
 # Link name: Africa/Accra -> Africa/Abidjan
@@ -17705,6 +17628,12 @@ ZONE_INFO_America_Nassau: ZoneInfo = {
     'link_to': ZONE_INFO_America_Toronto
 }
 
+# Link name: America/Nipigon -> America/Toronto
+ZONE_INFO_America_Nipigon: ZoneInfo = {
+    'name': 'America/Nipigon',
+    'link_to': ZONE_INFO_America_Toronto
+}
+
 # Link name: America/Port_of_Spain -> America/Puerto_Rico
 ZONE_INFO_America_Port_of_Spain: ZoneInfo = {
     'name': 'America/Port_of_Spain',
@@ -17715,6 +17644,12 @@ ZONE_INFO_America_Port_of_Spain: ZoneInfo = {
 ZONE_INFO_America_Porto_Acre: ZoneInfo = {
     'name': 'America/Porto_Acre',
     'link_to': ZONE_INFO_America_Rio_Branco
+}
+
+# Link name: America/Rainy_River -> America/Winnipeg
+ZONE_INFO_America_Rainy_River: ZoneInfo = {
+    'name': 'America/Rainy_River',
+    'link_to': ZONE_INFO_America_Winnipeg
 }
 
 # Link name: America/Rosario -> America/Argentina/Cordoba
@@ -17763,6 +17698,12 @@ ZONE_INFO_America_St_Thomas: ZoneInfo = {
 ZONE_INFO_America_St_Vincent: ZoneInfo = {
     'name': 'America/St_Vincent',
     'link_to': ZONE_INFO_America_Puerto_Rico
+}
+
+# Link name: America/Thunder_Bay -> America/Toronto
+ZONE_INFO_America_Thunder_Bay: ZoneInfo = {
+    'name': 'America/Thunder_Bay',
+    'link_to': ZONE_INFO_America_Toronto
 }
 
 # Link name: America/Tortola -> America/Puerto_Rico
@@ -18764,13 +18705,20 @@ ZONE_INFO_Zulu: ZoneInfo = {
 
 
 # ---------------------------------------------------------------------------
-# Notable zones: 4
+# Notable zones: 8
 # ---------------------------------------------------------------------------
 
 # Africa/Johannesburg (RULES not fixed but FORMAT is missing '%' or '/')
+# America/Guyana (STDOFF (-3:45) not at :00 or :30 mark)
 # Antarctica/Casey (UNTIL '0:01' not on 15-minute boundary)
 # Asia/Gaza (UNTIL '0:01' not on 15-minute boundary)
-# Pacific/Kiritimati (STDOFF '-10:40' not on 15-minute boundary)
+# Asia/Kathmandu (STDOFF (5:45) not at :00 or :30 mark)
+# Australia/Eucla (STDOFF (8:45) not at :00 or :30 mark)
+# Pacific/Chatham (STDOFF (12:45) not at :00 or :30 mark)
+# Pacific/Kiritimati (
+#   STDOFF '-10:40' not on 15-minute boundary,
+#   STDOFF (-10:40) not at :00 or :30 mark,
+# )
 
 
 # ---------------------------------------------------------------------------

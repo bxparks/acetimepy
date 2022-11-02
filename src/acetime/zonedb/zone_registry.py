@@ -3,10 +3,11 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedb
-#     --tz_version 2022e
+#     --tz_version 2022f
 #     --action zonedb
 #     --language python
 #     --scope extended
+#     --generate_int16_year
 #     --start_year 1974
 #     --until_year 10000
 #
@@ -22,14 +23,14 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2022e
+# from https://github.com/eggert/tz/releases/tag/2022f
 #
 # DO NOT EDIT
 
 from ..zonedb_types import ZoneInfoMap
 from .zone_infos import *
 
-# Supported Zones: 354
+# Supported Zones: 351
 ZONE_REGISTRY: ZoneInfoMap = {
     'Africa/Abidjan': ZONE_INFO_Africa_Abidjan,
     'Africa/Algiers': ZONE_INFO_Africa_Algiers,
@@ -134,7 +135,6 @@ ZONE_REGISTRY: ZoneInfoMap = {
     'America/Monterrey': ZONE_INFO_America_Monterrey,
     'America/Montevideo': ZONE_INFO_America_Montevideo,
     'America/New_York': ZONE_INFO_America_New_York,
-    'America/Nipigon': ZONE_INFO_America_Nipigon,
     'America/Nome': ZONE_INFO_America_Nome,
     'America/Noronha': ZONE_INFO_America_Noronha,
     'America/North_Dakota/Beulah': ZONE_INFO_America_North_Dakota_Beulah,
@@ -150,7 +150,6 @@ ZONE_REGISTRY: ZoneInfoMap = {
     'America/Porto_Velho': ZONE_INFO_America_Porto_Velho,
     'America/Puerto_Rico': ZONE_INFO_America_Puerto_Rico,
     'America/Punta_Arenas': ZONE_INFO_America_Punta_Arenas,
-    'America/Rainy_River': ZONE_INFO_America_Rainy_River,
     'America/Rankin_Inlet': ZONE_INFO_America_Rankin_Inlet,
     'America/Recife': ZONE_INFO_America_Recife,
     'America/Regina': ZONE_INFO_America_Regina,
@@ -166,7 +165,6 @@ ZONE_REGISTRY: ZoneInfoMap = {
     'America/Swift_Current': ZONE_INFO_America_Swift_Current,
     'America/Tegucigalpa': ZONE_INFO_America_Tegucigalpa,
     'America/Thule': ZONE_INFO_America_Thule,
-    'America/Thunder_Bay': ZONE_INFO_America_Thunder_Bay,
     'America/Tijuana': ZONE_INFO_America_Tijuana,
     'America/Toronto': ZONE_INFO_America_Toronto,
     'America/Vancouver': ZONE_INFO_America_Vancouver,

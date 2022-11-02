@@ -1,6 +1,6 @@
 TARGETS := zone_infos.py zone_policies.py zone_registry.py
 
-TZ_VERSION := 2022e
+TZ_VERSION := 2022f
 START_YEAR := 1974
 UNTIL_YEAR := 10000
 
@@ -16,6 +16,7 @@ zone_infos.py:
 		--action zonedb \
 		--language python \
 		--scope extended \
+		--generate_int16_year \
 		--start_year $(START_YEAR) \
 		--until_year $(UNTIL_YEAR)
 

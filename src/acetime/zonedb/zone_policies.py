@@ -3,10 +3,11 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedb
-#     --tz_version 2022e
+#     --tz_version 2022f
 #     --action zonedb
 #     --language python
 #     --scope extended
+#     --generate_int16_year
 #     --start_year 1974
 #     --until_year 10000
 #
@@ -22,7 +23,7 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2022e
+# from https://github.com/eggert/tz/releases/tag/2022f
 #
 # DO NOT EDIT
 
@@ -34,7 +35,7 @@ from ..zonedb_types import (
 
 # ---------------------------------------------------------------------------
 # Supported zone policies: 113
-# numRules: 1194
+# numRules: 1192
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -4803,7 +4804,7 @@ ZONE_POLICY_Falk: ZonePolicy = {
 
 # ---------------------------------------------------------------------------
 # Policy name: Fiji
-# Rule count: 15
+# Rule count: 13
 # ---------------------------------------------------------------------------
 ZONE_RULES_Fiji: List[ZoneRule] = [
     # Anchor: Rule    Fiji    1999    2000    -    Feb    lastSun    3:00    0    -
@@ -4960,30 +4961,6 @@ ZONE_RULES_Fiji: List[ZoneRule] = [
         'at_seconds': 7200,
         'at_time_suffix': 'w',
         'delta_seconds': 3600,
-        'letter': '-',
-    },
-    # Rule    Fiji    2022    max    -    Nov    Sun>=8    2:00    1:00    -
-    {
-        'from_year': 2022,
-        'to_year': 9999,
-        'in_month': 11,
-        'on_day_of_week': 7,
-        'on_day_of_month': 8,
-        'at_seconds': 7200,
-        'at_time_suffix': 'w',
-        'delta_seconds': 3600,
-        'letter': '-',
-    },
-    # Rule    Fiji    2023    max    -    Jan    Sun>=12    3:00    0    -
-    {
-        'from_year': 2023,
-        'to_year': 9999,
-        'in_month': 1,
-        'on_day_of_week': 7,
-        'on_day_of_month': 12,
-        'at_seconds': 10800,
-        'at_time_suffix': 'w',
-        'delta_seconds': 0,
         'letter': '-',
     },
 
@@ -8214,10 +8191,10 @@ ZONE_RULES_Mexico: List[ZoneRule] = [
         'delta_seconds': 0,
         'letter': 'S',
     },
-    # Rule    Mexico    2002    max    -    Apr    Sun>=1    2:00    1:00    D
+    # Rule    Mexico    2002    2022    -    Apr    Sun>=1    2:00    1:00    D
     {
         'from_year': 2002,
-        'to_year': 9999,
+        'to_year': 2022,
         'in_month': 4,
         'on_day_of_week': 7,
         'on_day_of_month': 1,
@@ -8226,10 +8203,10 @@ ZONE_RULES_Mexico: List[ZoneRule] = [
         'delta_seconds': 3600,
         'letter': 'D',
     },
-    # Rule    Mexico    2002    max    -    Oct    lastSun    2:00    0    S
+    # Rule    Mexico    2002    2022    -    Oct    lastSun    2:00    0    S
     {
         'from_year': 2002,
-        'to_year': 9999,
+        'to_year': 2022,
         'in_month': 10,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
