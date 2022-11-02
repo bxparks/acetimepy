@@ -1,6 +1,21 @@
 # Changelog
 
 * Unreleased
+* v0.5.5 (2022-11-02, TZDB 2022f)
+    * Upgrade TZDB from 2022e to 2022f
+        * https://mm.icann.org/pipermail/tz-announce/2022-October/000075.html
+			* Mexico will no longer observe DST except near the US border.
+			* Chihuahua moves to year-round -06 on 2022-10-30.
+			* Fiji no longer observes DST.
+			* Move links to 'backward'.
+			* In vanguard form, GMT is now a Zone and Etc/GMT a link.
+			* zic now supports links to links, and vanguard form uses this.
+			* Simplify four Ontario zones.
+			* Fix a Y2438 bug when reading TZif data.
+			* Enable 64-bit time_t on 32-bit glibc platforms.
+			* Omit large-file support when no longer needed.
+			* In C code, use some C23 features if available.
+			* Remove no-longer-needed workaround for Qt bug 53071.
 * v0.5.4 (2022-10-22, TZDB 2022e)
     * Extend zonedb range from `[1974,2050)` to `[1974,10000)` by using
       `is_terminal_year()` to speed up the `bufestimate.py` algorithm.
