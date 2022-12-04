@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedb
-#     --tz_version 2022f
+#     --tz_version 2022g
 #     --action zonedb
 #     --language python
 #     --scope extended
@@ -23,7 +23,7 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2022f
+# from https://github.com/eggert/tz/releases/tag/2022g
 #
 # DO NOT EDIT
 
@@ -39,13 +39,13 @@ from .zone_policies import *
 # Zone Context
 # ---------------------------------------------------------------------------
 
-TZDB_VERSION = '2022f'
+TZDB_VERSION = '2022g'
 START_YEAR = 1974
 UNTIL_YEAR = 10000
 
 # ---------------------------------------------------------------------------
 # Supported zones: 351
-# numEras: 1022
+# numEras: 1027
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -2993,6 +2993,104 @@ ZONE_INFO_America_Chihuahua: ZoneInfo = {
 }
 
 # ---------------------------------------------------------------------------
+# Zone name: America/Ciudad_Juarez
+# Era count: 7
+# ---------------------------------------------------------------------------
+
+ZONE_ERAS_America_Ciudad_Juarez: List[ZoneEra] = [
+    #             -6:00    -    CST    1996
+    {
+        'offset_seconds': -21600,
+        'zone_policy': '-',
+        'rules_delta_seconds': 0,
+        'format': 'CST',
+        'until_year': 1996,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             -6:00    Mexico    C%sT    1998
+    {
+        'offset_seconds': -21600,
+        'zone_policy': ZONE_POLICY_Mexico,
+        'rules_delta_seconds': 0,
+        'format': 'C%sT',
+        'until_year': 1998,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             -6:00    -    CST    1998 Apr Sun>=1  3:00
+    {
+        'offset_seconds': -21600,
+        'zone_policy': '-',
+        'rules_delta_seconds': 0,
+        'format': 'CST',
+        'until_year': 1998,
+        'until_month': 4,
+        'until_day': 5,
+        'until_seconds': 10800,
+        'until_time_suffix': 'w',
+    },
+    #             -7:00    Mexico    M%sT    2010
+    {
+        'offset_seconds': -25200,
+        'zone_policy': ZONE_POLICY_Mexico,
+        'rules_delta_seconds': 0,
+        'format': 'M%sT',
+        'until_year': 2010,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             -7:00    US    M%sT    2022 Oct 30  2:00
+    {
+        'offset_seconds': -25200,
+        'zone_policy': ZONE_POLICY_US,
+        'rules_delta_seconds': 0,
+        'format': 'M%sT',
+        'until_year': 2022,
+        'until_month': 10,
+        'until_day': 30,
+        'until_seconds': 7200,
+        'until_time_suffix': 'w',
+    },
+    #             -6:00    -    CST    2022 Nov 30  0:00
+    {
+        'offset_seconds': -21600,
+        'zone_policy': '-',
+        'rules_delta_seconds': 0,
+        'format': 'CST',
+        'until_year': 2022,
+        'until_month': 11,
+        'until_day': 30,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             -7:00    US    M%sT
+    {
+        'offset_seconds': -25200,
+        'zone_policy': ZONE_POLICY_US,
+        'rules_delta_seconds': 0,
+        'format': 'M%sT',
+        'until_year': 10000,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+
+]
+
+ZONE_INFO_America_Ciudad_Juarez: ZoneInfo = {
+    'name': 'America/Ciudad_Juarez',
+    'eras': ZONE_ERAS_America_Ciudad_Juarez
+}
+
+# ---------------------------------------------------------------------------
 # Zone name: America/Costa_Rica
 # Era count: 1
 # ---------------------------------------------------------------------------
@@ -3124,10 +3222,10 @@ ZONE_INFO_America_Danmarkshavn: ZoneInfo = {
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Dawson: List[ZoneEra] = [
-    #             -9:00    NT_YK    Y%sT    1973 Oct 28  0:00
+    #             -9:00    Yukon    Y%sT    1973 Oct 28  0:00
     {
         'offset_seconds': -32400,
-        'zone_policy': ZONE_POLICY_NT_YK,
+        'zone_policy': ZONE_POLICY_Yukon,
         'rules_delta_seconds': 0,
         'format': 'Y%sT',
         'until_year': 1973,
@@ -3136,12 +3234,12 @@ ZONE_ERAS_America_Dawson: List[ZoneEra] = [
         'until_seconds': 0,
         'until_time_suffix': 'w',
     },
-    #             -8:00    NT_YK    P%sT    1980
+    #             -8:00    -    PST    1980
     {
         'offset_seconds': -28800,
-        'zone_policy': ZONE_POLICY_NT_YK,
+        'zone_policy': '-',
         'rules_delta_seconds': 0,
-        'format': 'P%sT',
+        'format': 'PST',
         'until_year': 1980,
         'until_month': 1,
         'until_day': 1,
@@ -5846,7 +5944,7 @@ ZONE_INFO_America_North_Dakota_New_Salem: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Nuuk
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Nuuk: List[ZoneEra] = [
@@ -5862,12 +5960,24 @@ ZONE_ERAS_America_Nuuk: List[ZoneEra] = [
         'until_seconds': 7200,
         'until_time_suffix': 'w',
     },
-    #             -3:00    EU    -03/-02
+    #             -3:00    EU    -03/-02    2023 Mar 25 22:00
     {
         'offset_seconds': -10800,
         'zone_policy': ZONE_POLICY_EU,
         'rules_delta_seconds': 0,
         'format': '-03/-02',
+        'until_year': 2023,
+        'until_month': 3,
+        'until_day': 25,
+        'until_seconds': 79200,
+        'until_time_suffix': 'w',
+    },
+    #             -2:00    -    -02
+    {
+        'offset_seconds': -7200,
+        'zone_policy': '-',
+        'rules_delta_seconds': 0,
+        'format': '-02',
         'until_year': 10000,
         'until_month': 1,
         'until_day': 1,
@@ -5884,7 +5994,7 @@ ZONE_INFO_America_Nuuk: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Ojinaga
-# Era count: 6
+# Era count: 7
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Ojinaga: List[ZoneEra] = [
@@ -5948,12 +6058,24 @@ ZONE_ERAS_America_Ojinaga: List[ZoneEra] = [
         'until_seconds': 7200,
         'until_time_suffix': 'w',
     },
-    #             -6:00    -    CST
+    #             -6:00    -    CST    2022 Nov 30  0:00
     {
         'offset_seconds': -21600,
         'zone_policy': '-',
         'rules_delta_seconds': 0,
         'format': 'CST',
+        'until_year': 2022,
+        'until_month': 11,
+        'until_day': 30,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             -6:00    US    C%sT
+    {
+        'offset_seconds': -21600,
+        'zone_policy': ZONE_POLICY_US,
+        'rules_delta_seconds': 0,
+        'format': 'C%sT',
         'until_year': 10000,
         'until_month': 1,
         'until_day': 1,
@@ -5992,68 +6114,6 @@ ZONE_ERAS_America_Panama: List[ZoneEra] = [
 ZONE_INFO_America_Panama: ZoneInfo = {
     'name': 'America/Panama',
     'eras': ZONE_ERAS_America_Panama
-}
-
-# ---------------------------------------------------------------------------
-# Zone name: America/Pangnirtung
-# Era count: 4
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_America_Pangnirtung: List[ZoneEra] = [
-    #             -4:00    NT_YK    A%sT    1995 Apr Sun>=1  2:00
-    {
-        'offset_seconds': -14400,
-        'zone_policy': ZONE_POLICY_NT_YK,
-        'rules_delta_seconds': 0,
-        'format': 'A%sT',
-        'until_year': 1995,
-        'until_month': 4,
-        'until_day': 2,
-        'until_seconds': 7200,
-        'until_time_suffix': 'w',
-    },
-    #             -5:00    Canada    E%sT    1999 Oct 31  2:00
-    {
-        'offset_seconds': -18000,
-        'zone_policy': ZONE_POLICY_Canada,
-        'rules_delta_seconds': 0,
-        'format': 'E%sT',
-        'until_year': 1999,
-        'until_month': 10,
-        'until_day': 31,
-        'until_seconds': 7200,
-        'until_time_suffix': 'w',
-    },
-    #             -6:00    Canada    C%sT    2000 Oct 29  2:00
-    {
-        'offset_seconds': -21600,
-        'zone_policy': ZONE_POLICY_Canada,
-        'rules_delta_seconds': 0,
-        'format': 'C%sT',
-        'until_year': 2000,
-        'until_month': 10,
-        'until_day': 29,
-        'until_seconds': 7200,
-        'until_time_suffix': 'w',
-    },
-    #             -5:00    Canada    E%sT
-    {
-        'offset_seconds': -18000,
-        'zone_policy': ZONE_POLICY_Canada,
-        'rules_delta_seconds': 0,
-        'format': 'E%sT',
-        'until_year': 10000,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_America_Pangnirtung: ZoneInfo = {
-    'name': 'America/Pangnirtung',
-    'eras': ZONE_ERAS_America_Pangnirtung
 }
 
 # ---------------------------------------------------------------------------
@@ -7094,12 +7154,12 @@ ZONE_INFO_America_Vancouver: ZoneInfo = {
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Whitehorse: List[ZoneEra] = [
-    #             -8:00    NT_YK    P%sT    1980
+    #             -8:00    -    PST    1980
     {
         'offset_seconds': -28800,
-        'zone_policy': ZONE_POLICY_NT_YK,
+        'zone_policy': '-',
         'rules_delta_seconds': 0,
-        'format': 'P%sT',
+        'format': 'PST',
         'until_year': 1980,
         'until_month': 1,
         'until_day': 1,
@@ -11000,17 +11060,17 @@ ZONE_INFO_Asia_Shanghai: ZoneInfo = {
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Asia_Singapore: List[ZoneEra] = [
-    #             7:30    -    +0730    1982 Jan  1
+    #             7:30    -    +0730    1981 Dec 31 16:00u
     {
         'offset_seconds': 27000,
         'zone_policy': '-',
         'rules_delta_seconds': 0,
         'format': '+0730',
-        'until_year': 1982,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
+        'until_year': 1981,
+        'until_month': 12,
+        'until_day': 31,
+        'until_seconds': 57600,
+        'until_time_suffix': 'u',
     },
     #             8:00    -    +08
     {
@@ -17229,7 +17289,7 @@ ZONE_INFO_WET: ZoneInfo = {
 
 
 # ---------------------------------------------------------------------------
-# Supported links: 244
+# Supported links: 245
 # ---------------------------------------------------------------------------
 
 # Link name: Africa/Accra -> Africa/Abidjan
@@ -17632,6 +17692,12 @@ ZONE_INFO_America_Nassau: ZoneInfo = {
 ZONE_INFO_America_Nipigon: ZoneInfo = {
     'name': 'America/Nipigon',
     'link_to': ZONE_INFO_America_Toronto
+}
+
+# Link name: America/Pangnirtung -> America/Iqaluit
+ZONE_INFO_America_Pangnirtung: ZoneInfo = {
+    'name': 'America/Pangnirtung',
+    'link_to': ZONE_INFO_America_Iqaluit
 }
 
 # Link name: America/Port_of_Spain -> America/Puerto_Rico
@@ -18708,17 +18774,382 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # Notable zones: 8
 # ---------------------------------------------------------------------------
 
-# Africa/Johannesburg (RULES not fixed but FORMAT is missing '%' or '/')
-# America/Guyana (STDOFF (-3:45) not at :00 or :30 mark)
-# Antarctica/Casey (UNTIL '0:01' not on 15-minute boundary)
-# Asia/Gaza (UNTIL '0:01' not on 15-minute boundary)
-# Asia/Kathmandu (STDOFF (5:45) not at :00 or :30 mark)
-# Australia/Eucla (STDOFF (8:45) not at :00 or :30 mark)
-# Pacific/Chatham (STDOFF (12:45) not at :00 or :30 mark)
-# Pacific/Kiritimati (
+# Africa/Casablanca {
+#   Morocco {SAVE (delta_offset) '-1:00' different from 1:00}
+# }
+# Africa/Ceuta {
+#   EU {Added anchor rule at year 0}
+# }
+# Africa/El_Aaiun {
+#   Morocco {SAVE (delta_offset) '-1:00' different from 1:00}
+# }
+# Africa/Johannesburg {RULES not fixed but FORMAT is missing '%' or '/'}
+# Africa/Windhoek {
+#   Namibia {
+#     Added anchor rule at year 0,
+#     LETTER 'CAT' not single character,
+#     LETTER 'WAT' not single character,
+#     SAVE (delta_offset) '-1:00' different from 1:00,
+#   }
+# }
+# America/Argentina/San_Luis {
+#   SanLuis {Added anchor rule at year 0}
+# }
+# America/Asuncion {
+#   Para {Added anchor rule at year 0}
+# }
+# America/Belize {
+#   Belize {
+#     LETTER 'CDT' not single character,
+#     LETTER 'CST' not single character,
+#   }
+# }
+# America/Bogota {
+#   CO {Added anchor rule at year 0}
+# }
+# America/Costa_Rica {
+#   CR {Added anchor rule at year 0}
+# }
+# America/Danmarkshavn {
+#   EU {Added anchor rule at year 0}
+# }
+# America/El_Salvador {
+#   Salv {Added anchor rule at year 0}
+# }
+# America/Goose_Bay {
+#   StJohns {
+#     AT '0:01' not on 15-minute boundary,
+#     LETTER 'DD' not single character,
+#     SAVE (delta_offset) '2:00' different from 1:00,
+#   }
+# }
+# America/Guatemala {
+#   Guat {Added anchor rule at year 0}
+# }
+# America/Guayaquil {
+#   Ecuador {Added anchor rule at year 0}
+# }
+# America/Guyana {STDOFF (-3:45) not at :00 or :30 mark}
+# America/Managua {
+#   Nic {Added anchor rule at year 0}
+# }
+# America/Moncton {
+#   Moncton {AT '0:01' not on 15-minute boundary}
+# }
+# America/Montevideo {
+#   Uruguay {
+#     SAVE (delta_offset) '0:30' different from 1:00,
+#     SAVE (delta_offset) '1:30' different from 1:00,
+#   }
+# }
+# America/Nuuk {
+#   EU {Added anchor rule at year 0}
+# }
+# America/Port-au-Prince {
+#   Haiti {Added anchor rule at year 0}
+# }
+# America/Santo_Domingo {
+#   DR {
+#     LETTER '-0430' not single character,
+#     LETTER 'EST' not single character,
+#     SAVE (delta_offset) '0:30' different from 1:00,
+#   }
+# }
+# America/Scoresbysund {
+#   EU {Added anchor rule at year 0}
+# }
+# America/St_Johns {
+#   StJohns {
+#     AT '0:01' not on 15-minute boundary,
+#     LETTER 'DD' not single character,
+#     SAVE (delta_offset) '2:00' different from 1:00,
+#   }
+# }
+# America/Tegucigalpa {
+#   Hond {Added anchor rule at year 0}
+# }
+# America/Thule {
+#   Thule {Added anchor rule at year 0}
+# }
+# Antarctica/Casey {UNTIL '0:01' not on 15-minute boundary}
+# Antarctica/Troll {
+#   Troll {
+#     Added anchor rule at year 0,
+#     LETTER '+00' not single character,
+#     LETTER '+02' not single character,
+#     SAVE (delta_offset) '2:00' different from 1:00,
+#   }
+# }
+# Asia/Almaty {
+#   RussiaAsia {Added anchor rule at year 0}
+# }
+# Asia/Amman {
+#   Jordan {Added anchor rule at year 0}
+# }
+# Asia/Aqtau {
+#   RussiaAsia {Added anchor rule at year 0}
+# }
+# Asia/Aqtobe {
+#   RussiaAsia {Added anchor rule at year 0}
+# }
+# Asia/Ashgabat {
+#   RussiaAsia {Added anchor rule at year 0}
+# }
+# Asia/Atyrau {
+#   RussiaAsia {Added anchor rule at year 0}
+# }
+# Asia/Baghdad {
+#   Iraq {Added anchor rule at year 0}
+# }
+# Asia/Baku {
+#   Azer {Added anchor rule at year 0}
+#   EUAsia {Added anchor rule at year 0}
+#   RussiaAsia {Added anchor rule at year 0}
+# }
+# Asia/Bishkek {
+#   Kyrgyz {Added anchor rule at year 0}
+#   RussiaAsia {Added anchor rule at year 0}
+# }
+# Asia/Choibalsan {
+#   Mongol {Added anchor rule at year 0}
+# }
+# Asia/Dhaka {
+#   Dhaka {Added anchor rule at year 0}
+# }
+# Asia/Dushanbe {
+#   RussiaAsia {Added anchor rule at year 0}
+# }
+# Asia/Famagusta {
+#   Cyprus {Added anchor rule at year 0}
+#   EUAsia {Added anchor rule at year 0}
+# }
+# Asia/Gaza {
+#   UNTIL '0:01' not on 15-minute boundary,
+#   Jordan {Added anchor rule at year 0}
+#   Palestine {
+#     AT '0:01' not on 15-minute boundary,
+#     Added anchor rule at year 0,
+#   }
+# }
+# Asia/Hebron {
+#   Jordan {Added anchor rule at year 0}
+#   Palestine {
+#     AT '0:01' not on 15-minute boundary,
+#     Added anchor rule at year 0,
+#   }
+# }
+# Asia/Hovd {
+#   Mongol {Added anchor rule at year 0}
+# }
+# Asia/Karachi {
+#   Pakistan {Added anchor rule at year 0}
+# }
+# Asia/Kathmandu {STDOFF (5:45) not at :00 or :30 mark}
+# Asia/Nicosia {
+#   Cyprus {Added anchor rule at year 0}
+#   EUAsia {Added anchor rule at year 0}
+# }
+# Asia/Oral {
+#   RussiaAsia {Added anchor rule at year 0}
+# }
+# Asia/Qostanay {
+#   RussiaAsia {Added anchor rule at year 0}
+# }
+# Asia/Qyzylorda {
+#   RussiaAsia {Added anchor rule at year 0}
+# }
+# Asia/Samarkand {
+#   RussiaAsia {Added anchor rule at year 0}
+# }
+# Asia/Shanghai {
+#   PRC {Added anchor rule at year 0}
+# }
+# Asia/Tashkent {
+#   RussiaAsia {Added anchor rule at year 0}
+# }
+# Asia/Tbilisi {
+#   E-EurAsia {Added anchor rule at year 0}
+#   RussiaAsia {Added anchor rule at year 0}
+# }
+# Asia/Ulaanbaatar {
+#   Mongol {Added anchor rule at year 0}
+# }
+# Asia/Yerevan {
+#   Armenia {Added anchor rule at year 0}
+#   RussiaAsia {Added anchor rule at year 0}
+# }
+# Atlantic/Azores {
+#   EU {Added anchor rule at year 0}
+#   W-Eur {Added anchor rule at year 0}
+# }
+# Atlantic/Canary {
+#   EU {Added anchor rule at year 0}
+# }
+# Atlantic/Faroe {
+#   EU {Added anchor rule at year 0}
+# }
+# Atlantic/Madeira {
+#   EU {Added anchor rule at year 0}
+# }
+# Australia/Eucla {
+#   STDOFF (8:45) not at :00 or :30 mark,
+#   AW {Added anchor rule at year 0}
+# }
+# Australia/Lindeman {
+#   Holiday {Added anchor rule at year 0}
+# }
+# Australia/Lord_Howe {
+#   LH {
+#     Added anchor rule at year 0,
+#     SAVE (delta_offset) '0:30' different from 1:00,
+#   }
+# }
+# Australia/Perth {
+#   AW {Added anchor rule at year 0}
+# }
+# EET {
+#   EU {Added anchor rule at year 0}
+# }
+# Europe/Andorra {
+#   EU {Added anchor rule at year 0}
+# }
+# Europe/Athens {
+#   EU {Added anchor rule at year 0}
+# }
+# Europe/Belgrade {
+#   EU {Added anchor rule at year 0}
+# }
+# Europe/Berlin {
+#   EU {Added anchor rule at year 0}
+# }
+# Europe/Brussels {
+#   EU {Added anchor rule at year 0}
+# }
+# Europe/Bucharest {
+#   E-Eur {Added anchor rule at year 0}
+#   EU {Added anchor rule at year 0}
+# }
+# Europe/Budapest {
+#   EU {Added anchor rule at year 0}
+# }
+# Europe/Chisinau {
+#   E-Eur {Added anchor rule at year 0}
+#   Moldova {Added anchor rule at year 0}
+# }
+# Europe/Dublin {
+#   Eire {SAVE (delta_offset) '-1:00' different from 1:00}
+# }
+# Europe/Gibraltar {
+#   EU {Added anchor rule at year 0}
+# }
+# Europe/Helsinki {
+#   EU {Added anchor rule at year 0}
+# }
+# Europe/Istanbul {
+#   EU {Added anchor rule at year 0}
+# }
+# Europe/Kyiv {
+#   EU {Added anchor rule at year 0}
+# }
+# Europe/Lisbon {
+#   EU {Added anchor rule at year 0}
+#   W-Eur {Added anchor rule at year 0}
+# }
+# Europe/London {
+#   EU {Added anchor rule at year 0}
+#   GB-Eire {
+#     LETTER 'BST' not single character,
+#     LETTER 'GMT' not single character,
+#   }
+# }
+# Europe/Madrid {
+#   EU {Added anchor rule at year 0}
+# }
+# Europe/Malta {
+#   EU {Added anchor rule at year 0}
+#   Malta {Added anchor rule at year 0}
+# }
+# Europe/Paris {
+#   EU {Added anchor rule at year 0}
+# }
+# Europe/Prague {
+#   EU {Added anchor rule at year 0}
+# }
+# Europe/Riga {
+#   EU {Added anchor rule at year 0}
+#   Latvia {Added anchor rule at year 0}
+# }
+# Europe/Rome {
+#   EU {Added anchor rule at year 0}
+# }
+# Europe/Simferopol {
+#   EU {Added anchor rule at year 0}
+# }
+# Europe/Sofia {
+#   Bulg {Added anchor rule at year 0}
+#   E-Eur {Added anchor rule at year 0}
+#   EU {Added anchor rule at year 0}
+# }
+# Europe/Tallinn {
+#   EU {Added anchor rule at year 0}
+# }
+# Europe/Tirane {
+#   EU {Added anchor rule at year 0}
+# }
+# Europe/Vienna {
+#   EU {Added anchor rule at year 0}
+# }
+# Europe/Vilnius {
+#   EU {Added anchor rule at year 0}
+# }
+# Europe/Warsaw {
+#   EU {Added anchor rule at year 0}
+#   W-Eur {Added anchor rule at year 0}
+# }
+# Europe/Zurich {
+#   EU {Added anchor rule at year 0}
+# }
+# Indian/Mauritius {
+#   Mauritius {Added anchor rule at year 0}
+# }
+# Pacific/Apia {
+#   WS {Added anchor rule at year 0}
+# }
+# Pacific/Chatham {
+#   STDOFF (12:45) not at :00 or :30 mark,
+#   Chatham {Added anchor rule at year 0}
+# }
+# Pacific/Efate {
+#   Vanuatu {Added anchor rule at year 0}
+# }
+# Pacific/Fiji {
+#   Fiji {Added anchor rule at year 0}
+# }
+# Pacific/Galapagos {
+#   Ecuador {Added anchor rule at year 0}
+# }
+# Pacific/Guam {
+#   Guam {AT '2:01' not on 15-minute boundary}
+# }
+# Pacific/Kiritimati {
 #   STDOFF '-10:40' not on 15-minute boundary,
 #   STDOFF (-10:40) not at :00 or :30 mark,
-# )
+# }
+# Pacific/Noumea {
+#   NC {Added anchor rule at year 0}
+# }
+# Pacific/Rarotonga {
+#   Cook {
+#     Added anchor rule at year 0,
+#     SAVE (delta_offset) '0:30' different from 1:00,
+#   }
+# }
+# Pacific/Tongatapu {
+#   Tonga {Added anchor rule at year 0}
+# }
+# WET {
+#   EU {Added anchor rule at year 0}
+# }
 
 
 # ---------------------------------------------------------------------------

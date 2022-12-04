@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedb
-#     --tz_version 2022f
+#     --tz_version 2022g
 #     --action zonedb
 #     --language python
 #     --scope extended
@@ -23,7 +23,7 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2022f
+# from https://github.com/eggert/tz/releases/tag/2022g
 #
 # DO NOT EDIT
 
@@ -82,6 +82,7 @@ ZONE_REGISTRY: ZoneInfoMap = {
     'America/Cayenne': ZONE_INFO_America_Cayenne,
     'America/Chicago': ZONE_INFO_America_Chicago,
     'America/Chihuahua': ZONE_INFO_America_Chihuahua,
+    'America/Ciudad_Juarez': ZONE_INFO_America_Ciudad_Juarez,
     'America/Costa_Rica': ZONE_INFO_America_Costa_Rica,
     'America/Cuiaba': ZONE_INFO_America_Cuiaba,
     'America/Danmarkshavn': ZONE_INFO_America_Danmarkshavn,
@@ -143,7 +144,6 @@ ZONE_REGISTRY: ZoneInfoMap = {
     'America/Nuuk': ZONE_INFO_America_Nuuk,
     'America/Ojinaga': ZONE_INFO_America_Ojinaga,
     'America/Panama': ZONE_INFO_America_Panama,
-    'America/Pangnirtung': ZONE_INFO_America_Pangnirtung,
     'America/Paramaribo': ZONE_INFO_America_Paramaribo,
     'America/Phoenix': ZONE_INFO_America_Phoenix,
     'America/Port-au-Prince': ZONE_INFO_America_Port_au_Prince,
@@ -386,7 +386,7 @@ ZONE_REGISTRY: ZoneInfoMap = {
 
 }
 
-# Supported Zones and Links: 595
+# Supported Zones and Links: 596
 ZONE_AND_LINK_REGISTRY: ZoneInfoMap = {
     'Africa/Abidjan': ZONE_INFO_Africa_Abidjan,
     'Africa/Accra': ZONE_INFO_Africa_Accra,
@@ -483,6 +483,7 @@ ZONE_AND_LINK_REGISTRY: ZoneInfoMap = {
     'America/Cayman': ZONE_INFO_America_Cayman,
     'America/Chicago': ZONE_INFO_America_Chicago,
     'America/Chihuahua': ZONE_INFO_America_Chihuahua,
+    'America/Ciudad_Juarez': ZONE_INFO_America_Ciudad_Juarez,
     'America/Coral_Harbour': ZONE_INFO_America_Coral_Harbour,
     'America/Cordoba': ZONE_INFO_America_Cordoba,
     'America/Costa_Rica': ZONE_INFO_America_Costa_Rica,

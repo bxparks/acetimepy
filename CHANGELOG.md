@@ -1,6 +1,19 @@
 # Changelog
 
 * Unreleased
+* v0.5.6 (2022-12-04, TZDB 2022g)
+    * Upgrade TZDB from 2022f to 2022g
+        * https://mm.icann.org/pipermail/tz-announce/2022-November/000076.html
+            * The northern edge of Chihuahua changes to US timekeeping.
+            * Much of Greenland stops changing clocks after March 2023.
+            * Fix some pre-1996 timestamps in northern Canada.
+            * C89 is now deprecated; please use C99 or later.
+            * Portability fixes for AIX, libintl, MS-Windows, musl, z/OS
+            * In C code, use more C23 features if available.
+            * C23 timegm now supported by default
+            * Fixes for unlikely integer overflows
+    * Incorporate notable `zone_policies.py` comments into notable
+      `zone_infos.py`.
 * v0.5.5 (2022-11-02, TZDB 2022f)
     * Upgrade TZDB from 2022e to 2022f
         * https://mm.icann.org/pipermail/tz-announce/2022-October/000075.html
