@@ -1,6 +1,6 @@
 TARGETS := zone_infos.py zone_policies.py zone_registry.py
 
-TZ_VERSION := 2022f
+TZ_VERSION := 2022g
 START_YEAR := 1974
 UNTIL_YEAR := 10000
 

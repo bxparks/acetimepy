@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/dev/tz
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedb
-#     --tz_version 2022f
+#     --tz_version 2022g
 #     --action zonedb
 #     --language python
 #     --scope extended
@@ -23,7 +23,7 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2022f
+# from https://github.com/eggert/tz/releases/tag/2022g
 #
 # DO NOT EDIT
 
@@ -34,8 +34,8 @@ from ..zonedb_types import (
 )
 
 # ---------------------------------------------------------------------------
-# Supported zone policies: 113
-# numRules: 1192
+# Supported zone policies: 114
+# numRules: 1193
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -2611,7 +2611,7 @@ ZONE_POLICY_C_Eur: ZonePolicy = {
 # Rule count: 3
 # ---------------------------------------------------------------------------
 ZONE_RULES_CO: List[ZoneRule] = [
-    # Anchor: Rule    CO    1993    only    -    Apr     4    0:00    0    -
+    # Anchor: Rule    CO    1993    only    -    Feb     6    24:00    0    -
     {
         'from_year': 0,
         'to_year': 0,
@@ -2623,7 +2623,7 @@ ZONE_RULES_CO: List[ZoneRule] = [
         'delta_seconds': 0,
         'letter': '-',
     },
-    # Rule    CO    1992    only    -    May     3    0:00    1:00    -
+    # Rule    CO    1992    only    -    May     3     0:00    1:00    -
     {
         'from_year': 1992,
         'to_year': 1992,
@@ -2635,14 +2635,14 @@ ZONE_RULES_CO: List[ZoneRule] = [
         'delta_seconds': 3600,
         'letter': '-',
     },
-    # Rule    CO    1993    only    -    Apr     4    0:00    0    -
+    # Rule    CO    1993    only    -    Feb     6    24:00    0    -
     {
         'from_year': 1993,
         'to_year': 1993,
-        'in_month': 4,
+        'in_month': 2,
         'on_day_of_week': 0,
-        'on_day_of_month': 4,
-        'at_seconds': 0,
+        'on_day_of_month': 6,
+        'at_seconds': 86400,
         'at_time_suffix': 'w',
         'delta_seconds': 0,
         'letter': '-',
@@ -10651,21 +10651,21 @@ ZONE_POLICY_NC: ZonePolicy = {
 # Rule count: 4
 # ---------------------------------------------------------------------------
 ZONE_RULES_NT_YK: List[ZoneRule] = [
-    # Rule    NT_YK    1965    only    -    Oct    lastSun    2:00    0    S
+    # Rule    NT_YK    1945    only    -    Sep    30    2:00    0    S
     {
-        'from_year': 1965,
-        'to_year': 1965,
-        'in_month': 10,
-        'on_day_of_week': 7,
-        'on_day_of_month': 0,
+        'from_year': 1945,
+        'to_year': 1945,
+        'in_month': 9,
+        'on_day_of_week': 0,
+        'on_day_of_month': 30,
         'at_seconds': 7200,
         'at_time_suffix': 'w',
         'delta_seconds': 0,
         'letter': 'S',
     },
-    # Rule    NT_YK    1980    1986    -    Apr    lastSun    2:00    1:00    D
+    # Rule    NT_YK    1972    1986    -    Apr    lastSun    2:00    1:00    D
     {
-        'from_year': 1980,
+        'from_year': 1972,
         'to_year': 1986,
         'in_month': 4,
         'on_day_of_week': 7,
@@ -10675,9 +10675,9 @@ ZONE_RULES_NT_YK: List[ZoneRule] = [
         'delta_seconds': 3600,
         'letter': 'D',
     },
-    # Rule    NT_YK    1980    2006    -    Oct    lastSun    2:00    0    S
+    # Rule    NT_YK    1972    2006    -    Oct    lastSun    2:00    0    S
     {
-        'from_year': 1980,
+        'from_year': 1972,
         'to_year': 2006,
         'in_month': 10,
         'on_day_of_week': 7,
@@ -14967,6 +14967,30 @@ ZONE_POLICY_Winn: ZonePolicy = {
 }
 
 # ---------------------------------------------------------------------------
+# Policy name: Yukon
+# Rule count: 1
+# ---------------------------------------------------------------------------
+ZONE_RULES_Yukon: List[ZoneRule] = [
+    # Rule    Yukon    1965    only    -    Oct    lastSun    2:00    0    S
+    {
+        'from_year': 1965,
+        'to_year': 1965,
+        'in_month': 10,
+        'on_day_of_week': 7,
+        'on_day_of_month': 0,
+        'at_seconds': 7200,
+        'at_time_suffix': 'w',
+        'delta_seconds': 0,
+        'letter': 'S',
+    },
+
+]
+ZONE_POLICY_Yukon: ZonePolicy = {
+    'name': 'Yukon',
+    'rules': ZONE_RULES_Yukon
+}
+
+# ---------------------------------------------------------------------------
 # Policy name: Zion
 # Rule count: 60
 # ---------------------------------------------------------------------------
@@ -15704,70 +15728,121 @@ ZONE_POLICY_Zion: ZonePolicy = {
 # Unsupported zone policies: 20
 # ---------------------------------------------------------------------------
 
-# CA (unused)
-# Chicago (unused)
-# Denver (unused)
-# Detroit (unused)
-# EgyptAsia (unused)
-# Indianapolis (unused)
-# Louisville (unused)
-# Marengo (unused)
-# Menominee (unused)
-# NBorneo (unused)
-# NYC (unused)
-# Perry (unused)
-# Pike (unused)
-# Pulaski (unused)
-# Regina (unused)
-# Shang (unused)
-# SovietZone (unused)
-# Starke (unused)
-# Swift (unused)
-# Vincennes (unused)
+# CA {unused}
+# Chicago {unused}
+# Denver {unused}
+# Detroit {unused}
+# EgyptAsia {unused}
+# Indianapolis {unused}
+# Louisville {unused}
+# Marengo {unused}
+# Menominee {unused}
+# NBorneo {unused}
+# NYC {unused}
+# Perry {unused}
+# Pike {unused}
+# Pulaski {unused}
+# Regina {unused}
+# Shang {unused}
+# SovietZone {unused}
+# Starke {unused}
+# Swift {unused}
+# Vincennes {unused}
 
 
 # ---------------------------------------------------------------------------
-# Notable zone policies: 14
+# Notable zone policies: 54
 # ---------------------------------------------------------------------------
 
-# Belize (
+# AW {Added anchor rule at year 0}
+# Armenia {Added anchor rule at year 0}
+# Azer {Added anchor rule at year 0}
+# Belize {
 #   LETTER 'CDT' not single character,
 #   LETTER 'CST' not single character,
-# )
-# Cook (SAVE (delta_offset) '0:30' different from 1:00)
-# DR (
+# }
+# Bulg {Added anchor rule at year 0}
+# CO {Added anchor rule at year 0}
+# CR {Added anchor rule at year 0}
+# Chatham {Added anchor rule at year 0}
+# Cook {
+#   Added anchor rule at year 0,
+#   SAVE (delta_offset) '0:30' different from 1:00,
+# }
+# Cyprus {Added anchor rule at year 0}
+# DR {
 #   LETTER '-0430' not single character,
 #   LETTER 'EST' not single character,
 #   SAVE (delta_offset) '0:30' different from 1:00,
-# )
-# Eire (SAVE (delta_offset) '-1:00' different from 1:00)
-# GB-Eire (
+# }
+# Dhaka {Added anchor rule at year 0}
+# E-Eur {Added anchor rule at year 0}
+# E-EurAsia {Added anchor rule at year 0}
+# EU {Added anchor rule at year 0}
+# EUAsia {Added anchor rule at year 0}
+# Ecuador {Added anchor rule at year 0}
+# Eire {SAVE (delta_offset) '-1:00' different from 1:00}
+# Fiji {Added anchor rule at year 0}
+# GB-Eire {
 #   LETTER 'BST' not single character,
 #   LETTER 'GMT' not single character,
-# )
-# Guam (AT '2:01' not on 15-minute boundary)
-# LH (SAVE (delta_offset) '0:30' different from 1:00)
-# Moncton (AT '0:01' not on 15-minute boundary)
-# Morocco (SAVE (delta_offset) '-1:00' different from 1:00)
-# Namibia (
+# }
+# Guam {AT '2:01' not on 15-minute boundary}
+# Guat {Added anchor rule at year 0}
+# Haiti {Added anchor rule at year 0}
+# Holiday {Added anchor rule at year 0}
+# Hond {Added anchor rule at year 0}
+# Iraq {Added anchor rule at year 0}
+# Jordan {Added anchor rule at year 0}
+# Kyrgyz {Added anchor rule at year 0}
+# LH {
+#   Added anchor rule at year 0,
+#   SAVE (delta_offset) '0:30' different from 1:00,
+# }
+# Latvia {Added anchor rule at year 0}
+# Malta {Added anchor rule at year 0}
+# Mauritius {Added anchor rule at year 0}
+# Moldova {Added anchor rule at year 0}
+# Moncton {AT '0:01' not on 15-minute boundary}
+# Mongol {Added anchor rule at year 0}
+# Morocco {SAVE (delta_offset) '-1:00' different from 1:00}
+# NC {Added anchor rule at year 0}
+# Namibia {
+#   Added anchor rule at year 0,
 #   LETTER 'CAT' not single character,
 #   LETTER 'WAT' not single character,
 #   SAVE (delta_offset) '-1:00' different from 1:00,
-# )
-# Palestine (AT '0:01' not on 15-minute boundary)
-# StJohns (
+# }
+# Nic {Added anchor rule at year 0}
+# PRC {Added anchor rule at year 0}
+# Pakistan {Added anchor rule at year 0}
+# Palestine {
+#   AT '0:01' not on 15-minute boundary,
+#   Added anchor rule at year 0,
+# }
+# Para {Added anchor rule at year 0}
+# RussiaAsia {Added anchor rule at year 0}
+# Salv {Added anchor rule at year 0}
+# SanLuis {Added anchor rule at year 0}
+# StJohns {
 #   AT '0:01' not on 15-minute boundary,
 #   LETTER 'DD' not single character,
 #   SAVE (delta_offset) '2:00' different from 1:00,
-# )
-# Troll (
+# }
+# Thule {Added anchor rule at year 0}
+# Tonga {Added anchor rule at year 0}
+# Troll {
+#   Added anchor rule at year 0,
 #   LETTER '+00' not single character,
 #   LETTER '+02' not single character,
 #   SAVE (delta_offset) '2:00' different from 1:00,
-# )
-# Uruguay (
+# }
+# Uruguay {
 #   SAVE (delta_offset) '0:30' different from 1:00,
 #   SAVE (delta_offset) '1:30' different from 1:00,
-# )
+# }
+# Vanuatu {Added anchor rule at year 0}
+# W-Eur {Added anchor rule at year 0}
+# WS {Added anchor rule at year 0}
 
 
