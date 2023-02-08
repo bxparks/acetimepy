@@ -206,7 +206,7 @@ class Transition:
         if self.zone_rule:
             return self.zone_rule['delta_seconds']
         else:
-            return self.matching_era.zone_era['rules_delta_seconds']
+            return self.matching_era.zone_era['era_delta_seconds']
 
     def copy(self) -> 'Transition':
         result = self.__class__.__new__(self.__class__)
