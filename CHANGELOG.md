@@ -1,6 +1,8 @@
 # Changelog
 
 * Unreleased
+    * Rename `rules_delta_offset` to `era_delta_offset` for better
+      self-documentation.
 * v0.5.6 (2022-12-04, TZDB 2022g)
     * Upgrade TZDB from 2022f to 2022g
         * https://mm.icann.org/pipermail/tz-announce/2022-November/000076.html

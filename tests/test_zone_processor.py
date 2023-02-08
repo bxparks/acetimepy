@@ -113,7 +113,7 @@ class TestZoneProcessorHelperMethods(unittest.TestCase):
         era = ZoneEra({
             'offset_seconds': 0,
             'zone_policy': '-',
-            'rules_delta_seconds': 0,
+            'era_delta_seconds': 0,
             'format': 'EST',
             'until_year': 2000,
             'until_month': 3,
@@ -130,7 +130,7 @@ class TestZoneProcessorHelperMethods(unittest.TestCase):
         prev_era = ZoneEra({
             'offset_seconds': 0,
             'zone_policy': '-',
-            'rules_delta_seconds': 0,
+            'era_delta_seconds': 0,
             'format': 'EST',
             'until_year': 2000,
             'until_month': 1,
@@ -143,7 +143,7 @@ class TestZoneProcessorHelperMethods(unittest.TestCase):
         era = ZoneEra({
             'offset_seconds': 0,
             'zone_policy': '-',
-            'rules_delta_seconds': 0,
+            'era_delta_seconds': 0,
             'format': 'EST',
             'until_year': 2000,
             'until_month': 3,
@@ -183,7 +183,7 @@ class TestCompareTransitionToMatch(unittest.TestCase):
     ZONE_ERA1: ZoneEra = {
         'offset_seconds': 0,
         'zone_policy': '-',
-        'rules_delta_seconds': 0,
+        'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 2001,
         'until_month': 3,
@@ -196,7 +196,7 @@ class TestCompareTransitionToMatch(unittest.TestCase):
     ZONE_ERA2: ZoneEra = {
         'offset_seconds': 0,
         'zone_policy': '-',
-        'rules_delta_seconds': 0,
+        'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 2002,
         'until_month': 3,
@@ -270,7 +270,7 @@ class TestCompareTransitionToMatch(unittest.TestCase):
     ZONE_ERA: ZoneEra = {
         'offset_seconds': 0,
         'zone_policy': '-',
-        'rules_delta_seconds': 0,
+        'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 2000,
         'until_month': 3,
