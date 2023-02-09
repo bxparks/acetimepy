@@ -3,7 +3,7 @@ TARGETS := zone_infos.py zone_policies.py zone_registry.py
 TOOLS := $(abspath ../../../../AceTimeTools)
 TZ_REPO := $(abspath ../../../../tz)
 TZ_VERSION := 2022g
-START_YEAR := 1974
+START_YEAR := 1900
 UNTIL_YEAR := 10000
 
 all: $(TARGETS)
@@ -16,6 +16,7 @@ zone_infos.py:
 		--tag $(TZ_VERSION) \
 		--action zonedb \
 		--language python \
+		--granularity 1 \
 		--scope extended \
 		--generate_int16_year \
 		--start_year $(START_YEAR) \
