@@ -1,7 +1,7 @@
 # Generate the variance report of acetime.acetz.acetz compared to
 # zoneinfo.ZoneInfo.
 
-START_YEAR := 1950
+START_YEAR := 1905
 UNTIL_YEAR := 2100
 
 zoneinfo_variance.txt: report_zoneinfo.py

@@ -8,13 +8,13 @@
 # AceTimePython ZoneDB Start Year: 1900
 # AceTimePython ZoneDB Until Year: 10000
 # ZoneInfo Version: Python 3.9 2021e
-# Report Start Year: 1950
+# Report Start Year: 1905
 # Report Until Year: 2100
 #
 # Report Format
 # -------------
 # Zone {zone_name}
-# {seconds}: {date}: {label}: acetz {value}; zoneinfo {value}
+# {seconds}: {date}: {label}: exp {value}, obs {value}
 # [...]
 
 Zone Africa/Casablanca
@@ -835,6 +835,57 @@ Zone America/Inuvik
 2109225540: 2036-11-02 01:59:00-06:00: dst_offset: acetz 3600; zoneinfo 7200
 2120115600: 2037-03-08 03:00:00-06:00: dst_offset: acetz 3600; zoneinfo 7200
 2140675140: 2037-11-01 01:59:00-06:00: dst_offset: acetz 3600; zoneinfo 7200
+Zone America/Montevideo
+-1459627200: 1923-10-01 01:00:00-03:00: dst_offset: acetz 1800; zoneinfo 3600
+-1443819660: 1924-03-31 23:59:00-03:00: dst_offset: acetz 1800; zoneinfo 3600
+-1428006600: 1924-10-01 00:30:00-03:00: dst_offset: acetz 1800; zoneinfo 3600
+-1412283660: 1925-03-31 23:59:00-03:00: dst_offset: acetz 1800; zoneinfo 3600
+-1396470600: 1925-10-01 00:30:00-03:00: dst_offset: acetz 1800; zoneinfo 3600
+-1380747660: 1926-03-31 23:59:00-03:00: dst_offset: acetz 1800; zoneinfo 3600
+-1141590600: 1933-10-29 00:30:00-03:00: dst_offset: acetz 1800; zoneinfo 3600
+-1128286860: 1934-03-31 23:59:00-03:00: dst_offset: acetz 1800; zoneinfo 3600
+-1110141000: 1934-10-28 00:30:00-03:00: dst_offset: acetz 1800; zoneinfo 3600
+-1096837260: 1935-03-30 23:59:00-03:00: dst_offset: acetz 1800; zoneinfo 3600
+-1078691400: 1935-10-27 00:30:00-03:00: dst_offset: acetz 1800; zoneinfo 3600
+-1065387660: 1936-03-28 23:59:00-03:00: dst_offset: acetz 1800; zoneinfo 3600
+-1047241800: 1936-10-25 00:30:00-03:00: dst_offset: acetz 1800; zoneinfo 3600
+-1033938060: 1937-03-27 23:59:00-03:00: dst_offset: acetz 1800; zoneinfo 3600
+-1015187400: 1937-10-31 00:30:00-03:00: dst_offset: acetz 1800; zoneinfo 3600
+-1002488460: 1938-03-26 23:59:00-03:00: dst_offset: acetz 1800; zoneinfo 3600
+-983737800: 1938-10-30 00:30:00-03:00: dst_offset: acetz 1800; zoneinfo 3600
+-971038860: 1939-03-25 23:59:00-03:00: dst_offset: acetz 1800; zoneinfo 3600
+-954707400: 1939-10-01 00:30:00-03:00: dst_offset: acetz 1800; zoneinfo 3600
+-938984460: 1940-03-30 23:59:00-03:00: dst_offset: acetz 1800; zoneinfo 3600
+-920838600: 1940-10-27 00:30:00-03:00: dst_offset: acetz 1800; zoneinfo 3600
+-907534860: 1941-03-29 23:59:00-03:00: dst_offset: acetz 1800; zoneinfo 3600
+-896819400: 1941-08-01 00:30:00-03:00: dst_offset: acetz 1800; zoneinfo 3600
+-853621260: 1942-12-13 23:59:00-03:00: dst_offset: acetz 1800; zoneinfo 3600
+Zone America/Punta_Arenas
+-1335986220: 1927-09-01 00:43:00-04:00: dst_offset: acetz 3600; zoneinfo 2565
+-1317585660: 1928-03-31 23:59:00-04:00: dst_offset: acetz 3600; zoneinfo 2565
+-1304362800: 1928-09-01 01:00:00-04:00: dst_offset: acetz 3600; zoneinfo 2565
+-1286049660: 1929-03-31 23:59:00-04:00: dst_offset: acetz 3600; zoneinfo 2565
+-1272826800: 1929-09-01 01:00:00-04:00: dst_offset: acetz 3600; zoneinfo 2565
+-1254513660: 1930-03-31 23:59:00-04:00: dst_offset: acetz 3600; zoneinfo 2565
+-1241290800: 1930-09-01 01:00:00-04:00: dst_offset: acetz 3600; zoneinfo 2565
+-1222977660: 1931-03-31 23:59:00-04:00: dst_offset: acetz 3600; zoneinfo 2565
+-1209754800: 1931-09-01 01:00:00-04:00: dst_offset: acetz 3600; zoneinfo 2565
+-1191355260: 1932-03-31 23:59:00-04:00: dst_offset: acetz 3600; zoneinfo 2565
+-736632000: 1946-08-29 00:00:00-04:00: dst_offset: acetz 3600; zoneinfo 2565
+-718056060: 1947-03-31 23:59:00-04:00: dst_offset: acetz 3600; zoneinfo 2565
+Zone America/Santiago
+-1335986220: 1927-09-01 00:43:00-04:00: dst_offset: acetz 3600; zoneinfo 2565
+-1317585660: 1928-03-31 23:59:00-04:00: dst_offset: acetz 3600; zoneinfo 2565
+-1304362800: 1928-09-01 01:00:00-04:00: dst_offset: acetz 3600; zoneinfo 2565
+-1286049660: 1929-03-31 23:59:00-04:00: dst_offset: acetz 3600; zoneinfo 2565
+-1272826800: 1929-09-01 01:00:00-04:00: dst_offset: acetz 3600; zoneinfo 2565
+-1254513660: 1930-03-31 23:59:00-04:00: dst_offset: acetz 3600; zoneinfo 2565
+-1241290800: 1930-09-01 01:00:00-04:00: dst_offset: acetz 3600; zoneinfo 2565
+-1222977660: 1931-03-31 23:59:00-04:00: dst_offset: acetz 3600; zoneinfo 2565
+-1209754800: 1931-09-01 01:00:00-04:00: dst_offset: acetz 3600; zoneinfo 2565
+-1191355260: 1932-03-31 23:59:00-04:00: dst_offset: acetz 3600; zoneinfo 2565
+-736635600: 1946-08-28 23:00:00-04:00: dst_offset: acetz 3600; zoneinfo 2565
+-718056060: 1947-03-31 23:59:00-04:00: dst_offset: acetz 3600; zoneinfo 2565
 Zone America/Scoresbysund
 354679200: 1981-03-29 02:00:00+00:00: dst_offset: acetz 3600; zoneinfo 7200
 370400340: 1981-09-27 00:59:00+00:00: dst_offset: acetz 3600; zoneinfo 7200
@@ -883,6 +934,9 @@ Zone Asia/Choibalsan
 1127491140: 2005-09-24 01:59:00+10:00: dst_offset: acetz 3600; zoneinfo 7200
 1143219600: 2006-03-25 03:00:00+10:00: dst_offset: acetz 3600; zoneinfo 7200
 1159545540: 2006-09-30 01:59:00+10:00: dst_offset: acetz 3600; zoneinfo 7200
+Zone Asia/Hong_Kong
+-891579600: 1941-10-01 03:30:00+08:30: dst_offset: acetz 1800; zoneinfo -1800
+-884248260: 1941-12-24 23:59:00+08:30: dst_offset: acetz 1800; zoneinfo -1800
 Zone Asia/Ust-Nera
 354898800: 1981-04-01 03:00:00+12:00: dst_offset: acetz 3600; zoneinfo 10800
 370699140: 1981-09-30 23:59:00+12:00: dst_offset: acetz 3600; zoneinfo 10800
@@ -892,6 +946,29 @@ Zone Asia/Ust-Nera
 433771140: 1983-09-30 23:59:00+12:00: dst_offset: acetz 3600; zoneinfo 10800
 449586000: 1984-04-01 01:00:00+12:00: dst_offset: acetz 3600; zoneinfo 10800
 465317940: 1984-09-30 02:59:00+12:00: dst_offset: acetz 3600; zoneinfo 10800
+Zone Atlantic/Azores
+-873676800: 1942-04-26 00:00:00+00:00: dst_offset: acetz 7200; zoneinfo 3600
+-864000060: 1942-08-15 23:59:00+00:00: dst_offset: acetz 7200; zoneinfo 3600
+-842832000: 1943-04-18 00:00:00+00:00: dst_offset: acetz 7200; zoneinfo 3600
+-831340860: 1943-08-28 23:59:00+00:00: dst_offset: acetz 7200; zoneinfo 3600
+-810777600: 1944-04-23 00:00:00+00:00: dst_offset: acetz 7200; zoneinfo 3600
+-799891260: 1944-08-26 23:59:00+00:00: dst_offset: acetz 7200; zoneinfo 3600
+-779328000: 1945-04-22 00:00:00+00:00: dst_offset: acetz 7200; zoneinfo 3600
+-768441660: 1945-08-25 23:59:00+00:00: dst_offset: acetz 7200; zoneinfo 3600
+Zone Atlantic/Madeira
+-873680400: 1942-04-26 00:00:00+01:00: dst_offset: acetz 7200; zoneinfo 3600
+-864003660: 1942-08-15 23:59:00+01:00: dst_offset: acetz 7200; zoneinfo 3600
+-842835600: 1943-04-18 00:00:00+01:00: dst_offset: acetz 7200; zoneinfo 3600
+-831344460: 1943-08-28 23:59:00+01:00: dst_offset: acetz 7200; zoneinfo 3600
+-810781200: 1944-04-23 00:00:00+01:00: dst_offset: acetz 7200; zoneinfo 3600
+-799894860: 1944-08-26 23:59:00+01:00: dst_offset: acetz 7200; zoneinfo 3600
+-779331600: 1945-04-22 00:00:00+01:00: dst_offset: acetz 7200; zoneinfo 3600
+-768445260: 1945-08-25 23:59:00+01:00: dst_offset: acetz 7200; zoneinfo 3600
+Zone Europe/Berlin
+-776563200: 1945-05-24 03:00:00+03:00: dst_offset: acetz 7200; zoneinfo 3600
+-765936060: 1945-09-24 02:59:00+03:00: dst_offset: acetz 7200; zoneinfo 3600
+-714610800: 1947-05-11 04:00:00+03:00: dst_offset: acetz 7200; zoneinfo 3600
+-710380860: 1947-06-29 02:59:00+03:00: dst_offset: acetz 7200; zoneinfo 3600
 Zone Europe/Dublin
 57722400: 1971-10-31 02:00:00+00:00: dst_offset: acetz -3600; zoneinfo 0
 69818340: 1972-03-19 01:59:00+00:00: dst_offset: acetz -3600; zoneinfo 0
@@ -1406,6 +1483,72 @@ Zone Europe/Dublin
 4078429200: 2099-03-29 02:00:00+01:00: dst_offset: acetz 0; zoneinfo 3600
 4096573140: 2099-10-25 01:59:00+01:00: dst_offset: acetz 0; zoneinfo 3600
 4096573200: 2099-10-25 01:00:00+00:00: dst_offset: acetz -3600; zoneinfo 0
+Zone Europe/Gibraltar
+-904518000: 1941-05-04 03:00:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-896050860: 1941-08-10 02:59:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-875487600: 1942-04-05 03:00:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-864601260: 1942-08-09 02:59:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-844038000: 1943-04-04 03:00:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-832546860: 1943-08-15 02:59:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-812588400: 1944-04-02 03:00:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-798073260: 1944-09-17 02:59:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-781052400: 1945-04-02 03:00:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-772066860: 1945-07-15 02:59:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-717030000: 1947-04-13 03:00:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-706748460: 1947-08-10 02:59:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+Zone Europe/Kyiv
+-892522800: 1941-09-19 23:00:00+02:00: dst_offset: acetz 3600; zoneinfo -3600
+-857257260: 1942-11-02 02:59:00+02:00: dst_offset: acetz 3600; zoneinfo -3600
+Zone Europe/Lisbon
+-873684000: 1942-04-26 00:00:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-864007260: 1942-08-15 23:59:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-842839200: 1943-04-18 00:00:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-831348060: 1943-08-28 23:59:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-810784800: 1944-04-23 00:00:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-799898460: 1944-08-26 23:59:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-779335200: 1945-04-22 00:00:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-768448860: 1945-08-25 23:59:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+Zone Europe/London
+-904518000: 1941-05-04 03:00:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-896050860: 1941-08-10 02:59:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-875487600: 1942-04-05 03:00:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-864601260: 1942-08-09 02:59:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-844038000: 1943-04-04 03:00:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-832546860: 1943-08-15 02:59:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-812588400: 1944-04-02 03:00:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-798073260: 1944-09-17 02:59:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-781052400: 1945-04-02 03:00:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-772066860: 1945-07-15 02:59:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-717030000: 1947-04-13 03:00:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-706748460: 1947-08-10 02:59:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+Zone Europe/Madrid
+-999482400: 1938-05-01 00:00:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-986090460: 1938-10-02 23:59:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+Zone Europe/Minsk
+-899780400: 1941-06-27 23:00:00+02:00: dst_offset: acetz 3600; zoneinfo -3600
+-857257260: 1942-11-02 02:59:00+02:00: dst_offset: acetz 3600; zoneinfo -3600
+Zone Europe/Moscow
+-1539493200: 1921-03-21 00:00:00+05:00: dst_offset: acetz 7200; zoneinfo 3600
+-1525323660: 1921-08-31 23:59:00+05:00: dst_offset: acetz 7200; zoneinfo 3600
+Zone Europe/Paris
+-796266060: 1944-10-08 00:59:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-781052400: 1945-04-02 03:00:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+-766623660: 1945-09-16 02:59:00+02:00: dst_offset: acetz 7200; zoneinfo 3600
+Zone Europe/Prague
+-728517600: 1946-12-01 02:00:00+00:00: dst_offset: acetz -3600; zoneinfo 0
+-721260060: 1947-02-23 01:59:00+00:00: dst_offset: acetz -3600; zoneinfo 0
+Zone Europe/Riga
+-899521200: 1941-06-30 23:00:00+02:00: dst_offset: acetz 3600; zoneinfo -3600
+-857257260: 1942-11-02 02:59:00+02:00: dst_offset: acetz 3600; zoneinfo -3600
+Zone Europe/Simferopol
+-888894000: 1941-10-31 23:00:00+02:00: dst_offset: acetz 3600; zoneinfo -3600
+-857257260: 1942-11-02 02:59:00+02:00: dst_offset: acetz 3600; zoneinfo -3600
+Zone Europe/Tallinn
+-892954800: 1941-09-14 23:00:00+02:00: dst_offset: acetz 3600; zoneinfo -3600
+-857257260: 1942-11-02 02:59:00+02:00: dst_offset: acetz 3600; zoneinfo -3600
+Zone Europe/Vilnius
+-900126000: 1941-06-23 23:00:00+02:00: dst_offset: acetz 3600; zoneinfo -3600
+-857257260: 1942-11-02 02:59:00+02:00: dst_offset: acetz 3600; zoneinfo -3600
 Zone Pacific/Rarotonga
 279714600: 1978-11-12 01:00:00-09:30: dst_offset: acetz 1800; zoneinfo 3600
 289387740: 1979-03-03 23:59:00-09:30: dst_offset: acetz 1800; zoneinfo 3600
