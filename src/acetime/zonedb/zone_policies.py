@@ -9,7 +9,7 @@
 #     --granularity 1
 #     --scope extended
 #     --generate_int16_year
-#     --start_year 1900
+#     --start_year 1800
 #     --until_year 10000
 #
 # using the TZ Database files
@@ -29,7 +29,7 @@
 # Supported Zones: 596 (351 zones, 245 links)
 # Unsupported Zones: 0 (0 zones, 0 links)
 # Earliest Year (Original): 1844
-# Earliest Year (Generated): 1899
+# Earliest Year (Generated): 1844
 #
 # DO NOT EDIT
 

@@ -9,7 +9,7 @@
 #     --granularity 1
 #     --scope extended
 #     --generate_int16_year
-#     --start_year 1900
+#     --start_year 1800
 #     --until_year 10000
 #
 # using the TZ Database files
@@ -29,7 +29,7 @@
 # Supported Zones: 596 (351 zones, 245 links)
 # Unsupported Zones: 0 (0 zones, 0 links)
 # Earliest Year (Original): 1844
-# Earliest Year (Generated): 1899
+# Earliest Year (Generated): 1844
 #
 # DO NOT EDIT
 
@@ -46,12 +46,12 @@ from .zone_policies import *
 # ---------------------------------------------------------------------------
 
 TZDB_VERSION = '2022g'
-START_YEAR = 1900
+START_YEAR = 1800
 UNTIL_YEAR = 10000
 
 # ---------------------------------------------------------------------------
 # Supported zones: 351
-# numEras: 1801
+# numEras: 1952
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -94,10 +94,22 @@ ZONE_INFO_Africa_Abidjan: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Africa/Algiers
-# Era count: 9
+# Era count: 10
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Africa_Algiers: List[ZoneEra] = [
+    # 0:12:12 - LMT 1891 Mar 16
+    {
+        'offset_seconds': 732,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1891,
+        'until_month': 3,
+        'until_day': 16,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             0:09:21    -    PMT    1911 Mar 11
     {
         'offset_seconds': 561,
@@ -562,10 +574,22 @@ ZONE_INFO_Africa_El_Aaiun: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Africa/Johannesburg
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Africa_Johannesburg: List[ZoneEra] = [
+    # 1:52:00 - LMT 1892 Feb 8
+    {
+        'offset_seconds': 6720,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1892,
+        'until_month': 2,
+        'until_day': 8,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             1:30    -    SAST    1903 Mar
     {
         'offset_seconds': 5400,
@@ -836,10 +860,22 @@ ZONE_INFO_Africa_Maputo: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Africa/Monrovia
-# Era count: 3
+# Era count: 4
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Africa_Monrovia: List[ZoneEra] = [
+    # -0:43:08 - LMT 1882
+    {
+        'offset_seconds': -2588,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1882,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -0:43:08 -    MMT    1919 Mar
     {
         'offset_seconds': -2588,
@@ -1034,10 +1070,22 @@ ZONE_INFO_Africa_Ndjamena: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Africa/Sao_Tome
-# Era count: 4
+# Era count: 5
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Africa_Sao_Tome: List[ZoneEra] = [
+    # 0:26:56 - LMT 1884
+    {
+        'offset_seconds': 1616,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1884,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -0:36:45 -    LMT    1912 Jan  1 00:00u
     {
         'offset_seconds': -2205,
@@ -1218,10 +1266,22 @@ ZONE_INFO_Africa_Tripoli: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Africa/Tunis
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Africa_Tunis: List[ZoneEra] = [
+    # 0:40:44 - LMT 1881 May 12
+    {
+        'offset_seconds': 2444,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1881,
+        'until_month': 5,
+        'until_day': 12,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             0:09:21    -    PMT    1911 Mar 11
     {
         'offset_seconds': 561,
@@ -1256,10 +1316,22 @@ ZONE_INFO_Africa_Tunis: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Africa/Windhoek
-# Era count: 5
+# Era count: 6
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Africa_Windhoek: List[ZoneEra] = [
+    # 1:08:24 - LMT 1892 Feb 8
+    {
+        'offset_seconds': 4104,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1892,
+        'until_month': 2,
+        'until_day': 8,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             1:30    -    +0130    1903 Mar
     {
         'offset_seconds': 5400,
@@ -1330,10 +1402,22 @@ ZONE_INFO_Africa_Windhoek: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Adak
-# Era count: 8
+# Era count: 9
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Adak: List[ZoneEra] = [
+    # 12:13:22 - LMT 1867 Oct 19 12:44:35
+    {
+        'offset_seconds': 44002,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1867,
+        'until_month': 10,
+        'until_day': 19,
+        'until_seconds': 45875,
+        'until_time_suffix': 'w',
+    },
     #             -11:46:38 -    LMT    1900 Aug 20 12:00
     {
         'offset_seconds': -42398,
@@ -1440,10 +1524,22 @@ ZONE_INFO_America_Adak: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Anchorage
-# Era count: 7
+# Era count: 8
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Anchorage: List[ZoneEra] = [
+    # 14:00:24 - LMT 1867 Oct 19 14:31:37
+    {
+        'offset_seconds': 50424,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1867,
+        'until_month': 10,
+        'until_day': 19,
+        'until_seconds': 52297,
+        'until_time_suffix': 'w',
+    },
     #              -9:59:36 -    LMT    1900 Aug 20 12:00
     {
         'offset_seconds': -35976,
@@ -1636,10 +1732,22 @@ ZONE_INFO_America_Araguaina: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Argentina/Buenos_Aires
-# Era count: 6
+# Era count: 7
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Argentina_Buenos_Aires: List[ZoneEra] = [
+    # -3:53:48 - LMT 1894 Oct 31
+    {
+        'offset_seconds': -14028,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1894,
+        'until_month': 10,
+        'until_day': 31,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -4:16:48 -    CMT    1920 May
     {
         'offset_seconds': -15408,
@@ -1722,10 +1830,22 @@ ZONE_INFO_America_Argentina_Buenos_Aires: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Argentina/Catamarca
-# Era count: 11
+# Era count: 12
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Argentina_Catamarca: List[ZoneEra] = [
+    # -4:23:08 - LMT 1894 Oct 31
+    {
+        'offset_seconds': -15788,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1894,
+        'until_month': 10,
+        'until_day': 31,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -4:16:48 -    CMT    1920 May
     {
         'offset_seconds': -15408,
@@ -1868,10 +1988,22 @@ ZONE_INFO_America_Argentina_Catamarca: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Argentina/Cordoba
-# Era count: 8
+# Era count: 9
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Argentina_Cordoba: List[ZoneEra] = [
+    # -4:16:48 - LMT 1894 Oct 31
+    {
+        'offset_seconds': -15408,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1894,
+        'until_month': 10,
+        'until_day': 31,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -4:16:48 -    CMT    1920 May
     {
         'offset_seconds': -15408,
@@ -1978,10 +2110,22 @@ ZONE_INFO_America_Argentina_Cordoba: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Argentina/Jujuy
-# Era count: 12
+# Era count: 13
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Argentina_Jujuy: List[ZoneEra] = [
+    # -4:21:12 - LMT 1894 Oct 31
+    {
+        'offset_seconds': -15672,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1894,
+        'until_month': 10,
+        'until_day': 31,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -4:16:48 -    CMT    1920 May
     {
         'offset_seconds': -15408,
@@ -2136,10 +2280,22 @@ ZONE_INFO_America_Argentina_Jujuy: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Argentina/La_Rioja
-# Era count: 11
+# Era count: 12
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Argentina_La_Rioja: List[ZoneEra] = [
+    # -4:27:24 - LMT 1894 Oct 31
+    {
+        'offset_seconds': -16044,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1894,
+        'until_month': 10,
+        'until_day': 31,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -4:16:48 -    CMT    1920 May
     {
         'offset_seconds': -15408,
@@ -2282,10 +2438,22 @@ ZONE_INFO_America_Argentina_La_Rioja: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Argentina/Mendoza
-# Era count: 15
+# Era count: 16
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Argentina_Mendoza: List[ZoneEra] = [
+    # -4:35:16 - LMT 1894 Oct 31
+    {
+        'offset_seconds': -16516,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1894,
+        'until_month': 10,
+        'until_day': 31,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -4:16:48 -    CMT    1920 May
     {
         'offset_seconds': -15408,
@@ -2476,10 +2644,22 @@ ZONE_INFO_America_Argentina_Mendoza: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Argentina/Rio_Gallegos
-# Era count: 9
+# Era count: 10
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Argentina_Rio_Gallegos: List[ZoneEra] = [
+    # -4:36:52 - LMT 1894 Oct 31
+    {
+        'offset_seconds': -16612,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1894,
+        'until_month': 10,
+        'until_day': 31,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -4:16:48 -    CMT    1920 May
     {
         'offset_seconds': -15408,
@@ -2598,10 +2778,22 @@ ZONE_INFO_America_Argentina_Rio_Gallegos: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Argentina/Salta
-# Era count: 9
+# Era count: 10
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Argentina_Salta: List[ZoneEra] = [
+    # -4:21:40 - LMT 1894 Oct 31
+    {
+        'offset_seconds': -15700,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1894,
+        'until_month': 10,
+        'until_day': 31,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -4:16:48 -    CMT    1920 May
     {
         'offset_seconds': -15408,
@@ -2720,10 +2912,22 @@ ZONE_INFO_America_Argentina_Salta: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Argentina/San_Juan
-# Era count: 11
+# Era count: 12
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Argentina_San_Juan: List[ZoneEra] = [
+    # -4:34:04 - LMT 1894 Oct 31
+    {
+        'offset_seconds': -16444,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1894,
+        'until_month': 10,
+        'until_day': 31,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -4:16:48 -    CMT    1920 May
     {
         'offset_seconds': -15408,
@@ -2866,10 +3070,22 @@ ZONE_INFO_America_Argentina_San_Juan: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Argentina/San_Luis
-# Era count: 15
+# Era count: 16
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Argentina_San_Luis: List[ZoneEra] = [
+    # -4:25:24 - LMT 1894 Oct 31
+    {
+        'offset_seconds': -15924,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1894,
+        'until_month': 10,
+        'until_day': 31,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -4:16:48 -    CMT    1920 May
     {
         'offset_seconds': -15408,
@@ -3060,10 +3276,22 @@ ZONE_INFO_America_Argentina_San_Luis: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Argentina/Tucuman
-# Era count: 10
+# Era count: 11
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Argentina_Tucuman: List[ZoneEra] = [
+    # -4:20:52 - LMT 1894 Oct 31
+    {
+        'offset_seconds': -15652,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1894,
+        'until_month': 10,
+        'until_day': 31,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -4:16:48 -    CMT    1920 May
     {
         'offset_seconds': -15408,
@@ -3194,10 +3422,22 @@ ZONE_INFO_America_Argentina_Tucuman: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Argentina/Ushuaia
-# Era count: 9
+# Era count: 10
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Argentina_Ushuaia: List[ZoneEra] = [
+    # -4:33:12 - LMT 1894 Oct 31
+    {
+        'offset_seconds': -16392,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1894,
+        'until_month': 10,
+        'until_day': 31,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -4:16:48 -    CMT    1920 May
     {
         'offset_seconds': -15408,
@@ -3316,10 +3556,22 @@ ZONE_INFO_America_Argentina_Ushuaia: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Asuncion
-# Era count: 4
+# Era count: 5
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Asuncion: List[ZoneEra] = [
+    # -3:50:40 - LMT 1890
+    {
+        'offset_seconds': -13840,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1890,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -3:50:40 -    AMT    1931 Oct 10
     {
         'offset_seconds': -13840,
@@ -3798,10 +4050,22 @@ ZONE_INFO_America_Boa_Vista: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Bogota
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Bogota: List[ZoneEra] = [
+    # -4:56:16 - LMT 1884 Mar 13
+    {
+        'offset_seconds': -17776,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1884,
+        'until_month': 3,
+        'until_day': 13,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -4:56:16 -    BMT    1914 Nov 23
     {
         'offset_seconds': -17776,
@@ -3836,10 +4100,22 @@ ZONE_INFO_America_Bogota: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Boise
-# Era count: 4
+# Era count: 5
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Boise: List[ZoneEra] = [
+    # -7:44:49 - LMT 1883 Nov 18 20:00u
+    {
+        'offset_seconds': -27889,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1883,
+        'until_month': 11,
+        'until_day': 18,
+        'until_seconds': 72000,
+        'until_time_suffix': 'u',
+    },
     #             -8:00    US    P%sT    1923 May 13  2:00
     {
         'offset_seconds': -28800,
@@ -4096,10 +4372,22 @@ ZONE_INFO_America_Cancun: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Caracas
-# Era count: 5
+# Era count: 6
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Caracas: List[ZoneEra] = [
+    # -4:27:44 - LMT 1890
+    {
+        'offset_seconds': -16064,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1890,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -4:27:40 -    CMT    1912 Feb 12
     {
         'offset_seconds': -16060,
@@ -4220,10 +4508,22 @@ ZONE_INFO_America_Cayenne: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Chicago
-# Era count: 7
+# Era count: 8
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Chicago: List[ZoneEra] = [
+    # -5:50:36 - LMT 1883 Nov 18 18:00u
+    {
+        'offset_seconds': -21036,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1883,
+        'until_month': 11,
+        'until_day': 18,
+        'until_seconds': 64800,
+        'until_time_suffix': 'u',
+    },
     #             -6:00    US    C%sT    1920
     {
         'offset_seconds': -21600,
@@ -4586,10 +4886,22 @@ ZONE_INFO_America_Ciudad_Juarez: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Costa_Rica
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Costa_Rica: List[ZoneEra] = [
+    # -5:36:13 - LMT 1890
+    {
+        'offset_seconds': -20173,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1890,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -5:36:13 -    SJMT    1921 Jan 15
     {
         'offset_seconds': -20173,
@@ -4834,10 +5146,22 @@ ZONE_INFO_America_Dawson: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Dawson_Creek
-# Era count: 3
+# Era count: 4
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Dawson_Creek: List[ZoneEra] = [
+    # -8:00:56 - LMT 1884
+    {
+        'offset_seconds': -28856,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1884,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -8:00    Canada    P%sT    1947
     {
         'offset_seconds': -28800,
@@ -4884,10 +5208,22 @@ ZONE_INFO_America_Dawson_Creek: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Denver
-# Era count: 5
+# Era count: 6
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Denver: List[ZoneEra] = [
+    # -6:59:56 - LMT 1883 Nov 18 19:00u
+    {
+        'offset_seconds': -25196,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1883,
+        'until_month': 11,
+        'until_day': 18,
+        'until_seconds': 68400,
+        'until_time_suffix': 'u',
+    },
     #             -7:00    US    M%sT    1920
     {
         'offset_seconds': -25200,
@@ -5278,10 +5614,22 @@ ZONE_INFO_America_El_Salvador: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Fort_Nelson
-# Era count: 5
+# Era count: 6
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Fort_Nelson: List[ZoneEra] = [
+    # -8:10:47 - LMT 1884
+    {
+        'offset_seconds': -29447,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1884,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -8:00    Vanc    P%sT    1946
     {
         'offset_seconds': -28800,
@@ -5536,10 +5884,22 @@ ZONE_INFO_America_Glace_Bay: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Goose_Bay
-# Era count: 9
+# Era count: 10
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Goose_Bay: List[ZoneEra] = [
+    # -4:01:40 - LMT 1884
+    {
+        'offset_seconds': -14500,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1884,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -3:30:52 -    NST    1918
     {
         'offset_seconds': -12652,
@@ -5658,10 +6018,22 @@ ZONE_INFO_America_Goose_Bay: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Grand_Turk
-# Era count: 5
+# Era count: 6
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Grand_Turk: List[ZoneEra] = [
+    # -4:44:32 - LMT 1890
+    {
+        'offset_seconds': -17072,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1890,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -5:07:10 -    KMT    1912 Feb
     {
         'offset_seconds': -18430,
@@ -5770,10 +6142,22 @@ ZONE_INFO_America_Guatemala: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Guayaquil
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Guayaquil: List[ZoneEra] = [
+    # -5:19:20 - LMT 1890
+    {
+        'offset_seconds': -19160,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1890,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -5:14:00 -    QMT    1931
     {
         'offset_seconds': -18840,
@@ -5980,10 +6364,22 @@ ZONE_INFO_America_Halifax: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Havana
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Havana: List[ZoneEra] = [
+    # -5:29:28 - LMT 1890
+    {
+        'offset_seconds': -19768,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1890,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -5:29:36 -    HMT    1925 Jul 19 12:00
     {
         'offset_seconds': -19776,
@@ -6140,10 +6536,22 @@ ZONE_INFO_America_Hermosillo: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Indiana/Indianapolis
-# Era count: 10
+# Era count: 11
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Indiana_Indianapolis: List[ZoneEra] = [
+    # -5:44:38 - LMT 1883 Nov 18 18:00u
+    {
+        'offset_seconds': -20678,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1883,
+        'until_month': 11,
+        'until_day': 18,
+        'until_seconds': 64800,
+        'until_time_suffix': 'u',
+    },
     #             -6:00    US    C%sT    1920
     {
         'offset_seconds': -21600,
@@ -6274,10 +6682,22 @@ ZONE_INFO_America_Indiana_Indianapolis: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Indiana/Knox
-# Era count: 6
+# Era count: 7
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Indiana_Knox: List[ZoneEra] = [
+    # -5:46:30 - LMT 1883 Nov 18 18:00u
+    {
+        'offset_seconds': -20790,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1883,
+        'until_month': 11,
+        'until_day': 18,
+        'until_seconds': 64800,
+        'until_time_suffix': 'u',
+    },
     #             -6:00    US    C%sT    1947
     {
         'offset_seconds': -21600,
@@ -6360,10 +6780,22 @@ ZONE_INFO_America_Indiana_Knox: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Indiana/Marengo
-# Era count: 8
+# Era count: 9
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Indiana_Marengo: List[ZoneEra] = [
+    # -5:45:23 - LMT 1883 Nov 18 18:00u
+    {
+        'offset_seconds': -20723,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1883,
+        'until_month': 11,
+        'until_day': 18,
+        'until_seconds': 64800,
+        'until_time_suffix': 'u',
+    },
     #             -6:00    US    C%sT    1951
     {
         'offset_seconds': -21600,
@@ -6470,10 +6902,22 @@ ZONE_INFO_America_Indiana_Marengo: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Indiana/Petersburg
-# Era count: 7
+# Era count: 8
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Indiana_Petersburg: List[ZoneEra] = [
+    # -5:49:07 - LMT 1883 Nov 18 18:00u
+    {
+        'offset_seconds': -20947,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1883,
+        'until_month': 11,
+        'until_day': 18,
+        'until_seconds': 64800,
+        'until_time_suffix': 'u',
+    },
     #             -6:00    US    C%sT    1955
     {
         'offset_seconds': -21600,
@@ -6568,10 +7012,22 @@ ZONE_INFO_America_Indiana_Petersburg: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Indiana/Tell_City
-# Era count: 7
+# Era count: 8
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Indiana_Tell_City: List[ZoneEra] = [
+    # -5:47:03 - LMT 1883 Nov 18 18:00u
+    {
+        'offset_seconds': -20823,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1883,
+        'until_month': 11,
+        'until_day': 18,
+        'until_seconds': 64800,
+        'until_time_suffix': 'u',
+    },
     #             -6:00    US    C%sT    1946
     {
         'offset_seconds': -21600,
@@ -6666,10 +7122,22 @@ ZONE_INFO_America_Indiana_Tell_City: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Indiana/Vevay
-# Era count: 5
+# Era count: 6
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Indiana_Vevay: List[ZoneEra] = [
+    # -5:40:16 - LMT 1883 Nov 18 18:00u
+    {
+        'offset_seconds': -20416,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1883,
+        'until_month': 11,
+        'until_day': 18,
+        'until_seconds': 64800,
+        'until_time_suffix': 'u',
+    },
     #             -6:00    US    C%sT    1954 Apr 25  2:00
     {
         'offset_seconds': -21600,
@@ -6740,10 +7208,22 @@ ZONE_INFO_America_Indiana_Vevay: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Indiana/Vincennes
-# Era count: 7
+# Era count: 8
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Indiana_Vincennes: List[ZoneEra] = [
+    # -5:50:07 - LMT 1883 Nov 18 18:00u
+    {
+        'offset_seconds': -21007,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1883,
+        'until_month': 11,
+        'until_day': 18,
+        'until_seconds': 64800,
+        'until_time_suffix': 'u',
+    },
     #             -6:00    US    C%sT    1946
     {
         'offset_seconds': -21600,
@@ -6838,10 +7318,22 @@ ZONE_INFO_America_Indiana_Vincennes: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Indiana/Winamac
-# Era count: 7
+# Era count: 8
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Indiana_Winamac: List[ZoneEra] = [
+    # -5:46:25 - LMT 1883 Nov 18 18:00u
+    {
+        'offset_seconds': -20785,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1883,
+        'until_month': 11,
+        'until_day': 18,
+        'until_seconds': 64800,
+        'until_time_suffix': 'u',
+    },
     #             -6:00    US    C%sT    1946
     {
         'offset_seconds': -21600,
@@ -7060,10 +7552,22 @@ ZONE_INFO_America_Iqaluit: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Jamaica
-# Era count: 4
+# Era count: 5
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Jamaica: List[ZoneEra] = [
+    # -5:07:10 - LMT 1890
+    {
+        'offset_seconds': -18430,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1890,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -5:07:10 -    KMT    1912 Feb
     {
         'offset_seconds': -18430,
@@ -7122,10 +7626,22 @@ ZONE_INFO_America_Jamaica: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Juneau
-# Era count: 9
+# Era count: 10
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Juneau: List[ZoneEra] = [
+    # 15:02:19 - LMT 1867 Oct 19 15:33:32
+    {
+        'offset_seconds': 54139,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1867,
+        'until_month': 10,
+        'until_day': 19,
+        'until_seconds': 56012,
+        'until_time_suffix': 'w',
+    },
     #              -8:57:41 -    LMT    1900 Aug 20 12:00
     {
         'offset_seconds': -32261,
@@ -7244,10 +7760,22 @@ ZONE_INFO_America_Juneau: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Kentucky/Louisville
-# Era count: 8
+# Era count: 9
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Kentucky_Louisville: List[ZoneEra] = [
+    # -5:43:02 - LMT 1883 Nov 18 18:00u
+    {
+        'offset_seconds': -20582,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1883,
+        'until_month': 11,
+        'until_day': 18,
+        'until_seconds': 64800,
+        'until_time_suffix': 'u',
+    },
     #             -6:00    US    C%sT    1921
     {
         'offset_seconds': -21600,
@@ -7354,10 +7882,22 @@ ZONE_INFO_America_Kentucky_Louisville: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Kentucky/Monticello
-# Era count: 4
+# Era count: 5
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Kentucky_Monticello: List[ZoneEra] = [
+    # -5:39:24 - LMT 1883 Nov 18 18:00u
+    {
+        'offset_seconds': -20364,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1883,
+        'until_month': 11,
+        'until_day': 18,
+        'until_seconds': 64800,
+        'until_time_suffix': 'u',
+    },
     #             -6:00    US    C%sT    1946
     {
         'offset_seconds': -21600,
@@ -7416,10 +7956,22 @@ ZONE_INFO_America_Kentucky_Monticello: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/La_Paz
-# Era count: 3
+# Era count: 4
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_La_Paz: List[ZoneEra] = [
+    # -4:32:36 - LMT 1890
+    {
+        'offset_seconds': -16356,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1890,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -4:32:36 -    CMT    1931 Oct 15
     {
         'offset_seconds': -16356,
@@ -7466,10 +8018,22 @@ ZONE_INFO_America_La_Paz: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Lima
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Lima: List[ZoneEra] = [
+    # -5:08:12 - LMT 1890
+    {
+        'offset_seconds': -18492,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1890,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -5:08:36 -    LMT    1908 Jul 28
     {
         'offset_seconds': -18516,
@@ -7504,10 +8068,22 @@ ZONE_INFO_America_Lima: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Los_Angeles
-# Era count: 3
+# Era count: 4
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Los_Angeles: List[ZoneEra] = [
+    # -7:52:58 - LMT 1883 Nov 18 20:00u
+    {
+        'offset_seconds': -28378,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1883,
+        'until_month': 11,
+        'until_day': 18,
+        'until_seconds': 72000,
+        'until_time_suffix': 'u',
+    },
     #             -8:00    US    P%sT    1946
     {
         'offset_seconds': -28800,
@@ -7676,10 +8252,22 @@ ZONE_INFO_America_Maceio: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Managua
-# Era count: 8
+# Era count: 9
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Managua: List[ZoneEra] = [
+    # -5:45:08 - LMT 1890
+    {
+        'offset_seconds': -20708,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1890,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -5:45:12 -    MMT    1934 Jun 23
     {
         'offset_seconds': -20712,
@@ -7860,10 +8448,22 @@ ZONE_INFO_America_Manaus: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Martinique
-# Era count: 4
+# Era count: 5
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Martinique: List[ZoneEra] = [
+    # -4:04:20 - LMT 1890
+    {
+        'offset_seconds': -14660,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1890,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -4:04:20 -    FFMT    1911 May
     {
         'offset_seconds': -14660,
@@ -8106,10 +8706,22 @@ ZONE_INFO_America_Mazatlan: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Menominee
-# Era count: 4
+# Era count: 5
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Menominee: List[ZoneEra] = [
+    # -5:50:27 - LMT 1885 Sep 18 12:00
+    {
+        'offset_seconds': -21027,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1885,
+        'until_month': 9,
+        'until_day': 18,
+        'until_seconds': 43200,
+        'until_time_suffix': 'w',
+    },
     #             -6:00    US    C%sT    1946
     {
         'offset_seconds': -21600,
@@ -8230,10 +8842,22 @@ ZONE_INFO_America_Merida: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Metlakatla
-# Era count: 9
+# Era count: 10
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Metlakatla: List[ZoneEra] = [
+    # 15:13:42 - LMT 1867 Oct 19 15:44:55
+    {
+        'offset_seconds': 54822,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1867,
+        'until_month': 10,
+        'until_day': 19,
+        'until_seconds': 56695,
+        'until_time_suffix': 'w',
+    },
     #              -8:46:18 -    LMT    1900 Aug 20 12:00
     {
         'offset_seconds': -31578,
@@ -8512,10 +9136,22 @@ ZONE_INFO_America_Miquelon: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Moncton
-# Era count: 8
+# Era count: 9
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Moncton: List[ZoneEra] = [
+    # -4:19:08 - LMT 1883 Dec 9
+    {
+        'offset_seconds': -15548,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1883,
+        'until_month': 12,
+        'until_day': 9,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -5:00    -    EST    1902 Jun 15
     {
         'offset_seconds': -18000,
@@ -8830,10 +9466,22 @@ ZONE_INFO_America_Montevideo: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/New_York
-# Era count: 5
+# Era count: 6
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_New_York: List[ZoneEra] = [
+    # -4:56:02 - LMT 1883 Nov 18 17:00u
+    {
+        'offset_seconds': -17762,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1883,
+        'until_month': 11,
+        'until_day': 18,
+        'until_seconds': 61200,
+        'until_time_suffix': 'u',
+    },
     #             -5:00    US    E%sT    1920
     {
         'offset_seconds': -18000,
@@ -8904,10 +9552,22 @@ ZONE_INFO_America_New_York: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Nome
-# Era count: 8
+# Era count: 9
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Nome: List[ZoneEra] = [
+    # 12:58:22 - LMT 1867 Oct 19 13:29:35
+    {
+        'offset_seconds': 46702,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1867,
+        'until_month': 10,
+        'until_day': 19,
+        'until_seconds': 48575,
+        'until_time_suffix': 'w',
+    },
     #             -11:01:38 -    LMT    1900 Aug 20 12:00
     {
         'offset_seconds': -39698,
@@ -9112,10 +9772,22 @@ ZONE_INFO_America_Noronha: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/North_Dakota/Beulah
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_North_Dakota_Beulah: List[ZoneEra] = [
+    # -6:47:07 - LMT 1883 Nov 18 19:00u
+    {
+        'offset_seconds': -24427,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1883,
+        'until_month': 11,
+        'until_day': 18,
+        'until_seconds': 68400,
+        'until_time_suffix': 'u',
+    },
     #             -7:00    US    M%sT    2010 Nov  7  2:00
     {
         'offset_seconds': -25200,
@@ -9150,10 +9822,22 @@ ZONE_INFO_America_North_Dakota_Beulah: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/North_Dakota/Center
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_North_Dakota_Center: List[ZoneEra] = [
+    # -6:45:12 - LMT 1883 Nov 18 19:00u
+    {
+        'offset_seconds': -24312,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1883,
+        'until_month': 11,
+        'until_day': 18,
+        'until_seconds': 68400,
+        'until_time_suffix': 'u',
+    },
     #             -7:00    US    M%sT    1992 Oct 25  2:00
     {
         'offset_seconds': -25200,
@@ -9188,10 +9872,22 @@ ZONE_INFO_America_North_Dakota_Center: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/North_Dakota/New_Salem
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_North_Dakota_New_Salem: List[ZoneEra] = [
+    # -6:45:39 - LMT 1883 Nov 18 19:00u
+    {
+        'offset_seconds': -24339,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1883,
+        'until_month': 11,
+        'until_day': 18,
+        'until_seconds': 68400,
+        'until_time_suffix': 'u',
+    },
     #             -7:00    US    M%sT    2003 Oct 26  2:00
     {
         'offset_seconds': -25200,
@@ -9434,10 +10130,22 @@ ZONE_INFO_America_Ojinaga: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Panama
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Panama: List[ZoneEra] = [
+    # -5:18:08 - LMT 1890
+    {
+        'offset_seconds': -19088,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1890,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -5:19:36 -    CMT    1908 Apr 22
     {
         'offset_seconds': -19176,
@@ -9546,10 +10254,22 @@ ZONE_INFO_America_Paramaribo: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Phoenix
-# Era count: 6
+# Era count: 7
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Phoenix: List[ZoneEra] = [
+    # -7:28:18 - LMT 1883 Nov 18 19:00u
+    {
+        'offset_seconds': -26898,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1883,
+        'until_month': 11,
+        'until_day': 18,
+        'until_seconds': 68400,
+        'until_time_suffix': 'u',
+    },
     #             -7:00    US    M%sT    1944 Jan  1  0:01
     {
         'offset_seconds': -25200,
@@ -9632,10 +10352,22 @@ ZONE_INFO_America_Phoenix: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Port-au-Prince
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Port_au_Prince: List[ZoneEra] = [
+    # -4:49:20 - LMT 1890
+    {
+        'offset_seconds': -17360,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1890,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -4:49    -    PPMT    1917 Jan 24 12:00
     {
         'offset_seconds': -17340,
@@ -9782,10 +10514,22 @@ ZONE_INFO_America_Puerto_Rico: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Punta_Arenas
-# Era count: 13
+# Era count: 14
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Punta_Arenas: List[ZoneEra] = [
+    # -4:43:40 - LMT 1890
+    {
+        'offset_seconds': -17020,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1890,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -4:42:45 -    SMT    1910 Jan 10
     {
         'offset_seconds': -16965,
@@ -10384,10 +11128,22 @@ ZONE_INFO_America_Santarem: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Santiago
-# Era count: 13
+# Era count: 14
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Santiago: List[ZoneEra] = [
+    # -4:42:45 - LMT 1890
+    {
+        'offset_seconds': -16965,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1890,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -4:42:45 -    SMT    1910 Jan 10
     {
         'offset_seconds': -16965,
@@ -10554,10 +11310,22 @@ ZONE_INFO_America_Santiago: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Santo_Domingo
-# Era count: 5
+# Era count: 6
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Santo_Domingo: List[ZoneEra] = [
+    # -4:39:36 - LMT 1890
+    {
+        'offset_seconds': -16776,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1890,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -4:40    -    SDMT    1933 Apr  1 12:00
     {
         'offset_seconds': -16800,
@@ -10752,10 +11520,22 @@ ZONE_INFO_America_Scoresbysund: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Sitka
-# Era count: 7
+# Era count: 8
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Sitka: List[ZoneEra] = [
+    # 14:58:47 - LMT 1867 Oct 19 15:30
+    {
+        'offset_seconds': 53927,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1867,
+        'until_month': 10,
+        'until_day': 19,
+        'until_seconds': 55800,
+        'until_time_suffix': 'w',
+    },
     #              -9:01:13 -    LMT    1900 Aug 20 12:00
     {
         'offset_seconds': -32473,
@@ -10850,10 +11630,22 @@ ZONE_INFO_America_Sitka: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/St_Johns
-# Era count: 7
+# Era count: 8
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_St_Johns: List[ZoneEra] = [
+    # -3:30:52 - LMT 1884
+    {
+        'offset_seconds': -12652,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1884,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -3:30:52 StJohns N%sT    1918
     {
         'offset_seconds': -12652,
@@ -11340,10 +12132,22 @@ ZONE_INFO_America_Tijuana: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Toronto
-# Era count: 5
+# Era count: 6
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Toronto: List[ZoneEra] = [
+    # -5:17:32 - LMT 1895
+    {
+        'offset_seconds': -19052,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1895,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -5:00    Canada    E%sT    1919
     {
         'offset_seconds': -18000,
@@ -11414,10 +12218,22 @@ ZONE_INFO_America_Toronto: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Vancouver
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Vancouver: List[ZoneEra] = [
+    # -8:12:28 - LMT 1884
+    {
+        'offset_seconds': -29548,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1884,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -8:00    Vanc    P%sT    1987
     {
         'offset_seconds': -28800,
@@ -11538,10 +12354,22 @@ ZONE_INFO_America_Whitehorse: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Winnipeg
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Winnipeg: List[ZoneEra] = [
+    # -6:28:36 - LMT 1887 Jul 16
+    {
+        'offset_seconds': -23316,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1887,
+        'until_month': 7,
+        'until_day': 16,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -6:00    Winn    C%sT    2006
     {
         'offset_seconds': -21600,
@@ -11576,10 +12404,22 @@ ZONE_INFO_America_Winnipeg: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Yakutat
-# Era count: 6
+# Era count: 7
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Yakutat: List[ZoneEra] = [
+    # 14:41:05 - LMT 1867 Oct 19 15:12:18
+    {
+        'offset_seconds': 52865,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1867,
+        'until_month': 10,
+        'until_day': 19,
+        'until_seconds': 54738,
+        'until_time_suffix': 'w',
+    },
     #              -9:18:55 -    LMT    1900 Aug 20 12:00
     {
         'offset_seconds': -33535,
@@ -13000,10 +13840,22 @@ ZONE_INFO_Asia_Atyrau: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Asia/Baghdad
-# Era count: 3
+# Era count: 4
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Asia_Baghdad: List[ZoneEra] = [
+    # 2:57:40 - LMT 1890
+    {
+        'offset_seconds': 10660,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1890,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             2:57:36    -    BMT    1918
     {
         'offset_seconds': 10656,
@@ -13148,10 +14000,22 @@ ZONE_INFO_Asia_Baku: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Asia/Bangkok
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Asia_Bangkok: List[ZoneEra] = [
+    # 6:42:04 - LMT 1880
+    {
+        'offset_seconds': 24124,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1880,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             6:42:04    -    BMT    1920 Apr
     {
         'offset_seconds': 24124,
@@ -13308,10 +14172,22 @@ ZONE_INFO_Asia_Barnaul: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Asia/Beirut
-# Era count: 1
+# Era count: 2
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Asia_Beirut: List[ZoneEra] = [
+    # 2:22:00 - LMT 1880
+    {
+        'offset_seconds': 8520,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1880,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             2:00    Lebanon    EE%sT
     {
         'offset_seconds': 7200,
@@ -13604,10 +14480,22 @@ ZONE_INFO_Asia_Choibalsan: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Asia/Colombo
-# Era count: 8
+# Era count: 9
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Asia_Colombo: List[ZoneEra] = [
+    # 5:19:24 - LMT 1880
+    {
+        'offset_seconds': 19164,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1880,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             5:19:32    -    MMT    1906
     {
         'offset_seconds': 19172,
@@ -13764,10 +14652,22 @@ ZONE_INFO_Asia_Damascus: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Asia/Dhaka
-# Era count: 6
+# Era count: 7
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Asia_Dhaka: List[ZoneEra] = [
+    # 6:01:40 - LMT 1890
+    {
+        'offset_seconds': 21700,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1890,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             5:53:20    -    HMT    1941 Oct
     {
         'offset_seconds': 21200,
@@ -14624,10 +15524,22 @@ ZONE_INFO_Asia_Hovd: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Asia/Irkutsk
-# Era count: 7
+# Era count: 8
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Asia_Irkutsk: List[ZoneEra] = [
+    # 6:57:05 - LMT 1880
+    {
+        'offset_seconds': 25025,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1880,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #              6:57:05 -    IMT    1920 Jan 25
     {
         'offset_seconds': 25025,
@@ -14722,10 +15634,22 @@ ZONE_INFO_Asia_Irkutsk: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Asia/Jakarta
-# Era count: 8
+# Era count: 9
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Asia_Jakarta: List[ZoneEra] = [
+    # 7:07:12 - LMT 1867 Aug 10
+    {
+        'offset_seconds': 25632,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1867,
+        'until_month': 8,
+        'until_day': 10,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             7:07:12    -    BMT    1923 Dec 31 16:40u
     {
         'offset_seconds': 25632,
@@ -14894,10 +15818,22 @@ ZONE_INFO_Asia_Jayapura: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Asia/Jerusalem
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Asia_Jerusalem: List[ZoneEra] = [
+    # 2:20:54 - LMT 1880
+    {
+        'offset_seconds': 8454,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1880,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             2:20:40    -    JMT    1918
     {
         'offset_seconds': 8440,
@@ -14932,10 +15868,22 @@ ZONE_INFO_Asia_Jerusalem: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Asia/Kabul
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Asia_Kabul: List[ZoneEra] = [
+    # 4:36:48 - LMT 1890
+    {
+        'offset_seconds': 16608,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1890,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             4:00    -    +04    1945
     {
         'offset_seconds': 14400,
@@ -15326,10 +16274,34 @@ ZONE_INFO_Asia_Khandyga: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Asia/Kolkata
-# Era count: 6
+# Era count: 8
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Asia_Kolkata: List[ZoneEra] = [
+    # 5:53:28 - LMT 1854 Jun 28
+    {
+        'offset_seconds': 21208,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1854,
+        'until_month': 6,
+        'until_day': 28,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             5:53:20    -    HMT    1870
+    {
+        'offset_seconds': 21200,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'HMT',
+        'until_year': 1870,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             5:21:10    -    MMT    1906 Jan  1
     {
         'offset_seconds': 19270,
@@ -15830,10 +16802,22 @@ ZONE_INFO_Asia_Makassar: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Asia/Manila
-# Era count: 4
+# Era count: 5
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Asia_Manila: List[ZoneEra] = [
+    # -15:56:00 - LMT 1844 Dec 31
+    {
+        'offset_seconds': -57360,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1844,
+        'until_month': 12,
+        'until_day': 31,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             8:04:00 -    LMT    1899 May 11
     {
         'offset_seconds': 29040,
@@ -17546,10 +18530,22 @@ ZONE_INFO_Asia_Srednekolymsk: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Asia/Taipei
-# Era count: 3
+# Era count: 4
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Asia_Taipei: List[ZoneEra] = [
+    # 8:06:00 - LMT 1896 Jan 1
+    {
+        'offset_seconds': 29160,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1896,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             8:00    -    CST    1937 Oct  1
     {
         'offset_seconds': 28800,
@@ -17670,10 +18666,22 @@ ZONE_INFO_Asia_Tashkent: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Asia/Tbilisi
-# Era count: 10
+# Era count: 11
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Asia_Tbilisi: List[ZoneEra] = [
+    # 2:59:11 - LMT 1880
+    {
+        'offset_seconds': 10751,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1880,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             2:59:11    -    TBMT    1924 May  2
     {
         'offset_seconds': 10751,
@@ -17928,10 +18936,22 @@ ZONE_INFO_Asia_Thimphu: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Asia/Tokyo
-# Era count: 1
+# Era count: 2
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Asia_Tokyo: List[ZoneEra] = [
+    # 9:18:59 - LMT 1887 Dec 31 15:00u
+    {
+        'offset_seconds': 33539,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1887,
+        'until_month': 12,
+        'until_day': 31,
+        'until_seconds': 54000,
+        'until_time_suffix': 'u',
+    },
     #             9:00    Japan    J%sT
     {
         'offset_seconds': 32400,
@@ -18482,10 +19502,22 @@ ZONE_INFO_Asia_Yakutsk: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Asia/Yangon
-# Era count: 4
+# Era count: 5
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Asia_Yangon: List[ZoneEra] = [
+    # 6:24:47 - LMT 1880
+    {
+        'offset_seconds': 23087,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1880,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             6:24:47    -    RMT    1920
     {
         'offset_seconds': 23087,
@@ -18752,10 +19784,22 @@ ZONE_INFO_Asia_Yerevan: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Atlantic/Azores
-# Era count: 14
+# Era count: 15
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Atlantic_Azores: List[ZoneEra] = [
+    # -1:42:40 - LMT 1884
+    {
+        'offset_seconds': -6160,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1884,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -1:54:32 -    HMT    1912 Jan  1  2:00u
     {
         'offset_seconds': -6872,
@@ -18934,10 +19978,22 @@ ZONE_INFO_Atlantic_Azores: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Atlantic/Bermuda
-# Era count: 4
+# Era count: 5
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Atlantic_Bermuda: List[ZoneEra] = [
+    # -4:19:18 - LMT 1890
+    {
+        'offset_seconds': -15558,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1890,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -4:19:18 Bermuda BMT/BST 1930 Jan 1  2:00
     {
         'offset_seconds': -15558,
@@ -19194,10 +20250,22 @@ ZONE_INFO_Atlantic_Faroe: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Atlantic/Madeira
-# Era count: 12
+# Era count: 13
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Atlantic_Madeira: List[ZoneEra] = [
+    # -1:07:36 - LMT 1884
+    {
+        'offset_seconds': -4056,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1884,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -1:07:36 -    FMT    1912 Jan  1  1:00u
     {
         'offset_seconds': -4056,
@@ -19352,10 +20420,22 @@ ZONE_INFO_Atlantic_Madeira: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Atlantic/South_Georgia
-# Era count: 1
+# Era count: 2
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Atlantic_South_Georgia: List[ZoneEra] = [
+    # -2:26:08 - LMT 1890
+    {
+        'offset_seconds': -8768,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1890,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -2:00    -    -02
     {
         'offset_seconds': -7200,
@@ -19378,10 +20458,22 @@ ZONE_INFO_Atlantic_South_Georgia: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Atlantic/Stanley
-# Era count: 5
+# Era count: 6
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Atlantic_Stanley: List[ZoneEra] = [
+    # -3:51:24 - LMT 1890
+    {
+        'offset_seconds': -13884,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1890,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -3:51:24 -    SMT    1912 Mar 12
     {
         'offset_seconds': -13884,
@@ -19452,10 +20544,22 @@ ZONE_INFO_Atlantic_Stanley: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Australia/Adelaide
-# Era count: 3
+# Era count: 4
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Australia_Adelaide: List[ZoneEra] = [
+    # 9:14:20 - LMT 1895 Feb
+    {
+        'offset_seconds': 33260,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1895,
+        'until_month': 2,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             9:00    -    ACST    1899 May
     {
         'offset_seconds': 32400,
@@ -19502,10 +20606,22 @@ ZONE_INFO_Australia_Adelaide: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Australia/Brisbane
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Australia_Brisbane: List[ZoneEra] = [
+    # 10:12:08 - LMT 1895
+    {
+        'offset_seconds': 36728,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1895,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             10:00    Aus    AE%sT    1971
     {
         'offset_seconds': 36000,
@@ -19540,10 +20656,34 @@ ZONE_INFO_Australia_Brisbane: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Australia/Broken_Hill
-# Era count: 4
+# Era count: 6
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Australia_Broken_Hill: List[ZoneEra] = [
+    # 9:25:48 - LMT 1895 Feb
+    {
+        'offset_seconds': 33948,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1895,
+        'until_month': 2,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             10:00    -    AEST    1896 Aug 23
+    {
+        'offset_seconds': 36000,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'AEST',
+        'until_year': 1896,
+        'until_month': 8,
+        'until_day': 23,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             9:00    -    ACST    1899 May
     {
         'offset_seconds': 32400,
@@ -19602,10 +20742,22 @@ ZONE_INFO_Australia_Broken_Hill: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Australia/Darwin
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Australia_Darwin: List[ZoneEra] = [
+    # 8:43:20 - LMT 1895 Feb
+    {
+        'offset_seconds': 31400,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1895,
+        'until_month': 2,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #              9:00    -    ACST    1899 May
     {
         'offset_seconds': 32400,
@@ -19640,10 +20792,22 @@ ZONE_INFO_Australia_Darwin: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Australia/Eucla
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Australia_Eucla: List[ZoneEra] = [
+    # 8:35:28 - LMT 1895 Dec
+    {
+        'offset_seconds': 30928,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1895,
+        'until_month': 12,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #              8:45    Aus +0845/+0945    1943 Jul
     {
         'offset_seconds': 31500,
@@ -19678,10 +20842,22 @@ ZONE_INFO_Australia_Eucla: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Australia/Hobart
-# Era count: 3
+# Era count: 4
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Australia_Hobart: List[ZoneEra] = [
+    # 9:49:16 - LMT 1895 Sep
+    {
+        'offset_seconds': 35356,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1895,
+        'until_month': 9,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             10:00    AT    AE%sT    1919 Oct 24
     {
         'offset_seconds': 36000,
@@ -19728,10 +20904,22 @@ ZONE_INFO_Australia_Hobart: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Australia/Lindeman
-# Era count: 3
+# Era count: 4
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Australia_Lindeman: List[ZoneEra] = [
+    # 9:55:56 - LMT 1895
+    {
+        'offset_seconds': 35756,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1895,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             10:00    Aus    AE%sT    1971
     {
         'offset_seconds': 36000,
@@ -19778,10 +20966,22 @@ ZONE_INFO_Australia_Lindeman: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Australia/Lord_Howe
-# Era count: 3
+# Era count: 4
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Australia_Lord_Howe: List[ZoneEra] = [
+    # 10:36:20 - LMT 1895 Feb
+    {
+        'offset_seconds': 38180,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1895,
+        'until_month': 2,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             10:00    -    AEST    1981 Mar
     {
         'offset_seconds': 36000,
@@ -19828,10 +21028,22 @@ ZONE_INFO_Australia_Lord_Howe: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Australia/Melbourne
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Australia_Melbourne: List[ZoneEra] = [
+    # 9:39:52 - LMT 1895 Feb
+    {
+        'offset_seconds': 34792,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1895,
+        'until_month': 2,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             10:00    Aus    AE%sT    1971
     {
         'offset_seconds': 36000,
@@ -19866,10 +21078,22 @@ ZONE_INFO_Australia_Melbourne: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Australia/Perth
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Australia_Perth: List[ZoneEra] = [
+    # 7:43:24 - LMT 1895 Dec
+    {
+        'offset_seconds': 27804,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1895,
+        'until_month': 12,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #              8:00    Aus    AW%sT    1943 Jul
     {
         'offset_seconds': 28800,
@@ -19904,10 +21128,22 @@ ZONE_INFO_Australia_Perth: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Australia/Sydney
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Australia_Sydney: List[ZoneEra] = [
+    # 10:04:52 - LMT 1895 Feb
+    {
+        'offset_seconds': 36292,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1895,
+        'until_month': 2,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             10:00    Aus    AE%sT    1971
     {
         'offset_seconds': 36000,
@@ -20984,10 +22220,22 @@ ZONE_INFO_Europe_Astrakhan: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Athens
-# Era count: 5
+# Era count: 6
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Athens: List[ZoneEra] = [
+    # 1:34:52 - LMT 1895 Sep 14
+    {
+        'offset_seconds': 5692,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1895,
+        'until_month': 9,
+        'until_day': 14,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             1:34:52    -    AMT    1916 Jul 28  0:01
     {
         'offset_seconds': 5692,
@@ -21058,10 +22306,22 @@ ZONE_INFO_Europe_Athens: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Belgrade
-# Era count: 6
+# Era count: 7
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Belgrade: List[ZoneEra] = [
+    # 1:22:00 - LMT 1884
+    {
+        'offset_seconds': 4920,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1884,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             1:00    -    CET    1941 Apr 18 23:00
     {
         'offset_seconds': 3600,
@@ -21144,10 +22404,22 @@ ZONE_INFO_Europe_Belgrade: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Berlin
-# Era count: 4
+# Era count: 5
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Berlin: List[ZoneEra] = [
+    # 0:53:28 - LMT 1893 Apr
+    {
+        'offset_seconds': 3208,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1893,
+        'until_month': 4,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             1:00    C-Eur    CE%sT    1945 May 24  2:00
     {
         'offset_seconds': 3600,
@@ -21206,10 +22478,34 @@ ZONE_INFO_Europe_Berlin: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Brussels
-# Era count: 7
+# Era count: 9
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Brussels: List[ZoneEra] = [
+    # 0:17:30 - LMT 1880
+    {
+        'offset_seconds': 1050,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1880,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             0:17:30    -    BMT    1892 May  1 00:17:30
+    {
+        'offset_seconds': 1050,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'BMT',
+        'until_year': 1892,
+        'until_month': 5,
+        'until_day': 1,
+        'until_seconds': 1050,
+        'until_time_suffix': 'w',
+    },
     #             0:00    -    WET    1914 Nov  8
     {
         'offset_seconds': 0,
@@ -21304,10 +22600,22 @@ ZONE_INFO_Europe_Brussels: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Bucharest
-# Era count: 6
+# Era count: 7
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Bucharest: List[ZoneEra] = [
+    # 1:44:24 - LMT 1891 Oct
+    {
+        'offset_seconds': 6264,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1891,
+        'until_month': 10,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             1:44:24    -    BMT    1931 Jul 24
     {
         'offset_seconds': 6264,
@@ -21390,10 +22698,22 @@ ZONE_INFO_Europe_Bucharest: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Budapest
-# Era count: 5
+# Era count: 6
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Budapest: List[ZoneEra] = [
+    # 1:16:20 - LMT 1890 Nov 1
+    {
+        'offset_seconds': 4580,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1890,
+        'until_month': 11,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             1:00    C-Eur    CE%sT    1918
     {
         'offset_seconds': 3600,
@@ -21464,10 +22784,22 @@ ZONE_INFO_Europe_Budapest: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Chisinau
-# Era count: 9
+# Era count: 10
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Chisinau: List[ZoneEra] = [
+    # 1:55:20 - LMT 1880
+    {
+        'offset_seconds': 6920,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1880,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             1:55    -    CMT    1918 Feb 15
     {
         'offset_seconds': 6900,
@@ -21586,10 +22918,22 @@ ZONE_INFO_Europe_Chisinau: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Dublin
-# Era count: 10
+# Era count: 11
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Dublin: List[ZoneEra] = [
+    # -0:25:21 - LMT 1880 Aug 2
+    {
+        'offset_seconds': -1521,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1880,
+        'until_month': 8,
+        'until_day': 2,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -0:25:21 -    DMT    1916 May 21  2:00s
     {
         'offset_seconds': -1521,
@@ -21720,10 +23064,22 @@ ZONE_INFO_Europe_Dublin: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Gibraltar
-# Era count: 3
+# Era count: 4
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Gibraltar: List[ZoneEra] = [
+    # -0:21:24 - LMT 1880 Aug 2
+    {
+        'offset_seconds': -1284,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1880,
+        'until_month': 8,
+        'until_day': 2,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             0:00    GB-Eire    %s    1957 Apr 14  2:00
     {
         'offset_seconds': 0,
@@ -21770,10 +23126,22 @@ ZONE_INFO_Europe_Gibraltar: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Helsinki
-# Era count: 3
+# Era count: 4
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Helsinki: List[ZoneEra] = [
+    # 1:39:49 - LMT 1878 May 31
+    {
+        'offset_seconds': 5989,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1878,
+        'until_month': 5,
+        'until_day': 31,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             1:39:49    -    HMT    1921 May
     {
         'offset_seconds': 5989,
@@ -21820,10 +23188,22 @@ ZONE_INFO_Europe_Helsinki: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Istanbul
-# Era count: 12
+# Era count: 13
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Istanbul: List[ZoneEra] = [
+    # 1:55:52 - LMT 1880
+    {
+        'offset_seconds': 6952,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1880,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             1:56:56    -    IMT    1910 Oct
     {
         'offset_seconds': 7016,
@@ -21978,10 +23358,22 @@ ZONE_INFO_Europe_Istanbul: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Kaliningrad
-# Era count: 6
+# Era count: 7
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Kaliningrad: List[ZoneEra] = [
+    # 1:22:00 - LMT 1893 Apr
+    {
+        'offset_seconds': 4920,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1893,
+        'until_month': 4,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #              1:00    C-Eur    CE%sT    1945 Apr 10
     {
         'offset_seconds': 3600,
@@ -22174,10 +23566,22 @@ ZONE_INFO_Europe_Kirov: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Kyiv
-# Era count: 8
+# Era count: 9
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Kyiv: List[ZoneEra] = [
+    # 2:02:04 - LMT 1880
+    {
+        'offset_seconds': 7324,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1880,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             2:02:04    -    KMT    1924 May  2
     {
         'offset_seconds': 7324,
@@ -22284,10 +23688,22 @@ ZONE_INFO_Europe_Kyiv: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Lisbon
-# Era count: 7
+# Era count: 8
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Lisbon: List[ZoneEra] = [
+    # -0:36:45 - LMT 1884
+    {
+        'offset_seconds': -2205,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1884,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -0:36:45 -    LMT    1912 Jan  1  0:00u
     {
         'offset_seconds': -2205,
@@ -22382,10 +23798,22 @@ ZONE_INFO_Europe_Lisbon: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/London
-# Era count: 4
+# Era count: 5
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_London: List[ZoneEra] = [
+    # -0:01:15 - LMT 1847 Dec 1
+    {
+        'offset_seconds': -75,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1847,
+        'until_month': 12,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #              0:00    GB-Eire    %s    1968 Oct 27
     {
         'offset_seconds': 0,
@@ -22506,10 +23934,22 @@ ZONE_INFO_Europe_Madrid: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Malta
-# Era count: 3
+# Era count: 4
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Malta: List[ZoneEra] = [
+    # 0:58:04 - LMT 1893 Nov 2
+    {
+        'offset_seconds': 3484,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1893,
+        'until_month': 11,
+        'until_day': 2,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             1:00    Italy    CE%sT    1973 Mar 31
     {
         'offset_seconds': 3600,
@@ -22556,10 +23996,22 @@ ZONE_INFO_Europe_Malta: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Minsk
-# Era count: 8
+# Era count: 9
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Minsk: List[ZoneEra] = [
+    # 1:50:16 - LMT 1880
+    {
+        'offset_seconds': 6616,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1880,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             1:50    -    MMT    1924 May  2
     {
         'offset_seconds': 6600,
@@ -22666,10 +24118,22 @@ ZONE_INFO_Europe_Minsk: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Moscow
-# Era count: 10
+# Era count: 11
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Moscow: List[ZoneEra] = [
+    # 2:30:17 - LMT 1880
+    {
+        'offset_seconds': 9017,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1880,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #              2:30:17 -    MMT    1916 Jul  3
     {
         'offset_seconds': 9017,
@@ -22800,10 +24264,22 @@ ZONE_INFO_Europe_Moscow: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Paris
-# Era count: 6
+# Era count: 7
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Paris: List[ZoneEra] = [
+    # 0:09:21 - LMT 1891 Mar 16
+    {
+        'offset_seconds': 561,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1891,
+        'until_month': 3,
+        'until_day': 16,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             0:09:21    -    PMT    1911 Mar 11
     {
         'offset_seconds': 561,
@@ -22886,10 +24362,34 @@ ZONE_INFO_Europe_Paris: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Prague
-# Era count: 5
+# Era count: 7
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Prague: List[ZoneEra] = [
+    # 0:57:44 - LMT 1850
+    {
+        'offset_seconds': 3464,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1850,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             0:57:44    -    PMT    1891 Oct
+    {
+        'offset_seconds': 3464,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'PMT',
+        'until_year': 1891,
+        'until_month': 10,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             1:00    C-Eur    CE%sT    1945 May  9
     {
         'offset_seconds': 3600,
@@ -22960,10 +24460,22 @@ ZONE_INFO_Europe_Prague: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Riga
-# Era count: 14
+# Era count: 15
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Riga: List[ZoneEra] = [
+    # 1:36:34 - LMT 1880
+    {
+        'offset_seconds': 5794,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1880,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             1:36:34    -    RMT    1918 Apr 15  2:00
     {
         'offset_seconds': 5794,
@@ -23142,10 +24654,34 @@ ZONE_INFO_Europe_Riga: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Rome
-# Era count: 4
+# Era count: 6
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Rome: List[ZoneEra] = [
+    # 0:49:56 - LMT 1866 Dec 12
+    {
+        'offset_seconds': 2996,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1866,
+        'until_month': 12,
+        'until_day': 12,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             0:49:56    -    RMT    1893 Oct 31 23:00u
+    {
+        'offset_seconds': 2996,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'RMT',
+        'until_year': 1893,
+        'until_month': 10,
+        'until_day': 31,
+        'until_seconds': 82800,
+        'until_time_suffix': 'u',
+    },
     #             1:00    Italy    CE%sT    1943 Sep 10
     {
         'offset_seconds': 3600,
@@ -23460,10 +24996,22 @@ ZONE_INFO_Europe_Saratov: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Simferopol
-# Era count: 14
+# Era count: 15
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Simferopol: List[ZoneEra] = [
+    # 2:16:24 - LMT 1880
+    {
+        'offset_seconds': 8184,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1880,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #              2:16    -    SMT    1924 May  2
     {
         'offset_seconds': 8160,
@@ -23642,10 +25190,34 @@ ZONE_INFO_Europe_Simferopol: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Sofia
-# Era count: 8
+# Era count: 10
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Sofia: List[ZoneEra] = [
+    # 1:33:16 - LMT 1880
+    {
+        'offset_seconds': 5596,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1880,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             1:56:56    -    IMT    1894 Nov 30
+    {
+        'offset_seconds': 7016,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'IMT',
+        'until_year': 1894,
+        'until_month': 11,
+        'until_day': 30,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             2:00    -    EET    1942 Nov  2  3:00
     {
         'offset_seconds': 7200,
@@ -23752,10 +25324,22 @@ ZONE_INFO_Europe_Sofia: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Tallinn
-# Era count: 12
+# Era count: 13
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Tallinn: List[ZoneEra] = [
+    # 1:39:00 - LMT 1880
+    {
+        'offset_seconds': 5940,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1880,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             1:39:00    -    TMT    1918 Feb
     {
         'offset_seconds': 5940,
@@ -24094,10 +25678,22 @@ ZONE_INFO_Europe_Ulyanovsk: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Vienna
-# Era count: 7
+# Era count: 8
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Vienna: List[ZoneEra] = [
+    # 1:05:21 - LMT 1893 Apr
+    {
+        'offset_seconds': 3921,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1893,
+        'until_month': 4,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             1:00    C-Eur    CE%sT    1920
     {
         'offset_seconds': 3600,
@@ -24192,10 +25788,22 @@ ZONE_INFO_Europe_Vienna: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Vilnius
-# Era count: 14
+# Era count: 15
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Vilnius: List[ZoneEra] = [
+    # 1:41:16 - LMT 1880
+    {
+        'offset_seconds': 6076,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1880,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             1:24:00    -    WMT    1917
     {
         'offset_seconds': 5040,
@@ -24520,10 +26128,22 @@ ZONE_INFO_Europe_Volgograd: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Warsaw
-# Era count: 8
+# Era count: 9
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Warsaw: List[ZoneEra] = [
+    # 1:24:00 - LMT 1880
+    {
+        'offset_seconds': 5040,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1880,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             1:24:00    -    WMT    1915 Aug  5
     {
         'offset_seconds': 5040,
@@ -24630,10 +26250,34 @@ ZONE_INFO_Europe_Warsaw: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Europe/Zurich
-# Era count: 2
+# Era count: 4
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Europe_Zurich: List[ZoneEra] = [
+    # 0:34:08 - LMT 1853 Jul 16
+    {
+        'offset_seconds': 2048,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1853,
+        'until_month': 7,
+        'until_day': 16,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             0:29:46    -    BMT    1894 Jun
+    {
+        'offset_seconds': 1786,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'BMT',
+        'until_year': 1894,
+        'until_month': 6,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             1:00    Swiss    CE%sT    1981
     {
         'offset_seconds': 3600,
@@ -24744,10 +26388,22 @@ ZONE_INFO_Indian_Chagos: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Indian/Maldives
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Indian_Maldives: List[ZoneEra] = [
+    # 4:54:00 - LMT 1880
+    {
+        'offset_seconds': 17640,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1880,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             4:54:00    -    MMT    1960
     {
         'offset_seconds': 17640,
@@ -24924,10 +26580,22 @@ ZONE_INFO_PST8PDT: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Pacific/Apia
-# Era count: 4
+# Era count: 5
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Pacific_Apia: List[ZoneEra] = [
+    # 12:33:04 - LMT 1892 Jul 5
+    {
+        'offset_seconds': 45184,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1892,
+        'until_month': 7,
+        'until_day': 5,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -11:26:56 -    LMT    1911
     {
         'offset_seconds': -41216,
@@ -24986,10 +26654,22 @@ ZONE_INFO_Pacific_Apia: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Pacific/Auckland
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Pacific_Auckland: List[ZoneEra] = [
+    # 11:39:04 - LMT 1868 Nov 2
+    {
+        'offset_seconds': 41944,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1868,
+        'until_month': 11,
+        'until_day': 2,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             11:30    NZ    NZ%sT    1946 Jan  1
     {
         'offset_seconds': 41400,
@@ -25024,10 +26704,34 @@ ZONE_INFO_Pacific_Auckland: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Pacific/Bougainville
-# Era count: 4
+# Era count: 6
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Pacific_Bougainville: List[ZoneEra] = [
+    # 10:22:16 - LMT 1880
+    {
+        'offset_seconds': 37336,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1880,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #              9:48:32 -    PMMT    1895
+    {
+        'offset_seconds': 35312,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'PMMT',
+        'until_year': 1895,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             10:00    -    +10    1942 Jul
     {
         'offset_seconds': 36000,
@@ -25086,10 +26790,22 @@ ZONE_INFO_Pacific_Bougainville: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Pacific/Chatham
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Pacific_Chatham: List[ZoneEra] = [
+    # 12:13:48 - LMT 1868 Nov 2
+    {
+        'offset_seconds': 44028,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1868,
+        'until_month': 11,
+        'until_day': 2,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             12:15    -    +1215    1946 Jan  1
     {
         'offset_seconds': 44100,
@@ -25124,10 +26840,22 @@ ZONE_INFO_Pacific_Chatham: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Pacific/Easter
-# Era count: 3
+# Era count: 4
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Pacific_Easter: List[ZoneEra] = [
+    # -7:17:28 - LMT 1890
+    {
+        'offset_seconds': -26248,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1890,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -7:17:28 -    EMT    1932 Sep
     {
         'offset_seconds': -26248,
@@ -25426,10 +27154,22 @@ ZONE_INFO_Pacific_Guadalcanal: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Pacific/Guam
-# Era count: 5
+# Era count: 6
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Pacific_Guam: List[ZoneEra] = [
+    # -14:21:00 - LMT 1844 Dec 31
+    {
+        'offset_seconds': -51660,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1844,
+        'until_month': 12,
+        'until_day': 31,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #              9:39:00 -    LMT    1901
     {
         'offset_seconds': 34740,
@@ -25500,10 +27240,22 @@ ZONE_INFO_Pacific_Guam: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Pacific/Honolulu
-# Era count: 4
+# Era count: 5
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Pacific_Honolulu: List[ZoneEra] = [
+    # -10:31:26 - LMT 1896 Jan 13 12:00
+    {
+        'offset_seconds': -37886,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1896,
+        'until_month': 1,
+        'until_day': 13,
+        'until_seconds': 43200,
+        'until_time_suffix': 'w',
+    },
     #             -10:30    -    HST    1933 Apr 30  2:00
     {
         'offset_seconds': -37800,
@@ -25686,10 +27438,22 @@ ZONE_INFO_Pacific_Kiritimati: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Pacific/Kosrae
-# Era count: 9
+# Era count: 10
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Pacific_Kosrae: List[ZoneEra] = [
+    # -13:08:04 - LMT 1844 Dec 31
+    {
+        'offset_seconds': -47284,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1844,
+        'until_month': 12,
+        'until_day': 31,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #              10:51:56 -    LMT    1901
     {
         'offset_seconds': 39116,
@@ -26204,10 +27968,22 @@ ZONE_INFO_Pacific_Noumea: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Pacific/Pago_Pago
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Pacific_Pago_Pago: List[ZoneEra] = [
+    # 12:37:12 - LMT 1892 Jul 5
+    {
+        'offset_seconds': 45432,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1892,
+        'until_month': 7,
+        'until_day': 5,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             -11:22:48 -    LMT    1911
     {
         'offset_seconds': -40968,
@@ -26242,10 +28018,22 @@ ZONE_INFO_Pacific_Pago_Pago: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Pacific/Palau
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Pacific_Palau: List[ZoneEra] = [
+    # -15:02:04 - LMT 1844 Dec 31
+    {
+        'offset_seconds': -54124,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1844,
+        'until_month': 12,
+        'until_day': 31,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #               8:57:56 -    LMT    1901
     {
         'offset_seconds': 32276,
@@ -26330,10 +28118,34 @@ ZONE_INFO_Pacific_Pitcairn: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Pacific/Port_Moresby
-# Era count: 1
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Pacific_Port_Moresby: List[ZoneEra] = [
+    # 9:48:40 - LMT 1880
+    {
+        'offset_seconds': 35320,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1880,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             9:48:32    -    PMMT    1895
+    {
+        'offset_seconds': 35312,
+        'zone_policy': '-',
+        'era_delta_seconds': 0,
+        'format': 'PMMT',
+        'until_year': 1895,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
     #             10:00    -    +10
     {
         'offset_seconds': 36000,
@@ -28065,7 +29877,7 @@ ZONE_INFO_Zulu: ZoneInfo = {
 
 
 # ---------------------------------------------------------------------------
-# Notable zones: 241
+# Notable zones: 298
 # ---------------------------------------------------------------------------
 
 # Africa/Abidjan {
@@ -28074,7 +29886,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # }
 # Africa/Algiers {
 #   STDOFF '0:09:21' not on 15-minute boundary,
-#   STDOFF (0:09:21) not at :00 or :30 mark,
+#   STDOFF '0:12:12' not on 15-minute boundary,
+#   STDOFF (0:12:12) not at :00 or :30 mark,
 #   Algeria {Added anchor rule at year 0}
 # }
 # Africa/Bissau {
@@ -28114,6 +29927,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # }
 # Africa/Johannesburg {
 #   RULES not fixed but FORMAT is missing '%' or '/',
+#   STDOFF '1:52:00' not on 15-minute boundary,
+#   STDOFF (1:52:00) not at :00 or :30 mark,
 #   SA {Added anchor rule at year 0}
 # }
 # Africa/Juba {
@@ -28145,7 +29960,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # Africa/Ndjamena {STDOFF (1:00:12) not at :00 or :30 mark}
 # Africa/Sao_Tome {
 #   STDOFF '-0:36:45' not on 15-minute boundary,
-#   STDOFF (-0:36:45) not at :00 or :30 mark,
+#   STDOFF '0:26:56' not on 15-minute boundary,
+#   STDOFF (0:26:56) not at :00 or :30 mark,
 # }
 # Africa/Tripoli {
 #   STDOFF '0:52:44' not on 15-minute boundary,
@@ -28154,10 +29970,13 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # }
 # Africa/Tunis {
 #   STDOFF '0:09:21' not on 15-minute boundary,
-#   STDOFF (0:09:21) not at :00 or :30 mark,
+#   STDOFF '0:40:44' not on 15-minute boundary,
+#   STDOFF (0:40:44) not at :00 or :30 mark,
 #   Tunisia {Added anchor rule at year 0}
 # }
 # Africa/Windhoek {
+#   STDOFF '1:08:24' not on 15-minute boundary,
+#   STDOFF (1:08:24) not at :00 or :30 mark,
 #   Namibia {
 #     Added anchor rule at year 0,
 #     LETTER 'CAT' not single character,
@@ -28167,11 +29986,14 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # }
 # America/Adak {
 #   STDOFF '-11:46:38' not on 15-minute boundary,
-#   STDOFF (-11:46:38) not at :00 or :30 mark,
+#   STDOFF '12:13:22' not on 15-minute boundary,
+#   STDOFF (12:13:22) not at :00 or :30 mark,
+#   UNTIL '12:44:35' not on 15-minute boundary,
 #   US {Added anchor rule at year 0}
 # }
 # America/Anchorage {
-#   STDOFF (-9:59:36) not at :00 or :30 mark,
+#   STDOFF (14:00:24) not at :00 or :30 mark,
+#   UNTIL '14:31:37' not on 15-minute boundary,
 #   US {Added anchor rule at year 0}
 # }
 # America/Araguaina {
@@ -28180,13 +30002,15 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   Brazil {Added anchor rule at year 0}
 # }
 # America/Argentina/Buenos_Aires {
+#   STDOFF '-3:53:48' not on 15-minute boundary,
 #   STDOFF '-4:16:48' not on 15-minute boundary,
-#   STDOFF (-4:16:48) not at :00 or :30 mark,
+#   STDOFF (-3:53:48) not at :00 or :30 mark,
 #   Arg {Added anchor rule at year 0}
 # }
 # America/Argentina/Catamarca {
 #   STDOFF '-4:16:48' not on 15-minute boundary,
-#   STDOFF (-4:16:48) not at :00 or :30 mark,
+#   STDOFF '-4:23:08' not on 15-minute boundary,
+#   STDOFF (-4:23:08) not at :00 or :30 mark,
 #   Arg {Added anchor rule at year 0}
 # }
 # America/Argentina/Cordoba {
@@ -28196,48 +30020,57 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # }
 # America/Argentina/Jujuy {
 #   STDOFF '-4:16:48' not on 15-minute boundary,
-#   STDOFF (-4:16:48) not at :00 or :30 mark,
+#   STDOFF '-4:21:12' not on 15-minute boundary,
+#   STDOFF (-4:21:12) not at :00 or :30 mark,
 #   Arg {Added anchor rule at year 0}
 # }
 # America/Argentina/La_Rioja {
 #   STDOFF '-4:16:48' not on 15-minute boundary,
-#   STDOFF (-4:16:48) not at :00 or :30 mark,
+#   STDOFF '-4:27:24' not on 15-minute boundary,
+#   STDOFF (-4:27:24) not at :00 or :30 mark,
 #   Arg {Added anchor rule at year 0}
 # }
 # America/Argentina/Mendoza {
 #   STDOFF '-4:16:48' not on 15-minute boundary,
-#   STDOFF (-4:16:48) not at :00 or :30 mark,
+#   STDOFF '-4:35:16' not on 15-minute boundary,
+#   STDOFF (-4:35:16) not at :00 or :30 mark,
 #   Arg {Added anchor rule at year 0}
 # }
 # America/Argentina/Rio_Gallegos {
 #   STDOFF '-4:16:48' not on 15-minute boundary,
-#   STDOFF (-4:16:48) not at :00 or :30 mark,
+#   STDOFF '-4:36:52' not on 15-minute boundary,
+#   STDOFF (-4:36:52) not at :00 or :30 mark,
 #   Arg {Added anchor rule at year 0}
 # }
 # America/Argentina/Salta {
 #   STDOFF '-4:16:48' not on 15-minute boundary,
-#   STDOFF (-4:16:48) not at :00 or :30 mark,
+#   STDOFF '-4:21:40' not on 15-minute boundary,
+#   STDOFF (-4:21:40) not at :00 or :30 mark,
 #   Arg {Added anchor rule at year 0}
 # }
 # America/Argentina/San_Juan {
 #   STDOFF '-4:16:48' not on 15-minute boundary,
-#   STDOFF (-4:16:48) not at :00 or :30 mark,
+#   STDOFF '-4:34:04' not on 15-minute boundary,
+#   STDOFF (-4:34:04) not at :00 or :30 mark,
 #   Arg {Added anchor rule at year 0}
 # }
 # America/Argentina/San_Luis {
 #   STDOFF '-4:16:48' not on 15-minute boundary,
-#   STDOFF (-4:16:48) not at :00 or :30 mark,
+#   STDOFF '-4:25:24' not on 15-minute boundary,
+#   STDOFF (-4:25:24) not at :00 or :30 mark,
 #   Arg {Added anchor rule at year 0}
 #   SanLuis {Added anchor rule at year 0}
 # }
 # America/Argentina/Tucuman {
 #   STDOFF '-4:16:48' not on 15-minute boundary,
-#   STDOFF (-4:16:48) not at :00 or :30 mark,
+#   STDOFF '-4:20:52' not on 15-minute boundary,
+#   STDOFF (-4:20:52) not at :00 or :30 mark,
 #   Arg {Added anchor rule at year 0}
 # }
 # America/Argentina/Ushuaia {
 #   STDOFF '-4:16:48' not on 15-minute boundary,
-#   STDOFF (-4:16:48) not at :00 or :30 mark,
+#   STDOFF '-4:33:12' not on 15-minute boundary,
+#   STDOFF (-4:33:12) not at :00 or :30 mark,
 #   Arg {Added anchor rule at year 0}
 # }
 # America/Asuncion {
@@ -28292,6 +30125,7 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   CO {Added anchor rule at year 0}
 # }
 # America/Boise {
+#   STDOFF (-7:44:49) not at :00 or :30 mark,
 #   US {Added anchor rule at year 0}
 # }
 # America/Cambridge_Bay {
@@ -28310,10 +30144,13 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # }
 # America/Caracas {
 #   STDOFF '-4:27:40' not on 15-minute boundary,
-#   STDOFF (-4:27:40) not at :00 or :30 mark,
+#   STDOFF '-4:27:44' not on 15-minute boundary,
+#   STDOFF (-4:27:44) not at :00 or :30 mark,
 # }
 # America/Cayenne {STDOFF (-3:29:20) not at :00 or :30 mark}
 # America/Chicago {
+#   STDOFF '-5:50:36' not on 15-minute boundary,
+#   STDOFF (-5:50:36) not at :00 or :30 mark,
 #   Chicago {Added anchor rule at year 0}
 #   US {Added anchor rule at year 0}
 # }
@@ -28353,10 +30190,13 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   }
 # }
 # America/Dawson_Creek {
+#   STDOFF '-8:00:56' not on 15-minute boundary,
+#   STDOFF (-8:00:56) not at :00 or :30 mark,
 #   Canada {Added anchor rule at year 0}
 #   Vanc {Added anchor rule at year 0}
 # }
 # America/Denver {
+#   STDOFF (-6:59:56) not at :00 or :30 mark,
 #   Denver {Added anchor rule at year 0}
 #   US {Added anchor rule at year 0}
 # }
@@ -28384,6 +30224,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   Salv {Added anchor rule at year 0}
 # }
 # America/Fort_Nelson {
+#   STDOFF '-8:10:47' not on 15-minute boundary,
+#   STDOFF (-8:10:47) not at :00 or :30 mark,
 #   Canada {Added anchor rule at year 0}
 #   Vanc {Added anchor rule at year 0}
 # }
@@ -28399,7 +30241,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # }
 # America/Goose_Bay {
 #   STDOFF '-3:30:52' not on 15-minute boundary,
-#   STDOFF (-3:30:52) not at :00 or :30 mark,
+#   STDOFF '-4:01:40' not on 15-minute boundary,
+#   STDOFF (-4:01:40) not at :00 or :30 mark,
 #   Canada {Added anchor rule at year 0}
 #   StJohns {
 #     AT '0:01' not on 15-minute boundary,
@@ -28410,7 +30253,7 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # }
 # America/Grand_Turk {
 #   STDOFF '-5:07:10' not on 15-minute boundary,
-#   STDOFF (-5:07:10) not at :00 or :30 mark,
+#   STDOFF (-4:44:32) not at :00 or :30 mark,
 #   US {Added anchor rule at year 0}
 # }
 # America/Guatemala {
@@ -28420,7 +30263,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # }
 # America/Guayaquil {
 #   STDOFF '-5:14:00' not on 15-minute boundary,
-#   STDOFF (-5:14:00) not at :00 or :30 mark,
+#   STDOFF '-5:19:20' not on 15-minute boundary,
+#   STDOFF (-5:19:20) not at :00 or :30 mark,
 #   Ecuador {Added anchor rule at year 0}
 # }
 # America/Guyana {
@@ -28433,7 +30277,7 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   Halifax {Added anchor rule at year 0}
 # }
 # America/Havana {
-#   STDOFF (-5:29:36) not at :00 or :30 mark,
+#   STDOFF (-5:29:28) not at :00 or :30 mark,
 #   Cuba {Added anchor rule at year 0}
 # }
 # America/Hermosillo {
@@ -28442,33 +30286,48 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   Mexico {Added anchor rule at year 0}
 # }
 # America/Indiana/Indianapolis {
+#   STDOFF (-5:44:38) not at :00 or :30 mark,
 #   Indianapolis {Added anchor rule at year 0}
 #   US {Added anchor rule at year 0}
 # }
 # America/Indiana/Knox {
+#   STDOFF '-5:46:30' not on 15-minute boundary,
+#   STDOFF (-5:46:30) not at :00 or :30 mark,
 #   Starke {Added anchor rule at year 0}
 #   US {Added anchor rule at year 0}
 # }
 # America/Indiana/Marengo {
+#   STDOFF '-5:45:23' not on 15-minute boundary,
+#   STDOFF (-5:45:23) not at :00 or :30 mark,
 #   Marengo {Added anchor rule at year 0}
 #   US {Added anchor rule at year 0}
 # }
 # America/Indiana/Petersburg {
+#   STDOFF '-5:49:07' not on 15-minute boundary,
+#   STDOFF (-5:49:07) not at :00 or :30 mark,
 #   Pike {Added anchor rule at year 0}
 #   US {Added anchor rule at year 0}
 # }
 # America/Indiana/Tell_City {
+#   STDOFF '-5:47:03' not on 15-minute boundary,
+#   STDOFF (-5:47:03) not at :00 or :30 mark,
 #   Perry {Added anchor rule at year 0}
 #   US {Added anchor rule at year 0}
 # }
 # America/Indiana/Vevay {
+#   STDOFF '-5:40:16' not on 15-minute boundary,
+#   STDOFF (-5:40:16) not at :00 or :30 mark,
 #   US {Added anchor rule at year 0}
 # }
 # America/Indiana/Vincennes {
+#   STDOFF '-5:50:07' not on 15-minute boundary,
+#   STDOFF (-5:50:07) not at :00 or :30 mark,
 #   US {Added anchor rule at year 0}
 #   Vincennes {Added anchor rule at year 0}
 # }
 # America/Indiana/Winamac {
+#   STDOFF '-5:46:25' not on 15-minute boundary,
+#   STDOFF (-5:46:25) not at :00 or :30 mark,
 #   Pulaski {Added anchor rule at year 0}
 #   US {Added anchor rule at year 0}
 # }
@@ -28487,10 +30346,14 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # }
 # America/Juneau {
 #   STDOFF '-8:57:41' not on 15-minute boundary,
-#   STDOFF (-8:57:41) not at :00 or :30 mark,
+#   STDOFF '15:02:19' not on 15-minute boundary,
+#   STDOFF (15:02:19) not at :00 or :30 mark,
+#   UNTIL '15:33:32' not on 15-minute boundary,
 #   US {Added anchor rule at year 0}
 # }
 # America/Kentucky/Louisville {
+#   STDOFF '-5:43:02' not on 15-minute boundary,
+#   STDOFF (-5:43:02) not at :00 or :30 mark,
 #   Louisville {
 #     AT '0:01' not on 15-minute boundary,
 #     Added anchor rule at year 0,
@@ -28498,6 +30361,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   US {Added anchor rule at year 0}
 # }
 # America/Kentucky/Monticello {
+#   STDOFF '-5:39:24' not on 15-minute boundary,
+#   STDOFF (-5:39:24) not at :00 or :30 mark,
 #   US {Added anchor rule at year 0}
 # }
 # America/La_Paz {
@@ -28505,11 +30370,14 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   STDOFF (-4:32:36) not at :00 or :30 mark,
 # }
 # America/Lima {
+#   STDOFF '-5:08:12' not on 15-minute boundary,
 #   STDOFF '-5:08:36' not on 15-minute boundary,
-#   STDOFF (-5:08:36) not at :00 or :30 mark,
+#   STDOFF (-5:08:12) not at :00 or :30 mark,
 #   Peru {Added anchor rule at year 0}
 # }
 # America/Los_Angeles {
+#   STDOFF '-7:52:58' not on 15-minute boundary,
+#   STDOFF (-7:52:58) not at :00 or :30 mark,
 #   CA {
 #     AT '2:01' not on 15-minute boundary,
 #     Added anchor rule at year 0,
@@ -28522,8 +30390,9 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   Brazil {Added anchor rule at year 0}
 # }
 # America/Managua {
+#   STDOFF '-5:45:08' not on 15-minute boundary,
 #   STDOFF '-5:45:12' not on 15-minute boundary,
-#   STDOFF (-5:45:12) not at :00 or :30 mark,
+#   STDOFF (-5:45:08) not at :00 or :30 mark,
 #   Nic {Added anchor rule at year 0}
 # }
 # America/Manaus {
@@ -28545,6 +30414,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   Mexico {Added anchor rule at year 0}
 # }
 # America/Menominee {
+#   STDOFF '-5:50:27' not on 15-minute boundary,
+#   STDOFF (-5:50:27) not at :00 or :30 mark,
 #   Menominee {Added anchor rule at year 0}
 #   US {Added anchor rule at year 0}
 # }
@@ -28555,7 +30426,9 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # }
 # America/Metlakatla {
 #   STDOFF '-8:46:18' not on 15-minute boundary,
-#   STDOFF (-8:46:18) not at :00 or :30 mark,
+#   STDOFF '15:13:42' not on 15-minute boundary,
+#   STDOFF (15:13:42) not at :00 or :30 mark,
+#   UNTIL '15:44:55' not on 15-minute boundary,
 #   US {Added anchor rule at year 0}
 # }
 # America/Mexico_City {
@@ -28568,6 +30441,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   Canada {Added anchor rule at year 0}
 # }
 # America/Moncton {
+#   STDOFF '-4:19:08' not on 15-minute boundary,
+#   STDOFF (-4:19:08) not at :00 or :30 mark,
 #   Canada {Added anchor rule at year 0}
 #   Moncton {
 #     AT '0:01' not on 15-minute boundary,
@@ -28589,12 +30464,16 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   }
 # }
 # America/New_York {
+#   STDOFF '-4:56:02' not on 15-minute boundary,
+#   STDOFF (-4:56:02) not at :00 or :30 mark,
 #   NYC {Added anchor rule at year 0}
 #   US {Added anchor rule at year 0}
 # }
 # America/Nome {
 #   STDOFF '-11:01:38' not on 15-minute boundary,
-#   STDOFF (-11:01:38) not at :00 or :30 mark,
+#   STDOFF '12:58:22' not on 15-minute boundary,
+#   STDOFF (12:58:22) not at :00 or :30 mark,
+#   UNTIL '13:29:35' not on 15-minute boundary,
 #   US {Added anchor rule at year 0}
 # }
 # America/Noronha {
@@ -28603,12 +30482,18 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   Brazil {Added anchor rule at year 0}
 # }
 # America/North_Dakota/Beulah {
+#   STDOFF '-6:47:07' not on 15-minute boundary,
+#   STDOFF (-6:47:07) not at :00 or :30 mark,
 #   US {Added anchor rule at year 0}
 # }
 # America/North_Dakota/Center {
+#   STDOFF '-6:45:12' not on 15-minute boundary,
+#   STDOFF (-6:45:12) not at :00 or :30 mark,
 #   US {Added anchor rule at year 0}
 # }
 # America/North_Dakota/New_Salem {
+#   STDOFF '-6:45:39' not on 15-minute boundary,
+#   STDOFF (-6:45:39) not at :00 or :30 mark,
 #   US {Added anchor rule at year 0}
 # }
 # America/Nuuk {
@@ -28623,8 +30508,9 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   US {Added anchor rule at year 0}
 # }
 # America/Panama {
+#   STDOFF '-5:18:08' not on 15-minute boundary,
 #   STDOFF '-5:19:36' not on 15-minute boundary,
-#   STDOFF (-5:19:36) not at :00 or :30 mark,
+#   STDOFF (-5:18:08) not at :00 or :30 mark,
 # }
 # America/Paramaribo {
 #   STDOFF '-3:40:36' not on 15-minute boundary,
@@ -28633,12 +30519,15 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   STDOFF (-3:40:40) not at :00 or :30 mark,
 # }
 # America/Phoenix {
+#   STDOFF '-7:28:18' not on 15-minute boundary,
+#   STDOFF (-7:28:18) not at :00 or :30 mark,
 #   UNTIL '0:01' not on 15-minute boundary,
 #   US {Added anchor rule at year 0}
 # }
 # America/Port-au-Prince {
 #   STDOFF '-4:49' not on 15-minute boundary,
-#   STDOFF (-4:49) not at :00 or :30 mark,
+#   STDOFF '-4:49:20' not on 15-minute boundary,
+#   STDOFF (-4:49:20) not at :00 or :30 mark,
 #   Haiti {Added anchor rule at year 0}
 # }
 # America/Porto_Velho {
@@ -28653,7 +30542,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # }
 # America/Punta_Arenas {
 #   STDOFF '-4:42:45' not on 15-minute boundary,
-#   STDOFF (-4:42:45) not at :00 or :30 mark,
+#   STDOFF '-4:43:40' not on 15-minute boundary,
+#   STDOFF (-4:43:40) not at :00 or :30 mark,
 #   Chile {Added anchor rule at year 0}
 # }
 # America/Rankin_Inlet {
@@ -28690,8 +30580,9 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   Chile {Added anchor rule at year 0}
 # }
 # America/Santo_Domingo {
+#   STDOFF '-4:39:36' not on 15-minute boundary,
 #   STDOFF '-4:40' not on 15-minute boundary,
-#   STDOFF (-4:40) not at :00 or :30 mark,
+#   STDOFF (-4:39:36) not at :00 or :30 mark,
 #   DR {
 #     Added anchor rule at year 0,
 #     LETTER '-0430' not single character,
@@ -28714,7 +30605,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # }
 # America/Sitka {
 #   STDOFF '-9:01:13' not on 15-minute boundary,
-#   STDOFF (-9:01:13) not at :00 or :30 mark,
+#   STDOFF '14:58:47' not on 15-minute boundary,
+#   STDOFF (14:58:47) not at :00 or :30 mark,
 #   US {Added anchor rule at year 0}
 # }
 # America/St_Johns {
@@ -28756,10 +30648,14 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   US {Added anchor rule at year 0}
 # }
 # America/Toronto {
+#   STDOFF '-5:17:32' not on 15-minute boundary,
+#   STDOFF (-5:17:32) not at :00 or :30 mark,
 #   Canada {Added anchor rule at year 0}
 #   Toronto {Added anchor rule at year 0}
 # }
 # America/Vancouver {
+#   STDOFF '-8:12:28' not on 15-minute boundary,
+#   STDOFF (-8:12:28) not at :00 or :30 mark,
 #   Canada {Added anchor rule at year 0}
 #   Vanc {Added anchor rule at year 0}
 # }
@@ -28775,12 +30671,16 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   }
 # }
 # America/Winnipeg {
+#   STDOFF '-6:28:36' not on 15-minute boundary,
+#   STDOFF (-6:28:36) not at :00 or :30 mark,
 #   Canada {Added anchor rule at year 0}
 #   Winn {Added anchor rule at year 0}
 # }
 # America/Yakutat {
 #   STDOFF '-9:18:55' not on 15-minute boundary,
-#   STDOFF (-9:18:55) not at :00 or :30 mark,
+#   STDOFF '14:41:05' not on 15-minute boundary,
+#   STDOFF (14:41:05) not at :00 or :30 mark,
+#   UNTIL '15:12:18' not on 15-minute boundary,
 #   US {Added anchor rule at year 0}
 # }
 # America/Yellowknife {
@@ -28850,7 +30750,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # }
 # Asia/Baghdad {
 #   STDOFF '2:57:36' not on 15-minute boundary,
-#   STDOFF (2:57:36) not at :00 or :30 mark,
+#   STDOFF '2:57:40' not on 15-minute boundary,
+#   STDOFF (2:57:40) not at :00 or :30 mark,
 #   Iraq {Added anchor rule at year 0}
 # }
 # Asia/Baku {
@@ -28879,6 +30780,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   }
 # }
 # Asia/Beirut {
+#   STDOFF '2:22:00' not on 15-minute boundary,
+#   STDOFF (2:22:00) not at :00 or :30 mark,
 #   Lebanon {Added anchor rule at year 0}
 # }
 # Asia/Bishkek {
@@ -28908,8 +30811,9 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # }
 # Asia/Colombo {
 #   RULES delta offset '0:30' different from 1:00,
+#   STDOFF '5:19:24' not on 15-minute boundary,
 #   STDOFF '5:19:32' not on 15-minute boundary,
-#   STDOFF (5:19:32) not at :00 or :30 mark,
+#   STDOFF (5:19:24) not at :00 or :30 mark,
 # }
 # Asia/Damascus {
 #   STDOFF '2:25:12' not on 15-minute boundary,
@@ -28918,7 +30822,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # }
 # Asia/Dhaka {
 #   STDOFF '5:53:20' not on 15-minute boundary,
-#   STDOFF (5:53:20) not at :00 or :30 mark,
+#   STDOFF '6:01:40' not on 15-minute boundary,
+#   STDOFF (6:01:40) not at :00 or :30 mark,
 #   Dhaka {Added anchor rule at year 0}
 # }
 # Asia/Dili {
@@ -29011,12 +30916,17 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # }
 # Asia/Jerusalem {
 #   STDOFF '2:20:40' not on 15-minute boundary,
-#   STDOFF (2:20:40) not at :00 or :30 mark,
+#   STDOFF '2:20:54' not on 15-minute boundary,
+#   STDOFF (2:20:54) not at :00 or :30 mark,
 #   Zion {
 #     Added anchor rule at year 0,
 #     LETTER 'DD' not single character,
 #     SAVE (delta_offset) '2:00' different from 1:00,
 #   }
+# }
+# Asia/Kabul {
+#   STDOFF '4:36:48' not on 15-minute boundary,
+#   STDOFF (4:36:48) not at :00 or :30 mark,
 # }
 # Asia/Kamchatka {
 #   STDOFF '10:34:36' not on 15-minute boundary,
@@ -29057,7 +30967,9 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # }
 # Asia/Kolkata {
 #   STDOFF '5:21:10' not on 15-minute boundary,
-#   STDOFF (5:21:10) not at :00 or :30 mark,
+#   STDOFF '5:53:20' not on 15-minute boundary,
+#   STDOFF '5:53:28' not on 15-minute boundary,
+#   STDOFF (5:53:28) not at :00 or :30 mark,
 # }
 # Asia/Krasnoyarsk {
 #   STDOFF '6:11:26' not on 15-minute boundary,
@@ -29105,8 +31017,9 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   STDOFF (7:57:36) not at :00 or :30 mark,
 # }
 # Asia/Manila {
+#   STDOFF '-15:56:00' not on 15-minute boundary,
 #   STDOFF '8:04:00' not on 15-minute boundary,
-#   STDOFF (8:04:00) not at :00 or :30 mark,
+#   STDOFF (-15:56:00) not at :00 or :30 mark,
 #   Phil {Added anchor rule at year 0}
 # }
 # Asia/Nicosia {
@@ -29238,6 +31151,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   }
 # }
 # Asia/Taipei {
+#   STDOFF '8:06:00' not on 15-minute boundary,
+#   STDOFF (8:06:00) not at :00 or :30 mark,
 #   Taiwan {Added anchor rule at year 0}
 # }
 # Asia/Tashkent {
@@ -29261,6 +31176,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   STDOFF (5:58:36) not at :00 or :30 mark,
 # }
 # Asia/Tokyo {
+#   STDOFF '9:18:59' not on 15-minute boundary,
+#   STDOFF (9:18:59) not at :00 or :30 mark,
 #   Japan {Added anchor rule at year 0}
 # }
 # Asia/Tomsk {
@@ -29354,8 +31271,9 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # }
 # Atlantic/Azores {
 #   RULES not fixed but FORMAT is missing '%' or '/',
+#   STDOFF '-1:42:40' not on 15-minute boundary,
 #   STDOFF '-1:54:32' not on 15-minute boundary,
-#   STDOFF (-1:54:32) not at :00 or :30 mark,
+#   STDOFF (-1:42:40) not at :00 or :30 mark,
 #   EU {Added anchor rule at year 0}
 #   Port {
 #     Added anchor rule at year 0,
@@ -29394,56 +31312,81 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #     SAVE (delta_offset) '2:00' different from 1:00,
 #   }
 # }
+# Atlantic/South_Georgia {
+#   STDOFF '-2:26:08' not on 15-minute boundary,
+#   STDOFF (-2:26:08) not at :00 or :30 mark,
+# }
 # Atlantic/Stanley {
 #   STDOFF '-3:51:24' not on 15-minute boundary,
 #   STDOFF (-3:51:24) not at :00 or :30 mark,
 #   Falk {Added anchor rule at year 0}
 # }
 # Australia/Adelaide {
+#   STDOFF '9:14:20' not on 15-minute boundary,
+#   STDOFF (9:14:20) not at :00 or :30 mark,
 #   AS {Added anchor rule at year 0}
 #   Aus {Added anchor rule at year 0}
 # }
 # Australia/Brisbane {
+#   STDOFF '10:12:08' not on 15-minute boundary,
+#   STDOFF (10:12:08) not at :00 or :30 mark,
 #   AQ {Added anchor rule at year 0}
 #   Aus {Added anchor rule at year 0}
 # }
 # Australia/Broken_Hill {
+#   STDOFF '9:25:48' not on 15-minute boundary,
+#   STDOFF (9:25:48) not at :00 or :30 mark,
 #   AN {Added anchor rule at year 0}
 #   AS {Added anchor rule at year 0}
 #   Aus {Added anchor rule at year 0}
 # }
 # Australia/Darwin {
+#   STDOFF '8:43:20' not on 15-minute boundary,
+#   STDOFF (8:43:20) not at :00 or :30 mark,
 #   Aus {Added anchor rule at year 0}
 # }
 # Australia/Eucla {
-#   STDOFF (8:45) not at :00 or :30 mark,
+#   STDOFF '8:35:28' not on 15-minute boundary,
+#   STDOFF (8:35:28) not at :00 or :30 mark,
 #   AW {Added anchor rule at year 0}
 #   Aus {Added anchor rule at year 0}
 # }
 # Australia/Hobart {
+#   STDOFF '9:49:16' not on 15-minute boundary,
+#   STDOFF (9:49:16) not at :00 or :30 mark,
 #   AT {Added anchor rule at year 0}
 #   Aus {Added anchor rule at year 0}
 # }
 # Australia/Lindeman {
+#   STDOFF '9:55:56' not on 15-minute boundary,
+#   STDOFF (9:55:56) not at :00 or :30 mark,
 #   AQ {Added anchor rule at year 0}
 #   Aus {Added anchor rule at year 0}
 #   Holiday {Added anchor rule at year 0}
 # }
 # Australia/Lord_Howe {
+#   STDOFF '10:36:20' not on 15-minute boundary,
+#   STDOFF (10:36:20) not at :00 or :30 mark,
 #   LH {
 #     Added anchor rule at year 0,
 #     SAVE (delta_offset) '0:30' different from 1:00,
 #   }
 # }
 # Australia/Melbourne {
+#   STDOFF '9:39:52' not on 15-minute boundary,
+#   STDOFF (9:39:52) not at :00 or :30 mark,
 #   AV {Added anchor rule at year 0}
 #   Aus {Added anchor rule at year 0}
 # }
 # Australia/Perth {
+#   STDOFF '7:43:24' not on 15-minute boundary,
+#   STDOFF (7:43:24) not at :00 or :30 mark,
 #   AW {Added anchor rule at year 0}
 #   Aus {Added anchor rule at year 0}
 # }
 # Australia/Sydney {
+#   STDOFF '10:04:52' not on 15-minute boundary,
+#   STDOFF (10:04:52) not at :00 or :30 mark,
 #   AN {Added anchor rule at year 0}
 #   Aus {Added anchor rule at year 0}
 # }
@@ -29486,10 +31429,14 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   Greece {Added anchor rule at year 0}
 # }
 # Europe/Belgrade {
+#   STDOFF '1:22:00' not on 15-minute boundary,
+#   STDOFF (1:22:00) not at :00 or :30 mark,
 #   C-Eur {Added anchor rule at year 0}
 #   EU {Added anchor rule at year 0}
 # }
 # Europe/Berlin {
+#   STDOFF '0:53:28' not on 15-minute boundary,
+#   STDOFF (0:53:28) not at :00 or :30 mark,
 #   C-Eur {Added anchor rule at year 0}
 #   EU {Added anchor rule at year 0}
 #   Germany {
@@ -29502,6 +31449,9 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   }
 # }
 # Europe/Brussels {
+#   STDOFF '0:17:30' not on 15-minute boundary,
+#   STDOFF (0:17:30) not at :00 or :30 mark,
+#   UNTIL '00:17:30' not on 15-minute boundary,
 #   Belgium {Added anchor rule at year 0}
 #   C-Eur {Added anchor rule at year 0}
 #   EU {Added anchor rule at year 0}
@@ -29515,6 +31465,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   Romania {Added anchor rule at year 0}
 # }
 # Europe/Budapest {
+#   STDOFF '1:16:20' not on 15-minute boundary,
+#   STDOFF (1:16:20) not at :00 or :30 mark,
 #   C-Eur {Added anchor rule at year 0}
 #   EU {Added anchor rule at year 0}
 #   Hungary {Added anchor rule at year 0}
@@ -29522,7 +31474,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # Europe/Chisinau {
 #   STDOFF '1:44:24' not on 15-minute boundary,
 #   STDOFF '1:55' not on 15-minute boundary,
-#   STDOFF (1:55) not at :00 or :30 mark,
+#   STDOFF '1:55:20' not on 15-minute boundary,
+#   STDOFF (1:55:20) not at :00 or :30 mark,
 #   C-Eur {Added anchor rule at year 0}
 #   E-Eur {Added anchor rule at year 0}
 #   Moldova {Added anchor rule at year 0}
@@ -29554,6 +31507,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   }
 # }
 # Europe/Gibraltar {
+#   STDOFF '-0:21:24' not on 15-minute boundary,
+#   STDOFF (-0:21:24) not at :00 or :30 mark,
 #   EU {Added anchor rule at year 0}
 #   GB-Eire {
 #     Added anchor rule at year 0,
@@ -29570,12 +31525,15 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   Finland {Added anchor rule at year 0}
 # }
 # Europe/Istanbul {
+#   STDOFF '1:55:52' not on 15-minute boundary,
 #   STDOFF '1:56:56' not on 15-minute boundary,
-#   STDOFF (1:56:56) not at :00 or :30 mark,
+#   STDOFF (1:55:52) not at :00 or :30 mark,
 #   EU {Added anchor rule at year 0}
 #   Turkey {Added anchor rule at year 0}
 # }
 # Europe/Kaliningrad {
+#   STDOFF '1:22:00' not on 15-minute boundary,
+#   STDOFF (1:22:00) not at :00 or :30 mark,
 #   C-Eur {Added anchor rule at year 0}
 #   Poland {Added anchor rule at year 0}
 #   Russia {
@@ -29630,6 +31588,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   W-Eur {Added anchor rule at year 0}
 # }
 # Europe/London {
+#   STDOFF '-0:01:15' not on 15-minute boundary,
+#   STDOFF (-0:01:15) not at :00 or :30 mark,
 #   EU {Added anchor rule at year 0}
 #   GB-Eire {
 #     Added anchor rule at year 0,
@@ -29648,13 +31608,16 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   }
 # }
 # Europe/Malta {
+#   STDOFF '0:58:04' not on 15-minute boundary,
+#   STDOFF (0:58:04) not at :00 or :30 mark,
 #   EU {Added anchor rule at year 0}
 #   Italy {Added anchor rule at year 0}
 #   Malta {Added anchor rule at year 0}
 # }
 # Europe/Minsk {
 #   STDOFF '1:50' not on 15-minute boundary,
-#   STDOFF (1:50) not at :00 or :30 mark,
+#   STDOFF '1:50:16' not on 15-minute boundary,
+#   STDOFF (1:50:16) not at :00 or :30 mark,
 #   C-Eur {Added anchor rule at year 0}
 #   Russia {
 #     Added anchor rule at year 0,
@@ -29693,6 +31656,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # }
 # Europe/Prague {
 #   RULES delta offset '-1:00' different from 1:00,
+#   STDOFF '0:57:44' not on 15-minute boundary,
+#   STDOFF (0:57:44) not at :00 or :30 mark,
 #   C-Eur {Added anchor rule at year 0}
 #   Czech {Added anchor rule at year 0}
 #   EU {Added anchor rule at year 0}
@@ -29715,6 +31680,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   }
 # }
 # Europe/Rome {
+#   STDOFF '0:49:56' not on 15-minute boundary,
+#   STDOFF (0:49:56) not at :00 or :30 mark,
 #   C-Eur {Added anchor rule at year 0}
 #   EU {Added anchor rule at year 0}
 #   Italy {Added anchor rule at year 0}
@@ -29749,7 +31716,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # }
 # Europe/Simferopol {
 #   STDOFF '2:16' not on 15-minute boundary,
-#   STDOFF (2:16) not at :00 or :30 mark,
+#   STDOFF '2:16:24' not on 15-minute boundary,
+#   STDOFF (2:16:24) not at :00 or :30 mark,
 #   C-Eur {Added anchor rule at year 0}
 #   EU {Added anchor rule at year 0}
 #   Russia {
@@ -29764,6 +31732,9 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   }
 # }
 # Europe/Sofia {
+#   STDOFF '1:33:16' not on 15-minute boundary,
+#   STDOFF '1:56:56' not on 15-minute boundary,
+#   STDOFF (1:33:16) not at :00 or :30 mark,
 #   Bulg {Added anchor rule at year 0}
 #   C-Eur {Added anchor rule at year 0}
 #   E-Eur {Added anchor rule at year 0}
@@ -29806,6 +31777,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   }
 # }
 # Europe/Vienna {
+#   STDOFF '1:05:21' not on 15-minute boundary,
+#   STDOFF (1:05:21) not at :00 or :30 mark,
 #   Austria {Added anchor rule at year 0}
 #   C-Eur {Added anchor rule at year 0}
 #   EU {Added anchor rule at year 0}
@@ -29813,7 +31786,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # Europe/Vilnius {
 #   STDOFF '1:24:00' not on 15-minute boundary,
 #   STDOFF '1:35:36' not on 15-minute boundary,
-#   STDOFF (1:24:00) not at :00 or :30 mark,
+#   STDOFF '1:41:16' not on 15-minute boundary,
+#   STDOFF (1:41:16) not at :00 or :30 mark,
 #   C-Eur {Added anchor rule at year 0}
 #   EU {Added anchor rule at year 0}
 #   Russia {
@@ -29850,6 +31824,9 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   W-Eur {Added anchor rule at year 0}
 # }
 # Europe/Zurich {
+#   STDOFF '0:29:46' not on 15-minute boundary,
+#   STDOFF '0:34:08' not on 15-minute boundary,
+#   STDOFF (0:34:08) not at :00 or :30 mark,
 #   EU {Added anchor rule at year 0}
 #   Swiss {Added anchor rule at year 0}
 # }
@@ -29877,17 +31854,26 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # }
 # Pacific/Apia {
 #   STDOFF '-11:26:56' not on 15-minute boundary,
-#   STDOFF (-11:26:56) not at :00 or :30 mark,
+#   STDOFF '12:33:04' not on 15-minute boundary,
+#   STDOFF (12:33:04) not at :00 or :30 mark,
 #   WS {Added anchor rule at year 0}
 # }
 # Pacific/Auckland {
+#   STDOFF '11:39:04' not on 15-minute boundary,
+#   STDOFF (11:39:04) not at :00 or :30 mark,
 #   NZ {
 #     Added anchor rule at year 0,
 #     SAVE (delta_offset) '0:30' different from 1:00,
 #   }
 # }
+# Pacific/Bougainville {
+#   STDOFF '10:22:16' not on 15-minute boundary,
+#   STDOFF '9:48:32' not on 15-minute boundary,
+#   STDOFF (10:22:16) not at :00 or :30 mark,
+# }
 # Pacific/Chatham {
-#   STDOFF (12:15) not at :00 or :30 mark,
+#   STDOFF '12:13:48' not on 15-minute boundary,
+#   STDOFF (12:13:48) not at :00 or :30 mark,
 #   Chatham {Added anchor rule at year 0}
 # }
 # Pacific/Easter {
@@ -29920,8 +31906,9 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   STDOFF (10:39:48) not at :00 or :30 mark,
 # }
 # Pacific/Guam {
+#   STDOFF '-14:21:00' not on 15-minute boundary,
 #   STDOFF '9:39:00' not on 15-minute boundary,
-#   STDOFF (9:39:00) not at :00 or :30 mark,
+#   STDOFF (-14:21:00) not at :00 or :30 mark,
 #   Guam {
 #     AT '0:01' not on 15-minute boundary,
 #     AT '2:01' not on 15-minute boundary,
@@ -29929,6 +31916,8 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   }
 # }
 # Pacific/Honolulu {
+#   STDOFF '-10:31:26' not on 15-minute boundary,
+#   STDOFF (-10:31:26) not at :00 or :30 mark,
 #   US {Added anchor rule at year 0}
 # }
 # Pacific/Kiritimati {
@@ -29936,8 +31925,9 @@ ZONE_INFO_Zulu: ZoneInfo = {
 #   STDOFF (-10:29:20) not at :00 or :30 mark,
 # }
 # Pacific/Kosrae {
+#   STDOFF '-13:08:04' not on 15-minute boundary,
 #   STDOFF '10:51:56' not on 15-minute boundary,
-#   STDOFF (10:51:56) not at :00 or :30 mark,
+#   STDOFF (-13:08:04) not at :00 or :30 mark,
 # }
 # Pacific/Kwajalein {
 #   STDOFF '11:09:20' not on 15-minute boundary,
@@ -29969,15 +31959,22 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # }
 # Pacific/Pago_Pago {
 #   STDOFF '-11:22:48' not on 15-minute boundary,
-#   STDOFF (-11:22:48) not at :00 or :30 mark,
+#   STDOFF '12:37:12' not on 15-minute boundary,
+#   STDOFF (12:37:12) not at :00 or :30 mark,
 # }
 # Pacific/Palau {
+#   STDOFF '-15:02:04' not on 15-minute boundary,
 #   STDOFF '8:57:56' not on 15-minute boundary,
-#   STDOFF (8:57:56) not at :00 or :30 mark,
+#   STDOFF (-15:02:04) not at :00 or :30 mark,
 # }
 # Pacific/Pitcairn {
 #   STDOFF '-8:40:20' not on 15-minute boundary,
 #   STDOFF (-8:40:20) not at :00 or :30 mark,
+# }
+# Pacific/Port_Moresby {
+#   STDOFF '9:48:32' not on 15-minute boundary,
+#   STDOFF '9:48:40' not on 15-minute boundary,
+#   STDOFF (9:48:40) not at :00 or :30 mark,
 # }
 # Pacific/Rarotonga {
 #   STDOFF '-10:39:04' not on 15-minute boundary,
