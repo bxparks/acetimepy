@@ -1,7 +1,7 @@
 # Generate the validation report of acetime.acetz.acetz compared to
 # zoneinfo.ZoneInfo.
 
-START_YEAR := 1905
+START_YEAR := 1840
 UNTIL_YEAR := 2100
 
 zoneinfo_variance.txt: validate_zoneinfo.py
