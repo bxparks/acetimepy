@@ -16,7 +16,7 @@ class acetz(tzinfo):
     """
 
     def __init__(self, zone_info: ZoneInfo):
-        self.zp = ZoneProcessor(zone_info, use_python_transition=True)
+        self.zp = ZoneProcessor(zone_info)
 
     def utcoffset(self, dt: Optional[datetime]) -> timedelta:
         assert dt

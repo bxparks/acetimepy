@@ -386,10 +386,9 @@ class ZoneProcessor:
     """
 
     def __init__(
-            self,
-            zone_info: ZoneInfo,
-            debug: bool = False,
-            use_python_transition: bool = False,
+        self,
+        zone_info: ZoneInfo,
+        debug: bool = False,
     ):
         """Constructor.
 
@@ -398,11 +397,8 @@ class ZoneProcessor:
                 zone_infos.py. It can contain a reference to a zone_policy_data
                 map. We need to convert these into ZoneEra and ZoneRule classes.
             debug (bool): set to True to enable logging
-            use_python_transition: set True to create Transitions which
-              conform to the Python datetime library
         """
         self.zone_info = zone_info
-        self.use_python_transition = use_python_transition
         self.debug = debug
 
         # Used by init_*() to indicate the current year of interest.
@@ -703,45 +699,9 @@ class ZoneProcessor:
         self,
         dt: datetime,
     ) -> Optional[Transition]:
-        if self.use_python_transition:
-            return self._find_transition_for_datetime_python(dt)
-        else:
-            return self._find_transition_for_datetime_cpp(dt)
-
-    def _find_transition_for_datetime_cpp(
-        self,
-        dt: datetime,
-    ) -> Optional[Transition]:
-        """Return the best matching transition matching the local datetime 'dt'.
-        The algorithm matches the one implemented by
-        ExtendedZoneProcessor::findTransitionForDateTime():
-
-        1) If the 'dt' falls in a DST gap, the transition just before the DST
-        gap is returned.
-
-        2) If the 'dt' falls within a DST overlap, there are 2 matching
-        transitions. The algorithm returns the later transition.
-
-        The method can return None if the 'dt' is earlier than any known
-        transition.
-        """
-        dt_time = _datetime_to_datetuple(dt, 'w')
-
-        match: Optional[Transition] = None
-        for transition in self.transitions:
-            start_time = transition.start_date_time
-            if start_time > dt_time:
-                break
-            match = transition
-        return match
-
-    def _find_transition_for_datetime_python(
-        self,
-        dt: datetime,
-    ) -> Optional[Transition]:
         """Return the match transition using an algorithm that works for
-        Python's datetime.tzinfo. See PEP 495
-        (https://www.python.org/dev/peps/pep-0495/) for how to handle the 'fold'
+        Python's datetime.tzinfo and follows PEP 495
+        (https://www.python.org/dev/peps/pep-0495/) to handle the 'fold'
         parameter in the 'datetime' within the fold and within the gap.
 
         * If the 'dt' is in the overlap:
