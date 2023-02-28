@@ -82,7 +82,8 @@ class acetz(tzinfo):
         # Search the transitions for the matching Transition
         offset_info = self.zp.get_timezone_info_for_seconds(epoch_seconds)
         if not offset_info:
-            raise ValueError(f"transition not found for {epoch_seconds}")
+            raise ValueError(
+                f"transition not found for {epoch_seconds} ({utcdt})")
 
         # Convert the date/time fields into local date/time and attach
         # the current acetz object.

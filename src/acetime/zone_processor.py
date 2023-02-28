@@ -19,6 +19,7 @@ from typing import Optional
 from typing import Tuple
 from typing import cast
 
+from .common import INVALID_YEAR
 from .common import MIN_YEAR
 from .common import MAX_TO_YEAR
 from .common import SECONDS_SINCE_UNIX_EPOCH
@@ -489,11 +490,13 @@ class ZoneProcessor:
           each Transition.
         """
         if self.debug:
-            logging.info('init_for_year(): year: %d', year)
+            logging.info('==== %s: init_for_year(): year: %d',
+                self.zone_info['name'], year)
         # Check if cache filled
         if self.year == year:
             if self.debug:
-                logging.info('init_for_year(): cached')
+                logging.info('==== %s: init_for_year(): cached',
+                self.zone_info['name'])
             return
 
         self.year = year
@@ -507,11 +510,11 @@ class ZoneProcessor:
         until_ym = YearMonthTuple(year + 1, 2)
 
         if self.debug:
-            logging.info('==== Step 1: Finding matches')
+            logging.info('---- Step 1: Finding matches')
         self.matches = self._find_matches(start_ym, until_ym)
 
         if self.debug:
-            logging.info('==== Step 2: Creating (raw) transitions')
+            logging.info('---- Step 2: Creating (raw) transitions')
         self._create_transitions(self.matches)
         if self.debug:
             print_transitions('All Transitions', self.transitions)
@@ -519,19 +522,19 @@ class ZoneProcessor:
         # Some transitions from simple match may be in 's' or 'u', so
         # convert to 'w'.
         if self.debug:
-            logging.info('==== Step 3: Fixing transitions times')
+            logging.info('---- Step 3: Fixing transitions times')
         _fix_transition_times(self.transitions)
         if self.debug:
             print_transitions('All Transitions', self.transitions)
 
         if self.debug:
-            logging.info('==== Step 4: Generating start and until times')
+            logging.info('---- Step 4: Generating start and until times')
         self._generate_start_until_times(self.transitions)
         if self.debug:
             print_transitions('All Transitions', self.transitions)
 
         if self.debug:
-            logging.info('==== Step 5: Calculating abbreviations')
+            logging.info('---- Step 5: Calculating abbreviations')
         self._calc_abbrev(self.transitions)
         if self.debug:
             print_transitions('All Transitions', self.transitions)
@@ -1187,7 +1190,7 @@ class ZoneProcessor:
             if self.debug:
                 logging.info('_find_candidate_transitions(): prior year: %s',
                              prior_year)
-            if prior_year >= 0:
+            if prior_year != INVALID_YEAR:
                 transition = _create_transition_for_year(
                     prior_year, rule, match)
                 self.transition_storage.push_transitions(1)
@@ -1508,7 +1511,7 @@ def _get_most_recent_prior_year(
     end_year: int,
 ) -> int:
     """Return the most recent prior year of the rule[from_year, to_year].
-    Return -1 if the rule[from_year, to_year] has no prior year to the
+    Return INVALID_YEAR if the rule[from_year, to_year] has no prior year to the
     match[start_year, end_year].
     """
     if from_year < start_year:
@@ -1517,7 +1520,7 @@ def _get_most_recent_prior_year(
         else:
             return start_year - 1
     else:
-        return -1
+        return INVALID_YEAR
 
 
 def _check_transitions_sorted(transitions: List[Transition]) -> None:
