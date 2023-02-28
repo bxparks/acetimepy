@@ -51,8 +51,8 @@ from ..zonedb_types import (
 ZONE_RULES_AN: List[ZoneRule] = [
     # Anchor: Rule    AN    1972    only    -    Feb    27    2:00s    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -232,7 +232,7 @@ ZONE_RULES_AN: List[ZoneRule] = [
     # Rule    AN    2008    max    -    Apr    Sun>=1    2:00s    0    S
     {
         'from_year': 2008,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 4,
         'on_day_of_week': 7,
         'on_day_of_month': 1,
@@ -244,7 +244,7 @@ ZONE_RULES_AN: List[ZoneRule] = [
     # Rule    AN    2008    max    -    Oct    Sun>=1    2:00s    1:00    D
     {
         'from_year': 2008,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 10,
         'on_day_of_week': 7,
         'on_day_of_month': 1,
@@ -268,8 +268,8 @@ ZONE_POLICY_AN: ZonePolicy = {
 ZONE_RULES_AQ: List[ZoneRule] = [
     # Anchor: Rule    AQ    1972    only    -    Feb    lastSun    2:00s    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -341,8 +341,8 @@ ZONE_POLICY_AQ: ZonePolicy = {
 ZONE_RULES_AS: List[ZoneRule] = [
     # Anchor: Rule    AS    1972    only    -    Feb    27    2:00s    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -510,7 +510,7 @@ ZONE_RULES_AS: List[ZoneRule] = [
     # Rule    AS    2008    max    -    Apr    Sun>=1    2:00s    0    S
     {
         'from_year': 2008,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 4,
         'on_day_of_week': 7,
         'on_day_of_month': 1,
@@ -522,7 +522,7 @@ ZONE_RULES_AS: List[ZoneRule] = [
     # Rule    AS    2008    max    -    Oct    Sun>=1    2:00s    1:00    D
     {
         'from_year': 2008,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 10,
         'on_day_of_week': 7,
         'on_day_of_month': 1,
@@ -546,8 +546,8 @@ ZONE_POLICY_AS: ZonePolicy = {
 ZONE_RULES_AT: List[ZoneRule] = [
     # Anchor: Rule    AT    1917    only    -    Mar    lastSun    2:00s    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -787,7 +787,7 @@ ZONE_RULES_AT: List[ZoneRule] = [
     # Rule    AT    2001    max    -    Oct    Sun>=1    2:00s    1:00    D
     {
         'from_year': 2001,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 10,
         'on_day_of_week': 7,
         'on_day_of_month': 1,
@@ -823,7 +823,7 @@ ZONE_RULES_AT: List[ZoneRule] = [
     # Rule    AT    2008    max    -    Apr    Sun>=1    2:00s    0    S
     {
         'from_year': 2008,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 4,
         'on_day_of_week': 7,
         'on_day_of_month': 1,
@@ -847,8 +847,8 @@ ZONE_POLICY_AT: ZonePolicy = {
 ZONE_RULES_AV: List[ZoneRule] = [
     # Anchor: Rule    AV    1972    only    -    Feb    lastSun    2:00s    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -1004,7 +1004,7 @@ ZONE_RULES_AV: List[ZoneRule] = [
     # Rule    AV    2008    max    -    Apr    Sun>=1    2:00s    0    S
     {
         'from_year': 2008,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 4,
         'on_day_of_week': 7,
         'on_day_of_month': 1,
@@ -1016,7 +1016,7 @@ ZONE_RULES_AV: List[ZoneRule] = [
     # Rule    AV    2008    max    -    Oct    Sun>=1    2:00s    1:00    D
     {
         'from_year': 2008,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 10,
         'on_day_of_week': 7,
         'on_day_of_month': 1,
@@ -1040,8 +1040,8 @@ ZONE_POLICY_AV: ZonePolicy = {
 ZONE_RULES_AW: List[ZoneRule] = [
     # Anchor: Rule    AW    1975    only    -    Mar    Sun>=1    2:00s    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -1173,8 +1173,8 @@ ZONE_POLICY_AW: ZonePolicy = {
 ZONE_RULES_Albania: List[ZoneRule] = [
     # Anchor: Rule    Albania    1942    only    -    Nov     2    3:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -1498,8 +1498,8 @@ ZONE_POLICY_Albania: ZonePolicy = {
 ZONE_RULES_Algeria: List[ZoneRule] = [
     # Anchor: Rule    Algeria    1916    1919    -    Oct    Sun>=1    23:00s    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -1787,8 +1787,8 @@ ZONE_POLICY_Algeria: ZonePolicy = {
 ZONE_RULES_Arg: List[ZoneRule] = [
     # Anchor: Rule    Arg    1931    only    -    Apr     1    0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -2160,8 +2160,8 @@ ZONE_POLICY_Arg: ZonePolicy = {
 ZONE_RULES_Armenia: List[ZoneRule] = [
     # Anchor: Rule Armenia    2011    only    -    Oct    lastSun     2:00s    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -2209,8 +2209,8 @@ ZONE_POLICY_Armenia: ZonePolicy = {
 ZONE_RULES_Aus: List[ZoneRule] = [
     # Anchor: Rule    Aus    1917    only    -    Mar    lastSun    2:00s    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -2318,8 +2318,8 @@ ZONE_POLICY_Aus: ZonePolicy = {
 ZONE_RULES_Austria: List[ZoneRule] = [
     # Anchor: Rule    Austria    1920    only    -    Sep    13    2:00s    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -2451,8 +2451,8 @@ ZONE_POLICY_Austria: ZonePolicy = {
 ZONE_RULES_Azer: List[ZoneRule] = [
     # Anchor: Rule    Azer    1997    2015    -    Oct    lastSun     5:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -2500,8 +2500,8 @@ ZONE_POLICY_Azer: ZonePolicy = {
 ZONE_RULES_Barb: List[ZoneRule] = [
     # Anchor: Rule    Barb    1942    only    -    Aug    31    6:00u    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -2657,8 +2657,8 @@ ZONE_POLICY_Barb: ZonePolicy = {
 ZONE_RULES_Belgium: List[ZoneRule] = [
     # Anchor: Rule    Belgium    1918    1919    -    Oct    Sat>=1    23:00s    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -3090,8 +3090,8 @@ ZONE_POLICY_Belgium: ZonePolicy = {
 ZONE_RULES_Belize: List[ZoneRule] = [
     # Anchor: Rule    Belize    1919    1942    -    Feb    Sat>=8    24:00    0    CST
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -3247,8 +3247,8 @@ ZONE_POLICY_Belize: ZonePolicy = {
 ZONE_RULES_Bermuda: List[ZoneRule] = [
     # Anchor: Rule    Bermuda    1917    only    -    Sep    30    24:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -3464,8 +3464,8 @@ ZONE_POLICY_Bermuda: ZonePolicy = {
 ZONE_RULES_Brazil: List[ZoneRule] = [
     # Anchor: Rule    Brazil    1932    1933    -    Apr     1     0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -4173,8 +4173,8 @@ ZONE_POLICY_Brazil: ZonePolicy = {
 ZONE_RULES_Bulg: List[ZoneRule] = [
     # Anchor: Rule    Bulg    1979    only    -    Oct     1     1:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -4258,8 +4258,8 @@ ZONE_POLICY_Bulg: ZonePolicy = {
 ZONE_RULES_C_Eur: List[ZoneRule] = [
     # Anchor: Rule    C-Eur    1916    only    -    Oct     1     1:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -4451,7 +4451,7 @@ ZONE_RULES_C_Eur: List[ZoneRule] = [
     # Rule    C-Eur    1981    max    -    Mar    lastSun     2:00s    1:00    S
     {
         'from_year': 1981,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 3,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -4463,7 +4463,7 @@ ZONE_RULES_C_Eur: List[ZoneRule] = [
     # Rule    C-Eur    1996    max    -    Oct    lastSun     2:00s    0    -
     {
         'from_year': 1996,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 10,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -4487,8 +4487,8 @@ ZONE_POLICY_C_Eur: ZonePolicy = {
 ZONE_RULES_CA: List[ZoneRule] = [
     # Anchor: Rule    CA    1949    only    -    Jan     1    2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -4572,8 +4572,8 @@ ZONE_POLICY_CA: ZonePolicy = {
 ZONE_RULES_CO: List[ZoneRule] = [
     # Anchor: Rule    CO    1993    only    -    Feb     6    24:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -4621,8 +4621,8 @@ ZONE_POLICY_CO: ZonePolicy = {
 ZONE_RULES_CR: List[ZoneRule] = [
     # Anchor: Rule    CR    1979    1980    -    Jun    Sun>=1    0:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -4706,8 +4706,8 @@ ZONE_POLICY_CR: ZonePolicy = {
 ZONE_RULES_Canada: List[ZoneRule] = [
     # Anchor: Rule    Canada    1918    only    -    Oct    27    2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -4815,7 +4815,7 @@ ZONE_RULES_Canada: List[ZoneRule] = [
     # Rule    Canada    2007    max    -    Mar    Sun>=8    2:00    1:00    D
     {
         'from_year': 2007,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 3,
         'on_day_of_week': 7,
         'on_day_of_month': 8,
@@ -4827,7 +4827,7 @@ ZONE_RULES_Canada: List[ZoneRule] = [
     # Rule    Canada    2007    max    -    Nov    Sun>=1    2:00    0    S
     {
         'from_year': 2007,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 11,
         'on_day_of_week': 7,
         'on_day_of_month': 1,
@@ -4851,8 +4851,8 @@ ZONE_POLICY_Canada: ZonePolicy = {
 ZONE_RULES_Chatham: List[ZoneRule] = [
     # Anchor: Rule    Chatham    1975    only    -    Feb    lastSun    2:45s    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -4948,7 +4948,7 @@ ZONE_RULES_Chatham: List[ZoneRule] = [
     # Rule    Chatham    2007    max    -    Sep    lastSun    2:45s    1:00    -
     {
         'from_year': 2007,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 9,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -4960,7 +4960,7 @@ ZONE_RULES_Chatham: List[ZoneRule] = [
     # Rule    Chatham    2008    max    -    Apr    Sun>=1    2:45s    0    -
     {
         'from_year': 2008,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 4,
         'on_day_of_week': 7,
         'on_day_of_month': 1,
@@ -4984,8 +4984,8 @@ ZONE_POLICY_Chatham: ZonePolicy = {
 ZONE_RULES_Chicago: List[ZoneRule] = [
     # Anchor: Rule    Chicago    1920    1921    -    Oct    lastSun    2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -5081,8 +5081,8 @@ ZONE_POLICY_Chicago: ZonePolicy = {
 ZONE_RULES_Chile: List[ZoneRule] = [
     # Anchor: Rule    Chile    1928    1932    -    Apr     1    0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -5478,7 +5478,7 @@ ZONE_RULES_Chile: List[ZoneRule] = [
     # Rule    Chile    2019    max    -    Apr    Sun>=2    3:00u    0    -
     {
         'from_year': 2019,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 4,
         'on_day_of_week': 7,
         'on_day_of_month': 2,
@@ -5514,7 +5514,7 @@ ZONE_RULES_Chile: List[ZoneRule] = [
     # Rule    Chile    2023    max    -    Sep    Sun>=2    4:00u    1:00    -
     {
         'from_year': 2023,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 9,
         'on_day_of_week': 7,
         'on_day_of_month': 2,
@@ -5538,8 +5538,8 @@ ZONE_POLICY_Chile: ZonePolicy = {
 ZONE_RULES_Cook: List[ZoneRule] = [
     # Anchor: Rule    Cook    1979    1991    -    Mar    Sun>=1    0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -5599,8 +5599,8 @@ ZONE_POLICY_Cook: ZonePolicy = {
 ZONE_RULES_Cuba: List[ZoneRule] = [
     # Anchor: Rule    Cuba    1928    only    -    Oct    10    0:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -6056,7 +6056,7 @@ ZONE_RULES_Cuba: List[ZoneRule] = [
     # Rule    Cuba    2012    max    -    Nov    Sun>=1    0:00s    0    S
     {
         'from_year': 2012,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 11,
         'on_day_of_week': 7,
         'on_day_of_month': 1,
@@ -6068,7 +6068,7 @@ ZONE_RULES_Cuba: List[ZoneRule] = [
     # Rule    Cuba    2013    max    -    Mar    Sun>=8    0:00s    1:00    D
     {
         'from_year': 2013,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 3,
         'on_day_of_week': 7,
         'on_day_of_month': 8,
@@ -6092,8 +6092,8 @@ ZONE_POLICY_Cuba: ZonePolicy = {
 ZONE_RULES_Cyprus: List[ZoneRule] = [
     # Anchor: Rule    Cyprus    1975    only    -    Oct    12    0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -6225,8 +6225,8 @@ ZONE_POLICY_Cyprus: ZonePolicy = {
 ZONE_RULES_Czech: List[ZoneRule] = [
     # Anchor: Rule    Czech    1945    only    -    Oct     1    2:00s    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -6322,8 +6322,8 @@ ZONE_POLICY_Czech: ZonePolicy = {
 ZONE_RULES_DR: List[ZoneRule] = [
     # Anchor: Rule    DR    1967    only    -    Feb    28    0:00    0    EST
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -6419,8 +6419,8 @@ ZONE_POLICY_DR: ZonePolicy = {
 ZONE_RULES_Denver: List[ZoneRule] = [
     # Anchor: Rule    Denver    1920    only    -    Oct    lastSun    2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -6504,8 +6504,8 @@ ZONE_POLICY_Denver: ZonePolicy = {
 ZONE_RULES_Detroit: List[ZoneRule] = [
     # Anchor: Rule    Detroit    1948    only    -    Sep    lastSun    2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -6553,8 +6553,8 @@ ZONE_POLICY_Detroit: ZonePolicy = {
 ZONE_RULES_Dhaka: List[ZoneRule] = [
     # Anchor: Rule    Dhaka    2009    only    -    Dec    31    24:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -6602,8 +6602,8 @@ ZONE_POLICY_Dhaka: ZonePolicy = {
 ZONE_RULES_E_Eur: List[ZoneRule] = [
     # Anchor: Rule    E-Eur    1979    1995    -    Sep    lastSun     0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -6639,7 +6639,7 @@ ZONE_RULES_E_Eur: List[ZoneRule] = [
     # Rule    E-Eur    1981    max    -    Mar    lastSun     0:00    1:00    S
     {
         'from_year': 1981,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 3,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -6651,7 +6651,7 @@ ZONE_RULES_E_Eur: List[ZoneRule] = [
     # Rule    E-Eur    1996    max    -    Oct    lastSun     0:00    0    -
     {
         'from_year': 1996,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 10,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -6675,8 +6675,8 @@ ZONE_POLICY_E_Eur: ZonePolicy = {
 ZONE_RULES_E_EurAsia: List[ZoneRule] = [
     # Anchor: Rule E-EurAsia    1979    1995    -    Sep    lastSun     0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -6688,7 +6688,7 @@ ZONE_RULES_E_EurAsia: List[ZoneRule] = [
     # Rule E-EurAsia    1981    max    -    Mar    lastSun     0:00    1:00    -
     {
         'from_year': 1981,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 3,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -6712,7 +6712,7 @@ ZONE_RULES_E_EurAsia: List[ZoneRule] = [
     # Rule E-EurAsia    1996    max    -    Oct    lastSun     0:00    0    -
     {
         'from_year': 1996,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 10,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -6736,8 +6736,8 @@ ZONE_POLICY_E_EurAsia: ZonePolicy = {
 ZONE_RULES_EU: List[ZoneRule] = [
     # Anchor: Rule    EU    1977    only    -    Sep    lastSun     1:00u    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -6797,7 +6797,7 @@ ZONE_RULES_EU: List[ZoneRule] = [
     # Rule    EU    1981    max    -    Mar    lastSun     1:00u    1:00    S
     {
         'from_year': 1981,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 3,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -6809,7 +6809,7 @@ ZONE_RULES_EU: List[ZoneRule] = [
     # Rule    EU    1996    max    -    Oct    lastSun     1:00u    0    -
     {
         'from_year': 1996,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 10,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -6833,8 +6833,8 @@ ZONE_POLICY_EU: ZonePolicy = {
 ZONE_RULES_EUAsia: List[ZoneRule] = [
     # Anchor: Rule    EUAsia    1979    1995    -    Sep    lastSun     1:00u    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -6846,7 +6846,7 @@ ZONE_RULES_EUAsia: List[ZoneRule] = [
     # Rule    EUAsia    1981    max    -    Mar    lastSun     1:00u    1:00    S
     {
         'from_year': 1981,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 3,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -6870,7 +6870,7 @@ ZONE_RULES_EUAsia: List[ZoneRule] = [
     # Rule    EUAsia    1996    max    -    Oct    lastSun     1:00u    0    -
     {
         'from_year': 1996,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 10,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -6894,8 +6894,8 @@ ZONE_POLICY_EUAsia: ZonePolicy = {
 ZONE_RULES_Ecuador: List[ZoneRule] = [
     # Anchor: Rule    Ecuador    1993    only    -    Feb     5    0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -6943,8 +6943,8 @@ ZONE_POLICY_Ecuador: ZonePolicy = {
 ZONE_RULES_Edm: List[ZoneRule] = [
     # Anchor: Rule    Edm    1918    only    -    Oct    27    2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -7124,8 +7124,8 @@ ZONE_POLICY_Edm: ZonePolicy = {
 ZONE_RULES_Egypt: List[ZoneRule] = [
     # Anchor: Rule    Egypt    1940    only    -    Oct     1    0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -7533,8 +7533,8 @@ ZONE_POLICY_Egypt: ZonePolicy = {
 ZONE_RULES_EgyptAsia: List[ZoneRule] = [
     # Anchor: Rule EgyptAsia    1957    1958    -    Oct     1    0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -7630,8 +7630,8 @@ ZONE_POLICY_EgyptAsia: ZonePolicy = {
 ZONE_RULES_Eire: List[ZoneRule] = [
     # Anchor: Rule    Eire    1972    1980    -    Mar    Sun>=16     2:00u    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -7679,7 +7679,7 @@ ZONE_RULES_Eire: List[ZoneRule] = [
     # Rule    Eire    1981    max    -    Mar    lastSun     1:00u    0    -
     {
         'from_year': 1981,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 3,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -7715,7 +7715,7 @@ ZONE_RULES_Eire: List[ZoneRule] = [
     # Rule    Eire    1996    max    -    Oct    lastSun     1:00u    -1:00    -
     {
         'from_year': 1996,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 10,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -7739,8 +7739,8 @@ ZONE_POLICY_Eire: ZonePolicy = {
 ZONE_RULES_Falk: List[ZoneRule] = [
     # Anchor: Rule    Falk    1938    1942    -    Mar    Sun>=19    0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -7908,8 +7908,8 @@ ZONE_POLICY_Falk: ZonePolicy = {
 ZONE_RULES_Fiji: List[ZoneRule] = [
     # Anchor: Rule    Fiji    1999    2000    -    Feb    lastSun    3:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -8077,8 +8077,8 @@ ZONE_POLICY_Fiji: ZonePolicy = {
 ZONE_RULES_Finland: List[ZoneRule] = [
     # Anchor: Rule    Finland    1942    only    -    Oct    4    1:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -8150,8 +8150,8 @@ ZONE_POLICY_Finland: ZonePolicy = {
 ZONE_RULES_France: List[ZoneRule] = [
     # Anchor: Rule    France    1916    1919    -    Oct    Sun>=1    23:00s    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -8631,8 +8631,8 @@ ZONE_POLICY_France: ZonePolicy = {
 ZONE_RULES_GB_Eire: List[ZoneRule] = [
     # Anchor: Rule    GB-Eire    1916    only    -    Oct     1    2:00s    0    GMT
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -9436,8 +9436,8 @@ ZONE_POLICY_GB_Eire: ZonePolicy = {
 ZONE_RULES_Germany: List[ZoneRule] = [
     # Anchor: Rule    Germany    1946    only    -    Oct     7    2:00s    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -9557,8 +9557,8 @@ ZONE_POLICY_Germany: ZonePolicy = {
 ZONE_RULES_Greece: List[ZoneRule] = [
     # Anchor: Rule    Greece    1932    only    -    Sep     1    0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -9810,8 +9810,8 @@ ZONE_POLICY_Greece: ZonePolicy = {
 ZONE_RULES_Guam: List[ZoneRule] = [
     # Anchor: Rule    Guam    1961    only    -    Jan    29    2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -10003,8 +10003,8 @@ ZONE_POLICY_Guam: ZonePolicy = {
 ZONE_RULES_Guat: List[ZoneRule] = [
     # Anchor: Rule    Guat    1974    only    -    Feb    24    0:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -10124,8 +10124,8 @@ ZONE_POLICY_Guat: ZonePolicy = {
 ZONE_RULES_HK: List[ZoneRule] = [
     # Anchor: Rule    HK    1946    only    -    Dec    1    3:30s    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -10317,8 +10317,8 @@ ZONE_POLICY_HK: ZonePolicy = {
 ZONE_RULES_Haiti: List[ZoneRule] = [
     # Anchor: Rule    Haiti    1983    1987    -    Oct    lastSun    0:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -10438,7 +10438,7 @@ ZONE_RULES_Haiti: List[ZoneRule] = [
     # Rule    Haiti    2017    max    -    Mar    Sun>=8    2:00    1:00    D
     {
         'from_year': 2017,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 3,
         'on_day_of_week': 7,
         'on_day_of_month': 8,
@@ -10450,7 +10450,7 @@ ZONE_RULES_Haiti: List[ZoneRule] = [
     # Rule    Haiti    2017    max    -    Nov    Sun>=1    2:00    0    S
     {
         'from_year': 2017,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 11,
         'on_day_of_week': 7,
         'on_day_of_month': 1,
@@ -10474,8 +10474,8 @@ ZONE_POLICY_Haiti: ZonePolicy = {
 ZONE_RULES_Halifax: List[ZoneRule] = [
     # Anchor: Rule    Halifax    1916    only    -    Oct     1    0:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -10991,8 +10991,8 @@ ZONE_POLICY_Halifax: ZonePolicy = {
 ZONE_RULES_Holiday: List[ZoneRule] = [
     # Anchor: Rule    Holiday    1993    1994    -    Mar    Sun>=1    2:00s    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -11040,8 +11040,8 @@ ZONE_POLICY_Holiday: ZonePolicy = {
 ZONE_RULES_Hond: List[ZoneRule] = [
     # Anchor: Rule    Hond    1987    1988    -    Sep    lastSun    0:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -11113,8 +11113,8 @@ ZONE_POLICY_Hond: ZonePolicy = {
 ZONE_RULES_Hungary: List[ZoneRule] = [
     # Anchor: Rule    Hungary    1918    1920    -    Sep    Mon>=15     3:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -11366,8 +11366,8 @@ ZONE_POLICY_Hungary: ZonePolicy = {
 ZONE_RULES_Indianapolis: List[ZoneRule] = [
     # Anchor: Rule Indianapolis 1941    1954    -    Sep    lastSun    2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -11427,8 +11427,8 @@ ZONE_POLICY_Indianapolis: ZonePolicy = {
 ZONE_RULES_Iran: List[ZoneRule] = [
     # Anchor: Rule    Iran    1910    only    -    Jan     1    00:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -11932,8 +11932,8 @@ ZONE_POLICY_Iran: ZonePolicy = {
 ZONE_RULES_Iraq: List[ZoneRule] = [
     # Anchor: Rule    Iraq    1982    1984    -    Oct    1    0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -12053,8 +12053,8 @@ ZONE_POLICY_Iraq: ZonePolicy = {
 ZONE_RULES_Italy: List[ZoneRule] = [
     # Anchor: Rule    Italy    1916    1917    -    Sep    30    24:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -12570,8 +12570,8 @@ ZONE_POLICY_Italy: ZonePolicy = {
 ZONE_RULES_Japan: List[ZoneRule] = [
     # Anchor: Rule    Japan    1948    1951    -    Sep    Sat>=8    25:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -12643,8 +12643,8 @@ ZONE_POLICY_Japan: ZonePolicy = {
 ZONE_RULES_Jordan: List[ZoneRule] = [
     # Anchor: Rule    Jordan    1973    1975    -    Oct    1    0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -13052,8 +13052,8 @@ ZONE_POLICY_Jordan: ZonePolicy = {
 ZONE_RULES_Kyrgyz: List[ZoneRule] = [
     # Anchor: Rule    Kyrgyz    1992    1996    -    Sep    lastSun    0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -13125,8 +13125,8 @@ ZONE_POLICY_Kyrgyz: ZonePolicy = {
 ZONE_RULES_LH: List[ZoneRule] = [
     # Anchor: Rule    LH    1982    1985    -    Mar    Sun>=1    2:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -13282,7 +13282,7 @@ ZONE_RULES_LH: List[ZoneRule] = [
     # Rule    LH    2008    max    -    Apr    Sun>=1    2:00    0    -
     {
         'from_year': 2008,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 4,
         'on_day_of_week': 7,
         'on_day_of_month': 1,
@@ -13294,7 +13294,7 @@ ZONE_RULES_LH: List[ZoneRule] = [
     # Rule    LH    2008    max    -    Oct    Sun>=1    2:00    0:30    -
     {
         'from_year': 2008,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 10,
         'on_day_of_week': 7,
         'on_day_of_month': 1,
@@ -13318,8 +13318,8 @@ ZONE_POLICY_LH: ZonePolicy = {
 ZONE_RULES_Latvia: List[ZoneRule] = [
     # Anchor: Rule    Latvia    1989    1996    -    Sep    lastSun     2:00s    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -13367,8 +13367,8 @@ ZONE_POLICY_Latvia: ZonePolicy = {
 ZONE_RULES_Lebanon: List[ZoneRule] = [
     # Anchor: Rule    Lebanon    1920    only    -    Oct    25    0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -13632,7 +13632,7 @@ ZONE_RULES_Lebanon: List[ZoneRule] = [
     # Rule    Lebanon    1993    max    -    Mar    lastSun    0:00    1:00    S
     {
         'from_year': 1993,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 3,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -13656,7 +13656,7 @@ ZONE_RULES_Lebanon: List[ZoneRule] = [
     # Rule    Lebanon    1999    max    -    Oct    lastSun    0:00    0    -
     {
         'from_year': 1999,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 10,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -13680,8 +13680,8 @@ ZONE_POLICY_Lebanon: ZonePolicy = {
 ZONE_RULES_Libya: List[ZoneRule] = [
     # Anchor: Rule    Libya    1952    only    -    Jan     1    0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -13909,8 +13909,8 @@ ZONE_POLICY_Libya: ZonePolicy = {
 ZONE_RULES_Louisville: List[ZoneRule] = [
     # Anchor: Rule Louisville    1921    only    -    Sep    1    2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -14042,8 +14042,8 @@ ZONE_POLICY_Louisville: ZonePolicy = {
 ZONE_RULES_Macau: List[ZoneRule] = [
     # Anchor: Rule    Macau    1942    only    -    Nov    17    23:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -14391,8 +14391,8 @@ ZONE_POLICY_Macau: ZonePolicy = {
 ZONE_RULES_Malta: List[ZoneRule] = [
     # Anchor: Rule    Malta    1973    only    -    Sep    29    0:00s    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -14500,8 +14500,8 @@ ZONE_POLICY_Malta: ZonePolicy = {
 ZONE_RULES_Marengo: List[ZoneRule] = [
     # Anchor: Rule    Marengo    1951    only    -    Sep    lastSun    2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -14573,8 +14573,8 @@ ZONE_POLICY_Marengo: ZonePolicy = {
 ZONE_RULES_Mauritius: List[ZoneRule] = [
     # Anchor: Rule Mauritius    1983    only    -    Mar    21    0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -14646,8 +14646,8 @@ ZONE_POLICY_Mauritius: ZonePolicy = {
 ZONE_RULES_Menominee: List[ZoneRule] = [
     # Anchor: Rule Menominee    1946    only    -    Sep    lastSun    2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -14719,8 +14719,8 @@ ZONE_POLICY_Menominee: ZonePolicy = {
 ZONE_RULES_Mexico: List[ZoneRule] = [
     # Anchor: Rule    Mexico    1931    only    -    Oct    1    0:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -14936,8 +14936,8 @@ ZONE_POLICY_Mexico: ZonePolicy = {
 ZONE_RULES_Moldova: List[ZoneRule] = [
     # Anchor: Rule    Moldova    1997    max    -    Oct    lastSun     3:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -14949,7 +14949,7 @@ ZONE_RULES_Moldova: List[ZoneRule] = [
     # Rule    Moldova    1997    max    -    Mar    lastSun     2:00    1:00    S
     {
         'from_year': 1997,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 3,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -14961,7 +14961,7 @@ ZONE_RULES_Moldova: List[ZoneRule] = [
     # Rule    Moldova    1997    max    -    Oct    lastSun     3:00    0    -
     {
         'from_year': 1997,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 10,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -14985,8 +14985,8 @@ ZONE_POLICY_Moldova: ZonePolicy = {
 ZONE_RULES_Moncton: List[ZoneRule] = [
     # Anchor: Rule    Moncton    1933    1935    -    Sep    Sun>=8    1:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -15166,8 +15166,8 @@ ZONE_POLICY_Moncton: ZonePolicy = {
 ZONE_RULES_Mongol: List[ZoneRule] = [
     # Anchor: Rule    Mongol    1983    only    -    Oct    1    0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -15299,8 +15299,8 @@ ZONE_POLICY_Mongol: ZonePolicy = {
 ZONE_RULES_Morocco: List[ZoneRule] = [
     # Anchor: Rule    Morocco    1939    only    -    Nov    19     0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -17520,8 +17520,8 @@ ZONE_POLICY_Morocco: ZonePolicy = {
 ZONE_RULES_NBorneo: List[ZoneRule] = [
     # Anchor: Rule    NBorneo    1935    1941    -    Dec    14    0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -17569,8 +17569,8 @@ ZONE_POLICY_NBorneo: ZonePolicy = {
 ZONE_RULES_NC: List[ZoneRule] = [
     # Anchor: Rule    NC    1978    1979    -    Feb    27    0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -17642,8 +17642,8 @@ ZONE_POLICY_NC: ZonePolicy = {
 ZONE_RULES_NT_YK: List[ZoneRule] = [
     # Anchor: Rule    NT_YK    1918    only    -    Oct    27    2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -17787,8 +17787,8 @@ ZONE_POLICY_NT_YK: ZonePolicy = {
 ZONE_RULES_NYC: List[ZoneRule] = [
     # Anchor: Rule    NYC    1920    only    -    Oct    lastSun    2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -17872,8 +17872,8 @@ ZONE_POLICY_NYC: ZonePolicy = {
 ZONE_RULES_NZ: List[ZoneRule] = [
     # Anchor: Rule    NZ    1928    only    -    Mar     4    2:00    0    M
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -18053,7 +18053,7 @@ ZONE_RULES_NZ: List[ZoneRule] = [
     # Rule    NZ    2007    max    -    Sep    lastSun    2:00s    1:00    D
     {
         'from_year': 2007,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 9,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -18065,7 +18065,7 @@ ZONE_RULES_NZ: List[ZoneRule] = [
     # Rule    NZ    2008    max    -    Apr    Sun>=1    2:00s    0    S
     {
         'from_year': 2008,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 4,
         'on_day_of_week': 7,
         'on_day_of_month': 1,
@@ -18089,8 +18089,8 @@ ZONE_POLICY_NZ: ZonePolicy = {
 ZONE_RULES_Namibia: List[ZoneRule] = [
     # Anchor: Rule    Namibia    1994    2017    -    Sep    Sun>=1    2:00    0    CAT
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -18150,8 +18150,8 @@ ZONE_POLICY_Namibia: ZonePolicy = {
 ZONE_RULES_Nic: List[ZoneRule] = [
     # Anchor: Rule    Nic    1979    1980    -    Jun    Mon>=23    0:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -18247,8 +18247,8 @@ ZONE_POLICY_Nic: ZonePolicy = {
 ZONE_RULES_PRC: List[ZoneRule] = [
     # Anchor: Rule    PRC    1986    1991    -    Sep    Sun>=11     2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -18308,8 +18308,8 @@ ZONE_POLICY_PRC: ZonePolicy = {
 ZONE_RULES_Pakistan: List[ZoneRule] = [
     # Anchor: Rule Pakistan    2002    only    -    Oct    Sun>=2    0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -18393,8 +18393,8 @@ ZONE_POLICY_Pakistan: ZonePolicy = {
 ZONE_RULES_Palestine: List[ZoneRule] = [
     # Anchor: Rule Palestine    1999    2003    -    Oct    Fri>=15    0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -18766,7 +18766,7 @@ ZONE_RULES_Palestine: List[ZoneRule] = [
     # Rule Palestine    2022    max    -    Oct    Sat<=30    2:00    0    -
     {
         'from_year': 2022,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 10,
         'on_day_of_week': 6,
         'on_day_of_month': -30,
@@ -18778,7 +18778,7 @@ ZONE_RULES_Palestine: List[ZoneRule] = [
     # Rule Palestine    2023    max    -    Mar    Sat<=30    2:00    1:00    S
     {
         'from_year': 2023,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 3,
         'on_day_of_week': 6,
         'on_day_of_month': -30,
@@ -18802,8 +18802,8 @@ ZONE_POLICY_Palestine: ZonePolicy = {
 ZONE_RULES_Para: List[ZoneRule] = [
     # Anchor: Rule    Para    1975    1978    -    Mar     1    0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -19043,7 +19043,7 @@ ZONE_RULES_Para: List[ZoneRule] = [
     # Rule    Para    2010    max    -    Oct    Sun>=1    0:00    1:00    -
     {
         'from_year': 2010,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 10,
         'on_day_of_week': 7,
         'on_day_of_month': 1,
@@ -19067,7 +19067,7 @@ ZONE_RULES_Para: List[ZoneRule] = [
     # Rule    Para    2013    max    -    Mar    Sun>=22    0:00    0    -
     {
         'from_year': 2013,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 3,
         'on_day_of_week': 7,
         'on_day_of_month': 22,
@@ -19091,8 +19091,8 @@ ZONE_POLICY_Para: ZonePolicy = {
 ZONE_RULES_Perry: List[ZoneRule] = [
     # Anchor: Rule Perry    1955    1960    -    Sep    lastSun    2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -19164,8 +19164,8 @@ ZONE_POLICY_Perry: ZonePolicy = {
 ZONE_RULES_Peru: List[ZoneRule] = [
     # Anchor: Rule    Peru    1938    only    -    Apr     1    0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -19309,8 +19309,8 @@ ZONE_POLICY_Peru: ZonePolicy = {
 ZONE_RULES_Phil: List[ZoneRule] = [
     # Anchor: Rule    Phil    1937    only    -    Feb    1    0:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -19406,8 +19406,8 @@ ZONE_POLICY_Phil: ZonePolicy = {
 ZONE_RULES_Pike: List[ZoneRule] = [
     # Anchor: Rule    Pike    1955    1960    -    Sep    lastSun    2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -19479,8 +19479,8 @@ ZONE_POLICY_Pike: ZonePolicy = {
 ZONE_RULES_Poland: List[ZoneRule] = [
     # Anchor: Rule    Poland    1918    1919    -    Sep    16    2:00s    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -19744,8 +19744,8 @@ ZONE_POLICY_Poland: ZonePolicy = {
 ZONE_RULES_Port: List[ZoneRule] = [
     # Anchor: Rule    Port    1916    only    -    Nov     1     1:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -20345,8 +20345,8 @@ ZONE_POLICY_Port: ZonePolicy = {
 ZONE_RULES_Pulaski: List[ZoneRule] = [
     # Anchor: Rule    Pulaski    1946    1954    -    Sep    lastSun    2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -20418,8 +20418,8 @@ ZONE_POLICY_Pulaski: ZonePolicy = {
 ZONE_RULES_ROK: List[ZoneRule] = [
     # Anchor: Rule    ROK    1948    only    -    Sep    12    24:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -20611,8 +20611,8 @@ ZONE_POLICY_ROK: ZonePolicy = {
 ZONE_RULES_Regina: List[ZoneRule] = [
     # Anchor: Rule    Regina    1918    only    -    Oct    27    2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -20840,8 +20840,8 @@ ZONE_POLICY_Regina: ZonePolicy = {
 ZONE_RULES_Romania: List[ZoneRule] = [
     # Anchor: Rule    Romania    1932    1939    -    Oct    Sun>=1     0:00s    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -20973,8 +20973,8 @@ ZONE_POLICY_Romania: ZonePolicy = {
 ZONE_RULES_Russia: List[ZoneRule] = [
     # Anchor: Rule    Russia    1917    only    -    Dec    28     0:00    0    MMT
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -21190,8 +21190,8 @@ ZONE_POLICY_Russia: ZonePolicy = {
 ZONE_RULES_RussiaAsia: List[ZoneRule] = [
     # Anchor: Rule RussiaAsia    1981    1983    -    Oct    1     0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -21275,8 +21275,8 @@ ZONE_POLICY_RussiaAsia: ZonePolicy = {
 ZONE_RULES_SA: List[ZoneRule] = [
     # Anchor: Rule    SA    1943    1944    -    Mar    Sun>=15    2:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -21324,8 +21324,8 @@ ZONE_POLICY_SA: ZonePolicy = {
 ZONE_RULES_Salv: List[ZoneRule] = [
     # Anchor: Rule    Salv    1987    1988    -    Sep    lastSun    0:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -21373,8 +21373,8 @@ ZONE_POLICY_Salv: ZonePolicy = {
 ZONE_RULES_SanLuis: List[ZoneRule] = [
     # Anchor: Rule    SanLuis    2008    2009    -    Mar    Sun>=8    0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -21422,8 +21422,8 @@ ZONE_POLICY_SanLuis: ZonePolicy = {
 ZONE_RULES_Shang: List[ZoneRule] = [
     # Anchor: Rule    Shang    1919    only    -    Sep    30    24:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -21615,8 +21615,8 @@ ZONE_POLICY_Shang: ZonePolicy = {
 ZONE_RULES_SovietZone: List[ZoneRule] = [
     # Anchor: Rule SovietZone    1945    only    -    Nov    18    2:00s    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -21676,8 +21676,8 @@ ZONE_POLICY_SovietZone: ZonePolicy = {
 ZONE_RULES_Spain: List[ZoneRule] = [
     # Anchor: Rule    Spain    1918    1919    -    Oct     6    24:00s    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -22061,8 +22061,8 @@ ZONE_POLICY_Spain: ZonePolicy = {
 ZONE_RULES_SpainAfrica: List[ZoneRule] = [
     # Anchor: Rule SpainAfrica 1967    only    -    Oct     1     0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -22194,8 +22194,8 @@ ZONE_POLICY_SpainAfrica: ZonePolicy = {
 ZONE_RULES_StJohns: List[ZoneRule] = [
     # Anchor: Rule    StJohns    1917    only    -    Sep    17    2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -22447,8 +22447,8 @@ ZONE_POLICY_StJohns: ZonePolicy = {
 ZONE_RULES_Starke: List[ZoneRule] = [
     # Anchor: Rule    Starke    1947    1954    -    Sep    lastSun    2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -22532,8 +22532,8 @@ ZONE_POLICY_Starke: ZonePolicy = {
 ZONE_RULES_Sudan: List[ZoneRule] = [
     # Anchor: Rule    Sudan    1970    1985    -    Oct    15    0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -22605,8 +22605,8 @@ ZONE_POLICY_Sudan: ZonePolicy = {
 ZONE_RULES_Swift: List[ZoneRule] = [
     # Anchor: Rule    Swift    1957    only    -    Oct    lastSun    2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -22690,8 +22690,8 @@ ZONE_POLICY_Swift: ZonePolicy = {
 ZONE_RULES_Swiss: List[ZoneRule] = [
     # Anchor: Rule    Swiss    1941    1942    -    Oct    Mon>=1    2:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -22739,8 +22739,8 @@ ZONE_POLICY_Swiss: ZonePolicy = {
 ZONE_RULES_Syria: List[ZoneRule] = [
     # Anchor: Rule    Syria    1920    1923    -    Oct    Sun>=1    2:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -23256,8 +23256,8 @@ ZONE_POLICY_Syria: ZonePolicy = {
 ZONE_RULES_Taiwan: List[ZoneRule] = [
     # Anchor: Rule    Taiwan    1946    only    -    Oct    1    0:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -23461,8 +23461,8 @@ ZONE_POLICY_Taiwan: ZonePolicy = {
 ZONE_RULES_Thule: List[ZoneRule] = [
     # Anchor: Rule    Thule    1991    1992    -    Sep    lastSun    2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -23522,7 +23522,7 @@ ZONE_RULES_Thule: List[ZoneRule] = [
     # Rule    Thule    2007    max    -    Mar    Sun>=8    2:00    1:00    D
     {
         'from_year': 2007,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 3,
         'on_day_of_week': 7,
         'on_day_of_month': 8,
@@ -23534,7 +23534,7 @@ ZONE_RULES_Thule: List[ZoneRule] = [
     # Rule    Thule    2007    max    -    Nov    Sun>=1    2:00    0    S
     {
         'from_year': 2007,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 11,
         'on_day_of_week': 7,
         'on_day_of_month': 1,
@@ -23558,8 +23558,8 @@ ZONE_POLICY_Thule: ZonePolicy = {
 ZONE_RULES_Tonga: List[ZoneRule] = [
     # Anchor: Rule    Tonga    2000    only    -    Mar    19    2:00s    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -23655,8 +23655,8 @@ ZONE_POLICY_Tonga: ZonePolicy = {
 ZONE_RULES_Toronto: List[ZoneRule] = [
     # Anchor: Rule    Toronto    1919    only    -    Oct    26    0:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -23944,8 +23944,8 @@ ZONE_POLICY_Toronto: ZonePolicy = {
 ZONE_RULES_Troll: List[ZoneRule] = [
     # Anchor: Rule    Troll    2004    max    -    Oct    lastSun    1:00u    0:00    +00
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -23957,7 +23957,7 @@ ZONE_RULES_Troll: List[ZoneRule] = [
     # Rule    Troll    2005    max    -    Mar    lastSun    1:00u    2:00    +02
     {
         'from_year': 2005,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 3,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -23969,7 +23969,7 @@ ZONE_RULES_Troll: List[ZoneRule] = [
     # Rule    Troll    2004    max    -    Oct    lastSun    1:00u    0:00    +00
     {
         'from_year': 2004,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 10,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -23993,8 +23993,8 @@ ZONE_POLICY_Troll: ZonePolicy = {
 ZONE_RULES_Tunisia: List[ZoneRule] = [
     # Anchor: Rule    Tunisia    1939    only    -    Nov    18    23:00s    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -24318,8 +24318,8 @@ ZONE_POLICY_Tunisia: ZonePolicy = {
 ZONE_RULES_Turkey: List[ZoneRule] = [
     # Anchor: Rule    Turkey    1916    only    -    Oct     1    0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -24883,8 +24883,8 @@ ZONE_POLICY_Turkey: ZonePolicy = {
 ZONE_RULES_US: List[ZoneRule] = [
     # Anchor: Rule    US    1918    1919    -    Oct    lastSun    2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -25028,7 +25028,7 @@ ZONE_RULES_US: List[ZoneRule] = [
     # Rule    US    2007    max    -    Mar    Sun>=8    2:00    1:00    D
     {
         'from_year': 2007,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 3,
         'on_day_of_week': 7,
         'on_day_of_month': 8,
@@ -25040,7 +25040,7 @@ ZONE_RULES_US: List[ZoneRule] = [
     # Rule    US    2007    max    -    Nov    Sun>=1    2:00    0    S
     {
         'from_year': 2007,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 11,
         'on_day_of_week': 7,
         'on_day_of_month': 1,
@@ -25064,8 +25064,8 @@ ZONE_POLICY_US: ZonePolicy = {
 ZONE_RULES_Uruguay: List[ZoneRule] = [
     # Anchor: Rule    Uruguay    1924    1926    -    Apr     1     0:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -25665,8 +25665,8 @@ ZONE_POLICY_Uruguay: ZonePolicy = {
 ZONE_RULES_Vanc: List[ZoneRule] = [
     # Anchor: Rule    Vanc    1918    only    -    Oct    27    2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -25798,8 +25798,8 @@ ZONE_POLICY_Vanc: ZonePolicy = {
 ZONE_RULES_Vanuatu: List[ZoneRule] = [
     # Anchor: Rule    Vanuatu    1974    only    -    Mar    30    12:00u    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -25895,8 +25895,8 @@ ZONE_POLICY_Vanuatu: ZonePolicy = {
 ZONE_RULES_Vincennes: List[ZoneRule] = [
     # Anchor: Rule Vincennes    1946    only    -    Sep    lastSun    2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -26028,8 +26028,8 @@ ZONE_POLICY_Vincennes: ZonePolicy = {
 ZONE_RULES_W_Eur: List[ZoneRule] = [
     # Anchor: Rule    W-Eur    1977    only    -    Sep    lastSun     1:00s    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -26089,7 +26089,7 @@ ZONE_RULES_W_Eur: List[ZoneRule] = [
     # Rule    W-Eur    1981    max    -    Mar    lastSun     1:00s    1:00    S
     {
         'from_year': 1981,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 3,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -26113,8 +26113,8 @@ ZONE_POLICY_W_Eur: ZonePolicy = {
 ZONE_RULES_WS: List[ZoneRule] = [
     # Anchor: Rule    WS    2011    only    -    Apr    Sat>=1    4:00    0    -
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -26198,8 +26198,8 @@ ZONE_POLICY_WS: ZonePolicy = {
 ZONE_RULES_Winn: List[ZoneRule] = [
     # Anchor: Rule    Winn    1916    only    -    Sep    17    0:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -26511,8 +26511,8 @@ ZONE_POLICY_Winn: ZonePolicy = {
 ZONE_RULES_Yukon: List[ZoneRule] = [
     # Anchor: Rule    Yukon    1965    only    -    Oct    lastSun    2:00    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -26560,8 +26560,8 @@ ZONE_POLICY_Yukon: ZonePolicy = {
 ZONE_RULES_Zion: List[ZoneRule] = [
     # Anchor: Rule    Zion    1940    only    -    Sep    30    24:00u    0    S
     {
-        'from_year': 0,
-        'to_year': 0,
+        'from_year': -32767,
+        'to_year': -32767,
         'in_month': 1,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
@@ -27569,7 +27569,7 @@ ZONE_RULES_Zion: List[ZoneRule] = [
     # Rule    Zion    2013    max    -    Mar    Fri>=23    2:00    1:00    D
     {
         'from_year': 2013,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 3,
         'on_day_of_week': 5,
         'on_day_of_month': 23,
@@ -27581,7 +27581,7 @@ ZONE_RULES_Zion: List[ZoneRule] = [
     # Rule    Zion    2013    max    -    Oct    lastSun    2:00    0    S
     {
         'from_year': 2013,
-        'to_year': 9999,
+        'to_year': 32766,
         'in_month': 10,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -27610,205 +27610,205 @@ ZONE_POLICY_Zion: ZonePolicy = {
 # Notable zone policies: 134
 # ---------------------------------------------------------------------------
 
-# AN {Added anchor rule at year 0}
-# AQ {Added anchor rule at year 0}
-# AS {Added anchor rule at year 0}
-# AT {Added anchor rule at year 0}
-# AV {Added anchor rule at year 0}
-# AW {Added anchor rule at year 0}
-# Albania {Added anchor rule at year 0}
-# Algeria {Added anchor rule at year 0}
-# Arg {Added anchor rule at year 0}
-# Armenia {Added anchor rule at year 0}
-# Aus {Added anchor rule at year 0}
-# Austria {Added anchor rule at year 0}
-# Azer {Added anchor rule at year 0}
+# AN {Added anchor rule at year -32767}
+# AQ {Added anchor rule at year -32767}
+# AS {Added anchor rule at year -32767}
+# AT {Added anchor rule at year -32767}
+# AV {Added anchor rule at year -32767}
+# AW {Added anchor rule at year -32767}
+# Albania {Added anchor rule at year -32767}
+# Algeria {Added anchor rule at year -32767}
+# Arg {Added anchor rule at year -32767}
+# Armenia {Added anchor rule at year -32767}
+# Aus {Added anchor rule at year -32767}
+# Austria {Added anchor rule at year -32767}
+# Azer {Added anchor rule at year -32767}
 # Barb {
-#   Added anchor rule at year 0,
+#   Added anchor rule at year -32767,
 #   SAVE '0:30' different from 1:00,
 # }
-# Belgium {Added anchor rule at year 0}
+# Belgium {Added anchor rule at year -32767}
 # Belize {
-#   Added anchor rule at year 0,
+#   Added anchor rule at year -32767,
 #   SAVE '0:30' different from 1:00,
 # }
-# Bermuda {Added anchor rule at year 0}
-# Brazil {Added anchor rule at year 0}
-# Bulg {Added anchor rule at year 0}
-# C-Eur {Added anchor rule at year 0}
-# CA {Added anchor rule at year 0}
-# CO {Added anchor rule at year 0}
-# CR {Added anchor rule at year 0}
-# Canada {Added anchor rule at year 0}
-# Chatham {Added anchor rule at year 0}
-# Chicago {Added anchor rule at year 0}
-# Chile {Added anchor rule at year 0}
+# Bermuda {Added anchor rule at year -32767}
+# Brazil {Added anchor rule at year -32767}
+# Bulg {Added anchor rule at year -32767}
+# C-Eur {Added anchor rule at year -32767}
+# CA {Added anchor rule at year -32767}
+# CO {Added anchor rule at year -32767}
+# CR {Added anchor rule at year -32767}
+# Canada {Added anchor rule at year -32767}
+# Chatham {Added anchor rule at year -32767}
+# Chicago {Added anchor rule at year -32767}
+# Chile {Added anchor rule at year -32767}
 # Cook {
-#   Added anchor rule at year 0,
+#   Added anchor rule at year -32767,
 #   SAVE '0:30' different from 1:00,
 # }
-# Cuba {Added anchor rule at year 0}
-# Cyprus {Added anchor rule at year 0}
-# Czech {Added anchor rule at year 0}
+# Cuba {Added anchor rule at year -32767}
+# Cyprus {Added anchor rule at year -32767}
+# Czech {Added anchor rule at year -32767}
 # DR {
-#   Added anchor rule at year 0,
+#   Added anchor rule at year -32767,
 #   SAVE '0:30' different from 1:00,
 # }
-# Denver {Added anchor rule at year 0}
-# Detroit {Added anchor rule at year 0}
-# Dhaka {Added anchor rule at year 0}
-# E-Eur {Added anchor rule at year 0}
-# E-EurAsia {Added anchor rule at year 0}
-# EU {Added anchor rule at year 0}
-# EUAsia {Added anchor rule at year 0}
-# Ecuador {Added anchor rule at year 0}
-# Edm {Added anchor rule at year 0}
-# Egypt {Added anchor rule at year 0}
-# EgyptAsia {Added anchor rule at year 0}
+# Denver {Added anchor rule at year -32767}
+# Detroit {Added anchor rule at year -32767}
+# Dhaka {Added anchor rule at year -32767}
+# E-Eur {Added anchor rule at year -32767}
+# E-EurAsia {Added anchor rule at year -32767}
+# EU {Added anchor rule at year -32767}
+# EUAsia {Added anchor rule at year -32767}
+# Ecuador {Added anchor rule at year -32767}
+# Edm {Added anchor rule at year -32767}
+# Egypt {Added anchor rule at year -32767}
+# EgyptAsia {Added anchor rule at year -32767}
 # Eire {
-#   Added anchor rule at year 0,
+#   Added anchor rule at year -32767,
 #   SAVE '-1:00' different from 1:00,
 # }
-# Falk {Added anchor rule at year 0}
-# Fiji {Added anchor rule at year 0}
-# Finland {Added anchor rule at year 0}
+# Falk {Added anchor rule at year -32767}
+# Fiji {Added anchor rule at year -32767}
+# Finland {Added anchor rule at year -32767}
 # France {
-#   Added anchor rule at year 0,
+#   Added anchor rule at year -32767,
 #   SAVE '2:00' different from 1:00,
 # }
 # GB-Eire {
-#   Added anchor rule at year 0,
+#   Added anchor rule at year -32767,
 #   SAVE '2:00' different from 1:00,
 # }
 # Germany {
-#   Added anchor rule at year 0,
+#   Added anchor rule at year -32767,
 #   SAVE '2:00' different from 1:00,
 # }
-# Greece {Added anchor rule at year 0}
-# Guam {Added anchor rule at year 0}
-# Guat {Added anchor rule at year 0}
-# HK {Added anchor rule at year 0}
-# Haiti {Added anchor rule at year 0}
-# Halifax {Added anchor rule at year 0}
-# Holiday {Added anchor rule at year 0}
-# Hond {Added anchor rule at year 0}
-# Hungary {Added anchor rule at year 0}
-# Indianapolis {Added anchor rule at year 0}
-# Iran {Added anchor rule at year 0}
-# Iraq {Added anchor rule at year 0}
-# Italy {Added anchor rule at year 0}
-# Japan {Added anchor rule at year 0}
-# Jordan {Added anchor rule at year 0}
-# Kyrgyz {Added anchor rule at year 0}
+# Greece {Added anchor rule at year -32767}
+# Guam {Added anchor rule at year -32767}
+# Guat {Added anchor rule at year -32767}
+# HK {Added anchor rule at year -32767}
+# Haiti {Added anchor rule at year -32767}
+# Halifax {Added anchor rule at year -32767}
+# Holiday {Added anchor rule at year -32767}
+# Hond {Added anchor rule at year -32767}
+# Hungary {Added anchor rule at year -32767}
+# Indianapolis {Added anchor rule at year -32767}
+# Iran {Added anchor rule at year -32767}
+# Iraq {Added anchor rule at year -32767}
+# Italy {Added anchor rule at year -32767}
+# Japan {Added anchor rule at year -32767}
+# Jordan {Added anchor rule at year -32767}
+# Kyrgyz {Added anchor rule at year -32767}
 # LH {
-#   Added anchor rule at year 0,
+#   Added anchor rule at year -32767,
 #   SAVE '0:30' different from 1:00,
 # }
-# Latvia {Added anchor rule at year 0}
-# Lebanon {Added anchor rule at year 0}
-# Libya {Added anchor rule at year 0}
-# Louisville {Added anchor rule at year 0}
-# Macau {Added anchor rule at year 0}
-# Malta {Added anchor rule at year 0}
-# Marengo {Added anchor rule at year 0}
-# Mauritius {Added anchor rule at year 0}
-# Menominee {Added anchor rule at year 0}
-# Mexico {Added anchor rule at year 0}
-# Moldova {Added anchor rule at year 0}
-# Moncton {Added anchor rule at year 0}
-# Mongol {Added anchor rule at year 0}
+# Latvia {Added anchor rule at year -32767}
+# Lebanon {Added anchor rule at year -32767}
+# Libya {Added anchor rule at year -32767}
+# Louisville {Added anchor rule at year -32767}
+# Macau {Added anchor rule at year -32767}
+# Malta {Added anchor rule at year -32767}
+# Marengo {Added anchor rule at year -32767}
+# Mauritius {Added anchor rule at year -32767}
+# Menominee {Added anchor rule at year -32767}
+# Mexico {Added anchor rule at year -32767}
+# Moldova {Added anchor rule at year -32767}
+# Moncton {Added anchor rule at year -32767}
+# Mongol {Added anchor rule at year -32767}
 # Morocco {
-#   Added anchor rule at year 0,
+#   Added anchor rule at year -32767,
 #   SAVE '-1:00' different from 1:00,
 # }
 # NBorneo {
-#   Added anchor rule at year 0,
+#   Added anchor rule at year -32767,
 #   SAVE '0:20' different from 1:00,
 # }
-# NC {Added anchor rule at year 0}
-# NT_YK {Added anchor rule at year 0}
-# NYC {Added anchor rule at year 0}
+# NC {Added anchor rule at year -32767}
+# NT_YK {Added anchor rule at year -32767}
+# NYC {Added anchor rule at year -32767}
 # NZ {
-#   Added anchor rule at year 0,
+#   Added anchor rule at year -32767,
 #   SAVE '0:30' different from 1:00,
 # }
 # Namibia {
-#   Added anchor rule at year 0,
+#   Added anchor rule at year -32767,
 #   SAVE '-1:00' different from 1:00,
 # }
-# Nic {Added anchor rule at year 0}
-# PRC {Added anchor rule at year 0}
-# Pakistan {Added anchor rule at year 0}
-# Palestine {Added anchor rule at year 0}
-# Para {Added anchor rule at year 0}
-# Perry {Added anchor rule at year 0}
-# Peru {Added anchor rule at year 0}
-# Phil {Added anchor rule at year 0}
-# Pike {Added anchor rule at year 0}
-# Poland {Added anchor rule at year 0}
+# Nic {Added anchor rule at year -32767}
+# PRC {Added anchor rule at year -32767}
+# Pakistan {Added anchor rule at year -32767}
+# Palestine {Added anchor rule at year -32767}
+# Para {Added anchor rule at year -32767}
+# Perry {Added anchor rule at year -32767}
+# Peru {Added anchor rule at year -32767}
+# Phil {Added anchor rule at year -32767}
+# Pike {Added anchor rule at year -32767}
+# Poland {Added anchor rule at year -32767}
 # Port {
-#   Added anchor rule at year 0,
+#   Added anchor rule at year -32767,
 #   SAVE '2:00' different from 1:00,
 # }
-# Pulaski {Added anchor rule at year 0}
-# ROK {Added anchor rule at year 0}
-# Regina {Added anchor rule at year 0}
-# Romania {Added anchor rule at year 0}
+# Pulaski {Added anchor rule at year -32767}
+# ROK {Added anchor rule at year -32767}
+# Regina {Added anchor rule at year -32767}
+# Romania {Added anchor rule at year -32767}
 # Russia {
-#   Added anchor rule at year 0,
+#   Added anchor rule at year -32767,
 #   SAVE '2:00' different from 1:00,
 # }
-# RussiaAsia {Added anchor rule at year 0}
-# SA {Added anchor rule at year 0}
-# Salv {Added anchor rule at year 0}
-# SanLuis {Added anchor rule at year 0}
-# Shang {Added anchor rule at year 0}
+# RussiaAsia {Added anchor rule at year -32767}
+# SA {Added anchor rule at year -32767}
+# Salv {Added anchor rule at year -32767}
+# SanLuis {Added anchor rule at year -32767}
+# Shang {Added anchor rule at year -32767}
 # SovietZone {
-#   Added anchor rule at year 0,
+#   Added anchor rule at year -32767,
 #   SAVE '2:00' different from 1:00,
 # }
 # Spain {
-#   Added anchor rule at year 0,
+#   Added anchor rule at year -32767,
 #   SAVE '2:00' different from 1:00,
 # }
-# SpainAfrica {Added anchor rule at year 0}
+# SpainAfrica {Added anchor rule at year -32767}
 # StJohns {
-#   Added anchor rule at year 0,
+#   Added anchor rule at year -32767,
 #   SAVE '2:00' different from 1:00,
 # }
-# Starke {Added anchor rule at year 0}
-# Sudan {Added anchor rule at year 0}
-# Swift {Added anchor rule at year 0}
-# Swiss {Added anchor rule at year 0}
-# Syria {Added anchor rule at year 0}
-# Taiwan {Added anchor rule at year 0}
-# Thule {Added anchor rule at year 0}
-# Tonga {Added anchor rule at year 0}
-# Toronto {Added anchor rule at year 0}
+# Starke {Added anchor rule at year -32767}
+# Sudan {Added anchor rule at year -32767}
+# Swift {Added anchor rule at year -32767}
+# Swiss {Added anchor rule at year -32767}
+# Syria {Added anchor rule at year -32767}
+# Taiwan {Added anchor rule at year -32767}
+# Thule {Added anchor rule at year -32767}
+# Tonga {Added anchor rule at year -32767}
+# Toronto {Added anchor rule at year -32767}
 # Troll {
-#   Added anchor rule at year 0,
+#   Added anchor rule at year -32767,
 #   SAVE '2:00' different from 1:00,
 # }
-# Tunisia {Added anchor rule at year 0}
-# Turkey {Added anchor rule at year 0}
-# US {Added anchor rule at year 0}
+# Tunisia {Added anchor rule at year -32767}
+# Turkey {Added anchor rule at year -32767}
+# US {Added anchor rule at year -32767}
 # Uruguay {
-#   Added anchor rule at year 0,
+#   Added anchor rule at year -32767,
 #   SAVE '0:30' different from 1:00,
 #   SAVE '1:30' different from 1:00,
 # }
-# Vanc {Added anchor rule at year 0}
-# Vanuatu {Added anchor rule at year 0}
-# Vincennes {Added anchor rule at year 0}
-# W-Eur {Added anchor rule at year 0}
-# WS {Added anchor rule at year 0}
-# Winn {Added anchor rule at year 0}
+# Vanc {Added anchor rule at year -32767}
+# Vanuatu {Added anchor rule at year -32767}
+# Vincennes {Added anchor rule at year -32767}
+# W-Eur {Added anchor rule at year -32767}
+# WS {Added anchor rule at year -32767}
+# Winn {Added anchor rule at year -32767}
 # Yukon {
-#   Added anchor rule at year 0,
+#   Added anchor rule at year -32767,
 #   SAVE '2:00' different from 1:00,
 # }
 # Zion {
-#   Added anchor rule at year 0,
+#   Added anchor rule at year -32767,
 #   SAVE '2:00' different from 1:00,
 # }
 

@@ -78,7 +78,7 @@ ZONE_ERAS_Africa_Abidjan: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'GMT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -212,7 +212,7 @@ ZONE_ERAS_Africa_Algiers: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'CET',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -262,7 +262,7 @@ ZONE_ERAS_Africa_Bissau: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'GMT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -300,7 +300,7 @@ ZONE_ERAS_Africa_Cairo: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Egypt,
         'era_delta_seconds': 0,
         'format': 'EE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -374,7 +374,7 @@ ZONE_ERAS_Africa_Casablanca: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Morocco,
         'era_delta_seconds': 0,
         'format': '+01/+00',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -496,7 +496,7 @@ ZONE_ERAS_Africa_Ceuta: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'CE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -558,7 +558,7 @@ ZONE_ERAS_Africa_El_Aaiun: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Morocco,
         'era_delta_seconds': 0,
         'format': '+01/+00',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -608,7 +608,7 @@ ZONE_ERAS_Africa_Johannesburg: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_SA,
         'era_delta_seconds': 0,
         'format': 'SAST',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -670,7 +670,7 @@ ZONE_ERAS_Africa_Juba: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'CAT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -732,7 +732,7 @@ ZONE_ERAS_Africa_Khartoum: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'CAT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -806,7 +806,7 @@ ZONE_ERAS_Africa_Lagos: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'WAT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -844,7 +844,7 @@ ZONE_ERAS_Africa_Maputo: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'CAT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -906,7 +906,7 @@ ZONE_ERAS_Africa_Monrovia: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'GMT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -992,7 +992,7 @@ ZONE_ERAS_Africa_Nairobi: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'EAT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -1054,7 +1054,7 @@ ZONE_ERAS_Africa_Ndjamena: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'WAT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -1128,7 +1128,7 @@ ZONE_ERAS_Africa_Sao_Tome: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'GMT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -1250,7 +1250,7 @@ ZONE_ERAS_Africa_Tripoli: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'EET',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -1300,7 +1300,7 @@ ZONE_ERAS_Africa_Tunis: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Tunisia,
         'era_delta_seconds': 0,
         'format': 'CE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -1386,7 +1386,7 @@ ZONE_ERAS_Africa_Windhoek: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Namibia,
         'era_delta_seconds': 0,
         'format': '%s',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -1508,7 +1508,7 @@ ZONE_ERAS_America_Adak: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'H%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -1618,7 +1618,7 @@ ZONE_ERAS_America_Anchorage: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'AK%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -1716,7 +1716,7 @@ ZONE_ERAS_America_Araguaina: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -1814,7 +1814,7 @@ ZONE_ERAS_America_Argentina_Buenos_Aires: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Arg,
         'era_delta_seconds': 0,
         'format': '-03/-02',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -1972,7 +1972,7 @@ ZONE_ERAS_America_Argentina_Catamarca: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -2094,7 +2094,7 @@ ZONE_ERAS_America_Argentina_Cordoba: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Arg,
         'era_delta_seconds': 0,
         'format': '-03/-02',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -2264,7 +2264,7 @@ ZONE_ERAS_America_Argentina_Jujuy: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -2422,7 +2422,7 @@ ZONE_ERAS_America_Argentina_La_Rioja: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -2628,7 +2628,7 @@ ZONE_ERAS_America_Argentina_Mendoza: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -2762,7 +2762,7 @@ ZONE_ERAS_America_Argentina_Rio_Gallegos: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -2896,7 +2896,7 @@ ZONE_ERAS_America_Argentina_Salta: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -3054,7 +3054,7 @@ ZONE_ERAS_America_Argentina_San_Juan: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -3260,7 +3260,7 @@ ZONE_ERAS_America_Argentina_San_Luis: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -3406,7 +3406,7 @@ ZONE_ERAS_America_Argentina_Tucuman: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Arg,
         'era_delta_seconds': 0,
         'format': '-03/-02',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -3540,7 +3540,7 @@ ZONE_ERAS_America_Argentina_Ushuaia: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -3614,7 +3614,7 @@ ZONE_ERAS_America_Asuncion: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Para,
         'era_delta_seconds': 0,
         'format': '-04/-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -3688,7 +3688,7 @@ ZONE_ERAS_America_Bahia: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -3810,7 +3810,7 @@ ZONE_ERAS_America_Bahia_Banderas: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Mexico,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -3872,7 +3872,7 @@ ZONE_ERAS_America_Barbados: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Barb,
         'era_delta_seconds': 0,
         'format': 'A%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -3922,7 +3922,7 @@ ZONE_ERAS_America_Belem: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -3960,7 +3960,7 @@ ZONE_ERAS_America_Belize: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Belize,
         'era_delta_seconds': 0,
         'format': '%s',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -4034,7 +4034,7 @@ ZONE_ERAS_America_Boa_Vista: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-04',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -4084,7 +4084,7 @@ ZONE_ERAS_America_Bogota: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_CO,
         'era_delta_seconds': 0,
         'format': '-05/-04',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -4158,7 +4158,7 @@ ZONE_ERAS_America_Boise: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'M%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -4244,7 +4244,7 @@ ZONE_ERAS_America_Cambridge_Bay: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Canada,
         'era_delta_seconds': 0,
         'format': 'M%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -4282,7 +4282,7 @@ ZONE_ERAS_America_Campo_Grande: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Brazil,
         'era_delta_seconds': 0,
         'format': '-04/-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -4356,7 +4356,7 @@ ZONE_ERAS_America_Cancun: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'EST',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -4442,7 +4442,7 @@ ZONE_ERAS_America_Caracas: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-04',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -4492,7 +4492,7 @@ ZONE_ERAS_America_Cayenne: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -4602,7 +4602,7 @@ ZONE_ERAS_America_Chicago: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -4724,7 +4724,7 @@ ZONE_ERAS_America_Chihuahua: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'CST',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -4870,7 +4870,7 @@ ZONE_ERAS_America_Ciudad_Juarez: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'M%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -4920,7 +4920,7 @@ ZONE_ERAS_America_Costa_Rica: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_CR,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -4982,7 +4982,7 @@ ZONE_ERAS_America_Cuiaba: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Brazil,
         'era_delta_seconds': 0,
         'format': '-04/-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -5044,7 +5044,7 @@ ZONE_ERAS_America_Danmarkshavn: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'GMT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -5130,7 +5130,7 @@ ZONE_ERAS_America_Dawson: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'MST',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -5192,7 +5192,7 @@ ZONE_ERAS_America_Dawson_Creek: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'MST',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -5278,7 +5278,7 @@ ZONE_ERAS_America_Denver: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'M%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -5412,7 +5412,7 @@ ZONE_ERAS_America_Detroit: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'E%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -5462,7 +5462,7 @@ ZONE_ERAS_America_Edmonton: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Canada,
         'era_delta_seconds': 0,
         'format': 'M%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -5560,7 +5560,7 @@ ZONE_ERAS_America_Eirunepe: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-05',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -5598,7 +5598,7 @@ ZONE_ERAS_America_El_Salvador: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Salv,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -5684,7 +5684,7 @@ ZONE_ERAS_America_Fort_Nelson: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'MST',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -5782,7 +5782,7 @@ ZONE_ERAS_America_Fortaleza: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -5868,7 +5868,7 @@ ZONE_ERAS_America_Glace_Bay: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Canada,
         'era_delta_seconds': 0,
         'format': 'A%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -6002,7 +6002,7 @@ ZONE_ERAS_America_Goose_Bay: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Canada,
         'era_delta_seconds': 0,
         'format': 'A%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -6088,7 +6088,7 @@ ZONE_ERAS_America_Grand_Turk: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'E%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -6126,7 +6126,7 @@ ZONE_ERAS_America_Guatemala: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Guat,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -6176,7 +6176,7 @@ ZONE_ERAS_America_Guayaquil: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Ecuador,
         'era_delta_seconds': 0,
         'format': '-05/-04',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -6250,7 +6250,7 @@ ZONE_ERAS_America_Guyana: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-04',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -6348,7 +6348,7 @@ ZONE_ERAS_America_Halifax: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Canada,
         'era_delta_seconds': 0,
         'format': 'A%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -6398,7 +6398,7 @@ ZONE_ERAS_America_Havana: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Cuba,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -6520,7 +6520,7 @@ ZONE_ERAS_America_Hermosillo: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'MST',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -6666,7 +6666,7 @@ ZONE_ERAS_America_Indiana_Indianapolis: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'E%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -6764,7 +6764,7 @@ ZONE_ERAS_America_Indiana_Knox: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -6886,7 +6886,7 @@ ZONE_ERAS_America_Indiana_Marengo: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'E%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -6996,7 +6996,7 @@ ZONE_ERAS_America_Indiana_Petersburg: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'E%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -7106,7 +7106,7 @@ ZONE_ERAS_America_Indiana_Tell_City: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -7192,7 +7192,7 @@ ZONE_ERAS_America_Indiana_Vevay: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'E%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -7302,7 +7302,7 @@ ZONE_ERAS_America_Indiana_Vincennes: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'E%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -7412,7 +7412,7 @@ ZONE_ERAS_America_Indiana_Winamac: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'E%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -7474,7 +7474,7 @@ ZONE_ERAS_America_Inuvik: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Canada,
         'era_delta_seconds': 0,
         'format': 'M%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -7536,7 +7536,7 @@ ZONE_ERAS_America_Iqaluit: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Canada,
         'era_delta_seconds': 0,
         'format': 'E%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -7610,7 +7610,7 @@ ZONE_ERAS_America_Jamaica: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'EST',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -7744,7 +7744,7 @@ ZONE_ERAS_America_Juneau: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'AK%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -7866,7 +7866,7 @@ ZONE_ERAS_America_Kentucky_Louisville: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'E%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -7940,7 +7940,7 @@ ZONE_ERAS_America_Kentucky_Monticello: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'E%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -8002,7 +8002,7 @@ ZONE_ERAS_America_La_Paz: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-04',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -8052,7 +8052,7 @@ ZONE_ERAS_America_Lima: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Peru,
         'era_delta_seconds': 0,
         'format': '-05/-04',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -8114,7 +8114,7 @@ ZONE_ERAS_America_Los_Angeles: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'P%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -8236,7 +8236,7 @@ ZONE_ERAS_America_Maceio: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -8358,7 +8358,7 @@ ZONE_ERAS_America_Managua: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Nic,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -8432,7 +8432,7 @@ ZONE_ERAS_America_Manaus: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-04',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -8506,7 +8506,7 @@ ZONE_ERAS_America_Martinique: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'AST',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -8580,7 +8580,7 @@ ZONE_ERAS_America_Matamoros: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -8690,7 +8690,7 @@ ZONE_ERAS_America_Mazatlan: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Mexico,
         'era_delta_seconds': 0,
         'format': 'M%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -8764,7 +8764,7 @@ ZONE_ERAS_America_Menominee: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -8826,7 +8826,7 @@ ZONE_ERAS_America_Merida: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Mexico,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -8960,7 +8960,7 @@ ZONE_ERAS_America_Metlakatla: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'AK%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -9058,7 +9058,7 @@ ZONE_ERAS_America_Mexico_City: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Mexico,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -9120,7 +9120,7 @@ ZONE_ERAS_America_Miquelon: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Canada,
         'era_delta_seconds': 0,
         'format': '-03/-02',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -9242,7 +9242,7 @@ ZONE_ERAS_America_Moncton: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Canada,
         'era_delta_seconds': 0,
         'format': 'A%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -9304,7 +9304,7 @@ ZONE_ERAS_America_Monterrey: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Mexico,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -9450,7 +9450,7 @@ ZONE_ERAS_America_Montevideo: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Uruguay,
         'era_delta_seconds': 0,
         'format': '-03/-02',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -9536,7 +9536,7 @@ ZONE_ERAS_America_New_York: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'E%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -9658,7 +9658,7 @@ ZONE_ERAS_America_Nome: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'AK%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -9756,7 +9756,7 @@ ZONE_ERAS_America_Noronha: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-02',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -9806,7 +9806,7 @@ ZONE_ERAS_America_North_Dakota_Beulah: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -9856,7 +9856,7 @@ ZONE_ERAS_America_North_Dakota_Center: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -9906,7 +9906,7 @@ ZONE_ERAS_America_North_Dakota_New_Salem: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -9968,7 +9968,7 @@ ZONE_ERAS_America_Nuuk: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-02',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -10114,7 +10114,7 @@ ZONE_ERAS_America_Ojinaga: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -10164,7 +10164,7 @@ ZONE_ERAS_America_Panama: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'EST',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -10238,7 +10238,7 @@ ZONE_ERAS_America_Paramaribo: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -10336,7 +10336,7 @@ ZONE_ERAS_America_Phoenix: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'MST',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -10386,7 +10386,7 @@ ZONE_ERAS_America_Port_au_Prince: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Haiti,
         'era_delta_seconds': 0,
         'format': 'E%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -10436,7 +10436,7 @@ ZONE_ERAS_America_Porto_Velho: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-04',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -10498,7 +10498,7 @@ ZONE_ERAS_America_Puerto_Rico: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'AST',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -10680,7 +10680,7 @@ ZONE_ERAS_America_Punta_Arenas: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -10742,7 +10742,7 @@ ZONE_ERAS_America_Rankin_Inlet: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Canada,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -10840,7 +10840,7 @@ ZONE_ERAS_America_Recife: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -10890,7 +10890,7 @@ ZONE_ERAS_America_Regina: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'CST',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -10976,7 +10976,7 @@ ZONE_ERAS_America_Resolute: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Canada,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -11050,7 +11050,7 @@ ZONE_ERAS_America_Rio_Branco: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-05',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -11112,7 +11112,7 @@ ZONE_ERAS_America_Santarem: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -11294,7 +11294,7 @@ ZONE_ERAS_America_Santiago: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Chile,
         'era_delta_seconds': 0,
         'format': '-04/-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -11380,7 +11380,7 @@ ZONE_ERAS_America_Santo_Domingo: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'AST',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -11442,7 +11442,7 @@ ZONE_ERAS_America_Sao_Paulo: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Brazil,
         'era_delta_seconds': 0,
         'format': '-03/-02',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -11504,7 +11504,7 @@ ZONE_ERAS_America_Scoresbysund: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': '-01/+00',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -11614,7 +11614,7 @@ ZONE_ERAS_America_Sitka: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'AK%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -11724,7 +11724,7 @@ ZONE_ERAS_America_St_Johns: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Canada,
         'era_delta_seconds': 0,
         'format': 'N%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -11798,7 +11798,7 @@ ZONE_ERAS_America_Swift_Current: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'CST',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -11836,7 +11836,7 @@ ZONE_ERAS_America_Tegucigalpa: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Hond,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -11874,7 +11874,7 @@ ZONE_ERAS_America_Thule: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Thule,
         'era_delta_seconds': 0,
         'format': 'A%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -12116,7 +12116,7 @@ ZONE_ERAS_America_Tijuana: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'P%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -12202,7 +12202,7 @@ ZONE_ERAS_America_Toronto: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Canada,
         'era_delta_seconds': 0,
         'format': 'E%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -12252,7 +12252,7 @@ ZONE_ERAS_America_Vancouver: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Canada,
         'era_delta_seconds': 0,
         'format': 'P%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -12338,7 +12338,7 @@ ZONE_ERAS_America_Whitehorse: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'MST',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -12388,7 +12388,7 @@ ZONE_ERAS_America_Winnipeg: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Canada,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -12486,7 +12486,7 @@ ZONE_ERAS_America_Yakutat: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'AK%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -12536,7 +12536,7 @@ ZONE_ERAS_America_Yellowknife: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Canada,
         'era_delta_seconds': 0,
         'format': 'M%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -12706,7 +12706,7 @@ ZONE_ERAS_Antarctica_Casey: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+11',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -12816,7 +12816,7 @@ ZONE_ERAS_Antarctica_Davis: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+07',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -12938,7 +12938,7 @@ ZONE_ERAS_Antarctica_Macquarie: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_AT,
         'era_delta_seconds': 0,
         'format': 'AE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -12988,7 +12988,7 @@ ZONE_ERAS_Antarctica_Mawson: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+05',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -13062,7 +13062,7 @@ ZONE_ERAS_Antarctica_Palmer: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -13100,7 +13100,7 @@ ZONE_ERAS_Antarctica_Rothera: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -13138,7 +13138,7 @@ ZONE_ERAS_Antarctica_Troll: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Troll,
         'era_delta_seconds': 0,
         'format': '%s',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -13224,7 +13224,7 @@ ZONE_ERAS_Asia_Almaty: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+06',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -13274,7 +13274,7 @@ ZONE_ERAS_Asia_Amman: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -13384,7 +13384,7 @@ ZONE_ERAS_Asia_Anadyr: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+12',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -13506,7 +13506,7 @@ ZONE_ERAS_Asia_Aqtau: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+05',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -13628,7 +13628,7 @@ ZONE_ERAS_Asia_Aqtobe: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+05',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -13702,7 +13702,7 @@ ZONE_ERAS_Asia_Ashgabat: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+05',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -13824,7 +13824,7 @@ ZONE_ERAS_Asia_Atyrau: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+05',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -13886,7 +13886,7 @@ ZONE_ERAS_Asia_Baghdad: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Iraq,
         'era_delta_seconds': 0,
         'format': '+03/+04',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -13984,7 +13984,7 @@ ZONE_ERAS_Asia_Baku: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Azer,
         'era_delta_seconds': 0,
         'format': '+04/+05',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -14034,7 +14034,7 @@ ZONE_ERAS_Asia_Bangkok: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+07',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -14156,7 +14156,7 @@ ZONE_ERAS_Asia_Barnaul: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+07',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -14194,7 +14194,7 @@ ZONE_ERAS_Asia_Beirut: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Lebanon,
         'era_delta_seconds': 0,
         'format': 'EE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -14280,7 +14280,7 @@ ZONE_ERAS_Asia_Bishkek: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+06',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -14390,7 +14390,7 @@ ZONE_ERAS_Asia_Chita: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+09',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -14464,7 +14464,7 @@ ZONE_ERAS_Asia_Choibalsan: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Mongol,
         'era_delta_seconds': 0,
         'format': '+08/+09',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -14586,7 +14586,7 @@ ZONE_ERAS_Asia_Colombo: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+0530',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -14636,7 +14636,7 @@ ZONE_ERAS_Asia_Damascus: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -14734,7 +14734,7 @@ ZONE_ERAS_Asia_Dhaka: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Dhaka,
         'era_delta_seconds': 0,
         'format': '+06/+07',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -14808,7 +14808,7 @@ ZONE_ERAS_Asia_Dili: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+09',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -14846,7 +14846,7 @@ ZONE_ERAS_Asia_Dubai: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+04',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -14920,7 +14920,7 @@ ZONE_ERAS_Asia_Dushanbe: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+05',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -14994,7 +14994,7 @@ ZONE_ERAS_Asia_Famagusta: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EUAsia,
         'era_delta_seconds': 0,
         'format': 'EE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -15152,7 +15152,7 @@ ZONE_ERAS_Asia_Gaza: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Palestine,
         'era_delta_seconds': 0,
         'format': 'EE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -15238,7 +15238,7 @@ ZONE_ERAS_Asia_Hebron: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Palestine,
         'era_delta_seconds': 0,
         'format': 'EE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -15372,7 +15372,7 @@ ZONE_ERAS_Asia_Ho_Chi_Minh: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+07',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -15458,7 +15458,7 @@ ZONE_ERAS_Asia_Hong_Kong: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_HK,
         'era_delta_seconds': 0,
         'format': 'HK%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -15508,7 +15508,7 @@ ZONE_ERAS_Asia_Hovd: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Mongol,
         'era_delta_seconds': 0,
         'format': '+07/+08',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -15618,7 +15618,7 @@ ZONE_ERAS_Asia_Irkutsk: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+08',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -15740,7 +15740,7 @@ ZONE_ERAS_Asia_Jakarta: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'WIB',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -15802,7 +15802,7 @@ ZONE_ERAS_Asia_Jayapura: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'WIT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -15852,7 +15852,7 @@ ZONE_ERAS_Asia_Jerusalem: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Zion,
         'era_delta_seconds': 0,
         'format': 'I%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -15902,7 +15902,7 @@ ZONE_ERAS_Asia_Kabul: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+0430',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -16000,7 +16000,7 @@ ZONE_ERAS_Asia_Kamchatka: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+12',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -16086,7 +16086,7 @@ ZONE_ERAS_Asia_Karachi: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Pakistan,
         'era_delta_seconds': 0,
         'format': 'PK%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -16136,7 +16136,7 @@ ZONE_ERAS_Asia_Kathmandu: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+0545',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -16258,7 +16258,7 @@ ZONE_ERAS_Asia_Khandyga: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+09',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -16368,7 +16368,7 @@ ZONE_ERAS_Asia_Kolkata: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'IST',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -16466,7 +16466,7 @@ ZONE_ERAS_Asia_Krasnoyarsk: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+07',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -16540,7 +16540,7 @@ ZONE_ERAS_Asia_Kuching: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+08',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -16602,7 +16602,7 @@ ZONE_ERAS_Asia_Macau: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Macau,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -16712,7 +16712,7 @@ ZONE_ERAS_Asia_Magadan: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+11',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -16786,7 +16786,7 @@ ZONE_ERAS_Asia_Makassar: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'WITA',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -16860,7 +16860,7 @@ ZONE_ERAS_Asia_Manila: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Phil,
         'era_delta_seconds': 0,
         'format': 'P%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -16910,7 +16910,7 @@ ZONE_ERAS_Asia_Nicosia: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EUAsia,
         'era_delta_seconds': 0,
         'format': 'EE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -17008,7 +17008,7 @@ ZONE_ERAS_Asia_Novokuznetsk: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+07',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -17130,7 +17130,7 @@ ZONE_ERAS_Asia_Novosibirsk: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+07',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -17228,7 +17228,7 @@ ZONE_ERAS_Asia_Omsk: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+06',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -17362,7 +17362,7 @@ ZONE_ERAS_Asia_Oral: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+05',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -17484,7 +17484,7 @@ ZONE_ERAS_Asia_Pontianak: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'WIB',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -17570,7 +17570,7 @@ ZONE_ERAS_Asia_Pyongyang: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'KST',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -17620,7 +17620,7 @@ ZONE_ERAS_Asia_Qatar: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -17742,7 +17742,7 @@ ZONE_ERAS_Asia_Qostanay: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+06',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -17900,7 +17900,7 @@ ZONE_ERAS_Asia_Qyzylorda: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+05',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -17938,7 +17938,7 @@ ZONE_ERAS_Asia_Riyadh: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -18060,7 +18060,7 @@ ZONE_ERAS_Asia_Sakhalin: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+11',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -18158,7 +18158,7 @@ ZONE_ERAS_Asia_Samarkand: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+05',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -18244,7 +18244,7 @@ ZONE_ERAS_Asia_Seoul: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_ROK,
         'era_delta_seconds': 0,
         'format': 'K%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -18294,7 +18294,7 @@ ZONE_ERAS_Asia_Shanghai: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_PRC,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -18416,7 +18416,7 @@ ZONE_ERAS_Asia_Singapore: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+08',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -18514,7 +18514,7 @@ ZONE_ERAS_Asia_Srednekolymsk: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+11',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -18576,7 +18576,7 @@ ZONE_ERAS_Asia_Taipei: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Taiwan,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -18650,7 +18650,7 @@ ZONE_ERAS_Asia_Tashkent: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+05',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -18796,7 +18796,7 @@ ZONE_ERAS_Asia_Tbilisi: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+04',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -18870,7 +18870,7 @@ ZONE_ERAS_Asia_Tehran: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Iran,
         'era_delta_seconds': 0,
         'format': '+0330/+0430',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -18920,7 +18920,7 @@ ZONE_ERAS_Asia_Thimphu: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+06',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -18958,7 +18958,7 @@ ZONE_ERAS_Asia_Tokyo: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Japan,
         'era_delta_seconds': 0,
         'format': 'J%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -19080,7 +19080,7 @@ ZONE_ERAS_Asia_Tomsk: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+07',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -19130,7 +19130,7 @@ ZONE_ERAS_Asia_Ulaanbaatar: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Mongol,
         'era_delta_seconds': 0,
         'format': '+08/+09',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -19168,7 +19168,7 @@ ZONE_ERAS_Asia_Urumqi: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+06',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -19290,7 +19290,7 @@ ZONE_ERAS_Asia_Ust_Nera: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+10',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -19388,7 +19388,7 @@ ZONE_ERAS_Asia_Vladivostok: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+10',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -19486,7 +19486,7 @@ ZONE_ERAS_Asia_Yakutsk: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+09',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -19560,7 +19560,7 @@ ZONE_ERAS_Asia_Yangon: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+0630',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -19670,7 +19670,7 @@ ZONE_ERAS_Asia_Yekaterinburg: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+05',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -19768,7 +19768,7 @@ ZONE_ERAS_Asia_Yerevan: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Armenia,
         'era_delta_seconds': 0,
         'format': '+04/+05',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -19962,7 +19962,7 @@ ZONE_ERAS_Atlantic_Azores: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': '-01/+00',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -20036,7 +20036,7 @@ ZONE_ERAS_Atlantic_Bermuda: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'A%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -20110,7 +20110,7 @@ ZONE_ERAS_Atlantic_Canary: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'WE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -20184,7 +20184,7 @@ ZONE_ERAS_Atlantic_Cape_Verde: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-01',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -20234,7 +20234,7 @@ ZONE_ERAS_Atlantic_Faroe: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'WE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -20404,7 +20404,7 @@ ZONE_ERAS_Atlantic_Madeira: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'WE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -20442,7 +20442,7 @@ ZONE_ERAS_Atlantic_South_Georgia: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-02',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -20528,7 +20528,7 @@ ZONE_ERAS_Atlantic_Stanley: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -20590,7 +20590,7 @@ ZONE_ERAS_Australia_Adelaide: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_AS,
         'era_delta_seconds': 0,
         'format': 'AC%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -20640,7 +20640,7 @@ ZONE_ERAS_Australia_Brisbane: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_AQ,
         'era_delta_seconds': 0,
         'format': 'AE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -20726,7 +20726,7 @@ ZONE_ERAS_Australia_Broken_Hill: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_AS,
         'era_delta_seconds': 0,
         'format': 'AC%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -20776,7 +20776,7 @@ ZONE_ERAS_Australia_Darwin: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Aus,
         'era_delta_seconds': 0,
         'format': 'AC%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -20826,7 +20826,7 @@ ZONE_ERAS_Australia_Eucla: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_AW,
         'era_delta_seconds': 0,
         'format': '+0845/+0945',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -20888,7 +20888,7 @@ ZONE_ERAS_Australia_Hobart: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_AT,
         'era_delta_seconds': 0,
         'format': 'AE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -20950,7 +20950,7 @@ ZONE_ERAS_Australia_Lindeman: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Holiday,
         'era_delta_seconds': 0,
         'format': 'AE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21012,7 +21012,7 @@ ZONE_ERAS_Australia_Lord_Howe: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_LH,
         'era_delta_seconds': 0,
         'format': '+1030/+11',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21062,7 +21062,7 @@ ZONE_ERAS_Australia_Melbourne: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_AV,
         'era_delta_seconds': 0,
         'format': 'AE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21112,7 +21112,7 @@ ZONE_ERAS_Australia_Perth: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_AW,
         'era_delta_seconds': 0,
         'format': 'AW%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21162,7 +21162,7 @@ ZONE_ERAS_Australia_Sydney: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_AN,
         'era_delta_seconds': 0,
         'format': 'AE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21188,7 +21188,7 @@ ZONE_ERAS_CET: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_C_Eur,
         'era_delta_seconds': 0,
         'format': 'CE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21214,7 +21214,7 @@ ZONE_ERAS_CST6CDT: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'C%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21240,7 +21240,7 @@ ZONE_ERAS_EET: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'EE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21266,7 +21266,7 @@ ZONE_ERAS_EST: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'EST',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21292,7 +21292,7 @@ ZONE_ERAS_EST5EDT: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'E%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21318,7 +21318,7 @@ ZONE_ERAS_Etc_GMT: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'GMT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21344,7 +21344,7 @@ ZONE_ERAS_Etc_GMT_PLUS_1: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-01',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21370,7 +21370,7 @@ ZONE_ERAS_Etc_GMT_PLUS_10: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-10',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21396,7 +21396,7 @@ ZONE_ERAS_Etc_GMT_PLUS_11: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-11',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21422,7 +21422,7 @@ ZONE_ERAS_Etc_GMT_PLUS_12: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-12',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21448,7 +21448,7 @@ ZONE_ERAS_Etc_GMT_PLUS_2: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-02',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21474,7 +21474,7 @@ ZONE_ERAS_Etc_GMT_PLUS_3: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21500,7 +21500,7 @@ ZONE_ERAS_Etc_GMT_PLUS_4: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-04',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21526,7 +21526,7 @@ ZONE_ERAS_Etc_GMT_PLUS_5: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-05',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21552,7 +21552,7 @@ ZONE_ERAS_Etc_GMT_PLUS_6: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-06',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21578,7 +21578,7 @@ ZONE_ERAS_Etc_GMT_PLUS_7: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-07',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21604,7 +21604,7 @@ ZONE_ERAS_Etc_GMT_PLUS_8: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-08',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21630,7 +21630,7 @@ ZONE_ERAS_Etc_GMT_PLUS_9: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-09',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21656,7 +21656,7 @@ ZONE_ERAS_Etc_GMT_1: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+01',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21682,7 +21682,7 @@ ZONE_ERAS_Etc_GMT_10: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+10',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21708,7 +21708,7 @@ ZONE_ERAS_Etc_GMT_11: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+11',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21734,7 +21734,7 @@ ZONE_ERAS_Etc_GMT_12: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+12',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21760,7 +21760,7 @@ ZONE_ERAS_Etc_GMT_13: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+13',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21786,7 +21786,7 @@ ZONE_ERAS_Etc_GMT_14: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+14',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21812,7 +21812,7 @@ ZONE_ERAS_Etc_GMT_2: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+02',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21838,7 +21838,7 @@ ZONE_ERAS_Etc_GMT_3: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21864,7 +21864,7 @@ ZONE_ERAS_Etc_GMT_4: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+04',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21890,7 +21890,7 @@ ZONE_ERAS_Etc_GMT_5: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+05',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21916,7 +21916,7 @@ ZONE_ERAS_Etc_GMT_6: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+06',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21942,7 +21942,7 @@ ZONE_ERAS_Etc_GMT_7: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+07',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21968,7 +21968,7 @@ ZONE_ERAS_Etc_GMT_8: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+08',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -21994,7 +21994,7 @@ ZONE_ERAS_Etc_GMT_9: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+09',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -22020,7 +22020,7 @@ ZONE_ERAS_Etc_UTC: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'UTC',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -22082,7 +22082,7 @@ ZONE_ERAS_Europe_Andorra: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'CE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -22204,7 +22204,7 @@ ZONE_ERAS_Europe_Astrakhan: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+04',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -22290,7 +22290,7 @@ ZONE_ERAS_Europe_Athens: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'EE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -22388,7 +22388,7 @@ ZONE_ERAS_Europe_Belgrade: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'CE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -22462,7 +22462,7 @@ ZONE_ERAS_Europe_Berlin: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'CE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -22584,7 +22584,7 @@ ZONE_ERAS_Europe_Brussels: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'CE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -22682,7 +22682,7 @@ ZONE_ERAS_Europe_Bucharest: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'EE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -22768,7 +22768,7 @@ ZONE_ERAS_Europe_Budapest: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'CE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -22902,7 +22902,7 @@ ZONE_ERAS_Europe_Chisinau: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Moldova,
         'era_delta_seconds': 0,
         'format': 'EE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -23048,7 +23048,7 @@ ZONE_ERAS_Europe_Dublin: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Eire,
         'era_delta_seconds': 0,
         'format': 'IST/GMT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -23110,7 +23110,7 @@ ZONE_ERAS_Europe_Gibraltar: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'CE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -23172,7 +23172,7 @@ ZONE_ERAS_Europe_Helsinki: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'EE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -23342,7 +23342,7 @@ ZONE_ERAS_Europe_Istanbul: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -23440,7 +23440,7 @@ ZONE_ERAS_Europe_Kaliningrad: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'EET',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -23550,7 +23550,7 @@ ZONE_ERAS_Europe_Kirov: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -23672,7 +23672,7 @@ ZONE_ERAS_Europe_Kyiv: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'EE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -23782,7 +23782,7 @@ ZONE_ERAS_Europe_Lisbon: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'WE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -23856,7 +23856,7 @@ ZONE_ERAS_Europe_London: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'GMT/BST',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -23918,7 +23918,7 @@ ZONE_ERAS_Europe_Madrid: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'CE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -23980,7 +23980,7 @@ ZONE_ERAS_Europe_Malta: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'CE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -24102,7 +24102,7 @@ ZONE_ERAS_Europe_Minsk: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -24248,7 +24248,7 @@ ZONE_ERAS_Europe_Moscow: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'MSK',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -24346,7 +24346,7 @@ ZONE_ERAS_Europe_Paris: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'CE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -24444,7 +24444,7 @@ ZONE_ERAS_Europe_Prague: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'CE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -24638,7 +24638,7 @@ ZONE_ERAS_Europe_Riga: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'EE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -24724,7 +24724,7 @@ ZONE_ERAS_Europe_Rome: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'CE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -24858,7 +24858,7 @@ ZONE_ERAS_Europe_Samara: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+04',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -24980,7 +24980,7 @@ ZONE_ERAS_Europe_Saratov: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+04',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -25174,7 +25174,7 @@ ZONE_ERAS_Europe_Simferopol: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'MSK',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -25308,7 +25308,7 @@ ZONE_ERAS_Europe_Sofia: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'EE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -25478,7 +25478,7 @@ ZONE_ERAS_Europe_Tallinn: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'EE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -25540,7 +25540,7 @@ ZONE_ERAS_Europe_Tirane: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'CE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -25662,7 +25662,7 @@ ZONE_ERAS_Europe_Ulyanovsk: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+04',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -25772,7 +25772,7 @@ ZONE_ERAS_Europe_Vienna: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'CE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -25966,7 +25966,7 @@ ZONE_ERAS_Europe_Vilnius: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'EE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -26112,7 +26112,7 @@ ZONE_ERAS_Europe_Volgograd: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+03',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -26234,7 +26234,7 @@ ZONE_ERAS_Europe_Warsaw: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'CE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -26296,7 +26296,7 @@ ZONE_ERAS_Europe_Zurich: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'CE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -26322,7 +26322,7 @@ ZONE_ERAS_HST: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'HST',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -26372,7 +26372,7 @@ ZONE_ERAS_Indian_Chagos: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+06',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -26422,7 +26422,7 @@ ZONE_ERAS_Indian_Maldives: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+05',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -26460,7 +26460,7 @@ ZONE_ERAS_Indian_Mauritius: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Mauritius,
         'era_delta_seconds': 0,
         'format': '+04/+05',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -26486,7 +26486,7 @@ ZONE_ERAS_MET: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_C_Eur,
         'era_delta_seconds': 0,
         'format': 'ME%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -26512,7 +26512,7 @@ ZONE_ERAS_MST: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'MST',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -26538,7 +26538,7 @@ ZONE_ERAS_MST7MDT: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'M%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -26564,7 +26564,7 @@ ZONE_ERAS_PST8PDT: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_US,
         'era_delta_seconds': 0,
         'format': 'P%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -26638,7 +26638,7 @@ ZONE_ERAS_Pacific_Apia: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_WS,
         'era_delta_seconds': 0,
         'format': '+13/+14',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -26688,7 +26688,7 @@ ZONE_ERAS_Pacific_Auckland: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_NZ,
         'era_delta_seconds': 0,
         'format': 'NZ%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -26774,7 +26774,7 @@ ZONE_ERAS_Pacific_Bougainville: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+11',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -26824,7 +26824,7 @@ ZONE_ERAS_Pacific_Chatham: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Chatham,
         'era_delta_seconds': 0,
         'format': '+1245/+1345',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -26886,7 +26886,7 @@ ZONE_ERAS_Pacific_Easter: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Chile,
         'era_delta_seconds': 0,
         'format': '-06/-05',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -26924,7 +26924,7 @@ ZONE_ERAS_Pacific_Efate: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Vanuatu,
         'era_delta_seconds': 0,
         'format': '+11/+12',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -26974,7 +26974,7 @@ ZONE_ERAS_Pacific_Fakaofo: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+13',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -27012,7 +27012,7 @@ ZONE_ERAS_Pacific_Fiji: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Fiji,
         'era_delta_seconds': 0,
         'format': '+12/+13',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -27062,7 +27062,7 @@ ZONE_ERAS_Pacific_Galapagos: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Ecuador,
         'era_delta_seconds': 0,
         'format': '-06/-05',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -27100,7 +27100,7 @@ ZONE_ERAS_Pacific_Gambier: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-09',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -27138,7 +27138,7 @@ ZONE_ERAS_Pacific_Guadalcanal: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+11',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -27224,7 +27224,7 @@ ZONE_ERAS_Pacific_Guam: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'ChST',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -27298,7 +27298,7 @@ ZONE_ERAS_Pacific_Honolulu: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'HST',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -27360,7 +27360,7 @@ ZONE_ERAS_Pacific_Kanton: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+13',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -27422,7 +27422,7 @@ ZONE_ERAS_Pacific_Kiritimati: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+14',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -27556,7 +27556,7 @@ ZONE_ERAS_Pacific_Kosrae: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+11',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -27654,7 +27654,7 @@ ZONE_ERAS_Pacific_Kwajalein: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+12',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -27692,7 +27692,7 @@ ZONE_ERAS_Pacific_Marquesas: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-0930',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -27766,7 +27766,7 @@ ZONE_ERAS_Pacific_Nauru: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+12',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -27816,7 +27816,7 @@ ZONE_ERAS_Pacific_Niue: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-11',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -27914,7 +27914,7 @@ ZONE_ERAS_Pacific_Norfolk: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_AN,
         'era_delta_seconds': 0,
         'format': '+11/+12',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -27952,7 +27952,7 @@ ZONE_ERAS_Pacific_Noumea: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_NC,
         'era_delta_seconds': 0,
         'format': '+11/+12',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -28002,7 +28002,7 @@ ZONE_ERAS_Pacific_Pago_Pago: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': 'SST',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -28052,7 +28052,7 @@ ZONE_ERAS_Pacific_Palau: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+09',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -28102,7 +28102,7 @@ ZONE_ERAS_Pacific_Pitcairn: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-08',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -28152,7 +28152,7 @@ ZONE_ERAS_Pacific_Port_Moresby: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+10',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -28214,7 +28214,7 @@ ZONE_ERAS_Pacific_Rarotonga: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Cook,
         'era_delta_seconds': 0,
         'format': '-10/-0930',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -28252,7 +28252,7 @@ ZONE_ERAS_Pacific_Tahiti: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '-10',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -28290,7 +28290,7 @@ ZONE_ERAS_Pacific_Tarawa: List[ZoneEra] = [
         'zone_policy': '-',
         'era_delta_seconds': 0,
         'format': '+12',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -28352,7 +28352,7 @@ ZONE_ERAS_Pacific_Tongatapu: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_Tonga,
         'era_delta_seconds': 0,
         'format': '+13/+14',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -28378,7 +28378,7 @@ ZONE_ERAS_WET: List[ZoneEra] = [
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': 'WE%sT',
-        'until_year': 10000,
+        'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
         'until_seconds': 0,
@@ -29883,48 +29883,48 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # Africa/Abidjan {STDOFF '-0:16:08' not at :00 or :30 mark}
 # Africa/Algiers {
 #   STDOFF '0:12:12' not at :00 or :30 mark,
-#   Algeria {Added anchor rule at year 0}
+#   Algeria {Added anchor rule at year -32767}
 # }
 # Africa/Bissau {STDOFF '-1:02:20' not at :00 or :30 mark}
 # Africa/Cairo {
 #   STDOFF '2:05:09' not at :00 or :30 mark,
-#   Egypt {Added anchor rule at year 0}
+#   Egypt {Added anchor rule at year -32767}
 # }
 # Africa/Casablanca {
 #   STDOFF '-0:30:20' not at :00 or :30 mark,
 #   Morocco {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '-1:00' different from 1:00,
 #   }
 # }
 # Africa/Ceuta {
 #   STDOFF '-0:21:16' not at :00 or :30 mark,
-#   EU {Added anchor rule at year 0}
+#   EU {Added anchor rule at year -32767}
 #   Spain {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
-#   SpainAfrica {Added anchor rule at year 0}
+#   SpainAfrica {Added anchor rule at year -32767}
 # }
 # Africa/El_Aaiun {
 #   STDOFF '-0:52:48' not at :00 or :30 mark,
 #   Morocco {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '-1:00' different from 1:00,
 #   }
 # }
 # Africa/Johannesburg {
 #   RULES not fixed but FORMAT is missing '%' or '/',
 #   STDOFF '1:52:00' not at :00 or :30 mark,
-#   SA {Added anchor rule at year 0}
+#   SA {Added anchor rule at year -32767}
 # }
 # Africa/Juba {
 #   STDOFF '2:06:28' not at :00 or :30 mark,
-#   Sudan {Added anchor rule at year 0}
+#   Sudan {Added anchor rule at year -32767}
 # }
 # Africa/Khartoum {
 #   STDOFF '2:10:08' not at :00 or :30 mark,
-#   Sudan {Added anchor rule at year 0}
+#   Sudan {Added anchor rule at year -32767}
 # }
 # Africa/Lagos {STDOFF '0:13:35' not at :00 or :30 mark}
 # Africa/Maputo {STDOFF '2:10:20' not at :00 or :30 mark}
@@ -29934,634 +29934,634 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # Africa/Sao_Tome {STDOFF '0:26:56' not at :00 or :30 mark}
 # Africa/Tripoli {
 #   STDOFF '0:52:44' not at :00 or :30 mark,
-#   Libya {Added anchor rule at year 0}
+#   Libya {Added anchor rule at year -32767}
 # }
 # Africa/Tunis {
 #   STDOFF '0:40:44' not at :00 or :30 mark,
-#   Tunisia {Added anchor rule at year 0}
+#   Tunisia {Added anchor rule at year -32767}
 # }
 # Africa/Windhoek {
 #   STDOFF '1:08:24' not at :00 or :30 mark,
 #   Namibia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '-1:00' different from 1:00,
 #   }
 # }
 # America/Adak {
 #   STDOFF '12:13:22' not at :00 or :30 mark,
 #   UNTIL time '12:44:35' not multiple of 1-min,
-#   US {Added anchor rule at year 0}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Anchorage {
 #   STDOFF '14:00:24' not at :00 or :30 mark,
 #   UNTIL time '14:31:37' not multiple of 1-min,
-#   US {Added anchor rule at year 0}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Araguaina {
 #   STDOFF '-3:12:48' not at :00 or :30 mark,
-#   Brazil {Added anchor rule at year 0}
+#   Brazil {Added anchor rule at year -32767}
 # }
 # America/Argentina/Buenos_Aires {
 #   STDOFF '-3:53:48' not at :00 or :30 mark,
-#   Arg {Added anchor rule at year 0}
+#   Arg {Added anchor rule at year -32767}
 # }
 # America/Argentina/Catamarca {
 #   STDOFF '-4:23:08' not at :00 or :30 mark,
-#   Arg {Added anchor rule at year 0}
+#   Arg {Added anchor rule at year -32767}
 # }
 # America/Argentina/Cordoba {
 #   STDOFF '-4:16:48' not at :00 or :30 mark,
-#   Arg {Added anchor rule at year 0}
+#   Arg {Added anchor rule at year -32767}
 # }
 # America/Argentina/Jujuy {
 #   STDOFF '-4:21:12' not at :00 or :30 mark,
-#   Arg {Added anchor rule at year 0}
+#   Arg {Added anchor rule at year -32767}
 # }
 # America/Argentina/La_Rioja {
 #   STDOFF '-4:27:24' not at :00 or :30 mark,
-#   Arg {Added anchor rule at year 0}
+#   Arg {Added anchor rule at year -32767}
 # }
 # America/Argentina/Mendoza {
 #   STDOFF '-4:35:16' not at :00 or :30 mark,
-#   Arg {Added anchor rule at year 0}
+#   Arg {Added anchor rule at year -32767}
 # }
 # America/Argentina/Rio_Gallegos {
 #   STDOFF '-4:36:52' not at :00 or :30 mark,
-#   Arg {Added anchor rule at year 0}
+#   Arg {Added anchor rule at year -32767}
 # }
 # America/Argentina/Salta {
 #   STDOFF '-4:21:40' not at :00 or :30 mark,
-#   Arg {Added anchor rule at year 0}
+#   Arg {Added anchor rule at year -32767}
 # }
 # America/Argentina/San_Juan {
 #   STDOFF '-4:34:04' not at :00 or :30 mark,
-#   Arg {Added anchor rule at year 0}
+#   Arg {Added anchor rule at year -32767}
 # }
 # America/Argentina/San_Luis {
 #   STDOFF '-4:25:24' not at :00 or :30 mark,
-#   Arg {Added anchor rule at year 0}
-#   SanLuis {Added anchor rule at year 0}
+#   Arg {Added anchor rule at year -32767}
+#   SanLuis {Added anchor rule at year -32767}
 # }
 # America/Argentina/Tucuman {
 #   STDOFF '-4:20:52' not at :00 or :30 mark,
-#   Arg {Added anchor rule at year 0}
+#   Arg {Added anchor rule at year -32767}
 # }
 # America/Argentina/Ushuaia {
 #   STDOFF '-4:33:12' not at :00 or :30 mark,
-#   Arg {Added anchor rule at year 0}
+#   Arg {Added anchor rule at year -32767}
 # }
 # America/Asuncion {
 #   STDOFF '-3:50:40' not at :00 or :30 mark,
-#   Para {Added anchor rule at year 0}
+#   Para {Added anchor rule at year -32767}
 # }
 # America/Bahia {
 #   STDOFF '-2:34:04' not at :00 or :30 mark,
-#   Brazil {Added anchor rule at year 0}
+#   Brazil {Added anchor rule at year -32767}
 # }
 # America/Bahia_Banderas {
 #   STDOFF '-7:01:00' not at :00 or :30 mark,
-#   Mexico {Added anchor rule at year 0}
+#   Mexico {Added anchor rule at year -32767}
 # }
 # America/Barbados {
 #   STDOFF '-3:58:29' not at :00 or :30 mark,
 #   Barb {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '0:30' different from 1:00,
 #   }
 # }
 # America/Belem {
 #   STDOFF '-3:13:56' not at :00 or :30 mark,
-#   Brazil {Added anchor rule at year 0}
+#   Brazil {Added anchor rule at year -32767}
 # }
 # America/Belize {
 #   STDOFF '-5:52:48' not at :00 or :30 mark,
 #   Belize {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '0:30' different from 1:00,
 #   }
 # }
 # America/Boa_Vista {
 #   STDOFF '-4:02:40' not at :00 or :30 mark,
-#   Brazil {Added anchor rule at year 0}
+#   Brazil {Added anchor rule at year -32767}
 # }
 # America/Bogota {
 #   STDOFF '-4:56:16' not at :00 or :30 mark,
-#   CO {Added anchor rule at year 0}
+#   CO {Added anchor rule at year -32767}
 # }
 # America/Boise {
 #   STDOFF '-7:44:49' not at :00 or :30 mark,
-#   US {Added anchor rule at year 0}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Cambridge_Bay {
-#   Canada {Added anchor rule at year 0}
-#   NT_YK {Added anchor rule at year 0}
+#   Canada {Added anchor rule at year -32767}
+#   NT_YK {Added anchor rule at year -32767}
 # }
 # America/Campo_Grande {
 #   STDOFF '-3:38:28' not at :00 or :30 mark,
-#   Brazil {Added anchor rule at year 0}
+#   Brazil {Added anchor rule at year -32767}
 # }
 # America/Cancun {
 #   STDOFF '-5:47:04' not at :00 or :30 mark,
-#   Mexico {Added anchor rule at year 0}
+#   Mexico {Added anchor rule at year -32767}
 # }
 # America/Caracas {STDOFF '-4:27:44' not at :00 or :30 mark}
 # America/Cayenne {STDOFF '-3:29:20' not at :00 or :30 mark}
 # America/Chicago {
 #   STDOFF '-5:50:36' not at :00 or :30 mark,
-#   Chicago {Added anchor rule at year 0}
-#   US {Added anchor rule at year 0}
+#   Chicago {Added anchor rule at year -32767}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Chihuahua {
 #   STDOFF '-7:04:20' not at :00 or :30 mark,
-#   Mexico {Added anchor rule at year 0}
+#   Mexico {Added anchor rule at year -32767}
 # }
 # America/Ciudad_Juarez {
 #   STDOFF '-7:05:56' not at :00 or :30 mark,
-#   Mexico {Added anchor rule at year 0}
-#   US {Added anchor rule at year 0}
+#   Mexico {Added anchor rule at year -32767}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Costa_Rica {
 #   STDOFF '-5:36:13' not at :00 or :30 mark,
-#   CR {Added anchor rule at year 0}
+#   CR {Added anchor rule at year -32767}
 # }
 # America/Cuiaba {
 #   STDOFF '-3:44:20' not at :00 or :30 mark,
-#   Brazil {Added anchor rule at year 0}
+#   Brazil {Added anchor rule at year -32767}
 # }
 # America/Danmarkshavn {
 #   STDOFF '-1:14:40' not at :00 or :30 mark,
-#   EU {Added anchor rule at year 0}
+#   EU {Added anchor rule at year -32767}
 # }
 # America/Dawson {
 #   STDOFF '-9:17:40' not at :00 or :30 mark,
-#   Canada {Added anchor rule at year 0}
-#   NT_YK {Added anchor rule at year 0}
+#   Canada {Added anchor rule at year -32767}
+#   NT_YK {Added anchor rule at year -32767}
 #   Yukon {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # America/Dawson_Creek {
 #   STDOFF '-8:00:56' not at :00 or :30 mark,
-#   Canada {Added anchor rule at year 0}
-#   Vanc {Added anchor rule at year 0}
+#   Canada {Added anchor rule at year -32767}
+#   Vanc {Added anchor rule at year -32767}
 # }
 # America/Denver {
 #   STDOFF '-6:59:56' not at :00 or :30 mark,
-#   Denver {Added anchor rule at year 0}
-#   US {Added anchor rule at year 0}
+#   Denver {Added anchor rule at year -32767}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Detroit {
 #   STDOFF '-5:32:11' not at :00 or :30 mark,
-#   Detroit {Added anchor rule at year 0}
-#   US {Added anchor rule at year 0}
+#   Detroit {Added anchor rule at year -32767}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Edmonton {
 #   STDOFF '-7:33:52' not at :00 or :30 mark,
-#   Canada {Added anchor rule at year 0}
-#   Edm {Added anchor rule at year 0}
+#   Canada {Added anchor rule at year -32767}
+#   Edm {Added anchor rule at year -32767}
 # }
 # America/Eirunepe {
 #   STDOFF '-4:39:28' not at :00 or :30 mark,
-#   Brazil {Added anchor rule at year 0}
+#   Brazil {Added anchor rule at year -32767}
 # }
 # America/El_Salvador {
 #   STDOFF '-5:56:48' not at :00 or :30 mark,
-#   Salv {Added anchor rule at year 0}
+#   Salv {Added anchor rule at year -32767}
 # }
 # America/Fort_Nelson {
 #   STDOFF '-8:10:47' not at :00 or :30 mark,
-#   Canada {Added anchor rule at year 0}
-#   Vanc {Added anchor rule at year 0}
+#   Canada {Added anchor rule at year -32767}
+#   Vanc {Added anchor rule at year -32767}
 # }
 # America/Fortaleza {
 #   STDOFF '-2:34:00' not at :00 or :30 mark,
-#   Brazil {Added anchor rule at year 0}
+#   Brazil {Added anchor rule at year -32767}
 # }
 # America/Glace_Bay {
 #   STDOFF '-3:59:48' not at :00 or :30 mark,
-#   Canada {Added anchor rule at year 0}
-#   Halifax {Added anchor rule at year 0}
+#   Canada {Added anchor rule at year -32767}
+#   Halifax {Added anchor rule at year -32767}
 # }
 # America/Goose_Bay {
 #   STDOFF '-4:01:40' not at :00 or :30 mark,
-#   Canada {Added anchor rule at year 0}
+#   Canada {Added anchor rule at year -32767}
 #   StJohns {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # America/Grand_Turk {
 #   STDOFF '-4:44:32' not at :00 or :30 mark,
-#   US {Added anchor rule at year 0}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Guatemala {
 #   STDOFF '-6:02:04' not at :00 or :30 mark,
-#   Guat {Added anchor rule at year 0}
+#   Guat {Added anchor rule at year -32767}
 # }
 # America/Guayaquil {
 #   STDOFF '-5:19:20' not at :00 or :30 mark,
-#   Ecuador {Added anchor rule at year 0}
+#   Ecuador {Added anchor rule at year -32767}
 # }
 # America/Guyana {STDOFF '-3:52:39' not at :00 or :30 mark}
 # America/Halifax {
 #   STDOFF '-4:14:24' not at :00 or :30 mark,
-#   Canada {Added anchor rule at year 0}
-#   Halifax {Added anchor rule at year 0}
+#   Canada {Added anchor rule at year -32767}
+#   Halifax {Added anchor rule at year -32767}
 # }
 # America/Havana {
 #   STDOFF '-5:29:28' not at :00 or :30 mark,
-#   Cuba {Added anchor rule at year 0}
+#   Cuba {Added anchor rule at year -32767}
 # }
 # America/Hermosillo {
 #   STDOFF '-7:23:52' not at :00 or :30 mark,
-#   Mexico {Added anchor rule at year 0}
+#   Mexico {Added anchor rule at year -32767}
 # }
 # America/Indiana/Indianapolis {
 #   STDOFF '-5:44:38' not at :00 or :30 mark,
-#   Indianapolis {Added anchor rule at year 0}
-#   US {Added anchor rule at year 0}
+#   Indianapolis {Added anchor rule at year -32767}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Indiana/Knox {
 #   STDOFF '-5:46:30' not at :00 or :30 mark,
-#   Starke {Added anchor rule at year 0}
-#   US {Added anchor rule at year 0}
+#   Starke {Added anchor rule at year -32767}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Indiana/Marengo {
 #   STDOFF '-5:45:23' not at :00 or :30 mark,
-#   Marengo {Added anchor rule at year 0}
-#   US {Added anchor rule at year 0}
+#   Marengo {Added anchor rule at year -32767}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Indiana/Petersburg {
 #   STDOFF '-5:49:07' not at :00 or :30 mark,
-#   Pike {Added anchor rule at year 0}
-#   US {Added anchor rule at year 0}
+#   Pike {Added anchor rule at year -32767}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Indiana/Tell_City {
 #   STDOFF '-5:47:03' not at :00 or :30 mark,
-#   Perry {Added anchor rule at year 0}
-#   US {Added anchor rule at year 0}
+#   Perry {Added anchor rule at year -32767}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Indiana/Vevay {
 #   STDOFF '-5:40:16' not at :00 or :30 mark,
-#   US {Added anchor rule at year 0}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Indiana/Vincennes {
 #   STDOFF '-5:50:07' not at :00 or :30 mark,
-#   US {Added anchor rule at year 0}
-#   Vincennes {Added anchor rule at year 0}
+#   US {Added anchor rule at year -32767}
+#   Vincennes {Added anchor rule at year -32767}
 # }
 # America/Indiana/Winamac {
 #   STDOFF '-5:46:25' not at :00 or :30 mark,
-#   Pulaski {Added anchor rule at year 0}
-#   US {Added anchor rule at year 0}
+#   Pulaski {Added anchor rule at year -32767}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Inuvik {
-#   Canada {Added anchor rule at year 0}
-#   NT_YK {Added anchor rule at year 0}
+#   Canada {Added anchor rule at year -32767}
+#   NT_YK {Added anchor rule at year -32767}
 # }
 # America/Iqaluit {
-#   Canada {Added anchor rule at year 0}
-#   NT_YK {Added anchor rule at year 0}
+#   Canada {Added anchor rule at year -32767}
+#   NT_YK {Added anchor rule at year -32767}
 # }
 # America/Jamaica {
 #   STDOFF '-5:07:10' not at :00 or :30 mark,
-#   US {Added anchor rule at year 0}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Juneau {
 #   STDOFF '15:02:19' not at :00 or :30 mark,
 #   UNTIL time '15:33:32' not multiple of 1-min,
-#   US {Added anchor rule at year 0}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Kentucky/Louisville {
 #   STDOFF '-5:43:02' not at :00 or :30 mark,
-#   Louisville {Added anchor rule at year 0}
-#   US {Added anchor rule at year 0}
+#   Louisville {Added anchor rule at year -32767}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Kentucky/Monticello {
 #   STDOFF '-5:39:24' not at :00 or :30 mark,
-#   US {Added anchor rule at year 0}
+#   US {Added anchor rule at year -32767}
 # }
 # America/La_Paz {STDOFF '-4:32:36' not at :00 or :30 mark}
 # America/Lima {
 #   STDOFF '-5:08:12' not at :00 or :30 mark,
-#   Peru {Added anchor rule at year 0}
+#   Peru {Added anchor rule at year -32767}
 # }
 # America/Los_Angeles {
 #   STDOFF '-7:52:58' not at :00 or :30 mark,
-#   CA {Added anchor rule at year 0}
-#   US {Added anchor rule at year 0}
+#   CA {Added anchor rule at year -32767}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Maceio {
 #   STDOFF '-2:22:52' not at :00 or :30 mark,
-#   Brazil {Added anchor rule at year 0}
+#   Brazil {Added anchor rule at year -32767}
 # }
 # America/Managua {
 #   STDOFF '-5:45:08' not at :00 or :30 mark,
-#   Nic {Added anchor rule at year 0}
+#   Nic {Added anchor rule at year -32767}
 # }
 # America/Manaus {
 #   STDOFF '-4:00:04' not at :00 or :30 mark,
-#   Brazil {Added anchor rule at year 0}
+#   Brazil {Added anchor rule at year -32767}
 # }
 # America/Martinique {STDOFF '-4:04:20' not at :00 or :30 mark}
 # America/Matamoros {
-#   Mexico {Added anchor rule at year 0}
-#   US {Added anchor rule at year 0}
+#   Mexico {Added anchor rule at year -32767}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Mazatlan {
 #   STDOFF '-7:05:40' not at :00 or :30 mark,
-#   Mexico {Added anchor rule at year 0}
+#   Mexico {Added anchor rule at year -32767}
 # }
 # America/Menominee {
 #   STDOFF '-5:50:27' not at :00 or :30 mark,
-#   Menominee {Added anchor rule at year 0}
-#   US {Added anchor rule at year 0}
+#   Menominee {Added anchor rule at year -32767}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Merida {
 #   STDOFF '-5:58:28' not at :00 or :30 mark,
-#   Mexico {Added anchor rule at year 0}
+#   Mexico {Added anchor rule at year -32767}
 # }
 # America/Metlakatla {
 #   STDOFF '15:13:42' not at :00 or :30 mark,
 #   UNTIL time '15:44:55' not multiple of 1-min,
-#   US {Added anchor rule at year 0}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Mexico_City {
 #   STDOFF '-6:36:36' not at :00 or :30 mark,
-#   Mexico {Added anchor rule at year 0}
+#   Mexico {Added anchor rule at year -32767}
 # }
 # America/Miquelon {
 #   STDOFF '-3:44:40' not at :00 or :30 mark,
-#   Canada {Added anchor rule at year 0}
+#   Canada {Added anchor rule at year -32767}
 # }
 # America/Moncton {
 #   STDOFF '-4:19:08' not at :00 or :30 mark,
-#   Canada {Added anchor rule at year 0}
-#   Moncton {Added anchor rule at year 0}
+#   Canada {Added anchor rule at year -32767}
+#   Moncton {Added anchor rule at year -32767}
 # }
 # America/Monterrey {
 #   STDOFF '-6:41:16' not at :00 or :30 mark,
-#   Mexico {Added anchor rule at year 0}
-#   US {Added anchor rule at year 0}
+#   Mexico {Added anchor rule at year -32767}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Montevideo {
 #   STDOFF '-3:44:51' not at :00 or :30 mark,
 #   Uruguay {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '0:30' different from 1:00,
 #     SAVE '1:30' different from 1:00,
 #   }
 # }
 # America/New_York {
 #   STDOFF '-4:56:02' not at :00 or :30 mark,
-#   NYC {Added anchor rule at year 0}
-#   US {Added anchor rule at year 0}
+#   NYC {Added anchor rule at year -32767}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Nome {
 #   STDOFF '12:58:22' not at :00 or :30 mark,
 #   UNTIL time '13:29:35' not multiple of 1-min,
-#   US {Added anchor rule at year 0}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Noronha {
 #   STDOFF '-2:09:40' not at :00 or :30 mark,
-#   Brazil {Added anchor rule at year 0}
+#   Brazil {Added anchor rule at year -32767}
 # }
 # America/North_Dakota/Beulah {
 #   STDOFF '-6:47:07' not at :00 or :30 mark,
-#   US {Added anchor rule at year 0}
+#   US {Added anchor rule at year -32767}
 # }
 # America/North_Dakota/Center {
 #   STDOFF '-6:45:12' not at :00 or :30 mark,
-#   US {Added anchor rule at year 0}
+#   US {Added anchor rule at year -32767}
 # }
 # America/North_Dakota/New_Salem {
 #   STDOFF '-6:45:39' not at :00 or :30 mark,
-#   US {Added anchor rule at year 0}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Nuuk {
 #   STDOFF '-3:26:56' not at :00 or :30 mark,
-#   EU {Added anchor rule at year 0}
+#   EU {Added anchor rule at year -32767}
 # }
 # America/Ojinaga {
 #   STDOFF '-6:57:40' not at :00 or :30 mark,
-#   Mexico {Added anchor rule at year 0}
-#   US {Added anchor rule at year 0}
+#   Mexico {Added anchor rule at year -32767}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Panama {STDOFF '-5:18:08' not at :00 or :30 mark}
 # America/Paramaribo {STDOFF '-3:40:40' not at :00 or :30 mark}
 # America/Phoenix {
 #   STDOFF '-7:28:18' not at :00 or :30 mark,
-#   US {Added anchor rule at year 0}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Port-au-Prince {
 #   STDOFF '-4:49:20' not at :00 or :30 mark,
-#   Haiti {Added anchor rule at year 0}
+#   Haiti {Added anchor rule at year -32767}
 # }
 # America/Porto_Velho {
 #   STDOFF '-4:15:36' not at :00 or :30 mark,
-#   Brazil {Added anchor rule at year 0}
+#   Brazil {Added anchor rule at year -32767}
 # }
 # America/Puerto_Rico {
 #   STDOFF '-4:24:25' not at :00 or :30 mark,
-#   US {Added anchor rule at year 0}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Punta_Arenas {
 #   STDOFF '-4:43:40' not at :00 or :30 mark,
-#   Chile {Added anchor rule at year 0}
+#   Chile {Added anchor rule at year -32767}
 # }
 # America/Rankin_Inlet {
-#   Canada {Added anchor rule at year 0}
-#   NT_YK {Added anchor rule at year 0}
+#   Canada {Added anchor rule at year -32767}
+#   NT_YK {Added anchor rule at year -32767}
 # }
 # America/Recife {
 #   STDOFF '-2:19:36' not at :00 or :30 mark,
-#   Brazil {Added anchor rule at year 0}
+#   Brazil {Added anchor rule at year -32767}
 # }
 # America/Regina {
 #   STDOFF '-6:58:36' not at :00 or :30 mark,
-#   Regina {Added anchor rule at year 0}
+#   Regina {Added anchor rule at year -32767}
 # }
 # America/Resolute {
-#   Canada {Added anchor rule at year 0}
-#   NT_YK {Added anchor rule at year 0}
+#   Canada {Added anchor rule at year -32767}
+#   NT_YK {Added anchor rule at year -32767}
 # }
 # America/Rio_Branco {
 #   STDOFF '-4:31:12' not at :00 or :30 mark,
-#   Brazil {Added anchor rule at year 0}
+#   Brazil {Added anchor rule at year -32767}
 # }
 # America/Santarem {
 #   STDOFF '-3:38:48' not at :00 or :30 mark,
-#   Brazil {Added anchor rule at year 0}
+#   Brazil {Added anchor rule at year -32767}
 # }
 # America/Santiago {
 #   STDOFF '-4:42:45' not at :00 or :30 mark,
-#   Chile {Added anchor rule at year 0}
+#   Chile {Added anchor rule at year -32767}
 # }
 # America/Santo_Domingo {
 #   STDOFF '-4:39:36' not at :00 or :30 mark,
 #   DR {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '0:30' different from 1:00,
 #   }
-#   US {Added anchor rule at year 0}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Sao_Paulo {
 #   STDOFF '-3:06:28' not at :00 or :30 mark,
-#   Brazil {Added anchor rule at year 0}
+#   Brazil {Added anchor rule at year -32767}
 # }
 # America/Scoresbysund {
 #   STDOFF '-1:27:52' not at :00 or :30 mark,
-#   C-Eur {Added anchor rule at year 0}
-#   EU {Added anchor rule at year 0}
+#   C-Eur {Added anchor rule at year -32767}
+#   EU {Added anchor rule at year -32767}
 # }
 # America/Sitka {
 #   STDOFF '14:58:47' not at :00 or :30 mark,
-#   US {Added anchor rule at year 0}
+#   US {Added anchor rule at year -32767}
 # }
 # America/St_Johns {
 #   STDOFF '-3:30:52' not at :00 or :30 mark,
-#   Canada {Added anchor rule at year 0}
+#   Canada {Added anchor rule at year -32767}
 #   StJohns {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # America/Swift_Current {
 #   STDOFF '-7:11:20' not at :00 or :30 mark,
-#   Canada {Added anchor rule at year 0}
-#   Regina {Added anchor rule at year 0}
-#   Swift {Added anchor rule at year 0}
+#   Canada {Added anchor rule at year -32767}
+#   Regina {Added anchor rule at year -32767}
+#   Swift {Added anchor rule at year -32767}
 # }
 # America/Tegucigalpa {
 #   STDOFF '-5:48:52' not at :00 or :30 mark,
-#   Hond {Added anchor rule at year 0}
+#   Hond {Added anchor rule at year -32767}
 # }
 # America/Thule {
 #   STDOFF '-4:35:08' not at :00 or :30 mark,
-#   Thule {Added anchor rule at year 0}
+#   Thule {Added anchor rule at year -32767}
 # }
 # America/Tijuana {
 #   STDOFF '-7:48:04' not at :00 or :30 mark,
-#   CA {Added anchor rule at year 0}
-#   Mexico {Added anchor rule at year 0}
-#   US {Added anchor rule at year 0}
+#   CA {Added anchor rule at year -32767}
+#   Mexico {Added anchor rule at year -32767}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Toronto {
 #   STDOFF '-5:17:32' not at :00 or :30 mark,
-#   Canada {Added anchor rule at year 0}
-#   Toronto {Added anchor rule at year 0}
+#   Canada {Added anchor rule at year -32767}
+#   Toronto {Added anchor rule at year -32767}
 # }
 # America/Vancouver {
 #   STDOFF '-8:12:28' not at :00 or :30 mark,
-#   Canada {Added anchor rule at year 0}
-#   Vanc {Added anchor rule at year 0}
+#   Canada {Added anchor rule at year -32767}
+#   Vanc {Added anchor rule at year -32767}
 # }
 # America/Whitehorse {
 #   STDOFF '-9:00:12' not at :00 or :30 mark,
-#   Canada {Added anchor rule at year 0}
-#   NT_YK {Added anchor rule at year 0}
+#   Canada {Added anchor rule at year -32767}
+#   NT_YK {Added anchor rule at year -32767}
 #   Yukon {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # America/Winnipeg {
 #   STDOFF '-6:28:36' not at :00 or :30 mark,
-#   Canada {Added anchor rule at year 0}
-#   Winn {Added anchor rule at year 0}
+#   Canada {Added anchor rule at year -32767}
+#   Winn {Added anchor rule at year -32767}
 # }
 # America/Yakutat {
 #   STDOFF '14:41:05' not at :00 or :30 mark,
 #   UNTIL time '15:12:18' not multiple of 1-min,
-#   US {Added anchor rule at year 0}
+#   US {Added anchor rule at year -32767}
 # }
 # America/Yellowknife {
-#   Canada {Added anchor rule at year 0}
-#   NT_YK {Added anchor rule at year 0}
+#   Canada {Added anchor rule at year -32767}
+#   NT_YK {Added anchor rule at year -32767}
 # }
 # Antarctica/Macquarie {
-#   AT {Added anchor rule at year 0}
-#   Aus {Added anchor rule at year 0}
+#   AT {Added anchor rule at year -32767}
+#   Aus {Added anchor rule at year -32767}
 # }
 # Antarctica/Palmer {
-#   Arg {Added anchor rule at year 0}
-#   Chile {Added anchor rule at year 0}
+#   Arg {Added anchor rule at year -32767}
+#   Chile {Added anchor rule at year -32767}
 # }
 # Antarctica/Troll {
 #   Troll {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Asia/Almaty {
 #   STDOFF '5:07:48' not at :00 or :30 mark,
-#   RussiaAsia {Added anchor rule at year 0}
+#   RussiaAsia {Added anchor rule at year -32767}
 # }
 # Asia/Amman {
 #   STDOFF '2:23:44' not at :00 or :30 mark,
-#   Jordan {Added anchor rule at year 0}
+#   Jordan {Added anchor rule at year -32767}
 # }
 # Asia/Anadyr {
 #   STDOFF '11:49:56' not at :00 or :30 mark,
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Asia/Aqtau {
 #   STDOFF '3:21:04' not at :00 or :30 mark,
-#   RussiaAsia {Added anchor rule at year 0}
+#   RussiaAsia {Added anchor rule at year -32767}
 # }
 # Asia/Aqtobe {
 #   STDOFF '3:48:40' not at :00 or :30 mark,
-#   RussiaAsia {Added anchor rule at year 0}
+#   RussiaAsia {Added anchor rule at year -32767}
 # }
 # Asia/Ashgabat {
 #   STDOFF '3:53:32' not at :00 or :30 mark,
-#   RussiaAsia {Added anchor rule at year 0}
+#   RussiaAsia {Added anchor rule at year -32767}
 # }
 # Asia/Atyrau {
 #   STDOFF '3:27:44' not at :00 or :30 mark,
-#   RussiaAsia {Added anchor rule at year 0}
+#   RussiaAsia {Added anchor rule at year -32767}
 # }
 # Asia/Baghdad {
 #   STDOFF '2:57:40' not at :00 or :30 mark,
-#   Iraq {Added anchor rule at year 0}
+#   Iraq {Added anchor rule at year -32767}
 # }
 # Asia/Baku {
 #   STDOFF '3:19:24' not at :00 or :30 mark,
-#   Azer {Added anchor rule at year 0}
-#   EUAsia {Added anchor rule at year 0}
-#   RussiaAsia {Added anchor rule at year 0}
+#   Azer {Added anchor rule at year -32767}
+#   EUAsia {Added anchor rule at year -32767}
+#   RussiaAsia {Added anchor rule at year -32767}
 # }
 # Asia/Bangkok {STDOFF '6:42:04' not at :00 or :30 mark}
 # Asia/Barnaul {
 #   STDOFF '5:35:00' not at :00 or :30 mark,
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Asia/Beirut {
 #   STDOFF '2:22:00' not at :00 or :30 mark,
-#   Lebanon {Added anchor rule at year 0}
+#   Lebanon {Added anchor rule at year -32767}
 # }
 # Asia/Bishkek {
 #   STDOFF '4:58:24' not at :00 or :30 mark,
-#   Kyrgyz {Added anchor rule at year 0}
-#   RussiaAsia {Added anchor rule at year 0}
+#   Kyrgyz {Added anchor rule at year -32767}
+#   RussiaAsia {Added anchor rule at year -32767}
 # }
 # Asia/Chita {
 #   STDOFF '7:33:52' not at :00 or :30 mark,
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Asia/Choibalsan {
 #   STDOFF '7:38:00' not at :00 or :30 mark,
-#   Mongol {Added anchor rule at year 0}
+#   Mongol {Added anchor rule at year -32767}
 # }
 # Asia/Colombo {
 #   RULES delta offset '0:30' different from 1:00,
@@ -30569,40 +30569,40 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # }
 # Asia/Damascus {
 #   STDOFF '2:25:12' not at :00 or :30 mark,
-#   Syria {Added anchor rule at year 0}
+#   Syria {Added anchor rule at year -32767}
 # }
 # Asia/Dhaka {
 #   STDOFF '6:01:40' not at :00 or :30 mark,
-#   Dhaka {Added anchor rule at year 0}
+#   Dhaka {Added anchor rule at year -32767}
 # }
 # Asia/Dili {STDOFF '8:22:20' not at :00 or :30 mark}
 # Asia/Dubai {STDOFF '3:41:12' not at :00 or :30 mark}
 # Asia/Dushanbe {
 #   STDOFF '4:35:12' not at :00 or :30 mark,
-#   RussiaAsia {Added anchor rule at year 0}
+#   RussiaAsia {Added anchor rule at year -32767}
 # }
 # Asia/Famagusta {
 #   STDOFF '2:15:48' not at :00 or :30 mark,
-#   Cyprus {Added anchor rule at year 0}
-#   EUAsia {Added anchor rule at year 0}
+#   Cyprus {Added anchor rule at year -32767}
+#   EUAsia {Added anchor rule at year -32767}
 # }
 # Asia/Gaza {
 #   STDOFF '2:17:52' not at :00 or :30 mark,
-#   EgyptAsia {Added anchor rule at year 0}
-#   Jordan {Added anchor rule at year 0}
-#   Palestine {Added anchor rule at year 0}
+#   EgyptAsia {Added anchor rule at year -32767}
+#   Jordan {Added anchor rule at year -32767}
+#   Palestine {Added anchor rule at year -32767}
 #   Zion {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Asia/Hebron {
 #   STDOFF '2:20:23' not at :00 or :30 mark,
-#   EgyptAsia {Added anchor rule at year 0}
-#   Jordan {Added anchor rule at year 0}
-#   Palestine {Added anchor rule at year 0}
+#   EgyptAsia {Added anchor rule at year -32767}
+#   Jordan {Added anchor rule at year -32767}
+#   Palestine {Added anchor rule at year -32767}
 #   Zion {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
@@ -30610,16 +30610,16 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # Asia/Hong_Kong {
 #   RULES delta offset '0:30' different from 1:00,
 #   STDOFF '7:36:42' not at :00 or :30 mark,
-#   HK {Added anchor rule at year 0}
+#   HK {Added anchor rule at year -32767}
 # }
 # Asia/Hovd {
 #   STDOFF '6:06:36' not at :00 or :30 mark,
-#   Mongol {Added anchor rule at year 0}
+#   Mongol {Added anchor rule at year -32767}
 # }
 # Asia/Irkutsk {
 #   STDOFF '6:57:05' not at :00 or :30 mark,
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
@@ -30628,7 +30628,7 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # Asia/Jerusalem {
 #   STDOFF '2:20:54' not at :00 or :30 mark,
 #   Zion {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
@@ -30636,19 +30636,19 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # Asia/Kamchatka {
 #   STDOFF '10:34:36' not at :00 or :30 mark,
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Asia/Karachi {
 #   STDOFF '4:28:12' not at :00 or :30 mark,
-#   Pakistan {Added anchor rule at year 0}
+#   Pakistan {Added anchor rule at year -32767}
 # }
 # Asia/Kathmandu {STDOFF '5:41:16' not at :00 or :30 mark}
 # Asia/Khandyga {
 #   STDOFF '9:02:13' not at :00 or :30 mark,
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
@@ -30656,94 +30656,94 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # Asia/Krasnoyarsk {
 #   STDOFF '6:11:26' not at :00 or :30 mark,
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Asia/Kuching {
 #   STDOFF '7:21:20' not at :00 or :30 mark,
 #   NBorneo {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '0:20' different from 1:00,
 #   }
 # }
 # Asia/Macau {
 #   STDOFF '7:34:10' not at :00 or :30 mark,
-#   Macau {Added anchor rule at year 0}
+#   Macau {Added anchor rule at year -32767}
 # }
 # Asia/Magadan {
 #   STDOFF '10:03:12' not at :00 or :30 mark,
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Asia/Makassar {STDOFF '7:57:36' not at :00 or :30 mark}
 # Asia/Manila {
 #   STDOFF '-15:56:00' not at :00 or :30 mark,
-#   Phil {Added anchor rule at year 0}
+#   Phil {Added anchor rule at year -32767}
 # }
 # Asia/Nicosia {
 #   STDOFF '2:13:28' not at :00 or :30 mark,
-#   Cyprus {Added anchor rule at year 0}
-#   EUAsia {Added anchor rule at year 0}
+#   Cyprus {Added anchor rule at year -32767}
+#   EUAsia {Added anchor rule at year -32767}
 # }
 # Asia/Novokuznetsk {
 #   STDOFF '5:48:48' not at :00 or :30 mark,
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Asia/Novosibirsk {
 #   STDOFF '5:31:40' not at :00 or :30 mark,
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Asia/Omsk {
 #   STDOFF '4:53:30' not at :00 or :30 mark,
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Asia/Oral {
 #   STDOFF '3:25:24' not at :00 or :30 mark,
-#   RussiaAsia {Added anchor rule at year 0}
+#   RussiaAsia {Added anchor rule at year -32767}
 # }
 # Asia/Pontianak {STDOFF '7:17:20' not at :00 or :30 mark}
 # Asia/Pyongyang {STDOFF '8:23:00' not at :00 or :30 mark}
 # Asia/Qatar {STDOFF '3:26:08' not at :00 or :30 mark}
 # Asia/Qostanay {
 #   STDOFF '4:14:28' not at :00 or :30 mark,
-#   RussiaAsia {Added anchor rule at year 0}
+#   RussiaAsia {Added anchor rule at year -32767}
 # }
 # Asia/Qyzylorda {
 #   STDOFF '4:21:52' not at :00 or :30 mark,
-#   RussiaAsia {Added anchor rule at year 0}
+#   RussiaAsia {Added anchor rule at year -32767}
 # }
 # Asia/Riyadh {STDOFF '3:06:52' not at :00 or :30 mark}
 # Asia/Sakhalin {
 #   STDOFF '9:30:48' not at :00 or :30 mark,
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Asia/Samarkand {
 #   STDOFF '4:27:53' not at :00 or :30 mark,
-#   RussiaAsia {Added anchor rule at year 0}
+#   RussiaAsia {Added anchor rule at year -32767}
 # }
 # Asia/Seoul {
 #   STDOFF '8:27:52' not at :00 or :30 mark,
-#   ROK {Added anchor rule at year 0}
+#   ROK {Added anchor rule at year -32767}
 # }
 # Asia/Shanghai {
 #   STDOFF '8:05:43' not at :00 or :30 mark,
-#   PRC {Added anchor rule at year 0}
-#   Shang {Added anchor rule at year 0}
+#   PRC {Added anchor rule at year -32767}
+#   Shang {Added anchor rule at year -32767}
 # }
 # Asia/Singapore {
 #   RULES delta offset '0:20' different from 1:00,
@@ -30752,62 +30752,62 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # Asia/Srednekolymsk {
 #   STDOFF '10:14:52' not at :00 or :30 mark,
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Asia/Taipei {
 #   STDOFF '8:06:00' not at :00 or :30 mark,
-#   Taiwan {Added anchor rule at year 0}
+#   Taiwan {Added anchor rule at year -32767}
 # }
 # Asia/Tashkent {
 #   STDOFF '4:37:11' not at :00 or :30 mark,
-#   RussiaAsia {Added anchor rule at year 0}
+#   RussiaAsia {Added anchor rule at year -32767}
 # }
 # Asia/Tbilisi {
 #   STDOFF '2:59:11' not at :00 or :30 mark,
-#   E-EurAsia {Added anchor rule at year 0}
-#   RussiaAsia {Added anchor rule at year 0}
+#   E-EurAsia {Added anchor rule at year -32767}
+#   RussiaAsia {Added anchor rule at year -32767}
 # }
 # Asia/Tehran {
 #   STDOFF '3:25:44' not at :00 or :30 mark,
-#   Iran {Added anchor rule at year 0}
+#   Iran {Added anchor rule at year -32767}
 # }
 # Asia/Thimphu {STDOFF '5:58:36' not at :00 or :30 mark}
 # Asia/Tokyo {
 #   STDOFF '9:18:59' not at :00 or :30 mark,
-#   Japan {Added anchor rule at year 0}
+#   Japan {Added anchor rule at year -32767}
 # }
 # Asia/Tomsk {
 #   STDOFF '5:39:51' not at :00 or :30 mark,
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Asia/Ulaanbaatar {
 #   STDOFF '7:07:32' not at :00 or :30 mark,
-#   Mongol {Added anchor rule at year 0}
+#   Mongol {Added anchor rule at year -32767}
 # }
 # Asia/Urumqi {STDOFF '5:50:20' not at :00 or :30 mark}
 # Asia/Ust-Nera {
 #   STDOFF '9:32:54' not at :00 or :30 mark,
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Asia/Vladivostok {
 #   STDOFF '8:47:31' not at :00 or :30 mark,
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Asia/Yakutsk {
 #   STDOFF '8:38:58' not at :00 or :30 mark,
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
@@ -30815,463 +30815,463 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # Asia/Yekaterinburg {
 #   STDOFF '4:02:33' not at :00 or :30 mark,
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Asia/Yerevan {
 #   STDOFF '2:58:00' not at :00 or :30 mark,
-#   Armenia {Added anchor rule at year 0}
-#   RussiaAsia {Added anchor rule at year 0}
+#   Armenia {Added anchor rule at year -32767}
+#   RussiaAsia {Added anchor rule at year -32767}
 # }
 # Atlantic/Azores {
 #   RULES not fixed but FORMAT is missing '%' or '/',
 #   STDOFF '-1:42:40' not at :00 or :30 mark,
-#   EU {Added anchor rule at year 0}
+#   EU {Added anchor rule at year -32767}
 #   Port {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
-#   W-Eur {Added anchor rule at year 0}
+#   W-Eur {Added anchor rule at year -32767}
 # }
 # Atlantic/Bermuda {
 #   STDOFF '-4:19:18' not at :00 or :30 mark,
-#   Bermuda {Added anchor rule at year 0}
-#   Canada {Added anchor rule at year 0}
-#   US {Added anchor rule at year 0}
+#   Bermuda {Added anchor rule at year -32767}
+#   Canada {Added anchor rule at year -32767}
+#   US {Added anchor rule at year -32767}
 # }
 # Atlantic/Canary {
 #   STDOFF '-1:01:36' not at :00 or :30 mark,
-#   EU {Added anchor rule at year 0}
+#   EU {Added anchor rule at year -32767}
 # }
 # Atlantic/Cape_Verde {STDOFF '-1:34:04' not at :00 or :30 mark}
 # Atlantic/Faroe {
 #   STDOFF '-0:27:04' not at :00 or :30 mark,
-#   EU {Added anchor rule at year 0}
+#   EU {Added anchor rule at year -32767}
 # }
 # Atlantic/Madeira {
 #   RULES not fixed but FORMAT is missing '%' or '/',
 #   STDOFF '-1:07:36' not at :00 or :30 mark,
-#   EU {Added anchor rule at year 0}
+#   EU {Added anchor rule at year -32767}
 #   Port {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Atlantic/South_Georgia {STDOFF '-2:26:08' not at :00 or :30 mark}
 # Atlantic/Stanley {
 #   STDOFF '-3:51:24' not at :00 or :30 mark,
-#   Falk {Added anchor rule at year 0}
+#   Falk {Added anchor rule at year -32767}
 # }
 # Australia/Adelaide {
 #   STDOFF '9:14:20' not at :00 or :30 mark,
-#   AS {Added anchor rule at year 0}
-#   Aus {Added anchor rule at year 0}
+#   AS {Added anchor rule at year -32767}
+#   Aus {Added anchor rule at year -32767}
 # }
 # Australia/Brisbane {
 #   STDOFF '10:12:08' not at :00 or :30 mark,
-#   AQ {Added anchor rule at year 0}
-#   Aus {Added anchor rule at year 0}
+#   AQ {Added anchor rule at year -32767}
+#   Aus {Added anchor rule at year -32767}
 # }
 # Australia/Broken_Hill {
 #   STDOFF '9:25:48' not at :00 or :30 mark,
-#   AN {Added anchor rule at year 0}
-#   AS {Added anchor rule at year 0}
-#   Aus {Added anchor rule at year 0}
+#   AN {Added anchor rule at year -32767}
+#   AS {Added anchor rule at year -32767}
+#   Aus {Added anchor rule at year -32767}
 # }
 # Australia/Darwin {
 #   STDOFF '8:43:20' not at :00 or :30 mark,
-#   Aus {Added anchor rule at year 0}
+#   Aus {Added anchor rule at year -32767}
 # }
 # Australia/Eucla {
 #   STDOFF '8:35:28' not at :00 or :30 mark,
-#   AW {Added anchor rule at year 0}
-#   Aus {Added anchor rule at year 0}
+#   AW {Added anchor rule at year -32767}
+#   Aus {Added anchor rule at year -32767}
 # }
 # Australia/Hobart {
 #   STDOFF '9:49:16' not at :00 or :30 mark,
-#   AT {Added anchor rule at year 0}
-#   Aus {Added anchor rule at year 0}
+#   AT {Added anchor rule at year -32767}
+#   Aus {Added anchor rule at year -32767}
 # }
 # Australia/Lindeman {
 #   STDOFF '9:55:56' not at :00 or :30 mark,
-#   AQ {Added anchor rule at year 0}
-#   Aus {Added anchor rule at year 0}
-#   Holiday {Added anchor rule at year 0}
+#   AQ {Added anchor rule at year -32767}
+#   Aus {Added anchor rule at year -32767}
+#   Holiday {Added anchor rule at year -32767}
 # }
 # Australia/Lord_Howe {
 #   STDOFF '10:36:20' not at :00 or :30 mark,
 #   LH {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '0:30' different from 1:00,
 #   }
 # }
 # Australia/Melbourne {
 #   STDOFF '9:39:52' not at :00 or :30 mark,
-#   AV {Added anchor rule at year 0}
-#   Aus {Added anchor rule at year 0}
+#   AV {Added anchor rule at year -32767}
+#   Aus {Added anchor rule at year -32767}
 # }
 # Australia/Perth {
 #   STDOFF '7:43:24' not at :00 or :30 mark,
-#   AW {Added anchor rule at year 0}
-#   Aus {Added anchor rule at year 0}
+#   AW {Added anchor rule at year -32767}
+#   Aus {Added anchor rule at year -32767}
 # }
 # Australia/Sydney {
 #   STDOFF '10:04:52' not at :00 or :30 mark,
-#   AN {Added anchor rule at year 0}
-#   Aus {Added anchor rule at year 0}
+#   AN {Added anchor rule at year -32767}
+#   Aus {Added anchor rule at year -32767}
 # }
 # CET {
-#   C-Eur {Added anchor rule at year 0}
+#   C-Eur {Added anchor rule at year -32767}
 # }
 # CST6CDT {
-#   US {Added anchor rule at year 0}
+#   US {Added anchor rule at year -32767}
 # }
 # EET {
-#   EU {Added anchor rule at year 0}
+#   EU {Added anchor rule at year -32767}
 # }
 # EST5EDT {
-#   US {Added anchor rule at year 0}
+#   US {Added anchor rule at year -32767}
 # }
 # Europe/Andorra {
 #   STDOFF '0:06:04' not at :00 or :30 mark,
-#   EU {Added anchor rule at year 0}
+#   EU {Added anchor rule at year -32767}
 # }
 # Europe/Astrakhan {
 #   STDOFF '3:12:12' not at :00 or :30 mark,
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Europe/Athens {
 #   STDOFF '1:34:52' not at :00 or :30 mark,
-#   EU {Added anchor rule at year 0}
-#   Greece {Added anchor rule at year 0}
+#   EU {Added anchor rule at year -32767}
+#   Greece {Added anchor rule at year -32767}
 # }
 # Europe/Belgrade {
 #   STDOFF '1:22:00' not at :00 or :30 mark,
-#   C-Eur {Added anchor rule at year 0}
-#   EU {Added anchor rule at year 0}
+#   C-Eur {Added anchor rule at year -32767}
+#   EU {Added anchor rule at year -32767}
 # }
 # Europe/Berlin {
 #   STDOFF '0:53:28' not at :00 or :30 mark,
-#   C-Eur {Added anchor rule at year 0}
-#   EU {Added anchor rule at year 0}
+#   C-Eur {Added anchor rule at year -32767}
+#   EU {Added anchor rule at year -32767}
 #   Germany {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 #   SovietZone {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Europe/Brussels {
 #   STDOFF '0:17:30' not at :00 or :30 mark,
 #   UNTIL time '00:17:30' not multiple of 1-min,
-#   Belgium {Added anchor rule at year 0}
-#   C-Eur {Added anchor rule at year 0}
-#   EU {Added anchor rule at year 0}
+#   Belgium {Added anchor rule at year -32767}
+#   C-Eur {Added anchor rule at year -32767}
+#   EU {Added anchor rule at year -32767}
 # }
 # Europe/Bucharest {
 #   STDOFF '1:44:24' not at :00 or :30 mark,
-#   C-Eur {Added anchor rule at year 0}
-#   E-Eur {Added anchor rule at year 0}
-#   EU {Added anchor rule at year 0}
-#   Romania {Added anchor rule at year 0}
+#   C-Eur {Added anchor rule at year -32767}
+#   E-Eur {Added anchor rule at year -32767}
+#   EU {Added anchor rule at year -32767}
+#   Romania {Added anchor rule at year -32767}
 # }
 # Europe/Budapest {
 #   STDOFF '1:16:20' not at :00 or :30 mark,
-#   C-Eur {Added anchor rule at year 0}
-#   EU {Added anchor rule at year 0}
-#   Hungary {Added anchor rule at year 0}
+#   C-Eur {Added anchor rule at year -32767}
+#   EU {Added anchor rule at year -32767}
+#   Hungary {Added anchor rule at year -32767}
 # }
 # Europe/Chisinau {
 #   STDOFF '1:55:20' not at :00 or :30 mark,
-#   C-Eur {Added anchor rule at year 0}
-#   E-Eur {Added anchor rule at year 0}
-#   Moldova {Added anchor rule at year 0}
-#   Romania {Added anchor rule at year 0}
+#   C-Eur {Added anchor rule at year -32767}
+#   E-Eur {Added anchor rule at year -32767}
+#   Moldova {Added anchor rule at year -32767}
+#   Romania {Added anchor rule at year -32767}
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Europe/Dublin {
 #   STDOFF '-0:25:21' not at :00 or :30 mark,
 #   Eire {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '-1:00' different from 1:00,
 #   }
 #   GB-Eire {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Europe/Gibraltar {
 #   STDOFF '-0:21:24' not at :00 or :30 mark,
-#   EU {Added anchor rule at year 0}
+#   EU {Added anchor rule at year -32767}
 #   GB-Eire {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Europe/Helsinki {
 #   STDOFF '1:39:49' not at :00 or :30 mark,
-#   EU {Added anchor rule at year 0}
-#   Finland {Added anchor rule at year 0}
+#   EU {Added anchor rule at year -32767}
+#   Finland {Added anchor rule at year -32767}
 # }
 # Europe/Istanbul {
 #   STDOFF '1:55:52' not at :00 or :30 mark,
-#   EU {Added anchor rule at year 0}
-#   Turkey {Added anchor rule at year 0}
+#   EU {Added anchor rule at year -32767}
+#   Turkey {Added anchor rule at year -32767}
 # }
 # Europe/Kaliningrad {
 #   STDOFF '1:22:00' not at :00 or :30 mark,
-#   C-Eur {Added anchor rule at year 0}
-#   Poland {Added anchor rule at year 0}
+#   C-Eur {Added anchor rule at year -32767}
+#   Poland {Added anchor rule at year -32767}
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Europe/Kirov {
 #   STDOFF '3:18:48' not at :00 or :30 mark,
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Europe/Kyiv {
 #   STDOFF '2:02:04' not at :00 or :30 mark,
-#   C-Eur {Added anchor rule at year 0}
-#   EU {Added anchor rule at year 0}
+#   C-Eur {Added anchor rule at year -32767}
+#   EU {Added anchor rule at year -32767}
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Europe/Lisbon {
 #   STDOFF '-0:36:45' not at :00 or :30 mark,
-#   EU {Added anchor rule at year 0}
+#   EU {Added anchor rule at year -32767}
 #   Port {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
-#   W-Eur {Added anchor rule at year 0}
+#   W-Eur {Added anchor rule at year -32767}
 # }
 # Europe/London {
 #   STDOFF '-0:01:15' not at :00 or :30 mark,
-#   EU {Added anchor rule at year 0}
+#   EU {Added anchor rule at year -32767}
 #   GB-Eire {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Europe/Madrid {
 #   STDOFF '-0:14:44' not at :00 or :30 mark,
-#   EU {Added anchor rule at year 0}
+#   EU {Added anchor rule at year -32767}
 #   Spain {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Europe/Malta {
 #   STDOFF '0:58:04' not at :00 or :30 mark,
-#   EU {Added anchor rule at year 0}
-#   Italy {Added anchor rule at year 0}
-#   Malta {Added anchor rule at year 0}
+#   EU {Added anchor rule at year -32767}
+#   Italy {Added anchor rule at year -32767}
+#   Malta {Added anchor rule at year -32767}
 # }
 # Europe/Minsk {
 #   STDOFF '1:50:16' not at :00 or :30 mark,
-#   C-Eur {Added anchor rule at year 0}
+#   C-Eur {Added anchor rule at year -32767}
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Europe/Moscow {
 #   STDOFF '2:30:17' not at :00 or :30 mark,
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Europe/Paris {
 #   STDOFF '0:09:21' not at :00 or :30 mark,
-#   C-Eur {Added anchor rule at year 0}
-#   EU {Added anchor rule at year 0}
+#   C-Eur {Added anchor rule at year -32767}
+#   EU {Added anchor rule at year -32767}
 #   France {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Europe/Prague {
 #   RULES delta offset '-1:00' different from 1:00,
 #   STDOFF '0:57:44' not at :00 or :30 mark,
-#   C-Eur {Added anchor rule at year 0}
-#   Czech {Added anchor rule at year 0}
-#   EU {Added anchor rule at year 0}
+#   C-Eur {Added anchor rule at year -32767}
+#   Czech {Added anchor rule at year -32767}
+#   EU {Added anchor rule at year -32767}
 # }
 # Europe/Riga {
 #   STDOFF '1:36:34' not at :00 or :30 mark,
-#   C-Eur {Added anchor rule at year 0}
-#   EU {Added anchor rule at year 0}
-#   Latvia {Added anchor rule at year 0}
+#   C-Eur {Added anchor rule at year -32767}
+#   EU {Added anchor rule at year -32767}
+#   Latvia {Added anchor rule at year -32767}
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Europe/Rome {
 #   STDOFF '0:49:56' not at :00 or :30 mark,
-#   C-Eur {Added anchor rule at year 0}
-#   EU {Added anchor rule at year 0}
-#   Italy {Added anchor rule at year 0}
+#   C-Eur {Added anchor rule at year -32767}
+#   EU {Added anchor rule at year -32767}
+#   Italy {Added anchor rule at year -32767}
 # }
 # Europe/Samara {
 #   STDOFF '3:20:20' not at :00 or :30 mark,
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Europe/Saratov {
 #   STDOFF '3:04:18' not at :00 or :30 mark,
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Europe/Simferopol {
 #   STDOFF '2:16:24' not at :00 or :30 mark,
-#   C-Eur {Added anchor rule at year 0}
-#   EU {Added anchor rule at year 0}
+#   C-Eur {Added anchor rule at year -32767}
+#   EU {Added anchor rule at year -32767}
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Europe/Sofia {
 #   STDOFF '1:33:16' not at :00 or :30 mark,
-#   Bulg {Added anchor rule at year 0}
-#   C-Eur {Added anchor rule at year 0}
-#   E-Eur {Added anchor rule at year 0}
-#   EU {Added anchor rule at year 0}
+#   Bulg {Added anchor rule at year -32767}
+#   C-Eur {Added anchor rule at year -32767}
+#   E-Eur {Added anchor rule at year -32767}
+#   EU {Added anchor rule at year -32767}
 # }
 # Europe/Tallinn {
 #   STDOFF '1:39:00' not at :00 or :30 mark,
-#   C-Eur {Added anchor rule at year 0}
-#   EU {Added anchor rule at year 0}
+#   C-Eur {Added anchor rule at year -32767}
+#   EU {Added anchor rule at year -32767}
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Europe/Tirane {
 #   STDOFF '1:19:20' not at :00 or :30 mark,
-#   Albania {Added anchor rule at year 0}
-#   EU {Added anchor rule at year 0}
+#   Albania {Added anchor rule at year -32767}
+#   EU {Added anchor rule at year -32767}
 # }
 # Europe/Ulyanovsk {
 #   STDOFF '3:13:36' not at :00 or :30 mark,
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Europe/Vienna {
 #   STDOFF '1:05:21' not at :00 or :30 mark,
-#   Austria {Added anchor rule at year 0}
-#   C-Eur {Added anchor rule at year 0}
-#   EU {Added anchor rule at year 0}
+#   Austria {Added anchor rule at year -32767}
+#   C-Eur {Added anchor rule at year -32767}
+#   EU {Added anchor rule at year -32767}
 # }
 # Europe/Vilnius {
 #   STDOFF '1:41:16' not at :00 or :30 mark,
-#   C-Eur {Added anchor rule at year 0}
-#   EU {Added anchor rule at year 0}
+#   C-Eur {Added anchor rule at year -32767}
+#   EU {Added anchor rule at year -32767}
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Europe/Volgograd {
 #   STDOFF '2:57:40' not at :00 or :30 mark,
 #   Russia {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '2:00' different from 1:00,
 #   }
 # }
 # Europe/Warsaw {
 #   STDOFF '1:24:00' not at :00 or :30 mark,
-#   C-Eur {Added anchor rule at year 0}
-#   EU {Added anchor rule at year 0}
-#   Poland {Added anchor rule at year 0}
-#   W-Eur {Added anchor rule at year 0}
+#   C-Eur {Added anchor rule at year -32767}
+#   EU {Added anchor rule at year -32767}
+#   Poland {Added anchor rule at year -32767}
+#   W-Eur {Added anchor rule at year -32767}
 # }
 # Europe/Zurich {
 #   STDOFF '0:34:08' not at :00 or :30 mark,
-#   EU {Added anchor rule at year 0}
-#   Swiss {Added anchor rule at year 0}
+#   EU {Added anchor rule at year -32767}
+#   Swiss {Added anchor rule at year -32767}
 # }
 # Indian/Chagos {STDOFF '4:49:40' not at :00 or :30 mark}
 # Indian/Maldives {STDOFF '4:54:00' not at :00 or :30 mark}
 # Indian/Mauritius {
 #   STDOFF '3:50:00' not at :00 or :30 mark,
-#   Mauritius {Added anchor rule at year 0}
+#   Mauritius {Added anchor rule at year -32767}
 # }
 # MET {
-#   C-Eur {Added anchor rule at year 0}
+#   C-Eur {Added anchor rule at year -32767}
 # }
 # MST7MDT {
-#   US {Added anchor rule at year 0}
+#   US {Added anchor rule at year -32767}
 # }
 # PST8PDT {
-#   US {Added anchor rule at year 0}
+#   US {Added anchor rule at year -32767}
 # }
 # Pacific/Apia {
 #   STDOFF '12:33:04' not at :00 or :30 mark,
-#   WS {Added anchor rule at year 0}
+#   WS {Added anchor rule at year -32767}
 # }
 # Pacific/Auckland {
 #   STDOFF '11:39:04' not at :00 or :30 mark,
 #   NZ {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '0:30' different from 1:00,
 #   }
 # }
 # Pacific/Bougainville {STDOFF '10:22:16' not at :00 or :30 mark}
 # Pacific/Chatham {
 #   STDOFF '12:13:48' not at :00 or :30 mark,
-#   Chatham {Added anchor rule at year 0}
+#   Chatham {Added anchor rule at year -32767}
 # }
 # Pacific/Easter {
 #   STDOFF '-7:17:28' not at :00 or :30 mark,
-#   Chile {Added anchor rule at year 0}
+#   Chile {Added anchor rule at year -32767}
 # }
 # Pacific/Efate {
 #   STDOFF '11:13:16' not at :00 or :30 mark,
-#   Vanuatu {Added anchor rule at year 0}
+#   Vanuatu {Added anchor rule at year -32767}
 # }
 # Pacific/Fakaofo {STDOFF '-11:24:56' not at :00 or :30 mark}
 # Pacific/Fiji {
 #   STDOFF '11:55:44' not at :00 or :30 mark,
-#   Fiji {Added anchor rule at year 0}
+#   Fiji {Added anchor rule at year -32767}
 # }
 # Pacific/Galapagos {
 #   STDOFF '-5:58:24' not at :00 or :30 mark,
-#   Ecuador {Added anchor rule at year 0}
+#   Ecuador {Added anchor rule at year -32767}
 # }
 # Pacific/Gambier {STDOFF '-8:59:48' not at :00 or :30 mark}
 # Pacific/Guadalcanal {STDOFF '10:39:48' not at :00 or :30 mark}
 # Pacific/Guam {
 #   STDOFF '-14:21:00' not at :00 or :30 mark,
-#   Guam {Added anchor rule at year 0}
+#   Guam {Added anchor rule at year -32767}
 # }
 # Pacific/Honolulu {
 #   STDOFF '-10:31:26' not at :00 or :30 mark,
-#   US {Added anchor rule at year 0}
+#   US {Added anchor rule at year -32767}
 # }
 # Pacific/Kiritimati {STDOFF '-10:29:20' not at :00 or :30 mark}
 # Pacific/Kosrae {STDOFF '-13:08:04' not at :00 or :30 mark}
@@ -31281,11 +31281,11 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # Pacific/Niue {STDOFF '-11:19:40' not at :00 or :30 mark}
 # Pacific/Norfolk {
 #   STDOFF '11:11:52' not at :00 or :30 mark,
-#   AN {Added anchor rule at year 0}
+#   AN {Added anchor rule at year -32767}
 # }
 # Pacific/Noumea {
 #   STDOFF '11:05:48' not at :00 or :30 mark,
-#   NC {Added anchor rule at year 0}
+#   NC {Added anchor rule at year -32767}
 # }
 # Pacific/Pago_Pago {STDOFF '12:37:12' not at :00 or :30 mark}
 # Pacific/Palau {STDOFF '-15:02:04' not at :00 or :30 mark}
@@ -31294,7 +31294,7 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # Pacific/Rarotonga {
 #   STDOFF '13:20:56' not at :00 or :30 mark,
 #   Cook {
-#     Added anchor rule at year 0,
+#     Added anchor rule at year -32767,
 #     SAVE '0:30' different from 1:00,
 #   }
 # }
@@ -31302,10 +31302,10 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # Pacific/Tarawa {STDOFF '11:32:04' not at :00 or :30 mark}
 # Pacific/Tongatapu {
 #   STDOFF '12:19:12' not at :00 or :30 mark,
-#   Tonga {Added anchor rule at year 0}
+#   Tonga {Added anchor rule at year -32767}
 # }
 # WET {
-#   EU {Added anchor rule at year 0}
+#   EU {Added anchor rule at year -32767}
 # }
 
 
