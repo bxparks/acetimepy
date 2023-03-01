@@ -2,7 +2,6 @@
 #
 # MIT License
 
-from typing import cast
 import unittest
 from datetime import datetime
 
@@ -25,7 +24,6 @@ from acetime.zone_processor import MATCH_STATUS_PRIOR
 from acetime.zone_processor import MATCH_STATUS_EXACT_MATCH
 from acetime.zone_processor import MATCH_STATUS_WITHIN_MATCH
 from acetime.zone_processor import MATCH_STATUS_FAR_FUTURE
-from acetime.zonedb_types import ZonePolicy
 from acetime.zonedb_types import ZoneEra
 
 
@@ -112,7 +110,7 @@ class TestZoneProcessorHelperMethods(unittest.TestCase):
     def test_compare_era_to_year_month(self) -> None:
         era = ZoneEra({
             'offset_seconds': 0,
-            'zone_policy': '-',
+            'zone_policy': None,
             'era_delta_seconds': 0,
             'format': 'EST',
             'until_year': 2000,
@@ -129,7 +127,7 @@ class TestZoneProcessorHelperMethods(unittest.TestCase):
         # until = 2000-01-01T00:00w
         prev_era = ZoneEra({
             'offset_seconds': 0,
-            'zone_policy': '-',
+            'zone_policy': None,
             'era_delta_seconds': 0,
             'format': 'EST',
             'until_year': 2000,
@@ -142,7 +140,7 @@ class TestZoneProcessorHelperMethods(unittest.TestCase):
         # until = 2000-03-01T00:00w
         era = ZoneEra({
             'offset_seconds': 0,
-            'zone_policy': '-',
+            'zone_policy': None,
             'era_delta_seconds': 0,
             'format': 'EST',
             'until_year': 2000,
@@ -182,7 +180,7 @@ class TestCompareTransitionToMatch(unittest.TestCase):
     # until 2001-03-01T00:00
     ZONE_ERA1: ZoneEra = {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 2001,
@@ -195,7 +193,7 @@ class TestCompareTransitionToMatch(unittest.TestCase):
     # until 2002-03-01T00:00
     ZONE_ERA2: ZoneEra = {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 2002,
@@ -269,7 +267,7 @@ class TestCompareTransitionToMatch(unittest.TestCase):
 
     ZONE_ERA: ZoneEra = {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 2000,
@@ -343,7 +341,8 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
             DateTuple(1999, 12, 1, 0, 'w'), matches[0].start_date_time)
         self.assertEqual(
             DateTuple(2001, 2, 1, 0, 'w'), matches[0].until_date_time)
-        zone_policy = cast(ZonePolicy, matches[0].zone_era['zone_policy'])
+        zone_policy = matches[0].zone_era.get('zone_policy')
+        assert zone_policy is not None
         self.assertEqual('US', zone_policy['name'])
 
         transitions = zone_processor.transitions
@@ -390,13 +389,14 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
             DateTuple(2005, 12, 1, 0, 'w'), matches[0].start_date_time)
         self.assertEqual(
             DateTuple(2006, 4, 2, 2 * 3600, 'w'), matches[0].until_date_time)
-        self.assertEqual('-', matches[0].zone_era['zone_policy'])
+        self.assertIsNone(matches[0].zone_era['zone_policy'])
 
         self.assertEqual(
             DateTuple(2006, 4, 2, 2 * 3600, 'w'), matches[1].start_date_time)
         self.assertEqual(
             DateTuple(2007, 2, 1, 0, 'w'), matches[1].until_date_time)
-        zone_policy = cast(ZonePolicy, matches[1].zone_era['zone_policy'])
+        zone_policy = matches[1].zone_era.get('zone_policy')
+        assert zone_policy is not None
         self.assertEqual('US', zone_policy['name'])
 
         transitions = zone_processor.transitions
@@ -440,7 +440,8 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
             DateTuple(1999, 12, 1, 0, 'w'), matches[0].start_date_time)
         self.assertEqual(
             DateTuple(2001, 2, 1, 0, 'w'), matches[0].until_date_time)
-        zone_policy = cast(ZonePolicy, matches[0].zone_era['zone_policy'])
+        zone_policy = matches[0].zone_era.get('zone_policy')
+        assert zone_policy is not None
         self.assertEqual('EU', zone_policy['name'])
 
         transitions = zone_processor.transitions
@@ -485,14 +486,16 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
             DateTuple(2004, 12, 1, 0, 'w'), matches[0].start_date_time)
         self.assertEqual(
             DateTuple(2006, 1, 1, 0 * 3600, 'w'), matches[0].until_date_time)
-        zone_policy = cast(ZonePolicy, matches[0].zone_era['zone_policy'])
+        zone_policy = matches[0].zone_era.get('zone_policy')
+        assert zone_policy is not None
         self.assertEqual('Winn', zone_policy['name'])
 
         self.assertEqual(
             DateTuple(2006, 1, 1, 0 * 3600, 'w'), matches[1].start_date_time)
         self.assertEqual(
             DateTuple(2006, 2, 1, 0 * 3600, 'w'), matches[1].until_date_time)
-        zone_policy = cast(ZonePolicy, matches[1].zone_era['zone_policy'])
+        zone_policy = matches[1].zone_era.get('zone_policy')
+        assert zone_policy is not None
         self.assertEqual('Canada', zone_policy['name'])
 
         transitions = zone_processor.transitions
@@ -544,14 +547,15 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
             DateTuple(2010, 12, 1, 0, 'w'), matches[0].start_date_time)
         self.assertEqual(
             DateTuple(2011, 3, 27, 2 * 3600, 's'), matches[0].until_date_time)
-        zone_policy = cast(ZonePolicy, matches[0].zone_era['zone_policy'])
+        zone_policy = matches[0].zone_era.get('zone_policy')
+        assert zone_policy is not None
         self.assertEqual('Russia', zone_policy['name'])
 
         self.assertEqual(
             DateTuple(2011, 3, 27, 2 * 3600, 's'), matches[1].start_date_time)
         self.assertEqual(
             DateTuple(2012, 2, 1, 0, 'w'), matches[1].until_date_time)
-        self.assertEqual('-', matches[1].zone_era['zone_policy'])
+        self.assertIsNone(matches[1].zone_era['zone_policy'])
 
         transitions = zone_processor.transitions
         self.assertEqual(2, len(transitions))
@@ -586,13 +590,14 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
             DateTuple(2016, 12, 1, 0, 'w'), matches[0].start_date_time)
         self.assertEqual(
             DateTuple(2017, 10, 29, 1 * 3600, 'u'), matches[0].until_date_time)
-        self.assertEqual('-', matches[0].zone_era['zone_policy'])
+        self.assertIsNone(matches[0].zone_era['zone_policy'])
 
         self.assertEqual(
             DateTuple(2017, 10, 29, 1 * 3600, 'u'), matches[1].start_date_time)
         self.assertEqual(
             DateTuple(2018, 2, 1, 0, 'w'), matches[1].until_date_time)
-        zone_policy = cast(ZonePolicy, matches[1].zone_era['zone_policy'])
+        zone_policy = matches[1].zone_era.get('zone_policy')
+        assert zone_policy is not None
         self.assertEqual('EUAsia', zone_policy['name'])
 
         transitions = zone_processor.transitions
@@ -630,20 +635,21 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
             DateTuple(1999, 12, 1, 0, 'w'), matches[0].start_date_time)
         self.assertEqual(
             DateTuple(2000, 10, 29, 2 * 3600, 'w'), matches[0].until_date_time)
-        self.assertEqual('-', matches[0].zone_era['zone_policy'])
+        self.assertIsNone(matches[0].zone_era['zone_policy'])
 
         self.assertEqual(
             DateTuple(2000, 10, 29, 2 * 3600, 'w'), matches[1].start_date_time)
         self.assertEqual(
             DateTuple(2000, 12, 3, 1 * 3600, 'w'), matches[1].until_date_time)
-        zone_policy = cast(ZonePolicy, matches[1].zone_era['zone_policy'])
+        zone_policy = matches[1].zone_era.get('zone_policy')
+        assert zone_policy is not None
         self.assertEqual('US', zone_policy['name'])
 
         self.assertEqual(
             DateTuple(2000, 12, 3, 1 * 3600, 'w'), matches[2].start_date_time)
         self.assertEqual(
             DateTuple(2001, 2, 1, 0, 'w'), matches[2].until_date_time)
-        self.assertEqual('-', matches[2].zone_era['zone_policy'])
+        self.assertIsNone(matches[2].zone_era['zone_policy'])
 
         transitions = zone_processor.transitions
         self.assertEqual(3, len(transitions))
@@ -686,14 +692,16 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
             DateTuple(2005, 12, 1, 0, 'w'), matches[0].start_date_time)
         self.assertEqual(
             DateTuple(2007, 1, 1, 0 * 3600, 'w'), matches[0].until_date_time)
-        zone_policy = cast(ZonePolicy, matches[0].zone_era['zone_policy'])
+        zone_policy = matches[0].zone_era.get('zone_policy')
+        assert zone_policy is not None
         self.assertEqual('Moncton', zone_policy['name'])
 
         self.assertEqual(
             DateTuple(2007, 1, 1, 0 * 3600, 'w'), matches[1].start_date_time)
         self.assertEqual(
             DateTuple(2007, 2, 1, 0, 'w'), matches[1].until_date_time)
-        zone_policy = cast(ZonePolicy, matches[1].zone_era['zone_policy'])
+        zone_policy = matches[1].zone_era.get('zone_policy')
+        assert zone_policy is not None
         self.assertEqual('Canada', zone_policy['name'])
 
         transitions = zone_processor.transitions
@@ -745,20 +753,22 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
             DateTuple(2014, 12, 1, 0, 'w'), matches[0].start_date_time)
         self.assertEqual(
             DateTuple(2015, 10, 25, 1 * 3600, 'u'), matches[0].until_date_time)
-        zone_policy = cast(ZonePolicy, matches[0].zone_era['zone_policy'])
+        zone_policy = matches[0].zone_era.get('zone_policy')
+        assert zone_policy is not None
         self.assertEqual('EU', zone_policy['name'])
 
         self.assertEqual(
             DateTuple(2015, 10, 25, 1 * 3600, 'u'), matches[1].start_date_time)
         self.assertEqual(
             DateTuple(2015, 11, 8, 1 * 3600, 'u'), matches[1].until_date_time)
-        self.assertEqual(':', matches[1].zone_era['zone_policy'])
+        self.assertIsNone(matches[1].zone_era['zone_policy'])
 
         self.assertEqual(
             DateTuple(2015, 11, 8, 1 * 3600, 'u'), matches[2].start_date_time)
         self.assertEqual(
             DateTuple(2016, 2, 1, 0, 'w'), matches[2].until_date_time)
-        zone_policy = cast(ZonePolicy, matches[2].zone_era['zone_policy'])
+        zone_policy = matches[2].zone_era.get('zone_policy')
+        assert zone_policy is not None
         self.assertEqual('EU', zone_policy['name'])
 
         transitions = zone_processor.transitions
@@ -811,7 +821,8 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
             DateTuple(1999, 12, 1, 0, 'w'), matches[0].start_date_time)
         self.assertEqual(
             DateTuple(2001, 2, 1, 0, 'w'), matches[0].until_date_time)
-        zone_policy = cast(ZonePolicy, matches[0].zone_era['zone_policy'])
+        zone_policy = matches[0].zone_era.get('zone_policy')
+        assert zone_policy is not None
         self.assertEqual('Eire', zone_policy['name'])
 
         transitions = zone_processor.transitions
@@ -857,14 +868,16 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
             DateTuple(2010, 12, 1, 0, 'w'), matches[0].start_date_time)
         self.assertEqual(
             DateTuple(2011, 12, 29, 24 * 3600, 'w'), matches[0].until_date_time)
-        zone_policy = cast(ZonePolicy, matches[0].zone_era['zone_policy'])
+        zone_policy = matches[0].zone_era.get('zone_policy')
+        assert zone_policy is not None
         self.assertEqual('WS', zone_policy['name'])
 
         self.assertEqual(
             DateTuple(2011, 12, 29, 24 * 3600, 'w'), matches[1].start_date_time)
         self.assertEqual(
             DateTuple(2012, 2, 1, 0, 'w'), matches[1].until_date_time)
-        zone_policy = cast(ZonePolicy, matches[1].zone_era['zone_policy'])
+        zone_policy = matches[1].zone_era.get('zone_policy')
+        assert zone_policy is not None
         self.assertEqual('WS', zone_policy['name'])
 
         transitions = zone_processor.transitions
@@ -927,7 +940,8 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
             DateTuple(2009, 12, 1, 0, 'w'), matches[0].start_date_time)
         self.assertEqual(
             DateTuple(2010, 1, 1, 0, 'w'), matches[0].until_date_time)
-        zone_policy = cast(ZonePolicy, matches[0].zone_era['zone_policy'])
+        zone_policy = matches[0].zone_era.get('zone_policy')
+        assert zone_policy is not None
         self.assertEqual('AT', zone_policy['name'])
 
         # Match 1
@@ -935,14 +949,15 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
             DateTuple(2010, 1, 1, 0, 'w'), matches[1].start_date_time)
         self.assertEqual(
             DateTuple(2011, 1, 1, 0, 'w'), matches[1].until_date_time)
-        self.assertEqual(':', matches[1].zone_era['zone_policy'])
+        self.assertIsNone(matches[1].zone_era['zone_policy'])
 
         # Match 2
         self.assertEqual(
             DateTuple(2011, 1, 1, 0, 'w'), matches[2].start_date_time)
         self.assertEqual(
             DateTuple(2011, 2, 1, 0, 'w'), matches[2].until_date_time)
-        zone_policy = cast(ZonePolicy, matches[2].zone_era['zone_policy'])
+        zone_policy = matches[2].zone_era.get('zone_policy')
+        assert zone_policy is not None
         self.assertEqual('AT', zone_policy['name'])
 
         transitions = zone_processor.transitions
@@ -987,20 +1002,21 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
             DateTuple(2013, 12, 1, 0 * 3600, 'w'), matches[0].start_date_time)
         self.assertEqual(
             DateTuple(2014, 3, 30, 2 * 3600, 'w'), matches[0].until_date_time)
-        zone_policy = cast(ZonePolicy, matches[0].zone_era['zone_policy'])
+        zone_policy = matches[0].zone_era.get('zone_policy')
+        assert zone_policy is not None
         self.assertEqual('EU', zone_policy['name'])
 
         self.assertEqual(
             DateTuple(2014, 3, 30, 2 * 3600, 'w'), matches[1].start_date_time)
         self.assertEqual(
             DateTuple(2014, 10, 26, 2 * 3600, 's'), matches[1].until_date_time)
-        self.assertEqual('-', matches[1].zone_era['zone_policy'])
+        self.assertIsNone(matches[1].zone_era['zone_policy'])
 
         self.assertEqual(
             DateTuple(2014, 10, 26, 2 * 3600, 's'), matches[2].start_date_time)
         self.assertEqual(
             DateTuple(2015, 2, 1, 0 * 3600, 'w'), matches[2].until_date_time)
-        self.assertEqual('-', matches[2].zone_era['zone_policy'])
+        self.assertIsNone(matches[2].zone_era['zone_policy'])
 
         transitions = zone_processor.transitions
         self.assertEqual(3, len(transitions))
@@ -1044,14 +1060,15 @@ class TestZoneProcessorMatchesAndTransitions(unittest.TestCase):
             DateTuple(2010, 12, 1, 0 * 3600, 'w'), matches[0].start_date_time)
         self.assertEqual(
             DateTuple(2011, 3, 27, 2 * 3600, 's'), matches[0].until_date_time)
-        zone_policy = cast(ZonePolicy, matches[0].zone_era['zone_policy'])
+        zone_policy = matches[0].zone_era.get('zone_policy')
+        assert zone_policy is not None
         self.assertEqual('Russia', zone_policy['name'])
 
         self.assertEqual(
             DateTuple(2011, 3, 27, 2 * 3600, 's'), matches[1].start_date_time)
         self.assertEqual(
             DateTuple(2012, 2, 1, 0 * 3600, 'w'), matches[1].until_date_time)
-        self.assertEqual('-', matches[1].zone_era['zone_policy'])
+        self.assertIsNone(matches[1].zone_era['zone_policy'])
 
         transitions = zone_processor.transitions
         self.assertEqual(2, len(transitions))

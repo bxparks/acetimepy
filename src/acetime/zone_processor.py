@@ -27,7 +27,6 @@ from .common import seconds_to_hms
 from .common import hms_to_seconds
 from .common import calc_day_of_month
 from .zonedb_types import ZoneRule
-from .zonedb_types import ZonePolicy
 from .zonedb_types import ZoneEra
 from .zonedb_types import ZoneInfo
 
@@ -75,10 +74,11 @@ ACETIME_EPOCH = datetime(2000, 1, 1)  # in UTC
 
 def policy_name_of(era: ZoneEra) -> str:
     """Return the effective policy name of the given ZoneEra."""
-    if era['zone_policy'] in ['-', ':']:
-        return cast(str, era['zone_policy'])
+    zone_policy = era.get('zone_policy')
+    if zone_policy:
+        return zone_policy['name']
     else:
-        return cast(ZonePolicy, era['zone_policy'])['name']
+        return 'None'
 
 
 class MatchingEra:
@@ -233,7 +233,7 @@ class Transition:
         abbrev = self.abbrev if self.abbrev else ''
 
         # yapf: disable
-        if policy_name in ['-', ':']:
+        if policy_name == 'None':
             return (
                 'T('
                 f"start={sepoch}"
@@ -584,10 +584,9 @@ class ZoneProcessor:
             return False
 
         # 3.1) Check if the last ZoneEra is a Simple one.
-        zone_policy = zone_era['zone_policy']
-        if zone_policy in ['-', ':']:
+        zone_policy = zone_era.get('zone_policy')
+        if not zone_policy:
             return True
-        zone_policy = cast(ZonePolicy, zone_policy)
 
         # 3.2) Last ZoneEra was a Named era, so search the Rules of the Policy.
         rules = zone_policy['rules']
@@ -806,14 +805,14 @@ class ZoneProcessor:
             logging.info('_create_transitions_for_match(): %s', match)
 
         zone_era = match.zone_era
-        zone_policy = zone_era['zone_policy']
-        if zone_policy in ['-', ':']:
+        zone_policy = zone_era.get('zone_policy')
+        if not zone_policy:
             self._create_transitions_from_simple_match(match)
         else:
             self._create_transitions_from_named_match(match)
 
     def _create_transitions_from_simple_match(self, match: MatchingEra) -> None:
-        """The zone_policy is '-' or ':' then the Zone Era itself defines the
+        """The zone_policy is None then the Zone Era itself defines the
         UTC offset and the abbreviation. Add the corresponding Transition into
         the Active pool of TransitionStorage immediately.
         """
@@ -860,7 +859,8 @@ class ZoneProcessor:
             logging.info(
                 '---- Pass 1: Get candidate transitions for MatchingEra')
         zone_era = match.zone_era
-        zone_policy = cast(ZonePolicy, zone_era['zone_policy'])
+        zone_policy = zone_era.get('zone_policy')
+        assert zone_policy is not None
         policy_name = zone_policy['name']
 
         # assert isinstance(zone_policy, ZonePolicy)
