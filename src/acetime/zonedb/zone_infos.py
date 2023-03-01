@@ -9,6 +9,7 @@
 #     --granularity 1
 #     --scope extended
 #     --generate_int16_year
+#     --skip_bufestimator
 #     --start_year 1800
 #     --until_year 10000
 #
@@ -63,7 +64,7 @@ ZONE_ERAS_Africa_Abidjan: List[ZoneEra] = [
     # -0:16:08 - LMT 1912
     {
         'offset_seconds': -968,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1912,
@@ -75,7 +76,7 @@ ZONE_ERAS_Africa_Abidjan: List[ZoneEra] = [
     #              0:00    -    GMT
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'GMT',
         'until_year': 32767,
@@ -101,7 +102,7 @@ ZONE_ERAS_Africa_Algiers: List[ZoneEra] = [
     # 0:12:12 - LMT 1891 Mar 16
     {
         'offset_seconds': 732,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1891,
@@ -113,7 +114,7 @@ ZONE_ERAS_Africa_Algiers: List[ZoneEra] = [
     #             0:09:21    -    PMT    1911 Mar 11
     {
         'offset_seconds': 561,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PMT',
         'until_year': 1911,
@@ -149,7 +150,7 @@ ZONE_ERAS_Africa_Algiers: List[ZoneEra] = [
     #             0:00    -    WET    1956 Jan 29
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'WET',
         'until_year': 1956,
@@ -161,7 +162,7 @@ ZONE_ERAS_Africa_Algiers: List[ZoneEra] = [
     #             1:00    -    CET    1963 Apr 14
     {
         'offset_seconds': 3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CET',
         'until_year': 1963,
@@ -209,7 +210,7 @@ ZONE_ERAS_Africa_Algiers: List[ZoneEra] = [
     #             1:00    -    CET
     {
         'offset_seconds': 3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CET',
         'until_year': 32767,
@@ -235,7 +236,7 @@ ZONE_ERAS_Africa_Bissau: List[ZoneEra] = [
     # -1:02:20 - LMT 1912 Jan 1 1:00u
     {
         'offset_seconds': -3740,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1912,
@@ -247,7 +248,7 @@ ZONE_ERAS_Africa_Bissau: List[ZoneEra] = [
     #             -1:00    -    -01    1975
     {
         'offset_seconds': -3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-01',
         'until_year': 1975,
@@ -259,7 +260,7 @@ ZONE_ERAS_Africa_Bissau: List[ZoneEra] = [
     #              0:00    -    GMT
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'GMT',
         'until_year': 32767,
@@ -285,7 +286,7 @@ ZONE_ERAS_Africa_Cairo: List[ZoneEra] = [
     # 2:05:09 - LMT 1900 Oct
     {
         'offset_seconds': 7509,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1900,
@@ -323,7 +324,7 @@ ZONE_ERAS_Africa_Casablanca: List[ZoneEra] = [
     # -0:30:20 - LMT 1913 Oct 26
     {
         'offset_seconds': -1820,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1913,
@@ -347,7 +348,7 @@ ZONE_ERAS_Africa_Casablanca: List[ZoneEra] = [
     #              1:00    -    +01    1986
     {
         'offset_seconds': 3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+01',
         'until_year': 1986,
@@ -397,7 +398,7 @@ ZONE_ERAS_Africa_Ceuta: List[ZoneEra] = [
     # -0:21:16 - LMT 1901 Jan 1 0:00u
     {
         'offset_seconds': -1276,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1901,
@@ -409,7 +410,7 @@ ZONE_ERAS_Africa_Ceuta: List[ZoneEra] = [
     #              0:00    -    WET    1918 May  6 23:00
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'WET',
         'until_year': 1918,
@@ -421,7 +422,7 @@ ZONE_ERAS_Africa_Ceuta: List[ZoneEra] = [
     #              0:00    1:00    WEST    1918 Oct  7 23:00
     {
         'offset_seconds': 0,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'WEST',
         'until_year': 1918,
@@ -433,7 +434,7 @@ ZONE_ERAS_Africa_Ceuta: List[ZoneEra] = [
     #              0:00    -    WET    1924
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'WET',
         'until_year': 1924,
@@ -457,7 +458,7 @@ ZONE_ERAS_Africa_Ceuta: List[ZoneEra] = [
     #              0:00    -    WET    1967
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'WET',
         'until_year': 1967,
@@ -481,7 +482,7 @@ ZONE_ERAS_Africa_Ceuta: List[ZoneEra] = [
     #              1:00    -    CET    1986
     {
         'offset_seconds': 3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CET',
         'until_year': 1986,
@@ -519,7 +520,7 @@ ZONE_ERAS_Africa_El_Aaiun: List[ZoneEra] = [
     # -0:52:48 - LMT 1934 Jan
     {
         'offset_seconds': -3168,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1934,
@@ -531,7 +532,7 @@ ZONE_ERAS_Africa_El_Aaiun: List[ZoneEra] = [
     #             -1:00    -    -01    1976 Apr 14
     {
         'offset_seconds': -3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-01',
         'until_year': 1976,
@@ -581,7 +582,7 @@ ZONE_ERAS_Africa_Johannesburg: List[ZoneEra] = [
     # 1:52:00 - LMT 1892 Feb 8
     {
         'offset_seconds': 6720,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1892,
@@ -593,7 +594,7 @@ ZONE_ERAS_Africa_Johannesburg: List[ZoneEra] = [
     #             1:30    -    SAST    1903 Mar
     {
         'offset_seconds': 5400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'SAST',
         'until_year': 1903,
@@ -631,7 +632,7 @@ ZONE_ERAS_Africa_Juba: List[ZoneEra] = [
     # 2:06:28 - LMT 1931
     {
         'offset_seconds': 7588,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1931,
@@ -655,7 +656,7 @@ ZONE_ERAS_Africa_Juba: List[ZoneEra] = [
     #             3:00    -    EAT    2021 Feb  1 00:00
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EAT',
         'until_year': 2021,
@@ -667,7 +668,7 @@ ZONE_ERAS_Africa_Juba: List[ZoneEra] = [
     #             2:00    -    CAT
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CAT',
         'until_year': 32767,
@@ -693,7 +694,7 @@ ZONE_ERAS_Africa_Khartoum: List[ZoneEra] = [
     # 2:10:08 - LMT 1931
     {
         'offset_seconds': 7808,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1931,
@@ -717,7 +718,7 @@ ZONE_ERAS_Africa_Khartoum: List[ZoneEra] = [
     #             3:00    -    EAT    2017 Nov  1
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EAT',
         'until_year': 2017,
@@ -729,7 +730,7 @@ ZONE_ERAS_Africa_Khartoum: List[ZoneEra] = [
     #             2:00    -    CAT
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CAT',
         'until_year': 32767,
@@ -755,7 +756,7 @@ ZONE_ERAS_Africa_Lagos: List[ZoneEra] = [
     # 0:13:35 - LMT 1905 Jul 1
     {
         'offset_seconds': 815,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1905,
@@ -767,7 +768,7 @@ ZONE_ERAS_Africa_Lagos: List[ZoneEra] = [
     #             0:00    -    GMT    1908 Jul  1
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'GMT',
         'until_year': 1908,
@@ -779,7 +780,7 @@ ZONE_ERAS_Africa_Lagos: List[ZoneEra] = [
     #             0:13:35    -    LMT    1914 Jan  1
     {
         'offset_seconds': 815,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1914,
@@ -791,7 +792,7 @@ ZONE_ERAS_Africa_Lagos: List[ZoneEra] = [
     #             0:30    -    +0030    1919 Sep  1
     {
         'offset_seconds': 1800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0030',
         'until_year': 1919,
@@ -803,7 +804,7 @@ ZONE_ERAS_Africa_Lagos: List[ZoneEra] = [
     #             1:00    -    WAT
     {
         'offset_seconds': 3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'WAT',
         'until_year': 32767,
@@ -829,7 +830,7 @@ ZONE_ERAS_Africa_Maputo: List[ZoneEra] = [
     # 2:10:20 - LMT 1903 Mar
     {
         'offset_seconds': 7820,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1903,
@@ -841,7 +842,7 @@ ZONE_ERAS_Africa_Maputo: List[ZoneEra] = [
     #             2:00    -    CAT
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CAT',
         'until_year': 32767,
@@ -867,7 +868,7 @@ ZONE_ERAS_Africa_Monrovia: List[ZoneEra] = [
     # -0:43:08 - LMT 1882
     {
         'offset_seconds': -2588,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1882,
@@ -879,7 +880,7 @@ ZONE_ERAS_Africa_Monrovia: List[ZoneEra] = [
     #             -0:43:08 -    MMT    1919 Mar
     {
         'offset_seconds': -2588,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MMT',
         'until_year': 1919,
@@ -891,7 +892,7 @@ ZONE_ERAS_Africa_Monrovia: List[ZoneEra] = [
     #             -0:44:30 -    MMT    1972 Jan 7
     {
         'offset_seconds': -2670,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MMT',
         'until_year': 1972,
@@ -903,7 +904,7 @@ ZONE_ERAS_Africa_Monrovia: List[ZoneEra] = [
     #              0:00    -    GMT
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'GMT',
         'until_year': 32767,
@@ -929,7 +930,7 @@ ZONE_ERAS_Africa_Nairobi: List[ZoneEra] = [
     # 2:27:16 - LMT 1908 May
     {
         'offset_seconds': 8836,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1908,
@@ -941,7 +942,7 @@ ZONE_ERAS_Africa_Nairobi: List[ZoneEra] = [
     #             2:30    -    +0230    1928 Jun 30 24:00
     {
         'offset_seconds': 9000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0230',
         'until_year': 1928,
@@ -953,7 +954,7 @@ ZONE_ERAS_Africa_Nairobi: List[ZoneEra] = [
     #             3:00    -    EAT    1930 Jan  4 24:00
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EAT',
         'until_year': 1930,
@@ -965,7 +966,7 @@ ZONE_ERAS_Africa_Nairobi: List[ZoneEra] = [
     #             2:30    -    +0230    1936 Dec 31 24:00
     {
         'offset_seconds': 9000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0230',
         'until_year': 1936,
@@ -977,7 +978,7 @@ ZONE_ERAS_Africa_Nairobi: List[ZoneEra] = [
     #             2:45    -    +0245    1942 Jul 31 24:00
     {
         'offset_seconds': 9900,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0245',
         'until_year': 1942,
@@ -989,7 +990,7 @@ ZONE_ERAS_Africa_Nairobi: List[ZoneEra] = [
     #             3:00    -    EAT
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EAT',
         'until_year': 32767,
@@ -1015,7 +1016,7 @@ ZONE_ERAS_Africa_Ndjamena: List[ZoneEra] = [
     # 1:00:12 - LMT 1912
     {
         'offset_seconds': 3612,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1912,
@@ -1027,7 +1028,7 @@ ZONE_ERAS_Africa_Ndjamena: List[ZoneEra] = [
     #             1:00    -    WAT    1979 Oct 14
     {
         'offset_seconds': 3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'WAT',
         'until_year': 1979,
@@ -1039,7 +1040,7 @@ ZONE_ERAS_Africa_Ndjamena: List[ZoneEra] = [
     #             1:00    1:00    WAST    1980 Mar  8
     {
         'offset_seconds': 3600,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'WAST',
         'until_year': 1980,
@@ -1051,7 +1052,7 @@ ZONE_ERAS_Africa_Ndjamena: List[ZoneEra] = [
     #             1:00    -    WAT
     {
         'offset_seconds': 3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'WAT',
         'until_year': 32767,
@@ -1077,7 +1078,7 @@ ZONE_ERAS_Africa_Sao_Tome: List[ZoneEra] = [
     # 0:26:56 - LMT 1884
     {
         'offset_seconds': 1616,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1884,
@@ -1089,7 +1090,7 @@ ZONE_ERAS_Africa_Sao_Tome: List[ZoneEra] = [
     #             -0:36:45 -    LMT    1912 Jan  1 00:00u
     {
         'offset_seconds': -2205,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1912,
@@ -1101,7 +1102,7 @@ ZONE_ERAS_Africa_Sao_Tome: List[ZoneEra] = [
     #              0:00    -    GMT    2018 Jan  1 01:00
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'GMT',
         'until_year': 2018,
@@ -1113,7 +1114,7 @@ ZONE_ERAS_Africa_Sao_Tome: List[ZoneEra] = [
     #              1:00    -    WAT    2019 Jan  1 02:00
     {
         'offset_seconds': 3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'WAT',
         'until_year': 2019,
@@ -1125,7 +1126,7 @@ ZONE_ERAS_Africa_Sao_Tome: List[ZoneEra] = [
     #              0:00    -    GMT
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'GMT',
         'until_year': 32767,
@@ -1151,7 +1152,7 @@ ZONE_ERAS_Africa_Tripoli: List[ZoneEra] = [
     # 0:52:44 - LMT 1920
     {
         'offset_seconds': 3164,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1920,
@@ -1175,7 +1176,7 @@ ZONE_ERAS_Africa_Tripoli: List[ZoneEra] = [
     #             2:00    -    EET    1982
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EET',
         'until_year': 1982,
@@ -1199,7 +1200,7 @@ ZONE_ERAS_Africa_Tripoli: List[ZoneEra] = [
     #             2:00    -    EET    1996 Sep 30
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EET',
         'until_year': 1996,
@@ -1223,7 +1224,7 @@ ZONE_ERAS_Africa_Tripoli: List[ZoneEra] = [
     #             2:00    -    EET    2012 Nov 10  2:00
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EET',
         'until_year': 2012,
@@ -1247,7 +1248,7 @@ ZONE_ERAS_Africa_Tripoli: List[ZoneEra] = [
     #             2:00    -    EET
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EET',
         'until_year': 32767,
@@ -1273,7 +1274,7 @@ ZONE_ERAS_Africa_Tunis: List[ZoneEra] = [
     # 0:40:44 - LMT 1881 May 12
     {
         'offset_seconds': 2444,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1881,
@@ -1285,7 +1286,7 @@ ZONE_ERAS_Africa_Tunis: List[ZoneEra] = [
     #             0:09:21    -    PMT    1911 Mar 11
     {
         'offset_seconds': 561,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PMT',
         'until_year': 1911,
@@ -1323,7 +1324,7 @@ ZONE_ERAS_Africa_Windhoek: List[ZoneEra] = [
     # 1:08:24 - LMT 1892 Feb 8
     {
         'offset_seconds': 4104,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1892,
@@ -1335,7 +1336,7 @@ ZONE_ERAS_Africa_Windhoek: List[ZoneEra] = [
     #             1:30    -    +0130    1903 Mar
     {
         'offset_seconds': 5400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0130',
         'until_year': 1903,
@@ -1347,7 +1348,7 @@ ZONE_ERAS_Africa_Windhoek: List[ZoneEra] = [
     #             2:00    -    SAST    1942 Sep 20  2:00
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'SAST',
         'until_year': 1942,
@@ -1359,7 +1360,7 @@ ZONE_ERAS_Africa_Windhoek: List[ZoneEra] = [
     #             2:00    1:00    SAST    1943 Mar 21  2:00
     {
         'offset_seconds': 7200,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'SAST',
         'until_year': 1943,
@@ -1371,7 +1372,7 @@ ZONE_ERAS_Africa_Windhoek: List[ZoneEra] = [
     #             2:00    -    SAST    1990 Mar 21
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'SAST',
         'until_year': 1990,
@@ -1409,7 +1410,7 @@ ZONE_ERAS_America_Adak: List[ZoneEra] = [
     # 12:13:22 - LMT 1867 Oct 19 12:44:35
     {
         'offset_seconds': 44002,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1867,
@@ -1421,7 +1422,7 @@ ZONE_ERAS_America_Adak: List[ZoneEra] = [
     #             -11:46:38 -    LMT    1900 Aug 20 12:00
     {
         'offset_seconds': -42398,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1900,
@@ -1433,7 +1434,7 @@ ZONE_ERAS_America_Adak: List[ZoneEra] = [
     #             -11:00    -    NST    1942
     {
         'offset_seconds': -39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'NST',
         'until_year': 1942,
@@ -1457,7 +1458,7 @@ ZONE_ERAS_America_Adak: List[ZoneEra] = [
     #             -11:00    -    NST    1967 Apr
     {
         'offset_seconds': -39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'NST',
         'until_year': 1967,
@@ -1469,7 +1470,7 @@ ZONE_ERAS_America_Adak: List[ZoneEra] = [
     #             -11:00    -    BST    1969
     {
         'offset_seconds': -39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'BST',
         'until_year': 1969,
@@ -1531,7 +1532,7 @@ ZONE_ERAS_America_Anchorage: List[ZoneEra] = [
     # 14:00:24 - LMT 1867 Oct 19 14:31:37
     {
         'offset_seconds': 50424,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1867,
@@ -1543,7 +1544,7 @@ ZONE_ERAS_America_Anchorage: List[ZoneEra] = [
     #              -9:59:36 -    LMT    1900 Aug 20 12:00
     {
         'offset_seconds': -35976,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1900,
@@ -1555,7 +1556,7 @@ ZONE_ERAS_America_Anchorage: List[ZoneEra] = [
     #             -10:00    -    AST    1942
     {
         'offset_seconds': -36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'AST',
         'until_year': 1942,
@@ -1579,7 +1580,7 @@ ZONE_ERAS_America_Anchorage: List[ZoneEra] = [
     #             -10:00    -    AHST    1969
     {
         'offset_seconds': -36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'AHST',
         'until_year': 1969,
@@ -1641,7 +1642,7 @@ ZONE_ERAS_America_Araguaina: List[ZoneEra] = [
     # -3:12:48 - LMT 1914
     {
         'offset_seconds': -11568,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1914,
@@ -1665,7 +1666,7 @@ ZONE_ERAS_America_Araguaina: List[ZoneEra] = [
     #             -3:00    -    -03    1995 Sep 14
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 1995,
@@ -1689,7 +1690,7 @@ ZONE_ERAS_America_Araguaina: List[ZoneEra] = [
     #             -3:00    -    -03    2012 Oct 21
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 2012,
@@ -1713,7 +1714,7 @@ ZONE_ERAS_America_Araguaina: List[ZoneEra] = [
     #             -3:00    -    -03
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 32767,
@@ -1739,7 +1740,7 @@ ZONE_ERAS_America_Argentina_Buenos_Aires: List[ZoneEra] = [
     # -3:53:48 - LMT 1894 Oct 31
     {
         'offset_seconds': -14028,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1894,
@@ -1751,7 +1752,7 @@ ZONE_ERAS_America_Argentina_Buenos_Aires: List[ZoneEra] = [
     #             -4:16:48 -    CMT    1920 May
     {
         'offset_seconds': -15408,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CMT',
         'until_year': 1920,
@@ -1763,7 +1764,7 @@ ZONE_ERAS_America_Argentina_Buenos_Aires: List[ZoneEra] = [
     #             -4:00    -    -04    1930 Dec
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1930,
@@ -1837,7 +1838,7 @@ ZONE_ERAS_America_Argentina_Catamarca: List[ZoneEra] = [
     # -4:23:08 - LMT 1894 Oct 31
     {
         'offset_seconds': -15788,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1894,
@@ -1849,7 +1850,7 @@ ZONE_ERAS_America_Argentina_Catamarca: List[ZoneEra] = [
     #             -4:16:48 -    CMT    1920 May
     {
         'offset_seconds': -15408,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CMT',
         'until_year': 1920,
@@ -1861,7 +1862,7 @@ ZONE_ERAS_America_Argentina_Catamarca: List[ZoneEra] = [
     #             -4:00    -    -04    1930 Dec
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1930,
@@ -1897,7 +1898,7 @@ ZONE_ERAS_America_Argentina_Catamarca: List[ZoneEra] = [
     #             -4:00    -    -04    1991 Oct 20
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1991,
@@ -1933,7 +1934,7 @@ ZONE_ERAS_America_Argentina_Catamarca: List[ZoneEra] = [
     #             -3:00    -    -03    2004 Jun  1
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 2004,
@@ -1945,7 +1946,7 @@ ZONE_ERAS_America_Argentina_Catamarca: List[ZoneEra] = [
     #             -4:00    -    -04    2004 Jun 20
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 2004,
@@ -1969,7 +1970,7 @@ ZONE_ERAS_America_Argentina_Catamarca: List[ZoneEra] = [
     #             -3:00    -    -03
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 32767,
@@ -1995,7 +1996,7 @@ ZONE_ERAS_America_Argentina_Cordoba: List[ZoneEra] = [
     # -4:16:48 - LMT 1894 Oct 31
     {
         'offset_seconds': -15408,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1894,
@@ -2007,7 +2008,7 @@ ZONE_ERAS_America_Argentina_Cordoba: List[ZoneEra] = [
     #             -4:16:48 -    CMT    1920 May
     {
         'offset_seconds': -15408,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CMT',
         'until_year': 1920,
@@ -2019,7 +2020,7 @@ ZONE_ERAS_America_Argentina_Cordoba: List[ZoneEra] = [
     #             -4:00    -    -04    1930 Dec
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1930,
@@ -2055,7 +2056,7 @@ ZONE_ERAS_America_Argentina_Cordoba: List[ZoneEra] = [
     #             -4:00    -    -04    1991 Oct 20
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1991,
@@ -2117,7 +2118,7 @@ ZONE_ERAS_America_Argentina_Jujuy: List[ZoneEra] = [
     # -4:21:12 - LMT 1894 Oct 31
     {
         'offset_seconds': -15672,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1894,
@@ -2129,7 +2130,7 @@ ZONE_ERAS_America_Argentina_Jujuy: List[ZoneEra] = [
     #             -4:16:48 -    CMT    1920 May
     {
         'offset_seconds': -15408,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CMT',
         'until_year': 1920,
@@ -2141,7 +2142,7 @@ ZONE_ERAS_America_Argentina_Jujuy: List[ZoneEra] = [
     #             -4:00    -    -04    1930 Dec
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1930,
@@ -2177,7 +2178,7 @@ ZONE_ERAS_America_Argentina_Jujuy: List[ZoneEra] = [
     #             -4:00    -    -04    1990 Oct 28
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1990,
@@ -2189,7 +2190,7 @@ ZONE_ERAS_America_Argentina_Jujuy: List[ZoneEra] = [
     #             -4:00    1:00    -03    1991 Mar 17
     {
         'offset_seconds': -14400,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': '-03',
         'until_year': 1991,
@@ -2201,7 +2202,7 @@ ZONE_ERAS_America_Argentina_Jujuy: List[ZoneEra] = [
     #             -4:00    -    -04    1991 Oct  6
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1991,
@@ -2213,7 +2214,7 @@ ZONE_ERAS_America_Argentina_Jujuy: List[ZoneEra] = [
     #             -3:00    1:00    -02    1992
     {
         'offset_seconds': -10800,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': '-02',
         'until_year': 1992,
@@ -2261,7 +2262,7 @@ ZONE_ERAS_America_Argentina_Jujuy: List[ZoneEra] = [
     #             -3:00    -    -03
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 32767,
@@ -2287,7 +2288,7 @@ ZONE_ERAS_America_Argentina_La_Rioja: List[ZoneEra] = [
     # -4:27:24 - LMT 1894 Oct 31
     {
         'offset_seconds': -16044,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1894,
@@ -2299,7 +2300,7 @@ ZONE_ERAS_America_Argentina_La_Rioja: List[ZoneEra] = [
     #             -4:16:48 -    CMT    1920 May
     {
         'offset_seconds': -15408,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CMT',
         'until_year': 1920,
@@ -2311,7 +2312,7 @@ ZONE_ERAS_America_Argentina_La_Rioja: List[ZoneEra] = [
     #             -4:00    -    -04    1930 Dec
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1930,
@@ -2347,7 +2348,7 @@ ZONE_ERAS_America_Argentina_La_Rioja: List[ZoneEra] = [
     #             -4:00    -    -04    1991 May  7
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1991,
@@ -2383,7 +2384,7 @@ ZONE_ERAS_America_Argentina_La_Rioja: List[ZoneEra] = [
     #             -3:00    -    -03    2004 Jun  1
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 2004,
@@ -2395,7 +2396,7 @@ ZONE_ERAS_America_Argentina_La_Rioja: List[ZoneEra] = [
     #             -4:00    -    -04    2004 Jun 20
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 2004,
@@ -2419,7 +2420,7 @@ ZONE_ERAS_America_Argentina_La_Rioja: List[ZoneEra] = [
     #             -3:00    -    -03
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 32767,
@@ -2445,7 +2446,7 @@ ZONE_ERAS_America_Argentina_Mendoza: List[ZoneEra] = [
     # -4:35:16 - LMT 1894 Oct 31
     {
         'offset_seconds': -16516,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1894,
@@ -2457,7 +2458,7 @@ ZONE_ERAS_America_Argentina_Mendoza: List[ZoneEra] = [
     #             -4:16:48 -    CMT    1920 May
     {
         'offset_seconds': -15408,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CMT',
         'until_year': 1920,
@@ -2469,7 +2470,7 @@ ZONE_ERAS_America_Argentina_Mendoza: List[ZoneEra] = [
     #             -4:00    -    -04    1930 Dec
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1930,
@@ -2505,7 +2506,7 @@ ZONE_ERAS_America_Argentina_Mendoza: List[ZoneEra] = [
     #             -4:00    -    -04    1990 Oct 15
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1990,
@@ -2517,7 +2518,7 @@ ZONE_ERAS_America_Argentina_Mendoza: List[ZoneEra] = [
     #             -4:00    1:00    -03    1991 Mar  1
     {
         'offset_seconds': -14400,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': '-03',
         'until_year': 1991,
@@ -2529,7 +2530,7 @@ ZONE_ERAS_America_Argentina_Mendoza: List[ZoneEra] = [
     #             -4:00    -    -04    1991 Oct 15
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1991,
@@ -2541,7 +2542,7 @@ ZONE_ERAS_America_Argentina_Mendoza: List[ZoneEra] = [
     #             -4:00    1:00    -03    1992 Mar  1
     {
         'offset_seconds': -14400,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': '-03',
         'until_year': 1992,
@@ -2553,7 +2554,7 @@ ZONE_ERAS_America_Argentina_Mendoza: List[ZoneEra] = [
     #             -4:00    -    -04    1992 Oct 18
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1992,
@@ -2589,7 +2590,7 @@ ZONE_ERAS_America_Argentina_Mendoza: List[ZoneEra] = [
     #             -3:00    -    -03    2004 May 23
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 2004,
@@ -2601,7 +2602,7 @@ ZONE_ERAS_America_Argentina_Mendoza: List[ZoneEra] = [
     #             -4:00    -    -04    2004 Sep 26
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 2004,
@@ -2625,7 +2626,7 @@ ZONE_ERAS_America_Argentina_Mendoza: List[ZoneEra] = [
     #             -3:00    -    -03
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 32767,
@@ -2651,7 +2652,7 @@ ZONE_ERAS_America_Argentina_Rio_Gallegos: List[ZoneEra] = [
     # -4:36:52 - LMT 1894 Oct 31
     {
         'offset_seconds': -16612,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1894,
@@ -2663,7 +2664,7 @@ ZONE_ERAS_America_Argentina_Rio_Gallegos: List[ZoneEra] = [
     #             -4:16:48 -    CMT    1920 May
     {
         'offset_seconds': -15408,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CMT',
         'until_year': 1920,
@@ -2675,7 +2676,7 @@ ZONE_ERAS_America_Argentina_Rio_Gallegos: List[ZoneEra] = [
     #             -4:00    -    -04    1930 Dec
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1930,
@@ -2723,7 +2724,7 @@ ZONE_ERAS_America_Argentina_Rio_Gallegos: List[ZoneEra] = [
     #             -3:00    -    -03    2004 Jun  1
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 2004,
@@ -2735,7 +2736,7 @@ ZONE_ERAS_America_Argentina_Rio_Gallegos: List[ZoneEra] = [
     #             -4:00    -    -04    2004 Jun 20
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 2004,
@@ -2759,7 +2760,7 @@ ZONE_ERAS_America_Argentina_Rio_Gallegos: List[ZoneEra] = [
     #             -3:00    -    -03
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 32767,
@@ -2785,7 +2786,7 @@ ZONE_ERAS_America_Argentina_Salta: List[ZoneEra] = [
     # -4:21:40 - LMT 1894 Oct 31
     {
         'offset_seconds': -15700,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1894,
@@ -2797,7 +2798,7 @@ ZONE_ERAS_America_Argentina_Salta: List[ZoneEra] = [
     #             -4:16:48 -    CMT    1920 May
     {
         'offset_seconds': -15408,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CMT',
         'until_year': 1920,
@@ -2809,7 +2810,7 @@ ZONE_ERAS_America_Argentina_Salta: List[ZoneEra] = [
     #             -4:00    -    -04    1930 Dec
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1930,
@@ -2845,7 +2846,7 @@ ZONE_ERAS_America_Argentina_Salta: List[ZoneEra] = [
     #             -4:00    -    -04    1991 Oct 20
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1991,
@@ -2893,7 +2894,7 @@ ZONE_ERAS_America_Argentina_Salta: List[ZoneEra] = [
     #             -3:00    -    -03
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 32767,
@@ -2919,7 +2920,7 @@ ZONE_ERAS_America_Argentina_San_Juan: List[ZoneEra] = [
     # -4:34:04 - LMT 1894 Oct 31
     {
         'offset_seconds': -16444,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1894,
@@ -2931,7 +2932,7 @@ ZONE_ERAS_America_Argentina_San_Juan: List[ZoneEra] = [
     #             -4:16:48 -    CMT    1920 May
     {
         'offset_seconds': -15408,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CMT',
         'until_year': 1920,
@@ -2943,7 +2944,7 @@ ZONE_ERAS_America_Argentina_San_Juan: List[ZoneEra] = [
     #             -4:00    -    -04    1930 Dec
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1930,
@@ -2979,7 +2980,7 @@ ZONE_ERAS_America_Argentina_San_Juan: List[ZoneEra] = [
     #             -4:00    -    -04    1991 May  7
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1991,
@@ -3015,7 +3016,7 @@ ZONE_ERAS_America_Argentina_San_Juan: List[ZoneEra] = [
     #             -3:00    -    -03    2004 May 31
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 2004,
@@ -3027,7 +3028,7 @@ ZONE_ERAS_America_Argentina_San_Juan: List[ZoneEra] = [
     #             -4:00    -    -04    2004 Jul 25
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 2004,
@@ -3051,7 +3052,7 @@ ZONE_ERAS_America_Argentina_San_Juan: List[ZoneEra] = [
     #             -3:00    -    -03
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 32767,
@@ -3077,7 +3078,7 @@ ZONE_ERAS_America_Argentina_San_Luis: List[ZoneEra] = [
     # -4:25:24 - LMT 1894 Oct 31
     {
         'offset_seconds': -15924,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1894,
@@ -3089,7 +3090,7 @@ ZONE_ERAS_America_Argentina_San_Luis: List[ZoneEra] = [
     #             -4:16:48 -    CMT    1920 May
     {
         'offset_seconds': -15408,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CMT',
         'until_year': 1920,
@@ -3101,7 +3102,7 @@ ZONE_ERAS_America_Argentina_San_Luis: List[ZoneEra] = [
     #             -4:00    -    -04    1930 Dec
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1930,
@@ -3137,7 +3138,7 @@ ZONE_ERAS_America_Argentina_San_Luis: List[ZoneEra] = [
     #             -3:00    1:00    -02    1990 Mar 14
     {
         'offset_seconds': -10800,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': '-02',
         'until_year': 1990,
@@ -3149,7 +3150,7 @@ ZONE_ERAS_America_Argentina_San_Luis: List[ZoneEra] = [
     #             -4:00    -    -04    1990 Oct 15
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1990,
@@ -3161,7 +3162,7 @@ ZONE_ERAS_America_Argentina_San_Luis: List[ZoneEra] = [
     #             -4:00    1:00    -03    1991 Mar  1
     {
         'offset_seconds': -14400,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': '-03',
         'until_year': 1991,
@@ -3173,7 +3174,7 @@ ZONE_ERAS_America_Argentina_San_Luis: List[ZoneEra] = [
     #             -4:00    -    -04    1991 Jun  1
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1991,
@@ -3185,7 +3186,7 @@ ZONE_ERAS_America_Argentina_San_Luis: List[ZoneEra] = [
     #             -3:00    -    -03    1999 Oct  3
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 1999,
@@ -3197,7 +3198,7 @@ ZONE_ERAS_America_Argentina_San_Luis: List[ZoneEra] = [
     #             -4:00    1:00    -03    2000 Mar  3
     {
         'offset_seconds': -14400,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': '-03',
         'until_year': 2000,
@@ -3209,7 +3210,7 @@ ZONE_ERAS_America_Argentina_San_Luis: List[ZoneEra] = [
     #             -3:00    -    -03    2004 May 31
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 2004,
@@ -3221,7 +3222,7 @@ ZONE_ERAS_America_Argentina_San_Luis: List[ZoneEra] = [
     #             -4:00    -    -04    2004 Jul 25
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 2004,
@@ -3257,7 +3258,7 @@ ZONE_ERAS_America_Argentina_San_Luis: List[ZoneEra] = [
     #             -3:00    -    -03
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 32767,
@@ -3283,7 +3284,7 @@ ZONE_ERAS_America_Argentina_Tucuman: List[ZoneEra] = [
     # -4:20:52 - LMT 1894 Oct 31
     {
         'offset_seconds': -15652,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1894,
@@ -3295,7 +3296,7 @@ ZONE_ERAS_America_Argentina_Tucuman: List[ZoneEra] = [
     #             -4:16:48 -    CMT    1920 May
     {
         'offset_seconds': -15408,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CMT',
         'until_year': 1920,
@@ -3307,7 +3308,7 @@ ZONE_ERAS_America_Argentina_Tucuman: List[ZoneEra] = [
     #             -4:00    -    -04    1930 Dec
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1930,
@@ -3343,7 +3344,7 @@ ZONE_ERAS_America_Argentina_Tucuman: List[ZoneEra] = [
     #             -4:00    -    -04    1991 Oct 20
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1991,
@@ -3379,7 +3380,7 @@ ZONE_ERAS_America_Argentina_Tucuman: List[ZoneEra] = [
     #             -3:00    -    -03    2004 Jun  1
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 2004,
@@ -3391,7 +3392,7 @@ ZONE_ERAS_America_Argentina_Tucuman: List[ZoneEra] = [
     #             -4:00    -    -04    2004 Jun 13
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 2004,
@@ -3429,7 +3430,7 @@ ZONE_ERAS_America_Argentina_Ushuaia: List[ZoneEra] = [
     # -4:33:12 - LMT 1894 Oct 31
     {
         'offset_seconds': -16392,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1894,
@@ -3441,7 +3442,7 @@ ZONE_ERAS_America_Argentina_Ushuaia: List[ZoneEra] = [
     #             -4:16:48 -    CMT    1920 May
     {
         'offset_seconds': -15408,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CMT',
         'until_year': 1920,
@@ -3453,7 +3454,7 @@ ZONE_ERAS_America_Argentina_Ushuaia: List[ZoneEra] = [
     #             -4:00    -    -04    1930 Dec
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1930,
@@ -3501,7 +3502,7 @@ ZONE_ERAS_America_Argentina_Ushuaia: List[ZoneEra] = [
     #             -3:00    -    -03    2004 May 30
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 2004,
@@ -3513,7 +3514,7 @@ ZONE_ERAS_America_Argentina_Ushuaia: List[ZoneEra] = [
     #             -4:00    -    -04    2004 Jun 20
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 2004,
@@ -3537,7 +3538,7 @@ ZONE_ERAS_America_Argentina_Ushuaia: List[ZoneEra] = [
     #             -3:00    -    -03
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 32767,
@@ -3563,7 +3564,7 @@ ZONE_ERAS_America_Asuncion: List[ZoneEra] = [
     # -3:50:40 - LMT 1890
     {
         'offset_seconds': -13840,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1890,
@@ -3575,7 +3576,7 @@ ZONE_ERAS_America_Asuncion: List[ZoneEra] = [
     #             -3:50:40 -    AMT    1931 Oct 10
     {
         'offset_seconds': -13840,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'AMT',
         'until_year': 1931,
@@ -3587,7 +3588,7 @@ ZONE_ERAS_America_Asuncion: List[ZoneEra] = [
     #             -4:00    -    -04    1972 Oct
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1972,
@@ -3599,7 +3600,7 @@ ZONE_ERAS_America_Asuncion: List[ZoneEra] = [
     #             -3:00    -    -03    1974 Apr
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 1974,
@@ -3637,7 +3638,7 @@ ZONE_ERAS_America_Bahia: List[ZoneEra] = [
     # -2:34:04 - LMT 1914
     {
         'offset_seconds': -9244,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1914,
@@ -3661,7 +3662,7 @@ ZONE_ERAS_America_Bahia: List[ZoneEra] = [
     #             -3:00    -    -03    2011 Oct 16
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 2011,
@@ -3685,7 +3686,7 @@ ZONE_ERAS_America_Bahia: List[ZoneEra] = [
     #             -3:00    -    -03
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 32767,
@@ -3711,7 +3712,7 @@ ZONE_ERAS_America_Bahia_Banderas: List[ZoneEra] = [
     # -7:01:00 - LMT 1922 Jan 1 7:00u
     {
         'offset_seconds': -25260,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1922,
@@ -3723,7 +3724,7 @@ ZONE_ERAS_America_Bahia_Banderas: List[ZoneEra] = [
     #             -7:00    -    MST    1927 Jun 10 23:00
     {
         'offset_seconds': -25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MST',
         'until_year': 1927,
@@ -3735,7 +3736,7 @@ ZONE_ERAS_America_Bahia_Banderas: List[ZoneEra] = [
     #             -6:00    -    CST    1930 Nov 15
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1930,
@@ -3759,7 +3760,7 @@ ZONE_ERAS_America_Bahia_Banderas: List[ZoneEra] = [
     #             -6:00    -    CST    1942 Apr 24
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1942,
@@ -3771,7 +3772,7 @@ ZONE_ERAS_America_Bahia_Banderas: List[ZoneEra] = [
     #             -7:00    -    MST    1949 Jan 14
     {
         'offset_seconds': -25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MST',
         'until_year': 1949,
@@ -3783,7 +3784,7 @@ ZONE_ERAS_America_Bahia_Banderas: List[ZoneEra] = [
     #             -8:00    -    PST    1970
     {
         'offset_seconds': -28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PST',
         'until_year': 1970,
@@ -3833,7 +3834,7 @@ ZONE_ERAS_America_Barbados: List[ZoneEra] = [
     # -3:58:29 - LMT 1911 Aug 28
     {
         'offset_seconds': -14309,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1911,
@@ -3895,7 +3896,7 @@ ZONE_ERAS_America_Belem: List[ZoneEra] = [
     # -3:13:56 - LMT 1914
     {
         'offset_seconds': -11636,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1914,
@@ -3919,7 +3920,7 @@ ZONE_ERAS_America_Belem: List[ZoneEra] = [
     #             -3:00    -    -03
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 32767,
@@ -3945,7 +3946,7 @@ ZONE_ERAS_America_Belize: List[ZoneEra] = [
     # -5:52:48 - LMT 1912 Apr 1
     {
         'offset_seconds': -21168,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1912,
@@ -3983,7 +3984,7 @@ ZONE_ERAS_America_Boa_Vista: List[ZoneEra] = [
     # -4:02:40 - LMT 1914
     {
         'offset_seconds': -14560,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1914,
@@ -4007,7 +4008,7 @@ ZONE_ERAS_America_Boa_Vista: List[ZoneEra] = [
     #             -4:00    -    -04    1999 Sep 30
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1999,
@@ -4031,7 +4032,7 @@ ZONE_ERAS_America_Boa_Vista: List[ZoneEra] = [
     #             -4:00    -    -04
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 32767,
@@ -4057,7 +4058,7 @@ ZONE_ERAS_America_Bogota: List[ZoneEra] = [
     # -4:56:16 - LMT 1884 Mar 13
     {
         'offset_seconds': -17776,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1884,
@@ -4069,7 +4070,7 @@ ZONE_ERAS_America_Bogota: List[ZoneEra] = [
     #             -4:56:16 -    BMT    1914 Nov 23
     {
         'offset_seconds': -17776,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'BMT',
         'until_year': 1914,
@@ -4107,7 +4108,7 @@ ZONE_ERAS_America_Boise: List[ZoneEra] = [
     # -7:44:49 - LMT 1883 Nov 18 20:00u
     {
         'offset_seconds': -27889,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1883,
@@ -4143,7 +4144,7 @@ ZONE_ERAS_America_Boise: List[ZoneEra] = [
     #             -7:00    -    MST    1974 Feb  3  2:00
     {
         'offset_seconds': -25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MST',
         'until_year': 1974,
@@ -4181,7 +4182,7 @@ ZONE_ERAS_America_Cambridge_Bay: List[ZoneEra] = [
     # 0 - -00 1920
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-00',
         'until_year': 1920,
@@ -4217,7 +4218,7 @@ ZONE_ERAS_America_Cambridge_Bay: List[ZoneEra] = [
     #             -5:00    -    EST    2000 Nov  5  0:00
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 2000,
@@ -4229,7 +4230,7 @@ ZONE_ERAS_America_Cambridge_Bay: List[ZoneEra] = [
     #             -6:00    -    CST    2001 Apr  1  3:00
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 2001,
@@ -4267,7 +4268,7 @@ ZONE_ERAS_America_Campo_Grande: List[ZoneEra] = [
     # -3:38:28 - LMT 1914
     {
         'offset_seconds': -13108,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1914,
@@ -4305,7 +4306,7 @@ ZONE_ERAS_America_Cancun: List[ZoneEra] = [
     # -5:47:04 - LMT 1922 Jan 1 6:00u
     {
         'offset_seconds': -20824,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1922,
@@ -4317,7 +4318,7 @@ ZONE_ERAS_America_Cancun: List[ZoneEra] = [
     #             -6:00    -    CST    1981 Dec 23
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1981,
@@ -4353,7 +4354,7 @@ ZONE_ERAS_America_Cancun: List[ZoneEra] = [
     #             -5:00    -    EST
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 32767,
@@ -4379,7 +4380,7 @@ ZONE_ERAS_America_Caracas: List[ZoneEra] = [
     # -4:27:44 - LMT 1890
     {
         'offset_seconds': -16064,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1890,
@@ -4391,7 +4392,7 @@ ZONE_ERAS_America_Caracas: List[ZoneEra] = [
     #             -4:27:40 -    CMT    1912 Feb 12
     {
         'offset_seconds': -16060,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CMT',
         'until_year': 1912,
@@ -4403,7 +4404,7 @@ ZONE_ERAS_America_Caracas: List[ZoneEra] = [
     #             -4:30    -    -0430    1965 Jan  1  0:00
     {
         'offset_seconds': -16200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-0430',
         'until_year': 1965,
@@ -4415,7 +4416,7 @@ ZONE_ERAS_America_Caracas: List[ZoneEra] = [
     #             -4:00    -    -04    2007 Dec  9  3:00
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 2007,
@@ -4427,7 +4428,7 @@ ZONE_ERAS_America_Caracas: List[ZoneEra] = [
     #             -4:30    -    -0430    2016 May  1  2:30
     {
         'offset_seconds': -16200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-0430',
         'until_year': 2016,
@@ -4439,7 +4440,7 @@ ZONE_ERAS_America_Caracas: List[ZoneEra] = [
     #             -4:00    -    -04
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 32767,
@@ -4465,7 +4466,7 @@ ZONE_ERAS_America_Cayenne: List[ZoneEra] = [
     # -3:29:20 - LMT 1911 Jul
     {
         'offset_seconds': -12560,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1911,
@@ -4477,7 +4478,7 @@ ZONE_ERAS_America_Cayenne: List[ZoneEra] = [
     #             -4:00    -    -04    1967 Oct
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1967,
@@ -4489,7 +4490,7 @@ ZONE_ERAS_America_Cayenne: List[ZoneEra] = [
     #             -3:00    -    -03
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 32767,
@@ -4515,7 +4516,7 @@ ZONE_ERAS_America_Chicago: List[ZoneEra] = [
     # -5:50:36 - LMT 1883 Nov 18 18:00u
     {
         'offset_seconds': -21036,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1883,
@@ -4551,7 +4552,7 @@ ZONE_ERAS_America_Chicago: List[ZoneEra] = [
     #             -5:00    -    EST    1936 Nov 15  2:00
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 1936,
@@ -4625,7 +4626,7 @@ ZONE_ERAS_America_Chihuahua: List[ZoneEra] = [
     # -7:04:20 - LMT 1922 Jan 1 7:00u
     {
         'offset_seconds': -25460,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1922,
@@ -4637,7 +4638,7 @@ ZONE_ERAS_America_Chihuahua: List[ZoneEra] = [
     #             -7:00    -    MST    1927 Jun 10 23:00
     {
         'offset_seconds': -25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MST',
         'until_year': 1927,
@@ -4649,7 +4650,7 @@ ZONE_ERAS_America_Chihuahua: List[ZoneEra] = [
     #             -6:00    -    CST    1930 Nov 15
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1930,
@@ -4673,7 +4674,7 @@ ZONE_ERAS_America_Chihuahua: List[ZoneEra] = [
     #             -6:00    -    CST    1996
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1996,
@@ -4697,7 +4698,7 @@ ZONE_ERAS_America_Chihuahua: List[ZoneEra] = [
     #             -6:00    -    CST    1998 Apr Sun>=1  3:00
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1998,
@@ -4721,7 +4722,7 @@ ZONE_ERAS_America_Chihuahua: List[ZoneEra] = [
     #             -6:00    -    CST
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 32767,
@@ -4747,7 +4748,7 @@ ZONE_ERAS_America_Ciudad_Juarez: List[ZoneEra] = [
     # -7:05:56 - LMT 1922 Jan 1 7:00u
     {
         'offset_seconds': -25556,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1922,
@@ -4759,7 +4760,7 @@ ZONE_ERAS_America_Ciudad_Juarez: List[ZoneEra] = [
     #             -7:00    -    MST    1927 Jun 10 23:00
     {
         'offset_seconds': -25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MST',
         'until_year': 1927,
@@ -4771,7 +4772,7 @@ ZONE_ERAS_America_Ciudad_Juarez: List[ZoneEra] = [
     #             -6:00    -    CST    1930 Nov 15
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1930,
@@ -4795,7 +4796,7 @@ ZONE_ERAS_America_Ciudad_Juarez: List[ZoneEra] = [
     #             -6:00    -    CST    1996
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1996,
@@ -4819,7 +4820,7 @@ ZONE_ERAS_America_Ciudad_Juarez: List[ZoneEra] = [
     #             -6:00    -    CST    1998 Apr Sun>=1  3:00
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1998,
@@ -4855,7 +4856,7 @@ ZONE_ERAS_America_Ciudad_Juarez: List[ZoneEra] = [
     #             -6:00    -    CST    2022 Nov 30  0:00
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 2022,
@@ -4893,7 +4894,7 @@ ZONE_ERAS_America_Costa_Rica: List[ZoneEra] = [
     # -5:36:13 - LMT 1890
     {
         'offset_seconds': -20173,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1890,
@@ -4905,7 +4906,7 @@ ZONE_ERAS_America_Costa_Rica: List[ZoneEra] = [
     #             -5:36:13 -    SJMT    1921 Jan 15
     {
         'offset_seconds': -20173,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'SJMT',
         'until_year': 1921,
@@ -4943,7 +4944,7 @@ ZONE_ERAS_America_Cuiaba: List[ZoneEra] = [
     # -3:44:20 - LMT 1914
     {
         'offset_seconds': -13460,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1914,
@@ -4967,7 +4968,7 @@ ZONE_ERAS_America_Cuiaba: List[ZoneEra] = [
     #             -4:00    -    -04    2004 Oct  1
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 2004,
@@ -5005,7 +5006,7 @@ ZONE_ERAS_America_Danmarkshavn: List[ZoneEra] = [
     # -1:14:40 - LMT 1916 Jul 28
     {
         'offset_seconds': -4480,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1916,
@@ -5017,7 +5018,7 @@ ZONE_ERAS_America_Danmarkshavn: List[ZoneEra] = [
     #             -3:00    -    -03    1980 Apr  6  2:00
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 1980,
@@ -5041,7 +5042,7 @@ ZONE_ERAS_America_Danmarkshavn: List[ZoneEra] = [
     #             0:00    -    GMT
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'GMT',
         'until_year': 32767,
@@ -5067,7 +5068,7 @@ ZONE_ERAS_America_Dawson: List[ZoneEra] = [
     # -9:17:40 - LMT 1900 Aug 20
     {
         'offset_seconds': -33460,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1900,
@@ -5103,7 +5104,7 @@ ZONE_ERAS_America_Dawson: List[ZoneEra] = [
     #             -8:00    -    PST    1980
     {
         'offset_seconds': -28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PST',
         'until_year': 1980,
@@ -5127,7 +5128,7 @@ ZONE_ERAS_America_Dawson: List[ZoneEra] = [
     #             -7:00    -    MST
     {
         'offset_seconds': -25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MST',
         'until_year': 32767,
@@ -5153,7 +5154,7 @@ ZONE_ERAS_America_Dawson_Creek: List[ZoneEra] = [
     # -8:00:56 - LMT 1884
     {
         'offset_seconds': -28856,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1884,
@@ -5189,7 +5190,7 @@ ZONE_ERAS_America_Dawson_Creek: List[ZoneEra] = [
     #             -7:00    -    MST
     {
         'offset_seconds': -25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MST',
         'until_year': 32767,
@@ -5215,7 +5216,7 @@ ZONE_ERAS_America_Denver: List[ZoneEra] = [
     # -6:59:56 - LMT 1883 Nov 18 19:00u
     {
         'offset_seconds': -25196,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1883,
@@ -5301,7 +5302,7 @@ ZONE_ERAS_America_Detroit: List[ZoneEra] = [
     # -5:32:11 - LMT 1905
     {
         'offset_seconds': -19931,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1905,
@@ -5313,7 +5314,7 @@ ZONE_ERAS_America_Detroit: List[ZoneEra] = [
     #             -6:00    -    CST    1915 May 15  2:00
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1915,
@@ -5325,7 +5326,7 @@ ZONE_ERAS_America_Detroit: List[ZoneEra] = [
     #             -5:00    -    EST    1942
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 1942,
@@ -5373,7 +5374,7 @@ ZONE_ERAS_America_Detroit: List[ZoneEra] = [
     #             -5:00    -    EST    1973
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 1973,
@@ -5397,7 +5398,7 @@ ZONE_ERAS_America_Detroit: List[ZoneEra] = [
     #             -5:00    -    EST    1975 Apr 27  2:00
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 1975,
@@ -5435,7 +5436,7 @@ ZONE_ERAS_America_Edmonton: List[ZoneEra] = [
     # -7:33:52 - LMT 1906 Sep
     {
         'offset_seconds': -27232,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1906,
@@ -5485,7 +5486,7 @@ ZONE_ERAS_America_Eirunepe: List[ZoneEra] = [
     # -4:39:28 - LMT 1914
     {
         'offset_seconds': -16768,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1914,
@@ -5509,7 +5510,7 @@ ZONE_ERAS_America_Eirunepe: List[ZoneEra] = [
     #             -5:00    -    -05    1993 Sep 28
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-05',
         'until_year': 1993,
@@ -5533,7 +5534,7 @@ ZONE_ERAS_America_Eirunepe: List[ZoneEra] = [
     #             -5:00    -    -05    2008 Jun 24  0:00
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-05',
         'until_year': 2008,
@@ -5545,7 +5546,7 @@ ZONE_ERAS_America_Eirunepe: List[ZoneEra] = [
     #             -4:00    -    -04    2013 Nov 10
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 2013,
@@ -5557,7 +5558,7 @@ ZONE_ERAS_America_Eirunepe: List[ZoneEra] = [
     #             -5:00    -    -05
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-05',
         'until_year': 32767,
@@ -5583,7 +5584,7 @@ ZONE_ERAS_America_El_Salvador: List[ZoneEra] = [
     # -5:56:48 - LMT 1921
     {
         'offset_seconds': -21408,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1921,
@@ -5621,7 +5622,7 @@ ZONE_ERAS_America_Fort_Nelson: List[ZoneEra] = [
     # -8:10:47 - LMT 1884
     {
         'offset_seconds': -29447,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1884,
@@ -5645,7 +5646,7 @@ ZONE_ERAS_America_Fort_Nelson: List[ZoneEra] = [
     #             -8:00    -    PST    1947
     {
         'offset_seconds': -28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PST',
         'until_year': 1947,
@@ -5681,7 +5682,7 @@ ZONE_ERAS_America_Fort_Nelson: List[ZoneEra] = [
     #             -7:00    -    MST
     {
         'offset_seconds': -25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MST',
         'until_year': 32767,
@@ -5707,7 +5708,7 @@ ZONE_ERAS_America_Fortaleza: List[ZoneEra] = [
     # -2:34:00 - LMT 1914
     {
         'offset_seconds': -9240,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1914,
@@ -5731,7 +5732,7 @@ ZONE_ERAS_America_Fortaleza: List[ZoneEra] = [
     #             -3:00    -    -03    1999 Sep 30
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 1999,
@@ -5755,7 +5756,7 @@ ZONE_ERAS_America_Fortaleza: List[ZoneEra] = [
     #             -3:00    -    -03    2001 Sep 13
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 2001,
@@ -5779,7 +5780,7 @@ ZONE_ERAS_America_Fortaleza: List[ZoneEra] = [
     #             -3:00    -    -03
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 32767,
@@ -5805,7 +5806,7 @@ ZONE_ERAS_America_Glace_Bay: List[ZoneEra] = [
     # -3:59:48 - LMT 1902 Jun 15
     {
         'offset_seconds': -14388,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1902,
@@ -5841,7 +5842,7 @@ ZONE_ERAS_America_Glace_Bay: List[ZoneEra] = [
     #             -4:00    -    AST    1972
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'AST',
         'until_year': 1972,
@@ -5891,7 +5892,7 @@ ZONE_ERAS_America_Goose_Bay: List[ZoneEra] = [
     # -4:01:40 - LMT 1884
     {
         'offset_seconds': -14500,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1884,
@@ -5903,7 +5904,7 @@ ZONE_ERAS_America_Goose_Bay: List[ZoneEra] = [
     #             -3:30:52 -    NST    1918
     {
         'offset_seconds': -12652,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'NST',
         'until_year': 1918,
@@ -5927,7 +5928,7 @@ ZONE_ERAS_America_Goose_Bay: List[ZoneEra] = [
     #             -3:30:52 -    NST    1935 Mar 30
     {
         'offset_seconds': -12652,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'NST',
         'until_year': 1935,
@@ -5939,7 +5940,7 @@ ZONE_ERAS_America_Goose_Bay: List[ZoneEra] = [
     #             -3:30    -    NST    1936
     {
         'offset_seconds': -12600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'NST',
         'until_year': 1936,
@@ -6025,7 +6026,7 @@ ZONE_ERAS_America_Grand_Turk: List[ZoneEra] = [
     # -4:44:32 - LMT 1890
     {
         'offset_seconds': -17072,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1890,
@@ -6037,7 +6038,7 @@ ZONE_ERAS_America_Grand_Turk: List[ZoneEra] = [
     #             -5:07:10 -    KMT    1912 Feb
     {
         'offset_seconds': -18430,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'KMT',
         'until_year': 1912,
@@ -6049,7 +6050,7 @@ ZONE_ERAS_America_Grand_Turk: List[ZoneEra] = [
     #             -5:00    -    EST    1979
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 1979,
@@ -6073,7 +6074,7 @@ ZONE_ERAS_America_Grand_Turk: List[ZoneEra] = [
     #             -4:00    -    AST    2018 Mar 11  3:00
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'AST',
         'until_year': 2018,
@@ -6111,7 +6112,7 @@ ZONE_ERAS_America_Guatemala: List[ZoneEra] = [
     # -6:02:04 - LMT 1918 Oct 5
     {
         'offset_seconds': -21724,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1918,
@@ -6149,7 +6150,7 @@ ZONE_ERAS_America_Guayaquil: List[ZoneEra] = [
     # -5:19:20 - LMT 1890
     {
         'offset_seconds': -19160,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1890,
@@ -6161,7 +6162,7 @@ ZONE_ERAS_America_Guayaquil: List[ZoneEra] = [
     #             -5:14:00 -    QMT    1931
     {
         'offset_seconds': -18840,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'QMT',
         'until_year': 1931,
@@ -6199,7 +6200,7 @@ ZONE_ERAS_America_Guyana: List[ZoneEra] = [
     # -3:52:39 - LMT 1911 Aug 1
     {
         'offset_seconds': -13959,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1911,
@@ -6211,7 +6212,7 @@ ZONE_ERAS_America_Guyana: List[ZoneEra] = [
     #             -4:00    -    -04    1915 Mar  1
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1915,
@@ -6223,7 +6224,7 @@ ZONE_ERAS_America_Guyana: List[ZoneEra] = [
     #             -3:45    -    -0345    1975 Aug  1
     {
         'offset_seconds': -13500,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-0345',
         'until_year': 1975,
@@ -6235,7 +6236,7 @@ ZONE_ERAS_America_Guyana: List[ZoneEra] = [
     #             -3:00    -    -03    1992 Mar 29  1:00
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 1992,
@@ -6247,7 +6248,7 @@ ZONE_ERAS_America_Guyana: List[ZoneEra] = [
     #             -4:00    -    -04
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 32767,
@@ -6273,7 +6274,7 @@ ZONE_ERAS_America_Halifax: List[ZoneEra] = [
     # -4:14:24 - LMT 1902 Jun 15
     {
         'offset_seconds': -15264,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1902,
@@ -6371,7 +6372,7 @@ ZONE_ERAS_America_Havana: List[ZoneEra] = [
     # -5:29:28 - LMT 1890
     {
         'offset_seconds': -19768,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1890,
@@ -6383,7 +6384,7 @@ ZONE_ERAS_America_Havana: List[ZoneEra] = [
     #             -5:29:36 -    HMT    1925 Jul 19 12:00
     {
         'offset_seconds': -19776,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'HMT',
         'until_year': 1925,
@@ -6421,7 +6422,7 @@ ZONE_ERAS_America_Hermosillo: List[ZoneEra] = [
     # -7:23:52 - LMT 1922 Jan 1 7:00u
     {
         'offset_seconds': -26632,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1922,
@@ -6433,7 +6434,7 @@ ZONE_ERAS_America_Hermosillo: List[ZoneEra] = [
     #             -7:00    -    MST    1927 Jun 10 23:00
     {
         'offset_seconds': -25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MST',
         'until_year': 1927,
@@ -6445,7 +6446,7 @@ ZONE_ERAS_America_Hermosillo: List[ZoneEra] = [
     #             -6:00    -    CST    1930 Nov 15
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1930,
@@ -6469,7 +6470,7 @@ ZONE_ERAS_America_Hermosillo: List[ZoneEra] = [
     #             -6:00    -    CST    1942 Apr 24
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1942,
@@ -6481,7 +6482,7 @@ ZONE_ERAS_America_Hermosillo: List[ZoneEra] = [
     #             -7:00    -    MST    1949 Jan 14
     {
         'offset_seconds': -25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MST',
         'until_year': 1949,
@@ -6493,7 +6494,7 @@ ZONE_ERAS_America_Hermosillo: List[ZoneEra] = [
     #             -8:00    -    PST    1970
     {
         'offset_seconds': -28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PST',
         'until_year': 1970,
@@ -6517,7 +6518,7 @@ ZONE_ERAS_America_Hermosillo: List[ZoneEra] = [
     #             -7:00    -    MST
     {
         'offset_seconds': -25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MST',
         'until_year': 32767,
@@ -6543,7 +6544,7 @@ ZONE_ERAS_America_Indiana_Indianapolis: List[ZoneEra] = [
     # -5:44:38 - LMT 1883 Nov 18 18:00u
     {
         'offset_seconds': -20678,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1883,
@@ -6603,7 +6604,7 @@ ZONE_ERAS_America_Indiana_Indianapolis: List[ZoneEra] = [
     #             -5:00    -    EST    1957 Sep 29  2:00
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 1957,
@@ -6615,7 +6616,7 @@ ZONE_ERAS_America_Indiana_Indianapolis: List[ZoneEra] = [
     #             -6:00    -    CST    1958 Apr 27  2:00
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1958,
@@ -6627,7 +6628,7 @@ ZONE_ERAS_America_Indiana_Indianapolis: List[ZoneEra] = [
     #             -5:00    -    EST    1969
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 1969,
@@ -6651,7 +6652,7 @@ ZONE_ERAS_America_Indiana_Indianapolis: List[ZoneEra] = [
     #             -5:00    -    EST    2006
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 2006,
@@ -6689,7 +6690,7 @@ ZONE_ERAS_America_Indiana_Knox: List[ZoneEra] = [
     # -5:46:30 - LMT 1883 Nov 18 18:00u
     {
         'offset_seconds': -20790,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1883,
@@ -6725,7 +6726,7 @@ ZONE_ERAS_America_Indiana_Knox: List[ZoneEra] = [
     #             -5:00    -    EST    1963 Oct 27  2:00
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 1963,
@@ -6749,7 +6750,7 @@ ZONE_ERAS_America_Indiana_Knox: List[ZoneEra] = [
     #             -5:00    -    EST    2006 Apr  2  2:00
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 2006,
@@ -6787,7 +6788,7 @@ ZONE_ERAS_America_Indiana_Marengo: List[ZoneEra] = [
     # -5:45:23 - LMT 1883 Nov 18 18:00u
     {
         'offset_seconds': -20723,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1883,
@@ -6823,7 +6824,7 @@ ZONE_ERAS_America_Indiana_Marengo: List[ZoneEra] = [
     #             -5:00    -    EST    1969
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 1969,
@@ -6847,7 +6848,7 @@ ZONE_ERAS_America_Indiana_Marengo: List[ZoneEra] = [
     #             -6:00    1:00    CDT    1974 Oct 27  2:00
     {
         'offset_seconds': -21600,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'CDT',
         'until_year': 1974,
@@ -6871,7 +6872,7 @@ ZONE_ERAS_America_Indiana_Marengo: List[ZoneEra] = [
     #             -5:00    -    EST    2006
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 2006,
@@ -6909,7 +6910,7 @@ ZONE_ERAS_America_Indiana_Petersburg: List[ZoneEra] = [
     # -5:49:07 - LMT 1883 Nov 18 18:00u
     {
         'offset_seconds': -20947,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1883,
@@ -6945,7 +6946,7 @@ ZONE_ERAS_America_Indiana_Petersburg: List[ZoneEra] = [
     #             -5:00    -    EST    1966 Oct 30  2:00
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 1966,
@@ -6969,7 +6970,7 @@ ZONE_ERAS_America_Indiana_Petersburg: List[ZoneEra] = [
     #             -5:00    -    EST    2006 Apr  2  2:00
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 2006,
@@ -7019,7 +7020,7 @@ ZONE_ERAS_America_Indiana_Tell_City: List[ZoneEra] = [
     # -5:47:03 - LMT 1883 Nov 18 18:00u
     {
         'offset_seconds': -20823,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1883,
@@ -7055,7 +7056,7 @@ ZONE_ERAS_America_Indiana_Tell_City: List[ZoneEra] = [
     #             -5:00    -    EST    1967 Oct 29  2:00
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 1967,
@@ -7091,7 +7092,7 @@ ZONE_ERAS_America_Indiana_Tell_City: List[ZoneEra] = [
     #             -5:00    -    EST    2006 Apr  2  2:00
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 2006,
@@ -7129,7 +7130,7 @@ ZONE_ERAS_America_Indiana_Vevay: List[ZoneEra] = [
     # -5:40:16 - LMT 1883 Nov 18 18:00u
     {
         'offset_seconds': -20416,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1883,
@@ -7153,7 +7154,7 @@ ZONE_ERAS_America_Indiana_Vevay: List[ZoneEra] = [
     #             -5:00    -    EST    1969
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 1969,
@@ -7177,7 +7178,7 @@ ZONE_ERAS_America_Indiana_Vevay: List[ZoneEra] = [
     #             -5:00    -    EST    2006
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 2006,
@@ -7215,7 +7216,7 @@ ZONE_ERAS_America_Indiana_Vincennes: List[ZoneEra] = [
     # -5:50:07 - LMT 1883 Nov 18 18:00u
     {
         'offset_seconds': -21007,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1883,
@@ -7251,7 +7252,7 @@ ZONE_ERAS_America_Indiana_Vincennes: List[ZoneEra] = [
     #             -5:00    -    EST    1969
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 1969,
@@ -7275,7 +7276,7 @@ ZONE_ERAS_America_Indiana_Vincennes: List[ZoneEra] = [
     #             -5:00    -    EST    2006 Apr  2  2:00
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 2006,
@@ -7325,7 +7326,7 @@ ZONE_ERAS_America_Indiana_Winamac: List[ZoneEra] = [
     # -5:46:25 - LMT 1883 Nov 18 18:00u
     {
         'offset_seconds': -20785,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1883,
@@ -7361,7 +7362,7 @@ ZONE_ERAS_America_Indiana_Winamac: List[ZoneEra] = [
     #             -5:00    -    EST    1969
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 1969,
@@ -7385,7 +7386,7 @@ ZONE_ERAS_America_Indiana_Winamac: List[ZoneEra] = [
     #             -5:00    -    EST    2006 Apr  2  2:00
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 2006,
@@ -7435,7 +7436,7 @@ ZONE_ERAS_America_Inuvik: List[ZoneEra] = [
     # 0 - -00 1953
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-00',
         'until_year': 1953,
@@ -7497,7 +7498,7 @@ ZONE_ERAS_America_Iqaluit: List[ZoneEra] = [
     # 0 - -00 1942 Aug
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-00',
         'until_year': 1942,
@@ -7559,7 +7560,7 @@ ZONE_ERAS_America_Jamaica: List[ZoneEra] = [
     # -5:07:10 - LMT 1890
     {
         'offset_seconds': -18430,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1890,
@@ -7571,7 +7572,7 @@ ZONE_ERAS_America_Jamaica: List[ZoneEra] = [
     #             -5:07:10 -    KMT    1912 Feb
     {
         'offset_seconds': -18430,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'KMT',
         'until_year': 1912,
@@ -7583,7 +7584,7 @@ ZONE_ERAS_America_Jamaica: List[ZoneEra] = [
     #             -5:00    -    EST    1974
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 1974,
@@ -7607,7 +7608,7 @@ ZONE_ERAS_America_Jamaica: List[ZoneEra] = [
     #             -5:00    -    EST
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 32767,
@@ -7633,7 +7634,7 @@ ZONE_ERAS_America_Juneau: List[ZoneEra] = [
     # 15:02:19 - LMT 1867 Oct 19 15:33:32
     {
         'offset_seconds': 54139,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1867,
@@ -7645,7 +7646,7 @@ ZONE_ERAS_America_Juneau: List[ZoneEra] = [
     #              -8:57:41 -    LMT    1900 Aug 20 12:00
     {
         'offset_seconds': -32261,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1900,
@@ -7657,7 +7658,7 @@ ZONE_ERAS_America_Juneau: List[ZoneEra] = [
     #              -8:00    -    PST    1942
     {
         'offset_seconds': -28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PST',
         'until_year': 1942,
@@ -7681,7 +7682,7 @@ ZONE_ERAS_America_Juneau: List[ZoneEra] = [
     #              -8:00    -    PST    1969
     {
         'offset_seconds': -28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PST',
         'until_year': 1969,
@@ -7767,7 +7768,7 @@ ZONE_ERAS_America_Kentucky_Louisville: List[ZoneEra] = [
     # -5:43:02 - LMT 1883 Nov 18 18:00u
     {
         'offset_seconds': -20582,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1883,
@@ -7827,7 +7828,7 @@ ZONE_ERAS_America_Kentucky_Louisville: List[ZoneEra] = [
     #             -5:00    -    EST    1968
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 1968,
@@ -7851,7 +7852,7 @@ ZONE_ERAS_America_Kentucky_Louisville: List[ZoneEra] = [
     #             -6:00    1:00    CDT    1974 Oct 27  2:00
     {
         'offset_seconds': -21600,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'CDT',
         'until_year': 1974,
@@ -7889,7 +7890,7 @@ ZONE_ERAS_America_Kentucky_Monticello: List[ZoneEra] = [
     # -5:39:24 - LMT 1883 Nov 18 18:00u
     {
         'offset_seconds': -20364,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1883,
@@ -7913,7 +7914,7 @@ ZONE_ERAS_America_Kentucky_Monticello: List[ZoneEra] = [
     #             -6:00    -    CST    1968
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1968,
@@ -7963,7 +7964,7 @@ ZONE_ERAS_America_La_Paz: List[ZoneEra] = [
     # -4:32:36 - LMT 1890
     {
         'offset_seconds': -16356,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1890,
@@ -7975,7 +7976,7 @@ ZONE_ERAS_America_La_Paz: List[ZoneEra] = [
     #             -4:32:36 -    CMT    1931 Oct 15
     {
         'offset_seconds': -16356,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CMT',
         'until_year': 1931,
@@ -7987,7 +7988,7 @@ ZONE_ERAS_America_La_Paz: List[ZoneEra] = [
     #             -4:32:36 1:00    BST    1932 Mar 21
     {
         'offset_seconds': -16356,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'BST',
         'until_year': 1932,
@@ -7999,7 +8000,7 @@ ZONE_ERAS_America_La_Paz: List[ZoneEra] = [
     #             -4:00    -    -04
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 32767,
@@ -8025,7 +8026,7 @@ ZONE_ERAS_America_Lima: List[ZoneEra] = [
     # -5:08:12 - LMT 1890
     {
         'offset_seconds': -18492,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1890,
@@ -8037,7 +8038,7 @@ ZONE_ERAS_America_Lima: List[ZoneEra] = [
     #             -5:08:36 -    LMT    1908 Jul 28
     {
         'offset_seconds': -18516,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1908,
@@ -8075,7 +8076,7 @@ ZONE_ERAS_America_Los_Angeles: List[ZoneEra] = [
     # -7:52:58 - LMT 1883 Nov 18 20:00u
     {
         'offset_seconds': -28378,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1883,
@@ -8137,7 +8138,7 @@ ZONE_ERAS_America_Maceio: List[ZoneEra] = [
     # -2:22:52 - LMT 1914
     {
         'offset_seconds': -8572,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1914,
@@ -8161,7 +8162,7 @@ ZONE_ERAS_America_Maceio: List[ZoneEra] = [
     #             -3:00    -    -03    1995 Oct 13
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 1995,
@@ -8185,7 +8186,7 @@ ZONE_ERAS_America_Maceio: List[ZoneEra] = [
     #             -3:00    -    -03    1999 Sep 30
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 1999,
@@ -8209,7 +8210,7 @@ ZONE_ERAS_America_Maceio: List[ZoneEra] = [
     #             -3:00    -    -03    2001 Sep 13
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 2001,
@@ -8233,7 +8234,7 @@ ZONE_ERAS_America_Maceio: List[ZoneEra] = [
     #             -3:00    -    -03
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 32767,
@@ -8259,7 +8260,7 @@ ZONE_ERAS_America_Managua: List[ZoneEra] = [
     # -5:45:08 - LMT 1890
     {
         'offset_seconds': -20708,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1890,
@@ -8271,7 +8272,7 @@ ZONE_ERAS_America_Managua: List[ZoneEra] = [
     #             -5:45:12 -    MMT    1934 Jun 23
     {
         'offset_seconds': -20712,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MMT',
         'until_year': 1934,
@@ -8283,7 +8284,7 @@ ZONE_ERAS_America_Managua: List[ZoneEra] = [
     #             -6:00    -    CST    1973 May
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1973,
@@ -8295,7 +8296,7 @@ ZONE_ERAS_America_Managua: List[ZoneEra] = [
     #             -5:00    -    EST    1975 Feb 16
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 1975,
@@ -8319,7 +8320,7 @@ ZONE_ERAS_America_Managua: List[ZoneEra] = [
     #             -5:00    -    EST    1992 Sep 24
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 1992,
@@ -8331,7 +8332,7 @@ ZONE_ERAS_America_Managua: List[ZoneEra] = [
     #             -6:00    -    CST    1993
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1993,
@@ -8343,7 +8344,7 @@ ZONE_ERAS_America_Managua: List[ZoneEra] = [
     #             -5:00    -    EST    1997
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 1997,
@@ -8381,7 +8382,7 @@ ZONE_ERAS_America_Manaus: List[ZoneEra] = [
     # -4:00:04 - LMT 1914
     {
         'offset_seconds': -14404,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1914,
@@ -8405,7 +8406,7 @@ ZONE_ERAS_America_Manaus: List[ZoneEra] = [
     #             -4:00    -    -04    1993 Sep 28
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1993,
@@ -8429,7 +8430,7 @@ ZONE_ERAS_America_Manaus: List[ZoneEra] = [
     #             -4:00    -    -04
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 32767,
@@ -8455,7 +8456,7 @@ ZONE_ERAS_America_Martinique: List[ZoneEra] = [
     # -4:04:20 - LMT 1890
     {
         'offset_seconds': -14660,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1890,
@@ -8467,7 +8468,7 @@ ZONE_ERAS_America_Martinique: List[ZoneEra] = [
     #             -4:04:20 -    FFMT    1911 May
     {
         'offset_seconds': -14660,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'FFMT',
         'until_year': 1911,
@@ -8479,7 +8480,7 @@ ZONE_ERAS_America_Martinique: List[ZoneEra] = [
     #             -4:00    -    AST    1980 Apr  6
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'AST',
         'until_year': 1980,
@@ -8491,7 +8492,7 @@ ZONE_ERAS_America_Martinique: List[ZoneEra] = [
     #             -4:00    1:00    ADT    1980 Sep 28
     {
         'offset_seconds': -14400,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'ADT',
         'until_year': 1980,
@@ -8503,7 +8504,7 @@ ZONE_ERAS_America_Martinique: List[ZoneEra] = [
     #             -4:00    -    AST
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'AST',
         'until_year': 32767,
@@ -8529,7 +8530,7 @@ ZONE_ERAS_America_Matamoros: List[ZoneEra] = [
     # -6:30:00 - LMT 1922 Jan 1 6:00u
     {
         'offset_seconds': -23400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1922,
@@ -8541,7 +8542,7 @@ ZONE_ERAS_America_Matamoros: List[ZoneEra] = [
     #             -6:00    -    CST    1988
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1988,
@@ -8603,7 +8604,7 @@ ZONE_ERAS_America_Mazatlan: List[ZoneEra] = [
     # -7:05:40 - LMT 1922 Jan 1 7:00u
     {
         'offset_seconds': -25540,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1922,
@@ -8615,7 +8616,7 @@ ZONE_ERAS_America_Mazatlan: List[ZoneEra] = [
     #             -7:00    -    MST    1927 Jun 10 23:00
     {
         'offset_seconds': -25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MST',
         'until_year': 1927,
@@ -8627,7 +8628,7 @@ ZONE_ERAS_America_Mazatlan: List[ZoneEra] = [
     #             -6:00    -    CST    1930 Nov 15
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1930,
@@ -8651,7 +8652,7 @@ ZONE_ERAS_America_Mazatlan: List[ZoneEra] = [
     #             -6:00    -    CST    1942 Apr 24
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1942,
@@ -8663,7 +8664,7 @@ ZONE_ERAS_America_Mazatlan: List[ZoneEra] = [
     #             -7:00    -    MST    1949 Jan 14
     {
         'offset_seconds': -25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MST',
         'until_year': 1949,
@@ -8675,7 +8676,7 @@ ZONE_ERAS_America_Mazatlan: List[ZoneEra] = [
     #             -8:00    -    PST    1970
     {
         'offset_seconds': -28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PST',
         'until_year': 1970,
@@ -8713,7 +8714,7 @@ ZONE_ERAS_America_Menominee: List[ZoneEra] = [
     # -5:50:27 - LMT 1885 Sep 18 12:00
     {
         'offset_seconds': -21027,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1885,
@@ -8749,7 +8750,7 @@ ZONE_ERAS_America_Menominee: List[ZoneEra] = [
     #             -5:00    -    EST    1973 Apr 29  2:00
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 1973,
@@ -8787,7 +8788,7 @@ ZONE_ERAS_America_Merida: List[ZoneEra] = [
     # -5:58:28 - LMT 1922 Jan 1 6:00u
     {
         'offset_seconds': -21508,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1922,
@@ -8799,7 +8800,7 @@ ZONE_ERAS_America_Merida: List[ZoneEra] = [
     #             -6:00    -    CST    1981 Dec 23
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1981,
@@ -8811,7 +8812,7 @@ ZONE_ERAS_America_Merida: List[ZoneEra] = [
     #             -5:00    -    EST    1982 Dec  2
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 1982,
@@ -8849,7 +8850,7 @@ ZONE_ERAS_America_Metlakatla: List[ZoneEra] = [
     # 15:13:42 - LMT 1867 Oct 19 15:44:55
     {
         'offset_seconds': 54822,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1867,
@@ -8861,7 +8862,7 @@ ZONE_ERAS_America_Metlakatla: List[ZoneEra] = [
     #              -8:46:18 -    LMT    1900 Aug 20 12:00
     {
         'offset_seconds': -31578,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1900,
@@ -8873,7 +8874,7 @@ ZONE_ERAS_America_Metlakatla: List[ZoneEra] = [
     #              -8:00    -    PST    1942
     {
         'offset_seconds': -28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PST',
         'until_year': 1942,
@@ -8897,7 +8898,7 @@ ZONE_ERAS_America_Metlakatla: List[ZoneEra] = [
     #              -8:00    -    PST    1969
     {
         'offset_seconds': -28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PST',
         'until_year': 1969,
@@ -8921,7 +8922,7 @@ ZONE_ERAS_America_Metlakatla: List[ZoneEra] = [
     #              -8:00    -    PST    2015 Nov  1  2:00
     {
         'offset_seconds': -28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PST',
         'until_year': 2015,
@@ -8945,7 +8946,7 @@ ZONE_ERAS_America_Metlakatla: List[ZoneEra] = [
     #              -8:00    -    PST    2019 Jan 20  2:00
     {
         'offset_seconds': -28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PST',
         'until_year': 2019,
@@ -8983,7 +8984,7 @@ ZONE_ERAS_America_Mexico_City: List[ZoneEra] = [
     # -6:36:36 - LMT 1922 Jan 1 7:00u
     {
         'offset_seconds': -23796,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1922,
@@ -8995,7 +8996,7 @@ ZONE_ERAS_America_Mexico_City: List[ZoneEra] = [
     #             -7:00    -    MST    1927 Jun 10 23:00
     {
         'offset_seconds': -25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MST',
         'until_year': 1927,
@@ -9007,7 +9008,7 @@ ZONE_ERAS_America_Mexico_City: List[ZoneEra] = [
     #             -6:00    -    CST    1930 Nov 15
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1930,
@@ -9043,7 +9044,7 @@ ZONE_ERAS_America_Mexico_City: List[ZoneEra] = [
     #             -6:00    -    CST    2002 Feb 20
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 2002,
@@ -9081,7 +9082,7 @@ ZONE_ERAS_America_Miquelon: List[ZoneEra] = [
     # -3:44:40 - LMT 1911 May 15
     {
         'offset_seconds': -13480,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1911,
@@ -9093,7 +9094,7 @@ ZONE_ERAS_America_Miquelon: List[ZoneEra] = [
     #             -4:00    -    AST    1980 May
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'AST',
         'until_year': 1980,
@@ -9105,7 +9106,7 @@ ZONE_ERAS_America_Miquelon: List[ZoneEra] = [
     #             -3:00    -    -03    1987
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 1987,
@@ -9143,7 +9144,7 @@ ZONE_ERAS_America_Moncton: List[ZoneEra] = [
     # -4:19:08 - LMT 1883 Dec 9
     {
         'offset_seconds': -15548,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1883,
@@ -9155,7 +9156,7 @@ ZONE_ERAS_America_Moncton: List[ZoneEra] = [
     #             -5:00    -    EST    1902 Jun 15
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 1902,
@@ -9265,7 +9266,7 @@ ZONE_ERAS_America_Monterrey: List[ZoneEra] = [
     # -6:41:16 - LMT 1922 Jan 1 6:00u
     {
         'offset_seconds': -24076,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1922,
@@ -9277,7 +9278,7 @@ ZONE_ERAS_America_Monterrey: List[ZoneEra] = [
     #             -6:00    -    CST    1988
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1988,
@@ -9327,7 +9328,7 @@ ZONE_ERAS_America_Montevideo: List[ZoneEra] = [
     # -3:44:51 - LMT 1908 Jun 10
     {
         'offset_seconds': -13491,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1908,
@@ -9339,7 +9340,7 @@ ZONE_ERAS_America_Montevideo: List[ZoneEra] = [
     #             -3:44:51 -    MMT    1920 May  1
     {
         'offset_seconds': -13491,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MMT',
         'until_year': 1920,
@@ -9351,7 +9352,7 @@ ZONE_ERAS_America_Montevideo: List[ZoneEra] = [
     #             -4:00    -    -04    1923 Oct  1
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1923,
@@ -9473,7 +9474,7 @@ ZONE_ERAS_America_New_York: List[ZoneEra] = [
     # -4:56:02 - LMT 1883 Nov 18 17:00u
     {
         'offset_seconds': -17762,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1883,
@@ -9559,7 +9560,7 @@ ZONE_ERAS_America_Nome: List[ZoneEra] = [
     # 12:58:22 - LMT 1867 Oct 19 13:29:35
     {
         'offset_seconds': 46702,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1867,
@@ -9571,7 +9572,7 @@ ZONE_ERAS_America_Nome: List[ZoneEra] = [
     #             -11:01:38 -    LMT    1900 Aug 20 12:00
     {
         'offset_seconds': -39698,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1900,
@@ -9583,7 +9584,7 @@ ZONE_ERAS_America_Nome: List[ZoneEra] = [
     #             -11:00    -    NST    1942
     {
         'offset_seconds': -39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'NST',
         'until_year': 1942,
@@ -9607,7 +9608,7 @@ ZONE_ERAS_America_Nome: List[ZoneEra] = [
     #             -11:00    -    NST    1967 Apr
     {
         'offset_seconds': -39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'NST',
         'until_year': 1967,
@@ -9619,7 +9620,7 @@ ZONE_ERAS_America_Nome: List[ZoneEra] = [
     #             -11:00    -    BST    1969
     {
         'offset_seconds': -39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'BST',
         'until_year': 1969,
@@ -9681,7 +9682,7 @@ ZONE_ERAS_America_Noronha: List[ZoneEra] = [
     # -2:09:40 - LMT 1914
     {
         'offset_seconds': -7780,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1914,
@@ -9705,7 +9706,7 @@ ZONE_ERAS_America_Noronha: List[ZoneEra] = [
     #             -2:00    -    -02    1999 Sep 30
     {
         'offset_seconds': -7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-02',
         'until_year': 1999,
@@ -9729,7 +9730,7 @@ ZONE_ERAS_America_Noronha: List[ZoneEra] = [
     #             -2:00    -    -02    2001 Sep 13
     {
         'offset_seconds': -7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-02',
         'until_year': 2001,
@@ -9753,7 +9754,7 @@ ZONE_ERAS_America_Noronha: List[ZoneEra] = [
     #             -2:00    -    -02
     {
         'offset_seconds': -7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-02',
         'until_year': 32767,
@@ -9779,7 +9780,7 @@ ZONE_ERAS_America_North_Dakota_Beulah: List[ZoneEra] = [
     # -6:47:07 - LMT 1883 Nov 18 19:00u
     {
         'offset_seconds': -24427,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1883,
@@ -9829,7 +9830,7 @@ ZONE_ERAS_America_North_Dakota_Center: List[ZoneEra] = [
     # -6:45:12 - LMT 1883 Nov 18 19:00u
     {
         'offset_seconds': -24312,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1883,
@@ -9879,7 +9880,7 @@ ZONE_ERAS_America_North_Dakota_New_Salem: List[ZoneEra] = [
     # -6:45:39 - LMT 1883 Nov 18 19:00u
     {
         'offset_seconds': -24339,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1883,
@@ -9929,7 +9930,7 @@ ZONE_ERAS_America_Nuuk: List[ZoneEra] = [
     # -3:26:56 - LMT 1916 Jul 28
     {
         'offset_seconds': -12416,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1916,
@@ -9941,7 +9942,7 @@ ZONE_ERAS_America_Nuuk: List[ZoneEra] = [
     #             -3:00    -    -03    1980 Apr  6  2:00
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 1980,
@@ -9965,7 +9966,7 @@ ZONE_ERAS_America_Nuuk: List[ZoneEra] = [
     #             -2:00    -    -02
     {
         'offset_seconds': -7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-02',
         'until_year': 32767,
@@ -9991,7 +9992,7 @@ ZONE_ERAS_America_Ojinaga: List[ZoneEra] = [
     # -6:57:40 - LMT 1922 Jan 1 7:00u
     {
         'offset_seconds': -25060,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1922,
@@ -10003,7 +10004,7 @@ ZONE_ERAS_America_Ojinaga: List[ZoneEra] = [
     #             -7:00    -    MST    1927 Jun 10 23:00
     {
         'offset_seconds': -25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MST',
         'until_year': 1927,
@@ -10015,7 +10016,7 @@ ZONE_ERAS_America_Ojinaga: List[ZoneEra] = [
     #             -6:00    -    CST    1930 Nov 15
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1930,
@@ -10039,7 +10040,7 @@ ZONE_ERAS_America_Ojinaga: List[ZoneEra] = [
     #             -6:00    -    CST    1996
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1996,
@@ -10063,7 +10064,7 @@ ZONE_ERAS_America_Ojinaga: List[ZoneEra] = [
     #             -6:00    -    CST    1998 Apr Sun>=1  3:00
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1998,
@@ -10099,7 +10100,7 @@ ZONE_ERAS_America_Ojinaga: List[ZoneEra] = [
     #             -6:00    -    CST    2022 Nov 30  0:00
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 2022,
@@ -10137,7 +10138,7 @@ ZONE_ERAS_America_Panama: List[ZoneEra] = [
     # -5:18:08 - LMT 1890
     {
         'offset_seconds': -19088,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1890,
@@ -10149,7 +10150,7 @@ ZONE_ERAS_America_Panama: List[ZoneEra] = [
     #             -5:19:36 -    CMT    1908 Apr 22
     {
         'offset_seconds': -19176,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CMT',
         'until_year': 1908,
@@ -10161,7 +10162,7 @@ ZONE_ERAS_America_Panama: List[ZoneEra] = [
     #             -5:00    -    EST
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 32767,
@@ -10187,7 +10188,7 @@ ZONE_ERAS_America_Paramaribo: List[ZoneEra] = [
     # -3:40:40 - LMT 1911
     {
         'offset_seconds': -13240,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1911,
@@ -10199,7 +10200,7 @@ ZONE_ERAS_America_Paramaribo: List[ZoneEra] = [
     #             -3:40:52 -    PMT    1935
     {
         'offset_seconds': -13252,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PMT',
         'until_year': 1935,
@@ -10211,7 +10212,7 @@ ZONE_ERAS_America_Paramaribo: List[ZoneEra] = [
     #             -3:40:36 -    PMT    1945 Oct
     {
         'offset_seconds': -13236,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PMT',
         'until_year': 1945,
@@ -10223,7 +10224,7 @@ ZONE_ERAS_America_Paramaribo: List[ZoneEra] = [
     #             -3:30    -    -0330    1984 Oct
     {
         'offset_seconds': -12600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-0330',
         'until_year': 1984,
@@ -10235,7 +10236,7 @@ ZONE_ERAS_America_Paramaribo: List[ZoneEra] = [
     #             -3:00    -    -03
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 32767,
@@ -10261,7 +10262,7 @@ ZONE_ERAS_America_Phoenix: List[ZoneEra] = [
     # -7:28:18 - LMT 1883 Nov 18 19:00u
     {
         'offset_seconds': -26898,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1883,
@@ -10285,7 +10286,7 @@ ZONE_ERAS_America_Phoenix: List[ZoneEra] = [
     #             -7:00    -    MST    1944 Apr  1  0:01
     {
         'offset_seconds': -25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MST',
         'until_year': 1944,
@@ -10309,7 +10310,7 @@ ZONE_ERAS_America_Phoenix: List[ZoneEra] = [
     #             -7:00    -    MST    1967
     {
         'offset_seconds': -25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MST',
         'until_year': 1967,
@@ -10333,7 +10334,7 @@ ZONE_ERAS_America_Phoenix: List[ZoneEra] = [
     #             -7:00    -    MST
     {
         'offset_seconds': -25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MST',
         'until_year': 32767,
@@ -10359,7 +10360,7 @@ ZONE_ERAS_America_Port_au_Prince: List[ZoneEra] = [
     # -4:49:20 - LMT 1890
     {
         'offset_seconds': -17360,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1890,
@@ -10371,7 +10372,7 @@ ZONE_ERAS_America_Port_au_Prince: List[ZoneEra] = [
     #             -4:49    -    PPMT    1917 Jan 24 12:00
     {
         'offset_seconds': -17340,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PPMT',
         'until_year': 1917,
@@ -10409,7 +10410,7 @@ ZONE_ERAS_America_Porto_Velho: List[ZoneEra] = [
     # -4:15:36 - LMT 1914
     {
         'offset_seconds': -15336,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1914,
@@ -10433,7 +10434,7 @@ ZONE_ERAS_America_Porto_Velho: List[ZoneEra] = [
     #             -4:00    -    -04
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 32767,
@@ -10459,7 +10460,7 @@ ZONE_ERAS_America_Puerto_Rico: List[ZoneEra] = [
     # -4:24:25 - LMT 1899 Mar 28 12:00
     {
         'offset_seconds': -15865,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1899,
@@ -10471,7 +10472,7 @@ ZONE_ERAS_America_Puerto_Rico: List[ZoneEra] = [
     #             -4:00    -    AST    1942 May  3
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'AST',
         'until_year': 1942,
@@ -10495,7 +10496,7 @@ ZONE_ERAS_America_Puerto_Rico: List[ZoneEra] = [
     #             -4:00    -    AST
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'AST',
         'until_year': 32767,
@@ -10521,7 +10522,7 @@ ZONE_ERAS_America_Punta_Arenas: List[ZoneEra] = [
     # -4:43:40 - LMT 1890
     {
         'offset_seconds': -17020,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1890,
@@ -10533,7 +10534,7 @@ ZONE_ERAS_America_Punta_Arenas: List[ZoneEra] = [
     #             -4:42:45 -    SMT    1910 Jan 10
     {
         'offset_seconds': -16965,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'SMT',
         'until_year': 1910,
@@ -10545,7 +10546,7 @@ ZONE_ERAS_America_Punta_Arenas: List[ZoneEra] = [
     #             -5:00    -    -05    1916 Jul  1
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-05',
         'until_year': 1916,
@@ -10557,7 +10558,7 @@ ZONE_ERAS_America_Punta_Arenas: List[ZoneEra] = [
     #             -4:42:45 -    SMT    1918 Sep 10
     {
         'offset_seconds': -16965,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'SMT',
         'until_year': 1918,
@@ -10569,7 +10570,7 @@ ZONE_ERAS_America_Punta_Arenas: List[ZoneEra] = [
     #             -4:00    -    -04    1919 Jul  1
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1919,
@@ -10581,7 +10582,7 @@ ZONE_ERAS_America_Punta_Arenas: List[ZoneEra] = [
     #             -4:42:45 -    SMT    1927 Sep  1
     {
         'offset_seconds': -16965,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'SMT',
         'until_year': 1927,
@@ -10605,7 +10606,7 @@ ZONE_ERAS_America_Punta_Arenas: List[ZoneEra] = [
     #             -4:00    -    -04    1942 Jun  1
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1942,
@@ -10617,7 +10618,7 @@ ZONE_ERAS_America_Punta_Arenas: List[ZoneEra] = [
     #             -5:00    -    -05    1942 Aug  1
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-05',
         'until_year': 1942,
@@ -10629,7 +10630,7 @@ ZONE_ERAS_America_Punta_Arenas: List[ZoneEra] = [
     #             -4:00    -    -04    1946 Aug 28 24:00
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1946,
@@ -10641,7 +10642,7 @@ ZONE_ERAS_America_Punta_Arenas: List[ZoneEra] = [
     #             -5:00    1:00    -04    1947 Mar 31 24:00
     {
         'offset_seconds': -18000,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': '-04',
         'until_year': 1947,
@@ -10653,7 +10654,7 @@ ZONE_ERAS_America_Punta_Arenas: List[ZoneEra] = [
     #             -5:00    -    -05    1947 May 21 23:00
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-05',
         'until_year': 1947,
@@ -10677,7 +10678,7 @@ ZONE_ERAS_America_Punta_Arenas: List[ZoneEra] = [
     #             -3:00    -    -03
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 32767,
@@ -10703,7 +10704,7 @@ ZONE_ERAS_America_Rankin_Inlet: List[ZoneEra] = [
     # 0 - -00 1957
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-00',
         'until_year': 1957,
@@ -10727,7 +10728,7 @@ ZONE_ERAS_America_Rankin_Inlet: List[ZoneEra] = [
     #             -5:00    -    EST    2001 Apr  1  3:00
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 2001,
@@ -10765,7 +10766,7 @@ ZONE_ERAS_America_Recife: List[ZoneEra] = [
     # -2:19:36 - LMT 1914
     {
         'offset_seconds': -8376,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1914,
@@ -10789,7 +10790,7 @@ ZONE_ERAS_America_Recife: List[ZoneEra] = [
     #             -3:00    -    -03    1999 Sep 30
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 1999,
@@ -10813,7 +10814,7 @@ ZONE_ERAS_America_Recife: List[ZoneEra] = [
     #             -3:00    -    -03    2001 Sep 13
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 2001,
@@ -10837,7 +10838,7 @@ ZONE_ERAS_America_Recife: List[ZoneEra] = [
     #             -3:00    -    -03
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 32767,
@@ -10863,7 +10864,7 @@ ZONE_ERAS_America_Regina: List[ZoneEra] = [
     # -6:58:36 - LMT 1905 Sep
     {
         'offset_seconds': -25116,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1905,
@@ -10887,7 +10888,7 @@ ZONE_ERAS_America_Regina: List[ZoneEra] = [
     #             -6:00    -    CST
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 32767,
@@ -10913,7 +10914,7 @@ ZONE_ERAS_America_Resolute: List[ZoneEra] = [
     # 0 - -00 1947 Aug 31
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-00',
         'until_year': 1947,
@@ -10937,7 +10938,7 @@ ZONE_ERAS_America_Resolute: List[ZoneEra] = [
     #             -5:00    -    EST    2001 Apr  1  3:00
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 2001,
@@ -10961,7 +10962,7 @@ ZONE_ERAS_America_Resolute: List[ZoneEra] = [
     #             -5:00    -    EST    2007 Mar 11  3:00
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 2007,
@@ -10999,7 +11000,7 @@ ZONE_ERAS_America_Rio_Branco: List[ZoneEra] = [
     # -4:31:12 - LMT 1914
     {
         'offset_seconds': -16272,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1914,
@@ -11023,7 +11024,7 @@ ZONE_ERAS_America_Rio_Branco: List[ZoneEra] = [
     #             -5:00    -    -05    2008 Jun 24  0:00
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-05',
         'until_year': 2008,
@@ -11035,7 +11036,7 @@ ZONE_ERAS_America_Rio_Branco: List[ZoneEra] = [
     #             -4:00    -    -04    2013 Nov 10
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 2013,
@@ -11047,7 +11048,7 @@ ZONE_ERAS_America_Rio_Branco: List[ZoneEra] = [
     #             -5:00    -    -05
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-05',
         'until_year': 32767,
@@ -11073,7 +11074,7 @@ ZONE_ERAS_America_Santarem: List[ZoneEra] = [
     # -3:38:48 - LMT 1914
     {
         'offset_seconds': -13128,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1914,
@@ -11097,7 +11098,7 @@ ZONE_ERAS_America_Santarem: List[ZoneEra] = [
     #             -4:00    -    -04    2008 Jun 24  0:00
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 2008,
@@ -11109,7 +11110,7 @@ ZONE_ERAS_America_Santarem: List[ZoneEra] = [
     #             -3:00    -    -03
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 32767,
@@ -11135,7 +11136,7 @@ ZONE_ERAS_America_Santiago: List[ZoneEra] = [
     # -4:42:45 - LMT 1890
     {
         'offset_seconds': -16965,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1890,
@@ -11147,7 +11148,7 @@ ZONE_ERAS_America_Santiago: List[ZoneEra] = [
     #             -4:42:45 -    SMT    1910 Jan 10
     {
         'offset_seconds': -16965,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'SMT',
         'until_year': 1910,
@@ -11159,7 +11160,7 @@ ZONE_ERAS_America_Santiago: List[ZoneEra] = [
     #             -5:00    -    -05    1916 Jul  1
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-05',
         'until_year': 1916,
@@ -11171,7 +11172,7 @@ ZONE_ERAS_America_Santiago: List[ZoneEra] = [
     #             -4:42:45 -    SMT    1918 Sep 10
     {
         'offset_seconds': -16965,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'SMT',
         'until_year': 1918,
@@ -11183,7 +11184,7 @@ ZONE_ERAS_America_Santiago: List[ZoneEra] = [
     #             -4:00    -    -04    1919 Jul  1
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1919,
@@ -11195,7 +11196,7 @@ ZONE_ERAS_America_Santiago: List[ZoneEra] = [
     #             -4:42:45 -    SMT    1927 Sep  1
     {
         'offset_seconds': -16965,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'SMT',
         'until_year': 1927,
@@ -11219,7 +11220,7 @@ ZONE_ERAS_America_Santiago: List[ZoneEra] = [
     #             -4:00    -    -04    1942 Jun  1
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1942,
@@ -11231,7 +11232,7 @@ ZONE_ERAS_America_Santiago: List[ZoneEra] = [
     #             -5:00    -    -05    1942 Aug  1
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-05',
         'until_year': 1942,
@@ -11243,7 +11244,7 @@ ZONE_ERAS_America_Santiago: List[ZoneEra] = [
     #             -4:00    -    -04    1946 Jul 14 24:00
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 1946,
@@ -11255,7 +11256,7 @@ ZONE_ERAS_America_Santiago: List[ZoneEra] = [
     #             -4:00    1:00    -03    1946 Aug 28 24:00
     {
         'offset_seconds': -14400,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': '-03',
         'until_year': 1946,
@@ -11267,7 +11268,7 @@ ZONE_ERAS_America_Santiago: List[ZoneEra] = [
     #             -5:00    1:00    -04    1947 Mar 31 24:00
     {
         'offset_seconds': -18000,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': '-04',
         'until_year': 1947,
@@ -11279,7 +11280,7 @@ ZONE_ERAS_America_Santiago: List[ZoneEra] = [
     #             -5:00    -    -05    1947 May 21 23:00
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-05',
         'until_year': 1947,
@@ -11317,7 +11318,7 @@ ZONE_ERAS_America_Santo_Domingo: List[ZoneEra] = [
     # -4:39:36 - LMT 1890
     {
         'offset_seconds': -16776,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1890,
@@ -11329,7 +11330,7 @@ ZONE_ERAS_America_Santo_Domingo: List[ZoneEra] = [
     #             -4:40    -    SDMT    1933 Apr  1 12:00
     {
         'offset_seconds': -16800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'SDMT',
         'until_year': 1933,
@@ -11353,7 +11354,7 @@ ZONE_ERAS_America_Santo_Domingo: List[ZoneEra] = [
     #             -4:00    -    AST    2000 Oct 29  2:00
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'AST',
         'until_year': 2000,
@@ -11377,7 +11378,7 @@ ZONE_ERAS_America_Santo_Domingo: List[ZoneEra] = [
     #             -4:00    -    AST
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'AST',
         'until_year': 32767,
@@ -11403,7 +11404,7 @@ ZONE_ERAS_America_Sao_Paulo: List[ZoneEra] = [
     # -3:06:28 - LMT 1914
     {
         'offset_seconds': -11188,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1914,
@@ -11427,7 +11428,7 @@ ZONE_ERAS_America_Sao_Paulo: List[ZoneEra] = [
     #             -3:00    1:00    -02    1964
     {
         'offset_seconds': -10800,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': '-02',
         'until_year': 1964,
@@ -11465,7 +11466,7 @@ ZONE_ERAS_America_Scoresbysund: List[ZoneEra] = [
     # -1:27:52 - LMT 1916 Jul 28
     {
         'offset_seconds': -5272,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1916,
@@ -11477,7 +11478,7 @@ ZONE_ERAS_America_Scoresbysund: List[ZoneEra] = [
     #             -2:00    -    -02    1980 Apr  6  2:00
     {
         'offset_seconds': -7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-02',
         'until_year': 1980,
@@ -11527,7 +11528,7 @@ ZONE_ERAS_America_Sitka: List[ZoneEra] = [
     # 14:58:47 - LMT 1867 Oct 19 15:30
     {
         'offset_seconds': 53927,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1867,
@@ -11539,7 +11540,7 @@ ZONE_ERAS_America_Sitka: List[ZoneEra] = [
     #              -9:01:13 -    LMT    1900 Aug 20 12:00
     {
         'offset_seconds': -32473,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1900,
@@ -11551,7 +11552,7 @@ ZONE_ERAS_America_Sitka: List[ZoneEra] = [
     #              -8:00    -    PST    1942
     {
         'offset_seconds': -28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PST',
         'until_year': 1942,
@@ -11575,7 +11576,7 @@ ZONE_ERAS_America_Sitka: List[ZoneEra] = [
     #              -8:00    -    PST    1969
     {
         'offset_seconds': -28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PST',
         'until_year': 1969,
@@ -11637,7 +11638,7 @@ ZONE_ERAS_America_St_Johns: List[ZoneEra] = [
     # -3:30:52 - LMT 1884
     {
         'offset_seconds': -12652,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1884,
@@ -11747,7 +11748,7 @@ ZONE_ERAS_America_Swift_Current: List[ZoneEra] = [
     # -7:11:20 - LMT 1905 Sep
     {
         'offset_seconds': -25880,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1905,
@@ -11795,7 +11796,7 @@ ZONE_ERAS_America_Swift_Current: List[ZoneEra] = [
     #             -6:00    -    CST
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 32767,
@@ -11821,7 +11822,7 @@ ZONE_ERAS_America_Tegucigalpa: List[ZoneEra] = [
     # -5:48:52 - LMT 1921 Apr
     {
         'offset_seconds': -20932,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1921,
@@ -11859,7 +11860,7 @@ ZONE_ERAS_America_Thule: List[ZoneEra] = [
     # -4:35:08 - LMT 1916 Jul 28
     {
         'offset_seconds': -16508,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1916,
@@ -11897,7 +11898,7 @@ ZONE_ERAS_America_Tijuana: List[ZoneEra] = [
     # -7:48:04 - LMT 1922 Jan 1 7:00u
     {
         'offset_seconds': -28084,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1922,
@@ -11909,7 +11910,7 @@ ZONE_ERAS_America_Tijuana: List[ZoneEra] = [
     #             -7:00    -    MST    1924
     {
         'offset_seconds': -25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MST',
         'until_year': 1924,
@@ -11921,7 +11922,7 @@ ZONE_ERAS_America_Tijuana: List[ZoneEra] = [
     #             -8:00    -    PST    1927 Jun 10 23:00
     {
         'offset_seconds': -28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PST',
         'until_year': 1927,
@@ -11933,7 +11934,7 @@ ZONE_ERAS_America_Tijuana: List[ZoneEra] = [
     #             -7:00    -    MST    1930 Nov 15
     {
         'offset_seconds': -25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MST',
         'until_year': 1930,
@@ -11945,7 +11946,7 @@ ZONE_ERAS_America_Tijuana: List[ZoneEra] = [
     #             -8:00    -    PST    1931 Apr  1
     {
         'offset_seconds': -28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PST',
         'until_year': 1931,
@@ -11957,7 +11958,7 @@ ZONE_ERAS_America_Tijuana: List[ZoneEra] = [
     #             -8:00    1:00    PDT    1931 Sep 30
     {
         'offset_seconds': -28800,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'PDT',
         'until_year': 1931,
@@ -11969,7 +11970,7 @@ ZONE_ERAS_America_Tijuana: List[ZoneEra] = [
     #             -8:00    -    PST    1942 Apr 24
     {
         'offset_seconds': -28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PST',
         'until_year': 1942,
@@ -11981,7 +11982,7 @@ ZONE_ERAS_America_Tijuana: List[ZoneEra] = [
     #             -8:00    1:00    PWT    1945 Aug 14 23:00u
     {
         'offset_seconds': -28800,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'PWT',
         'until_year': 1945,
@@ -11993,7 +11994,7 @@ ZONE_ERAS_America_Tijuana: List[ZoneEra] = [
     #             -8:00    1:00    PPT    1945 Nov 12
     {
         'offset_seconds': -28800,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'PPT',
         'until_year': 1945,
@@ -12005,7 +12006,7 @@ ZONE_ERAS_America_Tijuana: List[ZoneEra] = [
     #             -8:00    -    PST    1948 Apr  5
     {
         'offset_seconds': -28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PST',
         'until_year': 1948,
@@ -12017,7 +12018,7 @@ ZONE_ERAS_America_Tijuana: List[ZoneEra] = [
     #             -8:00    1:00    PDT    1949 Jan 14
     {
         'offset_seconds': -28800,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'PDT',
         'until_year': 1949,
@@ -12029,7 +12030,7 @@ ZONE_ERAS_America_Tijuana: List[ZoneEra] = [
     #             -8:00    -    PST    1954
     {
         'offset_seconds': -28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PST',
         'until_year': 1954,
@@ -12053,7 +12054,7 @@ ZONE_ERAS_America_Tijuana: List[ZoneEra] = [
     #             -8:00    -    PST    1976
     {
         'offset_seconds': -28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PST',
         'until_year': 1976,
@@ -12139,7 +12140,7 @@ ZONE_ERAS_America_Toronto: List[ZoneEra] = [
     # -5:17:32 - LMT 1895
     {
         'offset_seconds': -19052,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1895,
@@ -12225,7 +12226,7 @@ ZONE_ERAS_America_Vancouver: List[ZoneEra] = [
     # -8:12:28 - LMT 1884
     {
         'offset_seconds': -29548,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1884,
@@ -12275,7 +12276,7 @@ ZONE_ERAS_America_Whitehorse: List[ZoneEra] = [
     # -9:00:12 - LMT 1900 Aug 20
     {
         'offset_seconds': -32412,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1900,
@@ -12311,7 +12312,7 @@ ZONE_ERAS_America_Whitehorse: List[ZoneEra] = [
     #             -8:00    -    PST    1980
     {
         'offset_seconds': -28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PST',
         'until_year': 1980,
@@ -12335,7 +12336,7 @@ ZONE_ERAS_America_Whitehorse: List[ZoneEra] = [
     #             -7:00    -    MST
     {
         'offset_seconds': -25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MST',
         'until_year': 32767,
@@ -12361,7 +12362,7 @@ ZONE_ERAS_America_Winnipeg: List[ZoneEra] = [
     # -6:28:36 - LMT 1887 Jul 16
     {
         'offset_seconds': -23316,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1887,
@@ -12411,7 +12412,7 @@ ZONE_ERAS_America_Yakutat: List[ZoneEra] = [
     # 14:41:05 - LMT 1867 Oct 19 15:12:18
     {
         'offset_seconds': 52865,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1867,
@@ -12423,7 +12424,7 @@ ZONE_ERAS_America_Yakutat: List[ZoneEra] = [
     #              -9:18:55 -    LMT    1900 Aug 20 12:00
     {
         'offset_seconds': -33535,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1900,
@@ -12435,7 +12436,7 @@ ZONE_ERAS_America_Yakutat: List[ZoneEra] = [
     #              -9:00    -    YST    1942
     {
         'offset_seconds': -32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'YST',
         'until_year': 1942,
@@ -12459,7 +12460,7 @@ ZONE_ERAS_America_Yakutat: List[ZoneEra] = [
     #              -9:00    -    YST    1969
     {
         'offset_seconds': -32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'YST',
         'until_year': 1969,
@@ -12509,7 +12510,7 @@ ZONE_ERAS_America_Yellowknife: List[ZoneEra] = [
     # 0 - -00 1935
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-00',
         'until_year': 1935,
@@ -12559,7 +12560,7 @@ ZONE_ERAS_Antarctica_Casey: List[ZoneEra] = [
     # 0 - -00 1969
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-00',
         'until_year': 1969,
@@ -12571,7 +12572,7 @@ ZONE_ERAS_Antarctica_Casey: List[ZoneEra] = [
     #              8:00    -    +08    2009 Oct 18  2:00
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+08',
         'until_year': 2009,
@@ -12583,7 +12584,7 @@ ZONE_ERAS_Antarctica_Casey: List[ZoneEra] = [
     #             11:00    -    +11    2010 Mar  5  2:00
     {
         'offset_seconds': 39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+11',
         'until_year': 2010,
@@ -12595,7 +12596,7 @@ ZONE_ERAS_Antarctica_Casey: List[ZoneEra] = [
     #              8:00    -    +08    2011 Oct 28  2:00
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+08',
         'until_year': 2011,
@@ -12607,7 +12608,7 @@ ZONE_ERAS_Antarctica_Casey: List[ZoneEra] = [
     #             11:00    -    +11    2012 Feb 21 17:00u
     {
         'offset_seconds': 39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+11',
         'until_year': 2012,
@@ -12619,7 +12620,7 @@ ZONE_ERAS_Antarctica_Casey: List[ZoneEra] = [
     #              8:00    -    +08    2016 Oct 22
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+08',
         'until_year': 2016,
@@ -12631,7 +12632,7 @@ ZONE_ERAS_Antarctica_Casey: List[ZoneEra] = [
     #             11:00    -    +11    2018 Mar 11  4:00
     {
         'offset_seconds': 39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+11',
         'until_year': 2018,
@@ -12643,7 +12644,7 @@ ZONE_ERAS_Antarctica_Casey: List[ZoneEra] = [
     #              8:00    -    +08    2018 Oct  7  4:00
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+08',
         'until_year': 2018,
@@ -12655,7 +12656,7 @@ ZONE_ERAS_Antarctica_Casey: List[ZoneEra] = [
     #             11:00    -    +11    2019 Mar 17  3:00
     {
         'offset_seconds': 39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+11',
         'until_year': 2019,
@@ -12667,7 +12668,7 @@ ZONE_ERAS_Antarctica_Casey: List[ZoneEra] = [
     #              8:00    -    +08    2019 Oct  4  3:00
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+08',
         'until_year': 2019,
@@ -12679,7 +12680,7 @@ ZONE_ERAS_Antarctica_Casey: List[ZoneEra] = [
     #             11:00    -    +11    2020 Mar  8  3:00
     {
         'offset_seconds': 39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+11',
         'until_year': 2020,
@@ -12691,7 +12692,7 @@ ZONE_ERAS_Antarctica_Casey: List[ZoneEra] = [
     #              8:00    -    +08    2020 Oct  4  0:01
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+08',
         'until_year': 2020,
@@ -12703,7 +12704,7 @@ ZONE_ERAS_Antarctica_Casey: List[ZoneEra] = [
     #             11:00    -    +11
     {
         'offset_seconds': 39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+11',
         'until_year': 32767,
@@ -12729,7 +12730,7 @@ ZONE_ERAS_Antarctica_Davis: List[ZoneEra] = [
     # 0 - -00 1957 Jan 13
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-00',
         'until_year': 1957,
@@ -12741,7 +12742,7 @@ ZONE_ERAS_Antarctica_Davis: List[ZoneEra] = [
     #             7:00    -    +07    1964 Nov
     {
         'offset_seconds': 25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+07',
         'until_year': 1964,
@@ -12753,7 +12754,7 @@ ZONE_ERAS_Antarctica_Davis: List[ZoneEra] = [
     #             0    -    -00    1969 Feb
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-00',
         'until_year': 1969,
@@ -12765,7 +12766,7 @@ ZONE_ERAS_Antarctica_Davis: List[ZoneEra] = [
     #             7:00    -    +07    2009 Oct 18  2:00
     {
         'offset_seconds': 25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+07',
         'until_year': 2009,
@@ -12777,7 +12778,7 @@ ZONE_ERAS_Antarctica_Davis: List[ZoneEra] = [
     #             5:00    -    +05    2010 Mar 10 20:00u
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 2010,
@@ -12789,7 +12790,7 @@ ZONE_ERAS_Antarctica_Davis: List[ZoneEra] = [
     #             7:00    -    +07    2011 Oct 28  2:00
     {
         'offset_seconds': 25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+07',
         'until_year': 2011,
@@ -12801,7 +12802,7 @@ ZONE_ERAS_Antarctica_Davis: List[ZoneEra] = [
     #             5:00    -    +05    2012 Feb 21 20:00u
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 2012,
@@ -12813,7 +12814,7 @@ ZONE_ERAS_Antarctica_Davis: List[ZoneEra] = [
     #             7:00    -    +07
     {
         'offset_seconds': 25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+07',
         'until_year': 32767,
@@ -12839,7 +12840,7 @@ ZONE_ERAS_Antarctica_Macquarie: List[ZoneEra] = [
     # 0 - -00 1899 Nov
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-00',
         'until_year': 1899,
@@ -12851,7 +12852,7 @@ ZONE_ERAS_Antarctica_Macquarie: List[ZoneEra] = [
     #             10:00    -    AEST    1916 Oct  1  2:00
     {
         'offset_seconds': 36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'AEST',
         'until_year': 1916,
@@ -12863,7 +12864,7 @@ ZONE_ERAS_Antarctica_Macquarie: List[ZoneEra] = [
     #             10:00    1:00    AEDT    1917 Feb
     {
         'offset_seconds': 36000,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'AEDT',
         'until_year': 1917,
@@ -12887,7 +12888,7 @@ ZONE_ERAS_Antarctica_Macquarie: List[ZoneEra] = [
     #             0    -    -00    1948 Mar 25
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-00',
         'until_year': 1948,
@@ -12923,7 +12924,7 @@ ZONE_ERAS_Antarctica_Macquarie: List[ZoneEra] = [
     #             10:00    1:00    AEDT    2011
     {
         'offset_seconds': 36000,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'AEDT',
         'until_year': 2011,
@@ -12961,7 +12962,7 @@ ZONE_ERAS_Antarctica_Mawson: List[ZoneEra] = [
     # 0 - -00 1954 Feb 13
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-00',
         'until_year': 1954,
@@ -12973,7 +12974,7 @@ ZONE_ERAS_Antarctica_Mawson: List[ZoneEra] = [
     #             6:00    -    +06    2009 Oct 18  2:00
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 2009,
@@ -12985,7 +12986,7 @@ ZONE_ERAS_Antarctica_Mawson: List[ZoneEra] = [
     #             5:00    -    +05
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 32767,
@@ -13011,7 +13012,7 @@ ZONE_ERAS_Antarctica_Palmer: List[ZoneEra] = [
     # 0 - -00 1965
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-00',
         'until_year': 1965,
@@ -13059,7 +13060,7 @@ ZONE_ERAS_Antarctica_Palmer: List[ZoneEra] = [
     #             -3:00    -    -03
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 32767,
@@ -13085,7 +13086,7 @@ ZONE_ERAS_Antarctica_Rothera: List[ZoneEra] = [
     # 0 - -00 1976 Dec 1
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-00',
         'until_year': 1976,
@@ -13097,7 +13098,7 @@ ZONE_ERAS_Antarctica_Rothera: List[ZoneEra] = [
     #             -3:00    -    -03
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 32767,
@@ -13123,7 +13124,7 @@ ZONE_ERAS_Antarctica_Troll: List[ZoneEra] = [
     # 0 - -00 2005 Feb 12
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-00',
         'until_year': 2005,
@@ -13161,7 +13162,7 @@ ZONE_ERAS_Asia_Almaty: List[ZoneEra] = [
     # 5:07:48 - LMT 1924 May 2
     {
         'offset_seconds': 18468,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1924,
@@ -13173,7 +13174,7 @@ ZONE_ERAS_Asia_Almaty: List[ZoneEra] = [
     #             5:00    -    +05    1930 Jun 21
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 1930,
@@ -13221,7 +13222,7 @@ ZONE_ERAS_Asia_Almaty: List[ZoneEra] = [
     #             6:00    -    +06
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 32767,
@@ -13247,7 +13248,7 @@ ZONE_ERAS_Asia_Amman: List[ZoneEra] = [
     # 2:23:44 - LMT 1931
     {
         'offset_seconds': 8624,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1931,
@@ -13271,7 +13272,7 @@ ZONE_ERAS_Asia_Amman: List[ZoneEra] = [
     #             3:00    -    +03
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 32767,
@@ -13297,7 +13298,7 @@ ZONE_ERAS_Asia_Anadyr: List[ZoneEra] = [
     # 11:49:56 - LMT 1924 May 2
     {
         'offset_seconds': 42596,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1924,
@@ -13309,7 +13310,7 @@ ZONE_ERAS_Asia_Anadyr: List[ZoneEra] = [
     #             12:00    -    +12    1930 Jun 21
     {
         'offset_seconds': 43200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+12',
         'until_year': 1930,
@@ -13381,7 +13382,7 @@ ZONE_ERAS_Asia_Anadyr: List[ZoneEra] = [
     #             12:00    -    +12
     {
         'offset_seconds': 43200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+12',
         'until_year': 32767,
@@ -13407,7 +13408,7 @@ ZONE_ERAS_Asia_Aqtau: List[ZoneEra] = [
     # 3:21:04 - LMT 1924 May 2
     {
         'offset_seconds': 12064,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1924,
@@ -13419,7 +13420,7 @@ ZONE_ERAS_Asia_Aqtau: List[ZoneEra] = [
     #             4:00    -    +04    1930 Jun 21
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 1930,
@@ -13431,7 +13432,7 @@ ZONE_ERAS_Asia_Aqtau: List[ZoneEra] = [
     #             5:00    -    +05    1981 Oct  1
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 1981,
@@ -13443,7 +13444,7 @@ ZONE_ERAS_Asia_Aqtau: List[ZoneEra] = [
     #             6:00    -    +06    1982 Apr  1
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 1982,
@@ -13503,7 +13504,7 @@ ZONE_ERAS_Asia_Aqtau: List[ZoneEra] = [
     #             5:00    -    +05
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 32767,
@@ -13529,7 +13530,7 @@ ZONE_ERAS_Asia_Aqtobe: List[ZoneEra] = [
     # 3:48:40 - LMT 1924 May 2
     {
         'offset_seconds': 13720,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1924,
@@ -13541,7 +13542,7 @@ ZONE_ERAS_Asia_Aqtobe: List[ZoneEra] = [
     #             4:00    -    +04    1930 Jun 21
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 1930,
@@ -13553,7 +13554,7 @@ ZONE_ERAS_Asia_Aqtobe: List[ZoneEra] = [
     #             5:00    -    +05    1981 Apr  1
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 1981,
@@ -13565,7 +13566,7 @@ ZONE_ERAS_Asia_Aqtobe: List[ZoneEra] = [
     #             5:00    1:00    +06    1981 Oct  1
     {
         'offset_seconds': 18000,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': '+06',
         'until_year': 1981,
@@ -13577,7 +13578,7 @@ ZONE_ERAS_Asia_Aqtobe: List[ZoneEra] = [
     #             6:00    -    +06    1982 Apr  1
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 1982,
@@ -13625,7 +13626,7 @@ ZONE_ERAS_Asia_Aqtobe: List[ZoneEra] = [
     #             5:00    -    +05
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 32767,
@@ -13651,7 +13652,7 @@ ZONE_ERAS_Asia_Ashgabat: List[ZoneEra] = [
     # 3:53:32 - LMT 1924 May 2
     {
         'offset_seconds': 14012,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1924,
@@ -13663,7 +13664,7 @@ ZONE_ERAS_Asia_Ashgabat: List[ZoneEra] = [
     #             4:00    -    +04    1930 Jun 21
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 1930,
@@ -13699,7 +13700,7 @@ ZONE_ERAS_Asia_Ashgabat: List[ZoneEra] = [
     #             5:00    -    +05
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 32767,
@@ -13725,7 +13726,7 @@ ZONE_ERAS_Asia_Atyrau: List[ZoneEra] = [
     # 3:27:44 - LMT 1924 May 2
     {
         'offset_seconds': 12464,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1924,
@@ -13737,7 +13738,7 @@ ZONE_ERAS_Asia_Atyrau: List[ZoneEra] = [
     #             3:00    -    +03    1930 Jun 21
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 1930,
@@ -13749,7 +13750,7 @@ ZONE_ERAS_Asia_Atyrau: List[ZoneEra] = [
     #             5:00    -    +05    1981 Oct  1
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 1981,
@@ -13761,7 +13762,7 @@ ZONE_ERAS_Asia_Atyrau: List[ZoneEra] = [
     #             6:00    -    +06    1982 Apr  1
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 1982,
@@ -13821,7 +13822,7 @@ ZONE_ERAS_Asia_Atyrau: List[ZoneEra] = [
     #             5:00    -    +05
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 32767,
@@ -13847,7 +13848,7 @@ ZONE_ERAS_Asia_Baghdad: List[ZoneEra] = [
     # 2:57:40 - LMT 1890
     {
         'offset_seconds': 10660,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1890,
@@ -13859,7 +13860,7 @@ ZONE_ERAS_Asia_Baghdad: List[ZoneEra] = [
     #             2:57:36    -    BMT    1918
     {
         'offset_seconds': 10656,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'BMT',
         'until_year': 1918,
@@ -13871,7 +13872,7 @@ ZONE_ERAS_Asia_Baghdad: List[ZoneEra] = [
     #             3:00    -    +03    1982 May
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 1982,
@@ -13909,7 +13910,7 @@ ZONE_ERAS_Asia_Baku: List[ZoneEra] = [
     # 3:19:24 - LMT 1924 May 2
     {
         'offset_seconds': 11964,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1924,
@@ -13921,7 +13922,7 @@ ZONE_ERAS_Asia_Baku: List[ZoneEra] = [
     #             3:00    -    +03    1957 Mar
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 1957,
@@ -13957,7 +13958,7 @@ ZONE_ERAS_Asia_Baku: List[ZoneEra] = [
     #             4:00    -    +04    1996
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 1996,
@@ -14007,7 +14008,7 @@ ZONE_ERAS_Asia_Bangkok: List[ZoneEra] = [
     # 6:42:04 - LMT 1880
     {
         'offset_seconds': 24124,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1880,
@@ -14019,7 +14020,7 @@ ZONE_ERAS_Asia_Bangkok: List[ZoneEra] = [
     #             6:42:04    -    BMT    1920 Apr
     {
         'offset_seconds': 24124,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'BMT',
         'until_year': 1920,
@@ -14031,7 +14032,7 @@ ZONE_ERAS_Asia_Bangkok: List[ZoneEra] = [
     #             7:00    -    +07
     {
         'offset_seconds': 25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+07',
         'until_year': 32767,
@@ -14057,7 +14058,7 @@ ZONE_ERAS_Asia_Barnaul: List[ZoneEra] = [
     # 5:35:00 - LMT 1919 Dec 10
     {
         'offset_seconds': 20100,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1919,
@@ -14069,7 +14070,7 @@ ZONE_ERAS_Asia_Barnaul: List[ZoneEra] = [
     #              6:00    -    +06    1930 Jun 21
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 1930,
@@ -14129,7 +14130,7 @@ ZONE_ERAS_Asia_Barnaul: List[ZoneEra] = [
     #              7:00    -    +07    2014 Oct 26  2:00s
     {
         'offset_seconds': 25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+07',
         'until_year': 2014,
@@ -14141,7 +14142,7 @@ ZONE_ERAS_Asia_Barnaul: List[ZoneEra] = [
     #              6:00    -    +06    2016 Mar 27  2:00s
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 2016,
@@ -14153,7 +14154,7 @@ ZONE_ERAS_Asia_Barnaul: List[ZoneEra] = [
     #              7:00    -    +07
     {
         'offset_seconds': 25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+07',
         'until_year': 32767,
@@ -14179,7 +14180,7 @@ ZONE_ERAS_Asia_Beirut: List[ZoneEra] = [
     # 2:22:00 - LMT 1880
     {
         'offset_seconds': 8520,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1880,
@@ -14217,7 +14218,7 @@ ZONE_ERAS_Asia_Bishkek: List[ZoneEra] = [
     # 4:58:24 - LMT 1924 May 2
     {
         'offset_seconds': 17904,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1924,
@@ -14229,7 +14230,7 @@ ZONE_ERAS_Asia_Bishkek: List[ZoneEra] = [
     #             5:00    -    +05    1930 Jun 21
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 1930,
@@ -14277,7 +14278,7 @@ ZONE_ERAS_Asia_Bishkek: List[ZoneEra] = [
     #             6:00    -    +06
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 32767,
@@ -14303,7 +14304,7 @@ ZONE_ERAS_Asia_Chita: List[ZoneEra] = [
     # 7:33:52 - LMT 1919 Dec 15
     {
         'offset_seconds': 27232,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1919,
@@ -14315,7 +14316,7 @@ ZONE_ERAS_Asia_Chita: List[ZoneEra] = [
     #              8:00    -    +08    1930 Jun 21
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+08',
         'until_year': 1930,
@@ -14363,7 +14364,7 @@ ZONE_ERAS_Asia_Chita: List[ZoneEra] = [
     #             10:00    -    +10    2014 Oct 26  2:00s
     {
         'offset_seconds': 36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+10',
         'until_year': 2014,
@@ -14375,7 +14376,7 @@ ZONE_ERAS_Asia_Chita: List[ZoneEra] = [
     #              8:00    -    +08    2016 Mar 27  2:00
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+08',
         'until_year': 2016,
@@ -14387,7 +14388,7 @@ ZONE_ERAS_Asia_Chita: List[ZoneEra] = [
     #              9:00    -    +09
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+09',
         'until_year': 32767,
@@ -14413,7 +14414,7 @@ ZONE_ERAS_Asia_Choibalsan: List[ZoneEra] = [
     # 7:38:00 - LMT 1905 Aug
     {
         'offset_seconds': 27480,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1905,
@@ -14425,7 +14426,7 @@ ZONE_ERAS_Asia_Choibalsan: List[ZoneEra] = [
     #             7:00    -    +07    1978
     {
         'offset_seconds': 25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+07',
         'until_year': 1978,
@@ -14437,7 +14438,7 @@ ZONE_ERAS_Asia_Choibalsan: List[ZoneEra] = [
     #             8:00    -    +08    1983 Apr
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+08',
         'until_year': 1983,
@@ -14487,7 +14488,7 @@ ZONE_ERAS_Asia_Colombo: List[ZoneEra] = [
     # 5:19:24 - LMT 1880
     {
         'offset_seconds': 19164,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1880,
@@ -14499,7 +14500,7 @@ ZONE_ERAS_Asia_Colombo: List[ZoneEra] = [
     #             5:19:32    -    MMT    1906
     {
         'offset_seconds': 19172,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MMT',
         'until_year': 1906,
@@ -14511,7 +14512,7 @@ ZONE_ERAS_Asia_Colombo: List[ZoneEra] = [
     #             5:30    -    +0530    1942 Jan  5
     {
         'offset_seconds': 19800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0530',
         'until_year': 1942,
@@ -14523,7 +14524,7 @@ ZONE_ERAS_Asia_Colombo: List[ZoneEra] = [
     #             5:30    0:30    +06    1942 Sep
     {
         'offset_seconds': 19800,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 1800,
         'format': '+06',
         'until_year': 1942,
@@ -14535,7 +14536,7 @@ ZONE_ERAS_Asia_Colombo: List[ZoneEra] = [
     #             5:30    1:00    +0630    1945 Oct 16  2:00
     {
         'offset_seconds': 19800,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': '+0630',
         'until_year': 1945,
@@ -14547,7 +14548,7 @@ ZONE_ERAS_Asia_Colombo: List[ZoneEra] = [
     #             5:30    -    +0530    1996 May 25  0:00
     {
         'offset_seconds': 19800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0530',
         'until_year': 1996,
@@ -14559,7 +14560,7 @@ ZONE_ERAS_Asia_Colombo: List[ZoneEra] = [
     #             6:30    -    +0630    1996 Oct 26  0:30
     {
         'offset_seconds': 23400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0630',
         'until_year': 1996,
@@ -14571,7 +14572,7 @@ ZONE_ERAS_Asia_Colombo: List[ZoneEra] = [
     #             6:00    -    +06    2006 Apr 15  0:30
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 2006,
@@ -14583,7 +14584,7 @@ ZONE_ERAS_Asia_Colombo: List[ZoneEra] = [
     #             5:30    -    +0530
     {
         'offset_seconds': 19800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0530',
         'until_year': 32767,
@@ -14609,7 +14610,7 @@ ZONE_ERAS_Asia_Damascus: List[ZoneEra] = [
     # 2:25:12 - LMT 1920
     {
         'offset_seconds': 8712,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1920,
@@ -14633,7 +14634,7 @@ ZONE_ERAS_Asia_Damascus: List[ZoneEra] = [
     #             3:00    -    +03
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 32767,
@@ -14659,7 +14660,7 @@ ZONE_ERAS_Asia_Dhaka: List[ZoneEra] = [
     # 6:01:40 - LMT 1890
     {
         'offset_seconds': 21700,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1890,
@@ -14671,7 +14672,7 @@ ZONE_ERAS_Asia_Dhaka: List[ZoneEra] = [
     #             5:53:20    -    HMT    1941 Oct
     {
         'offset_seconds': 21200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'HMT',
         'until_year': 1941,
@@ -14683,7 +14684,7 @@ ZONE_ERAS_Asia_Dhaka: List[ZoneEra] = [
     #             6:30    -    +0630    1942 May 15
     {
         'offset_seconds': 23400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0630',
         'until_year': 1942,
@@ -14695,7 +14696,7 @@ ZONE_ERAS_Asia_Dhaka: List[ZoneEra] = [
     #             5:30    -    +0530    1942 Sep
     {
         'offset_seconds': 19800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0530',
         'until_year': 1942,
@@ -14707,7 +14708,7 @@ ZONE_ERAS_Asia_Dhaka: List[ZoneEra] = [
     #             6:30    -    +0630    1951 Sep 30
     {
         'offset_seconds': 23400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0630',
         'until_year': 1951,
@@ -14719,7 +14720,7 @@ ZONE_ERAS_Asia_Dhaka: List[ZoneEra] = [
     #             6:00    -    +06    2009
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 2009,
@@ -14757,7 +14758,7 @@ ZONE_ERAS_Asia_Dili: List[ZoneEra] = [
     # 8:22:20 - LMT 1912 Jan 1
     {
         'offset_seconds': 30140,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1912,
@@ -14769,7 +14770,7 @@ ZONE_ERAS_Asia_Dili: List[ZoneEra] = [
     #             8:00    -    +08    1942 Feb 21 23:00
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+08',
         'until_year': 1942,
@@ -14781,7 +14782,7 @@ ZONE_ERAS_Asia_Dili: List[ZoneEra] = [
     #             9:00    -    +09    1976 May  3
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+09',
         'until_year': 1976,
@@ -14793,7 +14794,7 @@ ZONE_ERAS_Asia_Dili: List[ZoneEra] = [
     #             8:00    -    +08    2000 Sep 17  0:00
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+08',
         'until_year': 2000,
@@ -14805,7 +14806,7 @@ ZONE_ERAS_Asia_Dili: List[ZoneEra] = [
     #             9:00    -    +09
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+09',
         'until_year': 32767,
@@ -14831,7 +14832,7 @@ ZONE_ERAS_Asia_Dubai: List[ZoneEra] = [
     # 3:41:12 - LMT 1920
     {
         'offset_seconds': 13272,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1920,
@@ -14843,7 +14844,7 @@ ZONE_ERAS_Asia_Dubai: List[ZoneEra] = [
     #             4:00    -    +04
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 32767,
@@ -14869,7 +14870,7 @@ ZONE_ERAS_Asia_Dushanbe: List[ZoneEra] = [
     # 4:35:12 - LMT 1924 May 2
     {
         'offset_seconds': 16512,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1924,
@@ -14881,7 +14882,7 @@ ZONE_ERAS_Asia_Dushanbe: List[ZoneEra] = [
     #             5:00    -    +05    1930 Jun 21
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 1930,
@@ -14905,7 +14906,7 @@ ZONE_ERAS_Asia_Dushanbe: List[ZoneEra] = [
     #             5:00    1:00    +06    1991 Sep  9  2:00s
     {
         'offset_seconds': 18000,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': '+06',
         'until_year': 1991,
@@ -14917,7 +14918,7 @@ ZONE_ERAS_Asia_Dushanbe: List[ZoneEra] = [
     #             5:00    -    +05
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 32767,
@@ -14943,7 +14944,7 @@ ZONE_ERAS_Asia_Famagusta: List[ZoneEra] = [
     # 2:15:48 - LMT 1921 Nov 14
     {
         'offset_seconds': 8148,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1921,
@@ -14979,7 +14980,7 @@ ZONE_ERAS_Asia_Famagusta: List[ZoneEra] = [
     #             3:00    -    +03    2017 Oct 29 1:00u
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 2017,
@@ -15017,7 +15018,7 @@ ZONE_ERAS_Asia_Gaza: List[ZoneEra] = [
     # 2:17:52 - LMT 1900 Oct
     {
         'offset_seconds': 8272,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1900,
@@ -15089,7 +15090,7 @@ ZONE_ERAS_Asia_Gaza: List[ZoneEra] = [
     #             2:00    -    EET    2008 Sep
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EET',
         'until_year': 2008,
@@ -15113,7 +15114,7 @@ ZONE_ERAS_Asia_Gaza: List[ZoneEra] = [
     #             2:00    -    EET    2010 Mar 27  0:01
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EET',
         'until_year': 2010,
@@ -15137,7 +15138,7 @@ ZONE_ERAS_Asia_Gaza: List[ZoneEra] = [
     #             2:00    -    EET    2012
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EET',
         'until_year': 2012,
@@ -15175,7 +15176,7 @@ ZONE_ERAS_Asia_Hebron: List[ZoneEra] = [
     # 2:20:23 - LMT 1900 Oct
     {
         'offset_seconds': 8423,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1900,
@@ -15261,7 +15262,7 @@ ZONE_ERAS_Asia_Ho_Chi_Minh: List[ZoneEra] = [
     # 7:06:30 - LMT 1906 Jul 1
     {
         'offset_seconds': 25590,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1906,
@@ -15273,7 +15274,7 @@ ZONE_ERAS_Asia_Ho_Chi_Minh: List[ZoneEra] = [
     #             7:06:30    -    PLMT    1911 May  1
     {
         'offset_seconds': 25590,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PLMT',
         'until_year': 1911,
@@ -15285,7 +15286,7 @@ ZONE_ERAS_Asia_Ho_Chi_Minh: List[ZoneEra] = [
     #             7:00    -    +07    1942 Dec 31 23:00
     {
         'offset_seconds': 25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+07',
         'until_year': 1942,
@@ -15297,7 +15298,7 @@ ZONE_ERAS_Asia_Ho_Chi_Minh: List[ZoneEra] = [
     #             8:00    -    +08    1945 Mar 14 23:00
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+08',
         'until_year': 1945,
@@ -15309,7 +15310,7 @@ ZONE_ERAS_Asia_Ho_Chi_Minh: List[ZoneEra] = [
     #             9:00    -    +09    1945 Sep  2
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+09',
         'until_year': 1945,
@@ -15321,7 +15322,7 @@ ZONE_ERAS_Asia_Ho_Chi_Minh: List[ZoneEra] = [
     #             7:00    -    +07    1947 Apr  1
     {
         'offset_seconds': 25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+07',
         'until_year': 1947,
@@ -15333,7 +15334,7 @@ ZONE_ERAS_Asia_Ho_Chi_Minh: List[ZoneEra] = [
     #             8:00    -    +08    1955 Jul  1
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+08',
         'until_year': 1955,
@@ -15345,7 +15346,7 @@ ZONE_ERAS_Asia_Ho_Chi_Minh: List[ZoneEra] = [
     #             7:00    -    +07    1959 Dec 31 23:00
     {
         'offset_seconds': 25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+07',
         'until_year': 1959,
@@ -15357,7 +15358,7 @@ ZONE_ERAS_Asia_Ho_Chi_Minh: List[ZoneEra] = [
     #             8:00    -    +08    1975 Jun 13
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+08',
         'until_year': 1975,
@@ -15369,7 +15370,7 @@ ZONE_ERAS_Asia_Ho_Chi_Minh: List[ZoneEra] = [
     #             7:00    -    +07
     {
         'offset_seconds': 25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+07',
         'until_year': 32767,
@@ -15395,7 +15396,7 @@ ZONE_ERAS_Asia_Hong_Kong: List[ZoneEra] = [
     # 7:36:42 - LMT 1904 Oct 29 17:00u
     {
         'offset_seconds': 27402,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1904,
@@ -15407,7 +15408,7 @@ ZONE_ERAS_Asia_Hong_Kong: List[ZoneEra] = [
     #             8:00    -    HKT    1941 Jun 15  3:00
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'HKT',
         'until_year': 1941,
@@ -15419,7 +15420,7 @@ ZONE_ERAS_Asia_Hong_Kong: List[ZoneEra] = [
     #             8:00    1:00    HKST    1941 Oct  1  4:00
     {
         'offset_seconds': 28800,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'HKST',
         'until_year': 1941,
@@ -15431,7 +15432,7 @@ ZONE_ERAS_Asia_Hong_Kong: List[ZoneEra] = [
     #             8:00    0:30    HKWT    1941 Dec 25
     {
         'offset_seconds': 28800,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 1800,
         'format': 'HKWT',
         'until_year': 1941,
@@ -15443,7 +15444,7 @@ ZONE_ERAS_Asia_Hong_Kong: List[ZoneEra] = [
     #             9:00    -    JST    1945 Nov 18  2:00
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'JST',
         'until_year': 1945,
@@ -15481,7 +15482,7 @@ ZONE_ERAS_Asia_Hovd: List[ZoneEra] = [
     # 6:06:36 - LMT 1905 Aug
     {
         'offset_seconds': 21996,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1905,
@@ -15493,7 +15494,7 @@ ZONE_ERAS_Asia_Hovd: List[ZoneEra] = [
     #             6:00    -    +06    1978
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 1978,
@@ -15531,7 +15532,7 @@ ZONE_ERAS_Asia_Irkutsk: List[ZoneEra] = [
     # 6:57:05 - LMT 1880
     {
         'offset_seconds': 25025,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1880,
@@ -15543,7 +15544,7 @@ ZONE_ERAS_Asia_Irkutsk: List[ZoneEra] = [
     #              6:57:05 -    IMT    1920 Jan 25
     {
         'offset_seconds': 25025,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'IMT',
         'until_year': 1920,
@@ -15555,7 +15556,7 @@ ZONE_ERAS_Asia_Irkutsk: List[ZoneEra] = [
     #              7:00    -    +07    1930 Jun 21
     {
         'offset_seconds': 25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+07',
         'until_year': 1930,
@@ -15603,7 +15604,7 @@ ZONE_ERAS_Asia_Irkutsk: List[ZoneEra] = [
     #              9:00    -    +09    2014 Oct 26  2:00s
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+09',
         'until_year': 2014,
@@ -15615,7 +15616,7 @@ ZONE_ERAS_Asia_Irkutsk: List[ZoneEra] = [
     #              8:00    -    +08
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+08',
         'until_year': 32767,
@@ -15641,7 +15642,7 @@ ZONE_ERAS_Asia_Jakarta: List[ZoneEra] = [
     # 7:07:12 - LMT 1867 Aug 10
     {
         'offset_seconds': 25632,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1867,
@@ -15653,7 +15654,7 @@ ZONE_ERAS_Asia_Jakarta: List[ZoneEra] = [
     #             7:07:12    -    BMT    1923 Dec 31 16:40u
     {
         'offset_seconds': 25632,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'BMT',
         'until_year': 1923,
@@ -15665,7 +15666,7 @@ ZONE_ERAS_Asia_Jakarta: List[ZoneEra] = [
     #             7:20    -    +0720    1932 Nov
     {
         'offset_seconds': 26400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0720',
         'until_year': 1932,
@@ -15677,7 +15678,7 @@ ZONE_ERAS_Asia_Jakarta: List[ZoneEra] = [
     #             7:30    -    +0730    1942 Mar 23
     {
         'offset_seconds': 27000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0730',
         'until_year': 1942,
@@ -15689,7 +15690,7 @@ ZONE_ERAS_Asia_Jakarta: List[ZoneEra] = [
     #             9:00    -    +09    1945 Sep 23
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+09',
         'until_year': 1945,
@@ -15701,7 +15702,7 @@ ZONE_ERAS_Asia_Jakarta: List[ZoneEra] = [
     #             7:30    -    +0730    1948 May
     {
         'offset_seconds': 27000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0730',
         'until_year': 1948,
@@ -15713,7 +15714,7 @@ ZONE_ERAS_Asia_Jakarta: List[ZoneEra] = [
     #             8:00    -    +08    1950 May
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+08',
         'until_year': 1950,
@@ -15725,7 +15726,7 @@ ZONE_ERAS_Asia_Jakarta: List[ZoneEra] = [
     #             7:30    -    +0730    1964
     {
         'offset_seconds': 27000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0730',
         'until_year': 1964,
@@ -15737,7 +15738,7 @@ ZONE_ERAS_Asia_Jakarta: List[ZoneEra] = [
     #             7:00    -    WIB
     {
         'offset_seconds': 25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'WIB',
         'until_year': 32767,
@@ -15763,7 +15764,7 @@ ZONE_ERAS_Asia_Jayapura: List[ZoneEra] = [
     # 9:22:48 - LMT 1932 Nov
     {
         'offset_seconds': 33768,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1932,
@@ -15775,7 +15776,7 @@ ZONE_ERAS_Asia_Jayapura: List[ZoneEra] = [
     #             9:00    -    +09    1944 Sep  1
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+09',
         'until_year': 1944,
@@ -15787,7 +15788,7 @@ ZONE_ERAS_Asia_Jayapura: List[ZoneEra] = [
     #             9:30    -    +0930    1964
     {
         'offset_seconds': 34200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0930',
         'until_year': 1964,
@@ -15799,7 +15800,7 @@ ZONE_ERAS_Asia_Jayapura: List[ZoneEra] = [
     #             9:00    -    WIT
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'WIT',
         'until_year': 32767,
@@ -15825,7 +15826,7 @@ ZONE_ERAS_Asia_Jerusalem: List[ZoneEra] = [
     # 2:20:54 - LMT 1880
     {
         'offset_seconds': 8454,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1880,
@@ -15837,7 +15838,7 @@ ZONE_ERAS_Asia_Jerusalem: List[ZoneEra] = [
     #             2:20:40    -    JMT    1918
     {
         'offset_seconds': 8440,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'JMT',
         'until_year': 1918,
@@ -15875,7 +15876,7 @@ ZONE_ERAS_Asia_Kabul: List[ZoneEra] = [
     # 4:36:48 - LMT 1890
     {
         'offset_seconds': 16608,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1890,
@@ -15887,7 +15888,7 @@ ZONE_ERAS_Asia_Kabul: List[ZoneEra] = [
     #             4:00    -    +04    1945
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 1945,
@@ -15899,7 +15900,7 @@ ZONE_ERAS_Asia_Kabul: List[ZoneEra] = [
     #             4:30    -    +0430
     {
         'offset_seconds': 16200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0430',
         'until_year': 32767,
@@ -15925,7 +15926,7 @@ ZONE_ERAS_Asia_Kamchatka: List[ZoneEra] = [
     # 10:34:36 - LMT 1922 Nov 10
     {
         'offset_seconds': 38076,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1922,
@@ -15937,7 +15938,7 @@ ZONE_ERAS_Asia_Kamchatka: List[ZoneEra] = [
     #             11:00    -    +11    1930 Jun 21
     {
         'offset_seconds': 39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+11',
         'until_year': 1930,
@@ -15997,7 +15998,7 @@ ZONE_ERAS_Asia_Kamchatka: List[ZoneEra] = [
     #             12:00    -    +12
     {
         'offset_seconds': 43200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+12',
         'until_year': 32767,
@@ -16023,7 +16024,7 @@ ZONE_ERAS_Asia_Karachi: List[ZoneEra] = [
     # 4:28:12 - LMT 1907
     {
         'offset_seconds': 16092,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1907,
@@ -16035,7 +16036,7 @@ ZONE_ERAS_Asia_Karachi: List[ZoneEra] = [
     #             5:30    -    +0530    1942 Sep
     {
         'offset_seconds': 19800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0530',
         'until_year': 1942,
@@ -16047,7 +16048,7 @@ ZONE_ERAS_Asia_Karachi: List[ZoneEra] = [
     #             5:30    1:00    +0630    1945 Oct 15
     {
         'offset_seconds': 19800,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': '+0630',
         'until_year': 1945,
@@ -16059,7 +16060,7 @@ ZONE_ERAS_Asia_Karachi: List[ZoneEra] = [
     #             5:30    -    +0530    1951 Sep 30
     {
         'offset_seconds': 19800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0530',
         'until_year': 1951,
@@ -16071,7 +16072,7 @@ ZONE_ERAS_Asia_Karachi: List[ZoneEra] = [
     #             5:00    -    +05    1971 Mar 26
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 1971,
@@ -16109,7 +16110,7 @@ ZONE_ERAS_Asia_Kathmandu: List[ZoneEra] = [
     # 5:41:16 - LMT 1920
     {
         'offset_seconds': 20476,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1920,
@@ -16121,7 +16122,7 @@ ZONE_ERAS_Asia_Kathmandu: List[ZoneEra] = [
     #             5:30    -    +0530    1986
     {
         'offset_seconds': 19800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0530',
         'until_year': 1986,
@@ -16133,7 +16134,7 @@ ZONE_ERAS_Asia_Kathmandu: List[ZoneEra] = [
     #             5:45    -    +0545
     {
         'offset_seconds': 20700,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0545',
         'until_year': 32767,
@@ -16159,7 +16160,7 @@ ZONE_ERAS_Asia_Khandyga: List[ZoneEra] = [
     # 9:02:13 - LMT 1919 Dec 15
     {
         'offset_seconds': 32533,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1919,
@@ -16171,7 +16172,7 @@ ZONE_ERAS_Asia_Khandyga: List[ZoneEra] = [
     #              8:00    -    +08    1930 Jun 21
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+08',
         'until_year': 1930,
@@ -16231,7 +16232,7 @@ ZONE_ERAS_Asia_Khandyga: List[ZoneEra] = [
     #             11:00    -    +11    2011 Sep 13  0:00s
     {
         'offset_seconds': 39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+11',
         'until_year': 2011,
@@ -16243,7 +16244,7 @@ ZONE_ERAS_Asia_Khandyga: List[ZoneEra] = [
     #             10:00    -    +10    2014 Oct 26  2:00s
     {
         'offset_seconds': 36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+10',
         'until_year': 2014,
@@ -16255,7 +16256,7 @@ ZONE_ERAS_Asia_Khandyga: List[ZoneEra] = [
     #              9:00    -    +09
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+09',
         'until_year': 32767,
@@ -16281,7 +16282,7 @@ ZONE_ERAS_Asia_Kolkata: List[ZoneEra] = [
     # 5:53:28 - LMT 1854 Jun 28
     {
         'offset_seconds': 21208,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1854,
@@ -16293,7 +16294,7 @@ ZONE_ERAS_Asia_Kolkata: List[ZoneEra] = [
     #             5:53:20    -    HMT    1870
     {
         'offset_seconds': 21200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'HMT',
         'until_year': 1870,
@@ -16305,7 +16306,7 @@ ZONE_ERAS_Asia_Kolkata: List[ZoneEra] = [
     #             5:21:10    -    MMT    1906 Jan  1
     {
         'offset_seconds': 19270,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MMT',
         'until_year': 1906,
@@ -16317,7 +16318,7 @@ ZONE_ERAS_Asia_Kolkata: List[ZoneEra] = [
     #             5:30    -    IST    1941 Oct
     {
         'offset_seconds': 19800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'IST',
         'until_year': 1941,
@@ -16329,7 +16330,7 @@ ZONE_ERAS_Asia_Kolkata: List[ZoneEra] = [
     #             5:30    1:00    +0630    1942 May 15
     {
         'offset_seconds': 19800,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': '+0630',
         'until_year': 1942,
@@ -16341,7 +16342,7 @@ ZONE_ERAS_Asia_Kolkata: List[ZoneEra] = [
     #             5:30    -    IST    1942 Sep
     {
         'offset_seconds': 19800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'IST',
         'until_year': 1942,
@@ -16353,7 +16354,7 @@ ZONE_ERAS_Asia_Kolkata: List[ZoneEra] = [
     #             5:30    1:00    +0630    1945 Oct 15
     {
         'offset_seconds': 19800,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': '+0630',
         'until_year': 1945,
@@ -16365,7 +16366,7 @@ ZONE_ERAS_Asia_Kolkata: List[ZoneEra] = [
     #             5:30    -    IST
     {
         'offset_seconds': 19800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'IST',
         'until_year': 32767,
@@ -16391,7 +16392,7 @@ ZONE_ERAS_Asia_Krasnoyarsk: List[ZoneEra] = [
     # 6:11:26 - LMT 1920 Jan 6
     {
         'offset_seconds': 22286,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1920,
@@ -16403,7 +16404,7 @@ ZONE_ERAS_Asia_Krasnoyarsk: List[ZoneEra] = [
     #              6:00    -    +06    1930 Jun 21
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 1930,
@@ -16451,7 +16452,7 @@ ZONE_ERAS_Asia_Krasnoyarsk: List[ZoneEra] = [
     #              8:00    -    +08    2014 Oct 26  2:00s
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+08',
         'until_year': 2014,
@@ -16463,7 +16464,7 @@ ZONE_ERAS_Asia_Krasnoyarsk: List[ZoneEra] = [
     #              7:00    -    +07
     {
         'offset_seconds': 25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+07',
         'until_year': 32767,
@@ -16489,7 +16490,7 @@ ZONE_ERAS_Asia_Kuching: List[ZoneEra] = [
     # 7:21:20 - LMT 1926 Mar
     {
         'offset_seconds': 26480,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1926,
@@ -16501,7 +16502,7 @@ ZONE_ERAS_Asia_Kuching: List[ZoneEra] = [
     #             7:30    -    +0730    1933
     {
         'offset_seconds': 27000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0730',
         'until_year': 1933,
@@ -16525,7 +16526,7 @@ ZONE_ERAS_Asia_Kuching: List[ZoneEra] = [
     #             9:00    -    +09    1945 Sep 12
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+09',
         'until_year': 1945,
@@ -16537,7 +16538,7 @@ ZONE_ERAS_Asia_Kuching: List[ZoneEra] = [
     #             8:00    -    +08
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+08',
         'until_year': 32767,
@@ -16563,7 +16564,7 @@ ZONE_ERAS_Asia_Macau: List[ZoneEra] = [
     # 7:34:10 - LMT 1904 Oct 30
     {
         'offset_seconds': 27250,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1904,
@@ -16575,7 +16576,7 @@ ZONE_ERAS_Asia_Macau: List[ZoneEra] = [
     #             8:00    -    CST    1941 Dec 21 23:00
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1941,
@@ -16625,7 +16626,7 @@ ZONE_ERAS_Asia_Magadan: List[ZoneEra] = [
     # 10:03:12 - LMT 1924 May 2
     {
         'offset_seconds': 36192,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1924,
@@ -16637,7 +16638,7 @@ ZONE_ERAS_Asia_Magadan: List[ZoneEra] = [
     #             10:00    -    +10    1930 Jun 21
     {
         'offset_seconds': 36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+10',
         'until_year': 1930,
@@ -16685,7 +16686,7 @@ ZONE_ERAS_Asia_Magadan: List[ZoneEra] = [
     #             12:00    -    +12    2014 Oct 26  2:00s
     {
         'offset_seconds': 43200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+12',
         'until_year': 2014,
@@ -16697,7 +16698,7 @@ ZONE_ERAS_Asia_Magadan: List[ZoneEra] = [
     #             10:00    -    +10    2016 Apr 24  2:00s
     {
         'offset_seconds': 36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+10',
         'until_year': 2016,
@@ -16709,7 +16710,7 @@ ZONE_ERAS_Asia_Magadan: List[ZoneEra] = [
     #             11:00    -    +11
     {
         'offset_seconds': 39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+11',
         'until_year': 32767,
@@ -16735,7 +16736,7 @@ ZONE_ERAS_Asia_Makassar: List[ZoneEra] = [
     # 7:57:36 - LMT 1920
     {
         'offset_seconds': 28656,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1920,
@@ -16747,7 +16748,7 @@ ZONE_ERAS_Asia_Makassar: List[ZoneEra] = [
     #             7:57:36    -    MMT    1932 Nov
     {
         'offset_seconds': 28656,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MMT',
         'until_year': 1932,
@@ -16759,7 +16760,7 @@ ZONE_ERAS_Asia_Makassar: List[ZoneEra] = [
     #             8:00    -    +08    1942 Feb  9
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+08',
         'until_year': 1942,
@@ -16771,7 +16772,7 @@ ZONE_ERAS_Asia_Makassar: List[ZoneEra] = [
     #             9:00    -    +09    1945 Sep 23
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+09',
         'until_year': 1945,
@@ -16783,7 +16784,7 @@ ZONE_ERAS_Asia_Makassar: List[ZoneEra] = [
     #             8:00    -    WITA
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'WITA',
         'until_year': 32767,
@@ -16809,7 +16810,7 @@ ZONE_ERAS_Asia_Manila: List[ZoneEra] = [
     # -15:56:00 - LMT 1844 Dec 31
     {
         'offset_seconds': -57360,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1844,
@@ -16821,7 +16822,7 @@ ZONE_ERAS_Asia_Manila: List[ZoneEra] = [
     #             8:04:00 -    LMT    1899 May 11
     {
         'offset_seconds': 29040,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1899,
@@ -16845,7 +16846,7 @@ ZONE_ERAS_Asia_Manila: List[ZoneEra] = [
     #             9:00    -    JST    1944 Nov
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'JST',
         'until_year': 1944,
@@ -16883,7 +16884,7 @@ ZONE_ERAS_Asia_Nicosia: List[ZoneEra] = [
     # 2:13:28 - LMT 1921 Nov 14
     {
         'offset_seconds': 8008,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1921,
@@ -16933,7 +16934,7 @@ ZONE_ERAS_Asia_Novokuznetsk: List[ZoneEra] = [
     # 5:48:48 - LMT 1924 May 1
     {
         'offset_seconds': 20928,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1924,
@@ -16945,7 +16946,7 @@ ZONE_ERAS_Asia_Novokuznetsk: List[ZoneEra] = [
     #              6:00    -    +06    1930 Jun 21
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 1930,
@@ -17005,7 +17006,7 @@ ZONE_ERAS_Asia_Novokuznetsk: List[ZoneEra] = [
     #              7:00    -    +07
     {
         'offset_seconds': 25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+07',
         'until_year': 32767,
@@ -17031,7 +17032,7 @@ ZONE_ERAS_Asia_Novosibirsk: List[ZoneEra] = [
     # 5:31:40 - LMT 1919 Dec 14 6:00
     {
         'offset_seconds': 19900,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1919,
@@ -17043,7 +17044,7 @@ ZONE_ERAS_Asia_Novosibirsk: List[ZoneEra] = [
     #              6:00    -    +06    1930 Jun 21
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 1930,
@@ -17103,7 +17104,7 @@ ZONE_ERAS_Asia_Novosibirsk: List[ZoneEra] = [
     #              7:00    -    +07    2014 Oct 26  2:00s
     {
         'offset_seconds': 25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+07',
         'until_year': 2014,
@@ -17115,7 +17116,7 @@ ZONE_ERAS_Asia_Novosibirsk: List[ZoneEra] = [
     #              6:00    -    +06    2016 Jul 24  2:00s
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 2016,
@@ -17127,7 +17128,7 @@ ZONE_ERAS_Asia_Novosibirsk: List[ZoneEra] = [
     #              7:00    -    +07
     {
         'offset_seconds': 25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+07',
         'until_year': 32767,
@@ -17153,7 +17154,7 @@ ZONE_ERAS_Asia_Omsk: List[ZoneEra] = [
     # 4:53:30 - LMT 1919 Nov 14
     {
         'offset_seconds': 17610,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1919,
@@ -17165,7 +17166,7 @@ ZONE_ERAS_Asia_Omsk: List[ZoneEra] = [
     #              5:00    -    +05    1930 Jun 21
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 1930,
@@ -17213,7 +17214,7 @@ ZONE_ERAS_Asia_Omsk: List[ZoneEra] = [
     #              7:00    -    +07    2014 Oct 26  2:00s
     {
         'offset_seconds': 25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+07',
         'until_year': 2014,
@@ -17225,7 +17226,7 @@ ZONE_ERAS_Asia_Omsk: List[ZoneEra] = [
     #              6:00    -    +06
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 32767,
@@ -17251,7 +17252,7 @@ ZONE_ERAS_Asia_Oral: List[ZoneEra] = [
     # 3:25:24 - LMT 1924 May 2
     {
         'offset_seconds': 12324,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1924,
@@ -17263,7 +17264,7 @@ ZONE_ERAS_Asia_Oral: List[ZoneEra] = [
     #             3:00    -    +03    1930 Jun 21
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 1930,
@@ -17275,7 +17276,7 @@ ZONE_ERAS_Asia_Oral: List[ZoneEra] = [
     #             5:00    -    +05    1981 Apr  1
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 1981,
@@ -17287,7 +17288,7 @@ ZONE_ERAS_Asia_Oral: List[ZoneEra] = [
     #             5:00    1:00    +06    1981 Oct  1
     {
         'offset_seconds': 18000,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': '+06',
         'until_year': 1981,
@@ -17299,7 +17300,7 @@ ZONE_ERAS_Asia_Oral: List[ZoneEra] = [
     #             6:00    -    +06    1982 Apr  1
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 1982,
@@ -17359,7 +17360,7 @@ ZONE_ERAS_Asia_Oral: List[ZoneEra] = [
     #             5:00    -    +05
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 32767,
@@ -17385,7 +17386,7 @@ ZONE_ERAS_Asia_Pontianak: List[ZoneEra] = [
     # 7:17:20 - LMT 1908 May
     {
         'offset_seconds': 26240,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1908,
@@ -17397,7 +17398,7 @@ ZONE_ERAS_Asia_Pontianak: List[ZoneEra] = [
     #             7:17:20    -    PMT    1932 Nov
     {
         'offset_seconds': 26240,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PMT',
         'until_year': 1932,
@@ -17409,7 +17410,7 @@ ZONE_ERAS_Asia_Pontianak: List[ZoneEra] = [
     #             7:30    -    +0730    1942 Jan 29
     {
         'offset_seconds': 27000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0730',
         'until_year': 1942,
@@ -17421,7 +17422,7 @@ ZONE_ERAS_Asia_Pontianak: List[ZoneEra] = [
     #             9:00    -    +09    1945 Sep 23
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+09',
         'until_year': 1945,
@@ -17433,7 +17434,7 @@ ZONE_ERAS_Asia_Pontianak: List[ZoneEra] = [
     #             7:30    -    +0730    1948 May
     {
         'offset_seconds': 27000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0730',
         'until_year': 1948,
@@ -17445,7 +17446,7 @@ ZONE_ERAS_Asia_Pontianak: List[ZoneEra] = [
     #             8:00    -    +08    1950 May
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+08',
         'until_year': 1950,
@@ -17457,7 +17458,7 @@ ZONE_ERAS_Asia_Pontianak: List[ZoneEra] = [
     #             7:30    -    +0730    1964
     {
         'offset_seconds': 27000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0730',
         'until_year': 1964,
@@ -17469,7 +17470,7 @@ ZONE_ERAS_Asia_Pontianak: List[ZoneEra] = [
     #             8:00    -    WITA    1988 Jan  1
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'WITA',
         'until_year': 1988,
@@ -17481,7 +17482,7 @@ ZONE_ERAS_Asia_Pontianak: List[ZoneEra] = [
     #             7:00    -    WIB
     {
         'offset_seconds': 25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'WIB',
         'until_year': 32767,
@@ -17507,7 +17508,7 @@ ZONE_ERAS_Asia_Pyongyang: List[ZoneEra] = [
     # 8:23:00 - LMT 1908 Apr 1
     {
         'offset_seconds': 30180,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1908,
@@ -17519,7 +17520,7 @@ ZONE_ERAS_Asia_Pyongyang: List[ZoneEra] = [
     #             8:30    -    KST    1912 Jan  1
     {
         'offset_seconds': 30600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'KST',
         'until_year': 1912,
@@ -17531,7 +17532,7 @@ ZONE_ERAS_Asia_Pyongyang: List[ZoneEra] = [
     #             9:00    -    JST    1945 Aug 24
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'JST',
         'until_year': 1945,
@@ -17543,7 +17544,7 @@ ZONE_ERAS_Asia_Pyongyang: List[ZoneEra] = [
     #             9:00    -    KST    2015 Aug 15 00:00
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'KST',
         'until_year': 2015,
@@ -17555,7 +17556,7 @@ ZONE_ERAS_Asia_Pyongyang: List[ZoneEra] = [
     #             8:30    -    KST    2018 May  4 23:30
     {
         'offset_seconds': 30600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'KST',
         'until_year': 2018,
@@ -17567,7 +17568,7 @@ ZONE_ERAS_Asia_Pyongyang: List[ZoneEra] = [
     #             9:00    -    KST
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'KST',
         'until_year': 32767,
@@ -17593,7 +17594,7 @@ ZONE_ERAS_Asia_Qatar: List[ZoneEra] = [
     # 3:26:08 - LMT 1920
     {
         'offset_seconds': 12368,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1920,
@@ -17605,7 +17606,7 @@ ZONE_ERAS_Asia_Qatar: List[ZoneEra] = [
     #             4:00    -    +04    1972 Jun
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 1972,
@@ -17617,7 +17618,7 @@ ZONE_ERAS_Asia_Qatar: List[ZoneEra] = [
     #             3:00    -    +03
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 32767,
@@ -17643,7 +17644,7 @@ ZONE_ERAS_Asia_Qostanay: List[ZoneEra] = [
     # 4:14:28 - LMT 1924 May 2
     {
         'offset_seconds': 15268,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1924,
@@ -17655,7 +17656,7 @@ ZONE_ERAS_Asia_Qostanay: List[ZoneEra] = [
     #             4:00    -    +04    1930 Jun 21
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 1930,
@@ -17667,7 +17668,7 @@ ZONE_ERAS_Asia_Qostanay: List[ZoneEra] = [
     #             5:00    -    +05    1981 Apr  1
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 1981,
@@ -17679,7 +17680,7 @@ ZONE_ERAS_Asia_Qostanay: List[ZoneEra] = [
     #             5:00    1:00    +06    1981 Oct  1
     {
         'offset_seconds': 18000,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': '+06',
         'until_year': 1981,
@@ -17691,7 +17692,7 @@ ZONE_ERAS_Asia_Qostanay: List[ZoneEra] = [
     #             6:00    -    +06    1982 Apr  1
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 1982,
@@ -17739,7 +17740,7 @@ ZONE_ERAS_Asia_Qostanay: List[ZoneEra] = [
     #             6:00    -    +06
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 32767,
@@ -17765,7 +17766,7 @@ ZONE_ERAS_Asia_Qyzylorda: List[ZoneEra] = [
     # 4:21:52 - LMT 1924 May 2
     {
         'offset_seconds': 15712,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1924,
@@ -17777,7 +17778,7 @@ ZONE_ERAS_Asia_Qyzylorda: List[ZoneEra] = [
     #             4:00    -    +04    1930 Jun 21
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 1930,
@@ -17789,7 +17790,7 @@ ZONE_ERAS_Asia_Qyzylorda: List[ZoneEra] = [
     #             5:00    -    +05    1981 Apr  1
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 1981,
@@ -17801,7 +17802,7 @@ ZONE_ERAS_Asia_Qyzylorda: List[ZoneEra] = [
     #             5:00    1:00    +06    1981 Oct  1
     {
         'offset_seconds': 18000,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': '+06',
         'until_year': 1981,
@@ -17813,7 +17814,7 @@ ZONE_ERAS_Asia_Qyzylorda: List[ZoneEra] = [
     #             6:00    -    +06    1982 Apr  1
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 1982,
@@ -17885,7 +17886,7 @@ ZONE_ERAS_Asia_Qyzylorda: List[ZoneEra] = [
     #             6:00    -    +06    2018 Dec 21  0:00
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 2018,
@@ -17897,7 +17898,7 @@ ZONE_ERAS_Asia_Qyzylorda: List[ZoneEra] = [
     #             5:00    -    +05
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 32767,
@@ -17923,7 +17924,7 @@ ZONE_ERAS_Asia_Riyadh: List[ZoneEra] = [
     # 3:06:52 - LMT 1947 Mar 14
     {
         'offset_seconds': 11212,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1947,
@@ -17935,7 +17936,7 @@ ZONE_ERAS_Asia_Riyadh: List[ZoneEra] = [
     #             3:00    -    +03
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 32767,
@@ -17961,7 +17962,7 @@ ZONE_ERAS_Asia_Sakhalin: List[ZoneEra] = [
     # 9:30:48 - LMT 1905 Aug 23
     {
         'offset_seconds': 34248,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1905,
@@ -17973,7 +17974,7 @@ ZONE_ERAS_Asia_Sakhalin: List[ZoneEra] = [
     #              9:00    -    +09    1945 Aug 25
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+09',
         'until_year': 1945,
@@ -18033,7 +18034,7 @@ ZONE_ERAS_Asia_Sakhalin: List[ZoneEra] = [
     #             11:00    -    +11    2014 Oct 26  2:00s
     {
         'offset_seconds': 39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+11',
         'until_year': 2014,
@@ -18045,7 +18046,7 @@ ZONE_ERAS_Asia_Sakhalin: List[ZoneEra] = [
     #             10:00    -    +10    2016 Mar 27  2:00s
     {
         'offset_seconds': 36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+10',
         'until_year': 2016,
@@ -18057,7 +18058,7 @@ ZONE_ERAS_Asia_Sakhalin: List[ZoneEra] = [
     #             11:00    -    +11
     {
         'offset_seconds': 39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+11',
         'until_year': 32767,
@@ -18083,7 +18084,7 @@ ZONE_ERAS_Asia_Samarkand: List[ZoneEra] = [
     # 4:27:53 - LMT 1924 May 2
     {
         'offset_seconds': 16073,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1924,
@@ -18095,7 +18096,7 @@ ZONE_ERAS_Asia_Samarkand: List[ZoneEra] = [
     #             4:00    -    +04    1930 Jun 21
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 1930,
@@ -18107,7 +18108,7 @@ ZONE_ERAS_Asia_Samarkand: List[ZoneEra] = [
     #             5:00    -    +05    1981 Apr  1
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 1981,
@@ -18119,7 +18120,7 @@ ZONE_ERAS_Asia_Samarkand: List[ZoneEra] = [
     #             5:00    1:00    +06    1981 Oct  1
     {
         'offset_seconds': 18000,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': '+06',
         'until_year': 1981,
@@ -18131,7 +18132,7 @@ ZONE_ERAS_Asia_Samarkand: List[ZoneEra] = [
     #             6:00    -    +06    1982 Apr  1
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 1982,
@@ -18155,7 +18156,7 @@ ZONE_ERAS_Asia_Samarkand: List[ZoneEra] = [
     #             5:00    -    +05
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 32767,
@@ -18181,7 +18182,7 @@ ZONE_ERAS_Asia_Seoul: List[ZoneEra] = [
     # 8:27:52 - LMT 1908 Apr 1
     {
         'offset_seconds': 30472,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1908,
@@ -18193,7 +18194,7 @@ ZONE_ERAS_Asia_Seoul: List[ZoneEra] = [
     #             8:30    -    KST    1912 Jan  1
     {
         'offset_seconds': 30600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'KST',
         'until_year': 1912,
@@ -18205,7 +18206,7 @@ ZONE_ERAS_Asia_Seoul: List[ZoneEra] = [
     #             9:00    -    JST    1945 Sep  8
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'JST',
         'until_year': 1945,
@@ -18267,7 +18268,7 @@ ZONE_ERAS_Asia_Shanghai: List[ZoneEra] = [
     # 8:05:43 - LMT 1901
     {
         'offset_seconds': 29143,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1901,
@@ -18317,7 +18318,7 @@ ZONE_ERAS_Asia_Singapore: List[ZoneEra] = [
     # 6:55:25 - LMT 1901 Jan 1
     {
         'offset_seconds': 24925,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1901,
@@ -18329,7 +18330,7 @@ ZONE_ERAS_Asia_Singapore: List[ZoneEra] = [
     #             6:55:25    -    SMT    1905 Jun  1
     {
         'offset_seconds': 24925,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'SMT',
         'until_year': 1905,
@@ -18341,7 +18342,7 @@ ZONE_ERAS_Asia_Singapore: List[ZoneEra] = [
     #             7:00    -    +07    1933 Jan  1
     {
         'offset_seconds': 25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+07',
         'until_year': 1933,
@@ -18353,7 +18354,7 @@ ZONE_ERAS_Asia_Singapore: List[ZoneEra] = [
     #             7:00    0:20    +0720    1936 Jan  1
     {
         'offset_seconds': 25200,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 1200,
         'format': '+0720',
         'until_year': 1936,
@@ -18365,7 +18366,7 @@ ZONE_ERAS_Asia_Singapore: List[ZoneEra] = [
     #             7:20    -    +0720    1941 Sep  1
     {
         'offset_seconds': 26400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0720',
         'until_year': 1941,
@@ -18377,7 +18378,7 @@ ZONE_ERAS_Asia_Singapore: List[ZoneEra] = [
     #             7:30    -    +0730    1942 Feb 16
     {
         'offset_seconds': 27000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0730',
         'until_year': 1942,
@@ -18389,7 +18390,7 @@ ZONE_ERAS_Asia_Singapore: List[ZoneEra] = [
     #             9:00    -    +09    1945 Sep 12
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+09',
         'until_year': 1945,
@@ -18401,7 +18402,7 @@ ZONE_ERAS_Asia_Singapore: List[ZoneEra] = [
     #             7:30    -    +0730    1981 Dec 31 16:00u
     {
         'offset_seconds': 27000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0730',
         'until_year': 1981,
@@ -18413,7 +18414,7 @@ ZONE_ERAS_Asia_Singapore: List[ZoneEra] = [
     #             8:00    -    +08
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+08',
         'until_year': 32767,
@@ -18439,7 +18440,7 @@ ZONE_ERAS_Asia_Srednekolymsk: List[ZoneEra] = [
     # 10:14:52 - LMT 1924 May 2
     {
         'offset_seconds': 36892,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1924,
@@ -18451,7 +18452,7 @@ ZONE_ERAS_Asia_Srednekolymsk: List[ZoneEra] = [
     #             10:00    -    +10    1930 Jun 21
     {
         'offset_seconds': 36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+10',
         'until_year': 1930,
@@ -18499,7 +18500,7 @@ ZONE_ERAS_Asia_Srednekolymsk: List[ZoneEra] = [
     #             12:00    -    +12    2014 Oct 26  2:00s
     {
         'offset_seconds': 43200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+12',
         'until_year': 2014,
@@ -18511,7 +18512,7 @@ ZONE_ERAS_Asia_Srednekolymsk: List[ZoneEra] = [
     #             11:00    -    +11
     {
         'offset_seconds': 39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+11',
         'until_year': 32767,
@@ -18537,7 +18538,7 @@ ZONE_ERAS_Asia_Taipei: List[ZoneEra] = [
     # 8:06:00 - LMT 1896 Jan 1
     {
         'offset_seconds': 29160,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1896,
@@ -18549,7 +18550,7 @@ ZONE_ERAS_Asia_Taipei: List[ZoneEra] = [
     #             8:00    -    CST    1937 Oct  1
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CST',
         'until_year': 1937,
@@ -18561,7 +18562,7 @@ ZONE_ERAS_Asia_Taipei: List[ZoneEra] = [
     #             9:00    -    JST    1945 Sep 21  1:00
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'JST',
         'until_year': 1945,
@@ -18599,7 +18600,7 @@ ZONE_ERAS_Asia_Tashkent: List[ZoneEra] = [
     # 4:37:11 - LMT 1924 May 2
     {
         'offset_seconds': 16631,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1924,
@@ -18611,7 +18612,7 @@ ZONE_ERAS_Asia_Tashkent: List[ZoneEra] = [
     #             5:00    -    +05    1930 Jun 21
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 1930,
@@ -18647,7 +18648,7 @@ ZONE_ERAS_Asia_Tashkent: List[ZoneEra] = [
     #             5:00    -    +05
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 32767,
@@ -18673,7 +18674,7 @@ ZONE_ERAS_Asia_Tbilisi: List[ZoneEra] = [
     # 2:59:11 - LMT 1880
     {
         'offset_seconds': 10751,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1880,
@@ -18685,7 +18686,7 @@ ZONE_ERAS_Asia_Tbilisi: List[ZoneEra] = [
     #             2:59:11    -    TBMT    1924 May  2
     {
         'offset_seconds': 10751,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'TBMT',
         'until_year': 1924,
@@ -18697,7 +18698,7 @@ ZONE_ERAS_Asia_Tbilisi: List[ZoneEra] = [
     #             3:00    -    +03    1957 Mar
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 1957,
@@ -18757,7 +18758,7 @@ ZONE_ERAS_Asia_Tbilisi: List[ZoneEra] = [
     #             4:00    1:00    +05    1997 Mar lastSun
     {
         'offset_seconds': 14400,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': '+05',
         'until_year': 1997,
@@ -18793,7 +18794,7 @@ ZONE_ERAS_Asia_Tbilisi: List[ZoneEra] = [
     #             4:00    -    +04
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 32767,
@@ -18819,7 +18820,7 @@ ZONE_ERAS_Asia_Tehran: List[ZoneEra] = [
     # 3:25:44 - LMT 1916
     {
         'offset_seconds': 12344,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1916,
@@ -18831,7 +18832,7 @@ ZONE_ERAS_Asia_Tehran: List[ZoneEra] = [
     #             3:25:44    -    TMT    1935 Jun 13
     {
         'offset_seconds': 12344,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'TMT',
         'until_year': 1935,
@@ -18893,7 +18894,7 @@ ZONE_ERAS_Asia_Thimphu: List[ZoneEra] = [
     # 5:58:36 - LMT 1947 Aug 15
     {
         'offset_seconds': 21516,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1947,
@@ -18905,7 +18906,7 @@ ZONE_ERAS_Asia_Thimphu: List[ZoneEra] = [
     #             5:30    -    +0530    1987 Oct
     {
         'offset_seconds': 19800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0530',
         'until_year': 1987,
@@ -18917,7 +18918,7 @@ ZONE_ERAS_Asia_Thimphu: List[ZoneEra] = [
     #             6:00    -    +06
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 32767,
@@ -18943,7 +18944,7 @@ ZONE_ERAS_Asia_Tokyo: List[ZoneEra] = [
     # 9:18:59 - LMT 1887 Dec 31 15:00u
     {
         'offset_seconds': 33539,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1887,
@@ -18981,7 +18982,7 @@ ZONE_ERAS_Asia_Tomsk: List[ZoneEra] = [
     # 5:39:51 - LMT 1919 Dec 22
     {
         'offset_seconds': 20391,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1919,
@@ -18993,7 +18994,7 @@ ZONE_ERAS_Asia_Tomsk: List[ZoneEra] = [
     #              6:00    -    +06    1930 Jun 21
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 1930,
@@ -19053,7 +19054,7 @@ ZONE_ERAS_Asia_Tomsk: List[ZoneEra] = [
     #              7:00    -    +07    2014 Oct 26  2:00s
     {
         'offset_seconds': 25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+07',
         'until_year': 2014,
@@ -19065,7 +19066,7 @@ ZONE_ERAS_Asia_Tomsk: List[ZoneEra] = [
     #              6:00    -    +06    2016 May 29  2:00s
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 2016,
@@ -19077,7 +19078,7 @@ ZONE_ERAS_Asia_Tomsk: List[ZoneEra] = [
     #              7:00    -    +07
     {
         'offset_seconds': 25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+07',
         'until_year': 32767,
@@ -19103,7 +19104,7 @@ ZONE_ERAS_Asia_Ulaanbaatar: List[ZoneEra] = [
     # 7:07:32 - LMT 1905 Aug
     {
         'offset_seconds': 25652,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1905,
@@ -19115,7 +19116,7 @@ ZONE_ERAS_Asia_Ulaanbaatar: List[ZoneEra] = [
     #             7:00    -    +07    1978
     {
         'offset_seconds': 25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+07',
         'until_year': 1978,
@@ -19153,7 +19154,7 @@ ZONE_ERAS_Asia_Urumqi: List[ZoneEra] = [
     # 5:50:20 - LMT 1928
     {
         'offset_seconds': 21020,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1928,
@@ -19165,7 +19166,7 @@ ZONE_ERAS_Asia_Urumqi: List[ZoneEra] = [
     #             6:00    -    +06
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 32767,
@@ -19191,7 +19192,7 @@ ZONE_ERAS_Asia_Ust_Nera: List[ZoneEra] = [
     # 9:32:54 - LMT 1919 Dec 15
     {
         'offset_seconds': 34374,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1919,
@@ -19203,7 +19204,7 @@ ZONE_ERAS_Asia_Ust_Nera: List[ZoneEra] = [
     #              8:00    -    +08    1930 Jun 21
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+08',
         'until_year': 1930,
@@ -19263,7 +19264,7 @@ ZONE_ERAS_Asia_Ust_Nera: List[ZoneEra] = [
     #             12:00    -    +12    2011 Sep 13  0:00s
     {
         'offset_seconds': 43200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+12',
         'until_year': 2011,
@@ -19275,7 +19276,7 @@ ZONE_ERAS_Asia_Ust_Nera: List[ZoneEra] = [
     #             11:00    -    +11    2014 Oct 26  2:00s
     {
         'offset_seconds': 39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+11',
         'until_year': 2014,
@@ -19287,7 +19288,7 @@ ZONE_ERAS_Asia_Ust_Nera: List[ZoneEra] = [
     #             10:00    -    +10
     {
         'offset_seconds': 36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+10',
         'until_year': 32767,
@@ -19313,7 +19314,7 @@ ZONE_ERAS_Asia_Vladivostok: List[ZoneEra] = [
     # 8:47:31 - LMT 1922 Nov 15
     {
         'offset_seconds': 31651,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1922,
@@ -19325,7 +19326,7 @@ ZONE_ERAS_Asia_Vladivostok: List[ZoneEra] = [
     #              9:00    -    +09    1930 Jun 21
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+09',
         'until_year': 1930,
@@ -19373,7 +19374,7 @@ ZONE_ERAS_Asia_Vladivostok: List[ZoneEra] = [
     #             11:00    -    +11    2014 Oct 26  2:00s
     {
         'offset_seconds': 39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+11',
         'until_year': 2014,
@@ -19385,7 +19386,7 @@ ZONE_ERAS_Asia_Vladivostok: List[ZoneEra] = [
     #             10:00    -    +10
     {
         'offset_seconds': 36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+10',
         'until_year': 32767,
@@ -19411,7 +19412,7 @@ ZONE_ERAS_Asia_Yakutsk: List[ZoneEra] = [
     # 8:38:58 - LMT 1919 Dec 15
     {
         'offset_seconds': 31138,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1919,
@@ -19423,7 +19424,7 @@ ZONE_ERAS_Asia_Yakutsk: List[ZoneEra] = [
     #              8:00    -    +08    1930 Jun 21
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+08',
         'until_year': 1930,
@@ -19471,7 +19472,7 @@ ZONE_ERAS_Asia_Yakutsk: List[ZoneEra] = [
     #             10:00    -    +10    2014 Oct 26  2:00s
     {
         'offset_seconds': 36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+10',
         'until_year': 2014,
@@ -19483,7 +19484,7 @@ ZONE_ERAS_Asia_Yakutsk: List[ZoneEra] = [
     #              9:00    -    +09
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+09',
         'until_year': 32767,
@@ -19509,7 +19510,7 @@ ZONE_ERAS_Asia_Yangon: List[ZoneEra] = [
     # 6:24:47 - LMT 1880
     {
         'offset_seconds': 23087,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1880,
@@ -19521,7 +19522,7 @@ ZONE_ERAS_Asia_Yangon: List[ZoneEra] = [
     #             6:24:47    -    RMT    1920
     {
         'offset_seconds': 23087,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'RMT',
         'until_year': 1920,
@@ -19533,7 +19534,7 @@ ZONE_ERAS_Asia_Yangon: List[ZoneEra] = [
     #             6:30    -    +0630    1942 May
     {
         'offset_seconds': 23400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0630',
         'until_year': 1942,
@@ -19545,7 +19546,7 @@ ZONE_ERAS_Asia_Yangon: List[ZoneEra] = [
     #             9:00    -    +09    1945 May  3
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+09',
         'until_year': 1945,
@@ -19557,7 +19558,7 @@ ZONE_ERAS_Asia_Yangon: List[ZoneEra] = [
     #             6:30    -    +0630
     {
         'offset_seconds': 23400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+0630',
         'until_year': 32767,
@@ -19583,7 +19584,7 @@ ZONE_ERAS_Asia_Yekaterinburg: List[ZoneEra] = [
     # 4:02:33 - LMT 1916 Jul 3
     {
         'offset_seconds': 14553,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1916,
@@ -19595,7 +19596,7 @@ ZONE_ERAS_Asia_Yekaterinburg: List[ZoneEra] = [
     #              3:45:05 -    PMT    1919 Jul 15  4:00
     {
         'offset_seconds': 13505,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PMT',
         'until_year': 1919,
@@ -19607,7 +19608,7 @@ ZONE_ERAS_Asia_Yekaterinburg: List[ZoneEra] = [
     #              4:00    -    +04    1930 Jun 21
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 1930,
@@ -19655,7 +19656,7 @@ ZONE_ERAS_Asia_Yekaterinburg: List[ZoneEra] = [
     #              6:00    -    +06    2014 Oct 26  2:00s
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 2014,
@@ -19667,7 +19668,7 @@ ZONE_ERAS_Asia_Yekaterinburg: List[ZoneEra] = [
     #              5:00    -    +05
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 32767,
@@ -19693,7 +19694,7 @@ ZONE_ERAS_Asia_Yerevan: List[ZoneEra] = [
     # 2:58:00 - LMT 1924 May 2
     {
         'offset_seconds': 10680,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1924,
@@ -19705,7 +19706,7 @@ ZONE_ERAS_Asia_Yerevan: List[ZoneEra] = [
     #             3:00    -    +03    1957 Mar
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 1957,
@@ -19741,7 +19742,7 @@ ZONE_ERAS_Asia_Yerevan: List[ZoneEra] = [
     #             4:00    -    +04    1997
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 1997,
@@ -19791,7 +19792,7 @@ ZONE_ERAS_Atlantic_Azores: List[ZoneEra] = [
     # -1:42:40 - LMT 1884
     {
         'offset_seconds': -6160,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1884,
@@ -19803,7 +19804,7 @@ ZONE_ERAS_Atlantic_Azores: List[ZoneEra] = [
     #             -1:54:32 -    HMT    1912 Jan  1  2:00u
     {
         'offset_seconds': -6872,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'HMT',
         'until_year': 1912,
@@ -19985,7 +19986,7 @@ ZONE_ERAS_Atlantic_Bermuda: List[ZoneEra] = [
     # -4:19:18 - LMT 1890
     {
         'offset_seconds': -15558,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1890,
@@ -20059,7 +20060,7 @@ ZONE_ERAS_Atlantic_Canary: List[ZoneEra] = [
     # -1:01:36 - LMT 1922 Mar
     {
         'offset_seconds': -3696,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1922,
@@ -20071,7 +20072,7 @@ ZONE_ERAS_Atlantic_Canary: List[ZoneEra] = [
     #             -1:00    -    -01    1946 Sep 30  1:00
     {
         'offset_seconds': -3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-01',
         'until_year': 1946,
@@ -20083,7 +20084,7 @@ ZONE_ERAS_Atlantic_Canary: List[ZoneEra] = [
     #              0:00    -    WET    1980 Apr  6  0:00s
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'WET',
         'until_year': 1980,
@@ -20095,7 +20096,7 @@ ZONE_ERAS_Atlantic_Canary: List[ZoneEra] = [
     #              0:00    1:00    WEST    1980 Sep 28  1:00u
     {
         'offset_seconds': 0,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'WEST',
         'until_year': 1980,
@@ -20133,7 +20134,7 @@ ZONE_ERAS_Atlantic_Cape_Verde: List[ZoneEra] = [
     # -1:34:04 - LMT 1912 Jan 01 2:00u
     {
         'offset_seconds': -5644,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1912,
@@ -20145,7 +20146,7 @@ ZONE_ERAS_Atlantic_Cape_Verde: List[ZoneEra] = [
     #             -2:00    -    -02    1942 Sep
     {
         'offset_seconds': -7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-02',
         'until_year': 1942,
@@ -20157,7 +20158,7 @@ ZONE_ERAS_Atlantic_Cape_Verde: List[ZoneEra] = [
     #             -2:00    1:00    -01    1945 Oct 15
     {
         'offset_seconds': -7200,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': '-01',
         'until_year': 1945,
@@ -20169,7 +20170,7 @@ ZONE_ERAS_Atlantic_Cape_Verde: List[ZoneEra] = [
     #             -2:00    -    -02    1975 Nov 25  2:00
     {
         'offset_seconds': -7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-02',
         'until_year': 1975,
@@ -20181,7 +20182,7 @@ ZONE_ERAS_Atlantic_Cape_Verde: List[ZoneEra] = [
     #             -1:00    -    -01
     {
         'offset_seconds': -3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-01',
         'until_year': 32767,
@@ -20207,7 +20208,7 @@ ZONE_ERAS_Atlantic_Faroe: List[ZoneEra] = [
     # -0:27:04 - LMT 1908 Jan 11
     {
         'offset_seconds': -1624,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1908,
@@ -20219,7 +20220,7 @@ ZONE_ERAS_Atlantic_Faroe: List[ZoneEra] = [
     #              0:00    -    WET    1981
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'WET',
         'until_year': 1981,
@@ -20257,7 +20258,7 @@ ZONE_ERAS_Atlantic_Madeira: List[ZoneEra] = [
     # -1:07:36 - LMT 1884
     {
         'offset_seconds': -4056,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1884,
@@ -20269,7 +20270,7 @@ ZONE_ERAS_Atlantic_Madeira: List[ZoneEra] = [
     #             -1:07:36 -    FMT    1912 Jan  1  1:00u
     {
         'offset_seconds': -4056,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'FMT',
         'until_year': 1912,
@@ -20427,7 +20428,7 @@ ZONE_ERAS_Atlantic_South_Georgia: List[ZoneEra] = [
     # -2:26:08 - LMT 1890
     {
         'offset_seconds': -8768,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1890,
@@ -20439,7 +20440,7 @@ ZONE_ERAS_Atlantic_South_Georgia: List[ZoneEra] = [
     #             -2:00    -    -02
     {
         'offset_seconds': -7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-02',
         'until_year': 32767,
@@ -20465,7 +20466,7 @@ ZONE_ERAS_Atlantic_Stanley: List[ZoneEra] = [
     # -3:51:24 - LMT 1890
     {
         'offset_seconds': -13884,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1890,
@@ -20477,7 +20478,7 @@ ZONE_ERAS_Atlantic_Stanley: List[ZoneEra] = [
     #             -3:51:24 -    SMT    1912 Mar 12
     {
         'offset_seconds': -13884,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'SMT',
         'until_year': 1912,
@@ -20525,7 +20526,7 @@ ZONE_ERAS_Atlantic_Stanley: List[ZoneEra] = [
     #             -3:00    -    -03
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 32767,
@@ -20551,7 +20552,7 @@ ZONE_ERAS_Australia_Adelaide: List[ZoneEra] = [
     # 9:14:20 - LMT 1895 Feb
     {
         'offset_seconds': 33260,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1895,
@@ -20563,7 +20564,7 @@ ZONE_ERAS_Australia_Adelaide: List[ZoneEra] = [
     #             9:00    -    ACST    1899 May
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'ACST',
         'until_year': 1899,
@@ -20613,7 +20614,7 @@ ZONE_ERAS_Australia_Brisbane: List[ZoneEra] = [
     # 10:12:08 - LMT 1895
     {
         'offset_seconds': 36728,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1895,
@@ -20663,7 +20664,7 @@ ZONE_ERAS_Australia_Broken_Hill: List[ZoneEra] = [
     # 9:25:48 - LMT 1895 Feb
     {
         'offset_seconds': 33948,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1895,
@@ -20675,7 +20676,7 @@ ZONE_ERAS_Australia_Broken_Hill: List[ZoneEra] = [
     #             10:00    -    AEST    1896 Aug 23
     {
         'offset_seconds': 36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'AEST',
         'until_year': 1896,
@@ -20687,7 +20688,7 @@ ZONE_ERAS_Australia_Broken_Hill: List[ZoneEra] = [
     #             9:00    -    ACST    1899 May
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'ACST',
         'until_year': 1899,
@@ -20749,7 +20750,7 @@ ZONE_ERAS_Australia_Darwin: List[ZoneEra] = [
     # 8:43:20 - LMT 1895 Feb
     {
         'offset_seconds': 31400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1895,
@@ -20761,7 +20762,7 @@ ZONE_ERAS_Australia_Darwin: List[ZoneEra] = [
     #              9:00    -    ACST    1899 May
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'ACST',
         'until_year': 1899,
@@ -20799,7 +20800,7 @@ ZONE_ERAS_Australia_Eucla: List[ZoneEra] = [
     # 8:35:28 - LMT 1895 Dec
     {
         'offset_seconds': 30928,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1895,
@@ -20849,7 +20850,7 @@ ZONE_ERAS_Australia_Hobart: List[ZoneEra] = [
     # 9:49:16 - LMT 1895 Sep
     {
         'offset_seconds': 35356,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1895,
@@ -20911,7 +20912,7 @@ ZONE_ERAS_Australia_Lindeman: List[ZoneEra] = [
     # 9:55:56 - LMT 1895
     {
         'offset_seconds': 35756,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1895,
@@ -20973,7 +20974,7 @@ ZONE_ERAS_Australia_Lord_Howe: List[ZoneEra] = [
     # 10:36:20 - LMT 1895 Feb
     {
         'offset_seconds': 38180,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1895,
@@ -20985,7 +20986,7 @@ ZONE_ERAS_Australia_Lord_Howe: List[ZoneEra] = [
     #             10:00    -    AEST    1981 Mar
     {
         'offset_seconds': 36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'AEST',
         'until_year': 1981,
@@ -21035,7 +21036,7 @@ ZONE_ERAS_Australia_Melbourne: List[ZoneEra] = [
     # 9:39:52 - LMT 1895 Feb
     {
         'offset_seconds': 34792,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1895,
@@ -21085,7 +21086,7 @@ ZONE_ERAS_Australia_Perth: List[ZoneEra] = [
     # 7:43:24 - LMT 1895 Dec
     {
         'offset_seconds': 27804,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1895,
@@ -21135,7 +21136,7 @@ ZONE_ERAS_Australia_Sydney: List[ZoneEra] = [
     # 10:04:52 - LMT 1895 Feb
     {
         'offset_seconds': 36292,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1895,
@@ -21263,7 +21264,7 @@ ZONE_ERAS_EST: List[ZoneEra] = [
     # -5:00 - EST
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EST',
         'until_year': 32767,
@@ -21315,7 +21316,7 @@ ZONE_ERAS_Etc_GMT: List[ZoneEra] = [
     # 0 - GMT
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'GMT',
         'until_year': 32767,
@@ -21341,7 +21342,7 @@ ZONE_ERAS_Etc_GMT_PLUS_1: List[ZoneEra] = [
     # -1 - -01
     {
         'offset_seconds': -3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-01',
         'until_year': 32767,
@@ -21367,7 +21368,7 @@ ZONE_ERAS_Etc_GMT_PLUS_10: List[ZoneEra] = [
     # -10 - -10
     {
         'offset_seconds': -36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-10',
         'until_year': 32767,
@@ -21393,7 +21394,7 @@ ZONE_ERAS_Etc_GMT_PLUS_11: List[ZoneEra] = [
     # -11 - -11
     {
         'offset_seconds': -39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-11',
         'until_year': 32767,
@@ -21419,7 +21420,7 @@ ZONE_ERAS_Etc_GMT_PLUS_12: List[ZoneEra] = [
     # -12 - -12
     {
         'offset_seconds': -43200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-12',
         'until_year': 32767,
@@ -21445,7 +21446,7 @@ ZONE_ERAS_Etc_GMT_PLUS_2: List[ZoneEra] = [
     # -2 - -02
     {
         'offset_seconds': -7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-02',
         'until_year': 32767,
@@ -21471,7 +21472,7 @@ ZONE_ERAS_Etc_GMT_PLUS_3: List[ZoneEra] = [
     # -3 - -03
     {
         'offset_seconds': -10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-03',
         'until_year': 32767,
@@ -21497,7 +21498,7 @@ ZONE_ERAS_Etc_GMT_PLUS_4: List[ZoneEra] = [
     # -4 - -04
     {
         'offset_seconds': -14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-04',
         'until_year': 32767,
@@ -21523,7 +21524,7 @@ ZONE_ERAS_Etc_GMT_PLUS_5: List[ZoneEra] = [
     # -5 - -05
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-05',
         'until_year': 32767,
@@ -21549,7 +21550,7 @@ ZONE_ERAS_Etc_GMT_PLUS_6: List[ZoneEra] = [
     # -6 - -06
     {
         'offset_seconds': -21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-06',
         'until_year': 32767,
@@ -21575,7 +21576,7 @@ ZONE_ERAS_Etc_GMT_PLUS_7: List[ZoneEra] = [
     # -7 - -07
     {
         'offset_seconds': -25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-07',
         'until_year': 32767,
@@ -21601,7 +21602,7 @@ ZONE_ERAS_Etc_GMT_PLUS_8: List[ZoneEra] = [
     # -8 - -08
     {
         'offset_seconds': -28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-08',
         'until_year': 32767,
@@ -21627,7 +21628,7 @@ ZONE_ERAS_Etc_GMT_PLUS_9: List[ZoneEra] = [
     # -9 - -09
     {
         'offset_seconds': -32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-09',
         'until_year': 32767,
@@ -21653,7 +21654,7 @@ ZONE_ERAS_Etc_GMT_1: List[ZoneEra] = [
     # 1 - +01
     {
         'offset_seconds': 3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+01',
         'until_year': 32767,
@@ -21679,7 +21680,7 @@ ZONE_ERAS_Etc_GMT_10: List[ZoneEra] = [
     # 10 - +10
     {
         'offset_seconds': 36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+10',
         'until_year': 32767,
@@ -21705,7 +21706,7 @@ ZONE_ERAS_Etc_GMT_11: List[ZoneEra] = [
     # 11 - +11
     {
         'offset_seconds': 39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+11',
         'until_year': 32767,
@@ -21731,7 +21732,7 @@ ZONE_ERAS_Etc_GMT_12: List[ZoneEra] = [
     # 12 - +12
     {
         'offset_seconds': 43200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+12',
         'until_year': 32767,
@@ -21757,7 +21758,7 @@ ZONE_ERAS_Etc_GMT_13: List[ZoneEra] = [
     # 13 - +13
     {
         'offset_seconds': 46800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+13',
         'until_year': 32767,
@@ -21783,7 +21784,7 @@ ZONE_ERAS_Etc_GMT_14: List[ZoneEra] = [
     # 14 - +14
     {
         'offset_seconds': 50400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+14',
         'until_year': 32767,
@@ -21809,7 +21810,7 @@ ZONE_ERAS_Etc_GMT_2: List[ZoneEra] = [
     # 2 - +02
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+02',
         'until_year': 32767,
@@ -21835,7 +21836,7 @@ ZONE_ERAS_Etc_GMT_3: List[ZoneEra] = [
     # 3 - +03
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 32767,
@@ -21861,7 +21862,7 @@ ZONE_ERAS_Etc_GMT_4: List[ZoneEra] = [
     # 4 - +04
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 32767,
@@ -21887,7 +21888,7 @@ ZONE_ERAS_Etc_GMT_5: List[ZoneEra] = [
     # 5 - +05
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 32767,
@@ -21913,7 +21914,7 @@ ZONE_ERAS_Etc_GMT_6: List[ZoneEra] = [
     # 6 - +06
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 32767,
@@ -21939,7 +21940,7 @@ ZONE_ERAS_Etc_GMT_7: List[ZoneEra] = [
     # 7 - +07
     {
         'offset_seconds': 25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+07',
         'until_year': 32767,
@@ -21965,7 +21966,7 @@ ZONE_ERAS_Etc_GMT_8: List[ZoneEra] = [
     # 8 - +08
     {
         'offset_seconds': 28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+08',
         'until_year': 32767,
@@ -21991,7 +21992,7 @@ ZONE_ERAS_Etc_GMT_9: List[ZoneEra] = [
     # 9 - +09
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+09',
         'until_year': 32767,
@@ -22017,7 +22018,7 @@ ZONE_ERAS_Etc_UTC: List[ZoneEra] = [
     # 0 - UTC
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'UTC',
         'until_year': 32767,
@@ -22043,7 +22044,7 @@ ZONE_ERAS_Europe_Andorra: List[ZoneEra] = [
     # 0:06:04 - LMT 1901
     {
         'offset_seconds': 364,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1901,
@@ -22055,7 +22056,7 @@ ZONE_ERAS_Europe_Andorra: List[ZoneEra] = [
     #             0:00    -    WET    1946 Sep 30
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'WET',
         'until_year': 1946,
@@ -22067,7 +22068,7 @@ ZONE_ERAS_Europe_Andorra: List[ZoneEra] = [
     #             1:00    -    CET    1985 Mar 31  2:00
     {
         'offset_seconds': 3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CET',
         'until_year': 1985,
@@ -22105,7 +22106,7 @@ ZONE_ERAS_Europe_Astrakhan: List[ZoneEra] = [
     # 3:12:12 - LMT 1924 May
     {
         'offset_seconds': 11532,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1924,
@@ -22117,7 +22118,7 @@ ZONE_ERAS_Europe_Astrakhan: List[ZoneEra] = [
     #              3:00    -    +03    1930 Jun 21
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 1930,
@@ -22153,7 +22154,7 @@ ZONE_ERAS_Europe_Astrakhan: List[ZoneEra] = [
     #              4:00    -    +04    1992 Mar 29  2:00s
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 1992,
@@ -22177,7 +22178,7 @@ ZONE_ERAS_Europe_Astrakhan: List[ZoneEra] = [
     #              4:00    -    +04    2014 Oct 26  2:00s
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 2014,
@@ -22189,7 +22190,7 @@ ZONE_ERAS_Europe_Astrakhan: List[ZoneEra] = [
     #              3:00    -    +03    2016 Mar 27  2:00s
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 2016,
@@ -22201,7 +22202,7 @@ ZONE_ERAS_Europe_Astrakhan: List[ZoneEra] = [
     #              4:00    -    +04
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 32767,
@@ -22227,7 +22228,7 @@ ZONE_ERAS_Europe_Athens: List[ZoneEra] = [
     # 1:34:52 - LMT 1895 Sep 14
     {
         'offset_seconds': 5692,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1895,
@@ -22239,7 +22240,7 @@ ZONE_ERAS_Europe_Athens: List[ZoneEra] = [
     #             1:34:52    -    AMT    1916 Jul 28  0:01
     {
         'offset_seconds': 5692,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'AMT',
         'until_year': 1916,
@@ -22313,7 +22314,7 @@ ZONE_ERAS_Europe_Belgrade: List[ZoneEra] = [
     # 1:22:00 - LMT 1884
     {
         'offset_seconds': 4920,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1884,
@@ -22325,7 +22326,7 @@ ZONE_ERAS_Europe_Belgrade: List[ZoneEra] = [
     #             1:00    -    CET    1941 Apr 18 23:00
     {
         'offset_seconds': 3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CET',
         'until_year': 1941,
@@ -22349,7 +22350,7 @@ ZONE_ERAS_Europe_Belgrade: List[ZoneEra] = [
     #             1:00    -    CET    1945 May  8  2:00s
     {
         'offset_seconds': 3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CET',
         'until_year': 1945,
@@ -22361,7 +22362,7 @@ ZONE_ERAS_Europe_Belgrade: List[ZoneEra] = [
     #             1:00    1:00    CEST    1945 Sep 16  2:00s
     {
         'offset_seconds': 3600,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'CEST',
         'until_year': 1945,
@@ -22373,7 +22374,7 @@ ZONE_ERAS_Europe_Belgrade: List[ZoneEra] = [
     #             1:00    -    CET    1982 Nov 27
     {
         'offset_seconds': 3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CET',
         'until_year': 1982,
@@ -22411,7 +22412,7 @@ ZONE_ERAS_Europe_Berlin: List[ZoneEra] = [
     # 0:53:28 - LMT 1893 Apr
     {
         'offset_seconds': 3208,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1893,
@@ -22485,7 +22486,7 @@ ZONE_ERAS_Europe_Brussels: List[ZoneEra] = [
     # 0:17:30 - LMT 1880
     {
         'offset_seconds': 1050,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1880,
@@ -22497,7 +22498,7 @@ ZONE_ERAS_Europe_Brussels: List[ZoneEra] = [
     #             0:17:30    -    BMT    1892 May  1 00:17:30
     {
         'offset_seconds': 1050,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'BMT',
         'until_year': 1892,
@@ -22509,7 +22510,7 @@ ZONE_ERAS_Europe_Brussels: List[ZoneEra] = [
     #             0:00    -    WET    1914 Nov  8
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'WET',
         'until_year': 1914,
@@ -22521,7 +22522,7 @@ ZONE_ERAS_Europe_Brussels: List[ZoneEra] = [
     #             1:00    -    CET    1916 May  1  0:00
     {
         'offset_seconds': 3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CET',
         'until_year': 1916,
@@ -22607,7 +22608,7 @@ ZONE_ERAS_Europe_Bucharest: List[ZoneEra] = [
     # 1:44:24 - LMT 1891 Oct
     {
         'offset_seconds': 6264,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1891,
@@ -22619,7 +22620,7 @@ ZONE_ERAS_Europe_Bucharest: List[ZoneEra] = [
     #             1:44:24    -    BMT    1931 Jul 24
     {
         'offset_seconds': 6264,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'BMT',
         'until_year': 1931,
@@ -22705,7 +22706,7 @@ ZONE_ERAS_Europe_Budapest: List[ZoneEra] = [
     # 1:16:20 - LMT 1890 Nov 1
     {
         'offset_seconds': 4580,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1890,
@@ -22791,7 +22792,7 @@ ZONE_ERAS_Europe_Chisinau: List[ZoneEra] = [
     # 1:55:20 - LMT 1880
     {
         'offset_seconds': 6920,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1880,
@@ -22803,7 +22804,7 @@ ZONE_ERAS_Europe_Chisinau: List[ZoneEra] = [
     #             1:55    -    CMT    1918 Feb 15
     {
         'offset_seconds': 6900,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CMT',
         'until_year': 1918,
@@ -22815,7 +22816,7 @@ ZONE_ERAS_Europe_Chisinau: List[ZoneEra] = [
     #             1:44:24    -    BMT    1931 Jul 24
     {
         'offset_seconds': 6264,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'BMT',
         'until_year': 1931,
@@ -22839,7 +22840,7 @@ ZONE_ERAS_Europe_Chisinau: List[ZoneEra] = [
     #             2:00    1:00    EEST    1941 Jul 17
     {
         'offset_seconds': 7200,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'EEST',
         'until_year': 1941,
@@ -22925,7 +22926,7 @@ ZONE_ERAS_Europe_Dublin: List[ZoneEra] = [
     # -0:25:21 - LMT 1880 Aug 2
     {
         'offset_seconds': -1521,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1880,
@@ -22937,7 +22938,7 @@ ZONE_ERAS_Europe_Dublin: List[ZoneEra] = [
     #             -0:25:21 -    DMT    1916 May 21  2:00s
     {
         'offset_seconds': -1521,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'DMT',
         'until_year': 1916,
@@ -22949,7 +22950,7 @@ ZONE_ERAS_Europe_Dublin: List[ZoneEra] = [
     #             -0:25:21 1:00    IST    1916 Oct  1  2:00s
     {
         'offset_seconds': -1521,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'IST',
         'until_year': 1916,
@@ -22985,7 +22986,7 @@ ZONE_ERAS_Europe_Dublin: List[ZoneEra] = [
     #              0:00    1:00    IST    1946 Oct  6  2:00s
     {
         'offset_seconds': 0,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'IST',
         'until_year': 1946,
@@ -22997,7 +22998,7 @@ ZONE_ERAS_Europe_Dublin: List[ZoneEra] = [
     #              0:00    -    GMT    1947 Mar 16  2:00s
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'GMT',
         'until_year': 1947,
@@ -23009,7 +23010,7 @@ ZONE_ERAS_Europe_Dublin: List[ZoneEra] = [
     #              0:00    1:00    IST    1947 Nov  2  2:00s
     {
         'offset_seconds': 0,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'IST',
         'until_year': 1947,
@@ -23021,7 +23022,7 @@ ZONE_ERAS_Europe_Dublin: List[ZoneEra] = [
     #              0:00    -    GMT    1948 Apr 18  2:00s
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'GMT',
         'until_year': 1948,
@@ -23071,7 +23072,7 @@ ZONE_ERAS_Europe_Gibraltar: List[ZoneEra] = [
     # -0:21:24 - LMT 1880 Aug 2
     {
         'offset_seconds': -1284,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1880,
@@ -23095,7 +23096,7 @@ ZONE_ERAS_Europe_Gibraltar: List[ZoneEra] = [
     #             1:00    -    CET    1982
     {
         'offset_seconds': 3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CET',
         'until_year': 1982,
@@ -23133,7 +23134,7 @@ ZONE_ERAS_Europe_Helsinki: List[ZoneEra] = [
     # 1:39:49 - LMT 1878 May 31
     {
         'offset_seconds': 5989,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1878,
@@ -23145,7 +23146,7 @@ ZONE_ERAS_Europe_Helsinki: List[ZoneEra] = [
     #             1:39:49    -    HMT    1921 May
     {
         'offset_seconds': 5989,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'HMT',
         'until_year': 1921,
@@ -23195,7 +23196,7 @@ ZONE_ERAS_Europe_Istanbul: List[ZoneEra] = [
     # 1:55:52 - LMT 1880
     {
         'offset_seconds': 6952,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1880,
@@ -23207,7 +23208,7 @@ ZONE_ERAS_Europe_Istanbul: List[ZoneEra] = [
     #             1:56:56    -    IMT    1910 Oct
     {
         'offset_seconds': 7016,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'IMT',
         'until_year': 1910,
@@ -23267,7 +23268,7 @@ ZONE_ERAS_Europe_Istanbul: List[ZoneEra] = [
     #             2:00    -    EET    2011 Mar 28  1:00u
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EET',
         'until_year': 2011,
@@ -23291,7 +23292,7 @@ ZONE_ERAS_Europe_Istanbul: List[ZoneEra] = [
     #             2:00    -    EET    2014 Mar 31  1:00u
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EET',
         'until_year': 2014,
@@ -23315,7 +23316,7 @@ ZONE_ERAS_Europe_Istanbul: List[ZoneEra] = [
     #             2:00    1:00    EEST    2015 Nov  8  1:00u
     {
         'offset_seconds': 7200,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'EEST',
         'until_year': 2015,
@@ -23339,7 +23340,7 @@ ZONE_ERAS_Europe_Istanbul: List[ZoneEra] = [
     #             3:00    -    +03
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 32767,
@@ -23365,7 +23366,7 @@ ZONE_ERAS_Europe_Kaliningrad: List[ZoneEra] = [
     # 1:22:00 - LMT 1893 Apr
     {
         'offset_seconds': 4920,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1893,
@@ -23425,7 +23426,7 @@ ZONE_ERAS_Europe_Kaliningrad: List[ZoneEra] = [
     #              3:00    -    +03    2014 Oct 26  2:00s
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 2014,
@@ -23437,7 +23438,7 @@ ZONE_ERAS_Europe_Kaliningrad: List[ZoneEra] = [
     #              2:00    -    EET
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EET',
         'until_year': 32767,
@@ -23463,7 +23464,7 @@ ZONE_ERAS_Europe_Kirov: List[ZoneEra] = [
     # 3:18:48 - LMT 1919 Jul 1 0:00u
     {
         'offset_seconds': 11928,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1919,
@@ -23475,7 +23476,7 @@ ZONE_ERAS_Europe_Kirov: List[ZoneEra] = [
     #              3:00    -    +03    1930 Jun 21
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 1930,
@@ -23511,7 +23512,7 @@ ZONE_ERAS_Europe_Kirov: List[ZoneEra] = [
     #              4:00    -    +04    1992 Mar 29  2:00s
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 1992,
@@ -23535,7 +23536,7 @@ ZONE_ERAS_Europe_Kirov: List[ZoneEra] = [
     #              4:00    -    +04    2014 Oct 26  2:00s
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 2014,
@@ -23547,7 +23548,7 @@ ZONE_ERAS_Europe_Kirov: List[ZoneEra] = [
     #              3:00    -    +03
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 32767,
@@ -23573,7 +23574,7 @@ ZONE_ERAS_Europe_Kyiv: List[ZoneEra] = [
     # 2:02:04 - LMT 1880
     {
         'offset_seconds': 7324,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1880,
@@ -23585,7 +23586,7 @@ ZONE_ERAS_Europe_Kyiv: List[ZoneEra] = [
     #             2:02:04    -    KMT    1924 May  2
     {
         'offset_seconds': 7324,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'KMT',
         'until_year': 1924,
@@ -23597,7 +23598,7 @@ ZONE_ERAS_Europe_Kyiv: List[ZoneEra] = [
     #             2:00    -    EET    1930 Jun 21
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EET',
         'until_year': 1930,
@@ -23609,7 +23610,7 @@ ZONE_ERAS_Europe_Kyiv: List[ZoneEra] = [
     #             3:00    -    MSK    1941 Sep 20
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MSK',
         'until_year': 1941,
@@ -23645,7 +23646,7 @@ ZONE_ERAS_Europe_Kyiv: List[ZoneEra] = [
     #             2:00    1:00    EEST    1991 Sep 29  3:00
     {
         'offset_seconds': 7200,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'EEST',
         'until_year': 1991,
@@ -23695,7 +23696,7 @@ ZONE_ERAS_Europe_Lisbon: List[ZoneEra] = [
     # -0:36:45 - LMT 1884
     {
         'offset_seconds': -2205,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1884,
@@ -23707,7 +23708,7 @@ ZONE_ERAS_Europe_Lisbon: List[ZoneEra] = [
     #             -0:36:45 -    LMT    1912 Jan  1  0:00u
     {
         'offset_seconds': -2205,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1912,
@@ -23731,7 +23732,7 @@ ZONE_ERAS_Europe_Lisbon: List[ZoneEra] = [
     #              1:00    -    CET    1976 Sep 26  1:00
     {
         'offset_seconds': 3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CET',
         'until_year': 1976,
@@ -23805,7 +23806,7 @@ ZONE_ERAS_Europe_London: List[ZoneEra] = [
     # -0:01:15 - LMT 1847 Dec 1
     {
         'offset_seconds': -75,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1847,
@@ -23829,7 +23830,7 @@ ZONE_ERAS_Europe_London: List[ZoneEra] = [
     #              1:00    -    BST    1971 Oct 31  2:00u
     {
         'offset_seconds': 3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'BST',
         'until_year': 1971,
@@ -23879,7 +23880,7 @@ ZONE_ERAS_Europe_Madrid: List[ZoneEra] = [
     # -0:14:44 - LMT 1901 Jan 1 0:00u
     {
         'offset_seconds': -884,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1901,
@@ -23941,7 +23942,7 @@ ZONE_ERAS_Europe_Malta: List[ZoneEra] = [
     # 0:58:04 - LMT 1893 Nov 2
     {
         'offset_seconds': 3484,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1893,
@@ -24003,7 +24004,7 @@ ZONE_ERAS_Europe_Minsk: List[ZoneEra] = [
     # 1:50:16 - LMT 1880
     {
         'offset_seconds': 6616,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1880,
@@ -24015,7 +24016,7 @@ ZONE_ERAS_Europe_Minsk: List[ZoneEra] = [
     #             1:50    -    MMT    1924 May  2
     {
         'offset_seconds': 6600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MMT',
         'until_year': 1924,
@@ -24027,7 +24028,7 @@ ZONE_ERAS_Europe_Minsk: List[ZoneEra] = [
     #             2:00    -    EET    1930 Jun 21
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EET',
         'until_year': 1930,
@@ -24039,7 +24040,7 @@ ZONE_ERAS_Europe_Minsk: List[ZoneEra] = [
     #             3:00    -    MSK    1941 Jun 28
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MSK',
         'until_year': 1941,
@@ -24075,7 +24076,7 @@ ZONE_ERAS_Europe_Minsk: List[ZoneEra] = [
     #             3:00    -    MSK    1991 Mar 31  2:00s
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MSK',
         'until_year': 1991,
@@ -24099,7 +24100,7 @@ ZONE_ERAS_Europe_Minsk: List[ZoneEra] = [
     #             3:00    -    +03
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 32767,
@@ -24125,7 +24126,7 @@ ZONE_ERAS_Europe_Moscow: List[ZoneEra] = [
     # 2:30:17 - LMT 1880
     {
         'offset_seconds': 9017,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1880,
@@ -24137,7 +24138,7 @@ ZONE_ERAS_Europe_Moscow: List[ZoneEra] = [
     #              2:30:17 -    MMT    1916 Jul  3
     {
         'offset_seconds': 9017,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MMT',
         'until_year': 1916,
@@ -24185,7 +24186,7 @@ ZONE_ERAS_Europe_Moscow: List[ZoneEra] = [
     #              2:00    -    EET    1930 Jun 21
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EET',
         'until_year': 1930,
@@ -24233,7 +24234,7 @@ ZONE_ERAS_Europe_Moscow: List[ZoneEra] = [
     #              4:00    -    MSK    2014 Oct 26  2:00s
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MSK',
         'until_year': 2014,
@@ -24245,7 +24246,7 @@ ZONE_ERAS_Europe_Moscow: List[ZoneEra] = [
     #              3:00    -    MSK
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MSK',
         'until_year': 32767,
@@ -24271,7 +24272,7 @@ ZONE_ERAS_Europe_Paris: List[ZoneEra] = [
     # 0:09:21 - LMT 1891 Mar 16
     {
         'offset_seconds': 561,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1891,
@@ -24283,7 +24284,7 @@ ZONE_ERAS_Europe_Paris: List[ZoneEra] = [
     #             0:09:21    -    PMT    1911 Mar 11
     {
         'offset_seconds': 561,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PMT',
         'until_year': 1911,
@@ -24369,7 +24370,7 @@ ZONE_ERAS_Europe_Prague: List[ZoneEra] = [
     # 0:57:44 - LMT 1850
     {
         'offset_seconds': 3464,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1850,
@@ -24381,7 +24382,7 @@ ZONE_ERAS_Europe_Prague: List[ZoneEra] = [
     #             0:57:44    -    PMT    1891 Oct
     {
         'offset_seconds': 3464,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PMT',
         'until_year': 1891,
@@ -24417,7 +24418,7 @@ ZONE_ERAS_Europe_Prague: List[ZoneEra] = [
     #             1:00    -1:00    GMT    1947 Feb 23  2:00
     {
         'offset_seconds': 3600,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': -3600,
         'format': 'GMT',
         'until_year': 1947,
@@ -24467,7 +24468,7 @@ ZONE_ERAS_Europe_Riga: List[ZoneEra] = [
     # 1:36:34 - LMT 1880
     {
         'offset_seconds': 5794,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1880,
@@ -24479,7 +24480,7 @@ ZONE_ERAS_Europe_Riga: List[ZoneEra] = [
     #             1:36:34    -    RMT    1918 Apr 15  2:00
     {
         'offset_seconds': 5794,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'RMT',
         'until_year': 1918,
@@ -24491,7 +24492,7 @@ ZONE_ERAS_Europe_Riga: List[ZoneEra] = [
     #             1:36:34    1:00    LST    1918 Sep 16  3:00
     {
         'offset_seconds': 5794,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'LST',
         'until_year': 1918,
@@ -24503,7 +24504,7 @@ ZONE_ERAS_Europe_Riga: List[ZoneEra] = [
     #             1:36:34    -    RMT    1919 Apr  1  2:00
     {
         'offset_seconds': 5794,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'RMT',
         'until_year': 1919,
@@ -24515,7 +24516,7 @@ ZONE_ERAS_Europe_Riga: List[ZoneEra] = [
     #             1:36:34    1:00    LST    1919 May 22  3:00
     {
         'offset_seconds': 5794,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'LST',
         'until_year': 1919,
@@ -24527,7 +24528,7 @@ ZONE_ERAS_Europe_Riga: List[ZoneEra] = [
     #             1:36:34    -    RMT    1926 May 11
     {
         'offset_seconds': 5794,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'RMT',
         'until_year': 1926,
@@ -24539,7 +24540,7 @@ ZONE_ERAS_Europe_Riga: List[ZoneEra] = [
     #             2:00    -    EET    1940 Aug  5
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EET',
         'until_year': 1940,
@@ -24551,7 +24552,7 @@ ZONE_ERAS_Europe_Riga: List[ZoneEra] = [
     #             3:00    -    MSK    1941 Jul
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MSK',
         'until_year': 1941,
@@ -24587,7 +24588,7 @@ ZONE_ERAS_Europe_Riga: List[ZoneEra] = [
     #             2:00    1:00    EEST    1989 Sep lastSun  2:00s
     {
         'offset_seconds': 7200,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'EEST',
         'until_year': 1989,
@@ -24623,7 +24624,7 @@ ZONE_ERAS_Europe_Riga: List[ZoneEra] = [
     #             2:00    -    EET    2001 Jan  2
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EET',
         'until_year': 2001,
@@ -24661,7 +24662,7 @@ ZONE_ERAS_Europe_Rome: List[ZoneEra] = [
     # 0:49:56 - LMT 1866 Dec 12
     {
         'offset_seconds': 2996,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1866,
@@ -24673,7 +24674,7 @@ ZONE_ERAS_Europe_Rome: List[ZoneEra] = [
     #             0:49:56    -    RMT    1893 Oct 31 23:00u
     {
         'offset_seconds': 2996,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'RMT',
         'until_year': 1893,
@@ -24747,7 +24748,7 @@ ZONE_ERAS_Europe_Samara: List[ZoneEra] = [
     # 3:20:20 - LMT 1919 Jul 1 0:00u
     {
         'offset_seconds': 12020,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1919,
@@ -24759,7 +24760,7 @@ ZONE_ERAS_Europe_Samara: List[ZoneEra] = [
     #              3:00    -    +03    1930 Jun 21
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 1930,
@@ -24771,7 +24772,7 @@ ZONE_ERAS_Europe_Samara: List[ZoneEra] = [
     #              4:00    -    +04    1935 Jan 27
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 1935,
@@ -24819,7 +24820,7 @@ ZONE_ERAS_Europe_Samara: List[ZoneEra] = [
     #              3:00    -    +03    1991 Oct 20  3:00
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 1991,
@@ -24855,7 +24856,7 @@ ZONE_ERAS_Europe_Samara: List[ZoneEra] = [
     #              4:00    -    +04
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 32767,
@@ -24881,7 +24882,7 @@ ZONE_ERAS_Europe_Saratov: List[ZoneEra] = [
     # 3:04:18 - LMT 1919 Jul 1 0:00u
     {
         'offset_seconds': 11058,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1919,
@@ -24893,7 +24894,7 @@ ZONE_ERAS_Europe_Saratov: List[ZoneEra] = [
     #              3:00    -    +03    1930 Jun 21
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 1930,
@@ -24929,7 +24930,7 @@ ZONE_ERAS_Europe_Saratov: List[ZoneEra] = [
     #              4:00    -    +04    1992 Mar 29  2:00s
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 1992,
@@ -24953,7 +24954,7 @@ ZONE_ERAS_Europe_Saratov: List[ZoneEra] = [
     #              4:00    -    +04    2014 Oct 26  2:00s
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 2014,
@@ -24965,7 +24966,7 @@ ZONE_ERAS_Europe_Saratov: List[ZoneEra] = [
     #              3:00    -    +03    2016 Dec  4  2:00s
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 2016,
@@ -24977,7 +24978,7 @@ ZONE_ERAS_Europe_Saratov: List[ZoneEra] = [
     #              4:00    -    +04
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 32767,
@@ -25003,7 +25004,7 @@ ZONE_ERAS_Europe_Simferopol: List[ZoneEra] = [
     # 2:16:24 - LMT 1880
     {
         'offset_seconds': 8184,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1880,
@@ -25015,7 +25016,7 @@ ZONE_ERAS_Europe_Simferopol: List[ZoneEra] = [
     #              2:16    -    SMT    1924 May  2
     {
         'offset_seconds': 8160,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'SMT',
         'until_year': 1924,
@@ -25027,7 +25028,7 @@ ZONE_ERAS_Europe_Simferopol: List[ZoneEra] = [
     #              2:00    -    EET    1930 Jun 21
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EET',
         'until_year': 1930,
@@ -25039,7 +25040,7 @@ ZONE_ERAS_Europe_Simferopol: List[ZoneEra] = [
     #              3:00    -    MSK    1941 Nov
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MSK',
         'until_year': 1941,
@@ -25075,7 +25076,7 @@ ZONE_ERAS_Europe_Simferopol: List[ZoneEra] = [
     #              3:00    -    MSK    1990 Jul  1  2:00
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MSK',
         'until_year': 1990,
@@ -25087,7 +25088,7 @@ ZONE_ERAS_Europe_Simferopol: List[ZoneEra] = [
     #              2:00    -    EET    1992 Mar 20
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EET',
         'until_year': 1992,
@@ -25123,7 +25124,7 @@ ZONE_ERAS_Europe_Simferopol: List[ZoneEra] = [
     #              3:00    1:00    MSD    1996 Oct 27  3:00s
     {
         'offset_seconds': 10800,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'MSD',
         'until_year': 1996,
@@ -25135,7 +25136,7 @@ ZONE_ERAS_Europe_Simferopol: List[ZoneEra] = [
     #              3:00    -    MSK    1997 Mar lastSun  1:00u
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MSK',
         'until_year': 1997,
@@ -25159,7 +25160,7 @@ ZONE_ERAS_Europe_Simferopol: List[ZoneEra] = [
     #              4:00    -    MSK    2014 Oct 26  2:00s
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MSK',
         'until_year': 2014,
@@ -25171,7 +25172,7 @@ ZONE_ERAS_Europe_Simferopol: List[ZoneEra] = [
     #              3:00    -    MSK
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MSK',
         'until_year': 32767,
@@ -25197,7 +25198,7 @@ ZONE_ERAS_Europe_Sofia: List[ZoneEra] = [
     # 1:33:16 - LMT 1880
     {
         'offset_seconds': 5596,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1880,
@@ -25209,7 +25210,7 @@ ZONE_ERAS_Europe_Sofia: List[ZoneEra] = [
     #             1:56:56    -    IMT    1894 Nov 30
     {
         'offset_seconds': 7016,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'IMT',
         'until_year': 1894,
@@ -25221,7 +25222,7 @@ ZONE_ERAS_Europe_Sofia: List[ZoneEra] = [
     #             2:00    -    EET    1942 Nov  2  3:00
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EET',
         'until_year': 1942,
@@ -25245,7 +25246,7 @@ ZONE_ERAS_Europe_Sofia: List[ZoneEra] = [
     #             1:00    -    CET    1945 Apr  2  3:00
     {
         'offset_seconds': 3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CET',
         'until_year': 1945,
@@ -25257,7 +25258,7 @@ ZONE_ERAS_Europe_Sofia: List[ZoneEra] = [
     #             2:00    -    EET    1979 Mar 31 23:00
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EET',
         'until_year': 1979,
@@ -25331,7 +25332,7 @@ ZONE_ERAS_Europe_Tallinn: List[ZoneEra] = [
     # 1:39:00 - LMT 1880
     {
         'offset_seconds': 5940,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1880,
@@ -25343,7 +25344,7 @@ ZONE_ERAS_Europe_Tallinn: List[ZoneEra] = [
     #             1:39:00    -    TMT    1918 Feb
     {
         'offset_seconds': 5940,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'TMT',
         'until_year': 1918,
@@ -25367,7 +25368,7 @@ ZONE_ERAS_Europe_Tallinn: List[ZoneEra] = [
     #             1:39:00    -    TMT    1921 May
     {
         'offset_seconds': 5940,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'TMT',
         'until_year': 1921,
@@ -25379,7 +25380,7 @@ ZONE_ERAS_Europe_Tallinn: List[ZoneEra] = [
     #             2:00    -    EET    1940 Aug  6
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EET',
         'until_year': 1940,
@@ -25391,7 +25392,7 @@ ZONE_ERAS_Europe_Tallinn: List[ZoneEra] = [
     #             3:00    -    MSK    1941 Sep 15
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MSK',
         'until_year': 1941,
@@ -25427,7 +25428,7 @@ ZONE_ERAS_Europe_Tallinn: List[ZoneEra] = [
     #             2:00    1:00    EEST    1989 Sep 24  2:00s
     {
         'offset_seconds': 7200,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'EEST',
         'until_year': 1989,
@@ -25463,7 +25464,7 @@ ZONE_ERAS_Europe_Tallinn: List[ZoneEra] = [
     #             2:00    -    EET    2002 Feb 21
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EET',
         'until_year': 2002,
@@ -25501,7 +25502,7 @@ ZONE_ERAS_Europe_Tirane: List[ZoneEra] = [
     # 1:19:20 - LMT 1914
     {
         'offset_seconds': 4760,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1914,
@@ -25513,7 +25514,7 @@ ZONE_ERAS_Europe_Tirane: List[ZoneEra] = [
     #             1:00    -    CET    1940 Jun 16
     {
         'offset_seconds': 3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CET',
         'until_year': 1940,
@@ -25563,7 +25564,7 @@ ZONE_ERAS_Europe_Ulyanovsk: List[ZoneEra] = [
     # 3:13:36 - LMT 1919 Jul 1 0:00u
     {
         'offset_seconds': 11616,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1919,
@@ -25575,7 +25576,7 @@ ZONE_ERAS_Europe_Ulyanovsk: List[ZoneEra] = [
     #              3:00    -    +03    1930 Jun 21
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 1930,
@@ -25635,7 +25636,7 @@ ZONE_ERAS_Europe_Ulyanovsk: List[ZoneEra] = [
     #              4:00    -    +04    2014 Oct 26  2:00s
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 2014,
@@ -25647,7 +25648,7 @@ ZONE_ERAS_Europe_Ulyanovsk: List[ZoneEra] = [
     #              3:00    -    +03    2016 Mar 27  2:00s
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 2016,
@@ -25659,7 +25660,7 @@ ZONE_ERAS_Europe_Ulyanovsk: List[ZoneEra] = [
     #              4:00    -    +04
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 32767,
@@ -25685,7 +25686,7 @@ ZONE_ERAS_Europe_Vienna: List[ZoneEra] = [
     # 1:05:21 - LMT 1893 Apr
     {
         'offset_seconds': 3921,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1893,
@@ -25733,7 +25734,7 @@ ZONE_ERAS_Europe_Vienna: List[ZoneEra] = [
     #             1:00    1:00    CEST    1945 Apr 12  2:00s
     {
         'offset_seconds': 3600,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'CEST',
         'until_year': 1945,
@@ -25745,7 +25746,7 @@ ZONE_ERAS_Europe_Vienna: List[ZoneEra] = [
     #             1:00    -    CET    1946
     {
         'offset_seconds': 3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CET',
         'until_year': 1946,
@@ -25795,7 +25796,7 @@ ZONE_ERAS_Europe_Vilnius: List[ZoneEra] = [
     # 1:41:16 - LMT 1880
     {
         'offset_seconds': 6076,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1880,
@@ -25807,7 +25808,7 @@ ZONE_ERAS_Europe_Vilnius: List[ZoneEra] = [
     #             1:24:00    -    WMT    1917
     {
         'offset_seconds': 5040,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'WMT',
         'until_year': 1917,
@@ -25819,7 +25820,7 @@ ZONE_ERAS_Europe_Vilnius: List[ZoneEra] = [
     #             1:35:36    -    KMT    1919 Oct 10
     {
         'offset_seconds': 5736,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'KMT',
         'until_year': 1919,
@@ -25831,7 +25832,7 @@ ZONE_ERAS_Europe_Vilnius: List[ZoneEra] = [
     #             1:00    -    CET    1920 Jul 12
     {
         'offset_seconds': 3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CET',
         'until_year': 1920,
@@ -25843,7 +25844,7 @@ ZONE_ERAS_Europe_Vilnius: List[ZoneEra] = [
     #             2:00    -    EET    1920 Oct  9
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EET',
         'until_year': 1920,
@@ -25855,7 +25856,7 @@ ZONE_ERAS_Europe_Vilnius: List[ZoneEra] = [
     #             1:00    -    CET    1940 Aug  3
     {
         'offset_seconds': 3600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'CET',
         'until_year': 1940,
@@ -25867,7 +25868,7 @@ ZONE_ERAS_Europe_Vilnius: List[ZoneEra] = [
     #             3:00    -    MSK    1941 Jun 24
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MSK',
         'until_year': 1941,
@@ -25927,7 +25928,7 @@ ZONE_ERAS_Europe_Vilnius: List[ZoneEra] = [
     #             2:00    -    EET    1998 Mar 29  1:00u
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EET',
         'until_year': 1998,
@@ -25951,7 +25952,7 @@ ZONE_ERAS_Europe_Vilnius: List[ZoneEra] = [
     #             2:00    -    EET    2003 Jan  1
     {
         'offset_seconds': 7200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EET',
         'until_year': 2003,
@@ -25989,7 +25990,7 @@ ZONE_ERAS_Europe_Volgograd: List[ZoneEra] = [
     # 2:57:40 - LMT 1920 Jan 3
     {
         'offset_seconds': 10660,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1920,
@@ -26001,7 +26002,7 @@ ZONE_ERAS_Europe_Volgograd: List[ZoneEra] = [
     #              3:00    -    +03    1930 Jun 21
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 1930,
@@ -26013,7 +26014,7 @@ ZONE_ERAS_Europe_Volgograd: List[ZoneEra] = [
     #              4:00    -    +04    1961 Nov 11
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 1961,
@@ -26049,7 +26050,7 @@ ZONE_ERAS_Europe_Volgograd: List[ZoneEra] = [
     #              4:00    -    +04    1992 Mar 29  2:00s
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 1992,
@@ -26073,7 +26074,7 @@ ZONE_ERAS_Europe_Volgograd: List[ZoneEra] = [
     #              4:00    -    +04    2014 Oct 26  2:00s
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 2014,
@@ -26085,7 +26086,7 @@ ZONE_ERAS_Europe_Volgograd: List[ZoneEra] = [
     #              3:00    -    +03    2018 Oct 28  2:00s
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 2018,
@@ -26097,7 +26098,7 @@ ZONE_ERAS_Europe_Volgograd: List[ZoneEra] = [
     #              4:00    -    +04    2020 Dec 27  2:00s
     {
         'offset_seconds': 14400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+04',
         'until_year': 2020,
@@ -26109,7 +26110,7 @@ ZONE_ERAS_Europe_Volgograd: List[ZoneEra] = [
     #              3:00    -    +03
     {
         'offset_seconds': 10800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+03',
         'until_year': 32767,
@@ -26135,7 +26136,7 @@ ZONE_ERAS_Europe_Warsaw: List[ZoneEra] = [
     # 1:24:00 - LMT 1880
     {
         'offset_seconds': 5040,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1880,
@@ -26147,7 +26148,7 @@ ZONE_ERAS_Europe_Warsaw: List[ZoneEra] = [
     #             1:24:00    -    WMT    1915 Aug  5
     {
         'offset_seconds': 5040,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'WMT',
         'until_year': 1915,
@@ -26257,7 +26258,7 @@ ZONE_ERAS_Europe_Zurich: List[ZoneEra] = [
     # 0:34:08 - LMT 1853 Jul 16
     {
         'offset_seconds': 2048,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1853,
@@ -26269,7 +26270,7 @@ ZONE_ERAS_Europe_Zurich: List[ZoneEra] = [
     #             0:29:46    -    BMT    1894 Jun
     {
         'offset_seconds': 1786,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'BMT',
         'until_year': 1894,
@@ -26319,7 +26320,7 @@ ZONE_ERAS_HST: List[ZoneEra] = [
     # -10:00 - HST
     {
         'offset_seconds': -36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'HST',
         'until_year': 32767,
@@ -26345,7 +26346,7 @@ ZONE_ERAS_Indian_Chagos: List[ZoneEra] = [
     # 4:49:40 - LMT 1907
     {
         'offset_seconds': 17380,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1907,
@@ -26357,7 +26358,7 @@ ZONE_ERAS_Indian_Chagos: List[ZoneEra] = [
     #             5:00    -    +05    1996
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 1996,
@@ -26369,7 +26370,7 @@ ZONE_ERAS_Indian_Chagos: List[ZoneEra] = [
     #             6:00    -    +06
     {
         'offset_seconds': 21600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
         'until_year': 32767,
@@ -26395,7 +26396,7 @@ ZONE_ERAS_Indian_Maldives: List[ZoneEra] = [
     # 4:54:00 - LMT 1880
     {
         'offset_seconds': 17640,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1880,
@@ -26407,7 +26408,7 @@ ZONE_ERAS_Indian_Maldives: List[ZoneEra] = [
     #             4:54:00    -    MMT    1960
     {
         'offset_seconds': 17640,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MMT',
         'until_year': 1960,
@@ -26419,7 +26420,7 @@ ZONE_ERAS_Indian_Maldives: List[ZoneEra] = [
     #             5:00    -    +05
     {
         'offset_seconds': 18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+05',
         'until_year': 32767,
@@ -26445,7 +26446,7 @@ ZONE_ERAS_Indian_Mauritius: List[ZoneEra] = [
     # 3:50:00 - LMT 1907
     {
         'offset_seconds': 13800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1907,
@@ -26509,7 +26510,7 @@ ZONE_ERAS_MST: List[ZoneEra] = [
     # -7:00 - MST
     {
         'offset_seconds': -25200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'MST',
         'until_year': 32767,
@@ -26587,7 +26588,7 @@ ZONE_ERAS_Pacific_Apia: List[ZoneEra] = [
     # 12:33:04 - LMT 1892 Jul 5
     {
         'offset_seconds': 45184,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1892,
@@ -26599,7 +26600,7 @@ ZONE_ERAS_Pacific_Apia: List[ZoneEra] = [
     #             -11:26:56 -    LMT    1911
     {
         'offset_seconds': -41216,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1911,
@@ -26611,7 +26612,7 @@ ZONE_ERAS_Pacific_Apia: List[ZoneEra] = [
     #             -11:30    -    -1130    1950
     {
         'offset_seconds': -41400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-1130',
         'until_year': 1950,
@@ -26661,7 +26662,7 @@ ZONE_ERAS_Pacific_Auckland: List[ZoneEra] = [
     # 11:39:04 - LMT 1868 Nov 2
     {
         'offset_seconds': 41944,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1868,
@@ -26711,7 +26712,7 @@ ZONE_ERAS_Pacific_Bougainville: List[ZoneEra] = [
     # 10:22:16 - LMT 1880
     {
         'offset_seconds': 37336,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1880,
@@ -26723,7 +26724,7 @@ ZONE_ERAS_Pacific_Bougainville: List[ZoneEra] = [
     #              9:48:32 -    PMMT    1895
     {
         'offset_seconds': 35312,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PMMT',
         'until_year': 1895,
@@ -26735,7 +26736,7 @@ ZONE_ERAS_Pacific_Bougainville: List[ZoneEra] = [
     #             10:00    -    +10    1942 Jul
     {
         'offset_seconds': 36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+10',
         'until_year': 1942,
@@ -26747,7 +26748,7 @@ ZONE_ERAS_Pacific_Bougainville: List[ZoneEra] = [
     #              9:00    -    +09    1945 Aug 21
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+09',
         'until_year': 1945,
@@ -26759,7 +26760,7 @@ ZONE_ERAS_Pacific_Bougainville: List[ZoneEra] = [
     #             10:00    -    +10    2014 Dec 28  2:00
     {
         'offset_seconds': 36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+10',
         'until_year': 2014,
@@ -26771,7 +26772,7 @@ ZONE_ERAS_Pacific_Bougainville: List[ZoneEra] = [
     #             11:00    -    +11
     {
         'offset_seconds': 39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+11',
         'until_year': 32767,
@@ -26797,7 +26798,7 @@ ZONE_ERAS_Pacific_Chatham: List[ZoneEra] = [
     # 12:13:48 - LMT 1868 Nov 2
     {
         'offset_seconds': 44028,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1868,
@@ -26809,7 +26810,7 @@ ZONE_ERAS_Pacific_Chatham: List[ZoneEra] = [
     #             12:15    -    +1215    1946 Jan  1
     {
         'offset_seconds': 44100,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+1215',
         'until_year': 1946,
@@ -26847,7 +26848,7 @@ ZONE_ERAS_Pacific_Easter: List[ZoneEra] = [
     # -7:17:28 - LMT 1890
     {
         'offset_seconds': -26248,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1890,
@@ -26859,7 +26860,7 @@ ZONE_ERAS_Pacific_Easter: List[ZoneEra] = [
     #             -7:17:28 -    EMT    1932 Sep
     {
         'offset_seconds': -26248,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'EMT',
         'until_year': 1932,
@@ -26909,7 +26910,7 @@ ZONE_ERAS_Pacific_Efate: List[ZoneEra] = [
     # 11:13:16 - LMT 1912 Jan 13
     {
         'offset_seconds': 40396,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1912,
@@ -26947,7 +26948,7 @@ ZONE_ERAS_Pacific_Fakaofo: List[ZoneEra] = [
     # -11:24:56 - LMT 1901
     {
         'offset_seconds': -41096,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1901,
@@ -26959,7 +26960,7 @@ ZONE_ERAS_Pacific_Fakaofo: List[ZoneEra] = [
     #             -11:00    -    -11    2011 Dec 30
     {
         'offset_seconds': -39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-11',
         'until_year': 2011,
@@ -26971,7 +26972,7 @@ ZONE_ERAS_Pacific_Fakaofo: List[ZoneEra] = [
     #             13:00    -    +13
     {
         'offset_seconds': 46800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+13',
         'until_year': 32767,
@@ -26997,7 +26998,7 @@ ZONE_ERAS_Pacific_Fiji: List[ZoneEra] = [
     # 11:55:44 - LMT 1915 Oct 26
     {
         'offset_seconds': 42944,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1915,
@@ -27035,7 +27036,7 @@ ZONE_ERAS_Pacific_Galapagos: List[ZoneEra] = [
     # -5:58:24 - LMT 1931
     {
         'offset_seconds': -21504,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1931,
@@ -27047,7 +27048,7 @@ ZONE_ERAS_Pacific_Galapagos: List[ZoneEra] = [
     #             -5:00    -    -05    1986
     {
         'offset_seconds': -18000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-05',
         'until_year': 1986,
@@ -27085,7 +27086,7 @@ ZONE_ERAS_Pacific_Gambier: List[ZoneEra] = [
     # -8:59:48 - LMT 1912 Oct
     {
         'offset_seconds': -32388,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1912,
@@ -27097,7 +27098,7 @@ ZONE_ERAS_Pacific_Gambier: List[ZoneEra] = [
     #              -9:00    -    -09
     {
         'offset_seconds': -32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-09',
         'until_year': 32767,
@@ -27123,7 +27124,7 @@ ZONE_ERAS_Pacific_Guadalcanal: List[ZoneEra] = [
     # 10:39:48 - LMT 1912 Oct
     {
         'offset_seconds': 38388,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1912,
@@ -27135,7 +27136,7 @@ ZONE_ERAS_Pacific_Guadalcanal: List[ZoneEra] = [
     #             11:00    -    +11
     {
         'offset_seconds': 39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+11',
         'until_year': 32767,
@@ -27161,7 +27162,7 @@ ZONE_ERAS_Pacific_Guam: List[ZoneEra] = [
     # -14:21:00 - LMT 1844 Dec 31
     {
         'offset_seconds': -51660,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1844,
@@ -27173,7 +27174,7 @@ ZONE_ERAS_Pacific_Guam: List[ZoneEra] = [
     #              9:39:00 -    LMT    1901
     {
         'offset_seconds': 34740,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1901,
@@ -27185,7 +27186,7 @@ ZONE_ERAS_Pacific_Guam: List[ZoneEra] = [
     #             10:00    -    GST    1941 Dec 10
     {
         'offset_seconds': 36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'GST',
         'until_year': 1941,
@@ -27197,7 +27198,7 @@ ZONE_ERAS_Pacific_Guam: List[ZoneEra] = [
     #              9:00    -    +09    1944 Jul 31
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+09',
         'until_year': 1944,
@@ -27221,7 +27222,7 @@ ZONE_ERAS_Pacific_Guam: List[ZoneEra] = [
     #             10:00    -    ChST
     {
         'offset_seconds': 36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'ChST',
         'until_year': 32767,
@@ -27247,7 +27248,7 @@ ZONE_ERAS_Pacific_Honolulu: List[ZoneEra] = [
     # -10:31:26 - LMT 1896 Jan 13 12:00
     {
         'offset_seconds': -37886,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1896,
@@ -27259,7 +27260,7 @@ ZONE_ERAS_Pacific_Honolulu: List[ZoneEra] = [
     #             -10:30    -    HST    1933 Apr 30  2:00
     {
         'offset_seconds': -37800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'HST',
         'until_year': 1933,
@@ -27271,7 +27272,7 @@ ZONE_ERAS_Pacific_Honolulu: List[ZoneEra] = [
     #             -10:30    1:00    HDT    1933 May 21 12:00
     {
         'offset_seconds': -37800,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': 'HDT',
         'until_year': 1933,
@@ -27295,7 +27296,7 @@ ZONE_ERAS_Pacific_Honolulu: List[ZoneEra] = [
     #             -10:00    -    HST
     {
         'offset_seconds': -36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'HST',
         'until_year': 32767,
@@ -27321,7 +27322,7 @@ ZONE_ERAS_Pacific_Kanton: List[ZoneEra] = [
     # 0 - -00 1937 Aug 31
     {
         'offset_seconds': 0,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-00',
         'until_year': 1937,
@@ -27333,7 +27334,7 @@ ZONE_ERAS_Pacific_Kanton: List[ZoneEra] = [
     #             -12:00    -    -12    1979 Oct
     {
         'offset_seconds': -43200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-12',
         'until_year': 1979,
@@ -27345,7 +27346,7 @@ ZONE_ERAS_Pacific_Kanton: List[ZoneEra] = [
     #             -11:00    -    -11    1994 Dec 31
     {
         'offset_seconds': -39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-11',
         'until_year': 1994,
@@ -27357,7 +27358,7 @@ ZONE_ERAS_Pacific_Kanton: List[ZoneEra] = [
     #              13:00    -    +13
     {
         'offset_seconds': 46800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+13',
         'until_year': 32767,
@@ -27383,7 +27384,7 @@ ZONE_ERAS_Pacific_Kiritimati: List[ZoneEra] = [
     # -10:29:20 - LMT 1901
     {
         'offset_seconds': -37760,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1901,
@@ -27395,7 +27396,7 @@ ZONE_ERAS_Pacific_Kiritimati: List[ZoneEra] = [
     #             -10:40    -    -1040    1979 Oct
     {
         'offset_seconds': -38400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-1040',
         'until_year': 1979,
@@ -27407,7 +27408,7 @@ ZONE_ERAS_Pacific_Kiritimati: List[ZoneEra] = [
     #             -10:00    -    -10    1994 Dec 31
     {
         'offset_seconds': -36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-10',
         'until_year': 1994,
@@ -27419,7 +27420,7 @@ ZONE_ERAS_Pacific_Kiritimati: List[ZoneEra] = [
     #              14:00    -    +14
     {
         'offset_seconds': 50400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+14',
         'until_year': 32767,
@@ -27445,7 +27446,7 @@ ZONE_ERAS_Pacific_Kosrae: List[ZoneEra] = [
     # -13:08:04 - LMT 1844 Dec 31
     {
         'offset_seconds': -47284,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1844,
@@ -27457,7 +27458,7 @@ ZONE_ERAS_Pacific_Kosrae: List[ZoneEra] = [
     #              10:51:56 -    LMT    1901
     {
         'offset_seconds': 39116,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1901,
@@ -27469,7 +27470,7 @@ ZONE_ERAS_Pacific_Kosrae: List[ZoneEra] = [
     #              11:00    -    +11    1914 Oct
     {
         'offset_seconds': 39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+11',
         'until_year': 1914,
@@ -27481,7 +27482,7 @@ ZONE_ERAS_Pacific_Kosrae: List[ZoneEra] = [
     #               9:00    -    +09    1919 Feb  1
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+09',
         'until_year': 1919,
@@ -27493,7 +27494,7 @@ ZONE_ERAS_Pacific_Kosrae: List[ZoneEra] = [
     #              11:00    -    +11    1937
     {
         'offset_seconds': 39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+11',
         'until_year': 1937,
@@ -27505,7 +27506,7 @@ ZONE_ERAS_Pacific_Kosrae: List[ZoneEra] = [
     #              10:00    -    +10    1941 Apr  1
     {
         'offset_seconds': 36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+10',
         'until_year': 1941,
@@ -27517,7 +27518,7 @@ ZONE_ERAS_Pacific_Kosrae: List[ZoneEra] = [
     #               9:00    -    +09    1945 Aug
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+09',
         'until_year': 1945,
@@ -27529,7 +27530,7 @@ ZONE_ERAS_Pacific_Kosrae: List[ZoneEra] = [
     #              11:00    -    +11    1969 Oct
     {
         'offset_seconds': 39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+11',
         'until_year': 1969,
@@ -27541,7 +27542,7 @@ ZONE_ERAS_Pacific_Kosrae: List[ZoneEra] = [
     #              12:00    -    +12    1999
     {
         'offset_seconds': 43200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+12',
         'until_year': 1999,
@@ -27553,7 +27554,7 @@ ZONE_ERAS_Pacific_Kosrae: List[ZoneEra] = [
     #              11:00    -    +11
     {
         'offset_seconds': 39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+11',
         'until_year': 32767,
@@ -27579,7 +27580,7 @@ ZONE_ERAS_Pacific_Kwajalein: List[ZoneEra] = [
     # 11:09:20 - LMT 1901
     {
         'offset_seconds': 40160,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1901,
@@ -27591,7 +27592,7 @@ ZONE_ERAS_Pacific_Kwajalein: List[ZoneEra] = [
     #              11:00    -    +11    1937
     {
         'offset_seconds': 39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+11',
         'until_year': 1937,
@@ -27603,7 +27604,7 @@ ZONE_ERAS_Pacific_Kwajalein: List[ZoneEra] = [
     #              10:00    -    +10    1941 Apr  1
     {
         'offset_seconds': 36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+10',
         'until_year': 1941,
@@ -27615,7 +27616,7 @@ ZONE_ERAS_Pacific_Kwajalein: List[ZoneEra] = [
     #               9:00    -    +09    1944 Feb  6
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+09',
         'until_year': 1944,
@@ -27627,7 +27628,7 @@ ZONE_ERAS_Pacific_Kwajalein: List[ZoneEra] = [
     #              11:00    -    +11    1969 Oct
     {
         'offset_seconds': 39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+11',
         'until_year': 1969,
@@ -27639,7 +27640,7 @@ ZONE_ERAS_Pacific_Kwajalein: List[ZoneEra] = [
     #             -12:00    -    -12    1993 Aug 20 24:00
     {
         'offset_seconds': -43200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-12',
         'until_year': 1993,
@@ -27651,7 +27652,7 @@ ZONE_ERAS_Pacific_Kwajalein: List[ZoneEra] = [
     #              12:00    -    +12
     {
         'offset_seconds': 43200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+12',
         'until_year': 32767,
@@ -27677,7 +27678,7 @@ ZONE_ERAS_Pacific_Marquesas: List[ZoneEra] = [
     # -9:18:00 - LMT 1912 Oct
     {
         'offset_seconds': -33480,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1912,
@@ -27689,7 +27690,7 @@ ZONE_ERAS_Pacific_Marquesas: List[ZoneEra] = [
     #              -9:30    -    -0930
     {
         'offset_seconds': -34200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-0930',
         'until_year': 32767,
@@ -27715,7 +27716,7 @@ ZONE_ERAS_Pacific_Nauru: List[ZoneEra] = [
     # 11:07:40 - LMT 1921 Jan 15
     {
         'offset_seconds': 40060,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1921,
@@ -27727,7 +27728,7 @@ ZONE_ERAS_Pacific_Nauru: List[ZoneEra] = [
     #             11:30    -    +1130    1942 Aug 29
     {
         'offset_seconds': 41400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+1130',
         'until_year': 1942,
@@ -27739,7 +27740,7 @@ ZONE_ERAS_Pacific_Nauru: List[ZoneEra] = [
     #              9:00    -    +09    1945 Sep  8
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+09',
         'until_year': 1945,
@@ -27751,7 +27752,7 @@ ZONE_ERAS_Pacific_Nauru: List[ZoneEra] = [
     #             11:30    -    +1130    1979 Feb 10  2:00
     {
         'offset_seconds': 41400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+1130',
         'until_year': 1979,
@@ -27763,7 +27764,7 @@ ZONE_ERAS_Pacific_Nauru: List[ZoneEra] = [
     #             12:00    -    +12
     {
         'offset_seconds': 43200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+12',
         'until_year': 32767,
@@ -27789,7 +27790,7 @@ ZONE_ERAS_Pacific_Niue: List[ZoneEra] = [
     # -11:19:40 - LMT 1952 Oct 16
     {
         'offset_seconds': -40780,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1952,
@@ -27801,7 +27802,7 @@ ZONE_ERAS_Pacific_Niue: List[ZoneEra] = [
     #             -11:20    -    -1120    1964 Jul
     {
         'offset_seconds': -40800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-1120',
         'until_year': 1964,
@@ -27813,7 +27814,7 @@ ZONE_ERAS_Pacific_Niue: List[ZoneEra] = [
     #             -11:00    -    -11
     {
         'offset_seconds': -39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-11',
         'until_year': 32767,
@@ -27839,7 +27840,7 @@ ZONE_ERAS_Pacific_Norfolk: List[ZoneEra] = [
     # 11:11:52 - LMT 1901
     {
         'offset_seconds': 40312,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1901,
@@ -27851,7 +27852,7 @@ ZONE_ERAS_Pacific_Norfolk: List[ZoneEra] = [
     #             11:12    -    +1112    1951
     {
         'offset_seconds': 40320,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+1112',
         'until_year': 1951,
@@ -27863,7 +27864,7 @@ ZONE_ERAS_Pacific_Norfolk: List[ZoneEra] = [
     #             11:30    -    +1130    1974 Oct 27 02:00s
     {
         'offset_seconds': 41400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+1130',
         'until_year': 1974,
@@ -27875,7 +27876,7 @@ ZONE_ERAS_Pacific_Norfolk: List[ZoneEra] = [
     #             11:30    1:00    +1230    1975 Mar  2 02:00s
     {
         'offset_seconds': 41400,
-        'zone_policy': ':',
+        'zone_policy': None,
         'era_delta_seconds': 3600,
         'format': '+1230',
         'until_year': 1975,
@@ -27887,7 +27888,7 @@ ZONE_ERAS_Pacific_Norfolk: List[ZoneEra] = [
     #             11:30    -    +1130    2015 Oct  4 02:00s
     {
         'offset_seconds': 41400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+1130',
         'until_year': 2015,
@@ -27899,7 +27900,7 @@ ZONE_ERAS_Pacific_Norfolk: List[ZoneEra] = [
     #             11:00    -    +11    2019 Jul
     {
         'offset_seconds': 39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+11',
         'until_year': 2019,
@@ -27937,7 +27938,7 @@ ZONE_ERAS_Pacific_Noumea: List[ZoneEra] = [
     # 11:05:48 - LMT 1912 Jan 13
     {
         'offset_seconds': 39948,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1912,
@@ -27975,7 +27976,7 @@ ZONE_ERAS_Pacific_Pago_Pago: List[ZoneEra] = [
     # 12:37:12 - LMT 1892 Jul 5
     {
         'offset_seconds': 45432,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1892,
@@ -27987,7 +27988,7 @@ ZONE_ERAS_Pacific_Pago_Pago: List[ZoneEra] = [
     #             -11:22:48 -    LMT    1911
     {
         'offset_seconds': -40968,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1911,
@@ -27999,7 +28000,7 @@ ZONE_ERAS_Pacific_Pago_Pago: List[ZoneEra] = [
     #             -11:00    -    SST
     {
         'offset_seconds': -39600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'SST',
         'until_year': 32767,
@@ -28025,7 +28026,7 @@ ZONE_ERAS_Pacific_Palau: List[ZoneEra] = [
     # -15:02:04 - LMT 1844 Dec 31
     {
         'offset_seconds': -54124,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1844,
@@ -28037,7 +28038,7 @@ ZONE_ERAS_Pacific_Palau: List[ZoneEra] = [
     #               8:57:56 -    LMT    1901
     {
         'offset_seconds': 32276,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1901,
@@ -28049,7 +28050,7 @@ ZONE_ERAS_Pacific_Palau: List[ZoneEra] = [
     #               9:00    -    +09
     {
         'offset_seconds': 32400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+09',
         'until_year': 32767,
@@ -28075,7 +28076,7 @@ ZONE_ERAS_Pacific_Pitcairn: List[ZoneEra] = [
     # -8:40:20 - LMT 1901
     {
         'offset_seconds': -31220,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1901,
@@ -28087,7 +28088,7 @@ ZONE_ERAS_Pacific_Pitcairn: List[ZoneEra] = [
     #             -8:30    -    -0830    1998 Apr 27  0:00
     {
         'offset_seconds': -30600,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-0830',
         'until_year': 1998,
@@ -28099,7 +28100,7 @@ ZONE_ERAS_Pacific_Pitcairn: List[ZoneEra] = [
     #             -8:00    -    -08
     {
         'offset_seconds': -28800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-08',
         'until_year': 32767,
@@ -28125,7 +28126,7 @@ ZONE_ERAS_Pacific_Port_Moresby: List[ZoneEra] = [
     # 9:48:40 - LMT 1880
     {
         'offset_seconds': 35320,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1880,
@@ -28137,7 +28138,7 @@ ZONE_ERAS_Pacific_Port_Moresby: List[ZoneEra] = [
     #             9:48:32    -    PMMT    1895
     {
         'offset_seconds': 35312,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'PMMT',
         'until_year': 1895,
@@ -28149,7 +28150,7 @@ ZONE_ERAS_Pacific_Port_Moresby: List[ZoneEra] = [
     #             10:00    -    +10
     {
         'offset_seconds': 36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+10',
         'until_year': 32767,
@@ -28175,7 +28176,7 @@ ZONE_ERAS_Pacific_Rarotonga: List[ZoneEra] = [
     # 13:20:56 - LMT 1899 Dec 26
     {
         'offset_seconds': 48056,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1899,
@@ -28187,7 +28188,7 @@ ZONE_ERAS_Pacific_Rarotonga: List[ZoneEra] = [
     #             -10:39:04 -    LMT    1952 Oct 16
     {
         'offset_seconds': -38344,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1952,
@@ -28199,7 +28200,7 @@ ZONE_ERAS_Pacific_Rarotonga: List[ZoneEra] = [
     #             -10:30    -    -1030    1978 Nov 12
     {
         'offset_seconds': -37800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-1030',
         'until_year': 1978,
@@ -28237,7 +28238,7 @@ ZONE_ERAS_Pacific_Tahiti: List[ZoneEra] = [
     # -9:58:16 - LMT 1912 Oct
     {
         'offset_seconds': -35896,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1912,
@@ -28249,7 +28250,7 @@ ZONE_ERAS_Pacific_Tahiti: List[ZoneEra] = [
     #             -10:00    -    -10
     {
         'offset_seconds': -36000,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '-10',
         'until_year': 32767,
@@ -28275,7 +28276,7 @@ ZONE_ERAS_Pacific_Tarawa: List[ZoneEra] = [
     # 11:32:04 - LMT 1901
     {
         'offset_seconds': 41524,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1901,
@@ -28287,7 +28288,7 @@ ZONE_ERAS_Pacific_Tarawa: List[ZoneEra] = [
     #              12:00    -    +12
     {
         'offset_seconds': 43200,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+12',
         'until_year': 32767,
@@ -28313,7 +28314,7 @@ ZONE_ERAS_Pacific_Tongatapu: List[ZoneEra] = [
     # 12:19:12 - LMT 1945 Sep 10
     {
         'offset_seconds': 44352,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1945,
@@ -28325,7 +28326,7 @@ ZONE_ERAS_Pacific_Tongatapu: List[ZoneEra] = [
     #             12:20    -    +1220    1961
     {
         'offset_seconds': 44400,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+1220',
         'until_year': 1961,
@@ -28337,7 +28338,7 @@ ZONE_ERAS_Pacific_Tongatapu: List[ZoneEra] = [
     #             13:00    -    +13    1999
     {
         'offset_seconds': 46800,
-        'zone_policy': '-',
+        'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+13',
         'until_year': 1999,
