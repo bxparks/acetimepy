@@ -19,6 +19,7 @@ zone_infos.py:
 		--granularity 1 \
 		--scope extended \
 		--generate_int16_year \
+		--skip_bufestimator \
 		--start_year $(START_YEAR) \
 		--until_year $(UNTIL_YEAR)
 
