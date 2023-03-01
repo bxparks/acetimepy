@@ -1,9 +1,21 @@
 # Changelog
 
 * Unreleased
-    * Rename `rules_delta_offset` to `era_delta_offset` for better
-      self-documentation.
-    * Extended `zonedb` year interval to `[1800,10000)`.
+    * `zonedb_types.py`
+        * Rename `rules_delta_offset` to `era_delta_offset` for better
+         self-documentation.
+        * Simplify `ZoneEra.zone_policy` so that it is None when the
+          corresponding 'RULES` field in the TZ files is 'hh:mm' or '-'.
+    * `acetime/zonedb/`
+        * Extend start and until years to `[1800,10000)`.
+        * Change MIN and MAX years to +/-32767.
+        * Add 'Original Years' and 'Generated Years' in file headers.
+    * Break cyclic dependency when generating `zonedb`
+        * Use `--skip_bufestimator` which allows AceTimeTools to generate
+          zonedb without depending on AceTimePython itself.
+    * `zone_processor.py`
+        * Remove obsolete `use_python_transition` option.
+        * Always use PEP495 compatible algorithm.
 * v0.5.6 (2022-12-04, TZDB 2022g)
     * Upgrade TZDB from 2022f to 2022g
         * https://mm.icann.org/pipermail/tz-announce/2022-November/000076.html
