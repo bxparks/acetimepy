@@ -1437,7 +1437,6 @@ def _create_transition_for_year(
     match: MatchingEra,
 ) -> Transition:
     """Create the transition from the given 'rule' for the given 'year'.
-    Return None if 'year' does not overlap with the [from, to] of the rule. The
     Transition object is a replica of the underlying Match object, with
     additional bookkeeping info.
     """
@@ -1619,6 +1618,9 @@ def _get_transition_time(year: int, rule: ZoneRule) -> DateTuple:
     """Return the (year, month, day, seconds, suffix) of the Rule in given
     year.
     """
+    if year == MIN_YEAR:
+        return DateTuple(y=year, M=1, d=1, ss=0, f='w')
+
     month, day = calc_day_of_month(
         year,
         rule['in_month'],
