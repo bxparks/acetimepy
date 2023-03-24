@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/src/AceTimePython/src/acetime/zonedb/tzfiles
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedb
-#     --tz_version 2022g
+#     --tz_version 2023b
 #     --action zonedb
 #     --language python
 #     --granularity 1
@@ -25,19 +25,19 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2022g
+# from https://github.com/eggert/tz/releases/tag/2023b
 #
-# Supported Zones: 596 (351 zones, 245 links)
+# Supported Zones: 596 (350 zones, 246 links)
 # Unsupported Zones: 0 (0 zones, 0 links)
-//
+#
 # Original Years:  [1844,2087]
 # Generated Years: [1844,2087]
 #
 # Records:
 #   Infos: 596
-#   Eras: 1952
+#   Eras: 1949
 #   Policies: 134
-#   Rules: 2158
+#   Rules: 2240
 #
 # DO NOT EDIT
 
@@ -53,13 +53,13 @@ from .zone_policies import *
 # Zone Context
 # ---------------------------------------------------------------------------
 
-TZDB_VERSION = '2022g'
+TZDB_VERSION = '2023b'
 START_YEAR = 1800
 UNTIL_YEAR = 10000
 
 # ---------------------------------------------------------------------------
-# Supported zones: 351
-# numEras: 1952
+# Supported zones: 350
+# numEras: 1949
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -9958,24 +9958,24 @@ ZONE_ERAS_America_Nuuk: List[ZoneEra] = [
         'until_seconds': 7200,
         'until_time_suffix': 'w',
     },
-    #             -3:00    EU    -03/-02    2023 Mar 25 22:00
+    #             -3:00    EU    -03/-02    2023 Oct 29  1:00u
     {
         'offset_seconds': -10800,
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': '-03/-02',
         'until_year': 2023,
-        'until_month': 3,
-        'until_day': 25,
-        'until_seconds': 79200,
-        'until_time_suffix': 'w',
+        'until_month': 10,
+        'until_day': 29,
+        'until_seconds': 3600,
+        'until_time_suffix': 'u',
     },
-    #             -2:00    -    -02
+    #             -2:00    EU    -02/-01
     {
         'offset_seconds': -7200,
-        'zone_policy': None,
+        'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
-        'format': '-02',
+        'format': '-02/-01',
         'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
@@ -12506,56 +12506,6 @@ ZONE_ERAS_America_Yakutat: List[ZoneEra] = [
 ZONE_INFO_America_Yakutat: ZoneInfo = {
     'name': 'America/Yakutat',
     'eras': ZONE_ERAS_America_Yakutat
-}
-
-# ---------------------------------------------------------------------------
-# Zone name: America/Yellowknife
-# Era count: 3
-# ---------------------------------------------------------------------------
-
-ZONE_ERAS_America_Yellowknife: List[ZoneEra] = [
-    # 0 - -00 1935
-    {
-        'offset_seconds': 0,
-        'zone_policy': None,
-        'era_delta_seconds': 0,
-        'format': '-00',
-        'until_year': 1935,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-    #             -7:00    NT_YK    M%sT    1980
-    {
-        'offset_seconds': -25200,
-        'zone_policy': ZONE_POLICY_NT_YK,
-        'era_delta_seconds': 0,
-        'format': 'M%sT',
-        'until_year': 1980,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-    #             -7:00    Canada    M%sT
-    {
-        'offset_seconds': -25200,
-        'zone_policy': ZONE_POLICY_Canada,
-        'era_delta_seconds': 0,
-        'format': 'M%sT',
-        'until_year': 32767,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
-        'until_time_suffix': 'w',
-    },
-
-]
-
-ZONE_INFO_America_Yellowknife: ZoneInfo = {
-    'name': 'America/Yellowknife',
-    'eras': ZONE_ERAS_America_Yellowknife
 }
 
 # ---------------------------------------------------------------------------
@@ -23504,12 +23454,12 @@ ZONE_ERAS_Europe_Kirov: List[ZoneEra] = [
         'until_seconds': 7200,
         'until_time_suffix': 's',
     },
-    #              3:00    Russia    +03/+04    1991 Mar 31  2:00s
+    #              3:00    Russia    MSK/MSD    1991 Mar 31  2:00s
     {
         'offset_seconds': 10800,
         'zone_policy': ZONE_POLICY_Russia,
         'era_delta_seconds': 0,
-        'format': '+03/+04',
+        'format': 'MSK/MSD',
         'until_year': 1991,
         'until_month': 3,
         'until_day': 31,
@@ -23528,36 +23478,36 @@ ZONE_ERAS_Europe_Kirov: List[ZoneEra] = [
         'until_seconds': 7200,
         'until_time_suffix': 's',
     },
-    #              3:00    Russia    +03/+04    2011 Mar 27  2:00s
+    #              3:00    Russia    MSK/MSD    2011 Mar 27  2:00s
     {
         'offset_seconds': 10800,
         'zone_policy': ZONE_POLICY_Russia,
         'era_delta_seconds': 0,
-        'format': '+03/+04',
+        'format': 'MSK/MSD',
         'until_year': 2011,
         'until_month': 3,
         'until_day': 27,
         'until_seconds': 7200,
         'until_time_suffix': 's',
     },
-    #              4:00    -    +04    2014 Oct 26  2:00s
+    #              4:00    -    MSK    2014 Oct 26  2:00s
     {
         'offset_seconds': 14400,
         'zone_policy': None,
         'era_delta_seconds': 0,
-        'format': '+04',
+        'format': 'MSK',
         'until_year': 2014,
         'until_month': 10,
         'until_day': 26,
         'until_seconds': 7200,
         'until_time_suffix': 's',
     },
-    #              3:00    -    +03
+    #              3:00    -    MSK
     {
         'offset_seconds': 10800,
         'zone_policy': None,
         'era_delta_seconds': 0,
-        'format': '+03',
+        'format': 'MSK',
         'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
@@ -26042,12 +25992,12 @@ ZONE_ERAS_Europe_Volgograd: List[ZoneEra] = [
         'until_seconds': 7200,
         'until_time_suffix': 's',
     },
-    #              3:00    Russia    +03/+04    1991 Mar 31  2:00s
+    #              3:00    Russia    MSK/MSD    1991 Mar 31  2:00s
     {
         'offset_seconds': 10800,
         'zone_policy': ZONE_POLICY_Russia,
         'era_delta_seconds': 0,
-        'format': '+03/+04',
+        'format': 'MSK/MSD',
         'until_year': 1991,
         'until_month': 3,
         'until_day': 31,
@@ -26066,36 +26016,36 @@ ZONE_ERAS_Europe_Volgograd: List[ZoneEra] = [
         'until_seconds': 7200,
         'until_time_suffix': 's',
     },
-    #              3:00    Russia    +03/+04    2011 Mar 27  2:00s
+    #              3:00    Russia    MSK/MSD    2011 Mar 27  2:00s
     {
         'offset_seconds': 10800,
         'zone_policy': ZONE_POLICY_Russia,
         'era_delta_seconds': 0,
-        'format': '+03/+04',
+        'format': 'MSK/MSD',
         'until_year': 2011,
         'until_month': 3,
         'until_day': 27,
         'until_seconds': 7200,
         'until_time_suffix': 's',
     },
-    #              4:00    -    +04    2014 Oct 26  2:00s
+    #              4:00    -    MSK    2014 Oct 26  2:00s
     {
         'offset_seconds': 14400,
         'zone_policy': None,
         'era_delta_seconds': 0,
-        'format': '+04',
+        'format': 'MSK',
         'until_year': 2014,
         'until_month': 10,
         'until_day': 26,
         'until_seconds': 7200,
         'until_time_suffix': 's',
     },
-    #              3:00    -    +03    2018 Oct 28  2:00s
+    #              3:00    -    MSK    2018 Oct 28  2:00s
     {
         'offset_seconds': 10800,
         'zone_policy': None,
         'era_delta_seconds': 0,
-        'format': '+03',
+        'format': 'MSK',
         'until_year': 2018,
         'until_month': 10,
         'until_day': 28,
@@ -26114,12 +26064,12 @@ ZONE_ERAS_Europe_Volgograd: List[ZoneEra] = [
         'until_seconds': 7200,
         'until_time_suffix': 's',
     },
-    #              3:00    -    +03
+    #              3:00    -    MSK
     {
         'offset_seconds': 10800,
         'zone_policy': None,
         'era_delta_seconds': 0,
-        'format': '+03',
+        'format': 'MSK',
         'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
@@ -28403,7 +28353,7 @@ ZONE_INFO_WET: ZoneInfo = {
 
 
 # ---------------------------------------------------------------------------
-# Supported links: 245
+# Supported links: 246
 # ---------------------------------------------------------------------------
 
 # Link name: Africa/Accra -> Africa/Abidjan
@@ -28896,6 +28846,12 @@ ZONE_INFO_America_Tortola: ZoneInfo = {
 ZONE_INFO_America_Virgin: ZoneInfo = {
     'name': 'America/Virgin',
     'link_to': ZONE_INFO_America_Puerto_Rico
+}
+
+# Link name: America/Yellowknife -> America/Edmonton
+ZONE_INFO_America_Yellowknife: ZoneInfo = {
+    'name': 'America/Yellowknife',
+    'link_to': ZONE_INFO_America_Edmonton
 }
 
 # Link name: Antarctica/DumontDUrville -> Pacific/Port_Moresby
