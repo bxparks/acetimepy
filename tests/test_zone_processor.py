@@ -1175,14 +1175,15 @@ class TestZoneProcessorIsFinalBufferSize(unittest.TestCase):
         self.assertTrue(zone_processor.is_terminal_year(9999))
 
     def test_cairo(self) -> None:
-        """Africa/Cairo uses Egypt Policy, which contains 3 Rules for 2014.
-        There are no further transitions after that.
+        """Africa/Cairo uses Egypt Policy which is back using DST in 2023.
         """
         zone_processor = ZoneProcessor(zone_infos.ZONE_INFO_Africa_Cairo)
         self.assertFalse(zone_processor.is_terminal_year(2000))
         self.assertFalse(zone_processor.is_terminal_year(2013))
         self.assertFalse(zone_processor.is_terminal_year(2014))
-        self.assertTrue(zone_processor.is_terminal_year(2015))
+        self.assertFalse(zone_processor.is_terminal_year(2015))
+        self.assertTrue(zone_processor.is_terminal_year(2023))
+        self.assertTrue(zone_processor.is_terminal_year(2024))
         self.assertTrue(zone_processor.is_terminal_year(9999))
 
     def test_havana(self) -> None:
