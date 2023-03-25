@@ -11,9 +11,9 @@ import logging
 from datetime import datetime, timedelta, timezone, tzinfo
 from argparse import ArgumentParser
 from typing import Any, Tuple, List
+import sys
 
 # Using sys.version_info works better for MyPy than using a try/except block.
-import sys
 if sys.version_info >= (3, 9):
     import zoneinfo
 else:
@@ -156,7 +156,8 @@ class Comparator():
         assert dt.tzinfo is not None
         abbrev = dt.tzinfo.tzname(dt)
 
-        # Extract the components of the acetz version of datetime.
+        # Extract the components of the acetz version of datetime. Consider
+        # these to be the "expected".
         expected = dt.astimezone(ace_tz)
         expected_unix_seconds = int(expected.timestamp())
         expected_total_offset = int(
@@ -261,7 +262,8 @@ class Comparator():
             self.has_diff = True
 
         print(
-            f"{unix_seconds}: {dt}: {label}: exp {expected}, obs {observed}"
+            f"{unix_seconds}: {dt}: {label}: "
+            f"acetz {expected}; zoneinfo {observed}"
         )
 
 
@@ -301,7 +303,8 @@ def main() -> None:
 # AceTimePython ZoneDB Version: {TZDB_VERSION}
 # AceTimePython ZoneDB Start Year: {START_YEAR}
 # AceTimePython ZoneDB Until Year: {UNTIL_YEAR}
-# ZoneInfo Version: Python 3.9 2021e
+# Python Versin: {sys.version}
+# ZoneInfo Version: 2021e?
 # Report Start Year: {args.start_year}
 # Report Until Year: {args.until_year}
 #
@@ -320,8 +323,11 @@ def main() -> None:
         sampling_interval=args.sampling_interval,
         zone_manager=zone_manager,
     )
+    i = 0
     for zone_name, zone_info in ZONE_REGISTRY.items():
+        print(f"{i}: Processing Zone {zone_name}...", file=sys.stderr)
         comparator.compare_zone(zone_name)
+        i += 1
 
 
 if __name__ == '__main__':
