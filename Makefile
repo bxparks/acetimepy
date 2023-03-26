@@ -44,3 +44,6 @@ flake8:
 		--max-line-length=100 \
 		--show-source \
 		--statistics
+
+zonedbs:
+	make -C src/acetime/zonedb/
