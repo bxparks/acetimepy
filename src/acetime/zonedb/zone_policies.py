@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/src/AceTimePython/src/acetime/zonedb/tzfiles
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedb
-#     --tz_version 2023b
+#     --tz_version 2023c
 #     --action zonedb
 #     --language python
 #     --granularity 1
@@ -25,7 +25,7 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2023b
+# from https://github.com/eggert/tz/releases/tag/2023c
 #
 # Supported Zones: 596 (350 zones, 246 links)
 # Unsupported Zones: 0 (0 zones, 0 links)
@@ -37,7 +37,7 @@
 #   Infos: 596
 #   Eras: 1949
 #   Policies: 134
-#   Rules: 2240
+#   Rules: 2238
 #
 # DO NOT EDIT
 
@@ -49,7 +49,7 @@ from ..zonedb_types import (
 
 # ---------------------------------------------------------------------------
 # Supported zone policies: 134
-# numRules: 2240
+# numRules: 2238
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -13466,7 +13466,7 @@ ZONE_POLICY_Latvia: ZonePolicy = {
 
 # ---------------------------------------------------------------------------
 # Policy name: Lebanon
-# Rule count: 27
+# Rule count: 25
 # ---------------------------------------------------------------------------
 ZONE_RULES_Lebanon: List[ZoneRule] = [
     # Anchor: Rule    Lebanon    1920    only    -    Oct    25    0:00    0    -
@@ -13733,10 +13733,10 @@ ZONE_RULES_Lebanon: List[ZoneRule] = [
         'delta_seconds': 0,
         'letter': '',
     },
-    # Rule    Lebanon    1993    2022    -    Mar    lastSun    0:00    1:00    S
+    # Rule    Lebanon    1993    max    -    Mar    lastSun    0:00    1:00    S
     {
         'from_year': 1993,
-        'to_year': 2022,
+        'to_year': 32766,
         'in_month': 3,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -13768,30 +13768,6 @@ ZONE_RULES_Lebanon: List[ZoneRule] = [
         'at_time_suffix': 'w',
         'delta_seconds': 0,
         'letter': '',
-    },
-    # Rule    Lebanon    2023    only    -    Apr    21    0:00    1:00    S
-    {
-        'from_year': 2023,
-        'to_year': 2023,
-        'in_month': 4,
-        'on_day_of_week': 0,
-        'on_day_of_month': 21,
-        'at_seconds': 0,
-        'at_time_suffix': 'w',
-        'delta_seconds': 3600,
-        'letter': 'S',
-    },
-    # Rule    Lebanon    2024    max    -    Mar    lastSun    0:00    1:00    S
-    {
-        'from_year': 2024,
-        'to_year': 32766,
-        'in_month': 3,
-        'on_day_of_week': 7,
-        'on_day_of_month': 0,
-        'at_seconds': 0,
-        'at_time_suffix': 'w',
-        'delta_seconds': 3600,
-        'letter': 'S',
     },
 
 ]
@@ -28683,33 +28659,84 @@ ZONE_POLICY_Zion: ZonePolicy = {
 
 
 # ---------------------------------------------------------------------------
-# Notable zone policies: 22
+# Notable zone policies: 27
 # ---------------------------------------------------------------------------
 
 # Barb {SAVE '0:30' different from 1:00}
-# Belize {SAVE '0:30' different from 1:00}
+# Belize {
+#   LETTER '-0530' not single character,
+#   LETTER 'CDT' not single character,
+#   LETTER 'CPT' not single character,
+#   LETTER 'CST' not single character,
+#   LETTER 'CWT' not single character,
+#   SAVE '0:30' different from 1:00,
+# }
+# CA {AT '2:01' not multiple of :15 min}
 # Cook {SAVE '0:30' different from 1:00}
-# DR {SAVE '0:30' different from 1:00}
-# Eire {SAVE '-1:00' different from 1:00}
+# DR {
+#   LETTER '-0430' not single character,
+#   LETTER 'EDT' not single character,
+#   LETTER 'EST' not single character,
+#   SAVE '0:30' different from 1:00,
+# }
+# Eire {SAVE '-1:00' is a negative DST}
 # France {SAVE '2:00' different from 1:00}
-# GB-Eire {SAVE '2:00' different from 1:00}
+# GB-Eire {
+#   LETTER 'BDST' not single character,
+#   LETTER 'BST' not single character,
+#   LETTER 'GMT' not single character,
+#   SAVE '2:00' different from 1:00,
+# }
 # Germany {SAVE '2:00' different from 1:00}
+# Guam {
+#   AT '0:01' not multiple of :15 min,
+#   AT '2:01' not multiple of :15 min,
+# }
 # LH {SAVE '0:30' different from 1:00}
-# Morocco {SAVE '-1:00' different from 1:00}
+# Louisville {AT '0:01' not multiple of :15 min}
+# Moncton {AT '0:01' not multiple of :15 min}
+# Morocco {SAVE '-1:00' is a negative DST}
 # NBorneo {SAVE '0:20' different from 1:00}
 # NZ {SAVE '0:30' different from 1:00}
-# Namibia {SAVE '-1:00' different from 1:00}
+# Namibia {
+#   LETTER 'CAT' not single character,
+#   LETTER 'WAT' not single character,
+#   SAVE '-1:00' is a negative DST,
+# }
+# Palestine {AT '0:01' not multiple of :15 min}
 # Port {SAVE '2:00' different from 1:00}
-# Russia {SAVE '2:00' different from 1:00}
+# Russia {
+#   LETTER '+05' not single character,
+#   LETTER 'MDST' not single character,
+#   LETTER 'MMT' not single character,
+#   LETTER 'MSD' not single character,
+#   LETTER 'MSK' not single character,
+#   LETTER 'MST' not single character,
+#   SAVE '2:00' different from 1:00,
+# }
 # SovietZone {SAVE '2:00' different from 1:00}
 # Spain {SAVE '2:00' different from 1:00}
-# StJohns {SAVE '2:00' different from 1:00}
-# Troll {SAVE '2:00' different from 1:00}
+# StJohns {
+#   AT '0:01' not multiple of :15 min,
+#   LETTER 'DD' not single character,
+#   SAVE '2:00' different from 1:00,
+# }
+# Troll {
+#   LETTER '+00' not single character,
+#   LETTER '+02' not single character,
+#   SAVE '2:00' different from 1:00,
+# }
 # Uruguay {
 #   SAVE '0:30' different from 1:00,
 #   SAVE '1:30' different from 1:00,
 # }
-# Yukon {SAVE '2:00' different from 1:00}
-# Zion {SAVE '2:00' different from 1:00}
+# Yukon {
+#   LETTER 'DD' not single character,
+#   SAVE '2:00' different from 1:00,
+# }
+# Zion {
+#   LETTER 'DD' not single character,
+#   SAVE '2:00' different from 1:00,
+# }
 
 
