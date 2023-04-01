@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/src/AceTimePython/src/acetime/zonedb/tzfiles
 #     --output_dir /home/brian/src/AceTimePython/src/acetime/zonedb
-#     --tz_version 2023b
+#     --tz_version 2023c
 #     --action zonedb
 #     --language python
 #     --granularity 1
@@ -25,7 +25,7 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2023b
+# from https://github.com/eggert/tz/releases/tag/2023c
 #
 # Supported Zones: 596 (350 zones, 246 links)
 # Unsupported Zones: 0 (0 zones, 0 links)
@@ -37,7 +37,7 @@
 #   Infos: 596
 #   Eras: 1949
 #   Policies: 134
-#   Rules: 2240
+#   Rules: 2238
 #
 # DO NOT EDIT
 
@@ -49,7 +49,7 @@ from ..zonedb_types import (
 
 # ---------------------------------------------------------------------------
 # Supported zone policies: 134
-# numRules: 2240
+# numRules: 2238
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -13466,7 +13466,7 @@ ZONE_POLICY_Latvia: ZonePolicy = {
 
 # ---------------------------------------------------------------------------
 # Policy name: Lebanon
-# Rule count: 27
+# Rule count: 25
 # ---------------------------------------------------------------------------
 ZONE_RULES_Lebanon: List[ZoneRule] = [
     # Anchor: Rule    Lebanon    1920    only    -    Oct    25    0:00    0    -
@@ -13733,10 +13733,10 @@ ZONE_RULES_Lebanon: List[ZoneRule] = [
         'delta_seconds': 0,
         'letter': '',
     },
-    # Rule    Lebanon    1993    2022    -    Mar    lastSun    0:00    1:00    S
+    # Rule    Lebanon    1993    max    -    Mar    lastSun    0:00    1:00    S
     {
         'from_year': 1993,
-        'to_year': 2022,
+        'to_year': 32766,
         'in_month': 3,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -13768,30 +13768,6 @@ ZONE_RULES_Lebanon: List[ZoneRule] = [
         'at_time_suffix': 'w',
         'delta_seconds': 0,
         'letter': '',
-    },
-    # Rule    Lebanon    2023    only    -    Apr    21    0:00    1:00    S
-    {
-        'from_year': 2023,
-        'to_year': 2023,
-        'in_month': 4,
-        'on_day_of_week': 0,
-        'on_day_of_month': 21,
-        'at_seconds': 0,
-        'at_time_suffix': 'w',
-        'delta_seconds': 3600,
-        'letter': 'S',
-    },
-    # Rule    Lebanon    2024    max    -    Mar    lastSun    0:00    1:00    S
-    {
-        'from_year': 2024,
-        'to_year': 32766,
-        'in_month': 3,
-        'on_day_of_week': 7,
-        'on_day_of_month': 0,
-        'at_seconds': 0,
-        'at_time_suffix': 'w',
-        'delta_seconds': 3600,
-        'letter': 'S',
     },
 
 ]
