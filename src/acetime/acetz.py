@@ -115,11 +115,12 @@ class ZoneManager:
     def __init__(self, registry: ZoneInfoMap):
         self.registry = registry
 
-    def gettz(self, zone_name: str) -> acetz:
-        """Return the acetz instance for the given zone_name.
-        Throws Exception if zone_name not found.
+    def gettz(self, zone_name: str) -> Optional[acetz]:
+        """Return the acetz instance for the given zone_name, or None
+        None if zone_name is not found. Returning None instead of raising an
+        Exception is consistent with dateutil.tz.gettz().
         """
         zone_info = self.registry.get(zone_name)
         if not zone_info:
-            raise Exception(f"Zone '{zone_name}' not found")
+            return None
         return acetz(zone_info)

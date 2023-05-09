@@ -44,6 +44,14 @@ def print_zp_at_dt(tz: acetz, dt: datetime) -> None:
 zone_manager = ZoneManager(ZONE_REGISTRY)
 
 
+class TestGetTz(unittest.TestCase):
+    def test_gettz(self) -> None:
+        tz = zone_manager.gettz('America/Los_Angeles')
+        self.assertIsNotNone(tz)
+        tz = zone_manager.gettz('DoesNotExist')
+        self.assertIsNone(tz)
+
+
 class TestLosAngeles(unittest.TestCase):
 
     def test_constructor(self) -> None:
@@ -52,6 +60,7 @@ class TestLosAngeles(unittest.TestCase):
         """
 
         tz = zone_manager.gettz('America/Los_Angeles')
+        assert tz is not None
 
         dtc = datetime(2000, 1, 2, 3, 4, 5, tzinfo=tz)
         self.assertEqual(2000, dtc.year)
@@ -77,6 +86,7 @@ class TestLosAngeles(unittest.TestCase):
         """Create date from AceTime epoch seconds using fromtimestamp()."""
 
         tz = zone_manager.gettz('America/Los_Angeles')
+        assert tz is not None
 
         unix_seconds = 946811045
         dte = datetime.fromtimestamp(unix_seconds, tz=tz)
@@ -95,6 +105,7 @@ class TestLosAngeles(unittest.TestCase):
 
     def test_before_spring_forward(self) -> None:
         tz = zone_manager.gettz('America/Los_Angeles')
+        assert tz is not None
 
         # One second before DST shift, 01:59:59 UTC-8
         epoch_seconds = 7984799
@@ -136,6 +147,7 @@ class TestLosAngeles(unittest.TestCase):
 
     def test_after_spring_forward(self) -> None:
         tz = zone_manager.gettz('America/Los_Angeles')
+        assert tz is not None
 
         # Right after DST forward shift, 03:00:00 UTC-7
         epoch_seconds = 7984800
@@ -172,6 +184,7 @@ class TestLosAngeles(unittest.TestCase):
 
     def test_before_fall_back(self) -> None:
         tz = zone_manager.gettz('America/Los_Angeles')
+        assert tz is not None
 
         # One second before DST shift, 01:59:59 UTC-7
         epoch_seconds = 26125199
@@ -222,6 +235,7 @@ class TestLosAngeles(unittest.TestCase):
 
     def test_after_fall_back(self) -> None:
         tz = zone_manager.gettz('America/Los_Angeles')
+        assert tz is not None
 
         # Just after DST fall back 01:00:00 UTC-8
         epoch_seconds = 26125200
@@ -261,6 +275,7 @@ class TestLosAngeles(unittest.TestCase):
 
     def test_way_after_fall_back(self) -> None:
         tz = zone_manager.gettz('America/Los_Angeles')
+        assert tz is not None
 
         # Just after DST fall back 02:00:00 UTC-8
         epoch_seconds = 26125200 + 3600
@@ -300,6 +315,7 @@ class TestLosAngeles(unittest.TestCase):
         instead of going through the ZoneManager.
         """
         tz = acetz(ZONE_INFO_America_Los_Angeles)
+        assert tz is not None
         self.assertFalse(tz.islink())
 
         epoch_seconds = 7984800

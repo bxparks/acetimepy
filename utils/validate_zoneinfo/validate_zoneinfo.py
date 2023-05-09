@@ -50,10 +50,12 @@ class Comparator():
         zi_tz = zoneinfo.ZoneInfo(zone_name)
         if not zi_tz:
             logging.error(f"Zone '{zone_name}' not found in zoneinfo package")
+            return
 
         ace_tz = self.zone_manager.gettz(zone_name)
         if not ace_tz:
             logging.error(f"Zone '{zone_name}' not found in acetime package")
+            return
 
         self._diff_tz(zi_tz, ace_tz)
 
