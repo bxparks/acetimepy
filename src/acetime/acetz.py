@@ -5,9 +5,9 @@
 from typing import Optional
 from datetime import datetime, tzinfo, timedelta, timezone
 
-from .common import SECONDS_SINCE_UNIX_EPOCH
-from .zone_processor import ZoneProcessor
-from .zonedb_types import ZoneInfo, ZoneInfoMap
+from acetime.common import to_epoch_seconds
+from acetime.zone_processor import ZoneProcessor
+from acetime.zonedb_types import ZoneInfo, ZoneInfoMap
 
 
 class acetz(tzinfo):
@@ -77,7 +77,7 @@ class acetz(tzinfo):
         assert dt
         utcdt = dt.replace(tzinfo=timezone.utc)
         unix_seconds = int(utcdt.timestamp())
-        epoch_seconds = unix_seconds - SECONDS_SINCE_UNIX_EPOCH
+        epoch_seconds = to_epoch_seconds(unix_seconds)
 
         # Search the transitions for the matching Transition
         offset_info = self.zp.get_timezone_info_for_seconds(epoch_seconds)

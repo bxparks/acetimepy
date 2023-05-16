@@ -27,9 +27,24 @@ MAX_UNTIL_YEAR: int = 32767
 # Marker year in a zonedb entry to indicate +Infinity for TO year.
 MAX_TO_YEAR: int = MAX_UNTIL_YEAR - 1
 
-# Number of seconds from Unix Epoch (1970-01-01 00:00:00) to AceTime Epoch
-# (2000-01-01 00:00:00)
-SECONDS_SINCE_UNIX_EPOCH = 946684800
+# Epoch Year used by this library. Early version used 2000. Changed to 2050 to
+# be more compatible with AceTime v2, mostly for debugging purposes.
+EPOCH_YEAR: int = 2050
+
+# Number of seconds from Python Epoch (Unix epoch of 1970-01-01 00:00:00) to
+# Epoch Year.
+SECONDS_SINCE_UNIX_EPOCH = int(datetime.datetime(
+    EPOCH_YEAR, 1, 1, tzinfo=datetime.timezone.utc).timestamp())
+
+
+def to_epoch_seconds(unix_seconds: int) -> int:
+    """Convert unix seconds to internal epoch seconds."""
+    return unix_seconds - SECONDS_SINCE_UNIX_EPOCH
+
+
+def to_unix_seconds(epoch_seconds: int) -> int:
+    """Convert internal epoch seconds to unix seconds."""
+    return epoch_seconds + SECONDS_SINCE_UNIX_EPOCH
 
 
 def seconds_to_hms(seconds: int) -> Tuple[int, int, int]:

@@ -19,13 +19,14 @@ from typing import Optional
 from typing import Tuple
 from typing import cast
 
+from .common import EPOCH_YEAR
 from .common import INVALID_YEAR
 from .common import MIN_YEAR
 from .common import MAX_TO_YEAR
-from .common import SECONDS_SINCE_UNIX_EPOCH
 from .common import seconds_to_hms
 from .common import hms_to_seconds
 from .common import calc_day_of_month
+from .common import to_unix_seconds
 from .zonedb_types import ZoneRule
 from .zonedb_types import ZoneEra
 from .zonedb_types import ZoneInfo
@@ -69,7 +70,7 @@ class BufferSizeInfo(NamedTuple):
     buffer_size: int
 
 
-ACETIME_EPOCH = datetime(2000, 1, 1)  # in UTC
+ACETIME_EPOCH = datetime(EPOCH_YEAR, 1, 1)  # in UTC
 
 
 def policy_name_of(era: ZoneEra) -> str:
@@ -629,12 +630,8 @@ class ZoneProcessor:
     def _init_for_second(self, epoch_seconds: int) -> None:
         """Initialize the Transitions from the given epoch_seconds.
         """
-        ldt = datetime.utcfromtimestamp(
-            epoch_seconds + SECONDS_SINCE_UNIX_EPOCH)
-
-        year = ldt.year
-
-        self.init_for_year(year)
+        ldt = datetime.utcfromtimestamp(to_unix_seconds(epoch_seconds))
+        self.init_for_year(ldt.year)
 
     def _find_transition_for_seconds(
         self,
