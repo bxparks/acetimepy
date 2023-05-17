@@ -41,7 +41,7 @@
 #
 # DO NOT EDIT
 
-from ..zonedb_types import ZoneInfoMap
+from ..typing import ZoneInfoMap
 from .zone_infos import *
 
 # Supported Zones: 350

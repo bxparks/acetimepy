@@ -14,7 +14,7 @@ print(f"""\
 
 The `benchmark.py` script compares the speed of 4 timezone libraries:
 
-* `acetime.acetz.acetz` from this project,
+* `acetime.timezone.acetz` from this project,
   [AceTimePython](https://github.com/bxparks/AceTimePython)
 * `pytz.BaseTzInfo` from [pytz](https://pypi.org/project/pytz/)
 * `dateutil.tz` from
@@ -35,7 +35,7 @@ The `benchmark.py` scans through all 377 timezones (as of TZDB 2021e), sampling
 2 days for each month from the year 2000 until 2038. The numbers in the table
 below is given units of microseconds per iteration, averaged over all timezones.
 
-**Version**: AceTimePython v0.4.0
+**Version**: AceTimePython v0.7.0 (TZDB 2023c)
 
 **NOTE**: This file was auto-generated using `make README.md`. DO NOT EDIT.
 

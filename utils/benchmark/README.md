@@ -2,7 +2,7 @@
 
 The `benchmark.py` script compares the speed of 4 timezone libraries:
 
-* `acetime.acetz.acetz` from this project,
+* `acetime.timezone.acetz` from this project,
   [AceTimePython](https://github.com/bxparks/AceTimePython)
 * `pytz.BaseTzInfo` from [pytz](https://pypi.org/project/pytz/)
 * `dateutil.tz` from
@@ -52,11 +52,10 @@ $ make README.md
 +-------------------+----------------+----------------+
 | Time Zone Library | comp to epoch  | epoch to comp  |
 |                   | (micros/iter)  | (micros/iter)  |
-|-------------------+----------------+----------------|
-| acetime           |         10.256 |         12.700 |
-| dateutil          |          5.974 |          7.372 |
-| pytz              |         15.744 |         15.286 |
-| zoneinfo          |          1.415 |          0.636 |
+| acetime           |         10.963 |         13.475 |
+| dateutil          |          5.960 |          7.257 |
+| pytz              |         16.244 |         15.514 |
+| zoneinfo          |          1.409 |          0.709 |
 +-------------------+----------------+----------------+
 
 ```

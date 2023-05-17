@@ -1,11 +1,11 @@
 START
-Original timezones: 377
-Common timezones: 377
+Original timezones: 350
+Common timezones: 350
 Start year: 2000
 Until year: 2038
 BENCHMARKS
-acetime 343824 10.256 349102 12.700
-dateutil 343824 5.974 349102 7.372
-pytz 343824 15.744 349102 15.286
-zoneinfo 343824 1.415 349102 0.636
+acetime 319200 10.963 324100 13.475
+dateutil 319200 5.960 324100 7.257
+pytz 319200 16.244 324100 15.514
+zoneinfo 319200 1.409 324100 0.709
 END

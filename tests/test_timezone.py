@@ -4,7 +4,7 @@ import logging
 from datetime import datetime, timedelta, timezone
 
 from acetime.common import to_epoch_seconds
-from acetime.acetz import acetz, ZoneManager
+from acetime.timezone import acetz, ZoneManager
 from acetime.zonedb.zone_registry import ZONE_REGISTRY
 from acetime.zonedb.zone_infos import ZONE_INFO_America_Los_Angeles
 from acetime.zonedb.zone_infos import ZONE_INFO_US_Pacific

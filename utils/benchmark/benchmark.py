@@ -63,7 +63,7 @@ if sys.version_info >= (3, 9):
 else:
     from backports import zoneinfo
 
-from acetime.acetz import ZoneManager
+from acetime.timezone import ZoneManager
 from acetime.zonedb.zone_registry import ZONE_REGISTRY
 
 

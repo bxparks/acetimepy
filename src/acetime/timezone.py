@@ -5,14 +5,13 @@
 from typing import Optional
 from datetime import datetime, tzinfo, timedelta, timezone
 
-from acetime.common import to_epoch_seconds
-from acetime.zone_processor import ZoneProcessor
-from acetime.zonedb_types import ZoneInfo, ZoneInfoMap
+from .common import to_epoch_seconds
+from .zone_processor import ZoneProcessor
+from .typing import ZoneInfo, ZoneInfoMap
 
 
 class acetz(tzinfo):
-    """An implementation of datetime.tzinfo using the ZoneProcessor class
-    from AceTime/tools.
+    """An implementation of datetime.tzinfo using the ZoneProcessor class.
     """
 
     def __init__(self, zone_info: ZoneInfo):
