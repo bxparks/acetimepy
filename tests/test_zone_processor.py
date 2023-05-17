@@ -6,16 +6,15 @@ import unittest
 from datetime import datetime
 
 from acetime.zonedb import zone_infos
-from acetime.zone_processor import YearMonthTuple
-from acetime.zone_processor import DateTuple
-from acetime.zone_processor import Transition
-from acetime.zone_processor import MatchingEra
+from acetime.date_tuple import YearMonthTuple
+from acetime.date_tuple import DateTuple
+from acetime.date_tuple import normalize_date_tuple
+from acetime.transition import Transition
+from acetime.transition import MatchingEra
 from acetime.zone_processor import ZoneProcessor
 from acetime.zone_processor import _get_interior_years
 from acetime.zone_processor import _compare_era_to_year_month
 from acetime.zone_processor import _era_overlaps_interval
-from acetime.zone_processor import _subtract_date_tuple
-from acetime.zone_processor import _normalize_date_tuple
 from acetime.zone_processor import _expand_date_tuple
 from acetime.zone_processor import _compare_transition_to_match_fuzzy
 from acetime.zone_processor import _compare_transition_to_match
@@ -72,40 +71,15 @@ class TestZoneProcessorHelperMethods(unittest.TestCase):
     def test_normalize_date_tuple(self) -> None:
         self.assertEqual(
             DateTuple(2000, 2, 1, 0, 'w'),
-            _normalize_date_tuple(DateTuple(2000, 2, 1, 0, 'w')))
+            normalize_date_tuple(DateTuple(2000, 2, 1, 0, 'w')))
 
         self.assertEqual(
             DateTuple(2000, 2, 1, 0, 's'),
-            _normalize_date_tuple(DateTuple(2000, 1, 31, 24 * 3600, 's')))
+            normalize_date_tuple(DateTuple(2000, 1, 31, 24 * 3600, 's')))
 
         self.assertEqual(
             DateTuple(2000, 2, 29, 23 * 3600, 'u'),
-            _normalize_date_tuple(DateTuple(2000, 3, 1, -3600, 'u')))
-
-    def test_subtract_date_tuple(self) -> None:
-        self.assertEqual(
-            -1,
-            _subtract_date_tuple(
-                DateTuple(2000, 1, 1, 43, 'w'),
-                DateTuple(2000, 1, 1, 44, 'w'),
-            )
-        )
-
-        self.assertEqual(
-            24 * 3600 - 1,
-            _subtract_date_tuple(
-                DateTuple(2000, 1, 2, 43, 'w'),
-                DateTuple(2000, 1, 1, 44, 'w'),
-            )
-        )
-
-        self.assertEqual(
-            -31 * 24 * 3600 + 24 * 3600 - 1,
-            _subtract_date_tuple(
-                DateTuple(2000, 1, 2, 43, 'w'),
-                DateTuple(2000, 2, 1, 44, 'w'),
-            )
-        )
+            normalize_date_tuple(DateTuple(2000, 3, 1, -3600, 'u')))
 
     def test_compare_era_to_year_month(self) -> None:
         era = ZoneEra({
