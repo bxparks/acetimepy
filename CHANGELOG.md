@@ -1,13 +1,15 @@
 # Changelog
 
 * Unreleased
+* 0.7.0 (2023-05-17, TZDB 2023c)
     * Change `ZoneManager.gettz(zone_name)` to return `None` instead of raising
       an exception if the `zone_name` is not found. This is more consistent with
       the behavior of
       [dateutil.tz.gettz()](https://dateutil.readthedocs.io/en/stable/tz.html).
-    * Package name refactoring
+    * Rename project and packages
         * Rename `zonedb_types.py` to `typing.py`.
         * Rename `acetime.acetz` (acetz.py) to `acetime.timezone` (timezone.py).
+        * Rename project from `AceTimePython` to `acetimepy`.
 * 0.6.1 (2023-04-01, TZDB 2023c)
     * Upgrade TZDB from 2023b to 2023c.
         * https://mm.icann.org/pipermail/tz-announce/2023-March/000079.html

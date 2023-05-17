@@ -59,7 +59,7 @@ database from underlying operating system (like `dateutil` and `zoneinfo`).
 These features indicate that `acetime` may be most useful for validation or
 continuous integration.
 
-**Version**: v0.6.1 (2023-04-01, TZDB 2023c)
+**Version**: v0.7.0 (2023-05-17, TZDB 2023c)
 
 **Changelog**: [CHANGELOG.md](CHANGELOG.md)
 

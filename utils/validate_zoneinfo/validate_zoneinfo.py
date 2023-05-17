@@ -307,7 +307,7 @@ def main() -> None:
 # AceTimePython ZoneDB Version: {TZDB_VERSION}
 # AceTimePython ZoneDB Start Year: {START_YEAR}
 # AceTimePython ZoneDB Until Year: {UNTIL_YEAR}
-# Python Versin: {sys.version}
+# Python Version: {sys.version}
 # ZoneInfo Version: 2021e?
 # Report Start Year: {args.start_year}
 # Report Until Year: {args.until_year}
