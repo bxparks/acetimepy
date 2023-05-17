@@ -1,4 +1,4 @@
-# Generate the validation report of acetime.acetz.acetz compared to
+# Generate the validation report of acetime.timezone.acetz compared to
 # zoneinfo.ZoneInfo.
 
 START_YEAR := 1840

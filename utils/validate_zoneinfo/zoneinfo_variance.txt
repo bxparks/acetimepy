@@ -1,4 +1,4 @@
-# Variance report for acetime.acetz.acetz compared to Python 3.9
+# Variance report for acetime.timezone.acetz compared to Python 3.9
 # zoneinfo.ZoneInfo.
 #
 # Context

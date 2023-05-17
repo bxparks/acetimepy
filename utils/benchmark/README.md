@@ -2,7 +2,7 @@
 
 The `benchmark.py` script compares the speed of 4 timezone libraries:
 
-* `acetime.acetz.acetz` from this project,
+* `acetime.timezone.acetz` from this project,
   [AceTimePython](https://github.com/bxparks/AceTimePython)
 * `pytz.BaseTzInfo` from [pytz](https://pypi.org/project/pytz/)
 * `dateutil.tz` from

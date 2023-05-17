@@ -3,8 +3,9 @@
 # MIT License
 
 """
-Compare timezone transitions between AceTimePython acetime.acetz class and the
-Python 3.9 zoneinfo.ZoneInfo class, and generate a report of the discrepencies.
+Compare timezone transitions between AceTimePython acetime.timezone.acetz class
+and the Python 3.9 zoneinfo.ZoneInfo class, and generate a report of the
+discrepencies.
 """
 
 import logging
@@ -21,7 +22,7 @@ else:
 
 # AceTimePython classes
 import acetime.version
-from acetime.acetz import ZoneManager
+from acetime.timezone import ZoneManager
 from acetime.zonedb.zone_infos import TZDB_VERSION, START_YEAR, UNTIL_YEAR
 from acetime.zonedb.zone_registry import ZONE_REGISTRY
 
@@ -62,7 +63,7 @@ class Comparator():
     def _diff_tz(self, zi_tz: tzinfo, ace_tz: tzinfo) -> None:
         """Find the DST transitions from start_year to until_year, and determine
         if there exists any mismatches between representation of a datetime
-        using the acetime.acetz.acetz class and a datetime using the
+        using the acetime.timezone.acetz class and a datetime using the
         zoneinfo.ZoneInfo class.
         """
 
@@ -145,7 +146,8 @@ class Comparator():
 
     def _check_dt(self, dt: datetime, ace_tz: tzinfo) -> None:
         """Check that the given 'dt' computed using zoneinfo.ZoneInfo matches
-        the datetime as determined by using the given acetime.acetz.acetz class.
+        the datetime as determined by using the given acetime.timezone.acetz
+        class.
         """
 
         # Extract the components of the zoneinfo version of datetime.
@@ -296,7 +298,7 @@ def main() -> None:
 
     # Print header
     print(f"""\
-# Variance report for acetime.acetz.acetz compared to Python 3.9
+# Variance report for acetime.timezone.acetz compared to Python 3.9
 # zoneinfo.ZoneInfo.
 #
 # Context
