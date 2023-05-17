@@ -42,7 +42,7 @@
 # DO NOT EDIT
 
 from typing import List
-from ..zonedb_types import (
+from ..typing import (
     ZoneEra,
     ZoneInfo,
 )

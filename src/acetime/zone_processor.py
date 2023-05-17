@@ -27,9 +27,9 @@ from .common import seconds_to_hms
 from .common import hms_to_seconds
 from .common import calc_day_of_month
 from .common import to_unix_seconds
-from .zonedb_types import ZoneRule
-from .zonedb_types import ZoneEra
-from .zonedb_types import ZoneInfo
+from .typing import ZoneRule
+from .typing import ZoneEra
+from .typing import ZoneInfo
 
 
 class DateTuple(NamedTuple):
