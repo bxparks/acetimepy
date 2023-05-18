@@ -3,9 +3,9 @@
 # MIT License
 
 """
-Compare timezone transitions between AceTimePython acetime.timezone.acetz class
-and the Python 3.9 zoneinfo.ZoneInfo class, and generate a report of the
-discrepencies.
+Compare timezone transitions between acetime.timezone.acetz class of the
+acetimepy library and the Python 3.9 zoneinfo.ZoneInfo class, and generate a
+report of the discrepencies.
 """
 
 import logging
@@ -20,7 +20,7 @@ if sys.version_info >= (3, 9):
 else:
     from backports import zoneinfo
 
-# AceTimePython classes
+# acetimepy classes
 import acetime.version
 from acetime.timezone import ZoneManager
 from acetime.zonedb.zone_infos import TZDB_VERSION, START_YEAR, UNTIL_YEAR
@@ -303,10 +303,10 @@ def main() -> None:
 #
 # Context
 # -------
-# AceTimePython Version: {acetime.version.__version__}
-# AceTimePython ZoneDB Version: {TZDB_VERSION}
-# AceTimePython ZoneDB Start Year: {START_YEAR}
-# AceTimePython ZoneDB Until Year: {UNTIL_YEAR}
+# Acetimepy Version: {acetime.version.__version__}
+# Acetimepy ZoneDB Version: {TZDB_VERSION}
+# Acetimepy ZoneDB Start Year: {START_YEAR}
+# Acetimepy ZoneDB Until Year: {UNTIL_YEAR}
 # Python Version: {sys.version}
 # ZoneInfo Version: 2021e?
 # Report Start Year: {args.start_year}

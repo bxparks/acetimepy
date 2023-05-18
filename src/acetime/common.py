@@ -3,11 +3,13 @@
 # MIT License
 
 """
-Common constants and functions used by zone_processor.py. Most of were copied
-from transformer/transformer.py, in preparation for them to be moved into a new
-AceTimePython project, while avoiding circular dependendence between
-AceTimeTools and AceTimePython. The unit tests are in tests/test_transformer.py.
-Maybe those should be copied too?
+Common constants and low-level functions shared by various modules in this
+package:
+
+* acetz.py
+* transition.py
+* date_tuple.py
+* zone_processor.py
 """
 
 from typing import Tuple

@@ -5,7 +5,7 @@
 # MIT License
 
 """
-Determines the speed of acetz class from AceTimePython library, compared to pytz
+Determines the speed of acetz class from acetimepy library, compared to pytz
 and dateutil. For all zones (about 377 of them), two operations are tested:
 
 1. date components to unix seconds
@@ -95,10 +95,10 @@ class Benchmark:
 
         print("BENCHMARKS")
         # acetz
-        print("Benchmarking acetz", file=sys.stderr)
+        print("Benchmarking acetimepy", file=sys.stderr)
         count1, elapsed1 = self.run_acetz(common_zones)
         count2, elapsed2 = self.run_acetz_epoch(common_zones)
-        self.print_result("acetime", count1, elapsed1, count2, elapsed2)
+        self.print_result("acetimepy", count1, elapsed1, count2, elapsed2)
 
         # dateutil
         print("Benchmarking dateutil", file=sys.stderr)

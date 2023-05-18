@@ -94,8 +94,8 @@ git repo. The library has no external dependencies other than the standard
 Python library. It works on Python 3.7 or higher.
 
 ```
-$ git clone https://github.com/bxparks/AceTimePython
-$ cd AceTimePython
+$ git clone https://github.com/bxparks/acetimepy
+$ cd acetimepy
 ```
 
 To install into your personal local environment, with symlinks back to the git
@@ -122,10 +122,25 @@ prefer.
 <a name="PackageStructure"></a>
 ### Package Structure
 
-The name of this library is `AceTimePython` (to distinguish it from the
-[AceTime](https://github.com/bxparks/AceTime) Arduino C++ library). It provides
-a top-level package called `acetime`. There are several modules under the
-`acetime` package of which the end-users will normally import 2 of them:
+The Python naming and packaging conventions are opaque and confusing to me. Here
+are some notes about this project which are hopefully helpful:
+
+The identifier of the project on GitHub and on PyPI (TBD) is:
+
+* `acetimepy`
+    * https://github.com/bxparks/acetimepy
+    * https://pypi.org/project/acetimepy (TBD)
+
+The human-readable long version of the project is "AceTime for Python".
+Both of these are intended to convey that this is the Python version of the
+original [AceTime](https://github.com/bxparks/AceTime) C++ library for Arduino
+
+The name of the top-level Python package provided by this library is:
+
+* `acetime`
+
+There are several modules under the `acetime` package. The end-users will
+normally import 2 of them:
 
 * `acetime.timezone`
 * `acetime.zonedb`
@@ -136,8 +151,11 @@ use:
 * `acetime.timezone.ZoneManager`
 * `acetime.timezone.acetz` (subclass of `datetime.tzinfo`)
 
-The TZ database files are located in the `acetime.zonedb` subpackage. There
-are 4 modules here, but the 2 that the end-users will likely use are:
+The `acetime.zonedb` subpackage contains various data structures which encode
+the timezone information as extracted from the IANA TZDB database. (acetimepy
+does *not* use the timezone files on the host computer to ensure stability and
+reproducibility). There are 4 modules in the `zonedb` subpackage, but the 2 that
+the end-users will likely use are:
 
 * `acetime.zonedb.zone_infos`
     * `acetime.zonedb.zone_infos.ZONE_INFO_America_Los_Angeles`
@@ -148,8 +166,9 @@ are 4 modules here, but the 2 that the end-users will likely use are:
     * `acetime.zonedb.zone_registry.ZONE_REGISTRY`
 
 The `acetime.zonedb.zone_infos.ZONE_INFO_xxx` constants are passed into the
-`acetz` constructor. The `ZONE_REGISTRY` and `ZONE_AND_LINK_REGISTRY` are passed
-into the `ZoneManger` object.
+constructor of the `acetime.timezone.acetz` object. The `ZONE_REGISTRY` and
+`ZONE_AND_LINK_REGISTRY` are passed into the `acetime.timezone.ZoneManger`
+object.
 
 <a name="ZoneContext"></a>
 ### Zone Context
@@ -330,11 +349,11 @@ the [original TZDB source files](https://github.com/eggert/tz) for each zone.
 #
 # Context
 # -------
-# AceTimePython Version: 0.4.0
-# AceTimePython ZoneDB Version: 2021e
-# AceTimePython ZoneDB Start Year: 1974
-# AceTimePython ZoneDB Until Year: 2050
-# ZoneInfo Version: Python 3.9 2021e
+# Acetimepy Version: 0.4.0
+# Acetimepy ZoneDB Version: 2021e
+# Acetimepy ZoneDB Start Year: 1974
+# Acetimepy ZoneDB Until Year: 2050
+# Zoneinfo Version: Python 3.9 2021e
 # Report Start Year: 1974
 # Report Until Year: 2050
 #
@@ -531,9 +550,9 @@ To run the validation tests:
 
 If you have any questions, comments, or feature requests for this library,
 please use the [GitHub
-Discussions](https://github.com/bxparks/AceTimePython/discussions) for this
+Discussions](https://github.com/bxparks/acetimepy/discussions) for this
 project. If you have bug reports, please file a ticket in [GitHub
-Issues](https://github.com/bxparks/AceTimePython/issues). Feature requests
+Issues](https://github.com/bxparks/acetimepy/issues). Feature requests
 should go into Discussions first because they often have alternative solutions
 which are useful to remain visible, instead of disappearing from the default
 view of the Issue tracker after the ticket is closed.

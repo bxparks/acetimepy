@@ -52,7 +52,7 @@ END {
 
   for (i = 0; i < TOTAL_BENCHMARKS; i++) {
     name = u[i]["name"]
-    if (name ~ /^acetz/) {
+    if (name ~ /^acetimepy/) {
       printf(\
          "|-------------------+----------------+----------------|\n")
     }

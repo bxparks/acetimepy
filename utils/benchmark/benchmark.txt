@@ -4,7 +4,7 @@ Common timezones: 350
 Start year: 2000
 Until year: 2038
 BENCHMARKS
-acetime 319200 10.963 324100 13.475
+acetimepy 319200 10.963 324100 13.475
 dateutil 319200 5.960 324100 7.257
 pytz 319200 16.244 324100 15.514
 zoneinfo 319200 1.409 324100 0.709

@@ -3,10 +3,10 @@
 #
 # Context
 # -------
-# AceTimePython Version: 0.7.0
-# AceTimePython ZoneDB Version: 2023c
-# AceTimePython ZoneDB Start Year: 1800
-# AceTimePython ZoneDB Until Year: 10000
+# Acetimepy Version: 0.7.0
+# Acetimepy ZoneDB Version: 2023c
+# Acetimepy ZoneDB Start Year: 1800
+# Acetimepy ZoneDB Until Year: 10000
 # Python Version: 3.10.6 (main, Mar 10 2023, 10:55:28) [GCC 11.3.0]
 # ZoneInfo Version: 2021e?
 # Report Start Year: 1840
