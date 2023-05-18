@@ -51,12 +51,12 @@ Currently, the main uses of this library are:
    [MicroPython](https://micropython.org/).
 
 This library is intended as a reference implementation, with priority given to
-ease of maintenance and compatibility with the AceTime library for Arduino. It
-has not been optimized for speed or memory efficiency, so it is **not** intended
-to be used in critical production environments. Informal benchmarking (see
-[Benchmarks](#Benchmarks) below) shows that `acetimepy` is similar in
-performance to `pytz` and `dateutil`, while `zoneinfo` is substantially faster
-than the others because it is implemented as a C-module.
+accuracy, ease of maintenance, and compatibility with the AceTime library for
+Arduino. It has not been optimized for speed or memory efficiency, so it is
+**not** intended to be used in critical production environments. Informal
+benchmarking (see [Benchmarks](#Benchmarks) below) shows that `acetimepy` is
+similar in performance to `pytz` and `dateutil`, while `zoneinfo` is
+substantially faster than the others because it is implemented as a C-module.
 
 Among these 4 Python libraries that are mentioned above, `acetimepy` seems to be
 the only library that calculates accurate `datetime.dst()` information for all
