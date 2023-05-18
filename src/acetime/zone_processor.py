@@ -3,52 +3,51 @@
 # MIT License
 
 """
-A Python version of the latest C++ ExtendedZoneProcessor class to replicate its
-internal resource consumption, so that we can get an accurate maximum buffer
-size for its TransitionStorage. Derived from the ZoneSpecifier class.
+A Python version of the latest AceTime/ExtendedZoneProcessor class to replicate
+its internal resource consumption, so that we can get an accurate maximum buffer
+size for its TransitionStorage.
 """
 
 import sys
 import logging
 from datetime import datetime
 from datetime import timedelta
-from datetime import date
 from typing import List
 from typing import NamedTuple
 from typing import Optional
 from typing import Tuple
 from typing import cast
 
+from .common import EPOCH_YEAR
 from .common import INVALID_YEAR
 from .common import MIN_YEAR
 from .common import MAX_TO_YEAR
-from .common import SECONDS_SINCE_UNIX_EPOCH
-from .common import seconds_to_hms
-from .common import hms_to_seconds
+from .common import to_unix_seconds
 from .common import calc_day_of_month
-from .zonedb_types import ZoneRule
-from .zonedb_types import ZoneEra
-from .zonedb_types import ZoneInfo
+from .date_tuple import YearMonthTuple
+from .date_tuple import DateTuple
+from .date_tuple import datetime_to_datetuple
+from .date_tuple import normalize_date_tuple
+from .date_tuple import subtract_date_tuple
+from .transition import Transition
+from .transition import TransitionStorage
+from .transition import MatchingEra
+from .transition import print_transitions
+from .transition import check_transitions_sorted
+from .typing import ZoneRule
+from .typing import ZoneEra
+from .typing import ZoneInfo
 
 
-class DateTuple(NamedTuple):
-    """A datetime representation using seconds instead of h:m:s. I think this
-    class makes arithmetic operations on this easier.
+ACETIME_EPOCH = datetime(EPOCH_YEAR, 1, 1)  # in UTC
+
+
+class BufferSizeInfo(NamedTuple):
+    """A tuple containings the number of active transitions and the current
+    buffer_size of TransitionStorage.
     """
-    y: int  # year
-    M: int  # month
-    d: int  # day
-    ss: int  # total number of seconds
-    f: str  # modifier ('w', 's', 'u')
-
-
-NULL_DATE_TUPLE = DateTuple(0, 0, 0, 0, 'w')
-
-
-class YearMonthTuple(NamedTuple):
-    """A tuple of (year, month)"""
-    y: int
-    M: int
+    active_size: int
+    buffer_size: int
 
 
 class OffsetInfo(NamedTuple):
@@ -61,265 +60,7 @@ class OffsetInfo(NamedTuple):
     fold: int  # same meaning as datetime.fold
 
 
-class BufferSizeInfo(NamedTuple):
-    """A tuple containings the number of active transitions and the current
-    buffer_size of TransitionStorage.
-    """
-    active_size: int
-    buffer_size: int
-
-
-ACETIME_EPOCH = datetime(2000, 1, 1)  # in UTC
-
-
-def policy_name_of(era: ZoneEra) -> str:
-    """Return the effective policy name of the given ZoneEra."""
-    zone_policy = era.get('zone_policy')
-    if zone_policy:
-        return zone_policy['name']
-    else:
-        return 'None'
-
-
-class MatchingEra:
-    """A version of ZoneEra that overlaps with the [start, end) interval of
-    interest. The interval is usually a 14-month interval that begins a month
-    before the year of interest, and extends a month after the year of interest.
-    """
-    def __init__(
-        self, *,
-        start_date_time: DateTuple,
-        until_date_time: DateTuple,
-        zone_era: ZoneEra,
-        prev_match: Optional['MatchingEra'] = None,
-    ):
-        # until_date_time of the previous ZoneEra, bounded by viewing window
-        self.start_date_time = start_date_time
-
-        # until_date_time of the current ZoneEra, bounded by viewing window
-        self.until_date_time = until_date_time
-
-        # the ZoneEra corresponding to this match
-        self.zone_era = zone_era
-
-        # the previous MatchingEra whose last_transition will be used to
-        # normalize the start_date_time of the current MatchingEra
-        self.prev_match = prev_match
-
-        # the last Transition of this Matching Era, which will be used to
-        # normalize the start_date_time of the next MatchingEra
-        self.last_transition: Optional['Transition'] = None
-
-    def __repr__(self) -> str:
-        return (
-            'MatchingEra('
-            f'start: {date_tuple_to_string(self.start_date_time)}'
-            f'; until: {date_tuple_to_string(self.until_date_time)}'
-            f'; policy: {policy_name_of(self.zone_era)}'
-            ')'
-        )
-
-
-class Transition:
-    """A description of a potential change in DST offset. It can come from
-    a number of sources:
-
-    1) An instance of a ZoneRule that was referenced by the RULES column,
-       instantiated for the given year, which then determines the start date
-       and until date.
-    2) A boundary between one ZoneEra and the next ZoneEra.
-    3) A ZoneRule that has been shifted to the boundary of a ZoneEra.
-    """
-    def __init__(
-        self, *,
-        matching_era: MatchingEra,
-        transition_time: DateTuple,
-    ):
-        # The transition times for both simple Match and named Match. (1) For a
-        # simple Transition, the transition_time is the startTime of the
-        # ZoneEra. (2) For a named Transition, the transition_time is the AT
-        # field of the corresponding ZoneRule (see
-        # _create_transition_for_year()).
-        self.transition_time = transition_time
-        self.matching_era = matching_era
-
-        # The start and until times are initially copied from MatchingEra:
-        #
-        # * start_date_time
-        #       * UNTIL time of the *previous* ZoneEra
-        # * until_date_time
-        #       * UNTIL time of the *current* ZoneEra
-        #
-        # Then the transition time fields are generated. Then these fields are
-        # updated in-situ by _generate_start_until_times() in the following way:
-        #
-        # * start_date_time
-        #       * set to the current wall transition_time converted using the
-        #         UTC offset of the current Transition.
-        # * until_date_time
-        #       * set to the wall transition_time of the *next* Transition using
-        #       * the UTC offset of the *current* Transition
-        self.start_date_time = matching_era.start_date_time
-        self.until_date_time = matching_era.until_date_time
-
-        # the 'w', 's' and 'u' versions of 'transition_time'
-        self.transition_time_w = NULL_DATE_TUPLE
-        self.transition_time_s = NULL_DATE_TUPLE
-        self.transition_time_u = NULL_DATE_TUPLE
-
-        # If the Transition is a prior Transition or an exact matching
-        # Transition, its transition_time is clobbered to the start time of the
-        # current MatchingEra. When that happens, this field preserves the
-        # original transition time for debugging. Not used by any subsequent
-        # calculation.
-        self.original_transition_time = NULL_DATE_TUPLE
-
-        # The epoch second of start_date_time, which should be the same as the
-        # epoch second of transition_time.
-        self.start_epoch_second = 0
-
-        # Human-readable timezone abbreviation for the given Transition.
-        self.abbrev = ''
-
-        # If this Transition was created from MatchingEra with a named
-        # ZonePolicy, this points to the ZoneRule that generated this. For a
-        # simple MatchingEra, this will be None.
-        self.zone_rule: Optional[ZoneRule] = None
-
-        # Transition compared to its enclosing MatchingEra. See MATCH_STATUS_*
-        # parameters and _process_transition_match_status().
-        self.match_status: int = 0
-
-    @property
-    def format(self) -> str:
-        return self.matching_era.zone_era['format']
-
-    @property
-    def offset_seconds(self) -> int:
-        return self.matching_era.zone_era['offset_seconds']
-
-    @property
-    def letter(self) -> str:
-        return self.zone_rule['letter'] if self.zone_rule else ''
-
-    @property
-    def delta_seconds(self) -> int:
-        if self.zone_rule:
-            return self.zone_rule['delta_seconds']
-        else:
-            return self.matching_era.zone_era['era_delta_seconds']
-
-    def copy(self) -> 'Transition':
-        result = self.__class__.__new__(self.__class__)
-        result.matching_era = self.matching_era
-        result.start_date_time = self.start_date_time
-        result.until_date_time = self.until_date_time
-        result.transition_time = self.transition_time
-        result.transition_time_w = self.transition_time_w
-        result.transition_time_s = self.transition_time_s
-        result.transition_time_u = self.transition_time_u
-        result.original_transition_time = self.original_transition_time
-        result.start_epoch_second = self.start_epoch_second
-        result.abbrev = self.abbrev
-        result.zone_rule = self.zone_rule
-        result.match_status = self.match_status
-        return result
-
-    def __repr__(self) -> str:
-        sepoch = self.start_epoch_second if self.start_epoch_second else '-'
-        policy_name = policy_name_of(self.matching_era.zone_era)
-        offset_seconds = self.offset_seconds
-        delta_seconds = self.delta_seconds
-        abbrev = self.abbrev if self.abbrev else ''
-
-        # yapf: disable
-        if policy_name == 'None':
-            return (
-                'T('
-                f"start={sepoch}"
-                f"; match={self.match_status}"
-                f"; tt={date_tuple_to_string(self.transition_time)}"
-                f"; ttw={date_tuple_to_string(self.transition_time_w)}"
-                f"; st={date_tuple_to_string(self.start_date_time)}"
-                f"; ut={date_tuple_to_string(self.until_date_time)}"
-                f"; {to_utc_string(offset_seconds, delta_seconds)}"
-                f"; rule={policy_name}"
-                f"; ab={abbrev})"
-            )
-        else:
-            delta_seconds = self.delta_seconds
-            zone_rule = self.zone_rule
-            assert zone_rule is not None
-            zone_rule_from = zone_rule['from_year']
-            zone_rule_to = zone_rule['to_year']
-            original_transition = (
-                date_tuple_to_string(self.original_transition_time)
-                if self.original_transition_time
-                else ''
-            )
-
-            return (
-                'T('
-                f"start={sepoch}"
-                f"; match={self.match_status}"
-                f"; tt={date_tuple_to_string(self.transition_time)}"
-                f"; ttw={date_tuple_to_string(self.transition_time_w)}"
-                f"; st={date_tuple_to_string(self.start_date_time)}"
-                f"; ut={date_tuple_to_string(self.until_date_time)}"
-                f"; {to_utc_string(offset_seconds, delta_seconds)}"
-                f"; rule={policy_name}[{zone_rule_from},{zone_rule_to}]"
-                f"; ab={abbrev})"
-                f"; ot={original_transition}"
-            )
-        # yapf: enable
-
-
-class TransitionStorage:
-    """A heap manager of Transition objects, equivalent to the C++
-    ExtendedZoneProcessor.TransitionStorage class. There are 4 pools of
-    Transition entries:
-
-    1) Active pool: [0, index_prior)
-    2) Prior pool: [index_prior, index_candidates), either 0 or 1 element
-    3) Candidate pool: [index_candidates, index_free)
-    4) Free pool: [index_free, len(transitions))
-
-    The 'high_water' is the largest index used by the TransitionStorage buffer,
-    so the minimum required size of buffer is 'high_water + 1'.
-
-    """
-    def __init__(self) -> None:
-        self.clear()
-
-    def clear(self) -> None:
-        """Active pool  at [0, free).
-        Free pool at [free, max).
-        Max gives the size of stack.
-        """
-        self.index_free = 0
-        self.index_beyond = 0  # index beyond the free pool, i.e. max buf size
-
-    def push_transitions(self, delta: int) -> None:
-        """Push imaginary Transitions of size 'delta' into the stack."""
-        self.index_free += delta
-        if self.index_free > self.index_beyond:
-            self.index_beyond = self.index_free
-
-    def pop_transitions(self, delta: int) -> None:
-        """Remove imaginary Transitions of size 'delta' from stack."""
-        self.index_free -= delta
-
-
-class TransitionMatch(NamedTuple):
-    """The result of a _find_transition_for_seconds().
-    * fold=0 means there was no overlap with the previous transition
-    * fold=1 means there was an overlap with the previous transition
-    """
-    transition: Transition
-    fold: int
-
-
-def _to_offset_info(transition: Transition, fold: int) -> OffsetInfo:
+def to_offset_info(transition: Transition, fold: int) -> OffsetInfo:
     """Convert a Transition and fold into a OffsetInfo.
     """
     return OffsetInfo(
@@ -329,6 +70,15 @@ def _to_offset_info(transition: Transition, fold: int) -> OffsetInfo:
         transition.abbrev,
         fold,
     )
+
+
+class TransitionMatch(NamedTuple):
+    """The result of a _find_transition_for_seconds().
+    * fold=0 means there was no overlap with the previous transition
+    * fold=1 means there was an overlap with the previous transition
+    """
+    transition: Transition
+    fold: int
 
 
 # Various comparison states when comparing the Transition transition_time
@@ -449,7 +199,7 @@ class ZoneProcessor:
 
         tmatch = self._find_transition_for_seconds(epoch_seconds)
         return (
-            _to_offset_info(tmatch.transition, tmatch.fold)
+            to_offset_info(tmatch.transition, tmatch.fold)
             if tmatch
             else None
         )
@@ -464,7 +214,7 @@ class ZoneProcessor:
         transition = self._find_transition_for_datetime(dt)
         if not transition:
             return None
-        return _to_offset_info(transition, fold=dt.fold)
+        return to_offset_info(transition, fold=dt.fold)
 
     def init_for_year(self, year: int) -> None:
         """Initialize the Matches and Transitions for the year. Call this
@@ -561,13 +311,8 @@ class ZoneProcessor:
                 3.2.2) If all matching Rules are infinite or none, return True.
             3.3) Otherwise, some matching Rules are finite, so return False.
         """
-        # If the timezone is a Link, follow the link and get the ZoneEras from
-        # the target ZoneInfo.
-        if 'eras' in self.zone_info:
-            zone_eras = self.zone_info.get('eras')
-        else:
-            zone_info = cast(ZoneInfo, self.zone_info.get('link_to'))
-            zone_eras = zone_info.get('eras')
+        # The 'eras' is always defined, whether Zone or Link.
+        zone_eras = self.zone_info.get('eras')
         assert zone_eras is not None
 
         # 1) Check if the year is beyond the last ZoneEra.
@@ -611,16 +356,19 @@ class ZoneProcessor:
     def is_link(self) -> bool:
         return 'link_to' in self.zone_info
 
-    def get_name(self, follow_link: bool = False) -> str:
-        """Return the full name of the current ZoneInfo. If the ZoneInfo is a
-        Link and 'follow_link' is True, then return the full name of the target
-        zone.
+    def get_name(self) -> str:
+        """Return the full name of the current ZoneInfo."""
+        return self.zone_info['name']
+
+    def get_target_name(self) -> str:
+        """Return the full name of the target ZoneInfo if the current Zone
+        is a Link. Otherwse, returns an empty string.
         """
-        if 'link_to' in self.zone_info and follow_link:
+        if self.is_link():
             zone_info = cast(ZoneInfo, self.zone_info.get('link_to'))
+            return zone_info['name']
         else:
-            zone_info = self.zone_info
-        return zone_info['name']
+            return ""
 
     # ------------------------------------------------------------------------
     # The following methods are designed to be used internally.
@@ -629,12 +377,8 @@ class ZoneProcessor:
     def _init_for_second(self, epoch_seconds: int) -> None:
         """Initialize the Transitions from the given epoch_seconds.
         """
-        ldt = datetime.utcfromtimestamp(
-            epoch_seconds + SECONDS_SINCE_UNIX_EPOCH)
-
-        year = ldt.year
-
-        self.init_for_year(year)
+        ldt = datetime.utcfromtimestamp(to_unix_seconds(epoch_seconds))
+        self.init_for_year(ldt.year)
 
     def _find_transition_for_seconds(
         self,
@@ -678,7 +422,7 @@ class ZoneProcessor:
         if matching_index < 1:
             return 0
 
-        overlap_interval = _subtract_date_tuple(
+        overlap_interval = subtract_date_tuple(
             self.transitions[matching_index - 1].until_date_time,
             self.transitions[matching_index].start_date_time,
         )
@@ -711,7 +455,7 @@ class ZoneProcessor:
             * return the later transition (earlier UTC) if dt.fold == 1,
             * see PEP 495 for details.
         """
-        dt_time = _datetime_to_datetuple(dt, 'w')
+        dt_time = datetime_to_datetuple(dt, 'w')
 
         prev_exact: Optional[Transition] = None
         prev_transition: Optional[Transition] = None
@@ -763,13 +507,8 @@ class ZoneProcessor:
         because the interval spans at least 3 whole years, and potentially 4
         years for the 'most recent prior year'.
         """
-        # If the timezone is a Link, follow the link and get the ZoneEras from
-        # the target ZoneInfo.
-        if 'eras' in self.zone_info:
-            zone_eras = self.zone_info.get('eras')
-        else:
-            zone_info = cast(ZoneInfo, self.zone_info.get('link_to'))
-            zone_eras = zone_info.get('eras')
+        # The 'eras' is defined for both Zones and Links.
+        zone_eras = self.zone_info.get('eras')
         assert zone_eras is not None
 
         prev_match: Optional[MatchingEra] = None
@@ -868,7 +607,7 @@ class ZoneProcessor:
         candidate_transitions = self._find_candidate_transitions(match, rules)
         if self.debug:
             print_transitions('Candidate Transitions', candidate_transitions)
-        _check_transitions_sorted(policy_name, candidate_transitions)
+        check_transitions_sorted(policy_name, candidate_transitions)
         self.transition_storage.pop_transitions(len(candidate_transitions))
 
         # Pass 2: Fix the transitions times, converting 's' and 'u' into 'w'
@@ -878,7 +617,7 @@ class ZoneProcessor:
         _fix_transition_times(candidate_transitions)
         if self.debug:
             print_transitions('Candidate Transitions', candidate_transitions)
-        _check_transitions_sorted(policy_name, candidate_transitions)
+        check_transitions_sorted(policy_name, candidate_transitions)
 
         # Pass 3: Select only those Transitions which overlap with the actual
         # start and until times of the MatchingEra.
@@ -899,7 +638,7 @@ class ZoneProcessor:
         # sorted.
         if self.debug:
             logging.info('---- Pass 4: Final check for sorted transitions')
-        _check_transitions_sorted(policy_name, transitions)
+        check_transitions_sorted(policy_name, transitions)
         if self.debug:
             print_transitions('Active Sorted Transition', transitions)
 
@@ -1024,7 +763,7 @@ class ZoneProcessor:
             # not so useful in production code, so don't print anything.
             st = datetime(tt.y, tt.M, tt.d)
             st += timedelta(seconds=secs)
-            transition.start_date_time = _datetime_to_datetuple(st, tt.f)
+            transition.start_date_time = datetime_to_datetuple(st, tt.f)
 
             # 3) The epochSecond of the 'transition_time' is determined by the
             # UTC offset of the *previous* Transition. However, the
@@ -1288,12 +1027,6 @@ def _compare_era_to_year_month(
     return 0
 
 
-def print_transitions(header: str, transitions: List[Transition]) -> None:
-    logging.info('%s: count: %d', header, len(transitions))
-    for t in transitions:
-        logging.info(t)
-
-
 def _add_transition_sorted(
         transitions: List[Transition],
         transition: Transition,
@@ -1364,9 +1097,9 @@ def _expand_date_tuple(
         logging.error("Unrecognized Rule.AT suffix '%s'; date=%s", dt.f, dt)
         sys.exit(1)
 
-    dtw = _normalize_date_tuple(dtw)
-    dts = _normalize_date_tuple(dts)
-    dtu = _normalize_date_tuple(dtu)
+    dtw = normalize_date_tuple(dtw)
+    dts = normalize_date_tuple(dts)
+    dtu = normalize_date_tuple(dtu)
 
     return (dtw, dts, dtu)
 
@@ -1403,32 +1136,6 @@ def _fix_transition_times(transitions: List[Transition]) -> None:
             prev.delta_seconds,
         )
         prev = transition
-
-
-def _datetime_to_datetuple(dt: datetime, format: str) -> DateTuple:
-    """Create a DateTuple from the given 'datetime' along with the 'format'
-    modifer ('s', 'u', 'w').
-    """
-    secs = hms_to_seconds(dt.hour, dt.minute, dt.second)
-    return DateTuple(y=dt.year, M=dt.month, d=dt.day, ss=secs, f=format)
-
-
-def _normalize_date_tuple(tt: DateTuple) -> DateTuple:
-    """Return the normalized DateTuple where the dt.ss could be negative or
-    greater than 24h. Throws exception if the normalization fails.
-    TODO: Reimplement logic of ExtendedZoneProcessor::normalizeDateTuple().
-    """
-    if tt.y == MIN_YEAR:
-        return DateTuple(y=MIN_YEAR, M=1, d=1, ss=0, f=tt.f)
-
-    try:
-        st = datetime(tt.y, tt.M, tt.d)
-        delta = timedelta(seconds=tt.ss)
-        st += delta
-        return _datetime_to_datetuple(st, tt.f)
-    except:  # noqa: E722
-        logging.error('Invalid datetime: %s + %s', st, delta)
-        raise
 
 
 def _create_transition_for_year(
@@ -1480,21 +1187,6 @@ def _get_most_recent_prior_year(
             return start_year - 1
     else:
         return INVALID_YEAR
-
-
-def _check_transitions_sorted(name: str, transitions: List[Transition]) -> None:
-    """Check transitions are sorted.
-    """
-    prev = None
-    for transition in transitions:
-        if not prev:
-            prev = transition
-            continue
-        if prev.transition_time > transition.transition_time:
-            print_transitions(
-                f'Policy {name}: Unsorted Transitions',
-                transitions)
-            raise Exception('Transitions not sorted')
 
 
 def _compare_transition_to_match(
@@ -1630,35 +1322,3 @@ def _get_transition_time(year: int, rule: ZoneRule) -> DateTuple:
     seconds = rule['at_seconds']
     suffix = rule['at_time_suffix']
     return DateTuple(y=year, M=month, d=day, ss=seconds, f=suffix)
-
-
-def date_tuple_to_string(dt: DateTuple) -> str:
-    (h, m, s) = seconds_to_hms(dt.ss)
-    return f'{dt.y:04}-{dt.M:02}-{dt.d:02}T{h:02}:{m:02}{dt.f}'
-
-
-def to_utc_string(utcoffset: int, dstoffset: int) -> str:
-    return (
-        'UTC'
-        f'{seconds_to_hm_string(utcoffset)}'
-        f'{seconds_to_hm_string(dstoffset)}'
-    )
-
-
-def seconds_to_hm_string(secs: int) -> str:
-    if secs < 0:
-        hms = seconds_to_hms(-secs)
-        return f'-{hms[0]:02}:{hms[1]:02}'
-    else:
-        hms = seconds_to_hms(secs)
-        return f'+{hms[0]:02}:{hms[1]:02}'
-
-
-def _subtract_date_tuple(a: DateTuple, b: DateTuple) -> int:
-    """Number of seconds in (a - b), ignoring the 'format' field.
-    """
-    da = date(a.y, a.M, a.d)
-    db = date(b.y, b.M, b.d)
-    diff_days = da.toordinal() - db.toordinal()
-    diff_seconds = a.ss - b.ss
-    return diff_days * 86400 + diff_seconds

@@ -3,8 +3,9 @@
 # MIT License
 
 """
-Compare timezone transitions between AceTimePython acetime.acetz class and the
-Python 3.9 zoneinfo.ZoneInfo class, and generate a report of the discrepencies.
+Compare timezone transitions between acetime.timezone.acetz class of the
+acetimepy library and the Python 3.9 zoneinfo.ZoneInfo class, and generate a
+report of the discrepencies.
 """
 
 import logging
@@ -19,9 +20,9 @@ if sys.version_info >= (3, 9):
 else:
     from backports import zoneinfo
 
-# AceTimePython classes
+# acetimepy classes
 import acetime.version
-from acetime.acetz import ZoneManager
+from acetime.timezone import ZoneManager
 from acetime.zonedb.zone_infos import TZDB_VERSION, START_YEAR, UNTIL_YEAR
 from acetime.zonedb.zone_registry import ZONE_REGISTRY
 
@@ -50,17 +51,19 @@ class Comparator():
         zi_tz = zoneinfo.ZoneInfo(zone_name)
         if not zi_tz:
             logging.error(f"Zone '{zone_name}' not found in zoneinfo package")
+            return
 
         ace_tz = self.zone_manager.gettz(zone_name)
         if not ace_tz:
             logging.error(f"Zone '{zone_name}' not found in acetime package")
+            return
 
         self._diff_tz(zi_tz, ace_tz)
 
     def _diff_tz(self, zi_tz: tzinfo, ace_tz: tzinfo) -> None:
         """Find the DST transitions from start_year to until_year, and determine
         if there exists any mismatches between representation of a datetime
-        using the acetime.acetz.acetz class and a datetime using the
+        using the acetime.timezone.acetz class and a datetime using the
         zoneinfo.ZoneInfo class.
         """
 
@@ -143,7 +146,8 @@ class Comparator():
 
     def _check_dt(self, dt: datetime, ace_tz: tzinfo) -> None:
         """Check that the given 'dt' computed using zoneinfo.ZoneInfo matches
-        the datetime as determined by using the given acetime.acetz.acetz class.
+        the datetime as determined by using the given acetime.timezone.acetz
+        class.
         """
 
         # Extract the components of the zoneinfo version of datetime.
@@ -294,17 +298,17 @@ def main() -> None:
 
     # Print header
     print(f"""\
-# Variance report for acetime.acetz.acetz compared to Python 3.9
+# Variance report for acetime.timezone.acetz compared to Python 3.10
 # zoneinfo.ZoneInfo.
 #
 # Context
 # -------
-# AceTimePython Version: {acetime.version.__version__}
-# AceTimePython ZoneDB Version: {TZDB_VERSION}
-# AceTimePython ZoneDB Start Year: {START_YEAR}
-# AceTimePython ZoneDB Until Year: {UNTIL_YEAR}
-# Python Versin: {sys.version}
-# ZoneInfo Version: 2021e?
+# Acetimepy Version: {acetime.version.__version__}
+# Acetimepy ZoneDB Version: {TZDB_VERSION}
+# Acetimepy ZoneDB Start Year: {START_YEAR}
+# Acetimepy ZoneDB Until Year: {UNTIL_YEAR}
+# Python Version: {sys.version}
+# ZoneInfo Version: 2022c
 # Report Start Year: {args.start_year}
 # Report Until Year: {args.until_year}
 #
@@ -325,7 +329,7 @@ def main() -> None:
     )
     i = 0
     for zone_name, zone_info in ZONE_REGISTRY.items():
-        print(f"{i}: Processing Zone {zone_name}...", file=sys.stderr)
+        print(f"[{i}] {zone_name}...", file=sys.stderr)
         comparator.compare_zone(zone_name)
         i += 1
 

@@ -5,14 +5,13 @@
 from typing import Optional
 from datetime import datetime, tzinfo, timedelta, timezone
 
-from .common import SECONDS_SINCE_UNIX_EPOCH
+from .common import to_epoch_seconds
 from .zone_processor import ZoneProcessor
-from .zonedb_types import ZoneInfo, ZoneInfoMap
+from .typing import ZoneInfo, ZoneInfoMap
 
 
 class acetz(tzinfo):
-    """An implementation of datetime.tzinfo using the ZoneProcessor class
-    from AceTime/tools.
+    """An implementation of datetime.tzinfo using the ZoneProcessor class.
     """
 
     def __init__(self, zone_info: ZoneInfo):
@@ -77,7 +76,7 @@ class acetz(tzinfo):
         assert dt
         utcdt = dt.replace(tzinfo=timezone.utc)
         unix_seconds = int(utcdt.timestamp())
-        epoch_seconds = unix_seconds - SECONDS_SINCE_UNIX_EPOCH
+        epoch_seconds = to_epoch_seconds(unix_seconds)
 
         # Search the transitions for the matching Transition
         offset_info = self.zp.get_timezone_info_for_seconds(epoch_seconds)
@@ -92,12 +91,18 @@ class acetz(tzinfo):
 
         return newdt
 
-    def tzfullname(self, follow_link: bool = False) -> str:
-        """Return the full name of the time zone. If the timezone is a Link and
-        'follow_link' is True, then this returns the name of the target zone.
-        This method does *not* override a method in pareent tzinfo class.
+    def tzfullname(self) -> str:
+        """Return the full name of the time zone. Use this instead of tzname()
+        to get the full name (e.g. "America/Los_Angeles") instead of the
+        abbreviation (e.g. "PST").
         """
-        return self.zp.get_name(follow_link)
+        return self.zp.get_name()
+
+    def targetname(self) -> str:
+        """Return the name of the target Zone if the timezone is a Link.
+        Otherwise return the empty string.
+        """
+        return self.zp.get_target_name()
 
     def islink(self) -> bool:
         return self.zp.is_link()
@@ -115,11 +120,12 @@ class ZoneManager:
     def __init__(self, registry: ZoneInfoMap):
         self.registry = registry
 
-    def gettz(self, zone_name: str) -> acetz:
-        """Return the acetz instance for the given zone_name.
-        Throws Exception if zone_name not found.
+    def gettz(self, zone_name: str) -> Optional[acetz]:
+        """Return the acetz instance for the given zone_name, or None
+        None if zone_name is not found. Returning None instead of raising an
+        Exception is consistent with dateutil.tz.gettz().
         """
         zone_info = self.registry.get(zone_name)
         if not zone_info:
-            raise Exception(f"Zone '{zone_name}' not found")
+            return None
         return acetz(zone_info)

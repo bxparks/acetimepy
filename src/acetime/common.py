@@ -3,11 +3,13 @@
 # MIT License
 
 """
-Common constants and functions used by zone_processor.py. Most of were copied
-from transformer/transformer.py, in preparation for them to be moved into a new
-AceTimePython project, while avoiding circular dependendence between
-AceTimeTools and AceTimePython. The unit tests are in tests/test_transformer.py.
-Maybe those should be copied too?
+Common constants and low-level functions shared by various modules in this
+package:
+
+* acetz.py
+* transition.py
+* date_tuple.py
+* zone_processor.py
 """
 
 from typing import Tuple
@@ -27,9 +29,24 @@ MAX_UNTIL_YEAR: int = 32767
 # Marker year in a zonedb entry to indicate +Infinity for TO year.
 MAX_TO_YEAR: int = MAX_UNTIL_YEAR - 1
 
-# Number of seconds from Unix Epoch (1970-01-01 00:00:00) to AceTime Epoch
-# (2000-01-01 00:00:00)
-SECONDS_SINCE_UNIX_EPOCH = 946684800
+# Epoch Year used by this library. Early version used 2000. Changed to 2050 to
+# be more compatible with AceTime v2, mostly for debugging purposes.
+EPOCH_YEAR: int = 2050
+
+# Number of seconds from Python Epoch (Unix epoch of 1970-01-01 00:00:00) to
+# Epoch Year.
+SECONDS_SINCE_UNIX_EPOCH = int(datetime.datetime(
+    EPOCH_YEAR, 1, 1, tzinfo=datetime.timezone.utc).timestamp())
+
+
+def to_epoch_seconds(unix_seconds: int) -> int:
+    """Convert unix seconds to internal epoch seconds."""
+    return unix_seconds - SECONDS_SINCE_UNIX_EPOCH
+
+
+def to_unix_seconds(epoch_seconds: int) -> int:
+    """Convert internal epoch seconds to unix seconds."""
+    return epoch_seconds + SECONDS_SINCE_UNIX_EPOCH
 
 
 def seconds_to_hms(seconds: int) -> Tuple[int, int, int]:
@@ -102,3 +119,22 @@ def days_in_year_month(year: int, month: int) -> int:
     if month == 2:
         days += is_leap
     return days
+
+
+def to_utc_string(utcoffset: int, dstoffset: int) -> str:
+    """Return (utc,dst) pair as UTC+/-hh:mm (e.g. UTC-08:00)"""
+    return (
+        'UTC'
+        f'{seconds_to_hm_string(utcoffset)}'
+        f'{seconds_to_hm_string(dstoffset)}'
+    )
+
+
+def seconds_to_hm_string(secs: int) -> str:
+    """Return secs as +/-hh:mm (e.g. -08:00)"""
+    if secs < 0:
+        hms = seconds_to_hms(-secs)
+        return f'-{hms[0]:02}:{hms[1]:02}'
+    else:
+        hms = seconds_to_hms(secs)
+        return f'+{hms[0]:02}:{hms[1]:02}'

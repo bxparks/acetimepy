@@ -30,7 +30,7 @@ setuptools.setup(
     description='AceTime for Python',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url='https://github.com/bxparks/AceTimePython',
+    url='https://github.com/bxparks/acetimepy',
     author='Brian T. Park',
     author_email='brian@xparks.net',
     license='MIT',
