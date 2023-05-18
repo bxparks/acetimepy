@@ -1,6 +1,11 @@
 # Changelog
 
 * Unreleased
+    * zonedb
+        * Rename original `acetime.zonedb` to `zonedball` (supports all years
+          from the TZDB, 1844 and onwards)
+        * Add `acetime.zonedb` which contains only the rules and transitions for
+          2000 and onwards
 * 0.7.0 (2023-05-18, TZDB 2023c)
     * Rename project and packages
         * Rename project from `AceTimePython` to `acetimepy` to be more
