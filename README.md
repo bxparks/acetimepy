@@ -3,23 +3,19 @@
 This library provides the `acetime.timezone.acetz` class which is an
 implementation of the
 [tzinfo](https://docs.python.org/3/library/datetime.html#tzinfo-objects)
-abstract class in the Python standard `datetime` package. The timezone algorithm
-used by the `acetz` class is identical to the one used by the
+abstract class in the Python standard
+[datetime](https://docs.python.org/3/library/datetime.html) package. This class
+supports all timezones in the [IANA TZ
+database](https://www.iana.org/time-zones), using the same algorithm used by the
 `ExtendedZoneProcessor` class in the
-[AceTime](https://github.com/bxparks/AceTime) library for Arduino.
+[AceTime](https://github.com/bxparks/AceTime) C++ library for Arduino.
 
-This library provides a `acetime.zonedb` package that contains timezone
-information for all Zone and Link entries from the [IANA TZ
-database](https://www.iana.org/time-zones) from the year 1974 until 2100. Custom
-subsets of the full TZ database could be created to save memory using the
+The default timezone database encoded in the `acetime.zonedb` subpackage
+contains information for all timezones covering the all years in the IANA TZDB (
+(year 1844 to 2088 as of TZDB 2023c). Custom subsets of the full TZ database
+could be created to save memory using the
 [AceTimeTools](https://github.com/bxparks/AceTimeTools) project but the process
 has not been documented.
-
-An `acetz` instance can be created by passing an appropriate `zonedb` entry to
-the `acetz` constructor. Or it can be created through the
-`acetime.timezone.ZoneManager` factory class which is initialized with the
-`acetime.zonedb.zone_registry.ZONE_REGISTRY` (or `ZONE_AND_LINK_REGISTRY`)
-containing all `zonedb` entries.
 
 The `acetz` class is a subclass of `datetime.tzinfo` so it should be a drop-in
 replacement for the equivalent `tzinfo` subclasses from the following
@@ -29,35 +25,41 @@ Python libraries:
 * dateutil (https://pypi.org/project/python-dateutil/)
 * zoneinfo (https://docs.python.org/3/library/zoneinfo.html)
 
-The initial motivation of this library was to provide an easier prototyping
-environment for the algorithms used by the `ExtendedZoneProcessor` class in the
+The initial motivation of this library was to provide a Python environment that
+was easier to prototype compared to the embedded C++ environment required by the
 [AceTime](https://github.com/bxparks/AceTime) library. That motivation became
 mostly moot after [EpoxyDuino](https://github.com/bxparks/EpoxyDuino) became a
 suitable environment for developing AceTime on a Linux desktop.
 
-Currently, the main purposes of this library are:
+Currently, the main uses of this library are:
 
+1) Generating transition buffer size requirements for the zone databases used in
+   the AceTime library (since AceTime uses fixed-sized buffers instead of
+   dynamically-sized buffers).
 1) Validating the AceTime `ExtendedZoneProcessor` class through the
    [AceTimeValidation](https://github.com/bxparks/AceTimeValidation) project.
-2) Verifying the accuracy of other Python libraries against the `acetime`
-   package. See the [Compare to Other Python
-   Libraries](#CompareToOtherLibraries) section below.
-3) Exploring the feasibility of porting this library to
-   [MicroPython](https://micropython.org/) to bring
-   support for IANA timezones to that environment.
+1) Verifying the accuracy of other Python libraries. See the [Compare to Other
+   Python Libraries](#CompareToOtherLibraries) section below.
+1) Exploring the feasibility of porting this library to
+   [MicroPython](https://micropython.org/).
 
-This library is **not** intended to be used in production. Informal benchmarking
-(see [Benchmarks](#Benchmarks) below) shows that `acetime` is similar in
-performance to `pytz` and `dateutil`, while `zoneinfo` is substantially faster
-than the others because it is implemented as a C-module. However among these 4
-Python libraries, `acetime` seems to be the only library that returns accurate
-datetime information (especially the `datetime.dst()` function) for all
-timezones within the years supported by `acetime` (from 1974 until 2100). In
-addition, `acetime` supports deterministic timezones because it uses its own
-internal `zonedb` database, instead of pulling in the non-deterministic timezone
-database from underlying operating system (like `dateutil` and `zoneinfo`).
-These features indicate that `acetime` may be most useful for validation or
-continuous integration.
+This library is intended as a research and prototype project, **not** to be used
+in performance critical production environments. Informal benchmarking (see
+[Benchmarks](#Benchmarks) below) shows that `acetime` is similar in performance
+to `pytz` and `dateutil`, while `zoneinfo` is substantially faster than the
+others because it is implemented as a C-module.
+
+Among these 4 Python libraries that are mentioned above, `acetimepy` seems to be
+the only library that returns accurate `datetime.dst()` information for all
+timezones within the years supported by the IANA TZDB (from 1844 until 2088). In
+addition, `acetimepy` has the advantage that the TZDB version can be controlled
+deterministically, instead of being pulled from the underlying operating system
+(as done by `dateutil` and `zoneinfo`). This makes `acetimepy` easier to use in
+unit testing, integration testing, and in continuous integration because the
+behavior of each timezone is reproducible.
+
+This library was known as `AceTimePython` before being renamed to `acetimepy` to
+be more compatible with Python package naming conventions.
 
 **Version**: v0.7.0 (2023-05-17, TZDB 2023c)
 
