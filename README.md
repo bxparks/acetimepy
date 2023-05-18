@@ -54,12 +54,12 @@ This library is intended as a reference implementation, with priority given to
 ease of maintenance and compatibility with the AceTime library for Arduino. It
 has not been optimized for speed or memory efficiency, so it is **not** intended
 to be used in critical production environments. Informal benchmarking (see
-[Benchmarks](#Benchmarks) below) shows that `acetime` is similar in performance
-to `pytz` and `dateutil`, while `zoneinfo` is substantially faster than the
-others because it is implemented as a C-module.
+[Benchmarks](#Benchmarks) below) shows that `acetimepy` is similar in
+performance to `pytz` and `dateutil`, while `zoneinfo` is substantially faster
+than the others because it is implemented as a C-module.
 
 Among these 4 Python libraries that are mentioned above, `acetimepy` seems to be
-the only library that returns accurate `datetime.dst()` information for all
+the only library that calculates accurate `datetime.dst()` information for all
 timezones within the years supported by the IANA TZDB (from 1844 until 2088). In
 addition, `acetimepy` has the advantage that the TZDB version can be controlled
 deterministically, instead of being pulled from the underlying operating system
@@ -151,10 +151,11 @@ The name of the top-level Python package provided by this library is:
 * `acetime`
 
 There are several modules under the `acetime` package. The end-users will
-normally import 2 of them:
+normally import 3 of them:
 
 * `acetime.timezone`
 * `acetime.zonedb`
+* `acetime.zonedball`
 
 Within the `acetime.timezone` module, there are 2 classes that the end-user will
 use:
@@ -285,7 +286,8 @@ using the tools provided by the
 
 The `acetz` class supports the `fold` parameter in
 [`datetime`](https://docs.python.org/3/library/datetime.html#datetime-objects)
-which was introduced in Python 3.6.
+which is described in [PEP 495](https://peps.python.org/pep-0495/) and
+implemented in in Python 3.6.
 
 The following code snippet shows 2 ways to create a `datetime` for 01:59:59
 which occurs twice on 2000-10-29 in the America/Los_Angeles timezone:
@@ -776,6 +778,11 @@ benchmarking of 4 Python timezone libraries: `acetimepy`, `pytz`, `dateutil` and
 +-------------------+----------------+----------------+
 ```
 
+**Legend**:
+
+* "comp to epoch": date-time component to epoch seconds conversion
+* "epoch to comp": epoch seconds to date-time component conversion
+
 <a name="SystemRequirements"></a>
 ## System Requirements
 
@@ -783,7 +790,7 @@ For end-users of the library:
 
 * Python 3.7 or newer
 
-To generate the `zonedb` TZ database:
+To generate the `zonedb` or `zonedball` TZ databases:
 
 * [AceTimeTools](https://github.com/bxparks/AceTimeTools)
 
