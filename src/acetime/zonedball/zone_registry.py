@@ -10,7 +10,7 @@
 #     --scope extended
 #     --generate_int16_year
 #     --skip_bufestimator
-#     --start_year 2000
+#     --start_year 1800
 #     --until_year 10000
 #
 # using the TZ Database files
@@ -31,13 +31,13 @@
 # Unsupported Zones: 0 (0 zones, 0 links)
 #
 # Original Years:  [1844,2087]
-# Generated Years: [1950,2087]
+# Generated Years: [1844,2087]
 #
 # Records:
 #   Infos: 596
-#   Eras: 646
-#   Policies: 83
-#   Rules: 735
+#   Eras: 1949
+#   Policies: 134
+#   Rules: 2238
 #
 # DO NOT EDIT
 
