@@ -163,24 +163,31 @@ use:
 * `acetime.timezone.ZoneManager`
 * `acetime.timezone.acetz` (subclass of `datetime.tzinfo`)
 
-The `acetime.zonedb` subpackage contains various data structures which encode
-the timezone information as extracted from the IANA TZDB database. (acetimepy
-does *not* use the timezone files on the host computer to ensure stability and
-reproducibility). There are 4 modules in the `zonedb` subpackage, but the 2 that
-the end-users will likely use are:
+The `zonedb` and `zonedball` subpackages contain various data structures which
+encode the timezone information as extracted from the IANA TZDB database.
+(acetimepy does *not* use the timezone files on the host computer to ensure
+stability and reproducibility). There are 4 modules in each of the subpackages,
+but the 2 that the end-users will likely use are:
 
-* `acetime.zonedb.zone_infos`
-    * `acetime.zonedb.zone_infos.ZONE_INFO_America_Los_Angeles`
-    * `acetime.zonedb.zone_infos.ZONE_INFO_Africa_Casablanca`
+* `zonedb*.zone_infos`
+    * `zonedb*.zone_infos.ZONE_INFO_America_Los_Angeles`
+    * `zonedb*.zone_infos.ZONE_INFO_Africa_Casablanca`
     * ...
-* `acetime.zonedb.zone_registry`
-    * `acetime.zonedb.zone_registry.ZONE_AND_LINK_REGISTRY`
-    * `acetime.zonedb.zone_registry.ZONE_REGISTRY`
+* `zonedb*.zone_registry`
+    * `zonedb*.zone_registry.ZONE_AND_LINK_REGISTRY`
+    * `zonedb*.zone_registry.ZONE_REGISTRY`
 
-The `acetime.zonedb.zone_infos.ZONE_INFO_xxx` constants are passed into the
+The `zonedb*.zone_infos.ZONE_INFO_xxx` constants are passed into the
 constructor of the `acetime.timezone.acetz` object. The `ZONE_REGISTRY` and
 `ZONE_AND_LINK_REGISTRY` are passed into the `acetime.timezone.ZoneManger`
 object.
+
+The `ZONE_REGISTRY` contains only the Zone entries (350 as of TZDB 2023c). This
+is a shorter list that is useful for unit and integration tests.
+
+The `ZONE_AND_LINK_REGISTRY` contains both Zone and Link entries (596 as of
+2023c). This should be used if the application is user-facing because it will
+contain all the timezones that the end-user is allowed to use.
 
 <a name="ZoneContext"></a>
 ### Zone Context
