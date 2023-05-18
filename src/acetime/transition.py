@@ -10,7 +10,7 @@ import logging
 from typing import List
 from typing import Optional
 
-from .common import seconds_to_hms
+from .common import to_utc_string
 from .date_tuple import DateTuple
 from .date_tuple import date_tuple_to_string
 from .typing import ZoneRule
@@ -277,20 +277,3 @@ def print_transitions(header: str, transitions: List[Transition]) -> None:
     logging.info('%s: count: %d', header, len(transitions))
     for t in transitions:
         logging.info(t)
-
-
-def to_utc_string(utcoffset: int, dstoffset: int) -> str:
-    return (
-        'UTC'
-        f'{seconds_to_hm_string(utcoffset)}'
-        f'{seconds_to_hm_string(dstoffset)}'
-    )
-
-
-def seconds_to_hm_string(secs: int) -> str:
-    if secs < 0:
-        hms = seconds_to_hms(-secs)
-        return f'-{hms[0]:02}:{hms[1]:02}'
-    else:
-        hms = seconds_to_hms(secs)
-        return f'+{hms[0]:02}:{hms[1]:02}'

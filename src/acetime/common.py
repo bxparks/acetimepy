@@ -119,3 +119,22 @@ def days_in_year_month(year: int, month: int) -> int:
     if month == 2:
         days += is_leap
     return days
+
+
+def to_utc_string(utcoffset: int, dstoffset: int) -> str:
+    """Return (utc,dst) pair as UTC+/-hh:mm (e.g. UTC-08:00)"""
+    return (
+        'UTC'
+        f'{seconds_to_hm_string(utcoffset)}'
+        f'{seconds_to_hm_string(dstoffset)}'
+    )
+
+
+def seconds_to_hm_string(secs: int) -> str:
+    """Return secs as +/-hh:mm (e.g. -08:00)"""
+    if secs < 0:
+        hms = seconds_to_hms(-secs)
+        return f'-{hms[0]:02}:{hms[1]:02}'
+    else:
+        hms = seconds_to_hms(secs)
+        return f'+{hms[0]:02}:{hms[1]:02}'
