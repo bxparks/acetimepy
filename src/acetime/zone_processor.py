@@ -311,13 +311,8 @@ class ZoneProcessor:
                 3.2.2) If all matching Rules are infinite or none, return True.
             3.3) Otherwise, some matching Rules are finite, so return False.
         """
-        # If the timezone is a Link, follow the link and get the ZoneEras from
-        # the target ZoneInfo.
-        if 'eras' in self.zone_info:
-            zone_eras = self.zone_info.get('eras')
-        else:
-            zone_info = cast(ZoneInfo, self.zone_info.get('link_to'))
-            zone_eras = zone_info.get('eras')
+        # The 'eras' is always defined, whether Zone or Link.
+        zone_eras = self.zone_info.get('eras')
         assert zone_eras is not None
 
         # 1) Check if the year is beyond the last ZoneEra.
@@ -361,16 +356,19 @@ class ZoneProcessor:
     def is_link(self) -> bool:
         return 'link_to' in self.zone_info
 
-    def get_name(self, follow_link: bool = False) -> str:
-        """Return the full name of the current ZoneInfo. If the ZoneInfo is a
-        Link and 'follow_link' is True, then return the full name of the target
-        zone.
+    def get_name(self) -> str:
+        """Return the full name of the current ZoneInfo."""
+        return self.zone_info['name']
+
+    def get_target_name(self) -> str:
+        """Return the full name of the target ZoneInfo if the current Zone
+        is a Link. Otherwse, returns an empty string.
         """
-        if 'link_to' in self.zone_info and follow_link:
+        if self.is_link():
             zone_info = cast(ZoneInfo, self.zone_info.get('link_to'))
+            return zone_info['name']
         else:
-            zone_info = self.zone_info
-        return zone_info['name']
+            return ""
 
     # ------------------------------------------------------------------------
     # The following methods are designed to be used internally.
@@ -509,13 +507,8 @@ class ZoneProcessor:
         because the interval spans at least 3 whole years, and potentially 4
         years for the 'most recent prior year'.
         """
-        # If the timezone is a Link, follow the link and get the ZoneEras from
-        # the target ZoneInfo.
-        if 'eras' in self.zone_info:
-            zone_eras = self.zone_info.get('eras')
-        else:
-            zone_info = cast(ZoneInfo, self.zone_info.get('link_to'))
-            zone_eras = zone_info.get('eras')
+        # The 'eras' is defined for both Zones and Links.
+        zone_eras = self.zone_info.get('eras')
         assert zone_eras is not None
 
         prev_match: Optional[MatchingEra] = None

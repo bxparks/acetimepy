@@ -91,12 +91,18 @@ class acetz(tzinfo):
 
         return newdt
 
-    def tzfullname(self, follow_link: bool = False) -> str:
-        """Return the full name of the time zone. If the timezone is a Link and
-        'follow_link' is True, then this returns the name of the target zone.
-        This method does *not* override a method in pareent tzinfo class.
+    def tzfullname(self) -> str:
+        """Return the full name of the time zone. Use this instead of tzname()
+        to get the full name (e.g. "America/Los_Angeles") instead of the
+        abbreviation (e.g. "PST").
         """
-        return self.zp.get_name(follow_link)
+        return self.zp.get_name()
+
+    def targetname(self) -> str:
+        """Return the name of the target Zone if the timezone is a Link.
+        Otherwise return the empty string.
+        """
+        return self.zp.get_target_name()
 
     def islink(self) -> bool:
         return self.zp.is_link()

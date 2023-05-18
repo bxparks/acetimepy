@@ -54,14 +54,15 @@ class TestGetTz(unittest.TestCase):
 
 class TestLosAngeles(unittest.TestCase):
 
-    def test_constructor(self) -> None:
-        """Create date from AceTime epoch seconds using the constructor
-        that specifies the timezone directly.
+    def test_dateime_component_constructor(self) -> None:
+        """Create datetime using the datetime constructor that specifies the
+        timezone directly.
         """
 
         tz = zone_manager.gettz('America/Los_Angeles')
         assert tz is not None
 
+        # Construct using components.
         dtc = datetime(2000, 1, 2, 3, 4, 5, tzinfo=tz)
         self.assertEqual(2000, dtc.year)
         self.assertEqual(1, dtc.month)
@@ -80,14 +81,15 @@ class TestLosAngeles(unittest.TestCase):
         assert dtc.tzinfo is not None
         self.assertEqual("PST", tz.tzname(dtc))
         self.assertEqual("America/Los_Angeles", tz.tzfullname())
-        self.assertEqual("America/Los_Angeles", tz.tzfullname(follow_link=True))
+        self.assertEqual("", tz.targetname())
 
-    def test_fromtimestamp(self) -> None:
+    def test_datetime_fromtimestamp(self) -> None:
         """Create date from AceTime epoch seconds using fromtimestamp()."""
 
         tz = zone_manager.gettz('America/Los_Angeles')
         assert tz is not None
 
+        # Construct using unix seconds.
         # date +%s -d '2000-01-02T03:04:05-08:00'
         unix_seconds = 946811045
         dte = datetime.fromtimestamp(unix_seconds, tz=tz)
@@ -102,7 +104,7 @@ class TestLosAngeles(unittest.TestCase):
         assert dte.tzinfo is not None
         self.assertEqual("PST", tz.tzname(dte))
         self.assertEqual("America/Los_Angeles", tz.tzfullname())
-        self.assertEqual("America/Los_Angeles", tz.tzfullname(follow_link=True))
+        self.assertEqual("", tz.targetname())
 
     def test_before_spring_forward(self) -> None:
         tz = zone_manager.gettz('America/Los_Angeles')
@@ -329,7 +331,7 @@ class TestUSPacific(unittest.TestCase):
 
     def test_zone_info(self) -> None:
         """Test creation of acetz object using the US/Pacific ZoneInfo database
-        entry, instead of going through the ZoneManager. This should follow the
+        entry, instead of going through the ZoneManager. This should set the
         'link_to' entry in ZoneInfo and use the America/Los_Angeles ZoneEras.
         """
         tz = acetz(ZONE_INFO_US_Pacific)
@@ -356,7 +358,7 @@ class TestUSPacific(unittest.TestCase):
         assert dtc.tzinfo is not None
         self.assertEqual("PDT", tz.tzname(dtc))
         self.assertEqual("US/Pacific", tz.tzfullname())
-        self.assertEqual("America/Los_Angeles", tz.tzfullname(follow_link=True))
+        self.assertEqual("America/Los_Angeles", tz.targetname())
 
 
 class TestTunis(unittest.TestCase):

@@ -79,8 +79,8 @@ be more compatible with Python package naming conventions.
     * [Acetz Using Constructor](#AcetzUsingConstructor)
     * [Acetz Using ZoneManager Factory](#AcetzUsingZoneManagerFactory)
     * [DateTime Fold](#DateTimeFold)
-    * [TimeZone Is Link](#TimeZoneIsLink)
     * [TimeZone Full Name](#TimeZoneFullName)
+    * [TimeZone Is Link](#TimeZoneIsLink)
 * [Compare to Other Python Libraries](#CompareToOtherLibraries)
 * [Benchmarks](#Benchmarks)
 * [System Requirements](#SystemRequirements)
@@ -302,19 +302,6 @@ This prints:
 2000-10-29 01:59:59-08:00
 ```
 
-<a name="TimeZoneIsLink"></a>
-### TimeZone Is Link
-
-The `acetz` class extends the `tzinfo` class with the `islink()` method that
-returns `True` if the timezone is a Link entry instead of a Zone entry:
-
-```Python
-class acetz(tzinfo):
-    ...
-    def islink(self) -> bool:
-    ...
-```
-
 <a name="TimeZoneFullName"></a>
 ### TimeZone Full Name
 
@@ -324,14 +311,31 @@ complements the `tzname()` method from `tzinfo`:
 ```Python
 class acetz(tzinfo):
     ...
-    def tzfullname(self, follow_link: bool = False) -> str:
+    def tzfullname(self) -> str:
     ...
 ```
 
 For normal Zone entries, this returns the full time zone name (e.g.
 `America/Los_Angeles`). For Link entries, this returns the name of the link
-(e.g. `US/Pacific`). If the `follow_link` parameter is set to `True`, the method
-returns the name of the target time zone (i.e. `America/Los_Angeles`).
+(e.g. `US/Pacific`).
+
+<a name="TimeZoneIsLink"></a>
+### TimeZone Is Link
+
+The `acetz` class adds 2 methods in addition to the inherited methods from the
+`tzinfo` base class to support Link entries. The `islink()` method
+returns `True` for Links, and the `targetname()` returns the name of the target
+Zone:
+
+```Python
+class acetz(tzinfo):
+    ...
+    def islink(self) -> bool:
+    def targetname(self) -> str:
+    ...
+```
+
+The `targetname()` method returns the empty string for normal Zone entries.
 
 <a name="CompareToOtherLibraries"></a>
 ## Compare to Other Python Libraries

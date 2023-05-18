@@ -11,6 +11,9 @@
           compatible with Python conventions.
         * Rename `zonedb_types.py` to `typing.py`.
         * Rename `acetime.acetz` (acetz.py) to `acetime.timezone` (timezone.py).
+    * Simplify handling of Links
+        * Remove `follow_link` flag from `acetz.tzfullname().
+        * Add `acetz.targetname()` which returns the target if Link.
 * 0.6.1 (2023-04-01, TZDB 2023c)
     * Upgrade TZDB from 2023b to 2023c.
         * https://mm.icann.org/pipermail/tz-announce/2023-March/000079.html
