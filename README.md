@@ -13,24 +13,32 @@ other Python libraries such as:
 * dateutil (https://pypi.org/project/python-dateutil/)
 * zoneinfo (https://docs.python.org/3/library/zoneinfo.html)
 
-The default timezone database encoded in the `acetime.zonedb` subpackage
-contains information for all timezones covering the all years in the IANA TZDB (
-(year 1844 to 2088 as of TZDB 2023c). Custom subsets of the full TZ database
-could be created to save memory using the
-[AceTimeTools](https://github.com/bxparks/AceTimeTools) project but the process
-has not been documented.
-
 The initial motivation of this library was to build a Python environment that
 was easier to prototype compared to the embedded C++ environment required by the
 [AceTime](https://github.com/bxparks/AceTime) library. To support that use-case,
 the `acetz` class uses the same algorithm used by the `ExtendedZoneProcessor`
 class in the [AceTime](https://github.com/bxparks/AceTime) C++ library for
-Arduino.
-
-That motivation became mostly moot after
+Arduino. That motivation became mostly moot after
 [EpoxyDuino](https://github.com/bxparks/EpoxyDuino) became a suitable and
-productive environment for developing AceTime on a Linux desktop. Currently, the
-main uses of this library are:
+productive environment for developing AceTime on a Linux desktop.
+
+There are 2 timezone databases provided by this library:
+
+* `acetime.zonedb`
+    * contains rules and transitions only from the year 2000 and onwards
+    * matches the `zonedb` and `zonedbx` databases in the AceTime library
+* `acetime.zonedball`
+    * contains rules and transitions for all years defined by the IANA
+      TZDB, currently from 1844 onwards.
+    * useful for validating against third-party libraries
+
+Custom subsets of the full TZ database could be created to save memory using the
+[AceTimeTools](https://github.com/bxparks/AceTimeTools) project. The process has
+not been documented, but can probably be inferred from the `Makefile`s in
+[acetime.zonedb](src/acetime/zonedb) and
+[acetime.zonedball](src/acetime/zonedball).
+
+Currently, the main uses of this library are:
 
 1) Generating transition buffer size requirements for the zone databases used in
    the AceTime library (since AceTime uses fixed-sized buffers instead of
@@ -42,13 +50,13 @@ main uses of this library are:
 1) Exploring the feasibility of porting this library to
    [MicroPython](https://micropython.org/).
 
-This library is intended as a reference implementation. Priority has been given
-to ease of maintenance and compatibility with the AceTime library for Arduino.
-It has not been optimized for speed or memory efficiency, so it is **not**
-intended to be used in critical production environments. Informal benchmarking
-(see [Benchmarks](#Benchmarks) below) shows that `acetime` is similar in
-performance to `pytz` and `dateutil`, while `zoneinfo` is substantially faster
-than the others because it is implemented as a C-module.
+This library is intended as a reference implementation, with priority given to
+ease of maintenance and compatibility with the AceTime library for Arduino. It
+has not been optimized for speed or memory efficiency, so it is **not** intended
+to be used in critical production environments. Informal benchmarking (see
+[Benchmarks](#Benchmarks) below) shows that `acetime` is similar in performance
+to `pytz` and `dateutil`, while `zoneinfo` is substantially faster than the
+others because it is implemented as a C-module.
 
 Among these 4 Python libraries that are mentioned above, `acetimepy` seems to be
 the only library that returns accurate `datetime.dst()` information for all
@@ -230,10 +238,12 @@ module which has 2 pre-generated registries containing timezone information from
 
 * `acetime.zonedb.zone_registry.ZONE_REGISTRY`
     * contains all primary Zone entries
-    * 377 zones as of TZDB 2021e
+    * 350 zones as of TZDB 2023c
+    * useful for unit and integration tests
 * `acetime.zonedb.zone_registry.ZONE_AND_LINK_REGISTRY`
     * contains all Zone and Link entries
-    * 594 zones and links as of TZDB 2021e
+    * 596 zones and links as of TZDB 2023c
+    * use this for user-facing applications
 
 We can then create an instance of `acetz` using a timezone name (e.g.
 "America/Los_Angeles") through the `ZoneManager.gettz()` method:
@@ -241,18 +251,17 @@ We can then create an instance of `acetz` using a timezone name (e.g.
 ```Python
 from datetime import datetime
 from acetime.acetz import ZoneManager
-from acetime.zonedb.zone_registry import ZONE_REGISTRY
-from acetime.common import SECONDS_SINCE_UNIX_EPOCH
+from acetime.zonedb.zone_registry import ZONE_AND_LINK_REGISTRY
 
 # Create a ZoneManager configured with the given registry
-zone_manager = ZoneManager(ZONE_REGISTRY)
+zone_manager = ZoneManager(ZONE_AND_LINK_REGISTRY)
 
 # Create an acetz using the ZoneManager.
 tz = zone_manager.gettz('America/Los_Angeles')
 
-# Create date from epoch seconds
-acetime_seconds = 7984800
-unix_seconds = acetime_seconds + SECONDS_SINCE_UNIX_EPOCH
+# Create date from unix seconds
+# $ date +%s -d '2000-04-02T03:00:00-07:00'
+unix_seconds = 954669600
 dte = datetime.fromtimestamp(unix_seconds, tz=tz)
 
 # Create date from components

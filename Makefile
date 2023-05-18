@@ -34,12 +34,12 @@ tests:
 # generator.
 flake8:
 	flake8 . \
-		--exclude src/acetime/zonedb \
+		--exclude src/acetime/zonedb,src/acetime/zonedball \
 		--ignore W503 \
 		--max-line-length=80 \
 		--show-source \
 		--statistics
-	flake8 src/acetime/zonedb \
+	flake8 src/acetime/zonedb* \
 		--ignore W503,F403,F405,E303,W391 \
 		--max-line-length=100 \
 		--show-source \

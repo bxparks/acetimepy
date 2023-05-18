@@ -5,7 +5,7 @@
 import unittest
 from datetime import datetime
 
-from acetime.zonedb import zone_infos
+from acetime.zonedball import zone_infos
 from acetime.date_tuple import YearMonthTuple
 from acetime.date_tuple import DateTuple
 from acetime.date_tuple import normalize_date_tuple
