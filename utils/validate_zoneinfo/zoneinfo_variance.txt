@@ -1,4 +1,4 @@
-# Variance report for acetime.timezone.acetz compared to Python 3.9
+# Variance report for acetime.timezone.acetz compared to Python 3.10
 # zoneinfo.ZoneInfo.
 #
 # Context
@@ -8,7 +8,7 @@
 # Acetimepy ZoneDB Start Year: 1800
 # Acetimepy ZoneDB Until Year: 10000
 # Python Version: 3.10.6 (main, Mar 10 2023, 10:55:28) [GCC 11.3.0]
-# ZoneInfo Version: 2021e?
+# ZoneInfo Version: 2022c
 # Report Start Year: 1840
 # Report Until Year: 2100
 #

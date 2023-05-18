@@ -298,7 +298,7 @@ def main() -> None:
 
     # Print header
     print(f"""\
-# Variance report for acetime.timezone.acetz compared to Python 3.9
+# Variance report for acetime.timezone.acetz compared to Python 3.10
 # zoneinfo.ZoneInfo.
 #
 # Context
@@ -308,7 +308,7 @@ def main() -> None:
 # Acetimepy ZoneDB Start Year: {START_YEAR}
 # Acetimepy ZoneDB Until Year: {UNTIL_YEAR}
 # Python Version: {sys.version}
-# ZoneInfo Version: 2021e?
+# ZoneInfo Version: 2022c
 # Report Start Year: {args.start_year}
 # Report Until Year: {args.until_year}
 #
@@ -329,7 +329,7 @@ def main() -> None:
     )
     i = 0
     for zone_name, zone_info in ZONE_REGISTRY.items():
-        print(f"{i}: Processing Zone {zone_name}...", file=sys.stderr)
+        print(f"[{i}] {zone_name}...", file=sys.stderr)
         comparator.compare_zone(zone_name)
         i += 1
 

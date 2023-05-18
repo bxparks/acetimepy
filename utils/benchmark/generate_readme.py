@@ -46,8 +46,8 @@ $ make README.md
 ## Benchmarks
 
 * Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz
-* Ubuntu 20.04.3 (LTS)
-* Python 3.8.10
+* Linux Mint 21.1 (Ubuntu 22.04)
+* Python 3.10.6
 
 ```
 {results}
