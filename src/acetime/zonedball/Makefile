@@ -16,9 +16,7 @@ zone_infos.py:
 		--tag $(TZ_VERSION) \
 		--action zonedb \
 		--language python \
-		--granularity 1 \
-		--scope extended \
-		--generate_int16_year \
+		--scope complete \
 		--skip_bufestimator \
 		--start_year $(START_YEAR) \
 		--until_year $(UNTIL_YEAR)

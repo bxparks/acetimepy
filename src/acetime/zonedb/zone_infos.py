@@ -6,9 +6,7 @@
 #     --tz_version 2023c
 #     --action zonedb
 #     --language python
-#     --granularity 1
-#     --scope extended
-#     --generate_int16_year
+#     --scope complete
 #     --skip_bufestimator
 #     --start_year 2000
 #     --until_year 10000
