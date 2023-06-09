@@ -47,3 +47,4 @@ flake8:
 
 zonedbs:
 	make -C src/acetime/zonedb/
+	make -C src/acetime/zonedball/
