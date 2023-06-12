@@ -30,6 +30,7 @@
 #
 # Original Years:  [1844,2087]
 # Generated Years: [1844,2087]
+# Lower/Upper Truncated: [False, False]
 #
 # Records:
 #   Infos: 596
