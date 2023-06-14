@@ -6,6 +6,7 @@ from dateutil.tz import gettz
 package, to provide a baseline for test_timezone.py.
 """
 
+
 class TestDateUtil(unittest.TestCase):
     def test_constructor(self) -> None:
         dtz = gettz('America/Los_Angeles')
