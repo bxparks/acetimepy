@@ -9,6 +9,8 @@ from acetime.zonedball.zone_registry import ZONE_REGISTRY
 from acetime.zonedball.zone_infos import ZONE_INFO_America_Los_Angeles
 from acetime.zonedball.zone_infos import ZONE_INFO_US_Pacific
 
+"""Test the acetz class with validations similar to test_dateutil.py.
+"""
 
 # Enable logging during unittests.
 # https://stackoverflow.com/questions/7472863
