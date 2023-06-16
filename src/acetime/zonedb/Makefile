@@ -14,8 +14,8 @@ zone_infos.py:
 	$(TOOLS)/tzcompiler.sh \
 		--tzrepo $(TZ_REPO) \
 		--tag $(TZ_VERSION) \
-		--action zonedb \
-		--language python \
+		--actions zonedb \
+		--languages python \
 		--scope complete \
 		--skip_bufestimator \
 		--start_year $(START_YEAR) \

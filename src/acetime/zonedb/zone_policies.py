@@ -4,8 +4,8 @@
 #     --input_dir /home/brian/src/acetimepy/src/acetime/zonedb/tzfiles
 #     --output_dir /home/brian/src/acetimepy/src/acetime/zonedb
 #     --tz_version 2023c
-#     --action zonedb
-#     --language python
+#     --actions zonedb
+#     --languages python
 #     --scope complete
 #     --skip_bufestimator
 #     --start_year 2000
