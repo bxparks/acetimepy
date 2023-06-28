@@ -23,8 +23,8 @@ else:
 # acetimepy classes
 import acetime.version
 from acetime.timezone import ZoneManager
-from acetime.zonedb.zone_infos import TZDB_VERSION, START_YEAR, UNTIL_YEAR
-from acetime.zonedb.zone_registry import ZONE_REGISTRY
+from acetime.zonedball.zone_infos import TZDB_VERSION, START_YEAR, UNTIL_YEAR
+from acetime.zonedball.zone_registry import ZONE_REGISTRY
 
 # The [start, until) time interval used to search for DST transitions,
 # and flag that is True if ONLY the DST changed.

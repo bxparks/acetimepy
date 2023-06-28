@@ -50,11 +50,9 @@ Examples:
 import sys
 import argparse
 import logging
-from typing import cast
 from datetime import datetime
 
-from acetime.typing import ZoneInfo
-from acetime.zonedb import zone_registry
+from acetime.zonedball.zone_registry import ZONE_REGISTRY
 from acetime.common import to_utc_string
 from acetime.zone_processor import ZoneProcessor
 
@@ -77,7 +75,7 @@ def main() -> None:
     logging.basicConfig(level=logging.INFO)
 
     # Find the zone.
-    zone_info = cast(ZoneInfo, zone_registry.ZONE_REGISTRY.get(args.zone))
+    zone_info = ZONE_REGISTRY.get(args.zone)
     if not zone_info:
         logging.error("Zone '%s' not found", args.zone)
         sys.exit(1)
