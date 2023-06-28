@@ -1,6 +1,7 @@
 # Changelog
 
 * Unreleased
+* 0.7.1 (2023-06-27, TZDB 2023c)
     * zonedb
         * Rename original `acetime.zonedb` to `zonedball` (supports all years
           from the TZDB, 1844 and onwards)
