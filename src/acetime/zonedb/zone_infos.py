@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/src/acetimepy/src/acetime/zonedb/tzfiles
 #     --output_dir /home/brian/src/acetimepy/src/acetime/zonedb
-#     --tz_version 2023c
+#     --tz_version 2023d
 #     --actions zonedb
 #     --languages python
 #     --scope complete
@@ -23,9 +23,9 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2023c
+# from https://github.com/eggert/tz/releases/tag/2023d
 #
-# Supported Zones: 596 (350 zones, 246 links)
+# Supported Zones: 596 (351 zones, 245 links)
 # Unsupported Zones: 0 (0 zones, 0 links)
 #
 # Requested Years: [2000,2200]
@@ -37,7 +37,7 @@
 #
 # Records:
 #   Infos: 596
-#   Eras: 646
+#   Eras: 655
 #   Policies: 83
 #   Rules: 735
 #
@@ -55,15 +55,15 @@ from .zone_policies import *
 # Zone Context
 # ---------------------------------------------------------------------------
 
-TZDB_VERSION = '2023c'
+TZDB_VERSION = '2023d'
 START_YEAR = 2000
 UNTIL_YEAR = 2200
 START_YEAR_ACCURATE = 2000
 UNTIL_YEAR_ACCURATE = 32767
 
 # ---------------------------------------------------------------------------
-# Supported zones: 350
-# numEras: 646
+# Supported zones: 351
+# numEras: 655
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -4402,16 +4402,28 @@ ZONE_INFO_America_North_Dakota_New_Salem: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Nuuk
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Nuuk: List[ZoneEra] = [
-    #             -3:00    EU    -03/-02    2023 Oct 29  1:00u
+    #             -3:00    EU    -03/-02    2023 Mar 26  1:00u
     {
         'offset_seconds': -10800,
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': '-03/-02',
+        'until_year': 2023,
+        'until_month': 3,
+        'until_day': 26,
+        'until_seconds': 3600,
+        'until_time_suffix': 'u',
+    },
+    #             -2:00    -    -02    2023 Oct 29  1:00u
+    {
+        'offset_seconds': -7200,
+        'zone_policy': None,
+        'era_delta_seconds': 0,
+        'format': '-02',
         'until_year': 2023,
         'until_month': 10,
         'until_day': 29,
@@ -5110,16 +5122,28 @@ ZONE_INFO_America_Sao_Paulo: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: America/Scoresbysund
-# Era count: 1
+# Era count: 2
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Scoresbysund: List[ZoneEra] = [
-    #             -1:00    EU    -01/+00
+    #             -1:00    EU    -01/+00 2024 Mar 31
     {
         'offset_seconds': -3600,
         'zone_policy': ZONE_POLICY_EU,
         'era_delta_seconds': 0,
         'format': '-01/+00',
+        'until_year': 2024,
+        'until_month': 3,
+        'until_day': 31,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             -2:00    EU    -02/-01
+    {
+        'offset_seconds': -7200,
+        'zone_policy': ZONE_POLICY_EU,
+        'era_delta_seconds': 0,
+        'format': '-02/-01',
         'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
@@ -5494,7 +5518,7 @@ ZONE_INFO_America_Yakutat: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Antarctica/Casey
-# Era count: 12
+# Era count: 17
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Antarctica_Casey: List[ZoneEra] = [
@@ -5630,12 +5654,72 @@ ZONE_ERAS_Antarctica_Casey: List[ZoneEra] = [
         'until_seconds': 60,
         'until_time_suffix': 'w',
     },
-    #             11:00    -    +11
+    #             11:00    -    +11    2021 Mar 14  0:00
     {
         'offset_seconds': 39600,
         'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+11',
+        'until_year': 2021,
+        'until_month': 3,
+        'until_day': 14,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #              8:00    -    +08    2021 Oct  3  0:01
+    {
+        'offset_seconds': 28800,
+        'zone_policy': None,
+        'era_delta_seconds': 0,
+        'format': '+08',
+        'until_year': 2021,
+        'until_month': 10,
+        'until_day': 3,
+        'until_seconds': 60,
+        'until_time_suffix': 'w',
+    },
+    #             11:00    -    +11    2022 Mar 13  0:00
+    {
+        'offset_seconds': 39600,
+        'zone_policy': None,
+        'era_delta_seconds': 0,
+        'format': '+11',
+        'until_year': 2022,
+        'until_month': 3,
+        'until_day': 13,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #              8:00    -    +08    2022 Oct  2  0:01
+    {
+        'offset_seconds': 28800,
+        'zone_policy': None,
+        'era_delta_seconds': 0,
+        'format': '+08',
+        'until_year': 2022,
+        'until_month': 10,
+        'until_day': 2,
+        'until_seconds': 60,
+        'until_time_suffix': 'w',
+    },
+    #             11:00    -    +11    2023 Mar  9  3:00
+    {
+        'offset_seconds': 39600,
+        'zone_policy': None,
+        'era_delta_seconds': 0,
+        'format': '+11',
+        'until_year': 2023,
+        'until_month': 3,
+        'until_day': 9,
+        'until_seconds': 10800,
+        'until_time_suffix': 'w',
+    },
+    #              8:00    -    +08
+    {
+        'offset_seconds': 28800,
+        'zone_policy': None,
+        'era_delta_seconds': 0,
+        'format': '+08',
         'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
@@ -5912,6 +5996,44 @@ ZONE_ERAS_Antarctica_Troll: List[ZoneEra] = [
 ZONE_INFO_Antarctica_Troll: ZoneInfo = {
     'name': 'Antarctica/Troll',
     'eras': ZONE_ERAS_Antarctica_Troll
+}
+
+# ---------------------------------------------------------------------------
+# Zone name: Antarctica/Vostok
+# Era count: 2
+# ---------------------------------------------------------------------------
+
+ZONE_ERAS_Antarctica_Vostok: List[ZoneEra] = [
+    #             7:00    -    +07    2023 Dec 18  2:00
+    {
+        'offset_seconds': 25200,
+        'zone_policy': None,
+        'era_delta_seconds': 0,
+        'format': '+07',
+        'until_year': 2023,
+        'until_month': 12,
+        'until_day': 18,
+        'until_seconds': 7200,
+        'until_time_suffix': 'w',
+    },
+    #             5:00    -    +05
+    {
+        'offset_seconds': 18000,
+        'zone_policy': None,
+        'era_delta_seconds': 0,
+        'format': '+05',
+        'until_year': 32767,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+
+]
+
+ZONE_INFO_Antarctica_Vostok: ZoneInfo = {
+    'name': 'Antarctica/Vostok',
+    'eras': ZONE_ERAS_Antarctica_Vostok
 }
 
 # ---------------------------------------------------------------------------
@@ -12721,7 +12843,7 @@ ZONE_INFO_WET: ZoneInfo = {
 
 
 # ---------------------------------------------------------------------------
-# Supported links: 246
+# Supported links: 245
 # ---------------------------------------------------------------------------
 
 # Link name: Africa/Accra -> Africa/Abidjan
@@ -13331,13 +13453,6 @@ ZONE_INFO_Antarctica_Syowa: ZoneInfo = {
     'name': 'Antarctica/Syowa',
     'eras': ZONE_ERAS_Asia_Riyadh,
     'link_to': ZONE_INFO_Asia_Riyadh,
-}
-
-# Link name: Antarctica/Vostok -> Asia/Urumqi
-ZONE_INFO_Antarctica_Vostok: ZoneInfo = {
-    'name': 'Antarctica/Vostok',
-    'eras': ZONE_ERAS_Asia_Urumqi,
-    'link_to': ZONE_INFO_Asia_Urumqi,
 }
 
 # Link name: Arctic/Longyearbyen -> Europe/Berlin

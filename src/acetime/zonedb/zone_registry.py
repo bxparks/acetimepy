@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/src/acetimepy/src/acetime/zonedb/tzfiles
 #     --output_dir /home/brian/src/acetimepy/src/acetime/zonedb
-#     --tz_version 2023c
+#     --tz_version 2023d
 #     --actions zonedb
 #     --languages python
 #     --scope complete
@@ -23,9 +23,9 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2023c
+# from https://github.com/eggert/tz/releases/tag/2023d
 #
-# Supported Zones: 596 (350 zones, 246 links)
+# Supported Zones: 596 (351 zones, 245 links)
 # Unsupported Zones: 0 (0 zones, 0 links)
 #
 # Requested Years: [2000,2200]
@@ -37,7 +37,7 @@
 #
 # Records:
 #   Infos: 596
-#   Eras: 646
+#   Eras: 655
 #   Policies: 83
 #   Rules: 735
 #
@@ -46,7 +46,7 @@
 from ..typing import ZoneInfoMap
 from .zone_infos import *
 
-# Supported Zones: 350
+# Supported Zones: 351
 ZONE_REGISTRY: ZoneInfoMap = {
     'Africa/Abidjan': ZONE_INFO_Africa_Abidjan,
     'Africa/Algiers': ZONE_INFO_Africa_Algiers,
@@ -194,6 +194,7 @@ ZONE_REGISTRY: ZoneInfoMap = {
     'Antarctica/Palmer': ZONE_INFO_Antarctica_Palmer,
     'Antarctica/Rothera': ZONE_INFO_Antarctica_Rothera,
     'Antarctica/Troll': ZONE_INFO_Antarctica_Troll,
+    'Antarctica/Vostok': ZONE_INFO_Antarctica_Vostok,
     'Asia/Almaty': ZONE_INFO_Asia_Almaty,
     'Asia/Amman': ZONE_INFO_Asia_Amman,
     'Asia/Anadyr': ZONE_INFO_Asia_Anadyr,
