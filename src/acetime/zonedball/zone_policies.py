@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/src/acetimepy/src/acetime/zonedball/tzfiles
 #     --output_dir /home/brian/src/acetimepy/src/acetime/zonedball
-#     --tz_version 2023c
+#     --tz_version 2023d
 #     --action zonedb
 #     --language python
 #     --scope complete
@@ -23,9 +23,9 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2023c
+# from https://github.com/eggert/tz/releases/tag/2023d
 #
-# Supported Zones: 596 (350 zones, 246 links)
+# Supported Zones: 596 (351 zones, 245 links)
 # Unsupported Zones: 0 (0 zones, 0 links)
 #
 # Requested Years: [1800,2200]
@@ -37,7 +37,7 @@
 #
 # Records:
 #   Infos: 596
-#   Eras: 1949
+#   Eras: 1961
 #   Policies: 134
 #   Rules: 2238
 #
@@ -19481,6 +19481,18 @@ ZONE_RULES_Palestine: List[ZoneRule] = [
         'delta_seconds': 3600,
         'letter': 'S',
     },
+    # Rule Palestine    2072    max    -    Oct    Sat<=30    2:00    0    -
+    {
+        'from_year': 2072,
+        'to_year': 32766,
+        'in_month': 10,
+        'on_day_of_week': 6,
+        'on_day_of_month': -30,
+        'at_seconds': 7200,
+        'at_time_suffix': 'w',
+        'delta_seconds': 0,
+        'letter': '',
+    },
     # Rule Palestine    2073    only    -    Sep     2    2:00    0    -
     {
         'from_year': 2073,
@@ -19552,18 +19564,6 @@ ZONE_RULES_Palestine: List[ZoneRule] = [
         'at_time_suffix': 'w',
         'delta_seconds': 3600,
         'letter': 'S',
-    },
-    # Rule Palestine    2075    max    -    Oct    Sat<=30    2:00    0    -
-    {
-        'from_year': 2075,
-        'to_year': 32766,
-        'in_month': 10,
-        'on_day_of_week': 6,
-        'on_day_of_month': -30,
-        'at_seconds': 7200,
-        'at_time_suffix': 'w',
-        'delta_seconds': 0,
-        'letter': '',
     },
     # Rule Palestine    2076    only    -    Jul    25    2:00    0    -
     {

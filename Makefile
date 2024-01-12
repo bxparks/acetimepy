@@ -46,5 +46,4 @@ flake8:
 		--statistics
 
 zonedbs:
-	make -C src/acetime/zonedb/
-	make -C src/acetime/zonedball/
+	$(MAKE) -C src/acetime zonedbs
