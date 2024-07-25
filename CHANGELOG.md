@@ -1,6 +1,7 @@
 # Changelog
 
 - Unreleased
+- 0.7.3 (2024-07-25, TZDB 2024a)
     - Upgrade TZDB to 2024a
         - https://mm.icann.org/pipermail/tz-announce/2024-February/000081.html
         - "Kazakhstan unifies on UTC+5 beginning 2024-03-01. Palestine springs
