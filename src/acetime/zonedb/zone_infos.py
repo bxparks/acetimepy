@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/src/acetimepy/src/acetime/zonedb/tzfiles
 #     --output_dir /home/brian/src/acetimepy/src/acetime/zonedb
-#     --tz_version 2023d
+#     --tz_version 2024a
 #     --actions zonedb
 #     --languages python
 #     --scope complete
@@ -23,7 +23,7 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2023d
+# from https://github.com/eggert/tz/releases/tag/2024a
 #
 # Supported Zones: 596 (351 zones, 245 links)
 # Unsupported Zones: 0 (0 zones, 0 links)
@@ -37,7 +37,7 @@
 #
 # Records:
 #   Infos: 596
-#   Eras: 655
+#   Eras: 657
 #   Policies: 83
 #   Rules: 735
 #
@@ -55,7 +55,7 @@ from .zone_policies import *
 # Zone Context
 # ---------------------------------------------------------------------------
 
-TZDB_VERSION = '2023d'
+TZDB_VERSION = '2024a'
 START_YEAR = 2000
 UNTIL_YEAR = 2200
 START_YEAR_ACCURATE = 2000
@@ -63,7 +63,7 @@ UNTIL_YEAR_ACCURATE = 32767
 
 # ---------------------------------------------------------------------------
 # Supported zones: 351
-# numEras: 655
+# numEras: 657
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -6038,7 +6038,7 @@ ZONE_INFO_Antarctica_Vostok: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Asia/Almaty
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Asia_Almaty: List[ZoneEra] = [
@@ -6054,12 +6054,24 @@ ZONE_ERAS_Asia_Almaty: List[ZoneEra] = [
         'until_seconds': 7200,
         'until_time_suffix': 's',
     },
-    #             6:00    -    +06
+    #             6:00    -    +06    2024 Mar  1  0:00
     {
         'offset_seconds': 21600,
         'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
+        'until_year': 2024,
+        'until_month': 3,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             5:00    -    +05
+    {
+        'offset_seconds': 18000,
+        'zone_policy': None,
+        'era_delta_seconds': 0,
+        'format': '+05',
         'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
@@ -8000,7 +8012,7 @@ ZONE_INFO_Asia_Qatar: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Asia/Qostanay
-# Era count: 2
+# Era count: 3
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Asia_Qostanay: List[ZoneEra] = [
@@ -8016,12 +8028,24 @@ ZONE_ERAS_Asia_Qostanay: List[ZoneEra] = [
         'until_seconds': 7200,
         'until_time_suffix': 's',
     },
-    #             6:00    -    +06
+    #             6:00    -    +06    2024 Mar  1  0:00
     {
         'offset_seconds': 21600,
         'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
+        'until_year': 2024,
+        'until_month': 3,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             5:00    -    +05
+    {
+        'offset_seconds': 18000,
+        'zone_policy': None,
+        'era_delta_seconds': 0,
+        'format': '+05',
         'until_year': 32767,
         'until_month': 1,
         'until_day': 1,

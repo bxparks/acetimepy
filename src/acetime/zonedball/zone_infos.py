@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/src/acetimepy/src/acetime/zonedball/tzfiles
 #     --output_dir /home/brian/src/acetimepy/src/acetime/zonedball
-#     --tz_version 2023d
+#     --tz_version 2024a
 #     --action zonedb
 #     --language python
 #     --scope complete
@@ -23,7 +23,7 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2023d
+# from https://github.com/eggert/tz/releases/tag/2024a
 #
 # Supported Zones: 596 (351 zones, 245 links)
 # Unsupported Zones: 0 (0 zones, 0 links)
@@ -37,9 +37,9 @@
 #
 # Records:
 #   Infos: 596
-#   Eras: 1961
+#   Eras: 1963
 #   Policies: 134
-#   Rules: 2238
+#   Rules: 2234
 #
 # DO NOT EDIT
 
@@ -55,7 +55,7 @@ from .zone_policies import *
 # Zone Context
 # ---------------------------------------------------------------------------
 
-TZDB_VERSION = '2023d'
+TZDB_VERSION = '2024a'
 START_YEAR = 1800
 UNTIL_YEAR = 2200
 START_YEAR_ACCURATE = -32767
@@ -63,7 +63,7 @@ UNTIL_YEAR_ACCURATE = 32767
 
 # ---------------------------------------------------------------------------
 # Supported zones: 351
-# numEras: 1961
+# numEras: 1963
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -72,7 +72,7 @@ UNTIL_YEAR_ACCURATE = 32767
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Africa_Abidjan: List[ZoneEra] = [
-    # -0:16:08 - LMT 1912
+    # -0:16:08 - LMT 1912 Jan 1
     {
         'offset_seconds': -968,
         'zone_policy': None,
@@ -1024,7 +1024,7 @@ ZONE_INFO_Africa_Nairobi: ZoneInfo = {
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Africa_Ndjamena: List[ZoneEra] = [
-    # 1:00:12 - LMT 1912
+    # 1:00:12 - LMT 1912 Jan 1
     {
         'offset_seconds': 3612,
         'zone_policy': None,
@@ -4474,7 +4474,7 @@ ZONE_INFO_America_Caracas: ZoneInfo = {
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Cayenne: List[ZoneEra] = [
-    # -3:29:20 - LMT 1911 Jul
+    # -3:29:20 - LMT 1911 Jul 1
     {
         'offset_seconds': -12560,
         'zone_policy': None,
@@ -8476,7 +8476,7 @@ ZONE_ERAS_America_Martinique: List[ZoneEra] = [
         'until_seconds': 0,
         'until_time_suffix': 'w',
     },
-    #             -4:04:20 -    FFMT    1911 May
+    #             -4:04:20 -    FFMT    1911 May  1
     {
         'offset_seconds': -14660,
         'zone_policy': None,
@@ -9090,14 +9090,14 @@ ZONE_INFO_America_Mexico_City: ZoneInfo = {
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_America_Miquelon: List[ZoneEra] = [
-    # -3:44:40 - LMT 1911 May 15
+    # -3:44:40 - LMT 1911 Jun 15
     {
         'offset_seconds': -13480,
         'zone_policy': None,
         'era_delta_seconds': 0,
         'format': 'LMT',
         'until_year': 1911,
-        'until_month': 5,
+        'until_month': 6,
         'until_day': 15,
         'until_seconds': 0,
         'until_time_suffix': 'w',
@@ -13274,7 +13274,7 @@ ZONE_INFO_Antarctica_Vostok: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Asia/Almaty
-# Era count: 6
+# Era count: 7
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Asia_Almaty: List[ZoneEra] = [
@@ -13338,12 +13338,24 @@ ZONE_ERAS_Asia_Almaty: List[ZoneEra] = [
         'until_seconds': 7200,
         'until_time_suffix': 's',
     },
-    #             6:00    -    +06
+    #             6:00    -    +06    2024 Mar  1  0:00
     {
         'offset_seconds': 21600,
         'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
+        'until_year': 2024,
+        'until_month': 3,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             5:00    -    +05
+    {
+        'offset_seconds': 18000,
+        'zone_policy': None,
+        'era_delta_seconds': 0,
+        'format': '+05',
         'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
@@ -15426,7 +15438,7 @@ ZONE_ERAS_Asia_Ho_Chi_Minh: List[ZoneEra] = [
         'until_seconds': 82800,
         'until_time_suffix': 'w',
     },
-    #             9:00    -    +09    1945 Sep  2
+    #             9:00    -    +09    1945 Sep  1 24:00
     {
         'offset_seconds': 32400,
         'zone_policy': None,
@@ -15434,8 +15446,8 @@ ZONE_ERAS_Asia_Ho_Chi_Minh: List[ZoneEra] = [
         'format': '+09',
         'until_year': 1945,
         'until_month': 9,
-        'until_day': 2,
-        'until_seconds': 0,
+        'until_day': 1,
+        'until_seconds': 86400,
         'until_time_suffix': 'w',
     },
     #             7:00    -    +07    1947 Apr  1
@@ -15450,7 +15462,7 @@ ZONE_ERAS_Asia_Ho_Chi_Minh: List[ZoneEra] = [
         'until_seconds': 0,
         'until_time_suffix': 'w',
     },
-    #             8:00    -    +08    1955 Jul  1
+    #             8:00    -    +08    1955 Jul  1 01:00
     {
         'offset_seconds': 28800,
         'zone_policy': None,
@@ -15459,7 +15471,7 @@ ZONE_ERAS_Asia_Ho_Chi_Minh: List[ZoneEra] = [
         'until_year': 1955,
         'until_month': 7,
         'until_day': 1,
-        'until_seconds': 0,
+        'until_seconds': 3600,
         'until_time_suffix': 'w',
     },
     #             7:00    -    +07    1959 Dec 31 23:00
@@ -17756,7 +17768,7 @@ ZONE_INFO_Asia_Qatar: ZoneInfo = {
 
 # ---------------------------------------------------------------------------
 # Zone name: Asia/Qostanay
-# Era count: 9
+# Era count: 10
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Asia_Qostanay: List[ZoneEra] = [
@@ -17856,12 +17868,24 @@ ZONE_ERAS_Asia_Qostanay: List[ZoneEra] = [
         'until_seconds': 7200,
         'until_time_suffix': 's',
     },
-    #             6:00    -    +06
+    #             6:00    -    +06    2024 Mar  1  0:00
     {
         'offset_seconds': 21600,
         'zone_policy': None,
         'era_delta_seconds': 0,
         'format': '+06',
+        'until_year': 2024,
+        'until_month': 3,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             5:00    -    +05
+    {
+        'offset_seconds': 18000,
+        'zone_policy': None,
+        'era_delta_seconds': 0,
+        'format': '+05',
         'until_year': 32767,
         'until_month': 1,
         'until_day': 1,
@@ -27202,7 +27226,7 @@ ZONE_INFO_Pacific_Galapagos: ZoneInfo = {
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Pacific_Gambier: List[ZoneEra] = [
-    # -8:59:48 - LMT 1912 Oct
+    # -8:59:48 - LMT 1912 Oct 1
     {
         'offset_seconds': -32388,
         'zone_policy': None,
@@ -27240,7 +27264,7 @@ ZONE_INFO_Pacific_Gambier: ZoneInfo = {
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Pacific_Guadalcanal: List[ZoneEra] = [
-    # 10:39:48 - LMT 1912 Oct
+    # 10:39:48 - LMT 1912 Oct 1
     {
         'offset_seconds': 38388,
         'zone_policy': None,
@@ -27794,7 +27818,7 @@ ZONE_INFO_Pacific_Kwajalein: ZoneInfo = {
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Pacific_Marquesas: List[ZoneEra] = [
-    # -9:18:00 - LMT 1912 Oct
+    # -9:18:00 - LMT 1912 Oct 1
     {
         'offset_seconds': -33480,
         'zone_policy': None,
@@ -28354,7 +28378,7 @@ ZONE_INFO_Pacific_Rarotonga: ZoneInfo = {
 # ---------------------------------------------------------------------------
 
 ZONE_ERAS_Pacific_Tahiti: List[ZoneEra] = [
-    # -9:58:16 - LMT 1912 Oct
+    # -9:58:16 - LMT 1912 Oct 1
     {
         'offset_seconds': -35896,
         'zone_policy': None,
