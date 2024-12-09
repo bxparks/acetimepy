@@ -43,7 +43,7 @@ ZonePolicyMap = Dict[str, ZonePolicy]
 
 # A single 'Zone' line in the tz table.
 class ZoneEra(TypedDict):
-    offset_seconds: int  # offset from UTC/GMT in seconds
+    offset_seconds: int  # STD offset from UTC/GMT in seconds
     zone_policy: Optional[ZonePolicy]  # ZonePolicy or None
     era_delta_seconds: int  # delta offset from UTC if zone_policy == None
     format: str  # abbreviation format (e.g. 'P%sT', 'E%sT', 'GMT/BST')

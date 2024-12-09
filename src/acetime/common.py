@@ -121,11 +121,13 @@ def days_in_year_month(year: int, month: int) -> int:
     return days
 
 
-def to_utc_string(utcoffset: int, dstoffset: int) -> str:
-    """Return (utc,dst) pair as UTC+/-hh:mm (e.g. UTC-08:00)"""
+def to_utc_string(stdoffset: int, dstoffset: int) -> str:
+    """Return (std,dst) pair as UTC{+/-hh:mm}{+/-hh:mm} (e.g.
+    UTC-08:00+01:00). Intended for debugging purposes.
+    """
     return (
         'UTC'
-        f'{seconds_to_hm_string(utcoffset)}'
+        f'{seconds_to_hm_string(stdoffset)}'
         f'{seconds_to_hm_string(dstoffset)}'
     )
 

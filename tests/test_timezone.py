@@ -31,7 +31,7 @@ def print_zp_at_dt(tz: acetz, dt: datetime) -> None:
         print(
             f"print_zp_at_dt(): epoch_seconds={epoch_seconds} "
             f"total_offset={info.total_offset} "
-            f"utc_offset={info.utc_offset} "
+            f"std_offset={info.std_offset} "
             f"dst_offset={info.dst_offset} "
             f"abbrev={info.abbrev} "
             f"fold={info.fold}"

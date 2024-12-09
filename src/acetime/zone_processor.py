@@ -53,9 +53,9 @@ class BufferSizeInfo(NamedTuple):
 class OffsetInfo(NamedTuple):
     """Various bits of the Transition information at the current time.
     """
-    total_offset: int  # total_offset = utc_offset + dst_offset
-    utc_offset: int  # seconds
-    dst_offset: int  # seconds
+    total_offset: int  # total_offset = std_offset + dst_offset
+    std_offset: int  # standard time offset seconds
+    dst_offset: int  # daylight saving time offset seconds
     abbrev: str  # short abbreviations
     fold: int  # same meaning as datetime.fold
 
@@ -108,7 +108,7 @@ class ZoneProcessor:
         instance
 
     The DST transition information is returned as an OffsetInfo tuple
-    contain (total_offset, utc_offset, dst_offset, abbrev, fold) which is valid
+    contain (total_offset, std_offset, dst_offset, abbrev, fold) which is valid
     at the given epoch_seconds or 'datetime'.
 
     Both get_timezone_info_for_seconds() and get_timezone_info_for_datetime()
@@ -772,14 +772,14 @@ class ZoneProcessor:
             # (calculated above) with the *current* UTC offset.
             #
             # A previous version of this used a `timezone` object set to the
-            # fixed `utc_offset_seconds`, then converted the timezone-naive `st`
-            # object into a timezone-aware `st` object at that fixed `timezone`.
-            # But this bring in the only dependency to the Python `timezone`
-            # class which is unnecessary because we can calculate the epoch
-            # seconds directly.
-            utc_offset_seconds = (
+            # fixed `total_offset_seconds`, then converted the timezone-naive
+            # `st` object into a timezone-aware `st` object at that fixed
+            # `timezone`. But this bring in the only dependency to the Python
+            # `timezone` class which is unnecessary because we can calculate the
+            # epoch seconds directly.
+            total_offset_seconds = (
                 transition.offset_seconds + transition.delta_seconds)
-            dt = st - timedelta(seconds=utc_offset_seconds)  # dt now in UTC
+            dt = st - timedelta(seconds=total_offset_seconds)  # dt now in UTC
             epoch_second = int((dt - ACETIME_EPOCH).total_seconds())
             transition.start_epoch_second = epoch_second
 

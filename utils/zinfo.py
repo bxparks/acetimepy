@@ -107,7 +107,7 @@ def main() -> None:
                 logging.info(
                     '%s (%s)',
                     to_utc_string(
-                        offset_info.utc_offset,
+                        offset_info.std_offset,
                         offset_info.dst_offset,
                     ),
                     offset_info.abbrev,
