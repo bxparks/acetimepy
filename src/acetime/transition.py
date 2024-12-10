@@ -148,6 +148,10 @@ class Transition:
         else:
             return self.matching_era.zone_era['era_delta_seconds']
 
+    @property
+    def total_seconds(self) -> int:
+        return self.offset_seconds + self.delta_seconds
+
     def copy(self) -> 'Transition':
         result = self.__class__.__new__(self.__class__)
         result.matching_era = self.matching_era

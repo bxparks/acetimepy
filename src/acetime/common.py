@@ -140,3 +140,20 @@ def seconds_to_hm_string(secs: int) -> str:
     else:
         hms = seconds_to_hms(secs)
         return f'+{hms[0]:02}:{hms[1]:02}'
+
+
+def seconds_to_abbrev(secs: int) -> str:
+    """Convert total UTC offset seconds to a timezone abbreviation according to
+    the %z format: [+/-]hh[mm[ss]] using the shortest form that does not lose
+    information.
+    """
+    s = secs if secs >= 0 else -secs
+    hms = seconds_to_hms(s)
+
+    abbrev = '+' if secs >= 0 else '-'
+    abbrev += f'{hms[0]:02}'
+    if hms[1] != 0 or hms[2] != 0:
+        abbrev += f'{hms[1]:02}'
+    if hms[2] != 0:
+        abbrev += f'{hms[2]:02}'
+    return abbrev

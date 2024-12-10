@@ -24,6 +24,7 @@ from .common import MIN_YEAR
 from .common import MAX_TO_YEAR
 from .common import to_unix_seconds
 from .common import calc_day_of_month
+from .common import seconds_to_abbrev
 from .date_tuple import YearMonthTuple
 from .date_tuple import DateTuple
 from .date_tuple import datetime_to_datetuple
@@ -798,29 +799,35 @@ class ZoneProcessor:
     def _calc_abbrev(transitions: List[Transition]) -> None:
         """Calculate the time zone abbreviations for each Transition.
         There are several cases:
+
         1) 'format' contains 'A/B', meaning 'A' for standard time, and 'B'
             for DST time.
-        2) 'format' contains a %s, which substitutes the 'letter'
+        2) 'format' contains a '%s', which substitutes the 'letter'
             2a) If 'letter' is '-', replace with nothing.
             2b) The 'format' could be just a '%s'.
+        3) 'format' equals '%z', which causes auto-generation of the
+            abbreviation in the form of [+/-][hh[mm[ss]]]
         """
         for transition in transitions:
             format = transition.format
-            delta_seconds = transition.delta_seconds
 
-            index = format.find('/')
-            if index >= 0:
-                if delta_seconds == 0:
-                    abbrev = format[:index]
-                else:
-                    abbrev = format[index + 1:]
-            elif format.find('%s') >= 0:
-                letter = transition.letter
-                if letter == '-':
-                    letter = ''
-                abbrev = format % letter
+            if format == '%z':
+                abbrev = seconds_to_abbrev(transition.total_seconds)
             else:
-                abbrev = format
+                index = format.find('/')
+                if index >= 0:
+                    delta_seconds = transition.delta_seconds
+                    if delta_seconds == 0:
+                        abbrev = format[:index]
+                    else:
+                        abbrev = format[index + 1:]
+                elif format.find('%s') >= 0:
+                    letter = transition.letter
+                    if letter == '-':
+                        letter = ''
+                    abbrev = format % letter
+                else:
+                    abbrev = format
 
             transition.abbrev = abbrev
 
