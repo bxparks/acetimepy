@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/src/acetimepy/src/acetime/zonedball/tzfiles
 #     --output_dir /home/brian/src/acetimepy/src/acetime/zonedball
-#     --tz_version 2024a
+#     --tz_version 2024b
 #     --action zonedb
 #     --language python
 #     --scope complete
@@ -23,9 +23,9 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2024a
+# from https://github.com/eggert/tz/releases/tag/2024b
 #
-# Supported Zones: 596 (351 zones, 245 links)
+# Supported Zones: 596 (339 zones, 257 links)
 # Unsupported Zones: 0 (0 zones, 0 links)
 #
 # Requested Years: [1800,2200]
@@ -37,9 +37,9 @@
 #
 # Records:
 #   Infos: 596
-#   Eras: 1963
+#   Eras: 1941
 #   Policies: 134
-#   Rules: 2234
+#   Rules: 2231
 #
 # DO NOT EDIT
 
@@ -51,7 +51,7 @@ from ..typing import (
 
 # ---------------------------------------------------------------------------
 # Supported zone policies: 134
-# numRules: 2234
+# numRules: 2231
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -14835,14 +14835,14 @@ ZONE_RULES_Mexico: List[ZoneRule] = [
         'delta_seconds': 0,
         'letter': 'S',
     },
-    # Rule    Mexico    1931    only    -    May    1    23:00    1:00    D
+    # Rule    Mexico    1931    only    -    April    30    0:00    1:00    D
     {
         'from_year': 1931,
         'to_year': 1931,
-        'in_month': 5,
+        'in_month': 4,
         'on_day_of_week': 0,
-        'on_day_of_month': 1,
-        'at_seconds': 82800,
+        'on_day_of_month': 30,
+        'at_seconds': 0,
         'at_time_suffix': 'w',
         'delta_seconds': 3600,
         'letter': 'D',
@@ -20781,7 +20781,7 @@ ZONE_POLICY_Poland: ZonePolicy = {
 
 # ---------------------------------------------------------------------------
 # Policy name: Port
-# Rule count: 49
+# Rule count: 46
 # ---------------------------------------------------------------------------
 ZONE_RULES_Port: List[ZoneRule] = [
     # Anchor: Rule    Port    1916    only    -    Nov     1     1:00    0    -
@@ -20820,77 +20820,29 @@ ZONE_RULES_Port: List[ZoneRule] = [
         'delta_seconds': 0,
         'letter': '',
     },
-    # Rule    Port    1917    only    -    Feb    28    23:00s    1:00    S
+    # Rule    Port    1917    1921    -    Mar     1     0:00    1:00    S
     {
         'from_year': 1917,
-        'to_year': 1917,
-        'in_month': 2,
+        'to_year': 1921,
+        'in_month': 3,
         'on_day_of_week': 0,
-        'on_day_of_month': 28,
-        'at_seconds': 82800,
-        'at_time_suffix': 's',
+        'on_day_of_month': 1,
+        'at_seconds': 0,
+        'at_time_suffix': 'w',
         'delta_seconds': 3600,
         'letter': 'S',
     },
-    # Rule    Port    1917    1921    -    Oct    14    23:00s    0    -
+    # Rule    Port    1917    1921    -    Oct    14    24:00    0    -
     {
         'from_year': 1917,
         'to_year': 1921,
         'in_month': 10,
         'on_day_of_week': 0,
         'on_day_of_month': 14,
-        'at_seconds': 82800,
-        'at_time_suffix': 's',
+        'at_seconds': 86400,
+        'at_time_suffix': 'w',
         'delta_seconds': 0,
         'letter': '',
-    },
-    # Rule    Port    1918    only    -    Mar     1    23:00s    1:00    S
-    {
-        'from_year': 1918,
-        'to_year': 1918,
-        'in_month': 3,
-        'on_day_of_week': 0,
-        'on_day_of_month': 1,
-        'at_seconds': 82800,
-        'at_time_suffix': 's',
-        'delta_seconds': 3600,
-        'letter': 'S',
-    },
-    # Rule    Port    1919    only    -    Feb    28    23:00s    1:00    S
-    {
-        'from_year': 1919,
-        'to_year': 1919,
-        'in_month': 2,
-        'on_day_of_week': 0,
-        'on_day_of_month': 28,
-        'at_seconds': 82800,
-        'at_time_suffix': 's',
-        'delta_seconds': 3600,
-        'letter': 'S',
-    },
-    # Rule    Port    1920    only    -    Feb    29    23:00s    1:00    S
-    {
-        'from_year': 1920,
-        'to_year': 1920,
-        'in_month': 2,
-        'on_day_of_week': 0,
-        'on_day_of_month': 29,
-        'at_seconds': 82800,
-        'at_time_suffix': 's',
-        'delta_seconds': 3600,
-        'letter': 'S',
-    },
-    # Rule    Port    1921    only    -    Feb    28    23:00s    1:00    S
-    {
-        'from_year': 1921,
-        'to_year': 1921,
-        'in_month': 2,
-        'on_day_of_week': 0,
-        'on_day_of_month': 28,
-        'at_seconds': 82800,
-        'at_time_suffix': 's',
-        'delta_seconds': 3600,
-        'letter': 'S',
     },
     # Rule    Port    1924    only    -    Apr    16    23:00s    1:00    S
     {
@@ -20904,13 +20856,13 @@ ZONE_RULES_Port: List[ZoneRule] = [
         'delta_seconds': 3600,
         'letter': 'S',
     },
-    # Rule    Port    1924    only    -    Oct    14    23:00s    0    -
+    # Rule    Port    1924    only    -    Oct     4    23:00s    0    -
     {
         'from_year': 1924,
         'to_year': 1924,
         'in_month': 10,
         'on_day_of_week': 0,
-        'on_day_of_month': 14,
+        'on_day_of_month': 4,
         'at_seconds': 82800,
         'at_time_suffix': 's',
         'delta_seconds': 0,
@@ -21120,13 +21072,13 @@ ZONE_RULES_Port: List[ZoneRule] = [
         'delta_seconds': 3600,
         'letter': 'S',
     },
-    # Rule    Port    1940    1941    -    Oct     5    23:00s    0    -
+    # Rule    Port    1940    only    -    Oct     7    23:00s    0    -
     {
         'from_year': 1940,
-        'to_year': 1941,
+        'to_year': 1940,
         'in_month': 10,
         'on_day_of_week': 0,
-        'on_day_of_month': 5,
+        'on_day_of_month': 7,
         'at_seconds': 82800,
         'at_time_suffix': 's',
         'delta_seconds': 0,
@@ -21143,6 +21095,18 @@ ZONE_RULES_Port: List[ZoneRule] = [
         'at_time_suffix': 's',
         'delta_seconds': 3600,
         'letter': 'S',
+    },
+    # Rule    Port    1941    only    -    Oct     5    23:00s    0    -
+    {
+        'from_year': 1941,
+        'to_year': 1941,
+        'in_month': 10,
+        'on_day_of_week': 0,
+        'on_day_of_month': 5,
+        'at_seconds': 82800,
+        'at_time_suffix': 's',
+        'delta_seconds': 0,
+        'letter': '',
     },
     # Rule    Port    1942    1945    -    Mar    Sat>=8    23:00s    1:00    S
     {
@@ -21252,10 +21216,10 @@ ZONE_RULES_Port: List[ZoneRule] = [
         'delta_seconds': 0,
         'letter': '',
     },
-    # Rule    Port    1947    1965    -    Apr    Sun>=1     2:00s    1:00    S
+    # Rule    Port    1947    1966    -    Apr    Sun>=1     2:00s    1:00    S
     {
         'from_year': 1947,
-        'to_year': 1965,
+        'to_year': 1966,
         'in_month': 4,
         'on_day_of_week': 7,
         'on_day_of_month': 1,
@@ -21276,58 +21240,70 @@ ZONE_RULES_Port: List[ZoneRule] = [
         'delta_seconds': 0,
         'letter': '',
     },
-    # Rule    Port    1977    only    -    Mar    27     0:00s    1:00    S
+    # Rule    Port    1976    only    -    Sep    lastSun     1:00    0    -
+    {
+        'from_year': 1976,
+        'to_year': 1976,
+        'in_month': 9,
+        'on_day_of_week': 7,
+        'on_day_of_month': 0,
+        'at_seconds': 3600,
+        'at_time_suffix': 'w',
+        'delta_seconds': 0,
+        'letter': '',
+    },
+    # Rule    Port    1977    only    -    Mar    lastSun     0:00s    1:00    S
     {
         'from_year': 1977,
         'to_year': 1977,
         'in_month': 3,
-        'on_day_of_week': 0,
-        'on_day_of_month': 27,
+        'on_day_of_week': 7,
+        'on_day_of_month': 0,
         'at_seconds': 0,
         'at_time_suffix': 's',
         'delta_seconds': 3600,
         'letter': 'S',
     },
-    # Rule    Port    1977    only    -    Sep    25     0:00s    0    -
+    # Rule    Port    1977    only    -    Sep    lastSun     0:00s    0    -
     {
         'from_year': 1977,
         'to_year': 1977,
         'in_month': 9,
-        'on_day_of_week': 0,
-        'on_day_of_month': 25,
+        'on_day_of_week': 7,
+        'on_day_of_month': 0,
         'at_seconds': 0,
         'at_time_suffix': 's',
         'delta_seconds': 0,
         'letter': '',
     },
-    # Rule    Port    1978    1979    -    Apr    Sun>=1     0:00s    1:00    S
+    # Rule    Port    1978    1980    -    Apr    Sun>=1     1:00s    1:00    S
     {
         'from_year': 1978,
-        'to_year': 1979,
+        'to_year': 1980,
         'in_month': 4,
         'on_day_of_week': 7,
         'on_day_of_month': 1,
-        'at_seconds': 0,
+        'at_seconds': 3600,
         'at_time_suffix': 's',
         'delta_seconds': 3600,
         'letter': 'S',
     },
-    # Rule    Port    1978    only    -    Oct     1     0:00s    0    -
+    # Rule    Port    1978    only    -    Oct     1     1:00s    0    -
     {
         'from_year': 1978,
         'to_year': 1978,
         'in_month': 10,
         'on_day_of_week': 0,
         'on_day_of_month': 1,
-        'at_seconds': 0,
+        'at_seconds': 3600,
         'at_time_suffix': 's',
         'delta_seconds': 0,
         'letter': '',
     },
-    # Rule    Port    1979    1982    -    Sep    lastSun     1:00s    0    -
+    # Rule    Port    1979    1980    -    Sep    lastSun     1:00s    0    -
     {
         'from_year': 1979,
-        'to_year': 1982,
+        'to_year': 1980,
         'in_month': 9,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -21336,10 +21312,10 @@ ZONE_RULES_Port: List[ZoneRule] = [
         'delta_seconds': 0,
         'letter': '',
     },
-    # Rule    Port    1980    only    -    Mar    lastSun     0:00s    1:00    S
+    # Rule    Port    1981    1986    -    Mar    lastSun     0:00s    1:00    S
     {
-        'from_year': 1980,
-        'to_year': 1980,
+        'from_year': 1981,
+        'to_year': 1986,
         'in_month': 3,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
@@ -21348,29 +21324,17 @@ ZONE_RULES_Port: List[ZoneRule] = [
         'delta_seconds': 3600,
         'letter': 'S',
     },
-    # Rule    Port    1981    1982    -    Mar    lastSun     1:00s    1:00    S
+    # Rule    Port    1981    1985    -    Sep    lastSun     0:00s    0    -
     {
         'from_year': 1981,
-        'to_year': 1982,
-        'in_month': 3,
+        'to_year': 1985,
+        'in_month': 9,
         'on_day_of_week': 7,
         'on_day_of_month': 0,
-        'at_seconds': 3600,
+        'at_seconds': 0,
         'at_time_suffix': 's',
-        'delta_seconds': 3600,
-        'letter': 'S',
-    },
-    # Rule    Port    1983    only    -    Mar    lastSun     2:00s    1:00    S
-    {
-        'from_year': 1983,
-        'to_year': 1983,
-        'in_month': 3,
-        'on_day_of_week': 7,
-        'on_day_of_month': 0,
-        'at_seconds': 7200,
-        'at_time_suffix': 's',
-        'delta_seconds': 3600,
-        'letter': 'S',
+        'delta_seconds': 0,
+        'letter': '',
     },
 
 ]
