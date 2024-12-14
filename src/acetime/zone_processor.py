@@ -24,6 +24,7 @@ from .common import MIN_YEAR
 from .common import MAX_TO_YEAR
 from .common import to_unix_seconds
 from .common import calc_day_of_month
+from .common import seconds_to_abbrev
 from .date_tuple import YearMonthTuple
 from .date_tuple import DateTuple
 from .date_tuple import datetime_to_datetuple
@@ -53,9 +54,9 @@ class BufferSizeInfo(NamedTuple):
 class OffsetInfo(NamedTuple):
     """Various bits of the Transition information at the current time.
     """
-    total_offset: int  # total_offset = utc_offset + dst_offset
-    utc_offset: int  # seconds
-    dst_offset: int  # seconds
+    total_offset: int  # total_offset = std_offset + dst_offset
+    std_offset: int  # standard time offset seconds
+    dst_offset: int  # daylight saving time offset seconds
     abbrev: str  # short abbreviations
     fold: int  # same meaning as datetime.fold
 
@@ -108,7 +109,7 @@ class ZoneProcessor:
         instance
 
     The DST transition information is returned as an OffsetInfo tuple
-    contain (total_offset, utc_offset, dst_offset, abbrev, fold) which is valid
+    contain (total_offset, std_offset, dst_offset, abbrev, fold) which is valid
     at the given epoch_seconds or 'datetime'.
 
     Both get_timezone_info_for_seconds() and get_timezone_info_for_datetime()
@@ -772,14 +773,14 @@ class ZoneProcessor:
             # (calculated above) with the *current* UTC offset.
             #
             # A previous version of this used a `timezone` object set to the
-            # fixed `utc_offset_seconds`, then converted the timezone-naive `st`
-            # object into a timezone-aware `st` object at that fixed `timezone`.
-            # But this bring in the only dependency to the Python `timezone`
-            # class which is unnecessary because we can calculate the epoch
-            # seconds directly.
-            utc_offset_seconds = (
+            # fixed `total_offset_seconds`, then converted the timezone-naive
+            # `st` object into a timezone-aware `st` object at that fixed
+            # `timezone`. But this bring in the only dependency to the Python
+            # `timezone` class which is unnecessary because we can calculate the
+            # epoch seconds directly.
+            total_offset_seconds = (
                 transition.offset_seconds + transition.delta_seconds)
-            dt = st - timedelta(seconds=utc_offset_seconds)  # dt now in UTC
+            dt = st - timedelta(seconds=total_offset_seconds)  # dt now in UTC
             epoch_second = int((dt - ACETIME_EPOCH).total_seconds())
             transition.start_epoch_second = epoch_second
 
@@ -798,29 +799,35 @@ class ZoneProcessor:
     def _calc_abbrev(transitions: List[Transition]) -> None:
         """Calculate the time zone abbreviations for each Transition.
         There are several cases:
+
         1) 'format' contains 'A/B', meaning 'A' for standard time, and 'B'
             for DST time.
-        2) 'format' contains a %s, which substitutes the 'letter'
+        2) 'format' contains a '%s', which substitutes the 'letter'
             2a) If 'letter' is '-', replace with nothing.
             2b) The 'format' could be just a '%s'.
+        3) 'format' equals '%z', which causes auto-generation of the
+            abbreviation in the form of [+/-][hh[mm[ss]]]
         """
         for transition in transitions:
             format = transition.format
-            delta_seconds = transition.delta_seconds
 
-            index = format.find('/')
-            if index >= 0:
-                if delta_seconds == 0:
-                    abbrev = format[:index]
-                else:
-                    abbrev = format[index + 1:]
-            elif format.find('%s') >= 0:
-                letter = transition.letter
-                if letter == '-':
-                    letter = ''
-                abbrev = format % letter
+            if format == '%z':
+                abbrev = seconds_to_abbrev(transition.total_seconds)
             else:
-                abbrev = format
+                index = format.find('/')
+                if index >= 0:
+                    delta_seconds = transition.delta_seconds
+                    if delta_seconds == 0:
+                        abbrev = format[:index]
+                    else:
+                        abbrev = format[index + 1:]
+                elif format.find('%s') >= 0:
+                    letter = transition.letter
+                    if letter == '-':
+                        letter = ''
+                    abbrev = format % letter
+                else:
+                    abbrev = format
 
             transition.abbrev = abbrev
 

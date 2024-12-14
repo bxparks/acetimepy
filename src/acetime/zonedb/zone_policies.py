@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/src/acetimepy/src/acetime/zonedb/tzfiles
 #     --output_dir /home/brian/src/acetimepy/src/acetime/zonedb
-#     --tz_version 2024a
+#     --tz_version 2024b
 #     --actions zonedb
 #     --languages python
 #     --scope complete
@@ -23,9 +23,9 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2024a
+# from https://github.com/eggert/tz/releases/tag/2024b
 #
-# Supported Zones: 596 (351 zones, 245 links)
+# Supported Zones: 596 (339 zones, 257 links)
 # Unsupported Zones: 0 (0 zones, 0 links)
 #
 # Requested Years: [2000,2200]
@@ -37,9 +37,9 @@
 #
 # Records:
 #   Infos: 596
-#   Eras: 657
-#   Policies: 83
-#   Rules: 735
+#   Eras: 644
+#   Policies: 82
+#   Rules: 731
 #
 # DO NOT EDIT
 
@@ -50,8 +50,8 @@ from ..typing import (
 )
 
 # ---------------------------------------------------------------------------
-# Supported zone policies: 83
-# numRules: 735
+# Supported zone policies: 82
+# numRules: 731
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -1181,67 +1181,6 @@ ZONE_RULES_Brazil: List[ZoneRule] = [
 ZONE_POLICY_Brazil: ZonePolicy = {
     'name': 'Brazil',
     'rules': ZONE_RULES_Brazil
-}
-
-# ---------------------------------------------------------------------------
-# Policy name: C-Eur
-# Rule count: 4
-# ---------------------------------------------------------------------------
-ZONE_RULES_C_Eur: List[ZoneRule] = [
-    # Anchor: Rule    C-Eur    1979    1995    -    Sep    lastSun     2:00s    0    -
-    {
-        'from_year': -32767,
-        'to_year': -32767,
-        'in_month': 1,
-        'on_day_of_week': 0,
-        'on_day_of_month': 1,
-        'at_seconds': 0,
-        'at_time_suffix': 'w',
-        'delta_seconds': 0,
-        'letter': '',
-    },
-    # Rule    C-Eur    1979    1995    -    Sep    lastSun     2:00s    0    -
-    {
-        'from_year': 1979,
-        'to_year': 1995,
-        'in_month': 9,
-        'on_day_of_week': 7,
-        'on_day_of_month': 0,
-        'at_seconds': 7200,
-        'at_time_suffix': 's',
-        'delta_seconds': 0,
-        'letter': '',
-    },
-    # Rule    C-Eur    1981    max    -    Mar    lastSun     2:00s    1:00    S
-    {
-        'from_year': 1981,
-        'to_year': 32766,
-        'in_month': 3,
-        'on_day_of_week': 7,
-        'on_day_of_month': 0,
-        'at_seconds': 7200,
-        'at_time_suffix': 's',
-        'delta_seconds': 3600,
-        'letter': 'S',
-    },
-    # Rule    C-Eur    1996    max    -    Oct    lastSun     2:00s    0    -
-    {
-        'from_year': 1996,
-        'to_year': 32766,
-        'in_month': 10,
-        'on_day_of_week': 7,
-        'on_day_of_month': 0,
-        'at_seconds': 7200,
-        'at_time_suffix': 's',
-        'delta_seconds': 0,
-        'letter': '',
-    },
-
-]
-
-ZONE_POLICY_C_Eur: ZonePolicy = {
-    'name': 'C-Eur',
-    'rules': ZONE_RULES_C_Eur
 }
 
 # ---------------------------------------------------------------------------
@@ -9956,7 +9895,7 @@ ZONE_POLICY_Zion: ZonePolicy = {
 
 
 # ---------------------------------------------------------------------------
-# Unsupported zone policies: 51
+# Unsupported zone policies: 52
 # ---------------------------------------------------------------------------
 
 # Albania {unused}
@@ -9965,6 +9904,7 @@ ZONE_POLICY_Zion: ZonePolicy = {
 # Belgium {unused}
 # Bermuda {unused}
 # Bulg {unused}
+# C-Eur {unused}
 # CA {unused}
 # Chicago {unused}
 # Cyprus {unused}

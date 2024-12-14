@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeTools/src/acetimetools/tzcompiler.py
 #     --input_dir /home/brian/src/acetimepy/src/acetime/zonedb/tzfiles
 #     --output_dir /home/brian/src/acetimepy/src/acetime/zonedb
-#     --tz_version 2024a
+#     --tz_version 2024b
 #     --actions zonedb
 #     --languages python
 #     --scope complete
@@ -23,9 +23,9 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2024a
+# from https://github.com/eggert/tz/releases/tag/2024b
 #
-# Supported Zones: 596 (351 zones, 245 links)
+# Supported Zones: 596 (339 zones, 257 links)
 # Unsupported Zones: 0 (0 zones, 0 links)
 #
 # Requested Years: [2000,2200]
@@ -37,16 +37,16 @@
 #
 # Records:
 #   Infos: 596
-#   Eras: 657
-#   Policies: 83
-#   Rules: 735
+#   Eras: 644
+#   Policies: 82
+#   Rules: 731
 #
 # DO NOT EDIT
 
 from ..typing import ZoneInfoMap
 from .zone_infos import *
 
-# Supported Zones: 351
+# Supported Zones: 339
 ZONE_REGISTRY: ZoneInfoMap = {
     'Africa/Abidjan': ZONE_INFO_Africa_Abidjan,
     'Africa/Algiers': ZONE_INFO_Africa_Algiers,
@@ -209,7 +209,6 @@ ZONE_REGISTRY: ZoneInfoMap = {
     'Asia/Beirut': ZONE_INFO_Asia_Beirut,
     'Asia/Bishkek': ZONE_INFO_Asia_Bishkek,
     'Asia/Chita': ZONE_INFO_Asia_Chita,
-    'Asia/Choibalsan': ZONE_INFO_Asia_Choibalsan,
     'Asia/Colombo': ZONE_INFO_Asia_Colombo,
     'Asia/Damascus': ZONE_INFO_Asia_Damascus,
     'Asia/Dhaka': ZONE_INFO_Asia_Dhaka,
@@ -289,11 +288,6 @@ ZONE_REGISTRY: ZoneInfoMap = {
     'Australia/Melbourne': ZONE_INFO_Australia_Melbourne,
     'Australia/Perth': ZONE_INFO_Australia_Perth,
     'Australia/Sydney': ZONE_INFO_Australia_Sydney,
-    'CET': ZONE_INFO_CET,
-    'CST6CDT': ZONE_INFO_CST6CDT,
-    'EET': ZONE_INFO_EET,
-    'EST': ZONE_INFO_EST,
-    'EST5EDT': ZONE_INFO_EST5EDT,
     'Etc/GMT': ZONE_INFO_Etc_GMT,
     'Etc/GMT+1': ZONE_INFO_Etc_GMT_PLUS_1,
     'Etc/GMT+10': ZONE_INFO_Etc_GMT_PLUS_10,
@@ -360,14 +354,9 @@ ZONE_REGISTRY: ZoneInfoMap = {
     'Europe/Volgograd': ZONE_INFO_Europe_Volgograd,
     'Europe/Warsaw': ZONE_INFO_Europe_Warsaw,
     'Europe/Zurich': ZONE_INFO_Europe_Zurich,
-    'HST': ZONE_INFO_HST,
     'Indian/Chagos': ZONE_INFO_Indian_Chagos,
     'Indian/Maldives': ZONE_INFO_Indian_Maldives,
     'Indian/Mauritius': ZONE_INFO_Indian_Mauritius,
-    'MET': ZONE_INFO_MET,
-    'MST': ZONE_INFO_MST,
-    'MST7MDT': ZONE_INFO_MST7MDT,
-    'PST8PDT': ZONE_INFO_PST8PDT,
     'Pacific/Apia': ZONE_INFO_Pacific_Apia,
     'Pacific/Auckland': ZONE_INFO_Pacific_Auckland,
     'Pacific/Bougainville': ZONE_INFO_Pacific_Bougainville,
@@ -398,7 +387,6 @@ ZONE_REGISTRY: ZoneInfoMap = {
     'Pacific/Tahiti': ZONE_INFO_Pacific_Tahiti,
     'Pacific/Tarawa': ZONE_INFO_Pacific_Tarawa,
     'Pacific/Tongatapu': ZONE_INFO_Pacific_Tongatapu,
-    'WET': ZONE_INFO_WET,
 
 }
 

@@ -121,11 +121,13 @@ def days_in_year_month(year: int, month: int) -> int:
     return days
 
 
-def to_utc_string(utcoffset: int, dstoffset: int) -> str:
-    """Return (utc,dst) pair as UTC+/-hh:mm (e.g. UTC-08:00)"""
+def to_utc_string(stdoffset: int, dstoffset: int) -> str:
+    """Return (std,dst) pair as UTC{+/-hh:mm}{+/-hh:mm} (e.g.
+    UTC-08:00+01:00). Intended for debugging purposes.
+    """
     return (
         'UTC'
-        f'{seconds_to_hm_string(utcoffset)}'
+        f'{seconds_to_hm_string(stdoffset)}'
         f'{seconds_to_hm_string(dstoffset)}'
     )
 
@@ -138,3 +140,20 @@ def seconds_to_hm_string(secs: int) -> str:
     else:
         hms = seconds_to_hms(secs)
         return f'+{hms[0]:02}:{hms[1]:02}'
+
+
+def seconds_to_abbrev(secs: int) -> str:
+    """Convert total UTC offset seconds to a timezone abbreviation according to
+    the %z format: [+/-]hh[mm[ss]] using the shortest form that does not lose
+    information.
+    """
+    s = secs if secs >= 0 else -secs
+    hms = seconds_to_hms(s)
+
+    abbrev = '+' if secs >= 0 else '-'
+    abbrev += f'{hms[0]:02}'
+    if hms[1] != 0 or hms[2] != 0:
+        abbrev += f'{hms[1]:02}'
+    if hms[2] != 0:
+        abbrev += f'{hms[2]:02}'
+    return abbrev
