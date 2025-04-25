@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeSuite/compiler/src/acetimecompiler/tzcompiler.py
 #     --input_dir /home/brian/src/AceTimeSuite/libraries/acetimepy/src/acetime/zonedb/tzfiles
 #     --output_dir /home/brian/src/AceTimeSuite/libraries/acetimepy/src/acetime/zonedb
-#     --tz_version 2025a
+#     --tz_version 2025b
 #     --actions zonedb
 #     --languages python
 #     --scope complete
@@ -23,9 +23,9 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2025a
+# from https://github.com/eggert/tz/releases/tag/2025b
 #
-# Supported Zones: 596 (339 zones, 257 links)
+# Supported Zones: 597 (340 zones, 257 links)
 # Unsupported Zones: 0 (0 zones, 0 links)
 #
 # Requested Years: [2000,2200]
@@ -36,8 +36,8 @@
 # Lower/Upper Truncated: [True,False]
 #
 # Records:
-#   Infos: 596
-#   Eras: 645
+#   Infos: 597
+#   Eras: 647
 #   Policies: 82
 #   Rules: 731
 #

@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeSuite/compiler/src/acetimecompiler/tzcompiler.py
 #     --input_dir /home/brian/src/AceTimeSuite/libraries/acetimepy/src/acetime/zonedball/tzfiles
 #     --output_dir /home/brian/src/AceTimeSuite/libraries/acetimepy/src/acetime/zonedball
-#     --tz_version 2025a
+#     --tz_version 2025b
 #     --action zonedb
 #     --language python
 #     --scope complete
@@ -23,9 +23,9 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2025a
+# from https://github.com/eggert/tz/releases/tag/2025b
 #
-# Supported Zones: 596 (339 zones, 257 links)
+# Supported Zones: 597 (340 zones, 257 links)
 # Unsupported Zones: 0 (0 zones, 0 links)
 #
 # Requested Years: [1800,2200]
@@ -36,8 +36,8 @@
 # Lower/Upper Truncated: [False,False]
 #
 # Records:
-#   Infos: 596
-#   Eras: 1942
+#   Infos: 597
+#   Eras: 1956
 #   Policies: 134
 #   Rules: 2235
 #
@@ -55,15 +55,15 @@ from .zone_policies import *
 # Zone Context
 # ---------------------------------------------------------------------------
 
-TZDB_VERSION = '2025a'
+TZDB_VERSION = '2025b'
 START_YEAR = 1800
 UNTIL_YEAR = 2200
 START_YEAR_ACCURATE = -32767
 UNTIL_YEAR_ACCURATE = 32767
 
 # ---------------------------------------------------------------------------
-# Supported zones: 339
-# numEras: 1942
+# Supported zones: 340
+# numEras: 1956
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -4968,6 +4968,188 @@ ZONE_ERAS_America_Costa_Rica: List[ZoneEra] = [
 ZONE_INFO_America_Costa_Rica: ZoneInfo = {
     'name': 'America/Costa_Rica',
     'eras': ZONE_ERAS_America_Costa_Rica
+}
+
+# ---------------------------------------------------------------------------
+# Zone name: America/Coyhaique
+# Era count: 14
+# ---------------------------------------------------------------------------
+
+ZONE_ERAS_America_Coyhaique: List[ZoneEra] = [
+    # -4:48:16 - LMT 1890
+    {
+        'offset_seconds': -17296,
+        'zone_policy': None,
+        'era_delta_seconds': 0,
+        'format': 'LMT',
+        'until_year': 1890,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             -4:42:45 -    SMT    1910 Jan 10
+    {
+        'offset_seconds': -16965,
+        'zone_policy': None,
+        'era_delta_seconds': 0,
+        'format': 'SMT',
+        'until_year': 1910,
+        'until_month': 1,
+        'until_day': 10,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             -5:00    -    %z    1916 Jul  1
+    {
+        'offset_seconds': -18000,
+        'zone_policy': None,
+        'era_delta_seconds': 0,
+        'format': '%z',
+        'until_year': 1916,
+        'until_month': 7,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             -4:42:45 -    SMT    1918 Sep 10
+    {
+        'offset_seconds': -16965,
+        'zone_policy': None,
+        'era_delta_seconds': 0,
+        'format': 'SMT',
+        'until_year': 1918,
+        'until_month': 9,
+        'until_day': 10,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             -4:00    -    %z    1919 Jul  1
+    {
+        'offset_seconds': -14400,
+        'zone_policy': None,
+        'era_delta_seconds': 0,
+        'format': '%z',
+        'until_year': 1919,
+        'until_month': 7,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             -4:42:45 -    SMT    1927 Sep  1
+    {
+        'offset_seconds': -16965,
+        'zone_policy': None,
+        'era_delta_seconds': 0,
+        'format': 'SMT',
+        'until_year': 1927,
+        'until_month': 9,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             -5:00    Chile    %z    1932 Sep  1
+    {
+        'offset_seconds': -18000,
+        'zone_policy': ZONE_POLICY_Chile,
+        'era_delta_seconds': 0,
+        'format': '%z',
+        'until_year': 1932,
+        'until_month': 9,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             -4:00    -    %z    1942 Jun  1
+    {
+        'offset_seconds': -14400,
+        'zone_policy': None,
+        'era_delta_seconds': 0,
+        'format': '%z',
+        'until_year': 1942,
+        'until_month': 6,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             -5:00    -    %z    1942 Aug  1
+    {
+        'offset_seconds': -18000,
+        'zone_policy': None,
+        'era_delta_seconds': 0,
+        'format': '%z',
+        'until_year': 1942,
+        'until_month': 8,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             -4:00    -    %z    1946 Aug 28 24:00
+    {
+        'offset_seconds': -14400,
+        'zone_policy': None,
+        'era_delta_seconds': 0,
+        'format': '%z',
+        'until_year': 1946,
+        'until_month': 8,
+        'until_day': 28,
+        'until_seconds': 86400,
+        'until_time_suffix': 'w',
+    },
+    #             -5:00    1:00    %z    1947 Mar 31 24:00
+    {
+        'offset_seconds': -18000,
+        'zone_policy': None,
+        'era_delta_seconds': 3600,
+        'format': '%z',
+        'until_year': 1947,
+        'until_month': 3,
+        'until_day': 31,
+        'until_seconds': 86400,
+        'until_time_suffix': 'w',
+    },
+    #             -5:00    -    %z    1947 May 21 23:00
+    {
+        'offset_seconds': -18000,
+        'zone_policy': None,
+        'era_delta_seconds': 0,
+        'format': '%z',
+        'until_year': 1947,
+        'until_month': 5,
+        'until_day': 21,
+        'until_seconds': 82800,
+        'until_time_suffix': 'w',
+    },
+    #             -4:00    Chile    %z    2025 Mar 20
+    {
+        'offset_seconds': -14400,
+        'zone_policy': ZONE_POLICY_Chile,
+        'era_delta_seconds': 0,
+        'format': '%z',
+        'until_year': 2025,
+        'until_month': 3,
+        'until_day': 20,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             -3:00    -    %z
+    {
+        'offset_seconds': -10800,
+        'zone_policy': None,
+        'era_delta_seconds': 0,
+        'format': '%z',
+        'until_year': 32767,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+
+]
+
+ZONE_INFO_America_Coyhaique: ZoneInfo = {
+    'name': 'America/Coyhaique',
+    'eras': ZONE_ERAS_America_Coyhaique
 }
 
 # ---------------------------------------------------------------------------
@@ -19030,16 +19212,16 @@ ZONE_ERAS_Asia_Tehran: List[ZoneEra] = [
         'until_seconds': 86400,
         'until_time_suffix': 'w',
     },
-    #             4:00    Iran    %z    1979
+    #             4:00    Iran    %z    1978 Nov 10 24:00
     {
         'offset_seconds': 14400,
         'zone_policy': ZONE_POLICY_Iran,
         'era_delta_seconds': 0,
         'format': '%z',
-        'until_year': 1979,
-        'until_month': 1,
-        'until_day': 1,
-        'until_seconds': 0,
+        'until_year': 1978,
+        'until_month': 11,
+        'until_day': 10,
+        'until_seconds': 86400,
         'until_time_suffix': 'w',
     },
     #             3:30    Iran    %z
@@ -29930,7 +30112,7 @@ ZONE_INFO_Zulu: ZoneInfo = {
 
 
 # ---------------------------------------------------------------------------
-# Notable zones: 298
+# Notable zones: 299
 # ---------------------------------------------------------------------------
 
 # Africa/Abidjan {STDOFF '-0:16:08' not multiple of :15 min}
@@ -30114,6 +30296,11 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # America/Chihuahua {STDOFF '-7:04:20' not multiple of :15 min}
 # America/Ciudad_Juarez {STDOFF '-7:05:56' not multiple of :15 min}
 # America/Costa_Rica {STDOFF '-5:36:13' not multiple of :15 min}
+# America/Coyhaique {
+#   RULES not fixed but FORMAT is missing '%s' or '/',
+#   STDOFF '-4:42:45' not multiple of :15 min,
+#   STDOFF '-4:48:16' not multiple of :15 min,
+# }
 # America/Cuiaba {
 #   RULES not fixed but FORMAT is missing '%s' or '/',
 #   STDOFF '-3:44:20' not multiple of :15 min,

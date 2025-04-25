@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeSuite/compiler/src/acetimecompiler/tzcompiler.py
 #     --input_dir /home/brian/src/AceTimeSuite/libraries/acetimepy/src/acetime/zonedball/tzfiles
 #     --output_dir /home/brian/src/AceTimeSuite/libraries/acetimepy/src/acetime/zonedball
-#     --tz_version 2025a
+#     --tz_version 2025b
 #     --action zonedb
 #     --language python
 #     --scope complete
@@ -23,9 +23,9 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2025a
+# from https://github.com/eggert/tz/releases/tag/2025b
 #
-# Supported Zones: 596 (339 zones, 257 links)
+# Supported Zones: 597 (340 zones, 257 links)
 # Unsupported Zones: 0 (0 zones, 0 links)
 #
 # Requested Years: [1800,2200]
@@ -36,8 +36,8 @@
 # Lower/Upper Truncated: [False,False]
 #
 # Records:
-#   Infos: 596
-#   Eras: 1942
+#   Infos: 597
+#   Eras: 1956
 #   Policies: 134
 #   Rules: 2235
 #
@@ -46,7 +46,7 @@
 from ..typing import ZoneInfoMap
 from .zone_infos import *
 
-# Supported Zones: 339
+# Supported Zones: 340
 ZONE_REGISTRY: ZoneInfoMap = {
     'Africa/Abidjan': ZONE_INFO_Africa_Abidjan,
     'Africa/Algiers': ZONE_INFO_Africa_Algiers,
@@ -100,6 +100,7 @@ ZONE_REGISTRY: ZoneInfoMap = {
     'America/Chihuahua': ZONE_INFO_America_Chihuahua,
     'America/Ciudad_Juarez': ZONE_INFO_America_Ciudad_Juarez,
     'America/Costa_Rica': ZONE_INFO_America_Costa_Rica,
+    'America/Coyhaique': ZONE_INFO_America_Coyhaique,
     'America/Cuiaba': ZONE_INFO_America_Cuiaba,
     'America/Danmarkshavn': ZONE_INFO_America_Danmarkshavn,
     'America/Dawson': ZONE_INFO_America_Dawson,
@@ -390,7 +391,7 @@ ZONE_REGISTRY: ZoneInfoMap = {
 
 }
 
-# Supported Zones and Links: 596
+# Supported Zones and Links: 597
 ZONE_AND_LINK_REGISTRY: ZoneInfoMap = {
     'Africa/Abidjan': ZONE_INFO_Africa_Abidjan,
     'Africa/Accra': ZONE_INFO_Africa_Accra,
@@ -491,6 +492,7 @@ ZONE_AND_LINK_REGISTRY: ZoneInfoMap = {
     'America/Coral_Harbour': ZONE_INFO_America_Coral_Harbour,
     'America/Cordoba': ZONE_INFO_America_Cordoba,
     'America/Costa_Rica': ZONE_INFO_America_Costa_Rica,
+    'America/Coyhaique': ZONE_INFO_America_Coyhaique,
     'America/Creston': ZONE_INFO_America_Creston,
     'America/Cuiaba': ZONE_INFO_America_Cuiaba,
     'America/Curacao': ZONE_INFO_America_Curacao,

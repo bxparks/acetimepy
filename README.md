@@ -70,7 +70,7 @@ behavior of each timezone is reproducible.
 This library was known as `AceTimePython` before being renamed to `acetimepy` to
 be more compatible with Python package naming conventions.
 
-**Version**: 3.0.0 (2025-01-28, TZDB 2025a)
+**Version**: 0.9.0 (2025-04-25, TZDB 2025b)
 
 **Changelog**: [CHANGELOG.md](CHANGELOG.md)
 

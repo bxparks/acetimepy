@@ -3,7 +3,7 @@
 #   $ /home/brian/src/AceTimeSuite/compiler/src/acetimecompiler/tzcompiler.py
 #     --input_dir /home/brian/src/AceTimeSuite/libraries/acetimepy/src/acetime/zonedb/tzfiles
 #     --output_dir /home/brian/src/AceTimeSuite/libraries/acetimepy/src/acetime/zonedb
-#     --tz_version 2025a
+#     --tz_version 2025b
 #     --actions zonedb
 #     --languages python
 #     --scope complete
@@ -23,9 +23,9 @@
 #   northamerica
 #   southamerica
 #
-# from https://github.com/eggert/tz/releases/tag/2025a
+# from https://github.com/eggert/tz/releases/tag/2025b
 #
-# Supported Zones: 596 (339 zones, 257 links)
+# Supported Zones: 597 (340 zones, 257 links)
 # Unsupported Zones: 0 (0 zones, 0 links)
 #
 # Requested Years: [2000,2200]
@@ -36,8 +36,8 @@
 # Lower/Upper Truncated: [True,False]
 #
 # Records:
-#   Infos: 596
-#   Eras: 645
+#   Infos: 597
+#   Eras: 647
 #   Policies: 82
 #   Rules: 731
 #
@@ -55,15 +55,15 @@ from .zone_policies import *
 # Zone Context
 # ---------------------------------------------------------------------------
 
-TZDB_VERSION = '2025a'
+TZDB_VERSION = '2025b'
 START_YEAR = 2000
 UNTIL_YEAR = 2200
 START_YEAR_ACCURATE = 2000
 UNTIL_YEAR_ACCURATE = 32767
 
 # ---------------------------------------------------------------------------
-# Supported zones: 339
-# numEras: 645
+# Supported zones: 340
+# numEras: 647
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -2388,6 +2388,44 @@ ZONE_ERAS_America_Costa_Rica: List[ZoneEra] = [
 ZONE_INFO_America_Costa_Rica: ZoneInfo = {
     'name': 'America/Costa_Rica',
     'eras': ZONE_ERAS_America_Costa_Rica
+}
+
+# ---------------------------------------------------------------------------
+# Zone name: America/Coyhaique
+# Era count: 2
+# ---------------------------------------------------------------------------
+
+ZONE_ERAS_America_Coyhaique: List[ZoneEra] = [
+    #             -4:00    Chile    %z    2025 Mar 20
+    {
+        'offset_seconds': -14400,
+        'zone_policy': ZONE_POLICY_Chile,
+        'era_delta_seconds': 0,
+        'format': '%z',
+        'until_year': 2025,
+        'until_month': 3,
+        'until_day': 20,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+    #             -3:00    -    %z
+    {
+        'offset_seconds': -10800,
+        'zone_policy': None,
+        'era_delta_seconds': 0,
+        'format': '%z',
+        'until_year': 32767,
+        'until_month': 1,
+        'until_day': 1,
+        'until_seconds': 0,
+        'until_time_suffix': 'w',
+    },
+
+]
+
+ZONE_INFO_America_Coyhaique: ZoneInfo = {
+    'name': 'America/Coyhaique',
+    'eras': ZONE_ERAS_America_Coyhaique
 }
 
 # ---------------------------------------------------------------------------
@@ -14366,7 +14404,7 @@ ZONE_INFO_Zulu: ZoneInfo = {
 
 
 # ---------------------------------------------------------------------------
-# Notable zones: 92
+# Notable zones: 93
 # ---------------------------------------------------------------------------
 
 # Africa/Casablanca {
@@ -14406,6 +14444,7 @@ ZONE_INFO_Zulu: ZoneInfo = {
 # America/Boa_Vista {RULES not fixed but FORMAT is missing '%s' or '/'}
 # America/Bogota {RULES not fixed but FORMAT is missing '%s' or '/'}
 # America/Campo_Grande {RULES not fixed but FORMAT is missing '%s' or '/'}
+# America/Coyhaique {RULES not fixed but FORMAT is missing '%s' or '/'}
 # America/Cuiaba {RULES not fixed but FORMAT is missing '%s' or '/'}
 # America/Fortaleza {RULES not fixed but FORMAT is missing '%s' or '/'}
 # America/Goose_Bay {

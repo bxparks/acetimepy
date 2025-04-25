@@ -2,7 +2,7 @@ TARGETS := zone_infos.py zone_policies.py zone_registry.py
 
 COMPILER := $(abspath ../../../../../compiler)
 TZ_REPO := $(abspath ../../../../../../tz)
-TZ_VERSION := 2025a
+TZ_VERSION := 2025b
 START_YEAR := 1800
 UNTIL_YEAR := 2200
 
