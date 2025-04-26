@@ -33,9 +33,9 @@ There are 2 timezone databases provided by this library:
     * useful for validating against third-party libraries
 
 Custom subsets of the full TZ database could be created to save memory using the
-[AceTimeTools](https://github.com/bxparks/AceTimeTools) project. The process has
-not been documented, but can probably be inferred from the `Makefile`s in
-[acetime.zonedb](src/acetime/zonedb) and
+[AceTimeSuite/compiler](https://github.com/bxparks/AceTimeSuite) compiler. The
+process has not been documented, but can probably be inferred from the
+`Makefile`s in [acetime.zonedb](src/acetime/zonedb) and
 [acetime.zonedball](src/acetime/zonedball).
 
 Currently, the main uses of this library are:
@@ -43,8 +43,9 @@ Currently, the main uses of this library are:
 1) Generating transition buffer size requirements for the zone databases used in
    the AceTime library (since AceTime uses fixed-sized buffers instead of
    dynamically-sized buffers).
-1) Validating the AceTime `ExtendedZoneProcessor` class through the
-   [AceTimeValidation](https://github.com/bxparks/AceTimeValidation) project.
+1) Validating the AceTime `ExtendedZoneProcessor` class through the `validation`
+   directory of the [AceTimeSuite](https://github.com/bxparks/AceTimeSuite)
+   project.
 1) Verifying the accuracy of other Python libraries. See the [Compare to Other
    Python Libraries](#CompareToOtherLibraries) section below.
 1) Exploring the feasibility of porting this library to
@@ -75,9 +76,8 @@ be more compatible with Python package naming conventions.
 **Changelog**: [CHANGELOG.md](CHANGELOG.md)
 
 **See Also**:
+* AceTimeSuite: https://github.com/bxparks/AceTimeSuite
 * AceTime: https://github.com/bxparks/AceTime
-* AceTimeTools: https://github.com/bxparks/AceTimeTools
-* AceTimeValidation: https://github.com/bxparks/AceValidation
 
 ## Table Of Contents
 
@@ -286,7 +286,7 @@ This should also print
 
 It is possible to generate custom registries with different subsets of timezones
 using the tools provided by the
-[AceTimeTools](https://github.com/bxparks/AceTimeTools) project.
+[AceTimeSuite/compiler](https://github.com/bxparks/AceTimeSuite) tool.
 
 <a name="DateTimeFold"></a>
 ### DateTime Fold
@@ -801,14 +801,6 @@ benchmarking of 4 Python timezone libraries: `acetimepy`, `pytz`, `dateutil` and
 For end-users of the library:
 
 * Python 3.7 or newer
-
-To generate the `zonedb` or `zonedball` TZ databases:
-
-* [AceTimeTools](https://github.com/bxparks/AceTimeTools)
-
-To run the validation tests:
-
-* [AceTimeValidation](https://github.com/bxparks/AceTimeValidation)
 
 <a name="License"></a>
 ## License
