@@ -5,9 +5,9 @@
 """
 Data structures of the zonedb which are consumed by the ZoneProcessor class.
 These data structures are created in-memory by
-AceTimeTools/acetimetools/bufestimator/zone_info_inliner.py. They are written to
+`acetimecompiler/bufestimator/zone_info_inliner.py`. They are written to
 'zone_policies.py' and 'zone_infos.py' by
-AceTimeTools/acetimetools/generator/pygenerator.py
+`acetimecompiler/generator/pygenerator.py`.
 """
 
 from typing import Any
