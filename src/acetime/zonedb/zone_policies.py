@@ -5,7 +5,7 @@
 #     --output_dir /home/brian/src/AceTimeSuite/libraries/acetimepy/src/acetime/zonedb
 #     --tz_version 2025b
 #     --actions zonedb
-#     --languages python
+#     --language python
 #     --scope complete
 #     --skip_bufestimator
 #     --start_year 2000
