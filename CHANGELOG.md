@@ -1,6 +1,8 @@
 # Changelog
 
 - unreleased
+- 0.9.1 (2025-10-21, TZDB 2025b)
+    - Published from AceTimeSuite v2025.10.21. No functional change.
 - 0.9.0 (2025-04-25, TZDB 2025b)
     - merge various AceTime projects into single AceTimeSuite repo
     - [upgrade to TZDB 2025a](https://lists.iana.org/hyperkitty/list/tz-announce@iana.org/thread/MWII7R3HMCEDNUCIYQKSSTYYR7UWK4OQ/)
